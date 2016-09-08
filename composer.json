@@ -1,0 +1,8 @@
+{
+    "name": "drupal/bene",
+    "description": "Bene distribution for non-profits",
+    "type": "drupal-profile",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "require": {}
+}
