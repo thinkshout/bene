@@ -3,6 +3,12 @@
     "description": "Bene distribution for non-profits",
     "type": "drupal-profile",
     "license": "GPL-2.0+",
+    "authors": [
+      {
+          "name": "ThinkShout",
+          "role": "Developer"
+      }
+    ],
     "minimum-stability": "dev",
     "require": {}
 }
