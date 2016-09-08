@@ -1,0 +1,7 @@
+name: bene
+type: profile
+description: Bene distribution for non-profits
+core: 8.2
+
+distribution:
+  name: Bene distribution for non-profits
