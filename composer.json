@@ -10,7 +10,25 @@
           "role": "Developer"
       }
     ],
-    "require": {
+    "repositories": [
+      {
+        "type": "composer",
+        "url": "https://packagist.drupal-composer.org"
+      },
+      {
+        "type": "git",
+        "url": "https://github.com/thinkshout/DrupalDriver.git"
+      },
+      {
+        "type": "git",
+        "url": "https://github.com/thinkshout/drupalextension.git"
+      },
+      {
+        "type": "git",
+        "url": "https://github.com/thinkshout/behat-drush-endpoint.git"
+      }
+    ],
+  "require": {
       "composer/installers": "^1.0.20",
       "cweagans/composer-patches": "~1.0",
       "drupal/core": "^8.2.0",
