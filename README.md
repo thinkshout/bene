@@ -8,5 +8,5 @@ These instructions assume you have used Composer to install Bene.
     $ cd MYPROJECT/web/profiles/bene
     $ /path/to/MYPROJECT/bin/behat
 
-If necessary, edit behat.local.yml to match your environment. Generally you
-will not need to do this.
+If necessary, copy `behat.local.yml.sample` to `behat.local.yml`, and update the values on `behat.local.yml` to match
+your local environment.
