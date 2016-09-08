@@ -1,0 +1,29 @@
+#
+# behat.yml file for testing with both Behat and the Drupal site running on
+# the local system.
+#
+default:
+  suites:
+    default:
+      paths:
+        - %paths.base%/features
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\DrushContext
+        - Drupal\DrupalExtension\Context\MinkContext
+  extensions:
+    Behat\MinkExtension:
+      goutte: ~
+      selenium2: ~
+      files_path: './behat/data-files'
+    Drupal\DrupalExtension:
+      blackbox: ~
+      api_driver: drupal
+      text:
+        username_field: "Username"
+      region_map:
+         primary_nav: ".region-primary-nav"
+         secondary_nav: ".region-secondary-nav"
+         content: ".region-content"
+         footer: ".region-footer"
