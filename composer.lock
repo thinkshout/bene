@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "03908b79140ba2e4f699a42eaa318b19",
-    "content-hash": "3cc72719c5fa2eb1f1807b551a1c9f8a",
+    "hash": "0a6348c81b414a2bdfaf760b99dc0169",
+    "content-hash": "90cfe822d1e97e8055aa30c3e2d4b5d0",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -908,11 +908,17 @@
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "dev-8.x-1.x",
+            "version": "8.1.17",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/admin_toolbar.git",
                 "reference": "195f503ee4350c8be74b9515c21e264384a2fcaf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-1.17.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "drupal/core": "8.*",
@@ -943,31 +949,6 @@
             "description": "Provides a drop-down menu interface to the core Drupal Toolbar.",
             "homepage": "http://drupal.org/project/admin_toolbar",
             "time": "2016-08-19 14:05:31"
-        },
-        {
-            "name": "drupal/config_installer",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/config_installer.git",
-                "reference": "128ab9096391ba7d078a6e1c180d613c6bc1176b"
-            },
-            "require": {
-                "drupal/core": "8.*"
-            },
-            "type": "drupal-profile",
-            "extra": {
-                "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Use configuration from another Drupal site to install a Drupal instance. Suitable for advanced users.",
-            "homepage": "https://www.drupal.org/project/config_installer",
-            "time": "2016-05-09 12:21:05"
         },
         {
             "name": "drupal/console",
@@ -6867,7 +6848,6 @@
     "stability-flags": {
         "drupal/devel": 20,
         "drupal/r4032login": 20,
-        "drupal/config_installer": 20,
         "drupal/drupal-driver": 20,
         "drupal/drupal-extension": 20,
         "drush-ops/behat-drush-endpoint": 20,
