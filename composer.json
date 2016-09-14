@@ -32,7 +32,7 @@
       "composer/installers": "^1.0.20",
       "cweagans/composer-patches": "~1.0",
       "drupal/core": "^8.1.8",
-      "drush/drush": "^8.1.0",
+      "drush/drush": "^9.0",
       "drupal/console": "~1.0",
       "drupal/admin_toolbar": "8.1.17",
       "drupal/contact_storage": "8.1.0-beta2",
