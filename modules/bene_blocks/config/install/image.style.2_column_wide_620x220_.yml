@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 2_column_wide_620x220_
+label: '2 column wide (620x220)'
+effects: {  }

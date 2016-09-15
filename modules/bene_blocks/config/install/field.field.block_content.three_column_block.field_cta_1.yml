@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.three_column_block
+    - field.storage.block_content.field_cta_1
+  module:
+    - link
+id: block_content.three_column_block.field_cta_1
+field_name: field_cta_1
+entity_type: block_content
+bundle: three_column_block
+label: 'CTA 1'
+description: 'The left call to action.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

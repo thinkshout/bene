@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: two_column_wide_block
+label: 'Two Column Wide Block'
+revision: 0
+description: '2 column block with no margin between the images. Ideal for footer calls to action.'

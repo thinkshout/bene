@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.testimonial_block
+    - field.storage.block_content.field_testimonial
+id: block_content.testimonial_block.field_testimonial
+field_name: field_testimonial
+entity_type: block_content
+bundle: testimonial_block
+label: Testimonial
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

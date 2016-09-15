@@ -1,20 +1,8 @@
 /***
  * FONTS
  */
-@mixin museo-sans($weight: 300, $style: normal) {
-  font-family: "museo-sans", sans-serif;
-  font-style: $style;
-  font-weight: $weight;
-}
-
-@mixin museo-slab($weight: 900, $style: normal) {
-  font-family: "museo-slab", sans-serif;
-  font-style: $style;
-  font-weight: $weight;
-}
-
-@mixin museo-display($weight: 900, $style: normal) {
-  font-family: "museo-sans-display", sans-serif;
+@mixin font-family($weight: 400, $style: normal) {
+  font-family: "Open Sans", sans-serif;
   font-style: $style;
   font-weight: $weight;
 }

@@ -1,0 +1,56 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta_block
+    - field.field.block_content.cta_block.body
+    - field.field.block_content.cta_block.field_call_to_action
+    - field.field.block_content.cta_block.field_image
+    - field.field.block_content.cta_block.field_title
+    - image.style.large
+  module:
+    - image
+    - link
+    - text
+id: block_content.cta_block.default
+targetEntityType: block_content
+bundle: cta_block
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_call_to_action:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  field_image:
+    weight: 2
+    settings:
+      preview_image_style: large
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: image_image
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: 'This is for you. It will not display on the site.'
+    third_party_settings: {  }
+hidden: {  }

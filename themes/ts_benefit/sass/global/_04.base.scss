@@ -1,4 +1,14 @@
 // BASE ELEMENT STYLES
 body {
+  @include font-family();
   font-size: rem(16);
+}
+
+h1 {
+  font-size: rem(48);
+  line-height: rem(62);
+}
+
+h2 {
+  font-size: rem(36);
 }
