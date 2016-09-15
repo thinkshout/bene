@@ -9,6 +9,7 @@ dependencies:
   - features
   - field
   - file
+  - image
   - menu_link_content
   - node
   - path
