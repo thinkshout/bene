@@ -15,14 +15,14 @@ bundle: testimonial_block
 mode: default
 content:
   field_author:
-    weight: 1
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_image:
-    weight: 2
+    weight: 0
     label: hidden
     settings:
       image_style: cta_1240x400_
@@ -30,7 +30,7 @@ content:
     third_party_settings: {  }
     type: image
   field_testimonial:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
