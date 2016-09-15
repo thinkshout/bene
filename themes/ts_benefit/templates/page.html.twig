@@ -1,0 +1,24 @@
+<div class="home-intro">
+  {{page.banner}}
+</div>
+<header>
+  <div class="container">
+    <div class="logo-wrapper">
+      {{page.primary_nav.ts_shatterproof_branding}}
+    </div>
+    <div class="nav-wrapper">
+      {{page.primary_nav.ts_shatterproof_account_menu}}
+      {{ page.secondary_nav.ts_shatterproof_headermenu }}
+      {{page.primary_nav.ts_shatterproof_main_menu}}
+    </div>
+
+    
+  </div>
+</header>
+{% if page.content %}
+  {{page.content}}
+{% endif %}
+
+{% if page.footer %}
+  {{page.footer}}
+{% endif %}

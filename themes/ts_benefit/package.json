@@ -1,0 +1,19 @@
+{
+  "name": "ts_benefit",
+  "version": "1.0.0",
+  "description": "## Setup - Update `Rakefile` to have the correct theme - Run `rake install` to install dependencies",
+  "main": "main.js",
+  "dependencies": {
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "jquery": "^2.2.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ThinkShout, Inc",
+  "license": "GPL-3.0"
+}
