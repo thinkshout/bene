@@ -10,7 +10,7 @@ dependencies:
 id: ts_benefit_tools
 theme: ts_benefit
 region: '-1'
-weight: -5
+weight: -3
 provider: null
 plugin: 'system_menu_block:tools'
 settings:
