@@ -23,6 +23,7 @@ dependencies:
   - default_content
   - dynamic_page_cache
   - editor
+  - email_registration
   - embed
   - entity_embed
   - features
