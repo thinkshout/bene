@@ -1,50 +1,57 @@
-name: bene
+name: Bene
 type: profile
-description: Bene distribution for non-profits
+description: 'Bene distribution for non-profits'
 core: 8.x
-
 distribution:
-  name: Bene distribution for non-profits
-
+  name: Bene
 dependencies:
-  - node
-  - history
+  - automated_cron
+  - bene_core
   - block
+  - block_content
   - breakpoint
   - ckeditor
   - color
   - config
   - config_update
   - comment
-  - contextual
   - contact
+  - contextual
   - datetime
-  - block_content
+  - dblog
+  - dynamic_page_cache
   - editor
   - features
   - features_ui
+  - datetime
+  - dblog
+  - dynamic_page_cache
+  - editor
+  - field_ui
+  - file
   - help
+  - history
   - image
   - menu_link_content
   - menu_ui
+  - node
   - options
-  - path
   - page_cache
-  - dynamic_page_cache
-  - taxonomy
-  - dblog
+  - path
   - quickedit
+  - taxonomy
+  - quickedit
+  - rdf
   - search
   - shortcut
+  - system
+  - taxonomy
   - toolbar
-  - field_ui
-  - file
-  - rdf
+  - tour
+  - user
   - views
   - views_ui
-  - tour
-  - automated_cron
-
 themes:
   - bartik
   - seven
+package: Bene
