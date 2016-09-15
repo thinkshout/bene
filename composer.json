@@ -30,7 +30,7 @@
       {
         "type": "git",
         "url": "https://github.com/thinkshout/media.git"
-      },
+      }
     ],
   "require": {
       "composer/installers": "^1.0.20",
