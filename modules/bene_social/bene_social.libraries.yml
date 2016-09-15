@@ -1,0 +1,5 @@
+social-block:
+  version: 1.x
+  css:
+    base:
+      css/social-block.css: {}

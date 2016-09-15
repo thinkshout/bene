@@ -118,7 +118,12 @@ class SocialBlock extends BlockBase {
    */
   public function build() {
     $build = [];
-    $build['#prefix'] = '<style>.bene-social-links {background: #cccccc;}</style><div class="bene-social-links">';
+    $build['#attached'] = array(
+      'library' => array(
+        'bene_social/social-block'
+      ),
+    );
+    $build['#prefix'] = '<div class="bene-social-links">';
     $build['social_block_facebook']['#markup'] = '<p>' . $this->configuration['facebook'] . '</p>';
     $build['social_block_flickr']['#markup'] = '<p>' . $this->configuration['flickr'] . '</p>';
     $build['social_block_google']['#markup'] = '<p>' . $this->configuration['google'] . '</p>';
