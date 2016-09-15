@@ -33,9 +33,10 @@
   ]
 %}
 {% if content.field_image|render|trim is not empty %}
-  {% set classes = 'has-image' %}
+  set values = values|merge(['apple', 'orange'])
+  {% set classes = classes|merge(['has-image']) %}
 {% else %}
-  {% set classes = 'no-image' %}
+  {% set classes = classes|merge(['has-image']) %}
 {% endif %}
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
