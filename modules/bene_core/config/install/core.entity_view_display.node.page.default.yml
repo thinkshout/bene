@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.page.field_image
     - node.type.page
   module:
+    - image
     - text
     - user
 id: node.page.default
@@ -16,10 +17,19 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 100
+    weight: 0
     settings: {  }
     third_party_settings: {  }
+  field_image:
+    type: image
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
   links:
-    weight: 101
-hidden:
-  field_image: true
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
