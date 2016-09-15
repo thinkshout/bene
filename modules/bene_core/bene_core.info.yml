@@ -6,6 +6,7 @@ dependencies:
   - block
   - block_content
   - contact
+  - features
   - field
   - file
   - menu_link_content
