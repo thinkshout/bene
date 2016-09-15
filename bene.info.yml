@@ -23,6 +23,8 @@ dependencies:
   - default_content
   - dynamic_page_cache
   - editor
+  - embed
+  - entity_embed
   - features
   - features_ui
   - field_ui
