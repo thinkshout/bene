@@ -115,7 +115,6 @@ class SocialBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $image_path = drupal_get_path('module', 'bene_social') . '/images/';
     $services = [
       'facebook',
       'google',
