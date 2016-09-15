@@ -19,6 +19,7 @@ dependencies:
   - contextual
   - datetime
   - dblog
+  - default_content
   - dynamic_page_cache
   - editor
   - features
