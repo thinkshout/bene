@@ -24,7 +24,7 @@ content:
     third_party_settings: {  }
     type: link_default
   field_image:
-    weight: 1
+    weight: 2
     settings:
       preview_image_style: large
       progress_indicator: throbber
@@ -38,7 +38,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_title:
-    weight: 2
+    weight: 1
     settings:
       size: 60
       placeholder: ''
