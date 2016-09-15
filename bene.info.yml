@@ -54,4 +54,5 @@ dependencies:
 themes:
   - bartik
   - seven
+  - ts_benefit
 package: Bene
