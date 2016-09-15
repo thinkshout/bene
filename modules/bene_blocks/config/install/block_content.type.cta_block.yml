@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: cta_block
+label: 'CTA Block'
+revision: 0
+description: 'A block used for a full width call to action.'
