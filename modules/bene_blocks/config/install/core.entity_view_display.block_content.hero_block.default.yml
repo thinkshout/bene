@@ -6,6 +6,7 @@ dependencies:
     - field.field.block_content.hero_block.field_call_to_action
     - field.field.block_content.hero_block.field_image
     - field.field.block_content.hero_block.field_subtitle
+    - field.field.block_content.hero_block.field_title
     - image.style.hero
   module:
     - image
@@ -16,7 +17,7 @@ bundle: hero_block
 mode: default
 content:
   field_call_to_action:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       trim_length: null
@@ -35,6 +36,13 @@ content:
     third_party_settings: {  }
     type: image
   field_subtitle:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_title:
     weight: 1
     label: hidden
     settings:
