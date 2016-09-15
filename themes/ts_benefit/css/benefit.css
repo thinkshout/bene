@@ -417,6 +417,19 @@ template {
 /***
  * MEDIA QUERIES
  */
+/***
+ * BUTTONS
+ */
+.page-banner .field--name-field-call-to-action a {
+  background: #50CFE3;
+  color: #FFFFFF;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 1rem;
+  text-decoration: none; }
+
 body {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -424,7 +437,8 @@ body {
   font-size: 1rem; }
 
 h1 {
-  font-size: 3rem; }
+  font-size: 3rem;
+  line-height: 3.875rem; }
 
 h2 {
   font-size: 2.25rem; }
@@ -440,6 +454,63 @@ h2 {
  * Layout
  */
 /* Layout for this module should live in this file. */
+/***
+ * Common styles
+ */
+/***
+* Styles
+*/
+.page-banner {
+  position: relative; }
+  @media (min-width: 62rem) {
+    .page-banner {
+      min-height: 33.3125rem; } }
+
+.page-banner .field--type-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1; }
+  @media (min-width: 62rem) {
+    .page-banner .field--type-image {
+      min-height: 33.3125rem; } }
+
+.page-banner h2 {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 auto 3rem;
+  text-align: center; }
+  @media (min-width: 62rem) {
+    .page-banner h2 {
+      font-size: 3rem;
+      max-width: 46.875rem;
+      padding-top: 10rem; } }
+
+.page-banner .field--name-field-subtitle {
+  color: #D8D8D8;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  text-align: center; }
+  @media (min-width: 62rem) {
+    .page-banner .field--name-field-subtitle {
+      font-size: 1.25rem;
+      top: 8rem; } }
+
+.page-banner .field--name-field-call-to-action {
+  text-align: center; }
+
+/***
+ * Layout
+ */
 .container {
   max-width: 1200px;
   margin-left: auto;
