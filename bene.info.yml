@@ -14,16 +14,18 @@ dependencies:
   - ckeditor
   - color
   - config
+  - config_update
   - comment
   - contextual
   - contact
-  - menu_link_content
   - datetime
   - block_content
-  - quickedit
   - editor
+  - features
+  - features_ui
   - help
   - image
+  - menu_link_content
   - menu_ui
   - options
   - path
@@ -31,6 +33,7 @@ dependencies:
   - dynamic_page_cache
   - taxonomy
   - dblog
+  - quickedit
   - search
   - shortcut
   - toolbar
