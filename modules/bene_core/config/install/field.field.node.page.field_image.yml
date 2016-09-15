@@ -11,7 +11,7 @@ field_name: field_image
 entity_type: node
 bundle: page
 label: Image
-description: 'Banner Image'
+description: 'Banner Image. Must be 1280x185. Images larger than this will be auto cropped.'
 required: true
 translatable: false
 default_value: {  }
