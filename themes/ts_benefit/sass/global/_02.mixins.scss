@@ -1,0 +1,40 @@
+/***
+ * FONTS
+ */
+@mixin museo-sans($weight: 300, $style: normal) {
+  font-family: "museo-sans", sans-serif;
+  font-style: $style;
+  font-weight: $weight;
+}
+
+@mixin museo-slab($weight: 900, $style: normal) {
+  font-family: "museo-slab", sans-serif;
+  font-style: $style;
+  font-weight: $weight;
+}
+
+@mixin museo-display($weight: 900, $style: normal) {
+  font-family: "museo-sans-display", sans-serif;
+  font-style: $style;
+  font-weight: $weight;
+}
+
+/***
+ * MEDIA QUERIES
+ */
+ // Extra small screen / phone
+  $xs: 0;
+  // Small screen / phone
+  $sm: 544px;
+  // Medium screen / tablet
+  $md: 768px;
+  // Large screen / desktop
+  $lg: 992px;
+  // Extra large screen / wide desktop
+  $xl: 1200px;
+
+  @mixin mq($query) {
+    @media (min-width: rem($query)) {
+      @content
+    }
+  }

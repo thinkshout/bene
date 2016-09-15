@@ -1,0 +1,17 @@
+name: Benefit Theme
+type: theme
+description: A theme for a benefit project created by ThinkShout
+package: Other
+core: 8.x
+libraries:
+  - ts_benefit/ts_benefit
+base theme: classy
+#Using Classy as a base theme https://www.drupal.org/theme-guide/8/classy
+
+regions:
+  secondary_nav: Secondary Nav
+  primary_nav: Primary Nav
+  aside: Aside
+  banner: Banner
+  content: Content
+  footer: Footer

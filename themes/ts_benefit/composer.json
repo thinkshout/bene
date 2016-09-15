@@ -1,0 +1,10 @@
+{
+  "name": "drupal/ts_benefit",
+  "type": "drupal-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ThinkShout, Inc",
+  "respository": "git@github.com/thinkshout/bene-dev.git",
+  "require": {
+  }
+}

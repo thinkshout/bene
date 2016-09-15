@@ -1,0 +1,7 @@
+ts_benefit:
+  version: VERSION
+  css:
+    theme:
+      css/benefit.css: {}
+  js:
+    js/main-dist.js: {}
