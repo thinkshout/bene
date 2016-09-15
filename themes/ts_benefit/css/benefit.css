@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800";
 html {
   box-sizing: border-box; }
 
@@ -417,7 +418,16 @@ template {
  * MEDIA QUERIES
  */
 body {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 1rem; }
+
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2.25rem; }
 
 /***
  * Common styles
