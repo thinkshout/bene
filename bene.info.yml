@@ -12,9 +12,9 @@ dependencies:
   - breakpoint
   - ckeditor
   - color
+  - comment
   - config
   - config_update
-  - comment
   - contact
   - contextual
   - datetime
@@ -23,10 +23,6 @@ dependencies:
   - editor
   - features
   - features_ui
-  - datetime
-  - dblog
-  - dynamic_page_cache
-  - editor
   - field_ui
   - file
   - help
@@ -38,8 +34,6 @@ dependencies:
   - options
   - page_cache
   - path
-  - quickedit
-  - taxonomy
   - quickedit
   - rdf
   - search
