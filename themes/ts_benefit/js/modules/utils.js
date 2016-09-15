@@ -1,5 +1,5 @@
 var utils = function() {
-    console.log('hello');
-    console.log('goodbye');
-}
-module.exports =  utils;
+  $('body').hide();
+}();
+
+module.exports = utils;

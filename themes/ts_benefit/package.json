@@ -9,6 +9,7 @@
     "webpack": "^1.13.2"
   },
   "devDependencies": {
+    "jQuery": "^1.7.4",
     "jquery": "^2.2.3"
   },
   "scripts": {

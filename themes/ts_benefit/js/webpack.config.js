@@ -7,7 +7,7 @@ module.exports = {
         main: './main.js'
     },
     output: {
-        path: path.join(__dirname, ''),
+        path: __dirname,
         filename: '[name].js'
     },
     module: {
@@ -19,5 +19,12 @@ module.exports = {
           presets: ['es2015']
         }
       }]
-    }
+    },
+    resolve: {
+      extensions: ['', '.js', '.json', '.coffee'],
+      alias: {
+          $: "/core/assets/vendor/jquery/jquery" // Drupal core jquery
+      }
+
+    },
 };

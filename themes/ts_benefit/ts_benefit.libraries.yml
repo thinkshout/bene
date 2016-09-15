@@ -5,3 +5,6 @@ ts_benefit:
       css/benefit.css: {}
   js:
     js/main-dist.js: {}
+    dependencies:
+      - core/jquery
+      - core/jquery.once
