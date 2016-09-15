@@ -26,7 +26,11 @@
       {
         "type": "git",
         "url": "https://github.com/thinkshout/behat-drush-endpoint.git"
-      }
+      },
+      {
+        "type": "git",
+        "url": "https://github.com/thinkshout/media.git"
+      },
     ],
   "require": {
       "composer/installers": "^1.0.20",
@@ -38,6 +42,7 @@
       "drupal/config_update": "^8.1.1",
       "drupal/contact_storage": "8.1.0-beta2",
       "drupal/ctools": "8.3.0-alpha26",
+      "drupal/default_content": "8.1.x-dev",
       "drupal/devel": "8.1.x-dev",
       "drupal/ds": "8.2.3",
       "drupal/email_registration": "8.1.0-rc3",
@@ -46,6 +51,7 @@
       "drupal/inline_entity_form": "8.1.0-alpha6",
       "drupal/linkit": "8.4.1",
       "drupal/layout_plugin": "8.1.0-alpha22",
+      "thinkshout/media": "dev-8.x-1.x",
       "drupal/metatag": "8.1.0-beta9",
       "drupal/pathauto": "8.1.0-alpha3",
       "drupal/r4032login": "8.x-1.x-dev",
