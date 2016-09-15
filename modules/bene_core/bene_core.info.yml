@@ -11,6 +11,7 @@ dependencies:
   - field
   - file
   - inline_entity_form
+  - image
   - menu_link_content
   - node
   - path

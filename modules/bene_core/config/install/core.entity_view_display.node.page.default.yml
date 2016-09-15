@@ -4,8 +4,11 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_node_blocks
+    - field.field.node.page.field_image
+    - image.style.1280x185
     - node.type.page
   module:
+    - image
     - text
     - user
 id: node.page.default
@@ -16,7 +19,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 100
+    weight: 1
     settings: {  }
     third_party_settings: {  }
   field_node_blocks:
@@ -27,6 +30,14 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
+  field_image:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: 1280x185
+      image_link: ''
+    third_party_settings: {  }
   links:
     weight: 101
     settings: {  }

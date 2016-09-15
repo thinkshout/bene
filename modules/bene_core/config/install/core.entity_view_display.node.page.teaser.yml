@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
     - field.field.node.page.field_node_blocks
+    - field.field.node.page.field_image
     - node.type.page
   module:
     - text
@@ -25,3 +26,4 @@ content:
     weight: 101
 hidden:
   field_node_blocks: true
+  field_image: true
