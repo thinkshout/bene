@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains bene_social.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function bene_social_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the bene_social module.
+    case 'help.page.bene_social':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Social media links block') . '</p>';
+      return $output;
+
+    default:
+  }
+}
