@@ -29,6 +29,7 @@ dependencies:
   - help
   - history
   - image
+  - media
   - menu_link_content
   - menu_ui
   - node
@@ -36,6 +37,7 @@ dependencies:
   - page_cache
   - path
   - quickedit
+  - r4032login
   - rdf
   - search
   - shortcut
