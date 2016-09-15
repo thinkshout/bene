@@ -429,6 +429,10 @@ h1 {
 h2 {
   font-size: 2.25rem; }
 
+header .site-logo img {
+  max-width: 12.5rem;
+  float: left; }
+
 /***
  * Common styles
  */
