@@ -3,12 +3,18 @@ description: 'Provides core components required by other features.'
 type: module
 core: 8.x
 dependencies:
+  - bene_blocks
   - block
   - block_content
+  - ckeditor
   - contact
+  - editor
+  - entity_embed
   - features
   - field
   - file
+  - inline_entity_form
+  - filter
   - image
   - menu_link_content
   - node

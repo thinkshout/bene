@@ -1,0 +1,13 @@
+name: Blocks
+description: 'Editorial block options.'
+type: module
+core: 8.x
+dependencies:
+  - block_content
+  - field
+  - file
+  - image
+  - link
+  - text
+version: 8.x-1.0
+package: Bene

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_block
+    - field.storage.block_content.field_subtitle
+id: block_content.hero_block.field_subtitle
+field_name: field_subtitle
+entity_type: block_content
+bundle: hero_block
+label: Subtitle
+description: 'The subtitle appears in smaller font above the main title.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,3 +1,11 @@
-//-- Fonts
-
-//-- Colors
+/***
+ * BUTTONS
+ */
+%button {
+  background: $primary-color;
+  color: $white;
+  @include font-family(700);
+  font-size: rem(18);
+  padding: 1rem;
+  text-decoration: none;
+}

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.three_column_block
+    - field.storage.block_content.field_text_1
+id: block_content.three_column_block.field_text_1
+field_name: field_text_1
+entity_type: block_content
+bundle: three_column_block
+label: 'Text 1'
+description: 'The left text.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

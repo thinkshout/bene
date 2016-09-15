@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: cta_1240x400_
+label: 'CTA (1240x400)'
+effects:
+  ea14e61d-080a-465d-bebc-fba28182a80c:
+    uuid: ea14e61d-080a-465d-bebc-fba28182a80c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1240
+      height: 400
