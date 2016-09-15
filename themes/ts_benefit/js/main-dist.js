@@ -44,18 +44,21 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1);
+	$ = jQuery; // Global jquery definition
+	__webpack_require__(3);
 
 
 /***/ },
-/* 1 */
+/* 1 */,
+/* 2 */,
+/* 3 */
 /***/ function(module, exports) {
 
 	var utils = function() {
-	    console.log('hello');
-	    console.log('goodbye');
-	}
-	module.exports =  utils;
+	  $('body').hide();
+	}();
+
+	module.exports = utils;
 
 
 /***/ }
