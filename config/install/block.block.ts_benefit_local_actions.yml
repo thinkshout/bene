@@ -6,7 +6,7 @@ dependencies:
 id: ts_benefit_local_actions
 theme: ts_benefit
 region: content
-weight: -4
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:

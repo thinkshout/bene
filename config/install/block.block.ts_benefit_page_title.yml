@@ -5,8 +5,8 @@ dependencies:
     - ts_benefit
 id: ts_benefit_page_title
 theme: ts_benefit
-region: banner
-weight: -6
+region: content
+weight: -3
 provider: null
 plugin: page_title_block
 settings:
