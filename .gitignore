@@ -4,3 +4,6 @@ vendor/
 .sass-cache/
 
 node_modules
+themes/ts_benefit/node_modules
+
+benefit.css.map

@@ -8,7 +8,7 @@ dependencies:
 id: ts_benefit_breadcrumbs
 theme: ts_benefit
 region: '-1'
-weight: -3
+weight: -6
 provider: null
 plugin: system_breadcrumb_block
 settings:

@@ -8,7 +8,7 @@ dependencies:
 id: ts_benefit_messages
 theme: ts_benefit
 region: content
-weight: -1
+weight: -4
 provider: null
 plugin: system_messages_block
 settings:

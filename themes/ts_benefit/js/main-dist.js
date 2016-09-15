@@ -45,13 +45,11 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	$ = jQuery; // Global jquery definition
-	__webpack_require__(3);
+	__webpack_require__(1);
 
 
 /***/ },
-/* 1 */,
-/* 2 */,
-/* 3 */
+/* 1 */
 /***/ function(module, exports) {
 
 	var utils = function() {
