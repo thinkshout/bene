@@ -12,7 +12,7 @@ field_name: field_node_blocks
 entity_type: node
 bundle: page
 label: Blocks
-description: ''
+description: 'Add blocks below your content to spruce up the look and feel. You can create new blocks right here, or use existing blocks created for other pages. Note that when using existing blocks, any edits to those blocks will show up everywhere that block is used.'
 required: false
 translatable: false
 default_value: {  }
