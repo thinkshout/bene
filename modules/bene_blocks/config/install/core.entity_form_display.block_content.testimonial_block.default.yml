@@ -6,7 +6,7 @@ dependencies:
     - field.field.block_content.testimonial_block.field_author
     - field.field.block_content.testimonial_block.field_image
     - field.field.block_content.testimonial_block.field_testimonial
-    - image.style.thumbnail
+    - image.style.large
   module:
     - image
 id: block_content.testimonial_block.default
@@ -15,25 +15,31 @@ bundle: testimonial_block
 mode: default
 content:
   field_author:
-    weight: 1
+    weight: 3
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_image:
-    weight: 3
+    weight: 1
     settings:
+      preview_image_style: large
       progress_indicator: throbber
-      preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
   field_testimonial:
-    weight: 0
+    weight: 2
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-hidden:
-  info: true
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: 'This is for you. It will not display on the site.'
+    third_party_settings: {  }
+hidden: {  }

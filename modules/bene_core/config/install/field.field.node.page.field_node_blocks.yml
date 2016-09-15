@@ -5,6 +5,10 @@ dependencies:
     - block_content.type.basic
     - block_content.type.cta_block
     - block_content.type.hero_block
+    - block_content.type.testimonial_block
+    - block_content.type.three_column_block
+    - block_content.type.two_column_block
+    - block_content.type.two_column_wide_block
     - field.storage.node.field_node_blocks
     - node.type.page
 id: node.page.field_node_blocks
@@ -12,7 +16,7 @@ field_name: field_node_blocks
 entity_type: node
 bundle: page
 label: Blocks
-description: ''
+description: 'Add blocks below your content to spruce up the look and feel. You can create new blocks right here, or use existing blocks created for other pages. Note that when using existing blocks, any edits to those blocks will show up everywhere that block is used.'
 required: false
 translatable: false
 default_value: {  }
@@ -24,6 +28,10 @@ settings:
       basic: basic
       cta_block: cta_block
       hero_block: hero_block
+      testimonial_block: testimonial_block
+      three_column_block: three_column_block
+      two_column_block: two_column_block
+      two_column_wide_block: two_column_wide_block
     sort:
       field: info
       direction: ASC

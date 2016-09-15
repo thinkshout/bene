@@ -6,6 +6,7 @@ dependencies:
     - field.field.block_content.hero_block.field_call_to_action
     - field.field.block_content.hero_block.field_image
     - field.field.block_content.hero_block.field_subtitle
+    - field.field.block_content.hero_block.field_title
     - image.style.large
   module:
     - image
@@ -16,25 +17,38 @@ bundle: hero_block
 mode: default
 content:
   field_call_to_action:
-    weight: 2
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
   field_image:
-    weight: 0
+    weight: 2
     settings:
       preview_image_style: large
       progress_indicator: throbber
     third_party_settings: {  }
     type: image_image
   field_subtitle:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_title:
     weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-hidden:
-  info: true
+  info:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: 'This is for you. It will not display on the site.'
+    third_party_settings: {  }
+hidden: {  }

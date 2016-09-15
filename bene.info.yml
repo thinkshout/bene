@@ -7,6 +7,7 @@ distribution:
 dependencies:
   - automated_cron
   - bene_core
+  - bene_blocks
   - block
   - block_content
   - breakpoint

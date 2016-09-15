@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 2_column_510x310_
+label: '2 column (510x310)'
+effects:
+  87264b3c-f9cf-40f5-8e0a-13d87d27bef4:
+    uuid: 87264b3c-f9cf-40f5-8e0a-13d87d27bef4
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 510
+      height: 310
