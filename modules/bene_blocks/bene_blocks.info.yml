@@ -1,5 +1,5 @@
-name: Blocks
-description: 'Various block types available to editors.'
+name: 'Bene Blocks'
+description: 'Editorial block options.'
 type: module
 core: 8.x
 dependencies:

@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.testimonial_block
+    - field.field.block_content.testimonial_block.field_author
+    - field.field.block_content.testimonial_block.field_image
+    - field.field.block_content.testimonial_block.field_testimonial
+    - image.style.thumbnail
+  module:
+    - image
+id: block_content.testimonial_block.default
+targetEntityType: block_content
+bundle: testimonial_block
+mode: default
+content:
+  field_author:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_testimonial:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  info: true
