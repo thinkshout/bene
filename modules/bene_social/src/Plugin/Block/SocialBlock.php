@@ -101,9 +101,7 @@ class SocialBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function blockSubmit($form, FormStateInterface $form_state) {
-    $this->configuration['text_format'] = $form_state->getValue('text_format');
     $this->configuration['facebook'] = $form_state->getValue('facebook');
-    $this->configuration['flickr'] = $form_state->getValue('flickr');
     $this->configuration['google'] = $form_state->getValue('google');
     $this->configuration['instagram'] = $form_state->getValue('instagram');
     $this->configuration['linkedin'] = $form_state->getValue('linkedin');
@@ -117,22 +115,29 @@ class SocialBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
+    $image_path = drupal_get_path('module', 'bene_social') . '/images/';
+    $services = [
+      'facebook',
+      'google',
+      'instagram',
+      'linkedin',
+      'pinterest',
+      'tumblr',
+      'twitter',
+      'youtube',
+    ];
     $build = [];
     $build['#attached'] = array(
       'library' => array(
-        'bene_social/social-block'
+        'bene_social/social-block',
       ),
     );
     $build['#prefix'] = '<div class="bene-social-links">';
-    $build['social_block_facebook']['#markup'] = '<p>' . $this->configuration['facebook'] . '</p>';
-    $build['social_block_flickr']['#markup'] = '<p>' . $this->configuration['flickr'] . '</p>';
-    $build['social_block_google']['#markup'] = '<p>' . $this->configuration['google'] . '</p>';
-    $build['social_block_instagram']['#markup'] = '<p>' . $this->configuration['instagram'] . '</p>';
-    $build['social_block_linkedin']['#markup'] = '<p>' . $this->configuration['linkedin'] . '</p>';
-    $build['social_block_pinterest']['#markup'] = '<p>' . $this->configuration['pinterest'] . '</p>';
-    $build['social_block_tumblr']['#markup'] = '<p>' . $this->configuration['tumblr'] . '</p>';
-    $build['social_block_twitter']['#markup'] = '<p>' . $this->configuration['twitter'] . '</p>';
-    $build['social_block_youtube']['#markup'] = '<p>' . $this->configuration['youtube'] . '</p>';
+    foreach ($services as $service) {
+      if ($this->configuration[$service]) {
+        $build[$service]['#markup'] = '<a class="' . $service . '" href="' . $this->configuration[$service] . '">' . $service . '</a>';
+      }
+    }
     $build['#suffix'] = '</div>';
     return $build;
   }
