@@ -30,10 +30,10 @@
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
+    content['body']['#bundle'] ? 'bundle-' ~ content['body']['#bundle'],
   ]
 %}
 {% if content.field_image|render|trim is not empty %}
-  set values = values|merge(['apple', 'orange'])
   {% set classes = classes|merge(['has-image']) %}
 {% else %}
   {% set classes = classes|merge(['has-image']) %}

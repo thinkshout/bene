@@ -30,12 +30,13 @@
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
+    content['body']['#bundle'] ? 'bundle-' ~ content['body']['#bundle'],
   ]
 %}
 {% if content.field_image|render|trim is not empty %}
-  {% set classes = 'has-image' %}
+  {% set classes = classes|merge(['has-image']) %}
 {% else %}
-  {% set classes = 'no-image' %}
+  {% set classes = classes|merge(['has-image']) %}
 {% endif %}
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
