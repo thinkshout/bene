@@ -20,6 +20,7 @@ dependencies:
   - config_update
   - contact
   - contextual
+  - crop
   - crop_media_entity
   - datetime
   - dblog
@@ -51,7 +52,6 @@ dependencies:
   - rdf
   - search
   - shortcut
-  - simple
   - system
   - taxonomy
   - token
