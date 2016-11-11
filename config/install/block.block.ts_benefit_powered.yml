@@ -8,7 +8,7 @@ dependencies:
 id: ts_benefit_powered
 theme: ts_benefit
 region: '-1'
-weight: -7
+weight: -5
 provider: null
 plugin: system_powered_by_block
 settings:

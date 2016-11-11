@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Core bene code.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function bene_core_module_implements_alter(&$implementations, $hook) {
+  switch ($hook) {
+    case 'form_user_form_alter':
+    case 'form_alter':
+      bene_core_reorder_indexes($implementations, 'contact', 'bene_core');
+      break;
+
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Disable the personal contact form config field.
+ *
+ * @see contact_form_user_form_alter()
+ */
+function bene_core_form_user_form_alter(&$form, FormStateInterface $form_state) {
+  // Disable the user-contact form. Consider basing this on a setting in the
+  // future, if this feature is needed.
+  $form['contact']['#access'] = FALSE;
+}
+
+/**
+ * Helper function to re-order hook implementations.
+ */
+function bene_core_reorder_indexes(&$array, $first, $second) {
+  if (isset($array[$second])) {
+    $value = $array[$second];
+    unset($array[$second]);
+    $indexed = array_keys($array);
+    $place = array_search($first, $indexed);
+    array_splice($indexed, $place + 1, 0, $second);
+    $array = array_combine($indexed, array_fill(0, count($indexed), $value));
+  }
+}

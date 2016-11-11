@@ -6,7 +6,7 @@ dependencies:
 id: ts_benefit_local_tasks
 theme: ts_benefit
 region: content
-weight: -3
+weight: -5
 provider: null
 plugin: local_tasks_block
 settings:

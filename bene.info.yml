@@ -5,6 +5,8 @@ core: 8.x
 distribution:
   name: Bene
 dependencies:
+  - admin_toolbar
+  - admin_toolbar_tools
   - automated_cron
   - bene_core
   - bene_blocks
@@ -18,11 +20,14 @@ dependencies:
   - config_update
   - contact
   - contextual
+  - crop
+  - crop_media_entity
   - datetime
   - dblog
   - default_content
   - dynamic_page_cache
   - editor
+  - email_registration
   - embed
   - entity_embed
   - features
@@ -32,13 +37,16 @@ dependencies:
   - help
   - history
   - image
+  - linkit
   - media
+  - metatag
   - menu_link_content
   - menu_ui
   - node
   - options
   - page_cache
   - path
+  - pathauto
   - quickedit
   - r4032login
   - rdf
@@ -46,6 +54,7 @@ dependencies:
   - shortcut
   - system
   - taxonomy
+  - token
   - toolbar
   - tour
   - user
