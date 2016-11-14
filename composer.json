@@ -35,7 +35,7 @@
   "require": {
       "composer/installers": "^1.0.20",
       "cweagans/composer-patches": "~1.0",
-      "drupal/core": "^8.1.8",
+      "drupal/core": "^8.2.2",
       "drush/drush": "^9.0",
       "drupal/console": "~1.0",
       "drupal/admin_toolbar": "8.1.17",
