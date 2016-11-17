@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "69988c4b810572bec136773c10772d39",
-    "content-hash": "238eae12bb6d329f0969419690a12ffd",
+    "hash": "87eb4a82ae1194cf922ab0b20eecc093",
+    "content-hash": "5f4d58eccba5844944bf55a8c49edebf",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1685,6 +1685,40 @@
             "time": "2016-11-17 09:07:35"
         },
         {
+            "name": "drupal/crop",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/crop.git",
+                "reference": "c0f774c46a897c4995d6aa60b4ff2aa749629cbe"
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/image": "8.*",
+                "drupal/user": "8.*"
+            },
+            "replace": {
+                "drupal/crop_media_entity": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/crop_media_entity",
+                "drupal/media_entity": "Required by drupal/crop_media_entity"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides storage and API for image crops.",
+            "homepage": "https://www.drupal.org/project/crop",
+            "time": "2016-11-09 20:25:14"
+        },
+        {
             "name": "drupal/ctools",
             "version": "8.3.0-alpha26",
             "source": {
@@ -1886,6 +1920,136 @@
             "time": "2016-07-15 14:54:31"
         },
         {
+            "name": "drupal/embed",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/embed.git",
+                "reference": "135281965da85d0cfa04f3c0c77ce7821dfab662"
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides a framework for different types of embeds in text editors.",
+            "homepage": "https://www.drupal.org/project/embed",
+            "time": "2016-07-10 18:43:18"
+        },
+        {
+            "name": "drupal/entity",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/entity",
+                "reference": "879356bbf75608f86d8fb89d76a21dc1e99a39ae"
+            },
+            "require": {
+                "drupal/core": "~8.1",
+                "drupal/system": ">=8.1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides expanded entity APIs, which will be moved to Drupal core one day.",
+            "homepage": "http://drupal.org/project/entity",
+            "time": "2016-10-12 10:12:36"
+        },
+        {
+            "name": "drupal/entity_browser",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/entity_browser.git",
+                "reference": "ffa2fa05510e15810dc85785029c8aa8d5939aac"
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "replace": {
+                "drupal/entity_browser_entity_form": "self.version",
+                "drupal/entity_browser_example": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/entity_browser_entity_form, drupal/entity_browser_example",
+                "drupal/inline_entity_form": "Required by drupal/entity_browser_entity_form"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                },
+                "patches_applied": {
+                    "Fix bug when wysiwyg embedding if a video is already embedded https://www.drupal.org/node/2822961": "https://www.drupal.org/files/issues/embedded_video_breaks-2822961-2.patch"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Janez Urevc",
+                    "homepage": "https://github.com/slashrsm",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Primoz Hmeljak",
+                    "homepage": "https://github.com/primsi",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/1943336/committers",
+                    "role": "contributor"
+                }
+            ],
+            "description": "Provide a generic entity browser/picker/selector.",
+            "homepage": "http://drupal.org/project/entity_browser",
+            "time": "2016-11-17 10:59:55"
+        },
+        {
+            "name": "drupal/entity_embed",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/entity_embed.git",
+                "reference": "a9f6ea87e903f46fe7c42a8d452ebc78067128e1"
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/embed": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Allows entities to be embedded using a text editor.",
+            "homepage": "https://www.drupal.org/project/entity_embed",
+            "time": "2016-11-03 09:15:19"
+        },
+        {
             "name": "drupal/features",
             "version": "dev-8.x-3.x",
             "source": {
@@ -1958,6 +2122,54 @@
             "description": "Allows your site to be tracked by Google Analytics by adding a Javascript tracking code to every page.",
             "homepage": "https://www.drupal.org/project/google_analytics",
             "time": "2016-04-23 19:09:32"
+        },
+        {
+            "name": "drupal/image_widget_crop",
+            "version": "8.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/image_widget_crop.git",
+                "reference": "55bed7cda3fc398d86ce4ef176c9dec666b72ff1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/image_widget_crop-8.x-1.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/crop": "8.*",
+                "drupal/image": "8.*"
+            },
+            "replace": {
+                "drupal/image_widget_crop_examples": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/image_widget_crop_examples",
+                "drupal/crop": "Required by drupal/image_widget_crop_examples",
+                "drupal/file_entity": "Required by drupal/image_widget_crop_examples",
+                "drupal/image": "Required by drupal/image_widget_crop_examples",
+                "drupal/inline_entity_form": "Required by drupal/image_widget_crop_examples",
+                "drupal/media_entity": "Required by drupal/image_widget_crop_examples",
+                "drupal/media_entity_image": "Required by drupal/image_widget_crop_examples",
+                "drupal/node": "Required by drupal/image_widget_crop_examples",
+                "drupal/responsive_image": "Required by drupal/image_widget_crop_examples",
+                "drupal/user": "Required by drupal/image_widget_crop_examples"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides an interface for using the features of the Crop API.",
+            "homepage": "https://www.drupal.org/project/image_widget_crop",
+            "time": "2016-08-31 13:05:29"
         },
         {
             "name": "drupal/inline_entity_form",
@@ -2082,6 +2294,158 @@
             "description": "Linkit",
             "homepage": "http://drupal.org/project/linkit",
             "time": "2016-02-09 20:50:33"
+        },
+        {
+            "name": "drupal/media_entity",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/media_entity.git",
+                "reference": "708e09c77b6279fd1fa8831b52ce4556c909c3f0"
+            },
+            "require": {
+                "drupal/core": "~8.1",
+                "drupal/entity": ">=8.1.0-alpha3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Media entity API.",
+            "homepage": "https://www.drupal.org/project/media_entity",
+            "keywords": [
+                "Drupal"
+            ],
+            "time": "2016-11-13 20:56:52"
+        },
+        {
+            "name": "drupal/media_entity_document",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/media_entity_document.git",
+                "reference": "1274a876668f063a0f0c5e6813610de69f041685"
+            },
+            "require": {
+                "drupal/core": "~8.1",
+                "drupal/media_entity": "~1.0 || ~8.1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "NerOcrO",
+                    "homepage": "https://www.drupal.org/user/1728164",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Media entity local documents provider.",
+            "homepage": "https://www.drupal.org/project/media_entity_document",
+            "keywords": [
+                "Drupal",
+                "document",
+                "media"
+            ],
+            "time": "2016-07-30 14:35:32"
+        },
+        {
+            "name": "drupal/media_entity_image",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/media_entity_image.git",
+                "reference": "88ef178239eb6b4c37e9818317937cbed74c836f"
+            },
+            "require": {
+                "drupal/core": "~8.1",
+                "drupal/media_entity": "~1.0 || ~8.1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides the Image plugin for Media Entity.",
+            "homepage": "https://www.drupal.org/project/media_entity_image",
+            "keywords": [
+                "Drupal",
+                "image",
+                "media"
+            ],
+            "time": "2016-11-13 16:05:38"
+        },
+        {
+            "name": "drupal/media_entity_instagram",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/media_entity_instagram.git",
+                "reference": "0ff8e721c8775c27031d85d45fa315fcc16beece"
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/media_entity": "8.*",
+                "php-instagram-api/php-instagram-api": "dev-master"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Media entity Instagram provider.",
+            "homepage": "https://www.drupal.org/project/media_entity_instagram",
+            "time": "2016-08-02 09:01:37"
+        },
+        {
+            "name": "drupal/media_entity_twitter",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/media_entity_twitter.git",
+                "reference": "e5d7c69861a23daafc244256e9c99e8afe1bb286"
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/media_entity": "8.*",
+                "j7mbo/twitter-api-php": "~1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Media entity Twitter provider.",
+            "homepage": "https://www.drupal.org/project/media_entity_twitter",
+            "time": "2016-11-07 19:58:53"
         },
         {
             "name": "drupal/metatag",
@@ -2259,6 +2623,43 @@
             "description": "Provides a user interface for the Token API and some missing core tokens.",
             "homepage": "https://www.drupal.org/project/token",
             "time": "2016-01-21 08:02:24"
+        },
+        {
+            "name": "drupal/video_embed_field",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/video_embed_field",
+                "reference": "f1c1857299dead6f5adaf813026a1364a889ecfd"
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "replace": {
+                "drupal/video_embed_media": "self.version",
+                "drupal/video_embed_wysiwyg": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/video_embed_media, drupal/video_embed_wysiwyg",
+                "drupal/media_entity": "Required by drupal/video_embed_media"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "package": "Field types",
+                    "version": "8.x-1.x"
+                },
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides a field type for displaying videos from 3rd party providers such as YouTube and Vimeo.",
+            "homepage": "https://www.drupal.org/project/video_embed_field",
+            "time": "2016-09-24 03:02:47"
         },
         {
             "name": "drush/drush",
@@ -2747,6 +3148,56 @@
             "time": "2014-11-20 19:18:42"
         },
         {
+            "name": "j7mbo/twitter-api-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/J7mbo/twitter-api-php.git",
+                "reference": "5a1ac487adc248b59a73d5edc002b57f8dc211b8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/J7mbo/twitter-api-php/zipball/5a1ac487adc248b59a73d5edc002b57f8dc211b8",
+                "reference": "5a1ac487adc248b59a73d5edc002b57f8dc211b8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.5,>=4.5.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "TwitterAPIExchange.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU Public License"
+            ],
+            "authors": [
+                {
+                    "name": "James Mallison",
+                    "homepage": "https://github.com/j7mbo/twitter-api-php"
+                }
+            ],
+            "description": "Simple PHP Wrapper for Twitter API v1.1 calls",
+            "homepage": "https://github.com/j7mbo/twitter-api-php",
+            "keywords": [
+                "api",
+                "php",
+                "twitter"
+            ],
+            "time": "2016-07-21 13:33:46"
+        },
+        {
             "name": "jakub-onderka/php-console-color",
             "version": "0.1",
             "source": {
@@ -3115,6 +3566,48 @@
                 "console"
             ],
             "time": "2016-01-21 16:14:31"
+        },
+        {
+            "name": "php-instagram-api/php-instagram-api",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/galen/PHP-Instagram-API.git",
+                "reference": "7a796fdae715fcdccc00590933ce482437342c35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/galen/PHP-Instagram-API/zipball/7a796fdae715fcdccc00590933ce482437342c35",
+                "reference": "7a796fdae715fcdccc00590933ce482437342c35",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Instagram": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Galen Grover",
+                    "email": "galenjr@gmail.com",
+                    "homepage": "http://www.galengrover.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP Instagram API for PHP 5.3+",
+            "homepage": "https://github.com/galen/PHP-Instagram-API",
+            "keywords": [
+                "instagram"
+            ],
+            "time": "2013-11-13 23:10:03"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -5179,6 +5672,42 @@
             "time": "2016-11-14 16:15:57"
         },
         {
+            "name": "thinkshout/media",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thinkshout/media.git",
+                "reference": "a0456edf626f4486fda5d9da298e868cd7782e6d"
+            },
+            "require": {
+                "drupal/entity_browser": "^8.1@alpha",
+                "drupal/entity_embed": "^8.1@alpha",
+                "drupal/image_widget_crop": "^8.1",
+                "drupal/media_entity_document": "^8.1",
+                "drupal/media_entity_image": "^8.1",
+                "drupal/media_entity_instagram": "^8.1",
+                "drupal/media_entity_twitter": "^8.1",
+                "drupal/video_embed_field": "^8.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "patches": {
+                    "drupal/entity_browser": {
+                        "Fix bug when wysiwyg embedding if a video is already embedded https://www.drupal.org/node/2822961": "https://www.drupal.org/files/issues/embedded_video_breaks-2822961-2.patch"
+                    }
+                }
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Media module for Drupal",
+            "homepage": "https://github.com/drupal-media/media/",
+            "support": {
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            },
+            "time": "2016-10-28 19:23:30"
+        },
+        {
             "name": "twig/twig",
             "version": "1.x-dev",
             "source": {
@@ -6144,40 +6673,6 @@
             "time": "2016-03-31 10:24:22"
         },
         {
-            "name": "drupal/crop",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/crop.git",
-                "reference": "c0f774c46a897c4995d6aa60b4ff2aa749629cbe"
-            },
-            "require": {
-                "drupal/core": "8.*",
-                "drupal/image": "8.*",
-                "drupal/user": "8.*"
-            },
-            "replace": {
-                "drupal/crop_media_entity": "self.version"
-            },
-            "suggest": {
-                "drupal/core": "Required by drupal/crop_media_entity",
-                "drupal/media_entity": "Required by drupal/crop_media_entity"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Provides storage and API for image crops.",
-            "homepage": "https://www.drupal.org/project/crop",
-            "time": "2016-11-09 20:25:14"
-        },
-        {
             "name": "drupal/drupal-driver",
             "version": "dev-master",
             "source": {
@@ -6280,370 +6775,6 @@
                 "web"
             ],
             "time": "2016-05-07 02:52:13"
-        },
-        {
-            "name": "drupal/embed",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/embed.git",
-                "reference": "135281965da85d0cfa04f3c0c77ce7821dfab662"
-            },
-            "require": {
-                "drupal/core": "8.*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Provides a framework for different types of embeds in text editors.",
-            "homepage": "https://www.drupal.org/project/embed",
-            "time": "2016-07-10 18:43:18"
-        },
-        {
-            "name": "drupal/entity",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/entity",
-                "reference": "879356bbf75608f86d8fb89d76a21dc1e99a39ae"
-            },
-            "require": {
-                "drupal/core": "~8.1",
-                "drupal/system": ">=8.1.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Provides expanded entity APIs, which will be moved to Drupal core one day.",
-            "homepage": "http://drupal.org/project/entity",
-            "time": "2016-10-12 10:12:36"
-        },
-        {
-            "name": "drupal/entity_browser",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/entity_browser.git",
-                "reference": "ffa2fa05510e15810dc85785029c8aa8d5939aac"
-            },
-            "require": {
-                "drupal/core": "8.*"
-            },
-            "replace": {
-                "drupal/entity_browser_entity_form": "self.version",
-                "drupal/entity_browser_example": "self.version"
-            },
-            "suggest": {
-                "drupal/core": "Required by drupal/entity_browser_entity_form, drupal/entity_browser_example",
-                "drupal/inline_entity_form": "Required by drupal/entity_browser_entity_form"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Janez Urevc",
-                    "homepage": "https://github.com/slashrsm",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Primoz Hmeljak",
-                    "homepage": "https://github.com/primsi",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "See other contributors",
-                    "homepage": "https://www.drupal.org/node/1943336/committers",
-                    "role": "contributor"
-                }
-            ],
-            "description": "Provide a generic entity browser/picker/selector.",
-            "homepage": "http://drupal.org/project/entity_browser",
-            "time": "2016-11-17 10:59:55"
-        },
-        {
-            "name": "drupal/entity_embed",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/entity_embed.git",
-                "reference": "a9f6ea87e903f46fe7c42a8d452ebc78067128e1"
-            },
-            "require": {
-                "drupal/core": "8.*",
-                "drupal/embed": "8.*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Allows entities to be embedded using a text editor.",
-            "homepage": "https://www.drupal.org/project/entity_embed",
-            "time": "2016-11-03 09:15:19"
-        },
-        {
-            "name": "drupal/image_widget_crop",
-            "version": "8.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/image_widget_crop.git",
-                "reference": "55bed7cda3fc398d86ce4ef176c9dec666b72ff1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/image_widget_crop-8.x-1.3.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "drupal/core": "8.*",
-                "drupal/crop": "8.*",
-                "drupal/image": "8.*"
-            },
-            "replace": {
-                "drupal/image_widget_crop_examples": "self.version"
-            },
-            "suggest": {
-                "drupal/core": "Required by drupal/image_widget_crop_examples",
-                "drupal/crop": "Required by drupal/image_widget_crop_examples",
-                "drupal/file_entity": "Required by drupal/image_widget_crop_examples",
-                "drupal/image": "Required by drupal/image_widget_crop_examples",
-                "drupal/inline_entity_form": "Required by drupal/image_widget_crop_examples",
-                "drupal/media_entity": "Required by drupal/image_widget_crop_examples",
-                "drupal/media_entity_image": "Required by drupal/image_widget_crop_examples",
-                "drupal/node": "Required by drupal/image_widget_crop_examples",
-                "drupal/responsive_image": "Required by drupal/image_widget_crop_examples",
-                "drupal/user": "Required by drupal/image_widget_crop_examples"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Provides an interface for using the features of the Crop API.",
-            "homepage": "https://www.drupal.org/project/image_widget_crop",
-            "time": "2016-08-31 13:05:29"
-        },
-        {
-            "name": "drupal/media_entity",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/media_entity.git",
-                "reference": "708e09c77b6279fd1fa8831b52ce4556c909c3f0"
-            },
-            "require": {
-                "drupal/core": "~8.1",
-                "drupal/entity": ">=8.1.0-alpha3"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Media entity API.",
-            "homepage": "https://www.drupal.org/project/media_entity",
-            "keywords": [
-                "Drupal"
-            ],
-            "time": "2016-11-13 20:56:52"
-        },
-        {
-            "name": "drupal/media_entity_document",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/media_entity_document.git",
-                "reference": "1274a876668f063a0f0c5e6813610de69f041685"
-            },
-            "require": {
-                "drupal/core": "~8.1",
-                "drupal/media_entity": "~1.0 || ~8.1.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "NerOcrO",
-                    "homepage": "https://www.drupal.org/user/1728164",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Media entity local documents provider.",
-            "homepage": "https://www.drupal.org/project/media_entity_document",
-            "keywords": [
-                "Drupal",
-                "document",
-                "media"
-            ],
-            "time": "2016-07-30 14:35:32"
-        },
-        {
-            "name": "drupal/media_entity_image",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/media_entity_image.git",
-                "reference": "88ef178239eb6b4c37e9818317937cbed74c836f"
-            },
-            "require": {
-                "drupal/core": "~8.1",
-                "drupal/media_entity": "~1.0 || ~8.1.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Provides the Image plugin for Media Entity.",
-            "homepage": "https://www.drupal.org/project/media_entity_image",
-            "keywords": [
-                "Drupal",
-                "image",
-                "media"
-            ],
-            "time": "2016-11-13 16:05:38"
-        },
-        {
-            "name": "drupal/media_entity_instagram",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/media_entity_instagram.git",
-                "reference": "0ff8e721c8775c27031d85d45fa315fcc16beece"
-            },
-            "require": {
-                "drupal/core": "8.*",
-                "drupal/media_entity": "8.*",
-                "php-instagram-api/php-instagram-api": "dev-master"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Media entity Instagram provider.",
-            "homepage": "https://www.drupal.org/project/media_entity_instagram",
-            "time": "2016-08-02 09:01:37"
-        },
-        {
-            "name": "drupal/media_entity_twitter",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/media_entity_twitter.git",
-                "reference": "e5d7c69861a23daafc244256e9c99e8afe1bb286"
-            },
-            "require": {
-                "drupal/core": "8.*",
-                "drupal/media_entity": "8.*",
-                "j7mbo/twitter-api-php": "~1.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Media entity Twitter provider.",
-            "homepage": "https://www.drupal.org/project/media_entity_twitter",
-            "time": "2016-11-07 19:58:53"
-        },
-        {
-            "name": "drupal/video_embed_field",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/video_embed_field",
-                "reference": "f1c1857299dead6f5adaf813026a1364a889ecfd"
-            },
-            "require": {
-                "drupal/core": "8.*"
-            },
-            "replace": {
-                "drupal/video_embed_media": "self.version",
-                "drupal/video_embed_wysiwyg": "self.version"
-            },
-            "suggest": {
-                "drupal/core": "Required by drupal/video_embed_media, drupal/video_embed_wysiwyg",
-                "drupal/media_entity": "Required by drupal/video_embed_media"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "package": "Field types",
-                    "version": "8.x-1.x"
-                },
-                "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Provides a field type for displaying videos from 3rd party providers such as YouTube and Vimeo.",
-            "homepage": "https://www.drupal.org/project/video_embed_field",
-            "time": "2016-09-24 03:02:47"
         },
         {
             "name": "drush-ops/behat-drush-endpoint",
@@ -6777,56 +6908,6 @@
                 "webtest"
             ],
             "time": "2016-02-05 12:35:01"
-        },
-        {
-            "name": "j7mbo/twitter-api-php",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/J7mbo/twitter-api-php.git",
-                "reference": "5a1ac487adc248b59a73d5edc002b57f8dc211b8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/J7mbo/twitter-api-php/zipball/5a1ac487adc248b59a73d5edc002b57f8dc211b8",
-                "reference": "5a1ac487adc248b59a73d5edc002b57f8dc211b8",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.5,>=4.5.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "TwitterAPIExchange.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GNU Public License"
-            ],
-            "authors": [
-                {
-                    "name": "James Mallison",
-                    "homepage": "https://github.com/j7mbo/twitter-api-php"
-                }
-            ],
-            "description": "Simple PHP Wrapper for Twitter API v1.1 calls",
-            "homepage": "https://github.com/j7mbo/twitter-api-php",
-            "keywords": [
-                "api",
-                "php",
-                "twitter"
-            ],
-            "time": "2016-07-21 13:33:46"
         },
         {
             "name": "jcalderonzumba/gastonjs",
@@ -6988,48 +7069,6 @@
             "description": "Virtual file system to mock the real file system in unit tests.",
             "homepage": "http://vfs.bovigo.org/",
             "time": "2016-07-18 14:02:57"
-        },
-        {
-            "name": "php-instagram-api/php-instagram-api",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/galen/PHP-Instagram-API.git",
-                "reference": "7a796fdae715fcdccc00590933ce482437342c35"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/galen/PHP-Instagram-API/zipball/7a796fdae715fcdccc00590933ce482437342c35",
-                "reference": "7a796fdae715fcdccc00590933ce482437342c35",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Instagram": "."
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Galen Grover",
-                    "email": "galenjr@gmail.com",
-                    "homepage": "http://www.galengrover.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "PHP Instagram API for PHP 5.3+",
-            "homepage": "https://github.com/galen/PHP-Instagram-API",
-            "keywords": [
-                "instagram"
-            ],
-            "time": "2013-11-13 23:10:03"
         },
         {
             "name": "phpspec/prophecy",
@@ -7858,42 +7897,6 @@
             "description": "Symfony BrowserKit Component",
             "homepage": "https://symfony.com",
             "time": "2016-10-13 13:35:11"
-        },
-        {
-            "name": "thinkshout/media",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thinkshout/media.git",
-                "reference": "a0456edf626f4486fda5d9da298e868cd7782e6d"
-            },
-            "require": {
-                "drupal/entity_browser": "^8.1@alpha",
-                "drupal/entity_embed": "^8.1@alpha",
-                "drupal/image_widget_crop": "^8.1",
-                "drupal/media_entity_document": "^8.1",
-                "drupal/media_entity_image": "^8.1",
-                "drupal/media_entity_instagram": "^8.1",
-                "drupal/media_entity_twitter": "^8.1",
-                "drupal/video_embed_field": "^8.1"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "patches": {
-                    "drupal/entity_browser": {
-                        "Fix bug when wysiwyg embedding if a video is already embedded https://www.drupal.org/node/2822961": "https://www.drupal.org/files/issues/embedded_video_breaks-2822961-2.patch"
-                    }
-                }
-            },
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Media module for Drupal",
-            "homepage": "https://github.com/drupal-media/media/",
-            "support": {
-                "irc": "irc://irc.freenode.org/drupal-contribute"
-            },
-            "time": "2016-10-28 19:23:30"
         }
     ],
     "aliases": [],
@@ -7901,11 +7904,11 @@
     "stability-flags": {
         "drupal/default_content": 20,
         "drupal/devel": 20,
+        "thinkshout/media": 20,
         "drupal/r4032login": 20,
         "drupal/drupal-driver": 20,
         "drupal/drupal-extension": 20,
         "drush-ops/behat-drush-endpoint": 20,
-        "thinkshout/media": 20,
         "jcalderonzumba/gastonjs": 20
     },
     "prefer-stable": false,

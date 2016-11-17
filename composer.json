@@ -51,6 +51,7 @@
       "drupal/inline_entity_form": "8.1.0-alpha6",
       "drupal/linkit": "8.4.1",
       "drupal/layout_plugin": "8.1.0-alpha22",
+      "thinkshout/media": "dev-8.x-1.x",
       "drupal/metatag": "8.1.0-beta9",
       "drupal/pathauto": "8.1.0-alpha3",
       "drupal/r4032login": "8.x-1.x-dev",
@@ -65,8 +66,7 @@
       "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
       "mikey179/vfsStream": "~1.2",
       "phpunit/phpunit": "~4.8",
-      "symfony/css-selector": "~2.8",
-      "thinkshout/media": "dev-8.x-1.x"
+      "symfony/css-selector": "~2.8"
     },
     "extra": {
       "patches": {
