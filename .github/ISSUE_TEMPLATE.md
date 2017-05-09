@@ -1,5 +1,7 @@
-## Design
+## Overview
 
-## Dev
+## Design/UX [hrs]
 
-## Theme
+## Dev [hrs]
+
+## Theme [hrs]
