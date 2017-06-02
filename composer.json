@@ -32,7 +32,7 @@
       "drupal/entity": "^1.0",
       "drupal/entity_browser": "^1.0",
       "drupal/entity_embed": "1.0.0-beta2",
-      "drupal/email_registration": "1.0-rc3",
+      "drupal/email_registration": "1.0-rc5",
       "drupal/features": "^3.0",
       "drupal/focal_point": "^1.0",
       "drupal/google_analytics": "2.0",
@@ -65,9 +65,6 @@
       "patches": {
         "drupal/core": {
           "Telephone field with 5 digits or less fatally breaks formatter": "https://www.drupal.org/files/issues/2484693-47.patch"
-        },
-        "drupal/metatag": {
-          "Drupal console error": "https://www.drupal.org/files/issues/drupal-consol_2760661.patch"
         }
       }
   }

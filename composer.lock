@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5088682faf9f88bb22c6f02ef0ca5a28",
+    "content-hash": "c66674c4762ebc362fb694f2d6a72647",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1397,20 +1397,20 @@
         },
         {
             "name": "drupal/email_registration",
-            "version": "1.0.0-rc3",
+            "version": "1.0.0-rc5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/email_registration",
-                "reference": "8.x-1.0-rc3"
+                "reference": "8.x-1.0-rc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/email_registration-8.x-1.0-rc3.zip",
+                "url": "https://ftp.drupal.org/files/projects/email_registration-8.x-1.0-rc5.zip",
                 "reference": null,
-                "shasum": "f61aa6e6878a857a0a4c4872235b715863b470f7"
+                "shasum": "8e068ad37077bb3937150155ce13617d98b9b6b1"
             },
             "require": {
-                "drupal/core": "~8.0"
+                "drupal/core": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -1418,8 +1418,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-rc3",
-                    "datestamp": "1482843783"
+                    "version": "8.x-1.0-rc5",
+                    "datestamp": "1491318182"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2390,13 +2390,12 @@
             },
             "type": "drupal-module",
             "extra": {
-                "patches": {
-                    "drupal/core": {
-                        "Telephone field with 5 digits or less fatally breaks formatter": "https://www.drupal.org/files/issues/2484693-47.patch"
-                    },
-                    "drupal/metatag": {
-                        "Drupal console error": "https://www.drupal.org/files/issues/drupal-consol_2760661.patch"
-                    }
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1496399238"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
