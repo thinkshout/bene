@@ -38,7 +38,6 @@ dependencies:
   - history
   - image
   - linkit
-  - media
   - metatag
   - menu_link_content
   - menu_ui
