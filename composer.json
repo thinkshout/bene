@@ -14,36 +14,17 @@
       {
         "type": "composer",
         "url": "https://packages.drupal.org/8"
-      },
-      {
-        "type": "git",
-        "url": "https://github.com/thinkshout/DrupalDriver.git"
-      },
-      {
-        "type": "git",
-        "url": "https://github.com/thinkshout/drupalextension.git"
-      },
-      {
-        "type": "git",
-        "url": "https://github.com/thinkshout/behat-drush-endpoint.git"
-      },
-      {
-        "type": "git",
-        "url": "https://github.com/thinkshout/media.git"
       }
     ],
   "require": {
-      "composer/installers": "^1.0.20",
-      "cweagans/composer-patches": "~1.0",
-      "drupal/core": "^8.2.2",
-      "drush/drush": "^9.0",
-      "drupal/console": "~1.0",
+      "composer/installers": "^1.2",
+      "cweagans/composer-patches": "~1.5",
+      "drupal/core": "^8.3.0",
       "drupal/admin_toolbar": "1.17",
       "drupal/config_update": "^1.1",
       "drupal/contact_storage": "1.0-beta2",
       "drupal/ctools": "3.0-alpha26",
       "drupal/default_content": "1.x-dev",
-      "drupal/devel": "1.x-dev",
       "drupal/ds": "2.3",
       "drupal/email_registration": "1.0-rc3",
       "drupal/features": "^3.0",
@@ -51,7 +32,6 @@
       "drupal/inline_entity_form": "1.0-alpha6",
       "drupal/linkit": "4.1",
       "drupal/layout_plugin": "1.0-alpha22",
-      "thinkshout/media": "dev-8.x-1.x",
       "drupal/metatag": "1.0-beta9",
       "drupal/pathauto": "1.0-alpha3",
       "drupal/r4032login": "1.x-dev",
@@ -59,9 +39,9 @@
       "drupal/token": "1.0-alpha2"
     },
     "require-dev": {
+      "drupal/devel": "1.x-dev",
       "drupal/drupal-driver": "dev-master",
       "drupal/drupal-extension": "dev-master",
-      "drush-ops/behat-drush-endpoint": "dev-master",
       "jcalderonzumba/gastonjs": "1.1.x-dev",
       "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
       "mikey179/vfsStream": "~1.2",
@@ -71,8 +51,7 @@
     "extra": {
       "patches": {
         "drupal/core": {
-          "Use 'view label' operation for ER label formatter - https://www.drupal.org/node/2692091#comment-11090279": "https://www.drupal.org/files/issues/2692091-10.patch",
-          "Telephone field with 5 digits or less fatally breaks formatter": "https://www.drupal.org/files/issues/min-length-telephone-link-2484693-26.patch"
+          "Telephone field with 5 digits or less fatally breaks formatter": "https://www.drupal.org/files/issues/2484693-47.patch"
         },
         "drupal/metatag": {
           "Drupal console error": "https://www.drupal.org/files/issues/drupal-consol_2760661.patch"
