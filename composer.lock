@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c473b03e3f513315e26bf2a97f57fd09",
+    "content-hash": "7a26c551c24a64835e9deab71b779db6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1000,14 +1000,8 @@
             },
             "type": "drupal-core",
             "extra": {
-                "patches": {
-                    "drupal/core": {
-                        "Use 'view label' operation for ER label formatter - https://www.drupal.org/node/2692091#comment-11090279": "https://www.drupal.org/files/issues/2692091-10.patch",
-                        "Telephone field with 5 digits or less fatally breaks formatter": "https://www.drupal.org/files/issues/min-length-telephone-link-2484693-26.patch"
-                    },
-                    "drupal/metatag": {
-                        "Drupal console error": "https://www.drupal.org/files/issues/drupal-consol_2760661.patch"
-                    }
+                "patches_applied": {
+                    "Telephone field with 5 digits or less fatally breaks formatter": "https://www.drupal.org/files/issues/2484693-47.patch"
                 }
             },
             "autoload": {
@@ -2476,23 +2470,23 @@
         },
         {
             "name": "symfony-cmf/routing",
-            "version": "dev-master",
+            "version": "1.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony-cmf/routing.git",
-                "reference": "d24d49a248e16803d743850b326574d33e239c30"
+                "reference": "fb1e7f85ff8c6866238b7e73a490a0a0243ae8ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony-cmf/routing/zipball/d24d49a248e16803d743850b326574d33e239c30",
-                "reference": "d24d49a248e16803d743850b326574d33e239c30",
+                "url": "https://api.github.com/repos/symfony-cmf/routing/zipball/fb1e7f85ff8c6866238b7e73a490a0a0243ae8ac",
+                "reference": "fb1e7f85ff8c6866238b7e73a490a0a0243ae8ac",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6.0|^7.0",
-                "psr/log": "^1.0",
-                "symfony/http-kernel": "^2.8|^3.0",
-                "symfony/routing": "^2.8|^3.0"
+                "php": "^5.3.9|^7.0",
+                "psr/log": "1.*",
+                "symfony/http-kernel": "^2.2|3.*",
+                "symfony/routing": "^2.2|3.*"
             },
             "require-dev": {
                 "friendsofsymfony/jsrouting-bundle": "^1.1",
@@ -2531,7 +2525,7 @@
                 "database",
                 "routing"
             ],
-            "time": "2016-05-12 08:23:39"
+            "time": "2017-05-09 08:10:41"
         },
         {
             "name": "symfony/class-loader",
@@ -4547,8 +4541,7 @@
                 "source": "http://cgit.drupalcode.org/devel",
                 "issues": "http://drupal.org/project/devel",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
-            },
-            "time": "2017-05-24 13:48:01"
+            }
         },
         {
             "name": "drupal/drupal-driver",
@@ -4715,7 +4708,7 @@
             "keywords": [
                 "scraper"
             ],
-            "time": "2017-01-03 13:21:43"
+            "time": "2017-01-03T13:21:43+00:00"
         },
         {
             "name": "instaclick/php-webdriver",
@@ -5143,7 +5136,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2017-05-31 16:22:32"
+            "time": "2017-05-31T16:22:32+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -5205,7 +5198,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-10-06 15:47:00"
+            "time": "2015-10-06T15:47:00+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -5342,25 +5335,25 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2017-03-07 15:42:04"
+            "time": "2017-03-07T15:42:04+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "dev-master",
+            "version": "1.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "cab6c6fefee93d7b7c3a01292a0fe0884ea66644"
+                "reference": "958103f327daef5dd0bb328dec53e0a9e43cfaf7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/cab6c6fefee93d7b7c3a01292a0fe0884ea66644",
-                "reference": "cab6c6fefee93d7b7c3a01292a0fe0884ea66644",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/958103f327daef5dd0bb328dec53e0a9e43cfaf7",
+                "reference": "958103f327daef5dd0bb328dec53e0a9e43cfaf7",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
-                "php": "^5.6 || ^7.0"
+                "php": ">=5.3.3"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.2"
@@ -5391,7 +5384,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2015-09-23 14:46:55"
+            "time": "2017-03-07T08:21:50+00:00"
         },
         {
             "name": "phpunit/phpunit",
@@ -5519,32 +5512,96 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-10-02 06:51:40"
+            "time": "2015-10-02T06:51:40+00:00"
         },
         {
-            "name": "sebastian/diff",
-            "version": "dev-master",
+            "name": "sebastian/comparator",
+            "version": "1.2.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "852dd59ba4e11b47bbf22132314f36706a4b7fea"
+                "url": "https://github.com/sebastianbergmann/comparator.git",
+                "reference": "18a5d97c25f408f48acaf6d1b9f4079314c5996a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/852dd59ba4e11b47bbf22132314f36706a4b7fea",
-                "reference": "852dd59ba4e11b47bbf22132314f36706a4b7fea",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/18a5d97c25f408f48acaf6d1b9f4079314c5996a",
+                "reference": "18a5d97c25f408f48acaf6d1b9f4079314c5996a",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0"
+                "php": ">=5.3.3",
+                "sebastian/diff": "~1.2",
+                "sebastian/exporter": "~1.2 || ~2.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.1"
+                "phpunit/phpunit": "~4.4"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Welch",
+                    "email": "whatthejeff@gmail.com"
+                },
+                {
+                    "name": "Volker Dusch",
+                    "email": "github@wallbash.com"
+                },
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@2bepublished.at"
+                },
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                }
+            ],
+            "description": "Provides the functionality to compare PHP values for equality",
+            "homepage": "http://www.github.com/sebastianbergmann/comparator",
+            "keywords": [
+                "comparator",
+                "compare",
+                "equality"
+            ],
+            "time": "2017-03-07T10:34:43+00:00"
+        },
+        {
+            "name": "sebastian/diff",
+            "version": "1.4.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/diff.git",
+                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/7f066a26a962dbe58ddea9f72a4e82874a3975a4",
+                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -5571,7 +5628,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2017-05-22T08:51:12+00:00"
+            "time": "2017-05-22T07:24:03+00:00"
         },
         {
             "name": "sebastian/environment",
@@ -5688,7 +5745,7 @@
                 "export",
                 "exporter"
             ],
-            "time": "2017-02-26 13:09:30"
+            "time": "2017-02-26T13:09:30+00:00"
         },
         {
             "name": "sebastian/global-state",
@@ -5739,32 +5796,32 @@
             "keywords": [
                 "global state"
             ],
-            "time": "2017-02-23 14:11:06"
+            "time": "2017-02-23T14:11:06+00:00"
         },
         {
             "name": "sebastian/recursion-context",
-            "version": "dev-master",
+            "version": "1.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/recursion-context.git",
-                "reference": "a0e54bc9bf04e2c5b302236984cebc277631f0f1"
+                "reference": "b19cc3298482a335a95f3016d2f8a6950f0fbcd7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/a0e54bc9bf04e2c5b302236984cebc277631f0f1",
-                "reference": "a0e54bc9bf04e2c5b302236984cebc277631f0f1",
+                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/b19cc3298482a335a95f3016d2f8a6950f0fbcd7",
+                "reference": "b19cc3298482a335a95f3016d2f8a6950f0fbcd7",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0"
+                "php": ">=5.3.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.0"
+                "phpunit/phpunit": "~4.4"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0.x-dev"
+                    "dev-master": "1.0.x-dev"
                 }
             },
             "autoload": {
@@ -5792,7 +5849,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2017-03-07T15:09:59+00:00"
+            "time": "2016-10-03T07:41:43+00:00"
         },
         {
             "name": "sebastian/version",
@@ -5884,7 +5941,7 @@
             ],
             "description": "Symfony BrowserKit Component",
             "homepage": "https://symfony.com",
-            "time": "2017-05-24 09:02:43"
+            "time": "2017-05-24T09:02:43+00:00"
         },
         {
             "name": "symfony/config",
@@ -5940,7 +5997,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2017-04-12 14:13:17"
+            "time": "2017-04-12T14:13:17+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -6049,7 +6106,7 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
-            "time": "2017-05-25 23:27:00"
+            "time": "2017-05-25T23:27:00+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -6098,7 +6155,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2017-05-28 14:09:32"
+            "time": "2017-05-28T14:09:32+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -6148,7 +6205,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2016-11-23 20:04:41"
+            "time": "2016-11-23T20:04:41+00:00"
         }
     ],
     "aliases": [],
@@ -6158,8 +6215,7 @@
         "drupal/r4032login": 20,
         "drupal/devel": 20,
         "drupal/drupal-driver": 20,
-        "drupal/drupal-extension": 20,
-        "jcalderonzumba/gastonjs": 20
+        "drupal/drupal-extension": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
