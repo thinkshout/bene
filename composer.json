@@ -4,6 +4,7 @@
     "type": "drupal-profile",
     "license": "GPL-2.0+",
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "authors": [
       {
           "name": "ThinkShout",
@@ -16,34 +17,45 @@
         "url": "https://packages.drupal.org/8"
       }
     ],
-  "prefer-stable": true,
   "require": {
       "composer/installers": "^1.2",
       "cweagans/composer-patches": "~1.5",
-      "drupal/core": "~8.3.0",
-      "drupal/admin_toolbar": "1.17",
+      "drupal/core": "^8.3.0",
+      "drupal/admin_toolbar": "1.19",
       "drupal/config_update": "^1.1",
       "drupal/contact_storage": "1.0-beta2",
-      "drupal/ctools": "3.0-alpha26",
-      "drupal/default_content": "1.x-dev",
+      "drupal/crop": "^1.0",
+      "drupal/ctools": "3.0",
+      "drupal/default_content": "1.0-alpha6",
+      "drupal/dropzonejs": "^1.0",
       "drupal/ds": "2.3",
-      "drupal/email_registration": "1.0-rc3",
+      "drupal/entity": "^1.0",
+      "drupal/entity_browser": "^1.0",
+      "drupal/entity_embed": "1.0.0-beta2",
+      "drupal/email_registration": "1.0-rc5",
       "drupal/features": "^3.0",
+      "drupal/focal_point": "^1.0",
       "drupal/google_analytics": "2.0",
-      "drupal/inline_entity_form": "1.0-alpha6",
-      "drupal/linkit": "4.1",
+      "drupal/inline_entity_form": "1.0-beta1",
+      "drupal/linkit": "4.3",
       "drupal/layout_plugin": "1.0-alpha22",
-      "drupal/metatag": "1.0-beta9",
-      "drupal/pathauto": "1.0-alpha3",
+      "drupal/media_entity": "1.6",
+      "drupal/media_entity_instagram": "^1.0",
+      "drupal/media_entity_image": "^1.0",
+      "drupal/media_entity_slideshow": "^1.0",
+      "drupal/media_entity_twitter": "^1.0",
+      "drupal/metatag": "1.1",
+      "drupal/pathauto": "1.0",
       "drupal/r4032login": "1.x-dev",
       "drupal/simple_sitemap": "2.5",
-      "drupal/token": "1.0-alpha2"
+      "drupal/token": "1.0",
+      "drupal/video_embed_field": "^1.0"
     },
     "require-dev": {
-      "drupal/devel": "1.x-dev",
-      "behat/mink": "~1.7",
-      "behat/mink-goutte-driver": "~1.2",
-      "jcalderonzumba/gastonjs": "~1.0.2",
+      "drupal/devel": "1.0-rc2",
+      "drupal/drupal-driver": "dev-master",
+      "drupal/drupal-extension": "dev-master",
+      "jcalderonzumba/gastonjs": "~1.2",
       "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
       "mikey179/vfsStream": "~1.2",
       "phpunit/phpunit": "~4.8",
@@ -53,9 +65,6 @@
       "patches": {
         "drupal/core": {
           "Telephone field with 5 digits or less fatally breaks formatter": "https://www.drupal.org/files/issues/2484693-47.patch"
-        },
-        "drupal/metatag": {
-          "Drupal console error": "https://www.drupal.org/files/issues/drupal-consol_2760661.patch"
         }
       }
   }
