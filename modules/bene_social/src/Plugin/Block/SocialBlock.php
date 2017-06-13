@@ -126,11 +126,11 @@ class SocialBlock extends BlockBase {
       'youtube',
     ];
     $build = [];
-    $build['#attached'] = array(
-      'library' => array(
+    $build['#attached'] = [
+      'library' => [
         'bene_social/social-block',
-      ),
-    );
+      ],
+    ];
     $build['#prefix'] = '<div class="bene-social-links">';
     foreach ($services as $service) {
       if ($this->configuration[$service]) {

@@ -1,9 +1,12 @@
-@import "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800";
-html {
-  box-sizing: border-box; }
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800"; html {
+  box-sizing: border-box;
+}
 
-*, *::after, *::before {
-  box-sizing: inherit; }
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
 
 /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
 /**
@@ -29,7 +32,8 @@ html {
  * Remove the margin in all browsers (opinionated).
  */
 body {
-  margin: 0; }
+  margin: 0;
+}
 
 /**
  * Add the correct display in IE 9-.
@@ -40,7 +44,8 @@ footer,
 header,
 nav,
 section {
-  display: block; }
+  display: block;
+}
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -48,7 +53,8 @@ section {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.67em 0;
+}
 
 /* Grouping content
    ========================================================================== */
@@ -60,13 +66,15 @@ figcaption,
 figure,
 main {
   /* 1 */
-  display: block; }
+  display: block;
+}
 
 /**
  * Add the correct margin in IE 8.
  */
 figure {
-  margin: 1em 40px; }
+  margin: 1em 40px;
+}
 
 /**
  * 1. Add the correct box sizing in Firefox.
@@ -108,7 +116,8 @@ a {
  */
 a:active,
 a:hover {
-  outline-width: 0; }
+  outline-width: 0;
+}
 
 /**
  * 1. Remove the bottom border in Firefox 39-.
@@ -127,14 +136,16 @@ abbr[title] {
  */
 b,
 strong {
-  font-weight: inherit; }
+  font-weight: inherit;
+}
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -152,20 +163,23 @@ samp {
  * Add the correct font style in Android 4.3-.
  */
 dfn {
-  font-style: italic; }
+  font-style: italic;
+}
 
 /**
  * Add the correct background and color in IE 9-.
  */
 mark {
   background-color: #ff0;
-  color: #000; }
+  color: #000;
+}
 
 /**
  * Add the correct font size in all browsers.
  */
 small {
-  font-size: 80%; }
+  font-size: 80%;
+}
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -176,13 +190,16 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 sub {
-  bottom: -0.25em; }
+  bottom: -0.25em;
+}
 
 sup {
-  top: -0.5em; }
+  top: -0.5em;
+}
 
 /* Embedded content
    ========================================================================== */
@@ -191,26 +208,30 @@ sup {
  */
 audio,
 video {
-  display: inline-block; }
+  display: inline-block;
+}
 
 /**
  * Add the correct display in iOS 4-7.
  */
 audio:not([controls]) {
   display: none;
-  height: 0; }
+  height: 0;
+}
 
 /**
  * Remove the border on images inside links in IE 10-.
  */
 img {
-  border-style: none; }
+  border-style: none;
+}
 
 /**
  * Hide the overflow in IE.
  */
 svg:not(:root) {
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 /* Forms
    ========================================================================== */
@@ -239,7 +260,8 @@ textarea {
 button,
 input {
   /* 1 */
-  overflow: visible; }
+  overflow: visible;
+}
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
@@ -248,7 +270,8 @@ input {
 button,
 select {
   /* 1 */
-  text-transform: none; }
+  text-transform: none;
+}
 
 /**
  * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
@@ -270,7 +293,8 @@ button::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
   border-style: none;
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * Restore the focus styles unset by the previous rule.
@@ -279,7 +303,8 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText; }
+  outline: 1px dotted ButtonText;
+}
 
 /**
  * Change the border, margin, and padding in all browsers (opinionated).
@@ -287,7 +312,8 @@ button:-moz-focusring,
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  padding: 0.35em 0.625em 0.75em;
+}
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -323,7 +349,8 @@ progress {
  * Remove the default vertical scrollbar in IE.
  */
 textarea {
-  overflow: auto; }
+  overflow: auto;
+}
 
 /**
  * 1. Add the correct box sizing in IE 10-.
@@ -341,7 +368,8 @@ textarea {
  */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-  height: auto; }
+  height: auto;
+}
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
@@ -358,7 +386,8 @@ textarea {
  */
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+}
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -378,13 +407,15 @@ textarea {
  */
 details,
 menu {
-  display: block; }
+  display: block;
+}
 
 /*
  * Add the correct display in all browsers.
  */
 summary {
-  display: list-item; }
+  display: list-item;
+}
 
 /* Scripting
    ========================================================================== */
@@ -392,13 +423,15 @@ summary {
  * Add the correct display in IE 9-.
  */
 canvas {
-  display: inline-block; }
+  display: inline-block;
+}
 
 /**
  * Add the correct display in IE.
  */
 template {
-  display: none; }
+  display: none;
+}
 
 /* Hidden
    ========================================================================== */
@@ -406,7 +439,8 @@ template {
  * Add the correct display in IE 10-.
  */
 [hidden] {
-  display: none; }
+  display: none;
+}
 
 /***
  * COLORS
@@ -421,38 +455,44 @@ template {
  * BUTTONS
  */
 .page-banner .field--name-field-call-to-action a {
-  background: #50CFE3;
-  color: #FFFFFF;
+  background: #50cfe3;
+  color: #ffffff;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 1.125rem;
   padding: 1rem;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 body {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 h1 {
   font-size: 3rem;
-  line-height: 3.875rem; }
+  line-height: 3.875rem;
+}
 
 h2 {
-  font-size: 2.25rem; }
+  font-size: 2.25rem;
+}
 
 header .container {
-  margin: 0; }
+  margin: 0;
+}
 header .site-logo img {
   max-width: 12.5rem;
-  float: left; }
+  float: left;
+}
 
 /***
  * Common styles
  */
- /***
+/***
  * Styles
  * /
 /* Add style properties including any changes with media queries */
@@ -467,10 +507,12 @@ header .site-logo img {
 * Styles
 */
 .page-banner {
-  position: relative; }
-  @media (min-width: 62rem) {
-    .page-banner {
-      min-height: 33.3125rem; } }
+  position: relative;
+}
+@media (min-width: 62rem) {
+  .page-banner {
+    min-height: 33.3125rem;
+} }
 
 .page-banner .field--type-image {
   background-repeat: no-repeat;
@@ -479,40 +521,47 @@ header .site-logo img {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: -1; }
-  @media (min-width: 62rem) {
-    .page-banner .field--type-image {
-      min-height: 33.3125rem; } }
+  z-index: -1;
+}
+@media (min-width: 62rem) {
+  .page-banner .field--type-image {
+    min-height: 33.3125rem;
+} }
 
 .page-banner h2 {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 800;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0 auto 3rem;
-  text-align: center; }
-  @media (min-width: 62rem) {
-    .page-banner h2 {
-      font-size: 3rem;
-      max-width: 46.875rem;
-      padding-top: 10rem; } }
+  text-align: center;
+}
+@media (min-width: 62rem) {
+  .page-banner h2 {
+    font-size: 3rem;
+    max-width: 46.875rem;
+    padding-top: 10rem;
+} }
 
 .page-banner .field--name-field-subtitle {
-  color: #D8D8D8;
+  color: #d8d8d8;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 800;
   position: absolute;
   left: 30%;
   right: 30%;
-  text-align: center; }
-  @media (min-width: 62rem) {
-    .page-banner .field--name-field-subtitle {
-      font-size: 1.25rem;
-      top: 8rem; } }
+  text-align: center;
+}
+@media (min-width: 62rem) {
+  .page-banner .field--name-field-subtitle {
+    font-size: 1.25rem;
+    top: 8rem;
+} }
 
 .page-banner .field--name-field-call-to-action {
-  text-align: center; }
+  text-align: center;
+}
 
 /***
  * Layout
@@ -520,10 +569,12 @@ header .site-logo img {
 .container {
   max-width: 1200px;
   margin-left: auto;
-  margin-right: auto; }
-  .container::after {
-    clear: both;
-    content: "";
-    display: block; }
+  margin-right: auto;
+}
+.container::after {
+  clear: both;
+  content: "";
+  display: block;
+}
 
 /*# sourceMappingURL=benefit.css.map */
