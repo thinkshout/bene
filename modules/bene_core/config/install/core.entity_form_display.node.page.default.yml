@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_image
-    - field.field.node.page.field_node_blocks
     - image.style.thumbnail
     - node.type.page
   module:

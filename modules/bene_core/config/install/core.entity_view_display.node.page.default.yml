@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_image
-    - field.field.node.page.field_node_blocks
     - image.style.1280x185
     - node.type.page
   module:

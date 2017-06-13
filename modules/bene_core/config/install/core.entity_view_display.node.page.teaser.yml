@@ -5,7 +5,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
     - field.field.node.page.field_image
-    - field.field.node.page.field_node_blocks
     - node.type.page
   module:
     - text
