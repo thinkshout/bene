@@ -6,7 +6,9 @@ vendor/
 node_modules
 themes/ts_benefit/node_modules
 modules
+core
 
 benefit.css.map
 
+# Don't ignore bene modules/features
 !modules/bene_*
