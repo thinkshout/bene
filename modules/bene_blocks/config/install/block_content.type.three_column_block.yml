@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: three_column_block
-label: 'Three Column Block'
-revision: 0
-description: '3 up blocks with image, title, text, and call to action.'

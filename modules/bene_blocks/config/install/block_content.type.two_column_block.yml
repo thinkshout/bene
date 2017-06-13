@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: two_column_block
-label: 'Two Column Block'
-revision: 0
-description: 'A two up, image, title, text, call to action block set.'

@@ -9,7 +9,6 @@ dependencies:
   - admin_toolbar_tools
   - automated_cron
   - bene_core
-  - bene_blocks
   - block
   - block_content
   - breakpoint

@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: hero_block
-label: 'Hero Block'
-revision: 0
-description: 'A large image block with call to action. Ideal for the home page or campaign landing pages.'

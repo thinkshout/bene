@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: testimonial_block
-label: 'Testimonial Block'
-revision: 0
-description: 'Left aligned block quote with author and an optional background image.'
