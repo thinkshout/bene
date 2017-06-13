@@ -50,7 +50,7 @@
       "drupal/simple_sitemap": "2.5",
       "drupal/token": "1.0",
       "drupal/video_embed_field": "^1.0",
-        "drupal/coder": "^8.2"
+      "drupal/coder": "^8.2"
     },
     "require-dev": {
       "drupal/devel": "1.0-rc2",
