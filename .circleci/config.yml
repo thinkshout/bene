@@ -4,7 +4,7 @@ jobs:
     docker:
        - image: thinkshout/nginx-php-fpm@sha256:e24a56b754eaac4e4292a1e162d2d20e69cac551def51c8da3b592b7f2787e4e
          environment:
-           WEBROOT: /var/www/html/bene/build/web
+           WEBROOT: /var/www/html/build/web
            GIT_EMAIL: "ci@thinkshout.com"
            GIT_NAME: "ThinkShout CI Bot"
          cmd: ["/start.sh"]
@@ -14,7 +14,7 @@ jobs:
            MYSQL_DATABASE: drupal
            MYSQL_USER: drupal
            MYSQL_PASSWORD: drupal
-    working_directory: /var/www/html/bene/profile
+    working_directory: /var/www/html/bene
     steps:
       - checkout
       - type: add-ssh-keys
@@ -25,9 +25,10 @@ jobs:
             composer global require -n "hirak/prestissimo:^0.3"
             composer global require -n "consolidation/cgr"
             cgr "pantheon-systems/terminus:~1"
-            cd ..
-            composer create-project thinkshout/bene-project:pantheon build --stability dev --no-interaction --no-install
-            composer config repositories.bene path /var/www/html/bene/profile
+            cd /var/www/html
+            composer create-project thinkshout/bene-project:dev-pantheon /var/www/html/build --stability dev --no-interaction --no-install
+            cd /var/www/html/build
+            composer config repositories.bene path /var/www/html/bene
             composer require "drupal/bene:*"
             composer install --prefer-dist
             robo configure --db-name=drupal --db-user=drupal --db-pass=drupal --db-host=127.0.0.1
@@ -35,14 +36,16 @@ jobs:
           name: Install and test
           command: |
             export PATH="./vendor/bin:../vendor/bin:/root/.composer/vendor/bin:$PATH"
+            cd /var/www/html/build
             robo install
-            robo test --profile ci
+            # robo test --profile ci
       - run:
           name: Run CS tests
           command: |
              export PATH="./vendor/bin:../vendor/bin:/root/.composer/vendor/bin:$PATH"
+             cd /var/www/html/build
              phpcs --config-set installed_paths ../../drupal/coder/coder_sniffer/
-             phpcs --standard=Drupal --ignore=*/css/*,*/node_modules/* /var/www/html/bene/web/profiles/bene /var/www/html/bene/web/profiles/bene
+             phpcs --standard=Drupal --ignore=*/css/*,*/node_modules/* /var/www/html/build/web/profiles/bene
 #      - deploy:
 #          command: |
 #            BRANCH_PATTERN='^[-0-9a-z]{1,11}$'
