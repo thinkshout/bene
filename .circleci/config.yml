@@ -38,7 +38,7 @@ jobs:
             export PATH="./vendor/bin:../vendor/bin:/root/.composer/vendor/bin:$PATH"
             cd /var/www/html/build
             robo install
-            # robo test --profile ci
+#           robo test --profile ci
       - run:
           name: Run CS tests
           command: |
