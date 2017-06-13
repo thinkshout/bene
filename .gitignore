@@ -5,5 +5,8 @@ vendor/
 
 node_modules
 themes/ts_benefit/node_modules
+modules
 
 benefit.css.map
+
+!modules/bene_*
