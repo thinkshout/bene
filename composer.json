@@ -70,6 +70,9 @@
       "patches": {
         "drupal/core": {
           "Telephone field with 5 digits or less fatally breaks formatter": "https://www.drupal.org/files/issues/2484693-47.patch"
+        },
+        "drupal/migrate_tools": {
+          "Migrate Tools dashboard plugin manager/config deriver UI issues - https://www.drupal.org/node/2825846#comment-12080570": "https://www.drupal.org/files/issues/migrate_tools_dashboard-2825846-4.patch"
         }
       }
   }
