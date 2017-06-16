@@ -40,11 +40,11 @@ jobs:
           paths:
             - ../build/vendor
             - ../build/web/modules/contrib
-      - run: robo configure --db-name=drupal --db-user=drupal --db-pass=drupal --db-host=127.0.0.1
       - run:
-          name: Install and test
+          name: Configure, install and test
           command: |
             export PATH="./vendor/bin:../vendor/bin:/root/.composer/vendor/bin:$PATH"
+            robo configure --db-name=drupal --db-user=drupal --db-pass=drupal --db-host=127.0.0.1
             cd /var/www/html/build
             robo install
 #           robo test --profile ci
