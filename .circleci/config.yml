@@ -28,7 +28,6 @@ jobs:
             cgr "pantheon-systems/terminus:~1"
             cd /var/www/html
             composer create-project thinkshout/bene-project:dev-pantheon /var/www/html/build --stability dev --no-interaction --no-install
-            cd /var/www/html/build
       - restore_cache:
           keys:
             - composer-v1-{{ checksum "composer.lock" }}
@@ -36,6 +35,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
+            cd /var/www/html/build
             composer config repositories.bene path /var/www/html/bene
             composer require "drupal/bene:*"
             composer install -n --prefer-dist
@@ -48,8 +48,8 @@ jobs:
           name: Configure, install and test
           command: |
             export PATH="./vendor/bin:../vendor/bin:/root/.composer/vendor/bin:$PATH"
-            robo configure --db-name=drupal --db-user=drupal --db-pass=drupal --db-host=127.0.0.1
             cd /var/www/html/build
+            robo configure --db-name=drupal --db-user=drupal --db-pass=drupal --db-host=127.0.0.1
             robo install
 #           robo test --profile ci
       - run:
