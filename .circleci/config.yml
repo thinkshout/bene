@@ -18,10 +18,7 @@ jobs:
     steps:
       - checkout
       - type: add-ssh-keys
-      - restore_cache:
-          keys:
-            - composer-v1-{{ checksum "composer.lock" }}
-            - composer-v1-
+
       - run:
           name: Project configuration
           command: |
@@ -32,9 +29,16 @@ jobs:
             cd /var/www/html
             composer create-project thinkshout/bene-project:dev-pantheon /var/www/html/build --stability dev --no-interaction --no-install
             cd /var/www/html/build
+      - restore_cache:
+          keys:
+            - composer-v1-{{ checksum "composer.lock" }}
+            - composer-v1-
+      - run:
+          name: Install dependencies
+          command: |
             composer config repositories.bene path /var/www/html/bene
             composer require "drupal/bene:*"
-      - run: composer install -n --prefer-dist
+            composer install -n --prefer-dist
       - save_cache:
           key: composer-v1-{{ checksum "composer.lock" }}
           paths:
