@@ -1,9 +1,12 @@
+uuid: 768c520d-48ba-4c5d-a2ae-eca1f78349bf
 langcode: en
 status: true
 dependencies:
   module:
     - editor
     - entity_embed
+_core:
+  default_config_hash: zidf3xpM2mk2lOlyHK8HyjjtOxHu93DP6z7m99zG6O0
 name: 'Basic HTML'
 format: basic_html
 weight: 0
@@ -14,7 +17,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <br> <span> <img src alt height width data-entity-type data-entity-uuid data-align data-caption><drupal-entity data-entity-type data-entity-uuid data-view-mode data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button>'
+      allowed_html: '<b> <i> <u> <s> <ul type> <li> <h2 id> <h3 id> <cite> <blockquote cite> <quote> <center> <left> <right> <strong> <em> <a href> <ol> <img src alt data-entity-type data-entity-uuid data-align data-caption> <p>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:
