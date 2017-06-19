@@ -1,3 +1,4 @@
+uuid: 6befa78c-8838-4d4a-829f-fca20be37940
 langcode: en
 status: true
 dependencies: {  }
@@ -5,3 +6,6 @@ id: staff
 label: Staff
 weight: 3
 is_admin: null
+permissions:
+  - 'use text format basic_html'
+  - 'use text format restricted_html'
