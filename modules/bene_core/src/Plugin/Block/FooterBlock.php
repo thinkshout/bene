@@ -42,6 +42,12 @@ class FooterBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function blockForm($form, FormStateInterface $form_state) {
+    $form['menu_edit'] = [
+      '#type' => 'markup',
+      '#markup' => $this->t('To customize the menu in the footer, click here.'),
+      '#prefix' => '<a class="menu-edit" href="/admin/structure/menu/manage/footer" target="_blank">',
+      '#suffix' => '</a>',
+    ];
     $form['address'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Address'),
