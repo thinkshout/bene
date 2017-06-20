@@ -10,7 +10,6 @@ dependencies:
     - image.style.medium
     - media_entity.bundle.image
   module:
-    - datetime
     - image
     - text
 id: media.image.default
@@ -61,5 +60,4 @@ content:
 hidden:
   created: true
   field_tags: true
-  langcode: true
   uid: true

@@ -50,5 +50,4 @@ hidden:
   created: true
   field_caption: true
   field_source: true
-  langcode: true
   uid: true

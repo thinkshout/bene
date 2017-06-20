@@ -36,5 +36,4 @@ content:
     region: content
 hidden:
   created: true
-  langcode: true
   uid: true

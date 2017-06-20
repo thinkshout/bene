@@ -4,7 +4,6 @@ dependencies:
   config:
     - image.style.thumbnail
   module:
-    - datetime
     - image
     - media_entity
     - user
@@ -845,6 +844,7 @@ display:
         - url
         - url.query_args
         - user.permissions
+      tags: {  }
   media_page_list:
     display_plugin: page
     id: media_page_list
@@ -871,3 +871,4 @@ display:
         - url
         - url.query_args
         - user.permissions
+      tags: {  }

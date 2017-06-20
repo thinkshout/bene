@@ -87,7 +87,6 @@ hidden:
   field_people: true
   field_source: true
   field_tags: true
-  langcode: true
   name: true
   thumbnail: true
   uid: true
