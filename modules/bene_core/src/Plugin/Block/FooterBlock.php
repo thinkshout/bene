@@ -40,7 +40,6 @@ class FooterBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function blockForm($form, FormStateInterface $form_state) {
-    // Address field (text area, plaintext)
     $form['address'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Address'),
@@ -50,23 +49,20 @@ class FooterBlock extends BlockBase {
       '#cols' => 5,
       '#weight' => '10',
     ];
-    // Contact Phone field (html 5 tel)
     $form['phone'] = [
-      '#type' => 'textfield',
+      '#type' => 'tel',
       '#title' => $this->t('Phone'),
       '#description' => '',
       '#default_value' => $this->configuration['phone'],
       '#weight' => '11',
     ];
-    // Contact Email field (html 5 email)
     $form['email'] = [
-      '#type' => 'textfield',
+      '#type' => 'email',
       '#title' => $this->t('Email'),
       '#description' => '',
       '#default_value' => $this->configuration['email'],
       '#weight' => '12',
     ];
-    // Copyright field (text) (circle-c will be added automatically)
     $form['copyright'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Copyright'),
