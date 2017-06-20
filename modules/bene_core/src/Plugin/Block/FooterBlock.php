@@ -11,6 +11,7 @@ use Drupal\Core\Form\FormStateInterface;
  * @Block(
  *  id = "bene_footer_block",
  *  admin_label = @Translation("Bene Footer"),
+ *  category = @Translation("Bene")
  * )
  */
 class FooterBlock extends BlockBase {
@@ -131,18 +132,19 @@ class FooterBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function blockSubmit($form, FormStateInterface $form_state) {
+    $social = $form_state->getValue('social');
     $this->configuration['address'] = $form_state->getValue('address');
     $this->configuration['phone'] = $form_state->getValue('phone');
     $this->configuration['email'] = $form_state->getValue('email');
     $this->configuration['copyright'] = $form_state->getValue('copyright');
-    $this->configuration['facebook'] = $form_state->getValue('facebook');
-    $this->configuration['google'] = $form_state->getValue('google');
-    $this->configuration['instagram'] = $form_state->getValue('instagram');
-    $this->configuration['linkedin'] = $form_state->getValue('linkedin');
-    $this->configuration['pinterest'] = $form_state->getValue('pinterest');
-    $this->configuration['tumblr'] = $form_state->getValue('tumblr');
-    $this->configuration['twitter'] = $form_state->getValue('twitter');
-    $this->configuration['youtube'] = $form_state->getValue('youtube');
+    $this->configuration['facebook'] = $social['facebook'];
+    $this->configuration['google'] = $social['google'];
+    $this->configuration['instagram'] = $social['instagram'];
+    $this->configuration['linkedin'] = $social['linkedin'];
+    $this->configuration['pinterest'] = $social['pinterest'];
+    $this->configuration['tumblr'] = $social['tumblr'];
+    $this->configuration['twitter'] = $social['twitter'];
+    $this->configuration['youtube'] = $social['youtube'];
   }
 
   /**
@@ -165,13 +167,33 @@ class FooterBlock extends BlockBase {
         'bene_core/footer-block',
       ],
     ];
-    $build['#prefix'] = '<div class="bene-social-links">';
+    $build['contact'] = [
+      '#type' => 'fieldset',
+      '#prefix' => '<div class="bene-contact-links">',
+      '#suffix' => '</div>',
+    ];
+    $build['contact']['address'] = [
+      '#type' => 'markup',
+      '#markup' => $this->configuration['address'],
+    ];
+    $build['contact']['phone'] = [
+      '#type' => 'markup',
+      '#markup' => $this->configuration['phone'],
+    ];
+    $build['contact']['email'] = [
+      '#type' => 'markup',
+      '#markup' => $this->configuration['email'],
+    ];
+    $build['social'] = [
+      '#type' => 'fieldset',
+      '#prefix' => '<div class="bene-social-links">',
+      '#suffix' => '</div>',
+    ];
     foreach ($services as $service) {
       if ($this->configuration[$service]) {
-        $build[$service]['#markup'] = '<a class="' . $service . '" href="' . $this->configuration[$service] . '">' . $service . '</a>';
+        $build['social'][$service]['#markup'] = '<a class="' . $service . '" href="' . $this->configuration[$service] . '">' . $service . '</a>';
       }
     }
-    $build['#suffix'] = '</div>';
     return $build;
   }
 
