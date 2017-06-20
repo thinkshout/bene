@@ -1,0 +1,32 @@
+uuid: 365936a6-4e4d-4e24-87f2-c50bdd498e45
+langcode: en
+status: true
+dependencies:
+  module:
+    - bene_core
+  theme:
+    - ts_benefit
+id: benefooter
+theme: ts_benefit
+region: footer
+weight: 0
+provider: null
+plugin: bene_footer_block
+settings:
+  id: bene_footer_block
+  label: 'Bene Footer'
+  provider: bene_core
+  label_display: '0'
+  address: '433 NW 4th Avenue, Portland, OR 97209'
+  phone: '(503) 223-4956'
+  email: info@synergygive.org
+  copyright: '2016 SynergyGive'
+  facebook: ''
+  google: ''
+  instagram: ''
+  linkedin: ''
+  pinterest: ''
+  tumblr: ''
+  twitter: ''
+  youtube: ''
+visibility: {  }
