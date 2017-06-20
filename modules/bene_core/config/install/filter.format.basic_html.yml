@@ -1,12 +1,9 @@
-uuid: 768c520d-48ba-4c5d-a2ae-eca1f78349bf
 langcode: en
 status: true
 dependencies:
   module:
     - editor
     - entity_embed
-_core:
-  default_config_hash: zidf3xpM2mk2lOlyHK8HyjjtOxHu93DP6z7m99zG6O0
 name: 'Basic HTML'
 format: basic_html
 weight: 0

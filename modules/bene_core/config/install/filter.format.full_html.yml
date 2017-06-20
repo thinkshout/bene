@@ -1,12 +1,9 @@
-uuid: 02cee040-ecd9-4672-9870-2ae2907361e8
 langcode: en
 status: true
 dependencies:
   module:
     - editor
     - entity_embed
-_core:
-  default_config_hash: PzdkIO2ECEU0tt66XO1t8ccKhmHeZMN4sVZxjYaKvl0
 name: 'Full HTML'
 format: full_html
 weight: 1
