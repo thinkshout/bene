@@ -1,0 +1,77 @@
+<?php
+
+/**
+ * @file
+ * Contains media related functions.
+ */
+
+use Drupal\file\Entity\File;
+
+/**
+ * Implements hook_ENTITY_TYPE_create().
+ */
+function bene_media_file_create(File $entity) {
+
+  $config = \Drupal::config('bene_media.settings');
+
+  if ($config->get('enable_filename_transliteration')) {
+
+    $pathinfo = pathinfo($entity->getFilename());
+
+    /** @var \Drupal\pathauto\AliasCleaner $aliasCleaner */
+    $aliasCleaner = \Drupal::service('pathauto.alias_cleaner');
+
+    // Check for needed pathinfo array keys.
+    if (!empty($pathinfo['filename']) && !empty($pathinfo['extension'])) {
+      $cleanFilename = $aliasCleaner->cleanString($pathinfo['filename']) . '.' . $pathinfo['extension'];
+      $entity->setFilename($cleanFilename);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view().
+ */
+function bene_media_preprocess_views_view(&$variables) {
+
+  $bene_media_browser = [
+    'image_browser',
+    'video_browser',
+    'riddle_browser',
+
+    // TODO: Legacy support, remove it with new major version.
+    'media_browser',
+    'gallery_browser',
+  ];
+
+  if (in_array($variables['view']->id(), $bene_media_browser)) {
+    $variables['view_array']['#attached']['library'][] = 'bene_media/entity_browser_view';
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function bene_media_page_attachments(array &$page) {
+  $page['#attached']['library'][] = 'bene_media/gallery';
+}
+
+/**
+ * Implements hook_menu_local_actions_alter().
+ */
+function bene_media_menu_local_actions_alter(&$local_actions) {
+  $view = \Drupal::entityTypeManager()->getStorage('view')->load('bene_media');
+  if ($view) {
+    $local_actions['media.add']['appears_on'][] = 'view.bene_media.media_page_list';
+  }
+}
+
+/**
+ * Implements hook_menu_links_discovered_alter().
+ */
+function bene_media_menu_links_discovered_alter(&$links) {
+  $view = \Drupal::entityTypeManager()->getStorage('view')->load('bene_media');
+  if ($view) {
+    $links['entity.media.collection']['route_name'] = 'view.bene_media.media_page_list';
+  }
+}

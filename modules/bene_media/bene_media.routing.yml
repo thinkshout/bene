@@ -1,0 +1,9 @@
+bene_media.configuration_form:
+  path: '/admin/config/bene_media/configuration'
+  defaults:
+    _form: '\Drupal\bene_media\Form\ConfigurationForm'
+    _title: 'Bene Media Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
