@@ -4,6 +4,7 @@ namespace Drupal\bene_core\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * Provides a 'FooterBlock' block.
@@ -175,14 +176,26 @@ class FooterBlock extends BlockBase {
     $build['contact']['address'] = [
       '#type' => 'markup',
       '#markup' => $this->configuration['address'],
+      '#prefix' => '<span class="address">',
+      '#suffix' => '</span>',
     ];
     $build['contact']['phone'] = [
-      '#type' => 'markup',
-      '#markup' => $this->configuration['phone'],
+      '#type' => 'link',
+      '#title' => $this->configuration['phone'],
+      // Prepend 'tel:' to the telephone number.
+      '#url' => Url::fromUri('tel:' . rawurlencode(preg_replace('/\s+/', '', $this->configuration['phone']))),
+      '#options' => ['external' => TRUE],
+      '#prefix' => '<span class="phone">',
+      '#suffix' => '</span>',
     ];
     $build['contact']['email'] = [
-      '#type' => 'markup',
-      '#markup' => $this->configuration['email'],
+      '#type' => 'link',
+      '#title' => $this->configuration['email'],
+      // Prepend 'mailto:' to the email address.
+      '#url' => Url::fromUri('mailto:' . $this->configuration['email']),
+      '#options' => ['external' => TRUE],
+      '#prefix' => '<span class="email">',
+      '#suffix' => '</span>',
     ];
     $build['social'] = [
       '#type' => 'fieldset',
