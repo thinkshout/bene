@@ -4,6 +4,7 @@ namespace Drupal\bene_core\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Menu\MenuTreeParameters;
 use Drupal\Core\Url;
 
 /**
@@ -42,7 +43,13 @@ class FooterBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function blockForm($form, FormStateInterface $form_state) {
-    $form['menu_edit'] = [
+    $footer_menu = \Drupal::menuTree()->load('footer', new MenuTreeParameters());
+    $form['menu_preview'] = [
+      '#type' => 'fieldset',
+      '#title' => t('Footer Menu'),
+    ];
+    $form['menu_preview']['menu'] = \Drupal::menuTree()->build($footer_menu);
+    $form['menu_preview']['menu_edit'] = [
       '#type' => 'markup',
       '#markup' => $this->t('To customize the menu in the footer, click here.'),
       '#prefix' => '<a class="menu-edit" href="/admin/structure/menu/manage/footer" target="_blank">',
