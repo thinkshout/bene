@@ -15,6 +15,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
@@ -57,7 +61,20 @@
         "drupal/paragraphs": "^1.1",
         "drupal/migrate_google_sheets": "^1.0@beta",
         "drupal/migrate_tools": "^4.0.0-beta1",
-        "drupal/redirect": "^1.0-alpha5"
+        "drupal/redirect": "^1.0-alpha5",
+        "bower-asset/dropzone": "^4.2",
+        "bower-asset/blazy": "^1.6.0",
+        "bower-asset/slick-carousel": "^1.6"
+    },
+    "replace": {
+        "bower-asset/jquery": "*",
+        "bower-asset/jqueryui": "*",
+        "bower-asset/backbone": "*",
+        "bower-asset/underscore": "*",
+        "npm-asset/jquery": "*",
+        "npm-asset/jqueryui": "*",
+        "npm-asset/backbone": "*",
+        "npm-asset/underscore": "*"
     },
     "require-dev": {
         "drupal/devel": "1.0-rc2",
