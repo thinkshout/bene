@@ -20,6 +20,10 @@ dependencies:
   - link
   - media_entity
   - menu_link_content
+  - migrate
+  - migrate_google_sheets
+  - migrate_plus
+  - migrate_tools
   - node
   - path
   - r4032login
