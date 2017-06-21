@@ -1,30 +1,21 @@
+uuid: cb5535c4-f08e-48c8-8fcb-789485a7f90d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
     - field.field.node.page.field_image
     - image.style.thumbnail
     - node.type.page
   module:
     - image
-    - inline_entity_form
     - path
-    - text
+_core:
+  default_config_hash: U9npFr2P8u2qRldFuVDUF_mb5kxN7T5tAAskfXXMM9c
 id: node.page.default
 targetEntityType: node
 bundle: page
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 6
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 2
