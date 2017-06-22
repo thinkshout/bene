@@ -1,0 +1,21 @@
+uuid: 7b81e9a5-6e52-4430-b2b6-940df32a146c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: standard_link
+label: 'Standard Link'
+description: ''
+attributes: {  }
+matchers:
+  423f5ec9-a14a-485d-844f-6e11f78fe6f9:
+    uuid: 423f5ec9-a14a-485d-844f-6e11f78fe6f9
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles:
+        page: page
+      group_by_bundle: false
+      include_unpublished: false
