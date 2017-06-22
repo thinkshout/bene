@@ -4,10 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.thumbnail
     - field.field.media.image.field_copyright
-    - field.field.media.image.field_description
     - field.field.media.image.field_image
-    - field.field.media.image.field_source
-    - field.field.media.image.field_tags
     - image.style.media_thumbnail
     - media_entity.bundle.image
   module:
@@ -31,11 +28,8 @@ hidden:
   field_brands: true
   field_channel: true
   field_copyright: true
-  field_description: true
   field_events: true
   field_people: true
-  field_source: true
-  field_tags: true
   name: true
   thumbnail: true
   uid: true

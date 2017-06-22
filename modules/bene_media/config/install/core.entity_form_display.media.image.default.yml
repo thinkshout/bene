@@ -2,11 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.image.field_caption
     - field.field.media.image.field_copyright
-    - field.field.media.image.field_description
     - field.field.media.image.field_image
-    - field.field.media.image.field_source
-    - field.field.media.image.field_tags
     - image.style.medium
     - media_entity.bundle.image
   module:
@@ -17,6 +15,14 @@ targetEntityType: media
 bundle: image
 mode: default
 content:
+  field_caption:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
   field_copyright:
     weight: 3
     settings:
@@ -25,14 +31,6 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_description:
-    type: text_textarea
-    weight: 5
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
   field_image:
     weight: 1
     settings:
@@ -40,14 +38,6 @@ content:
       preview_image_style: medium
     third_party_settings: {  }
     type: image_image
-    region: content
-  field_source:
-    type: string_textfield
-    weight: 4
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
     region: content
   name:
     type: string_textfield
@@ -59,5 +49,4 @@ content:
     region: content
 hidden:
   created: true
-  field_tags: true
   uid: true

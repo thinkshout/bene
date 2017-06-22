@@ -3,21 +3,27 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.slick
+    - field.field.media.image.field_caption
     - field.field.media.image.field_copyright
-    - field.field.media.image.field_description
     - field.field.media.image.field_image
-    - field.field.media.image.field_source
-    - field.field.media.image.field_tags
     - media_entity.bundle.image
   module:
     - blazy
+    - text
 id: media.image.slick
 targetEntityType: media
 bundle: image
 mode: slick
 content:
-  field_copyright:
+  field_caption:
+    type: text_default
     weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_copyright:
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
@@ -75,6 +81,7 @@ content:
       grid_header: ''
       grid_medium: 0
       grid_small: 0
+      box_media_style: ''
     third_party_settings: {  }
     type: blazy
     region: content
@@ -82,11 +89,8 @@ hidden:
   created: true
   field_brands: true
   field_channel: true
-  field_description: true
   field_events: true
   field_people: true
-  field_source: true
-  field_tags: true
   name: true
   thumbnail: true
   uid: true
