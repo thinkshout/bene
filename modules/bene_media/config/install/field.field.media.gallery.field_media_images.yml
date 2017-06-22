@@ -1,3 +1,4 @@
+uuid: 2ae094c4-acb4-418c-9c92-819995575ab2
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - field.storage.media.field_media_images
     - media_entity.bundle.gallery
     - media_entity.bundle.image
+_core:
+  default_config_hash: EEttnZW68uH0YJGxUwPpg6P0IxYSd6NELu7HO2NVjEc
 id: media.gallery.field_media_images
 field_name: field_media_images
 entity_type: media

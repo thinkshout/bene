@@ -1,3 +1,4 @@
+uuid: da47d9e4-5b15-4793-b9ee-ffd30679a682
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - media_entity.bundle.gallery
   module:
     - slick_media
+_core:
+  default_config_hash: 6Nedj1KvXC-PJ-pSMbMia3x2nh91I69zWi5eiWeeU58
 id: media.gallery.default
 targetEntityType: media
 bundle: gallery

@@ -1,3 +1,4 @@
+uuid: 1aee605d-0143-46c7-9775-731c28b64ce2
 langcode: und
 status: true
 dependencies:
@@ -9,6 +10,8 @@ dependencies:
     - image
     - media_entity
     - user
+_core:
+  default_config_hash: tPHYt7IluwlTqL0lKuMeIFzEL80dsOQ3W21xamHH8zE
 id: image_browser
 label: 'Image Browser'
 module: views

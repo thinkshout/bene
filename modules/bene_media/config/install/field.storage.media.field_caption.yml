@@ -1,9 +1,12 @@
+uuid: 4c3e458f-635f-49d3-87d2-60d5122c07f3
 langcode: en
 status: true
 dependencies:
   module:
     - media_entity
     - text
+_core:
+  default_config_hash: Vbc6HoN05ZibslIcvvmdKdKZVkziO0C8T2p-_kd40ZM
 id: media.field_caption
 field_name: field_caption
 entity_type: media

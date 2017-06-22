@@ -1,8 +1,11 @@
+uuid: 007bccfa-1755-41d5-84f0-5d1e365e44ea
 langcode: en
 status: true
 dependencies:
   module:
     - focal_point
+_core:
+  default_config_hash: AF1dw51FUvXw_tL20NA_6PhJZwmq6GrFXRutKpHYRMk
 name: twitter
 label: Twitter
 effects:

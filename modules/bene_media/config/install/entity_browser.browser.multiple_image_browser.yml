@@ -1,3 +1,4 @@
+uuid: 7da5136b-7173-48d5-bcb9-679207f6d3ae
 langcode: en
 status: true
 dependencies:
@@ -8,6 +9,8 @@ dependencies:
     - dropzonejs_eb_widget
     - media_entity
     - views
+_core:
+  default_config_hash: ypgDSuF6vBO18JuDUlfLMJzWm0XTlOlgmwy3OOuY2FM
 name: multiple_image_browser
 label: 'Multiple Image Browser'
 display: modal

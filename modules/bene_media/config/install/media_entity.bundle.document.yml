@@ -1,0 +1,19 @@
+uuid: 15d2fddf-e479-42d1-afdb-6c532e724957
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+    - media_entity_document
+third_party_settings:
+  crop:
+    image_field: null
+id: document
+label: Document
+description: 'A locally hosted document, such a PDF.'
+type: document
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: ''
+field_map: {  }

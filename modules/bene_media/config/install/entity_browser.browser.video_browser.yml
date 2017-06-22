@@ -1,3 +1,4 @@
+uuid: 67976f6f-ff1c-409c-829b-4d64e14863eb
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
   module:
     - entity_browser_entity_form
     - views
+_core:
+  default_config_hash: 32ecfS30Ll2vmo-HQ-bAlSP8rwBsQNjHsQlYNerhD3g
 name: video_browser
 label: 'Video Browser'
 display: modal

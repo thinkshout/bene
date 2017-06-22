@@ -1,8 +1,11 @@
+uuid: 003ec48e-230d-40cb-9bb3-98384e0190cf
 langcode: en
 status: true
 dependencies:
   module:
     - focal_point
+_core:
+  default_config_hash: fLUtJ3ckh3XUecEdEMe4W4wKFiqMi_CwNUdQtIsrZaE
 name: entity_browser_thumbnail
 label: 'Entity Browser Thumbnail'
 effects:

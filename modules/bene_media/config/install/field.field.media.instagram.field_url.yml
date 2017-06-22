@@ -1,3 +1,4 @@
+uuid: 30123cc3-4e4f-450a-9b55-f539cf7434e7
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - media_entity.bundle.instagram
   module:
     - link
+_core:
+  default_config_hash: DT8dPbw8wEJz2cDGMhN1piG-JIKdz51QRvVkt0TFhJw
 id: media.instagram.field_url
 field_name: field_url
 entity_type: media

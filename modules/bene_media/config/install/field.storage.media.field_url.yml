@@ -1,9 +1,12 @@
+uuid: ce97964f-08df-4b51-bf99-f72bf20f6235
 langcode: en
 status: true
 dependencies:
   module:
     - link
     - media_entity
+_core:
+  default_config_hash: '--YOy2r1JBvteuWPcoy13hT5XfkEFSJrkjRr2hp3DD8'
 id: media.field_url
 field_name: field_url
 entity_type: media

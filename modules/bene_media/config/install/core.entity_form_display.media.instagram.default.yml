@@ -1,3 +1,4 @@
+uuid: 47f44e84-2af6-41fe-9e0a-ae0555d8ef33
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - media_entity.bundle.instagram
   module:
     - link
+_core:
+  default_config_hash: jD_o_dIzFgqp6WA6LclwYYF_ii97b4eN4hy9Nz5u-is
 id: media.instagram.default
 targetEntityType: media
 bundle: instagram

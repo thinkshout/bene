@@ -1,3 +1,4 @@
+uuid: 51bfe1f3-4257-4eeb-97cc-7b14f6b11391
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - media_entity.bundle.video
   module:
     - text
+_core:
+  default_config_hash: uBpl22ZMqy5wVN2Uf2ZZhrBjIAwqY7b9Fk_WE4y1JRA
 id: media.video.field_caption
 field_name: field_caption
 entity_type: media

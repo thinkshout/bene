@@ -1,8 +1,11 @@
+uuid: b8c3ce6e-65a5-4cad-acdd-ae4323fef7f8
 langcode: en
 status: true
 dependencies:
   module:
     - focal_point
+_core:
+  default_config_hash: 0cdXGcvDedYCLlmTKA6XMBgjrQFts5_s2gg2KC4pKD0
 name: teaser
 label: Teaser
 effects:

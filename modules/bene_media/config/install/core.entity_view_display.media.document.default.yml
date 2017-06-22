@@ -1,9 +1,8 @@
-uuid: 30df5a35-254a-4e8c-8d0d-6f882b32a28a
+uuid: f8ea2b1c-c61c-4d41-b77a-964a0791c74f
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.thumbnail
     - field.field.media.document.field_document
     - image.style.thumbnail
     - media_entity.bundle.document
@@ -11,10 +10,10 @@ dependencies:
     - file
     - image
     - user
-id: media.document.thumbnail
+id: media.document.default
 targetEntityType: media
 bundle: document
-mode: thumbnail
+mode: default
 content:
   created:
     label: hidden

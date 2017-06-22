@@ -1,8 +1,2 @@
 bundle: bene
-excluded:
-  - core.entity_form_display.media.document.default
-  - core.entity_view_display.media.document.default
-  - field.field.media.document.field_document
-  - field.storage.media.field_document
-  - media_entity.bundle.document
 required: true
