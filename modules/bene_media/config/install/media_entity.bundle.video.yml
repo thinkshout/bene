@@ -1,11 +1,8 @@
-uuid: b61b0659-bcf1-40cb-a97e-be84a5a6f344
 langcode: en
 status: true
 dependencies:
   module:
     - video_embed_media
-_core:
-  default_config_hash: BtmkOtsieYk-q1T0mbx0Nc7a0BuVA5eRyu91BF94fTg
 id: video
 label: Video
 description: ''

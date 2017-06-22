@@ -1,11 +1,8 @@
-uuid: 3ce67a19-46d2-4d96-a006-9a47a0d4d12f
 langcode: en
 status: true
 dependencies:
   module:
     - media_entity
-_core:
-  default_config_hash: g63AnYhz264HqgHoVpl01xm-ehI8PF5_G4-04YBW2Ro
 id: media.token
 label: Token
 targetEntityType: media

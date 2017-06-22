@@ -1,4 +1,3 @@
-uuid: 4f8a9a6f-c141-454b-b364-0d45d6b226b8
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
     - media_entity.bundle.gallery
   module:
     - entity_browser
-_core:
-  default_config_hash: 2hfppsoXKMFer7GSyVmvscDcbXCiad9NY1Rryp8O6ac
 id: media.gallery.default
 targetEntityType: media
 bundle: gallery

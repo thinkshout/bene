@@ -1,4 +1,3 @@
-uuid: 4849beed-c5ca-4216-800c-09eff4670305
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - media_entity.bundle.twitter
   module:
     - media_entity_twitter
-_core:
-  default_config_hash: pBNEsMtoVZbnQEsOFYpPmtY3TTrexgRO4bEu-kS7i1w
 id: media.twitter.default
 targetEntityType: media
 bundle: twitter

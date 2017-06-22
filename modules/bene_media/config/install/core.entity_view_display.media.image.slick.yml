@@ -1,4 +1,3 @@
-uuid: cf9a371c-2b5c-426c-8ba9-c797d0e3411a
 langcode: en
 status: true
 dependencies:
@@ -11,8 +10,6 @@ dependencies:
   module:
     - blazy
     - text
-_core:
-  default_config_hash: kbWT1wMi3c5wz3LU1wcYOL3N2cz6zkRbjd0bfIT-WM4
 id: media.image.slick
 targetEntityType: media
 bundle: image

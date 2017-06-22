@@ -1,11 +1,8 @@
-uuid: 20042af8-6589-43a2-8325-787e8ff9de09
 langcode: en
 status: true
 dependencies:
   module:
     - focal_point
-_core:
-  default_config_hash: MjXcT06UFNsE4THai5P6KJBhSbFt2JVYtDLhngYimiw
 name: gallery
 label: Gallery
 effects:

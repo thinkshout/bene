@@ -1,12 +1,9 @@
-uuid: a94672e5-a29a-4463-8c75-7f75f62c6692
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.media.field_copyright
     - media_entity.bundle.video
-_core:
-  default_config_hash: iUEq2A0dXwHiXY7qlkywRUmngY_veHt2L9uV7-yVPKk
 id: media.video.field_copyright
 field_name: field_copyright
 entity_type: media

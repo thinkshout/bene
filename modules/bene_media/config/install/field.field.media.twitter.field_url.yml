@@ -1,4 +1,3 @@
-uuid: fb83e7c1-f29f-43ab-a047-9c5783711f09
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - media_entity.bundle.twitter
   module:
     - link
-_core:
-  default_config_hash: kRvUGl2xV6oGJzsE1ngMDahmPiBMcIipIv9P7wqapyk
 id: media.twitter.field_url
 field_name: field_url
 entity_type: media

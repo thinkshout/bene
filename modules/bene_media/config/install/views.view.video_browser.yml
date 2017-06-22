@@ -1,4 +1,3 @@
-uuid: 93ca6a11-00be-46d4-8050-5e766a5d86aa
 langcode: und
 status: true
 dependencies:
@@ -10,8 +9,6 @@ dependencies:
     - image
     - media_entity
     - user
-_core:
-  default_config_hash: bLM7UO1YGXIBVbhjqeU9lfpzlYfW4yNIiAbJjOghGd0
 id: video_browser
 label: 'Video Browser'
 module: views

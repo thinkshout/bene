@@ -1,4 +1,3 @@
-uuid: 63d5fbf1-42b0-4a0d-9a74-ed8fc54a540a
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
 third_party_settings:
   crop:
     image_field: null
-_core:
-  default_config_hash: ywFMzW7Tc8s9K3dTaf5dSXGsfEmoYQn-NYbvJb4FR1w
 id: instagram
 label: Instagram
 description: ''

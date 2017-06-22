@@ -1,9 +1,6 @@
-uuid: bb0c2b25-9b82-4cbd-9a2e-fdda8d14b7e9
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: I0RuybbOHjuUskBKnqxpmOqNj0eWkcynQFB_Gdo2MYc
 id: default
 label: Default
 image_style_mappings: {  }

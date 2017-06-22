@@ -1,4 +1,3 @@
-uuid: c0d2a831-86de-4408-b2cf-272e940b1548
 langcode: en
 status: true
 dependencies:
@@ -10,8 +9,6 @@ dependencies:
   module:
     - blazy
     - text
-_core:
-  default_config_hash: YTnm9vNmzND6R13fnMQTSE331cA57FJEYtF4NJ27Mn0
 id: media.image.default
 targetEntityType: media
 bundle: image

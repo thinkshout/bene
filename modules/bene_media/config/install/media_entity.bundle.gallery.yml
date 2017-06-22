@@ -1,11 +1,8 @@
-uuid: ec145dfa-853f-412d-bc40-5a007c24d9ab
 langcode: en
 status: true
 dependencies:
   module:
     - media_entity_slideshow
-_core:
-  default_config_hash: Xh3MssuE0lR2zxTmbarnCgqQqjIb4u_kcjqt_MqK1xY
 id: gallery
 label: Gallery
 description: ''

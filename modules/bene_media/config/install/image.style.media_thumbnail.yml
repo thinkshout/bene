@@ -1,11 +1,8 @@
-uuid: 8c8bd641-4b42-4c03-8702-e9f226e231ad
 langcode: en
 status: true
 dependencies:
   module:
     - focal_point
-_core:
-  default_config_hash: yh1e08daqQH3KG_hKz9NG0ezFcQgGqLuoPsW_guXnGc
 name: media_thumbnail
 label: 'Media thumbnail (182x104)'
 effects:

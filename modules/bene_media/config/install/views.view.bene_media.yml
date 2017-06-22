@@ -1,4 +1,3 @@
-uuid: 4bbcf154-a9ef-4865-ba51-222b0801a801
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
     - image
     - media_entity
     - user
-_core:
-  default_config_hash: ltMkdgT2vj9813e_kP5wZIighQk1DiGkOW8xk2zc9WE
 id: bene_media
 label: Media
 module: views

@@ -1,12 +1,9 @@
-uuid: da0e4035-fcc6-40f2-a6a0-9155387ddf91
 langcode: en
 status: false
 dependencies:
   enforced:
     module:
       - slick
-_core:
-  default_config_hash: awilmL6h3ZieXaPj6-EX5KkBOqYe1RzhxiQQnyXYp7M
 id: bene_gallery
 name: bene_gallery
 label: 'Bene Gallery'

@@ -1,4 +1,3 @@
-uuid: d85e60aa-9948-4800-bb19-1918415bdebc
 langcode: en
 status: true
 dependencies:
@@ -9,8 +8,6 @@ dependencies:
     - dropzonejs_eb_widget
     - media_entity
     - views
-_core:
-  default_config_hash: 9kI0pjBo7Stwi3aWAKoxVG_KOtgW3OHtJGBQge6JURQ
 name: image_browser
 label: 'Image Browser'
 display: modal
