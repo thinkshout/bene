@@ -87,5 +87,11 @@ assignments:
         filter_format: filter_format
     enabled: true
     weight: 7
+  alter:
+    enabled: true
+    weight: 0
+    core: 1
+    uuid: 1
+    user_permissions: 1
 profile_name: bene
 is_profile: true
