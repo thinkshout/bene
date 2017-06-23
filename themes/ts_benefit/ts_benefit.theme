@@ -48,6 +48,7 @@ function ts_benefit_page_attachments_alter(array &$page) {
 function ts_benefit_preprocess_page(array &$variables) {
 
 }
+
 /**
  * Implements hook_preprocess_page_title() for page.html.twig.
  */
