@@ -60,7 +60,7 @@ function ts_benefit_preprocess_page_title(&$variables) {
   /** @var \Drupal\user\Entity\User $user */
   $user = $parameters->get('user');
   if (!empty($user)) {
-    $old_title = $variables['title']['#markup']->__toString();
+    $old_title = is_object($variables['title']['#markup']) ? $variables['title']['#markup']->__toString() : $variables['title']['#markup'];
     $new_title = '';
 
     $username = $user->getUsername();
