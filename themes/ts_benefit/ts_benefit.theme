@@ -5,6 +5,8 @@
  * Functions to support theming in the thinkbase theme.
  */
 
+use Drupal\Core\Render\Markup;
+
 /**
  * Implements hook_preprocess_HOOK() for html.html.twig.
  */
@@ -45,6 +47,33 @@ function ts_benefit_page_attachments_alter(array &$page) {
  */
 function ts_benefit_preprocess_page(array &$variables) {
 
+}
+/**
+ * Implements hook_preprocess_page_title() for page.html.twig.
+ */
+function ts_benefit_preprocess_page_title(&$variables) {
+  // If the current route represents a user profile page,
+  // replace the username in the title with the user's email address.
+  $route_match = \Drupal::service('current_route_match');
+  $parameters = $route_match->getParameters();
+
+  /** @var \Drupal\user\Entity\User $user */
+  $user = $parameters->get('user');
+  if (!empty($user)) {
+    $old_title = $variables['title']['#markup']->__toString();
+    $new_title = '';
+
+    $username = $user->getUsername();
+    $email = $user->getEmail();
+
+    if (!empty($email)) {
+      $new_title = str_replace($username, $email, $old_title);
+    }
+  }
+
+  if (!empty($new_title)) {
+    $variables['title']['#markup'] = Markup::create($new_title);
+  }
 }
 
 /**

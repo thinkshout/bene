@@ -34,6 +34,18 @@ function bene_core_form_user_form_alter(&$form, FormStateInterface $form_state) 
 }
 
 /**
+ * Implements hook_user_format_name_alter().
+ */
+function bene_core_user_format_name_alter(&$name, $account) {
+  // Display the username as the user's email address.
+  // Email should always be available, but check first to avoid blank usernames.
+  $email = $account->getEmail();
+  if (!empty($email)) {
+    $name = $email;
+  }
+}
+
+/**
  * Helper function to re-order hook implementations.
  */
 function bene_core_reorder_indexes(&$array, $first, $second) {
