@@ -2,33 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.video.field_caption
-    - field.field.media.video.field_copyright
     - field.field.media.video.field_media_video_embed_field
     - media_entity.bundle.video
   module:
-    - text
     - video_embed_field
 id: media.video.default
 targetEntityType: media
 bundle: video
 mode: default
 content:
-  field_caption:
-    type: text_default
-    weight: 1
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-  field_copyright:
-    type: string
-    weight: 2
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    region: content
   field_media_video_embed_field:
     weight: 0
     label: hidden

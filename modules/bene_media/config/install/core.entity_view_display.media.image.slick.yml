@@ -3,33 +3,15 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.slick
-    - field.field.media.image.field_caption
-    - field.field.media.image.field_copyright
     - field.field.media.image.field_image
     - media_entity.bundle.image
   module:
     - blazy
-    - text
 id: media.image.slick
 targetEntityType: media
 bundle: image
 mode: slick
 content:
-  field_caption:
-    type: text_default
-    weight: 1
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-  field_copyright:
-    weight: 2
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_image:
     weight: 0
     label: hidden

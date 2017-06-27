@@ -2,35 +2,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.image.field_caption
-    - field.field.media.image.field_copyright
     - field.field.media.image.field_image
     - image.style.medium
     - media_entity.bundle.image
   module:
     - image
-    - text
 id: media.image.default
 targetEntityType: media
 bundle: image
 mode: default
 content:
-  field_caption:
-    weight: 4
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_copyright:
-    weight: 3
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_image:
     weight: 1
     settings:

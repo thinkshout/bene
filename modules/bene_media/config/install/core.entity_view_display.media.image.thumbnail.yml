@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.thumbnail
-    - field.field.media.image.field_copyright
     - field.field.media.image.field_image
     - image.style.media_thumbnail
     - media_entity.bundle.image
@@ -27,7 +26,6 @@ hidden:
   created: true
   field_brands: true
   field_channel: true
-  field_copyright: true
   field_events: true
   field_people: true
   name: true
