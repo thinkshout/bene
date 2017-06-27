@@ -66,8 +66,7 @@
         "bower-asset/dropzone": "^4.2",
         "bower-asset/blazy": "^1.6.0",
         "bower-asset/slick-carousel": "^1.6",
-        "drupal/media_entity_document": "^1.1",
-        "drupal/url_embed": "^1.0@alpha"
+        "drupal/media_entity_document": "^1.1"
     },
     "replace": {
         "bower-asset/jquery": "*",
