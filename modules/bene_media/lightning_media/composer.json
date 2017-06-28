@@ -1,0 +1,6 @@
+{
+    "name": "drupal/bene_media",
+    "description": "Media related functionality and configuration for the Bene Distribution.",
+    "type": "drupal-module",
+    "license": "GPL-2.0+"
+}

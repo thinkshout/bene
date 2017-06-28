@@ -1,6 +1,0 @@
-bene_media.configuration_form:
-  title: 'Bene Media Configuration'
-  route_name: bene_media.configuration_form
-  description: 'Bene Media configuration'
-  parent: system.admin_config_media
-  weight: 99

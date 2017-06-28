@@ -1,0 +1,5 @@
+services:
+  bene.media_helper:
+    class: '\Drupal\bene_media\MediaHelper'
+    arguments:
+      - '@entity_type.manager'

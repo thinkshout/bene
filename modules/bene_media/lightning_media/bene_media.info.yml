@@ -1,0 +1,22 @@
+name: 'Bene Media'
+core: 8.x
+type: module
+description: 'Slick media handling for Bene. So cool you''ll make the A/C jealous.'
+version: '8.x-2.15'
+package: Bene
+dependencies:
+  - ckeditor
+  - entity_browser
+  - entity_embed
+  - image
+  - inline_entity_form
+  - bene_core
+  - media_entity
+  - user
+  - views_infinite_scroll
+components:
+  - bene_media_document
+  - bene_media_image
+  - bene_media_instagram
+  - bene_media_twitter
+  - bene_media_video

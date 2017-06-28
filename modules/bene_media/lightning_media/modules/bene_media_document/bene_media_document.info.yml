@@ -1,0 +1,10 @@
+name: 'Media Document'
+core: 8.x
+type: module
+description: 'Locally hosted document support for Bene Media.'
+version: '8.x-1.0'
+package: Bene
+dependencies:
+  - file
+  - bene_media
+  - media_entity_document

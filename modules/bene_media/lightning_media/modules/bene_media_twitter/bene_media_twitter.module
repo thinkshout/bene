@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Support for image tweets as media entities in Bene.
+ */
+
+use Drupal\bene_core\OverrideHelper as Override;
+use Drupal\bene_media_twitter\Plugin\MediaEntity\Type\Twitter;
+
+/**
+ * Implements hook_media_entity_type_info_alter().
+ */
+function bene_media_twitter_media_entity_type_info_alter(array &$types) {
+  $types['twitter']['input_match'] = [
+    'constraint' => 'TweetEmbedCode',
+    'field_types' => [
+      'string',
+      'string_long',
+    ],
+  ];
+  $types['twitter']['preview'] = TRUE;
+
+  Override::pluginClass($types['twitter'], Twitter::class);
+}
