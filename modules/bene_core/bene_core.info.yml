@@ -11,6 +11,7 @@ dependencies:
   - crop
   - editor
   - entity_embed
+  - entity_reference_revisions
   - features
   - field
   - file
@@ -18,6 +19,7 @@ dependencies:
   - image
   - inline_entity_form
   - link
+  - linkit
   - media_entity
   - menu_link_content
   - migrate
@@ -25,10 +27,12 @@ dependencies:
   - migrate_plus
   - migrate_tools
   - node
+  - paragraphs
   - path
   - r4032login
   - rdf
   - shortcut
+  - system
   - taxonomy
   - text
   - tour

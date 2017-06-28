@@ -3,19 +3,39 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.page.bene_excerpt
+    - field.field.node.page.bene_content
     - field.field.node.page.field_image
     - image.style.1280x185
     - node.type.page
   module:
+    - entity_reference_revisions
     - image
+    - text
     - user
 _core:
-  default_config_hash: QAU2agNNRk6tktvk4K694N_xZNaJLl7jTU7SFmedb6Q
+  default_config_hash: _-G_Z-nnvezTHOqWqlirwEVdDP5chAK4cwDyjmzg68c
 id: node.page.default
 targetEntityType: node
 bundle: page
 mode: default
 content:
+  bene_excerpt:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  bene_content:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
   field_image:
     type: image
     weight: 0
@@ -35,8 +55,8 @@ content:
     type: entity_reference_entity_view
     region: content
   links:
-    weight: 101
+    weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
