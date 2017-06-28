@@ -56,7 +56,8 @@
         "drupal/migrate_google_sheets": "^1.0@beta",
         "drupal/migrate_tools": "^4.0.0-beta1",
         "drupal/redirect": "^1.0-alpha5",
-        "drupal/media_entity_document": "^1.1"
+        "drupal/media_entity_document": "^1.1",
+        "drupal/views_infinite_scroll": "^1.3"
     },
     "replace": {
         "bower-asset/jquery": "*",
