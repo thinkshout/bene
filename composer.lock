@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd3582fbd4ee2ad190fcf3bc098aa965",
+    "content-hash": "267e8a85278006d5b7074cc8f14d77c8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -57,57 +57,6 @@
                 "stack"
             ],
             "time": "2017-04-11T20:03:41+00:00"
-        },
-        {
-            "name": "bower-asset/blazy",
-            "version": "1.8.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dinbror/blazy.git",
-                "reference": "5becad405976695e6016ba301be4f22ba61d5b95"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dinbror/blazy/zipball/5becad405976695e6016ba301be4f22ba61d5b95",
-                "reference": "5becad405976695e6016ba301be4f22ba61d5b95",
-                "shasum": null
-            },
-            "type": "bower-asset"
-        },
-        {
-            "name": "bower-asset/dropzone",
-            "version": "v4.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/enyo/dropzone.git",
-                "reference": "d8ef7a82e6ab5447c1f2d9512c8e1bfd4de5ac9e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/enyo/dropzone/zipball/d8ef7a82e6ab5447c1f2d9512c8e1bfd4de5ac9e",
-                "reference": "d8ef7a82e6ab5447c1f2d9512c8e1bfd4de5ac9e",
-                "shasum": null
-            },
-            "type": "bower-asset"
-        },
-        {
-            "name": "bower-asset/slick-carousel",
-            "version": "1.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kenwheeler/slick.git",
-                "reference": "0aee9fe00e440cc9d72c2dc11768ad9277880603"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kenwheeler/slick/zipball/0aee9fe00e440cc9d72c2dc11768ad9277880603",
-                "reference": "0aee9fe00e440cc9d72c2dc11768ad9277880603",
-                "shasum": null
-            },
-            "require": {
-                "bower-asset/jquery": ">=1.7"
-            },
-            "type": "bower-asset"
         },
         {
             "name": "composer/installers",
@@ -789,61 +738,6 @@
             }
         },
         {
-            "name": "drupal/blazy",
-            "version": "1.0.0-rc2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/blazy",
-                "reference": "8.x-1.0-rc2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/blazy-8.x-1.0-rc2.zip",
-                "reference": null,
-                "shasum": "242f3022b039c6fd3b98f6ce1955d295119b4b5a"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-rc2",
-                    "datestamp": "1495745283"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Gaus Surahman",
-                    "homepage": "https://www.drupal.org/u/gausarts",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Contributors",
-                    "homepage": "https://www.drupal.org/node/2663268/committers",
-                    "role": "Contributor"
-                }
-            ],
-            "description": "Provides basic bLazy integration for lazy loading and multi-serving images.",
-            "homepage": "https://drupal.org/project/blazy",
-            "keywords": [
-                "Drupal",
-                "bLazy",
-                "lazyload"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/blazy",
-                "issues": "https://drupal.org/project/issues/blazy"
-            }
-        },
-        {
             "name": "drupal/coder",
             "version": "8.2.12",
             "source": {
@@ -1384,158 +1278,6 @@
             "homepage": "https://www.drupal.org/project/default_content",
             "support": {
                 "source": "http://cgit.drupalcode.org/default_content"
-            }
-        },
-        {
-            "name": "drupal/dropzonejs",
-            "version": "1.0.0-alpha7",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/dropzonejs",
-                "reference": "8.x-1.0-alpha7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/dropzonejs-8.x-1.0-alpha7.zip",
-                "reference": null,
-                "shasum": "62fc6d46cee1d5fa9885bab3e65b3638172311f6"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "require-dev": {
-                "drupal/entity_browser": "*"
-            },
-            "suggest": {
-                "enyo/dropzone": "Required to user drupal/dropzonejs. Dropzone is an easy to use drag'n'drop library."
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha7",
-                    "datestamp": "1495200183"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Janez Urevc",
-                    "homepage": "https://drupal.org/u/slashrsm",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Christian Fritsch",
-                    "homepage": "https://drupal.org/u/chrfritsch",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Primoz Hmeljak",
-                    "homepage": "https://drupal.org/u/Primsi",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "See other contributors",
-                    "homepage": "https://www.drupal.org/node/1998478/committers",
-                    "role": "contributor"
-                },
-                {
-                    "name": "slashrsm",
-                    "homepage": "https://www.drupal.org/user/744628"
-                },
-                {
-                    "name": "wouters_f",
-                    "homepage": "https://www.drupal.org/user/721548"
-                },
-                {
-                    "name": "zkday",
-                    "homepage": "https://www.drupal.org/user/888644"
-                }
-            ],
-            "description": "Drupal integration for DropzoneJS - An open source library that provides drag’n’drop file uploads with image previews.",
-            "homepage": "https://www.drupal.org/project/dropzonejs",
-            "keywords": [
-                "DropzoneJS",
-                "Drupal"
-            ],
-            "support": {
-                "source": "https://www.drupal.org/project/dropzonejs",
-                "issues": "https://www.drupal.org/project/issues/dropzonejs",
-                "irc": "irc://irc.freenode.org/drupal-contribute"
-            }
-        },
-        {
-            "name": "drupal/ds",
-            "version": "2.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/ds",
-                "reference": "8.x-2.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ds-8.x-2.3.zip",
-                "reference": null,
-                "shasum": "9e177045d04898c39f2ea0ed82ea1285d1f2ad66"
-            },
-            "require": {
-                "drupal/core": "~8.0",
-                "drupal/layout_plugin": "*"
-            },
-            "require-dev": {
-                "drupal/devel": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.3",
-                    "datestamp": "1495040310"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Bram Goffings",
-                    "homepage": "https://www.drupal.org/user/172527",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Kristof De Jaeger",
-                    "homepage": "http://realize.be/",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Brecht Ceyssens",
-                    "homepage": "https://www.drupal.org/user/591438",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "swentel",
-                    "homepage": "https://www.drupal.org/user/107403"
-                }
-            ],
-            "description": "Extend the display options for every entity type.",
-            "homepage": "https://www.drupal.org/project/ds",
-            "keywords": [
-                "drupal",
-                "layout",
-                "php"
-            ],
-            "support": {
-                "source": "http://git.drupal.org/project/ds.git",
-                "issues": "https://www.drupal.org/project/issues/ds",
-                "irc": "irc://irc.freenode.org/drupal-contribute"
             }
         },
         {
@@ -2142,64 +1884,6 @@
             }
         },
         {
-            "name": "drupal/layout_plugin",
-            "version": "1.0.0-alpha22",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/layout_plugin",
-                "reference": "8.x-1.0-alpha22"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/layout_plugin-8.x-1.0-alpha22.zip",
-                "reference": null,
-                "shasum": "2befadd2effba621c9390461c1d1590cdca727e8"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "require-dev": {
-                "drupal/page_manager": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0-alpha22",
-                    "datestamp": "1476238140"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "David Snopek",
-                    "homepage": "https://www.drupal.org/user/172527"
-                },
-                {
-                    "name": "Bram Goffings",
-                    "homepage": "https://www.drupal.org/user/266527"
-                },
-                {
-                    "name": "Fredrik Lassen",
-                    "homepage": "https://www.drupal.org/user/243377"
-                }
-            ],
-            "description": "An API module to hold the Drupal 8 plugin manager for layouts.",
-            "homepage": "https://www.drupal.org/project/layout_plugin",
-            "keywords": [
-                "layout",
-                "php"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/layout_plugin"
-            }
-        },
-        {
             "name": "drupal/linkit",
             "version": "4.3.0",
             "source": {
@@ -2511,54 +2195,6 @@
             "homepage": "https://www.drupal.org/project/media_entity_instagram",
             "support": {
                 "source": "http://cgit.drupalcode.org/media_entity_instagram"
-            }
-        },
-        {
-            "name": "drupal/media_entity_slideshow",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/media_entity_slideshow",
-                "reference": "8.x-1.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_entity_slideshow-8.x-1.2.zip",
-                "reference": null,
-                "shasum": "c9d49eb6be7de0ea8e500554b89842842287cd1f"
-            },
-            "require": {
-                "drupal/core": "~8.0",
-                "drupal/media_entity": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1470687839"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Drupal Media Team",
-                    "homepage": "https://www.drupal.org/user/3260690"
-                },
-                {
-                    "name": "slashrsm",
-                    "homepage": "https://www.drupal.org/user/744628"
-                }
-            ],
-            "description": "Media entity slideshow provider.",
-            "homepage": "https://www.drupal.org/project/media_entity_slideshow",
-            "support": {
-                "source": "http://cgit.drupalcode.org/media_entity_slideshow"
             }
         },
         {
@@ -3132,106 +2768,6 @@
             }
         },
         {
-            "name": "drupal/slick",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/slick",
-                "reference": "8.x-1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/slick-8.x-1.0.zip",
-                "reference": null,
-                "shasum": "14ae69943a07749163ed13900dcd0a6809c54ebd"
-            },
-            "require": {
-                "drupal/blazy": "~1.0",
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1495746183"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "arshadcn",
-                    "homepage": "https://www.drupal.org/user/571032"
-                },
-                {
-                    "name": "gausarts",
-                    "homepage": "https://www.drupal.org/user/159062"
-                }
-            ],
-            "description": "Slick carousel, the last carousel you'll ever need.",
-            "homepage": "https://drupal.org/project/slick",
-            "keywords": [
-                "Drupal",
-                "carousel",
-                "slideshow"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/slick",
-                "issues": "https://drupal.org/project/issues/slick"
-            }
-        },
-        {
-            "name": "drupal/slick_media",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/slick_media",
-                "reference": "8.x-1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/slick_media-8.x-1.0.zip",
-                "reference": null,
-                "shasum": "b85a9899c53ca2f59f7cdbba044e2f58ae71e092"
-            },
-            "require": {
-                "drupal/core": "~8.0",
-                "drupal/media_entity_image": "*",
-                "drupal/slick": "*",
-                "drupal/video_embed_media": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1495747983"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "gausarts",
-                    "homepage": "https://www.drupal.org/user/159062"
-                }
-            ],
-            "description": "Provides Slick carousel integration with Media entity.",
-            "homepage": "https://www.drupal.org/project/slick_media",
-            "support": {
-                "source": "http://cgit.drupalcode.org/slick_media"
-            }
-        },
-        {
             "name": "drupal/token",
             "version": "1.0.0",
             "source": {
@@ -3346,48 +2882,6 @@
                 }
             ],
             "description": "A pluggable field type for storing videos from external video hosts such as Vimeo and YouTube.",
-            "homepage": "https://www.drupal.org/project/video_embed_field",
-            "support": {
-                "source": "http://cgit.drupalcode.org/video_embed_field"
-            }
-        },
-        {
-            "name": "drupal/video_embed_media",
-            "version": "1.5.0",
-            "require": {
-                "drupal/core": "~8.0",
-                "drupal/media_entity": "*",
-                "drupal/video_embed_field": "self.version"
-            },
-            "type": "metapackage",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1493246342"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Sam152",
-                    "homepage": "https://www.drupal.org/user/1485048"
-                },
-                {
-                    "name": "jec006",
-                    "homepage": "https://www.drupal.org/user/855980"
-                },
-                {
-                    "name": "plopesc",
-                    "homepage": "https://www.drupal.org/user/282415"
-                }
-            ],
-            "description": "Integrates video_embed_field with the media_entity module, creating a new media type tailored to display embedded videos. Useful for websites which are using the media suite of modules.",
             "homepage": "https://www.drupal.org/project/video_embed_field",
             "support": {
                 "source": "http://cgit.drupalcode.org/video_embed_field"
@@ -6487,7 +5981,7 @@
                 {
                     "name": "Anthon Pang",
                     "email": "apang@softwaredevelopment.ca",
-                    "role": "Fork maintainer"
+                    "role": "Fork Maintainer"
                 }
             ],
             "description": "PHP WebDriver for Selenium 2",
