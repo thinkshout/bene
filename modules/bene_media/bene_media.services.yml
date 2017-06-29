@@ -1,5 +1,5 @@
 services:
-  dropzonejs_media_entity_create:
-    class: '\Drupal\bene_media\EventSubscriber\DropzonejsMediaEntityCreate'
-    tags:
-      - { name: 'event_subscriber' }
+  bene.media_helper:
+    class: '\Drupal\bene_media\MediaHelper'
+    arguments:
+      - '@entity_type.manager'

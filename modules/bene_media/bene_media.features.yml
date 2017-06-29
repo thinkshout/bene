@@ -1,0 +1,5 @@
+bundle: bene
+excluded:
+  - editor.editor.rich_text
+  - filter.format.rich_text
+required: false

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.thumbnail
+    - image.style.medium
+    - media_entity.bundle.document
+  module:
+    - image
+id: media.document.thumbnail
+targetEntityType: media
+bundle: document
+mode: thumbnail
+content:
+  thumbnail:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_document: true
+  name: true
+  uid: true

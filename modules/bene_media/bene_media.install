@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update routines for Bene Media.
+ */
+
+use Drupal\embed\Entity\EmbedButton;
+use Drupal\entity_browser\Entity\EntityBrowser;
+use Drupal\file\Entity\File;
+use Drupal\views\Entity\View;
+
+/**
+ * Implements hook_install().
+ */
+function bene_media_install() {
+  // Don't do anything during config sync.
+  if (\Drupal::isConfigSyncing()) {
+    return;
+  }
+
+  // Disable default media view, cause we have our own.
+  View::load('media')->setStatus(FALSE)->save();
+
+  \Drupal::service('module_installer')
+         ->install([
+           'bene_media_document',
+           'bene_media_instagram',
+           'bene_media_twitter',
+           'bene_media_video',
+         ]);
+
+}
