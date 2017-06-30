@@ -2,7 +2,6 @@ name: 'Bene Media'
 core: 8.x
 type: module
 description: 'Media support for Bene'
-version: 8.x-1.0
 package: Bene
 dependencies:
   - bene_core

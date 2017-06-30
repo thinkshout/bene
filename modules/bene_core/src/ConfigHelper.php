@@ -11,8 +11,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Extension\Extension;
 
 /**
- * A facade to assist with manipulating default config. Borrowed from Lightning
- * distribution.
+ * A facade to assist with manipulating default config. Borrowed from Lightning.
  */
 class ConfigHelper extends InstallStorage {
 

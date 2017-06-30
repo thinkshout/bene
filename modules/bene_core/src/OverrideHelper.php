@@ -5,8 +5,7 @@ namespace Drupal\bene_core;
 use Drupal\Core\Entity\EntityTypeInterface;
 
 /**
- * Helps tweak and override implementations of various things. Borrowed from
- * Lightning distribution.
+ * Helps tweak and override implementations of various things. Borrowed from.
  */
 class OverrideHelper {
 

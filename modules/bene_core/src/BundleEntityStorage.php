@@ -2,13 +2,17 @@
 
 namespace Drupal\bene_core;
 
+use Drupal\Component\Uuid\UuidInterface;
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Config\Entity\ConfigEntityStorage;
 use Drupal\Core\Entity\EntityAccessControlHandlerInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Language\LanguageManagerInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * A storage handler for entity types that are bundles of other entity types.
+ *
  * Borrowed from Lightning distribution.
  */
 class BundleEntityStorage extends ConfigEntityStorage {
@@ -34,7 +38,7 @@ class BundleEntityStorage extends ConfigEntityStorage {
    * @param \Drupal\Core\Entity\EntityAccessControlHandlerInterface $access_handler
    *   The access control handler.
    */
-  public function __construct($entity_type, $config_factory, $uuid_service, $language_manager, EntityAccessControlHandlerInterface $access_handler) {
+  public function __construct(EntityTypeInterface $entity_type, ConfigFactoryInterface $config_factory, UuidInterface $uuid_service, LanguageManagerInterface $language_manager, EntityAccessControlHandlerInterface $access_handler) {
     parent::__construct($entity_type, $config_factory, $uuid_service, $language_manager);
     $this->accessHandler = $access_handler;
   }

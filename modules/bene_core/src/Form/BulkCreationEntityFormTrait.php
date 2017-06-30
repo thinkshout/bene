@@ -7,7 +7,6 @@ use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements a redirect chain in entity forms for bulk entity creation.
- * Borrowed from Lightning distribution.
  */
 trait BulkCreationEntityFormTrait {
 

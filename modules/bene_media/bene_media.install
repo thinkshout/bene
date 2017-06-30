@@ -5,9 +5,6 @@
  * Contains install and update routines for Bene Media.
  */
 
-use Drupal\embed\Entity\EmbedButton;
-use Drupal\entity_browser\Entity\EntityBrowser;
-use Drupal\file\Entity\File;
 use Drupal\views\Entity\View;
 
 /**
@@ -23,11 +20,11 @@ function bene_media_install() {
   View::load('media')->setStatus(FALSE)->save();
 
   \Drupal::service('module_installer')
-         ->install([
-           'bene_media_document',
-           'bene_media_instagram',
-           'bene_media_twitter',
-           'bene_media_video',
-         ]);
+    ->install([
+      'bene_media_document',
+      'bene_media_instagram',
+      'bene_media_twitter',
+      'bene_media_video',
+    ]);
 
 }

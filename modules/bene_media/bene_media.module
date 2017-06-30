@@ -33,7 +33,6 @@ function bene_media_field_widget_info_alter(array &$info) {
   }
 }
 
-
 /**
  * Implements hook_element_info_alter().
  */
@@ -364,7 +363,7 @@ function bene_media_entity_form_display_presave(EntityFormDisplayInterface $disp
     return $field->getType() == 'image';
   };
   $new_components = \Drupal::service('bene.display_helper')
-                           ->getNewFields($display, $filter);
+    ->getNewFields($display, $filter);
 
   foreach ($new_components as $key => $component) {
     $display->setComponent($key, [
@@ -417,5 +416,3 @@ function bene_media_menu_links_discovered_alter(&$links) {
     $links['entity.media.collection']['route_name'] = 'view.bene_media.media_page_list';
   }
 }
-
-

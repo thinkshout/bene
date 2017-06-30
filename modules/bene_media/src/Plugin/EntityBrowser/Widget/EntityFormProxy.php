@@ -149,7 +149,7 @@ abstract class EntityFormProxy extends WidgetBase {
    *
    * @param array $form
    *   The complete form.
-   * @param FormStateInterface $form_state
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The current form state.
    *
    * @return \Drupal\Core\Ajax\AjaxResponse

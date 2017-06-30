@@ -36,7 +36,7 @@ class InteractiveUpload extends FormElement {
    *
    * @param array $element
    *   The unprocessed element.
-   * @param FormStateInterface $form_state
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The current form state.
    *
    * @return array
