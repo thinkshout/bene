@@ -7,6 +7,8 @@ id: image
 label: Image
 description: 'Locally hosted images.'
 type: image
+queue_thumbnail_downloads: false
+new_revision: false
 type_configuration:
   source_field: image
   gather_exif: false

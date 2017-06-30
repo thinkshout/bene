@@ -7,8 +7,6 @@ dependencies:
     - media_entity.bundle.image
   module:
     - image
-_core:
-  default_config_hash: RkvrWON6K3DMcLv9OT0NmDP_DFp7Y9B0n-TdHWqJNNo
 id: media.image.embedded
 targetEntityType: media
 bundle: image

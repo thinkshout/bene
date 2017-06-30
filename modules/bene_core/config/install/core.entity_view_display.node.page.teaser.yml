@@ -1,15 +1,12 @@
-uuid: f2a902f6-fbaf-48c1-8487-ca6f4a29d5cb
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.page.field_image
+    - field.field.node.page.bene_excerpt
     - node.type.page
   module:
     - user
-_core:
-  default_config_hash: kJlt2P1e0EBMLUEOHNPPM050UWHfXvkfwLGe-QBUv3o
 id: node.page.teaser
 targetEntityType: node
 bundle: page
@@ -19,5 +16,5 @@ content:
     weight: 101
     region: content
 hidden:
-  field_image: true
+  bene_excerpt: true
   field_node_blocks: true

@@ -3,6 +3,7 @@ description: 'Provides core components required by other features.'
 type: module
 core: 8.x
 dependencies:
+  - bene_media
   - block
   - block_content
   - ckeditor
@@ -14,9 +15,12 @@ dependencies:
   - field
   - file
   - filter
+  - focal_point
   - image
   - inline_entity_form
   - link
+  - linkit
+  - media_entity
   - menu_link_content
   - migrate
   - migrate_google_sheets
@@ -27,6 +31,7 @@ dependencies:
   - r4032login
   - rdf
   - shortcut
+  - system
   - taxonomy
   - text
   - tour
