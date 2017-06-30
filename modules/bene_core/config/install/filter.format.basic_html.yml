@@ -1,9 +1,12 @@
+uuid: 768c520d-48ba-4c5d-a2ae-eca1f78349bf
 langcode: en
 status: true
 dependencies:
   module:
     - editor
     - entity_embed
+_core:
+  default_config_hash: '-4K4qQfhcQB6QcBSVYMP1k0cb8prliym57u64nTsJro'
 name: 'Basic HTML'
 format: basic_html
 weight: 0
@@ -14,7 +17,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<b> <i> <u> <s> <ul type> <li> <h2 id> <h3 id> <cite> <blockquote cite> <quote> <center> <left> <right> <strong> <em> <a href> <ol> <img src alt data-entity-type data-entity-uuid data-align data-caption> <p>'
+      allowed_html: '<b> <i> <u> <s> <ul type> <li> <h2 id> <h3 id> <cite> <blockquote cite> <quote> <center> <left> <right> <strong> <em> <ol> <img src alt data-entity-type data-entity-uuid data-align data-caption> <p> <a href !href accesskey id rel target title>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:

@@ -7,7 +7,7 @@ dependencies:
   module:
     - ckeditor
 _core:
-  default_config_hash: T-yV-jTi_R4IvnFswoAQmjSAr15aX3mOHzLU0o4Bq7o
+  default_config_hash: 6Zp2AGrPrfVvMn4NkJXazR4R1GjCjGk9IKhphT_rTAk
 format: basic_html
 editor: ckeditor
 settings:
@@ -22,8 +22,8 @@ settings:
         -
           name: Linking
           items:
-            - DrupalLink
             - DrupalUnlink
+            - Linkit
         -
           name: Lists
           items:
@@ -34,22 +34,17 @@ settings:
           items:
             - Blockquote
             - DrupalImage
-            - media
         -
           name: 'Block Formatting'
           items:
             - Format
-        -
-          name: Tools
-          items:
-            - Source
   plugins:
     language:
       language_list: un
     stylescombo:
       styles: ''
     linkit:
-      linkit_profile: ''
+      linkit_profile: standard_link
 image_upload:
   status: true
   scheme: public

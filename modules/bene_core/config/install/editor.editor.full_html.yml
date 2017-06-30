@@ -7,7 +7,7 @@ dependencies:
   module:
     - ckeditor
 _core:
-  default_config_hash: WCRZCiTq4fkLc3p2hs6UdQZRdqDe97ypiqQo_i_rCgc
+  default_config_hash: 6v-dQLSh70rYDdmuuNXLYy64aGPSWjJj52lL1Rc-K8s
 format: full_html
 editor: ckeditor
 settings:
@@ -27,7 +27,7 @@ settings:
         -
           name: Linking
           items:
-            - DrupalLink
+            - Linkit
             - DrupalUnlink
         -
           name: Lists
@@ -41,7 +41,6 @@ settings:
             - DrupalImage
             - Table
             - HorizontalRule
-            - media
         -
           name: 'Block Formatting'
           items:
@@ -52,13 +51,17 @@ settings:
             - ShowBlocks
             - Source
   plugins:
+    language:
+      language_list: un
     stylescombo:
       styles: ''
+    linkit:
+      linkit_profile: standard_link
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null
