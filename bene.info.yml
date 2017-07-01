@@ -10,6 +10,7 @@ dependencies:
   - automated_cron
   - bene_core
   - bene_media
+  - bene_page
   - block
   - block_content
   - breakpoint
