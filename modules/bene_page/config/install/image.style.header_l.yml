@@ -3,13 +3,13 @@ status: true
 dependencies:
   module:
     - focal_point
-name: 1280x185
-label: 1280x185
+name: header_l
+label: Header-L
 effects:
-  4e1315ab-ed5c-4646-99ca-3e6e7e5d4cf7:
-    uuid: 4e1315ab-ed5c-4646-99ca-3e6e7e5d4cf7
+  8b6b4794-fd8f-419c-b073-6e925f6db23a:
+    uuid: 8b6b4794-fd8f-419c-b073-6e925f6db23a
     id: focal_point_scale_and_crop
-    weight: 2
+    weight: 1
     data:
       width: 1280
       height: 185

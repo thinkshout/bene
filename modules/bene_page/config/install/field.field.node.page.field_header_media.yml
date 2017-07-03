@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
+    - field.storage.node.field_header_media
     - media_entity.bundle.image
     - node.type.page
-id: node.page.field_image
-field_name: field_image
+id: node.page.field_header_media
+field_name: field_header_media
 entity_type: node
 bundle: page
-label: Image
-description: 'Banner image displayed at the top of the page.'
+label: 'Header image'
+description: ''
 required: false
 translatable: false
 default_value: {  }

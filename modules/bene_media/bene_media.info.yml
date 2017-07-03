@@ -5,6 +5,7 @@ description: 'Media support for Bene'
 package: Bene
 dependencies:
   - bene_core
+  - bene_media
   - ckeditor
   - crop
   - editor
@@ -20,6 +21,7 @@ dependencies:
   - media_entity
   - media_entity_image
   - node
+  - responsive_image
   - user
   - views
   - views_infinite_scroll

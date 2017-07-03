@@ -4,7 +4,7 @@ dependencies:
   config:
     - entity_browser.browser.media_browser
     - field.field.node.page.bene_excerpt
-    - field.field.node.page.field_image
+    - field.field.node.page.field_header_media
     - node.type.page
   module:
     - entity_browser
@@ -29,7 +29,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_image:
+  field_header_media:
     type: entity_browser_entity_reference
     weight: 1
     settings:

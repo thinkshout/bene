@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - bene_core
     - media_entity
 third_party_settings:
   bene_core:

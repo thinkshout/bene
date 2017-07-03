@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.node.page.bene_excerpt
-    - field.field.node.page.field_image
+    - field.field.node.page.field_header_media
     - node.type.page
   module:
     - user
@@ -12,11 +12,11 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
-  field_image:
-    weight: 1
+  field_header_media:
+    weight: 0
     label: hidden
     settings:
-      view_mode: banner
+      view_mode: default
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
@@ -31,7 +31,7 @@ content:
     type: entity_reference_entity_view
     region: content
   links:
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }

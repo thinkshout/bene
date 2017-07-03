@@ -3,7 +3,7 @@ status: true
 dependencies:
   module:
     - media_entity
-id: media.banner
-label: Banner
+id: media.header
+label: Header
 targetEntityType: media
 cache: true

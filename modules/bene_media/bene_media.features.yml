@@ -1,2 +1,6 @@
 bundle: bene
+excluded:
+  - core.entity_view_display.media.image.header
+  - image.style.header_l
+  - responsive_image.styles.header
 required: true

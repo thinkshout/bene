@@ -4,19 +4,20 @@ dependencies:
   config:
     - field.field.media.image.image
     - media_entity.bundle.image
+    - responsive_image.styles.header
   module:
-    - image
+    - responsive_image
 id: media.image.default
 targetEntityType: media
 bundle: image
 mode: default
 content:
   image:
-    type: image
+    type: responsive_image
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      responsive_image_style: header
       image_link: ''
     third_party_settings: {  }
     region: content
