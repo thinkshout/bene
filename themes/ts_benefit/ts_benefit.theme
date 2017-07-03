@@ -199,7 +199,7 @@ function ts_benefit_theme_suggestions_block_alter(array &$suggestions, array $va
  *
  * @param \Drupal\user\Entity\User $user
  *   The user.
- * @param $string
+ * @param string $string
  *   The string containing the username.
  *
  * @return string
