@@ -18,3 +18,4 @@ type_settings:
   entity_browser_settings:
     display_review: false
 icon_uuid: null
+icon_path: /profiles/bene/modules/bene_media/images/media_embed_icon.png
