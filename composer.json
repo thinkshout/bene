@@ -108,6 +108,10 @@
             "drupal/entity_embed": {
                 "2832504 - Send the CKEditor instance ID to the embed.preview route":
                 "https://www.drupal.org/files/issues/2832504-2.patch"
+            },
+            "drupal/embed": {
+                "2824110 - Allow site-builders to use a non-managed file as button icon":
+                "https://www.drupal.org/files/issues/allow-non-managed-button-icon-files-2824110-1.patch"
             }
         }
     }
