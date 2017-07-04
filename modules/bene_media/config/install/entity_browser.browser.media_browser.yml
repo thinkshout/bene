@@ -8,12 +8,12 @@ dependencies:
     - views
 name: media_browser
 label: 'Media browser'
-display: modal
+display: iframe
 display_configuration:
-  width: ''
-  height: ''
+  width: 100%
+  height: '650'
   link_text: 'Select media items'
-  auto_open: false
+  auto_open: true
 selection_display: no_display
 selection_display_configuration: {  }
 widget_selector: tabs

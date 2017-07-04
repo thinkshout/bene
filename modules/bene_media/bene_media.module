@@ -309,7 +309,7 @@ function bene_media_ajax_render_alter(array &$data) {
  * @param array $variables
  *   Template variables.
  */
-function bene_media_preprocess_views_view_grid__media(array &$variables) {
+function bene_media_preprocess_views_view_grid__bene_media(array &$variables) {
   foreach ($variables['items'] as &$item) {
     foreach ($item['content'] as &$column) {
       $column['attributes']['data-selectable'] = 'true';
