@@ -11,6 +11,7 @@ dependencies:
   - bene_core
   - bene_media
   - bene_page
+  - bene_migrate_google_sheets
   - block
   - block_content
   - breakpoint
