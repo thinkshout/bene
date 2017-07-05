@@ -3,6 +3,7 @@ description: 'Page content type.'
 type: module
 core: 8.x
 dependencies:
+  - allowed_formats
   - bene_core
   - bene_media
   - entity_browser

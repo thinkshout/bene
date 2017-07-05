@@ -4,10 +4,10 @@ dependencies:
   module:
     - node
     - text
-id: node.bene_excerpt
-field_name: bene_excerpt
+id: node.field_intro
+field_name: field_intro
 entity_type: node
-type: text_long
+type: text_with_summary
 settings: {  }
 module: text
 locked: false
