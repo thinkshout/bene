@@ -1,0 +1,95 @@
+# This migration demonstrates importing from a Google Spreadsheet XML feed.
+id: media
+label: Media items from Google Spreadsheet
+dependencies:
+  enforced:
+    module:
+      - bene_media
+      - bene_migrate_google_sheets
+migration_group: bene
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: google_sheets
+  item_selector: ''
+  # The feed file for the spreadsheet. The Google Spreadsheet should be either “Public” or set to “Anyone with link can
+  # view” in order for the feed to work. Note that the <SHEET> param is the order of the tabs and WILL change if the
+  # tabs are re-ordered.
+  # Template: 'https://spreadsheets.google.com/feeds/list/<KEY>/<SHEET>/public/values?alt=json'
+  urls: 'https://spreadsheets.google.com/feeds/list/1BkC1_65t5D4ZoDhTb0F0wlngPYBcZgwin7v45UYydFc/3/public/values?alt=json'
+  # Under 'fields', we list the data items to be imported. The first level keys
+  # are the source field names we want to populate (the names to be used as
+  # sources in the process configuration below). For each field we're importing,
+  # we provide a label (optional - this is for display in migration tools) and
+  # an selector (xpath) for retrieving that value. It's important to note that this xpath
+  # is relative to the elements retrieved by item_selector.
+  # For Google Spreadsheet XML feeds the actual columns are named with gsx: followed by the cleaned column name (lower,
+  # limited punctuation, etc).
+  fields:
+    -
+      name: id
+      label: 'Unique identifier'
+      selector: 'id'
+    -
+      name: name
+      label: 'Name'
+      selector: 'name'
+    -
+      name: type
+      label: 'Type'
+      selector: 'type'
+    -
+      name: image_url
+      label: 'Image URL'
+      selector: 'imageurl'
+    -
+      name: image_alt
+      label: 'Image Alt'
+      selector: 'imagealt'
+    -
+      name: video_url
+      label: 'Video URL'
+      selector: 'videourl'
+    -
+      name: document_url
+      label: 'Document URL'
+      selector: 'documenturl'
+    -
+      name: embed_code
+      label: 'Embed Code'
+      selector: 'embedcode'
+  # Under 'ids', we identify source fields populated above which will uniquely
+  # identify each imported item. The 'type' makes sure the migration map table
+  # uses the proper schema type for stored the IDs.
+  ids:
+    id:
+      type: integer
+# This is the mapping of the source values to the destination.
+process:
+  bundle: type
+  name: name
+  image/target_id:
+    plugin: file_import
+    source: image_url
+  image/alt:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: image_alt
+    -
+      plugin: get
+      source: image_alt
+  field_media_video_embed_field: video_url
+  field_document/target_id:
+    plugin: file_import
+    source: document_url
+  embed_code:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: embed_code
+    -
+      plugin: get
+      source: embed_code
+destination:
+  plugin: entity:media

@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Install, update, uninstall functions for bene_migrate_google_sheets module.
+ */
+
+use Drupal\migrate_plus\Entity\MigrationGroup;
+use Drupal\migrate_plus\Entity\Migration;
+
+/**
+ * Implements hook_uninstall().
+ */
+function bene_migrate_google_sheets_uninstall() {
+  $migrations = Migration::loadMultiple();
+  foreach ($migrations as $id_migration => $migration) {
+    // Remove active config variables that would prevent a re-install.
+    // We likely have to do a better job of ensuring everything related to the
+    // migration is removed here; the config variable is just the bare minimum.
+    $migration_config_id = str_replace('!id_migration', $id_migration, 'migrate_plus.migration.!id_migration');
+    Drupal::configFactory()->getEditable($migration_config_id)->delete();
+  }
+
+  // Also remove migration group configs.
+  $migration_groups = MigrationGroup::loadMultiple();
+  foreach ($migration_groups as $id_group => $migration_group) {
+    $migration_config_id = str_replace('!id_migration', $id_group, 'migrate_plus.migration_group.!id_migration');
+    Drupal::configFactory()->getEditable($migration_config_id)->delete();
+  }
+}
