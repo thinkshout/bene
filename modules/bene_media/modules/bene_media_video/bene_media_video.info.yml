@@ -1,0 +1,8 @@
+name: 'Media Video'
+core: 8.x
+type: module
+package: Bene
+description: 'Video support for Bene Media.'
+dependencies:
+  - bene_media
+  - video_embed_media

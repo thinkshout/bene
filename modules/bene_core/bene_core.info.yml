@@ -6,18 +6,19 @@ dependencies:
   - block
   - block_content
   - ckeditor
-  - comment
   - contact
-  - crop
   - editor
+  - entity_browser
   - entity_embed
   - features
   - field
   - file
   - filter
+  - focal_point
   - image
   - inline_entity_form
   - link
+  - linkit
   - media_entity
   - menu_link_content
   - migrate
@@ -29,6 +30,7 @@ dependencies:
   - r4032login
   - rdf
   - shortcut
+  - system
   - taxonomy
   - text
   - tour

@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Support for document media assets in Bene.
+ */
+
+use Drupal\bene_core\OverrideHelper as Override;
+use Drupal\bene_media_document\Plugin\MediaEntity\Type\Document;
+
+/**
+ * Implements hook_media_entity_type_info_alter().
+ */
+function bene_media_document_media_entity_type_info_alter(array &$types) {
+  $types['document']['input_match']['field_types'] = ['file'];
+  Override::pluginClass($types['document'], Document::class);
+}

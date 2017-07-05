@@ -1,14 +1,7 @@
-uuid: 6befa78c-8838-4d4a-829f-fca20be37940
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: BvJYxRnKR9A67094Y1PfYpJ74tisBL60nt19mlXEMfg
 id: staff
 label: Staff
 weight: 3
 is_admin: null
-permissions:
-  - 'administer menu'
-  - 'use text format basic_html'
-  - 'use text format restricted_html'

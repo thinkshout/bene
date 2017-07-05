@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Support for videos as media entities in Bene.
+ */
+
+use Drupal\media_entity\MediaInterface;
+use Drupal\bene_core\OverrideHelper as Override;
+use Drupal\bene_media_video\Plugin\MediaEntity\Type\Video;
+
+/**
+ * Implements hook_media_entity_type_info_alter().
+ */
+function bene_media_video_media_entity_type_info_alter(array &$types) {
+  $types['video_embed_field']['input_match'] = [
+    'field_types' => [
+      'string',
+      'string_long',
+      'video_embed_field',
+    ],
+  ];
+  $types['video_embed_field']['preview'] = TRUE;
+
+  Override::pluginClass($types['video_embed_field'], Video::class);
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function bene_media_video_media_presave(MediaInterface $entity) {
+  if ($entity->bundle() == 'video') {
+    $entity->automaticallySetThumbnail();
+  }
+}

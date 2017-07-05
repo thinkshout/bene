@@ -1,0 +1,19 @@
+name: Page
+description: 'Page content type.'
+type: module
+core: 8.x
+dependencies:
+  - bene_core
+  - bene_media
+  - entity_browser
+  - field
+  - focal_point
+  - image
+  - media_entity
+  - node
+  - path
+  - rdf
+  - responsive_image
+  - text
+  - user
+package: Bene
