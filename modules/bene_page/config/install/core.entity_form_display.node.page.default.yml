@@ -5,9 +5,11 @@ dependencies:
     - entity_browser.browser.media_browser_modal
     - field.field.node.page.field_header_media
     - field.field.node.page.field_intro
+    - field.field.node.page.field_metatags
     - node.type.page
   module:
     - entity_browser
+    - metatag
     - path
     - text
 id: node.page.default
@@ -43,6 +45,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea_with_summary
+    region: content
+  field_metatags:
+    weight: 33
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_node_blocks:
     weight: 32

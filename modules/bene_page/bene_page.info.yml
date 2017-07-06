@@ -11,6 +11,8 @@ dependencies:
   - focal_point
   - image
   - media_entity
+  - menu_ui
+  - metatag
   - node
   - path
   - picture_background_formatter

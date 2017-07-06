@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.node.page.field_header_media
     - field.field.node.page.field_intro
+    - field.field.node.page.field_metatags
     - node.type.page
   module:
     - text
@@ -38,9 +39,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
-  links:
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_metatags: true
+  links: true
