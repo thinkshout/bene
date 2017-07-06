@@ -13,6 +13,7 @@ dependencies:
   - media_entity
   - node
   - path
+  - picture_background_formatter
   - rdf
   - responsive_image
   - text

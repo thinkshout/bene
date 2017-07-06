@@ -7,18 +7,19 @@ dependencies:
     - media_entity.bundle.image
     - responsive_image.styles.header
   module:
-    - responsive_image
+    - picture_background_formatter
 id: media.image.header
 targetEntityType: media
 bundle: image
 mode: header
 content:
   image:
-    type: responsive_image
+    type: picture_background_formatter
     weight: 0
     label: hidden
     settings:
       responsive_image_style: header
+      selector: .block-page-title-block
       image_link: ''
     third_party_settings: {  }
     region: content
