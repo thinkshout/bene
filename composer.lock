@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "63235099c399483037abdf806b6110bd",
+    "content-hash": "4378d92f051f56d97a68d5e4e6b123fb",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -748,7 +748,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/allowed_formats-8.x-1.1.zip",
-                "reference": null,
+                "reference": "8.x-1.1",
                 "shasum": "b7bfc78d7e64f1df37ca6cad118a1ff8f7228b64"
             },
             "require": {
@@ -2660,6 +2660,44 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/pathauto"
             }
+        },
+        {
+            "name": "drupal/picture_background_formatter",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/picture_background_formatter",
+                "reference": "e74fa4df793f3f729ea7c919941020dd2e140d76"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1495570983"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "johnny5th",
+                    "homepage": "https://www.drupal.org/user/1492802"
+                }
+            ],
+            "description": "Provides an image field formatter to generate responsive background images.",
+            "homepage": "https://www.drupal.org/project/picture_background_formatter",
+            "support": {
+                "source": "http://cgit.drupalcode.org/picture_background_formatter"
+            },
+            "time": "2017-05-23 20:17:53"
         },
         {
             "name": "drupal/r4032login",
@@ -7594,6 +7632,7 @@
     "stability-flags": {
         "drupal/r4032login": 20,
         "drupal/migrate_google_sheets": 10,
+        "drupal/picture_background_formatter": 20,
         "drupal/drupal-driver": 20,
         "drupal/drupal-extension": 20
     },
