@@ -16,10 +16,10 @@ dependencies:
   - block_content
   - breakpoint
   - ckeditor
-  - color
   - config
   - config_update
   - contact
+  - contact_storage
   - contextual
   - crop
   - crop_media_entity
@@ -50,8 +50,10 @@ dependencies:
   - quickedit
   - r4032login
   - rdf
+  - redirect
   - search
   - shortcut
+  - simple_sitemap
   - system
   - taxonomy
   - token
