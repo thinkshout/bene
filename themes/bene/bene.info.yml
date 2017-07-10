@@ -1,0 +1,18 @@
+name: Bene
+type: theme
+description: A base theme for Bene
+package: Other
+core: 8.x
+libraries:
+  - bene/bene
+
+base theme: classy
+#Using Classy as a base theme https://www.drupal.org/theme-guide/8/classy
+
+regions:
+  secondary_nav: Secondary Nav
+  primary_nav: Primary Nav
+  aside: Aside
+  banner: Banner
+  content: Content
+  footer: Footer
