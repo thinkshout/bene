@@ -30,8 +30,8 @@ jobs:
             composer create-project thinkshout/bene-project:dev-pantheon /var/www/html/build --stability dev --no-interaction --no-install
       - restore_cache:
           keys:
-            - composer-v1-{{ checksum "composer.lock" }}
-            - composer-v1-
+            - composer-v2-{{ checksum "composer.lock" }}
+            - composer-v2-
       - run:
           name: Install dependencies
           command: |
@@ -40,7 +40,7 @@ jobs:
             composer require "drupal/bene:*"
             composer install -n --prefer-dist
       - save_cache:
-          key: composer-v1-{{ checksum "composer.lock" }}
+          key: composer-v2-{{ checksum "composer.lock" }}
           paths:
             - ../build/vendor
             - ../build/web/modules/contrib

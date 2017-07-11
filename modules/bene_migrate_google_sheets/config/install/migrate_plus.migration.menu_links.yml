@@ -1,0 +1,94 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - bene_core
+id: menu_links
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: bene
+label: 'Bene core menu links by way of a Google Spreadsheet'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: google_sheets
+  urls: 'https://spreadsheets.google.com/feeds/list/1BkC1_65t5D4ZoDhTb0F0wlngPYBcZgwin7v45UYydFc/1/public/values?alt=json'
+  item_selector: /response/variety
+  fields:
+    -
+      name: id
+      label: 'Unique identifier'
+      selector: id
+    -
+      name: title
+      label: Title
+      selector: title
+    -
+      name: path
+      label: Path
+      selector: path
+    -
+      name: menu_name
+      label: 'Menu Name'
+      selector: menuname
+    -
+      name: external
+      label: 'Is external?'
+      selector: external
+    -
+      name: weight
+      label: Weight
+      selector: weight
+    -
+      name: expanded
+      label: Expanded
+      selector: expanded
+    -
+      name: parentid
+      label: 'Parent Id'
+      selector: parentid
+  ids:
+    id:
+      type: integer
+process:
+  id: id
+  title: title
+  description: title
+  menu_name: menu_name
+  link/uri:
+    plugin: link_uri
+    source:
+      - path
+  link/options:
+    plugin: default_value
+    default_value: {  }
+  link/title: title
+  route:
+    plugin: route
+    source:
+      - path
+      - '@link/options'
+  route_name: '@route/route_name'
+  route_parameters: '@route/route_parameters'
+  url: '@route/url'
+  options: '@route/options'
+  external: external
+  weight: weight
+  expanded: expanded
+  parent:
+    plugin: menu_link_parent
+    source:
+      - parentid
+      - '@menu_name'
+      - parent_link_path
+destination:
+  plugin: 'entity:menu_link_content'
+  default_bundle: menu_link_content
+  no_stub: true
+migration_dependencies:
+  required:
+    - upgrade_menu
+  optional: {  }

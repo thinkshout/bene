@@ -1,0 +1,11 @@
+name: Migrate Google Sheets
+description: 'Provides migrations from google sheets'
+type: module
+core: 8.x
+dependencies:
+  - bene_core
+  - migrate
+  - migrate_google_sheets
+  - migrate_plus
+  - migrate_tools
+package: Bene
