@@ -1,0 +1,16 @@
+<header>
+  {% if page.primary_nav %}
+    {{ page.primary_nav }}
+  {% endif %}
+
+  {% if page.secondary_nav %}
+    {{ page.secondary_nav }}
+  {% endif %}
+</header>
+{% if page.content %}
+  {{page.content}}
+{% endif %}
+
+{% if page.footer %}
+  {{page.footer}}
+{% endif %}

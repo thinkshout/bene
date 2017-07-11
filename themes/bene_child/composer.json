@@ -1,0 +1,6 @@
+{
+  "name": "drupal/bene_child",
+  "type": "drupal-theme",
+  "require": {
+  }
+}

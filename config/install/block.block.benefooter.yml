@@ -5,9 +5,9 @@ dependencies:
   module:
     - bene_core
   theme:
-    - ts_benefit
+    - bene
 id: benefooter
-theme: ts_benefit
+theme: bene
 region: footer
 weight: 0
 provider: null

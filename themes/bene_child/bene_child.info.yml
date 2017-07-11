@@ -1,0 +1,17 @@
+name: Bene Child
+type: theme
+description: A sub theme for Bene
+package: Other
+core: 8.x
+libraries:
+  - bene_child/bene_child
+
+base theme: bene
+
+regions:
+  secondary_nav: Secondary Nav
+  primary_nav: Primary Nav
+  aside: Aside
+  banner: Banner
+  content: Content
+  footer: Footer
