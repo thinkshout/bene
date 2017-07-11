@@ -10,6 +10,7 @@ dependencies:
   - editor
   - entity_browser
   - entity_embed
+  - entity_reference_revisions
   - features
   - field
   - file
@@ -26,6 +27,7 @@ dependencies:
   - migrate_plus
   - migrate_tools
   - node
+  - paragraphs
   - path
   - r4032login
   - rdf
