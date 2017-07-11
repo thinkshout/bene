@@ -1,8 +1,11 @@
+uuid: 1754b54e-9a17-42c3-b667-c365eee25b0c
 langcode: en
 status: true
 dependencies:
   theme:
     - bene
+_core:
+  default_config_hash: SA51F3GE2ZVZiE-ST93XgOeDlOUZgGLDCBRVNcp5Tj4
 id: bene_local_actions
 theme: bene
 region: content

@@ -7,7 +7,7 @@ dependencies:
     - bene
 id: bene_powered
 theme: bene
-region: '-1'
+region: secondary_nav
 weight: -5
 provider: null
 plugin: system_powered_by_block

@@ -9,9 +9,8 @@ libraries:
 base theme: bene
 
 regions:
-  secondary_nav: Secondary Nav
+  site_branding: Site Branding
   primary_nav: Primary Nav
-  aside: Aside
-  banner: Banner
+  secondary_nav: Secondary Nav
   content: Content
   footer: Footer

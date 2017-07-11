@@ -9,7 +9,7 @@ dependencies:
     - bene
 id: bene_account_menu
 theme: bene
-region: '-1'
+region: secondary_nav
 weight: -2
 provider: null
 plugin: 'system_menu_block:account'

@@ -9,7 +9,7 @@ dependencies:
     - bene
 id: bene_tools
 theme: bene
-region: '-1'
+region: secondary_nav
 weight: -3
 provider: null
 plugin: 'system_menu_block:tools'
