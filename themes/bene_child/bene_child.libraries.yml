@@ -1,7 +1,15 @@
-bene-child:
+bene_child:
   version: VERSION
   css:
     theme:
       css/style.css: {}
   js:
     js/main-dist.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.ui.datepicker
+    - core/jquery.ui.effects.core
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
