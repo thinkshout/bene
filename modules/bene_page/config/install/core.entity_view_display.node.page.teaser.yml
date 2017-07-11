@@ -3,8 +3,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.page.bene_content
     - field.field.node.page.field_header_media
     - field.field.node.page.field_intro
+    - field.field.node.page.field_metatags
     - node.type.page
   module:
     - text
@@ -32,5 +34,6 @@ content:
       trim_length: 600
     third_party_settings: {  }
 hidden:
-  field_node_blocks: true
+  bene_content: true
+  field_metatags: true
   links: true
