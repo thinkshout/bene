@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - bene
-id: bene_main_menu
-theme: bene
+    - bene_child
+id: bene_child_main_menu
+theme: bene_child
 region: primary_nav
 weight: -6
 provider: null

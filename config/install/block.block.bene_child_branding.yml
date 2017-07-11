@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - bene
-id: bene_branding
-theme: bene
+    - bene_child
+id: bene_child_branding
+theme: bene_child
 region: site_branding
 weight: -6
 provider: null

@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - bene
-id: bene_local_tasks
-theme: bene
+    - bene_child
+id: bene_child_local_tasks
+theme: bene_child
 region: content
 weight: -5
 provider: null

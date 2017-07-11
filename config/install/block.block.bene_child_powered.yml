@@ -4,16 +4,16 @@ dependencies:
   module:
     - system
   theme:
-    - bene
-id: bene_breadcrumbs
-theme: bene
+    - bene_child
+id: bene_child_powered
+theme: bene_child
 region: secondary_nav
-weight: -6
+weight: -5
 provider: null
-plugin: system_breadcrumb_block
+plugin: system_powered_by_block
 settings:
-  id: system_breadcrumb_block
-  label: Breadcrumbs
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
   provider: system
   label_display: '0'
 visibility: {  }

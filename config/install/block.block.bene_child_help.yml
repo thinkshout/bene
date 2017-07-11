@@ -4,9 +4,9 @@ dependencies:
   module:
     - help
   theme:
-    - bene
-id: bene_help
-theme: bene
+    - bene_child
+id: bene_child_help
+theme: bene_child
 region: secondary_nav
 weight: 0
 provider: null
