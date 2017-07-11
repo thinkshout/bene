@@ -1,12 +1,15 @@
 <header>
-  {% if page.primary_nav %}
-    {{ page.primary_nav }}
-  {% endif %}
-
-  {% if page.secondary_nav %}
-    {{ page.secondary_nav }}
-  {% endif %}
+  <div class="container">
+    <div class="logo-wrapper">
+      {{page.site_branding}}
+    </div>
+    <div class="nav-wrapper">
+      {{page.secondary_nav}}
+      {{page.primary_nav}}
+    </div>
+  </div>
 </header>
+
 {% if page.content %}
   {{page.content}}
 {% endif %}
