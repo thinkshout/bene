@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Functions to support theming in the bene theme.
+ * Functions to support theming in the bene_base theme.
  */
 
 use Drupal\Core\Render\Markup;
