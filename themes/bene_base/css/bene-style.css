@@ -1,9 +1,186 @@
+@charset "UTF-8";
 html {
   box-sizing: border-box; }
 
 *, *::after, *::before {
   box-sizing: inherit; }
 
+/* Colors */
+/**
+  * Fonts
+  * Open+Sans:300i,400,600,700,800
+  *
+  * light italic: 300
+  * regular:      400
+  * semi-bold:    500
+  * bold:         700
+  * extrabold:    800
+  *
+  **/
+/* Turns off the element-invisible effect. */
+/* Makes an element visually hidden by default, but visible when focused. */
+/* Undo clearfix. Apply to .clearfix:after */
+/* Ensure parent has position: relative; */
+/* Default transition */
+/* Buttons */
+/* BASE ELEMENT STYLES */
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  /* Fix the character spacing for headings */ }
+
+h1 {
+  font-size: 3rem;
+  line-height: 3.875rem;
+  font-weight: 800; }
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.375rem;
+  font-weight: 400; }
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  font-weight: 600; }
+
+h4 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 700; }
+
+p,
+p.standard,
+.region-content ul li,
+.region-content ol li {
+  color: #000;
+  font-size: 0.875rem;
+  line-height: 1.9375rem; }
+
+.region-content ol li {
+  padding-bottom: 0;
+  padding-left: 0.25rem; }
+
+a {
+  -webkit-transition: color 0.3s linear, background-color 0.3s linear;
+  -moz-transition: color 0.3s linear, background-color 0.3s linear;
+  transition: color 0.3s linear, background-color 0.3s linear;
+  color: #129FB5;
+  cursor: pointer;
+  text-decoration: none; }
+  a:hover, a:active {
+    color: #44d1e7; }
+
+table a,
+li a,
+p a {
+  color: #129FB5; }
+  table a:hover, table a:active,
+  li a:hover,
+  li a:active,
+  p a:hover,
+  p a:active {
+    color: #44d1e7; }
+
+a.button {
+  -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+  -moz-transition: background-color 0.3s linear, color 0.3s linear;
+  transition: background-color 0.3s linear, color 0.3s linear;
+  background-color: #50CFE3;
+  border-radius: 0.1875rem;
+  color: #FFF;
+  font-weight: 800;
+  display: inline-block;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  line-height: 1;
+  padding: 1.25rem 1.875rem;
+  position: relative;
+  text-transform: uppercase; }
+  a.button:hover {
+    background-color: #82ffff; }
+
+/* List bullets in content. */
+.text-formatted ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 0; }
+  .text-formatted ul li {
+    padding-bottom: 1.5rem;
+    padding-left: 3.4375rem;
+    text-indent: -1.875rem;
+    color: #7C7C7C; }
+    .text-formatted ul li:before {
+      color: #7C7C7C;
+      content: "•";
+      font-size: 0.75rem;
+      line-height: 1;
+      padding-right: 1.5625rem;
+      position: relative; }
+
+ol li {
+  padding-bottom: 1.5rem;
+  padding-left: 1.375rem;
+  line-height: 1.4;
+  font-size: 1.125rem;
+  color: #7C7C7C; }
+
+table, table.tablesaw {
+  border: 1px solid #D8D8D8;
+  margin: 1.5rem 0;
+  table-layout: auto; }
+  table th, table tr, table td, table tr:first-child th, table.tablesaw th, table.tablesaw tr, table.tablesaw td, table.tablesaw tr:first-child th {
+    border: none;
+    color: #7C7C7C;
+    font-size: 0.875rem;
+    font-weight: 400;
+    padding: 1.125rem 2.625rem;
+    text-align: left; }
+    table th strong, table tr strong, table td strong, table tr:first-child th strong, table.tablesaw th strong, table.tablesaw tr strong, table.tablesaw td strong, table.tablesaw tr:first-child th strong {
+      font-weight: 500; }
+  table th, table tr:first-child th, table.tablesaw th, table.tablesaw tr:first-child th {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #7C7C7C;
+    font-size: 0.875rem;
+    margin: 0; }
+  table tr, table.tablesaw tr {
+    background-color: #FFF; }
+  table th, table tr:nth-of-type(2n), table.tablesaw th, table.tablesaw tr:nth-of-type(2n) {
+    background-color: #D8D8D8; }
+
+ul.menu {
+  list-style: none outside;
+  margin: 0;
+  padding: 0;
+  text-align: left; }
+  ul.menu .menu-item {
+    padding: 0; }
+
+fieldset {
+  border: none;
+  padding: 0; }
+  fieldset legend {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #5C5B5B; }
+
+/* END BASE ELEMENT STYLES */
 .container {
   max-width: 68em;
   margin-left: auto;
