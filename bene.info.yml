@@ -10,8 +10,8 @@ dependencies:
   - automated_cron
   - bene_core
   - bene_media
-  - bene_page
   - bene_migrate_google_sheets
+  - bene_page
   - block
   - block_content
   - breakpoint
@@ -39,9 +39,10 @@ dependencies:
   - history
   - image
   - linkit
-  - metatag
   - menu_link_content
   - menu_ui
+  - metatag
+  - migrate_plus
   - node
   - options
   - page_cache
@@ -64,7 +65,7 @@ dependencies:
   - views_ui
 themes:
   - bartik
-  - seven
   - bene_base
   - bene_child
+  - seven
 package: Bene
