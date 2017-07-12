@@ -1,4 +1,4 @@
-# Bene
+# Bene Base
 
 ## Setup
 - Update `Rakefile` to have the correct site path

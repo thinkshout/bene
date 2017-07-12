@@ -1,10 +1,10 @@
-bene:
+bene_base:
   version: VERSION
   css:
     theme:
-      css/style.css: {}
+      css/bene-style.css: {}
   js:
-    js/main-dist.js: {}
+    js/bene-dist.js: {}
   dependencies:
     - core/jquery
     - core/jquery.ui.datepicker
@@ -12,4 +12,3 @@ bene:
     - core/drupal.ajax
     - core/drupal
     - core/drupalSettings
-    - core/jquery.once

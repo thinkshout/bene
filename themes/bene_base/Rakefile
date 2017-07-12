@@ -16,12 +16,12 @@ end
 
 desc 'Watch sass'
 task :sasswatch do
-  system 'sass -r sass-globbing --watch sass/style.scss:css/style.css'
+  system 'sass -r sass-globbing --watch sass/style.scss:css/bene-style.css'
 end
 
 desc 'Build JS'
 task :browserify do
-  system 'watchify ./js/main.js -o "uglifyjs -cm > ./js/main-dist.js"'
+  system 'watchify ./js/main.js -o "uglifyjs -cm > ./js/bene-dist.js"'
 end
 
 desc 'Serve'

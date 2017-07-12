@@ -6,7 +6,7 @@ core: 8.x
 libraries:
   - bene_child/bene_child
 
-base theme: bene
+base theme: bene_base
 
 regions:
   site_branding: Site Branding

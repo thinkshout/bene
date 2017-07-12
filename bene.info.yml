@@ -65,6 +65,6 @@ dependencies:
 themes:
   - bartik
   - seven
-  - bene
+  - bene_base
   - bene_child
 package: Bene
