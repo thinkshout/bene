@@ -181,11 +181,31 @@ fieldset {
     color: #5C5B5B; }
 
 /* END BASE ELEMENT STYLES */
-.container {
-  max-width: 68em;
+#site-wrapper {
+  max-width: 1800px;
+  margin: 0 auto;
+  position: relative; }
+
+#page,
+.site-header,
+.site-content,
+.site-footer,
+.homepage-hero {
+  width: 100%; }
+
+#site-wrapper > header,
+.site_branding,
+.region-content,
+.region-footer {
+  max-width: 112.5rem;
   margin-left: auto;
-  margin-right: auto; }
-  .container::after {
+  margin-right: auto;
+  max-width: 100%;
+  padding: 0 2%; }
+  #site-wrapper > header::after,
+  .site_branding::after,
+  .region-content::after,
+  .region-footer::after {
     clear: both;
     content: "";
     display: table; }

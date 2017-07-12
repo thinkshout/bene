@@ -1,19 +1,21 @@
-<header>
-  <div class="container">
-    <div class="logo-wrapper">
-      {{page.site_branding}}
+<div id="site-wrapper">
+  <header>
+    <div class="container">
+      <div class="logo-wrapper">
+        {{page.site_branding}}
+      </div>
+      <div class="nav-wrapper">
+        {{page.secondary_nav}}
+        {{page.primary_nav}}
+      </div>
     </div>
-    <div class="nav-wrapper">
-      {{page.secondary_nav}}
-      {{page.primary_nav}}
-    </div>
-  </div>
-</header>
+  </header>
 
-{% if page.content %}
-  {{page.content}}
-{% endif %}
+  {% if page.content %}
+    {{page.content}}
+  {% endif %}
 
-{% if page.footer %}
-  {{page.footer}}
-{% endif %}
+  {% if page.footer %}
+    {{page.footer}}
+  {% endif %}
+</div>
