@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: feature_full_width
+label: Feature
+behavior_plugins: {  }
