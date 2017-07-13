@@ -120,19 +120,32 @@
       }
     }
   }
-  .desktop-nav .menu-item {
+  .desktop-nav .menu--utility .menu-item {
     a {
-      color: black;
-      font-weight: 700;
-      letter-spacing: rem(0.5);
-      text-transform: uppercase;
+      color: $medium-grey;
+      font-size: rem(14);
       &:hover, &:active {
         color: $blue;
       }
     }
     &:last-child a {
       @include button;
-      top: 15px;
+      top: 6px;
+      font-weight: 700;
+      letter-spacing: 0;
+      font-size: rem(12);
+      padding: rem(10) rem(15);
+    }
+  }
+  .desktop-nav .menu--main .menu-item {
+    a {
+      color: $black;
+      font-weight: 700;
+      letter-spacing: rem(0.5);
+      text-transform: uppercase;
+      &:hover, &:active {
+        color: $blue;
+      }
     }
   }
 }

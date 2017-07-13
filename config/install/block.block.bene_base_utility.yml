@@ -7,7 +7,7 @@ dependencies:
     - system
   theme:
     - bene_base
-id: utility
+id: bene_base_utility
 theme: bene_base
 region: primary_nav
 weight: -7

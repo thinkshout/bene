@@ -44,15 +44,20 @@
       flex-direction: column;
       align-self: stretch;
       padding-bottom: rem(33);
-      .region-primary-nav,
-      nav {
+      .region-primary-nav {
+        display: flex;
+        flex-direction: column;
         height: 100%;
+        nav {
+          flex: 1 1 50%;
+        }
       }
+
       .menu {
-        height: 100%;
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
+        height: 100%;
         .menu-item {
           margin-left: rem(22);
         }

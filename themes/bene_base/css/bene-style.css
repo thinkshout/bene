@@ -209,14 +209,17 @@ fieldset {
       flex-direction: column;
       align-self: stretch;
       padding-bottom: 2.0625rem; }
-      .site-header .desktop-nav .region-primary-nav,
-      .site-header .desktop-nav nav {
+      .site-header .desktop-nav .region-primary-nav {
+        display: flex;
+        flex-direction: column;
         height: 100%; }
+        .site-header .desktop-nav .region-primary-nav nav {
+          flex: 1 1 50%; }
       .site-header .desktop-nav .menu {
-        height: 100%;
         display: flex;
         justify-content: flex-end;
-        align-items: flex-end; }
+        align-items: flex-end;
+        height: 100%; }
         .site-header .desktop-nav .menu .menu-item {
           margin-left: 1.375rem; } }
 @media (min-width: 1240px) {
@@ -342,14 +345,12 @@ fieldset {
       .block-system-branding-block a img {
         width: 99%; }
 
-  .desktop-nav .menu-item a {
-    color: black;
-    font-weight: 700;
-    letter-spacing: 0.03125rem;
-    text-transform: uppercase; }
-    .desktop-nav .menu-item a:hover, .desktop-nav .menu-item a:active {
+  .desktop-nav .menu--utility .menu-item a {
+    color: #7C7C7C;
+    font-size: 0.875rem; }
+    .desktop-nav .menu--utility .menu-item a:hover, .desktop-nav .menu--utility .menu-item a:active {
       color: #129FB5; }
-  .desktop-nav .menu-item:last-child a {
+  .desktop-nav .menu--utility .menu-item:last-child a {
     -webkit-transition: background-color 0.3s linear, color 0.3s linear;
     -moz-transition: background-color 0.3s linear, color 0.3s linear;
     transition: background-color 0.3s linear, color 0.3s linear;
@@ -364,8 +365,20 @@ fieldset {
     padding: 1.25rem 1.875rem;
     position: relative;
     text-transform: uppercase;
-    top: 15px; }
-    .desktop-nav .menu-item:last-child a:hover {
-      background-color: #1e9db1; } }
+    top: 6px;
+    font-weight: 700;
+    letter-spacing: 0;
+    font-size: 0.75rem;
+    padding: 0.625rem 0.9375rem; }
+    .desktop-nav .menu--utility .menu-item:last-child a:hover {
+      background-color: #1e9db1; }
+
+  .desktop-nav .menu--main .menu-item a {
+    color: #000;
+    font-weight: 700;
+    letter-spacing: 0.03125rem;
+    text-transform: uppercase; }
+    .desktop-nav .menu--main .menu-item a:hover, .desktop-nav .menu--main .menu-item a:active {
+      color: #129FB5; } }
 
 /*# sourceMappingURL=bene-style.css.map */
