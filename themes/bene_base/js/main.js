@@ -21,13 +21,24 @@
           };
         },
 
+        messageDismiss: function() {
+          $('.messages').once().click(function(){
+            $(this).fadeOut();
+          })
+        },
 
+        showHideTabs: function(){
+          $('.user-logged-in .block-local-tasks-block').once().prepend('<div class="show-hide"><span></span></div>');
 
-
-
+          $('.block-local-tasks-block .show-hide').once().click(function() {
+            $(this).parent().toggleClass('active');
+          });
+        },
 
         init: function() {
           this.beneMobile();
+          this.messageDismiss();
+          this.showHideTabs();
         }
       } // end _bene{}
 

@@ -85,7 +85,7 @@
     position: relative;
     &:after {
       @include all-transition;
-      background: transparent url('../images/svg/line-arrow.svg') no-repeat center center /cover;
+      background: transparent url('../images/svgs/line-arrow.svg') no-repeat center center /cover;
       content: "";
       position: absolute;
       display: inline-block;
@@ -95,6 +95,9 @@
       height: rem(19);
     }
   }
+}
+.mobile-nav .menu--utility {
+  display: none;
 }
 
 // Specific ranges - use sparingly.

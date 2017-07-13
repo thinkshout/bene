@@ -1,0 +1,24 @@
+// Default Styles (Mobile First!)
+.region-footer .bene-contact-links .fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+// Specific ranges - use sparingly.
+// Mobile - things specifically under 400px.
+@include mq(mobile) {  }
+
+// Phablet - things between 401px and 768px.
+@include mq(phablet) {  }
+
+// Tablet - things between 769px and 1239px.
+@include mq(tablet) {  }
+
+
+// Desktops - 769px or more. (This is the most common Media Query)
+@include mq(desktop) {
+
+}
+
+// Extra Large Desktop: min-width: 1240px.
+@include mq(xl) {  }
