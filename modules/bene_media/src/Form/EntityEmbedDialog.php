@@ -6,6 +6,9 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\entity_embed\Form\EntityEmbedDialog as BaseEntityEmbedDialog;
 use Drupal\media_entity\MediaInterface;
 
+/**
+ * Allow for image embed option.
+ */
 class EntityEmbedDialog extends BaseEntityEmbedDialog {
 
   /**
