@@ -114,7 +114,7 @@ a.button {
   position: relative;
   text-transform: uppercase; }
   a.button:hover {
-    background-color: #82ffff; }
+    background-color: #1e9db1; }
 
 /* List bullets in content. */
 .text-formatted ul {
@@ -348,6 +348,24 @@ fieldset {
     letter-spacing: 0.03125rem;
     text-transform: uppercase; }
     .desktop-nav .menu-item a:hover, .desktop-nav .menu-item a:active {
-      color: #129FB5; } }
+      color: #129FB5; }
+  .desktop-nav .menu-item:last-child a {
+    -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+    -moz-transition: background-color 0.3s linear, color 0.3s linear;
+    transition: background-color 0.3s linear, color 0.3s linear;
+    background-color: #50CFE3;
+    border-radius: 0.1875rem;
+    color: #FFF;
+    font-weight: 800;
+    display: inline-block;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    line-height: 1;
+    padding: 1.25rem 1.875rem;
+    position: relative;
+    text-transform: uppercase;
+    top: 15px; }
+    .desktop-nav .menu-item:last-child a:hover {
+      background-color: #1e9db1; } }
 
 /*# sourceMappingURL=bene-style.css.map */

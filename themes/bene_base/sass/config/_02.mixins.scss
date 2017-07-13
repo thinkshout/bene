@@ -68,6 +68,6 @@
   position: relative;
   text-transform: uppercase;
   &:hover {
-    background-color: $bright-blue + 50;
+    background-color: $bright-blue - 50;
   }
 }
