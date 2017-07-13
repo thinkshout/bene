@@ -128,7 +128,7 @@ class ConfigHelper extends InstallStorage {
       if (Unicode::strpos($id, $prefix) === 0) {
         $entity = $this->getEntity(
           $entity_type,
-          Unicode::substr($id, Unicode::strlen($prefix) + 1)
+          Unicode::substr($id, Unicode::strlen($prefix))
         );
         return $entity->delete();
       }
@@ -172,7 +172,7 @@ class ConfigHelper extends InstallStorage {
   }
 
   /**
-   * Checks if a config entity is bundled with Lightning.
+   * Checks if a config entity is bundled with Bene.
    *
    * @param \Drupal\Core\Config\Entity\ConfigEntityInterface $entity
    *   The config entity.
@@ -181,7 +181,7 @@ class ConfigHelper extends InstallStorage {
    *   Whether the config entity is marked as being bundled with Lightning.
    */
   public static function isBundled(ConfigEntityInterface $entity) {
-    return (bool) $entity->getThirdPartySetting('lightning', 'bundled', FALSE);
+    return (bool) $entity->getThirdPartySetting('bene', 'bundled', FALSE);
   }
 
   /**

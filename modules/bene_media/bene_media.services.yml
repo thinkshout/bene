@@ -3,3 +3,8 @@ services:
     class: '\Drupal\bene_media\MediaHelper'
     arguments:
       - '@entity_type.manager'
+  bene_media.route_subscriber:
+    class: '\Drupal\bene_media\Routing\RouteSubscriber'
+    tags:
+      -
+        name: event_subscribe
