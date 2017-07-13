@@ -6,7 +6,7 @@ dependencies:
     - bene_core
   theme:
     - bene
-    id: benefooter
+id: benefooter
 theme: bene
 region: footer
 weight: 0

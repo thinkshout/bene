@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.embedded
   module:
     - entity_embed
     - media_entity

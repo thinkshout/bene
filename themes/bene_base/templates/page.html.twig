@@ -1,13 +1,18 @@
 <div id="site-wrapper">
-  <header>
-    <div class="container">
-      <div class="logo-wrapper">
-        {{page.site_branding}}
-      </div>
-      <div class="nav-wrapper">
-        {{page.secondary_nav}}
-        {{page.primary_nav}}
-      </div>
+  <header class="site-header">
+    <div class="logo-wrapper">
+      {{page.site_branding}}
+    </div>
+    <div class="desktop-nav">
+      {{page.secondary_nav}}
+      {{page.primary_nav}}
+    </div>
+    <div class="mobile-nav">
+      <a class="mobile-menu-toggle">
+        <div><span aria-hidden="false">Mobile Menu</span></div>
+      </a>
+      {{page.secondary_nav}}
+      {{page.primary_nav}}
     </div>
   </header>
 

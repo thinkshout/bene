@@ -24,12 +24,4 @@
   @if $screen == xl {
     @media (min-width: 1240px) { @content; }
   }
-
-  // Retina
-  @if $screen == r {
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-      /* Retina-specific stuff here */
-      @content;
-    }
-  }
 }

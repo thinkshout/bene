@@ -48,6 +48,11 @@
   @include transition(color 0.3s linear,background-color 0.3s linear);
 }
 
+/* All transition */
+@mixin all-transition {
+  @include transition(all 0.3s linear);
+}
+
 /* Buttons */
 @mixin button {
   @include transition(background-color 0.3s linear,color 0.3s linear);
