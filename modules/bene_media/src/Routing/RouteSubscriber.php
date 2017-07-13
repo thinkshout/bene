@@ -6,6 +6,9 @@ use Drupal\Core\Routing\RouteSubscriberBase;
 use Drupal\bene_media\Form\EntityEmbedDialog;
 use Symfony\Component\Routing\RouteCollection;
 
+/**
+ * Subscriber for Entity Embed dialog route.
+ */
 class RouteSubscriber extends RouteSubscriberBase {
 
   /**

@@ -55,9 +55,9 @@ class MediaImage extends ImageFieldFormatter {
     // fall back to the entity label for both.
     return parent::getAttributeValues() + [
       'alt' =>
-        $field->alt ?: $label,
+      $field->alt ?: $label,
       'title' =>
-        $field->title ?: $label,
+      $field->title ?: $label,
     ];
   }
 
