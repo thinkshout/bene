@@ -12,7 +12,6 @@ type_settings:
   bundles: {  }
   display_plugins:
     - 'view_mode:media.embedded'
-    - media_image
   entity_browser: media_browser
   entity_browser_settings:
     display_review: false
