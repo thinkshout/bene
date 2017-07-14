@@ -28,6 +28,52 @@ input[type="search"], textarea {
   }
 }
 
+.js-facets-checkbox-links,
+.js-form-type-checkbox {
+  input {
+    display: none;
+  }
+  label {
+    display: inline-block;
+    font-size: rem(18);
+    color: $dark-grey;
+    margin-bottom: rem(8);
+    margin-left: 0;
+    width: 100%;
+    text-indent: rem(-38);
+    padding-left: rem(38);
+    &:hover {
+      cursor: pointer;
+    }
+    &::before {
+      @include default-transition;
+      content: "✓";
+      font-size: rem(32);
+      line-height: 1;
+      color: transparent;
+      display: inline-block;
+      position: relative;
+      top: rem(1);
+      line-height: 0.4;
+      left: 0;
+      width: rem(26);
+      height: rem(24);
+      margin-right: 2%;
+      padding-left: 3px;
+      text-indent: rem(0);
+      border: 1px solid $dark-grey;
+      border-radius: rem(1);
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  input[type="checkbox"]:checked + label::before {
+    color: $dark-grey;
+    text-shadow: 1px 1px 1px rgba(240, 240, 240, 0.5);
+  }
+}
+
 label {
   font-weight: 600;
   color: $dark-grey;
