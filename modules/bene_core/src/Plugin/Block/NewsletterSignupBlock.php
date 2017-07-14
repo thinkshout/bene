@@ -21,7 +21,7 @@ class NewsletterSignupBlock extends BlockBase {
    */
   public function defaultConfiguration() {
     return [
-      'style' => '1',
+      'style' => 'external',
       'title' => 'Sign up for our Newsletter',
       'signup_text' => 'Receive updates about what we are doing',
       'external_link' => '',
@@ -38,9 +38,9 @@ class NewsletterSignupBlock extends BlockBase {
       '#title' => $this->t('Style'),
       '#default_value' => $this->configuration['style'],
       '#options' => [
-        0 => $this->t('Disabled'),
-        1 => $this->t('External'),
-        2 => $this->t('Embedded Form'),
+        'disabled' => $this->t('Disabled'),
+        'external' => $this->t('External'),
+        'embedded' => $this->t('Embedded Form'),
       ],
     ];
     $form['title'] = [
@@ -53,12 +53,14 @@ class NewsletterSignupBlock extends BlockBase {
       '#title' => $this->t('Signup text'),
       '#default_value' => $this->configuration['signup_text'],
     ];
-    // TODO: Show fieldset only when style = 1.
     $form['external_link_settings'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('External link settings'),
-      '#collapsible' => FALSE,
-      '#collapsed' => FALSE,
+      '#states' => [
+        'visible' => [
+          ':input[name="settings[style]"]' => ['value' => 'external'],
+        ],
+      ],
     ];
     $form['external_link_settings']['external_link'] = [
       '#type' => 'url',
@@ -92,7 +94,7 @@ class NewsletterSignupBlock extends BlockBase {
    */
   public function build() {
     switch ($this->configuration['style']) {
-      case 1:
+      case 'external':
         // External link.
         $build['title'] = [
           '#type' => 'markup',
@@ -108,7 +110,7 @@ class NewsletterSignupBlock extends BlockBase {
         ];
         break;
 
-      case 2:
+      case 'embedded':
         // Embedded link.
         // TODO: Define "Embedded" display. On hold per GitHub issue #69.
         $build = [];
