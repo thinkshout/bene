@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - bene_core
+  theme:
+    - bene_child
+id: benenewslettersignup
+theme: bene_child
+region: footer
+weight: 8
+provider: null
+plugin: bene_newsletter_signup_block
+settings:
+  id: bene_newsletter_signup_block
+  label: 'Bene Newsletter Signup'
+  provider: bene_core
+  label_display: '0'
+  style: external
+  title: 'Sign up for our Newsletter'
+  signup_text: 'Receive updates about what we are doing'
+  external_link: 'http://example.com/'
+  external_link_label: 'Newsletter subscription link'
+visibility: {  }
