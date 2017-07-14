@@ -4,8 +4,10 @@ type: module
 description: 'Media support for Bene'
 package: Bene
 dependencies:
+  - allowed_formats
   - bene_core
   - bene_media
+  - bene_page
   - ckeditor
   - crop
   - editor
@@ -18,11 +20,17 @@ dependencies:
   - focal_point
   - image
   - inline_entity_form
+  - link
   - media_entity
   - media_entity_image
+  - media_entity_instagram
+  - media_entity_twitter
   - node
+  - paragraphs
   - responsive_image
+  - text
   - user
+  - video_embed_field
   - views
   - views_infinite_scroll
 components:

@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_image
+    - media_entity.bundle.image
+    - paragraphs.paragraphs_type.feature_full_width
+id: paragraph.feature_full_width.field_background_image
+field_name: field_background_image
+entity_type: paragraph
+bundle: feature_full_width
+label: 'Background Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
