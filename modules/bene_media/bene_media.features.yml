@@ -5,12 +5,28 @@ excluded:
   - core.entity_view_display.paragraph.feature_full_width.default
   - core.entity_view_display.paragraph.rich_text.default
   - core.entity_view_display.paragraph.tile.default
+  - core.entity_view_display.media.document.embedded
+  - core.entity_view_display.media.document.thumbnail
+  - core.entity_view_display.media.instagram.default
+  - core.entity_view_display.media.instagram.embedded
+  - core.entity_view_display.media.instagram.thumbnail
+  - core.entity_view_display.media.tweet.default
+  - core.entity_view_display.media.tweet.embedded
+  - core.entity_view_display.media.tweet.thumbnail
+  - core.entity_view_display.media.video.embedded
+  - core.entity_view_display.media.video.thumbnail
   - image.style.header_l
   - responsive_image.styles.header
   - core.entity_form_display.paragraph.feature_full_width.default
   - core.entity_form_display.paragraph.media.default
   - core.entity_form_display.paragraph.rich_text.default
   - core.entity_form_display.paragraph.tile.default
+  - core.entity_form_display.media.document.media_browser
+  - core.entity_form_display.media.instagram.default
+  - core.entity_form_display.media.instagram.media_browser
+  - core.entity_form_display.media.tweet.default
+  - core.entity_form_display.media.tweet.media_browser
+  - core.entity_form_display.media.video.media_browser
   - field.storage.paragraph.field_caption
   - field.storage.paragraph.field_media
   - field.storage.paragraph.field_background_image
@@ -33,4 +49,6 @@ excluded:
   - field.field.paragraph.tile.field_link
   - field.field.paragraph.tile.field_text
   - field.field.paragraph.tile.field_title
+  - field.field.media.instagram.embed_code
+  - field.field.media.tweet.embed_code
 required: true

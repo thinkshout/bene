@@ -24,18 +24,19 @@ class FooterBlock extends BlockBase {
   public function defaultConfiguration() {
     return [
       'label_display' => '0',
-      'address' => '',
-      'phone' => '',
-      'email' => '',
-      'copyright' => '',
-      'facebook' => '',
-      'google' => '',
-      'instagram' => '',
-      'linkedin' => '',
-      'pinterest' => '',
-      'tumblr' => '',
-      'twitter' => '',
-      'youtube' => '',
+      'address' => '1234 Some Street
+Portland, OR 97209',
+      'phone' => '(123) 123-1234',
+      'email' => 'info@synergygive.com',
+      'copyright' => '2017',
+      'facebook' => 'https://facebook.com',
+      'google' => 'https://google.com',
+      'instagram' => 'https://instagram.com',
+      'linkedin' => 'https://linkedin.com',
+      'pinterest' => 'https://pinterest.com',
+      'tumblr' => 'https://tumblr.com',
+      'twitter' => 'https://twitter.com',
+      'youtube' => 'https://youtube.com',
     ] + parent::defaultConfiguration();
   }
 
