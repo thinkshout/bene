@@ -6,7 +6,6 @@ package: Bene
 dependencies:
   - allowed_formats
   - bene_core
-  - bene_media
   - ckeditor
   - crop
   - editor

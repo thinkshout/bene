@@ -4,8 +4,6 @@ type: module
 core: 8.x
 dependencies:
   - allowed_formats
-  - bene_media
-  - bene_page
   - block
   - block_content
   - ckeditor
