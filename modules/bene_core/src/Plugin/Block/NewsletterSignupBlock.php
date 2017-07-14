@@ -60,12 +60,12 @@ class NewsletterSignupBlock extends BlockBase {
       '#collapsible' => FALSE,
       '#collapsed' => FALSE,
     ];
-    $form['external_link_settings']['link'] = [
+    $form['external_link_settings']['external_link'] = [
       '#type' => 'url',
       '#title' => $this->t('Link'),
       '#default_value' => $this->configuration['external_link'],
     ];
-    $form['external_link_settings']['link_label'] = [
+    $form['external_link_settings']['external_link_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Link label'),
       '#default_value' => $this->configuration['external_link_label'],
@@ -91,7 +91,34 @@ class NewsletterSignupBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $build = [];
+    switch ($this->configuration['style']) {
+      case 1:
+        // External link.
+        $build['title'] = [
+          '#type' => 'markup',
+          '#markup' => $this->configuration['title'],
+        ];
+        $build['signup_text'] = [
+          '#type' => 'markup',
+          '#markup' => $this->configuration['signup_text'],
+        ];
+        $build['link'] = [
+          '#type' => 'markup',
+          '#markup' => '<a href="' . $this->configuration['external_link'] . '">' . $this->configuration['external_link_label'] . '</a>',
+        ];
+        break;
+
+      case 2:
+        // Embedded link.
+        // TODO: Define "Embedded" display. On hold per GitHub issue #69.
+        $build = [];
+        break;
+
+      default:
+        // No link.
+        $build = [];
+    }
+
     return $build;
   }
 
