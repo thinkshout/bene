@@ -24,6 +24,8 @@ class NewsletterSignupBlock extends BlockBase {
       'style' => '1',
       'title' => 'Sign up for our Newsletter',
       'signup_text' => 'Receive updates about what we are doing',
+      'external_link' => '',
+      'external_link_label' => '',
     ] + parent::defaultConfiguration();
   }
 
@@ -44,13 +46,29 @@ class NewsletterSignupBlock extends BlockBase {
     $form['title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
-      '#description' => '',
       '#default_value' => $this->configuration['title'],
     ];
     $form['signup_text'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Signup text'),
       '#default_value' => $this->configuration['signup_text'],
+    ];
+    // TODO: Show fieldset only when style = 1.
+    $form['external_link_settings'] = [
+      '#type' => 'fieldset',
+      '#title' => $this->t('External link settings'),
+      '#collapsible' => FALSE,
+      '#collapsed' => FALSE,
+    ];
+    $form['external_link_settings']['link'] = [
+      '#type' => 'url',
+      '#title' => $this->t('Link'),
+      '#default_value' => $this->configuration['external_link'],
+    ];
+    $form['external_link_settings']['link_label'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Link label'),
+      '#default_value' => $this->configuration['external_link_label'],
     ];
 
     return $form;
@@ -63,6 +81,10 @@ class NewsletterSignupBlock extends BlockBase {
     $this->configuration['style'] = $form_state->getValue('style');
     $this->configuration['title'] = $form_state->getValue('title');
     $this->configuration['signup_text'] = $form_state->getValue('signup_text');
+
+    $external_link_settings = $form_state->getValue('external_link_settings');
+    $this->configuration['external_link'] = $external_link_settings['external_link'];
+    $this->configuration['external_link_label'] = $external_link_settings['external_link_label'];
   }
 
   /**
