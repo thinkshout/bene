@@ -1,0 +1,112 @@
+// Default Styles (Mobile First!)
+input[type="search"], textarea {
+  -webkit-appearance: none;
+  //background-color: $white;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: $black;
+  font-size: rem(16);
+  font-weight: 500;
+  height: rem(50);
+  padding: rem(18) rem(50) rem(18) rem(22);
+  width: 100%;
+  &::-webkit-input-placeholder {
+    color: $placeholder-grey;
+  }
+  &::-moz-placeholder {
+    color: $placeholder-grey;
+  }
+  &:-ms-input-placeholder {
+    color: $placeholder-grey;
+  }
+  &:-moz-placeholder {
+    color: $placeholder-grey;
+  }
+  &:focus {
+    outline: 1px solid $light-grey;
+  }
+}
+
+label {
+  font-weight: 600;
+  color: $dark-grey;
+  margin-bottom: rem(24);
+}
+
+input:focus {
+  outline-color: $light-grey;
+}
+
+input[type='text'],
+input[type='search'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+textarea {
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid $light-grey;
+  border-radius: rem(3);
+  box-sizing: border-box;
+  color: $black;
+  font-size: rem(16);
+  font-weight: 500;
+  height: rem(50);
+  padding: rem(18) rem(50) rem(18) rem(22);
+  width: 100%;
+  &::-webkit-input-placeholder {
+    color: $placeholder-grey;
+  }
+  &::-moz-placeholder {
+    color: $placeholder-grey;
+  }
+  &:-ms-input-placeholder {
+    color: $placeholder-grey;
+  }
+  &:-moz-placeholder {
+    color: $placeholder-grey;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.user-login-form {
+  .form-item {
+    text-align: left;
+  }
+  .description {
+    display: none;
+  }
+}
+
+input[type='submit'] {
+  @include button;
+  border: none;
+}
+
+
+// Specific ranges - use sparingly.
+// Mobile - things specifically under 400px.
+@include mq(mobile) {  }
+
+// Phablet - things between 401px and 768px.
+@include mq(phablet) {  }
+
+// Tablet - things between 769px and 1239px.
+@include mq(tablet) {  }
+
+
+// Desktops - 769px or more. (This is the most common Media Query)
+@include mq(desktop) {
+  .user-login-form,
+  .user-register-form,
+  .user-pass {
+    @include span-columns(6);
+    @include shift(3);
+    float: none;
+  }
+}
+
+// Extra Large Desktop: min-width: 1240px.
+@include mq(xl) {  }
