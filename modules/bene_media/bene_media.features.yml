@@ -1,6 +1,36 @@
 bundle: bene
 excluded:
   - core.entity_view_display.media.image.header
+  - core.entity_view_display.paragraph.media.default
+  - core.entity_view_display.paragraph.feature_full_width.default
+  - core.entity_view_display.paragraph.rich_text.default
+  - core.entity_view_display.paragraph.tile.default
   - image.style.header_l
   - responsive_image.styles.header
+  - core.entity_form_display.paragraph.feature_full_width.default
+  - core.entity_form_display.paragraph.media.default
+  - core.entity_form_display.paragraph.rich_text.default
+  - core.entity_form_display.paragraph.tile.default
+  - field.storage.paragraph.field_caption
+  - field.storage.paragraph.field_media
+  - field.storage.paragraph.field_background_image
+  - field.storage.paragraph.field_link
+  - field.storage.paragraph.field_text
+  - field.storage.paragraph.field_title
+  - field.storage.paragraph.field_image
+  - paragraphs.paragraphs_type.media
+  - paragraphs.paragraphs_type.feature_full_width
+  - paragraphs.paragraphs_type.rich_text
+  - paragraphs.paragraphs_type.tile
+  - field.field.paragraph.feature_full_width.field_background_image
+  - field.field.paragraph.feature_full_width.field_link
+  - field.field.paragraph.feature_full_width.field_text
+  - field.field.paragraph.feature_full_width.field_title
+  - field.field.paragraph.media.field_caption
+  - field.field.paragraph.media.field_media
+  - field.field.paragraph.rich_text.field_text
+  - field.field.paragraph.tile.field_image
+  - field.field.paragraph.tile.field_link
+  - field.field.paragraph.tile.field_text
+  - field.field.paragraph.tile.field_title
 required: true

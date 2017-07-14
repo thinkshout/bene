@@ -48,7 +48,7 @@ assignments:
     enabled: true
     weight: 4
   namespace:
-    enabled: true
+    enabled: false
     weight: 0
   optional:
     types:
