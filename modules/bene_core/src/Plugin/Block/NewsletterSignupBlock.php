@@ -21,10 +21,11 @@ class NewsletterSignupBlock extends BlockBase {
    */
   public function defaultConfiguration() {
     return [
+      'label_display' => '0',
       'style' => 'external',
       'title' => 'Sign up for our Newsletter',
       'signup_text' => 'Receive updates about what we are doing',
-      'external_link' => '',
+      'external_link' => 'https://mailchimp.com',
       'external_link_label' => '',
     ] + parent::defaultConfiguration();
   }
