@@ -28,7 +28,15 @@ class FooterBlock extends BlockBase {
 Portland, OR 97209',
       'phone' => '(123) 123-1234',
       'email' => 'info@synergygive.com',
-      'copyright' => '2017',
+      'additional_contact' => [
+        'value' => '<p>Photograph by Some Person</p>',
+        'format' => 'restricted_html',
+      ],
+      'additional_footer' => [
+        'value' => '<p>Office hours: 8-4p Pacific</p>',
+        'format' => 'restricted_html',
+      ],
+      'copyright' => '&copy; Copyright 2017 SynergyGive',
       'facebook' => 'https://facebook.com',
       'google' => 'https://google.com',
       'instagram' => 'https://instagram.com',
@@ -79,17 +87,31 @@ Portland, OR 97209',
       '#default_value' => $this->configuration['email'],
       '#weight' => '12',
     ];
+    $form['additional_contact'] = array(
+      '#type' => 'text_format',
+      '#title' => 'Additional contact content',
+      '#format' => $this->configuration['additional_contact']['format'],
+      '#default_value' => $this->configuration['additional_contact']['value'],
+      '#weight' => '13',
+    );
+    $form['additional_footer'] = array(
+      '#type' => 'text_format',
+      '#title' => 'Additional footer content',
+      '#format' => $this->configuration['additional_contact']['format'],
+      '#default_value' => $this->configuration['additional_footer']['value'],
+      '#weight' => '14',
+    );
     $form['copyright'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Copyright'),
       '#description' => '',
       '#default_value' => $this->configuration['copyright'],
-      '#weight' => '13',
+      '#weight' => '15',
     ];
     $form['social'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Social media'),
-      '#weight' => '14',
+      '#weight' => '16',
     ];
     $form['social']['facebook'] = [
       '#type' => 'url',
@@ -151,6 +173,8 @@ Portland, OR 97209',
     $this->configuration['address'] = $form_state->getValue('address');
     $this->configuration['phone'] = $form_state->getValue('phone');
     $this->configuration['email'] = $form_state->getValue('email');
+    $this->configuration['additional_contact'] = $form_state->getValue('additional_contact');
+    $this->configuration['additional_footer'] = $form_state->getValue('additional_footer');
     $this->configuration['copyright'] = $form_state->getValue('copyright');
     $this->configuration['facebook'] = $social['facebook'];
     $this->configuration['google'] = $social['google'];
@@ -166,6 +190,7 @@ Portland, OR 97209',
    * {@inheritdoc}
    */
   public function build() {
+
     $services = [
       'facebook',
       'google',
@@ -183,9 +208,10 @@ Portland, OR 97209',
       ],
     ];
     $build['contact'] = [
-      '#type' => 'fieldset',
-      '#prefix' => '<div class="bene-contact-links">',
-      '#suffix' => '</div>',
+      '#type' => 'container',
+      '#attributes' => array(
+        'class' => 'contact-links',
+      ),
     ];
     $build['contact']['address'] = [
       '#type' => 'markup',
@@ -211,16 +237,38 @@ Portland, OR 97209',
       '#prefix' => '<span class="email">',
       '#suffix' => '</span>',
     ];
+    $build['contact']['additional_contact'] = [
+      '#type' => 'processed_text',
+      '#text' => $this->configuration['additional_contact']['value'],
+      '#format' => $this->configuration['additional_contact']['format'],
+      '#prefix' => '<span class="additional-contact">',
+      '#suffix' => '</span>',
+    ];
+    $build['additional_footer'] = [
+      '#type' => 'processed_text',
+      '#text' => $this->configuration['additional_footer']['value'],
+      '#format' => $this->configuration['additional_footer']['format'],
+      '#prefix' => '<span class="additional-footer">',
+      '#suffix' => '</span>',
+    ];
+
     $build['social'] = [
-      '#type' => 'fieldset',
-      '#prefix' => '<div class="bene-social-links">',
-      '#suffix' => '</div>',
+      '#type' => 'container',
+      '#attributes' => array(
+        'class' => 'social-links',
+      ),
     ];
     foreach ($services as $service) {
       if ($this->configuration[$service]) {
         $build['social'][$service]['#markup'] = '<a class="' . $service . '" href="' . $this->configuration[$service] . '">' . $service . '</a>';
       }
     }
+    $build['copyright'] = [
+      '#type' => 'markup',
+      '#markup' => $this->configuration['copyright'],
+      '#prefix' => '<span class="copyright">',
+      '#suffix' => '</span>',
+    ];
     return $build;
   }
 
