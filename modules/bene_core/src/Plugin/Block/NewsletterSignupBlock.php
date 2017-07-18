@@ -118,7 +118,7 @@ class NewsletterSignupBlock extends BlockBase {
         $build['link'] = [
           '#type' => 'link',
           '#title' => $this->configuration['external_link_label'],
-          '#url' =>  Url::fromUri($this->configuration['external_link']),
+          '#url' => Url::fromUri($this->configuration['external_link']),
         ];
         break;
 
