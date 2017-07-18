@@ -87,20 +87,20 @@ Portland, OR 97209',
       '#default_value' => $this->configuration['email'],
       '#weight' => '12',
     ];
-    $form['additional_contact'] = array(
+    $form['additional_contact'] = [
       '#type' => 'text_format',
       '#title' => 'Additional contact content',
       '#format' => $this->configuration['additional_contact']['format'],
       '#default_value' => $this->configuration['additional_contact']['value'],
       '#weight' => '13',
-    );
-    $form['additional_footer'] = array(
+    ];
+    $form['additional_footer'] = [
       '#type' => 'text_format',
       '#title' => 'Additional footer content',
       '#format' => $this->configuration['additional_contact']['format'],
       '#default_value' => $this->configuration['additional_footer']['value'],
       '#weight' => '14',
-    );
+    ];
     $form['copyright'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Copyright'),
@@ -209,9 +209,9 @@ Portland, OR 97209',
     ];
     $build['contact'] = [
       '#type' => 'container',
-      '#attributes' => array(
+      '#attributes' => [
         'class' => 'contact-links',
-      ),
+      ],
     ];
     $build['contact']['address'] = [
       '#type' => 'markup',
@@ -254,9 +254,9 @@ Portland, OR 97209',
 
     $build['social'] = [
       '#type' => 'container',
-      '#attributes' => array(
+      '#attributes' => [
         'class' => 'social-links',
-      ),
+      ],
     ];
     foreach ($services as $service) {
       if ($this->configuration[$service]) {
