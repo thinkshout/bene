@@ -4,6 +4,7 @@ namespace Drupal\bene_core\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * Provides a 'NewsletterSignupBlock' block.
@@ -48,11 +49,13 @@ class NewsletterSignupBlock extends BlockBase {
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
       '#default_value' => $this->configuration['title'],
+      '#description' => $this->t('Optional, leave blank to use the link label as the only text.'),
     ];
     $form['signup_text'] = [
       '#type' => 'textarea',
       '#title' => $this->t('Signup text'),
       '#default_value' => $this->configuration['signup_text'],
+      '#description' => $this->t('Optional, leave blank to use the link label as the only text.'),
     ];
     $form['external_link_settings'] = [
       '#type' => 'fieldset',
@@ -67,11 +70,13 @@ class NewsletterSignupBlock extends BlockBase {
       '#type' => 'url',
       '#title' => $this->t('Link'),
       '#default_value' => $this->configuration['external_link'],
+      '#required' => TRUE,
     ];
     $form['external_link_settings']['external_link_label'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Link label'),
       '#default_value' => $this->configuration['external_link_label'],
+      '#required' => TRUE,
     ];
 
     return $form;
@@ -94,20 +99,26 @@ class NewsletterSignupBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
+    $build = [];
     switch ($this->configuration['style']) {
       case 'external':
         // External link.
         $build['title'] = [
           '#type' => 'markup',
           '#markup' => $this->configuration['title'],
+          '#prefix' => '<h4>',
+          '#suffix' => '</h4>',
         ];
         $build['signup_text'] = [
           '#type' => 'markup',
           '#markup' => $this->configuration['signup_text'],
+          '#prefix' => '<p>',
+          '#suffix' => '</p>',
         ];
         $build['link'] = [
-          '#type' => 'markup',
-          '#markup' => '<a href="' . $this->configuration['external_link'] . '">' . $this->configuration['external_link_label'] . '</a>',
+          '#type' => 'link',
+          '#title' => $this->configuration['external_link_label'],
+          '#url' =>  Url::fromUri($this->configuration['external_link']),
         ];
         break;
 
