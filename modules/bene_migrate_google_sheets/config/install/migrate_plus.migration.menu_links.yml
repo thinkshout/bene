@@ -91,4 +91,5 @@ destination:
 migration_dependencies:
   required:
     - upgrade_menu
+    - node_page
   optional: {  }
