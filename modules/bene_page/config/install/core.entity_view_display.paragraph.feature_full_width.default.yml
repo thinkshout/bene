@@ -7,8 +7,10 @@ dependencies:
     - field.field.paragraph.feature_full_width.field_text
     - field.field.paragraph.feature_full_width.field_title
     - paragraphs.paragraphs_type.feature_full_width
+    - responsive_image.styles.header
   module:
     - link
+    - picture_background_formatter
     - text
 id: paragraph.feature_full_width.default
 targetEntityType: paragraph
@@ -17,15 +19,17 @@ mode: default
 content:
   field_background_image:
     weight: 2
-    label: above
+    label: hidden
     settings:
-      link: true
+      responsive_image_style: header
+      selector: .paragraph--type--feature-full-width
+      image_link: ''
     third_party_settings: {  }
-    type: entity_reference_label
+    type: picture_background_formatter_media
     region: content
   field_link:
     weight: 3
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -37,14 +41,14 @@ content:
     region: content
   field_text:
     weight: 1
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_title:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

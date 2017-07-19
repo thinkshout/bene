@@ -20,15 +20,15 @@ bundle: page
 mode: default
 content:
   bene_content:
-    type: entity_reference_paragraphs
+    type: paragraphs
     weight: 3
     settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
+      title: Section
+      title_plural: Sections
+      edit_mode: preview
       add_mode: dropdown
       form_display_mode: default
-      default_paragraph_type: ''
+      default_paragraph_type: _none
     third_party_settings: {  }
     region: content
   created:

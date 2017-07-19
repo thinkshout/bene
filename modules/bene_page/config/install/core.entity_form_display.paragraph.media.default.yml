@@ -2,9 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_browser_modal
     - field.field.paragraph.media.field_caption
     - field.field.paragraph.media.field_media
     - paragraphs.paragraphs_type.media
+  module:
+    - entity_browser
 id: paragraph.media.default
 targetEntityType: paragraph
 bundle: media
@@ -13,7 +16,7 @@ content:
   field_caption:
     weight: 1
     settings:
-      rows: 5
+      rows: 2
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
@@ -21,11 +24,16 @@ content:
   field_media:
     weight: 0
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      entity_browser: media_browser_modal
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: default
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
     region: content
 hidden:
   created: true

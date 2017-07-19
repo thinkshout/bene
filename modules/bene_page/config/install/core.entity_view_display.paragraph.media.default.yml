@@ -12,17 +12,18 @@ mode: default
 content:
   field_caption:
     weight: 1
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_media:
     weight: 0
-    label: above
+    label: hidden
     settings:
-      link: true
+      view_mode: embedded
+      link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: entity_reference_entity_view
     region: content
 hidden: {  }
