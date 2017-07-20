@@ -18,17 +18,17 @@ bundle: feature_full_width
 mode: default
 content:
   field_background_image:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       responsive_image_style: header
-      selector: .paragraph--type--feature-full-width
+      selector: '.paragraph-[paragraph:id]'
       image_link: ''
     third_party_settings: {  }
     type: picture_background_formatter_media
     region: content
   field_link:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       trim_length: 80
