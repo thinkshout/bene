@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "823bafe27124c30b2d3d6196fbfaea78",
+    "content-hash": "edcc1132db997c9f63c4a2c6f85931d9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2528,6 +2528,10 @@
                 {
                     "name": "mikeryan",
                     "homepage": "https://www.drupal.org/user/4420"
+                },
+                {
+                    "name": "moshe weitzman",
+                    "homepage": "https://www.drupal.org/user/23"
                 }
             ],
             "description": "Tools to assist in developing and running migrations.",
@@ -2680,6 +2684,9 @@
                 "drupal": {
                     "version": "8.x-1.x-dev",
                     "datestamp": "1495570983"
+                },
+                "patches_applied": {
+                    "2896270 - Refactor to support tokens and a formatter specific to media entity reference fields": "https://www.drupal.org/files/issues/token_and_media_formatter-2896270-2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
