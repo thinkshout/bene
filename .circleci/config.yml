@@ -31,7 +31,6 @@ jobs:
       - restore_cache:
           keys:
             - composer-v2-{{ checksum "composer.lock" }}
-            - composer-v2-
       - run:
           name: Install dependencies
           command: |
