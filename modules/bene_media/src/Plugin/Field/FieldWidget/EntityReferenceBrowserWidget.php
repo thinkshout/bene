@@ -17,9 +17,11 @@ class EntityReferenceBrowserWidget extends BaseEntityReferenceBrowserWidget {
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
     $element = parent::formElement($items, $delta, $element, $form, $form_state);
 
-    // Move the remaining number of selections to the details summary.
-    $element['#description'] .= $element['current']['#prefix'];
-    unset($element['current']['#prefix']);
+    if(isset($element['current']['#prefix'])) {
+      // Move the remaining number of selections to the details summary.
+      $element['#description'] .= $element['current']['#prefix'];
+      unset($element['current']['#prefix']);
+    }
 
     // Wrap the current selections in a nice <details> element.
     $cardinality = $this->fieldDefinition
