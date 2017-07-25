@@ -63,6 +63,46 @@ class HomePageFeatureBlock extends BlockBase {
       '#description' => '',
       '#default_value' => $this->configuration['link']['url'],
     ];
+    $form['background_image'] = array(
+      '#type' => 'entity_browser',
+      '#entity_browser' => 'media_browser_modal',
+      '#cardinality' => 1,
+      '#selection_mode' => 'selection_append',
+      '#default_value' => [],
+      '#entity_browser_validators' => [
+        'entity_type' => [
+          'type' => 'media',
+        ],
+      ],
+      '#widget_context' => [
+        'target_bundles' => [
+          'image' => 'image',
+        ],
+      ],
+      '#custom_hidden_id' => 'background-image-media',
+      '#process' => [
+        0 => [
+          '\Drupal\entity_browser\Element\EntityBrowserElement',
+          'processEntityBrowser',
+        ],
+        1 => [
+          'Drupal\bene_media\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
+          'processEntityBrowser',
+        ],
+      ],
+      '#attached' => [
+        'library' => [
+          'entity_browser/common',
+        ],
+      ],
+      '#value_callback' => [
+        'Drupal\entity_browser\Element\EntityBrowserElement',
+        'valueCallback',
+      ],
+      '#after_build' => [
+        'bene_media_inject_entity_browser_count',
+      ],
+    );
 
     return $form;
   }
