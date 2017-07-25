@@ -3,13 +3,19 @@ status: true
 dependencies:
   config:
     - image.style.header_l
+    - image.style.large
 id: header
 label: Header
 image_style_mappings:
   -
-    breakpoint_id: responsive_image.viewport_sizing
+    breakpoint_id: bene.large
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: header_l
-breakpoint_group: responsive_image
+  -
+    breakpoint_id: bene.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: large
+breakpoint_group: bene_base
 fallback_image_style: header_l

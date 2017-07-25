@@ -1,6 +1,5 @@
 bundle: bene
 excluded:
-  - core.entity_view_display.media.image.header
   - core.entity_view_display.paragraph.media.default
   - core.entity_view_display.paragraph.feature_full_width.default
   - core.entity_view_display.paragraph.rich_text.default

@@ -114,6 +114,10 @@
             "drupal/embed": {
                 "2824110 - Allow site-builders to use a non-managed file as button icon":
                 "https://www.drupal.org/files/issues/allow-non-managed-button-icon-files-2824110-1.patch"
+            },
+            "drupal/picture_background_formatter": {
+                "2896270 - Refactor to support tokens and a formatter specific to media entity reference fields":
+                "https://www.drupal.org/files/issues/token_and_media_formatter-2896270-2.patch"
             }
         }
     }
