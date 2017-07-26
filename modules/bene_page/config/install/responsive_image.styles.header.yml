@@ -3,10 +3,19 @@ status: true
 dependencies:
   config:
     - image.style.header_l
-    - image.style.large
+    - image.style.header_m
+    - image.style.header_s
+    - image.style.header_xl
+  theme:
+    - bene_base
 id: header
 label: Header
 image_style_mappings:
+  -
+    breakpoint_id: bene.xlarge
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: header_xl
   -
     breakpoint_id: bene.large
     multiplier: 1x
@@ -16,6 +25,11 @@ image_style_mappings:
     breakpoint_id: bene.medium
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: large
+    image_mapping: header_m
+  -
+    breakpoint_id: bene.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: header_s
 breakpoint_group: bene_base
-fallback_image_style: header_l
+fallback_image_style: header_s
