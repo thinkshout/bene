@@ -52,7 +52,7 @@
         "drupal/token": "1.0",
         "drupal/video_embed_field": "^1.0",
         "drupal/coder": "^8.2",
-        "drupal/paragraphs": "^1.1",
+        "drupal/paragraphs": "1.x-dev",
         "drupal/migrate_google_sheets": "^1.0@beta",
         "drupal/migrate_tools": "^4.0.0-beta1",
         "drupal/redirect": "^1.0-alpha5",
