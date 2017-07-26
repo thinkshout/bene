@@ -23,4 +23,5 @@ dependencies:
   - responsive_image
   - text
   - user
+  - video_embed_field
 package: Bene

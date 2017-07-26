@@ -7,7 +7,7 @@ dependencies:
     - field.field.paragraph.feature_full_width.field_text
     - field.field.paragraph.feature_full_width.field_title
     - paragraphs.paragraphs_type.feature_full_width
-    - responsive_image.styles.header
+    - responsive_image.styles.full_width_feature
   module:
     - link
     - picture_background_formatter
@@ -21,7 +21,7 @@ content:
     weight: 3
     label: hidden
     settings:
-      responsive_image_style: header
+      responsive_image_style: full_width_feature
       selector: '.paragraph-[paragraph:id]'
       image_link: ''
     third_party_settings: {  }

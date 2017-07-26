@@ -2,26 +2,26 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.embed_l
-    - image.style.embed_m
-    - image.style.embed_s
-id: embed
-label: Embed
+    - image.style.tile_l
+    - image.style.tile_m
+    - image.style.tile_s
+id: tile
+label: Tile
 image_style_mappings:
   -
     breakpoint_id: bene.large
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: embed_l
+    image_mapping: tile_l
   -
     breakpoint_id: bene.medium
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: embed_m
+    image_mapping: tile_m
   -
     breakpoint_id: bene.small
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: embed_s
+    image_mapping: tile_s
 breakpoint_group: bene_base
-fallback_image_style: embed_s
+fallback_image_style: tile_s

@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.feature_full_width_l
+    - image.style.feature_full_width_m
+    - image.style.feature_full_width_s
+    - image.style.feature_full_width_xl
+id: full_width_feature
+label: 'Full Width Feature'
+image_style_mappings:
+  -
+    breakpoint_id: bene.xlarge
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: feature_full_width_xl
+  -
+    breakpoint_id: bene.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: feature_full_width_l
+  -
+    breakpoint_id: bene.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: feature_full_width_m
+  -
+    breakpoint_id: bene.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: feature_full_width_s
+breakpoint_group: bene_base
+fallback_image_style: feature_full_width_s

@@ -20,7 +20,7 @@ bundle: page
 mode: default
 content:
   bene_content:
-    type: paragraphs
+    type: entity_reference_paragraphs
     weight: 3
     settings:
       title: Section

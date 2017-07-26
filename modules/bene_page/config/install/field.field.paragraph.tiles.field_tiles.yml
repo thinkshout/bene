@@ -12,7 +12,7 @@ entity_type: paragraph
 bundle: tiles
 label: Tiles
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -31,4 +31,10 @@ settings:
       tiles:
         enabled: true
         weight: 6
+      media:
+        weight: 7
+        enabled: false
+      tile:
+        weight: 9
+        enabled: false
 field_type: entity_reference_revisions
