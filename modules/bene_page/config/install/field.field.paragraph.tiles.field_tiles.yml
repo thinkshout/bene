@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_tiles
+    - paragraphs.paragraphs_type.tile
     - paragraphs.paragraphs_type.tiles
   module:
     - entity_reference_revisions
@@ -20,7 +21,7 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      tiles: tiles
+      tile: tile
     target_bundles_drag_drop:
       feature_full_width:
         weight: 4
@@ -29,12 +30,12 @@ settings:
         weight: 5
         enabled: false
       tiles:
-        enabled: true
         weight: 6
+        enabled: false
       media:
         weight: 7
         enabled: false
       tile:
+        enabled: true
         weight: 9
-        enabled: false
 field_type: entity_reference_revisions
