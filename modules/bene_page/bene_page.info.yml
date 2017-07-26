@@ -9,6 +9,7 @@ dependencies:
   - entity_browser
   - entity_reference_revisions
   - field
+  - file
   - focal_point
   - image
   - link
