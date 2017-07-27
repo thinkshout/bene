@@ -44,7 +44,12 @@ class SubNavigationBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $build = [];
+    // Disable block cache as page title will change per-page.
+    $build = [
+      '#cache' => [
+        'max-age' => 0,
+      ],
+    ];
 
     // Add breadcrumbs excluding current page.
     $breadcrumbs = $this->getBreadcrumbs();
