@@ -78,7 +78,17 @@ class SubNavigationBlock extends BlockBase {
       ];
     }
 
-    $build['page_children'] = [];
+    $page_child_links = [];
+
+    $page_children = $this->getChildMenuLinks();
+    foreach ($page_children as $page_child) {
+      $page_child_links[] = Link::createFromRoute($page_child['title'], $page_child['route_name'], $page_child['route_parameters']);
+    }
+
+    $build['page_children'] = [
+      '#theme' => 'item_list',
+      '#items' => $page_child_links,
+    ];
 
     return $build;
   }
@@ -111,6 +121,44 @@ class SubNavigationBlock extends BlockBase {
     $title = \Drupal::service('title_resolver')->getTitle(\Drupal::request(), $current_route->getRouteObject());
 
     return $title;
+  }
+
+  /**
+   * Gets an array of menu link definitions for child nodes of the current node.
+   *
+   * Based on the current node's menu link.
+   *
+   * @return array
+   *   Array of menu link definitions (each definition is in array format).
+   *
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+   */
+  private function getChildMenuLinks() {
+    $child_menu_links = [];
+
+    // Get the current node from the current route.
+    /** @var \Drupal\node\Entity\Node $node */
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if (!empty($node)) {
+      /** @var \Drupal\Core\Menu\MenuLinkManager $menu_link_manager */
+      $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+      $menu_links = $menu_link_manager->loadLinksByRoute('entity.node.canonical', ['node' => $node->id()]);
+
+      // Get the menu link associated with the current node.
+      /** @var \Drupal\menu_link_content\Plugin\Menu\MenuLinkContent $current_menu_link */
+      $current_menu_link = reset($menu_links);
+
+      // Get all child menu links of the current node's menu link.
+      if (!empty($current_menu_link)) {
+        $child_menu_ids = $menu_link_manager->getChildIds($current_menu_link->getPluginId());
+
+        foreach ($child_menu_ids as $menu_link_id) {
+          $child_menu_links[] = $menu_link_manager->getDefinition($menu_link_id);
+        }
+      }
+    }
+
+    return $child_menu_links;
   }
 
 }
