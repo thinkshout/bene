@@ -4,8 +4,8 @@ namespace Drupal\bene_core\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Menu\MenuTreeParameters;
-use Drupal\Core\Url;
+use Drupal\file\Entity\File;
+use Drupal\media_entity\Entity\Media;
 
 /**
  * Provides a 'HomePageFeature' block.
@@ -166,19 +166,43 @@ class HomePageFeatureBlock extends BlockBase {
   public function build() {
     $build = [];
 
-    $build['lead'] = [
+    $background_image_path = '';
+    if (!empty($this->configuration['background-image'])) {
+      // 'background-image' contains an entity reference ID. It looks like this:
+      // media:4, where 4 is the media entity ID. Split the string to get it.
+      $background_image_parts = explode(':', $this->configuration['background-image']);
+
+      // Load the background image media entity and retrieve file path.
+      /** @var Media $background_media */
+      $background_media = \Drupal::entityManager()->getStorage('media')->load($background_image_parts[1]);
+      /** @var File $file */
+      $file = File::load($background_media->get('image')->getValue()[0]['target_id']);
+      $background_uri = $file->getFileUri();
+
+      $background_image_path = file_create_url($background_uri);
+    }
+
+    $build['feature'] = [
+      '#type' => 'fieldset',
+      '#id' => 'bene-home-page-feature',
+      '#attributes' => [
+        'data-background' => $background_image_path,
+      ],
+    ];
+
+    $build['feature']['lead'] = [
       '#type' => 'markup',
       '#markup' => $this->configuration['lead'],
-      '#prefix' => '<span class="address">',
+      '#prefix' => '<span class="lead">',
       '#suffix' => '</span>',
     ];
-    $build['title'] = [
+    $build['feature']['title'] = [
       '#type' => 'markup',
       '#markup' => $this->configuration['title'],
       '#prefix' => '<span class="title">',
       '#suffix' => '</span>',
     ];
-    $build['link'] = [
+    $build['feature']['link'] = [
       '#type' => 'markup',
       '#markup' => '<a href="' . $this->configuration['link']['url'] . '">' . $this->configuration['link']['label'] . '</a>',
     ];
