@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: embed_l
+label: Embed-L
+effects:
+  6620bad2-6d96-4be1-af5d-5632d4b89e08:
+    uuid: 6620bad2-6d96-4be1-af5d-5632d4b89e08
+    id: image_scale
+    weight: 1
+    data:
+      width: 800
+      height: null
+      upscale: false

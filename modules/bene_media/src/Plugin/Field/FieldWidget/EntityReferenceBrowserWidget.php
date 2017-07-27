@@ -17,7 +17,7 @@ class EntityReferenceBrowserWidget extends BaseEntityReferenceBrowserWidget {
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
     $element = parent::formElement($items, $delta, $element, $form, $form_state);
 
-    if(isset($element['current']['#prefix'])) {
+    if (isset($element['current']['#prefix'])) {
       // Move the remaining number of selections to the details summary.
       $element['#description'] .= $element['current']['#prefix'];
       unset($element['current']['#prefix']);

@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: tile_s
+label: Tile-S
+effects:
+  5a88bfa9-4120-4f5a-8ec9-4d48c96ead62:
+    uuid: 5a88bfa9-4120-4f5a-8ec9-4d48c96ead62
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 240

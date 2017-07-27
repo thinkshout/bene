@@ -2,23 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.embedded
+    - core.entity_view_mode.media.tile
     - field.field.media.image.image
     - media_entity.bundle.image
+    - responsive_image.styles.tile
   module:
-    - image
-id: media.image.embedded
+    - responsive_image
+id: media.image.tile
 targetEntityType: media
 bundle: image
-mode: embedded
+mode: tile
 content:
   image:
-    type: image
+    type: responsive_image
     weight: 0
     label: hidden
     settings:
-      image_style: ''
-      image_link: ''
+      responsive_image_style: tile
+      image_link: content
     third_party_settings: {  }
     region: content
 hidden:

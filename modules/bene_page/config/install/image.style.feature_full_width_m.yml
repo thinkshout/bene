@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: feature_full_width_m
+label: 'Feature Full Width-M'
+effects:
+  ed676048-6452-499a-8e08-9571728612ca:
+    uuid: ed676048-6452-499a-8e08-9571728612ca
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 768
+      height: 550
