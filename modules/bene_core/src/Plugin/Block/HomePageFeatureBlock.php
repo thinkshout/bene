@@ -63,7 +63,7 @@ class HomePageFeatureBlock extends BlockBase {
       '#description' => '',
       '#default_value' => $this->configuration['link']['url'],
     ];
-    $form['background_image'] = array(
+    $form['background_image'] = [
       '#type' => 'entity_browser',
       '#entity_browser' => 'media_browser_modal',
       '#cardinality' => 1,
@@ -102,7 +102,7 @@ class HomePageFeatureBlock extends BlockBase {
       '#after_build' => [
         'bene_media_inject_entity_browser_count',
       ],
-    );
+    ];
 
     return $form;
   }
