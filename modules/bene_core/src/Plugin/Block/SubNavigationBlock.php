@@ -81,14 +81,16 @@ class SubNavigationBlock extends BlockBase {
     $page_child_links = [];
 
     $page_children = $this->getChildMenuLinks();
-    foreach ($page_children as $page_child) {
-      $page_child_links[] = Link::createFromRoute($page_child['title'], $page_child['route_name'], $page_child['route_parameters']);
-    }
+    if (!empty($page_children)) {
+      foreach ($page_children as $page_child) {
+        $page_child_links[] = Link::createFromRoute($page_child['title'], $page_child['route_name'], $page_child['route_parameters']);
+      }
 
-    $build['page_children'] = [
-      '#theme' => 'item_list',
-      '#items' => $page_child_links,
-    ];
+      $build['page_children'] = [
+        '#theme' => 'item_list',
+        '#items' => $page_child_links,
+      ];
+    }
 
     return $build;
   }
