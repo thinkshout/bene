@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: feature_full_width_l
+label: 'Feature Full Width-L'
+effects:
+  3cbccc1d-8750-42e1-82d5-223c17bd290c:
+    uuid: 3cbccc1d-8750-42e1-82d5-223c17bd290c
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 550

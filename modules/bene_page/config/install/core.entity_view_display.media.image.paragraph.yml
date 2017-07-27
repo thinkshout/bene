@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.paragraph
+    - field.field.media.image.image
+    - media_entity.bundle.image
+    - responsive_image.styles.full_width_feature
+  module:
+    - responsive_image
+id: media.image.paragraph
+targetEntityType: media
+bundle: image
+mode: paragraph
+content:
+  image:
+    type: responsive_image
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: full_width_feature
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

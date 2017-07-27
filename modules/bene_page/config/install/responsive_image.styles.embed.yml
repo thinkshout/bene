@@ -2,32 +2,26 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.header_l
-    - image.style.header_m
-    - image.style.header_s
-    - image.style.header_xl
-id: header
-label: Header
+    - image.style.embed_l
+    - image.style.embed_m
+    - image.style.embed_s
+id: embed
+label: Embed
 image_style_mappings:
-  -
-    breakpoint_id: bene.xlarge
-    multiplier: 1x
-    image_mapping_type: image_style
-    image_mapping: header_xl
   -
     breakpoint_id: bene.large
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: header_l
+    image_mapping: embed_l
   -
     breakpoint_id: bene.medium
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: header_m
+    image_mapping: embed_m
   -
     breakpoint_id: bene.small
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: header_s
+    image_mapping: embed_s
 breakpoint_group: bene_base
-fallback_image_style: header_s
+fallback_image_style: embed_s
