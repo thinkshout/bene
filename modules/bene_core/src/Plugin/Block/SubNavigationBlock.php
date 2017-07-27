@@ -59,10 +59,19 @@ class SubNavigationBlock extends BlockBase {
       '#items' => $breadcrumb_links,
     ];
 
-    $build['page_title'] = [
-      '#type' => 'markup',
-      '#markup' => $this->getPageTitle(),
-    ];
+    // Add current page title.
+    $page_title = $this->getPageTitle();
+    // Account for the page title being returned as either a string or render
+    // array.
+    if (is_array($page_title)) {
+      $build['page_title'] = $page_title;
+    }
+    else {
+      $build['page_title'] = [
+        '#type' => 'markup',
+        '#markup' => $this->getPageTitle(),
+      ];
+    }
 
     $build['page_children'] = [];
 
@@ -86,8 +95,10 @@ class SubNavigationBlock extends BlockBase {
   /**
    * Gets the title of the current page.
    *
-   * @return string
-   *   The page title.
+   * @return array or string
+   *   The page title as a string or render array.
+   *
+   * @see https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Controller%21TitleResolver.php/class/TitleResolver/8.2.x
    */
   private function getPageTitle() {
     /** @var \Drupal\Core\Routing\RouteMatch $current_route */
