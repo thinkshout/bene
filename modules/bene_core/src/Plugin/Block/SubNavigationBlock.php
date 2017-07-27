@@ -61,6 +61,11 @@ class SubNavigationBlock extends BlockBase {
 
     $build['breadcrumbs'] = [
       '#theme' => 'item_list',
+      '#wrapper_attributes' => [
+        'class' => [
+          'bene-subnav-breadcrumbs',
+        ],
+      ],
       '#items' => $breadcrumb_links,
     ];
 
@@ -75,6 +80,8 @@ class SubNavigationBlock extends BlockBase {
       $build['page_title'] = [
         '#type' => 'markup',
         '#markup' => $this->getPageTitle(),
+        '#prefix' => '<div class="bene-subnav-page-title">',
+        '#suffix' => '</div>',
       ];
     }
 
@@ -88,6 +95,11 @@ class SubNavigationBlock extends BlockBase {
 
       $build['page_children'] = [
         '#theme' => 'item_list',
+        '#wrapper_attributes' => [
+          'class' => [
+            'bene-subnav-children',
+          ],
+        ],
         '#items' => $page_child_links,
       ];
     }
