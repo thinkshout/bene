@@ -63,44 +63,77 @@ class HomePageFeatureBlock extends BlockBase {
       '#description' => '',
       '#default_value' => $this->configuration['link']['url'],
     ];
+
+    // TODO: Is this the best way to use an entity reference field with a block?
     $form['background_image'] = [
-      '#type' => 'entity_browser',
-      '#entity_browser' => 'media_browser_modal',
-      '#cardinality' => 1,
-      '#selection_mode' => 'selection_append',
-      '#default_value' => [],
-      '#entity_browser_validators' => [
-        'entity_type' => [
-          'type' => 'media',
+      '#title' => 'Background image',
+      '#description' => '',
+      '#field_parents' => [],
+      '#required' => FALSE,
+      '#delta' => 0,
+      '#id' => 'edit-field-background-image-media',
+      '#type' => 'details',
+      '#open' => TRUE,
+      'target_id' => [
+        '#type' => 'hidden',
+        '#id' => 'edit-field-background-image-media-target-id',
+        '#attributes' => [
+          'id' => 'edit-field-background-image-media-target-id',
+        ],
+        '#default_value' => '',
+        '#ajax' => [
+          'callback' => [
+            0 => 'Drupal\\bene_media\\Plugin\\Field\\FieldWidget\\EntityReferenceBrowserWidget',
+            1 => 'updateWidgetCallback',
+          ],
+          'wrapper' => 'edit-field-background-image-media',
+          'event' => 'entity_browser_value_updated',
         ],
       ],
-      '#widget_context' => [
-        'target_bundles' => [
-          'image' => 'image',
+      'entity_browser' => [
+        '#type' => 'entity_browser',
+        '#entity_browser' => 'media_browser_modal',
+        '#cardinality' => 1,
+        '#selection_mode' => 'selection_append',
+        '#default_value' => [],
+        '#entity_browser_validators' => [
+          'entity_type' => [
+            'type' => 'media',
+          ],
         ],
-      ],
-      '#custom_hidden_id' => 'background-image-media',
-      '#process' => [
-        0 => [
-          '\Drupal\entity_browser\Element\EntityBrowserElement',
-          'processEntityBrowser',
+        '#widget_context' => [
+          'target_bundles' => [
+            'image' => 'image',
+          ],
         ],
-        1 => [
-          'Drupal\bene_media\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
-          'processEntityBrowser',
+        '#custom_hidden_id' => 'edit-field-background-image-media-target-id',
+        '#process' => [
+          0 => [
+            0 => '\\Drupal\\entity_browser\\Element\\EntityBrowserElement',
+            1 => 'processEntityBrowser',
+          ],
+          1 => [
+            0 => 'Drupal\\bene_media\\Plugin\\Field\\FieldWidget\\EntityReferenceBrowserWidget',
+            1 => 'processEntityBrowser',
+          ],
         ],
       ],
       '#attached' => [
         'library' => [
-          'entity_browser/common',
+          0 => 'entity_browser/entity_reference',
         ],
       ],
-      '#value_callback' => [
-        'Drupal\entity_browser\Element\EntityBrowserElement',
-        'valueCallback',
-      ],
-      '#after_build' => [
-        'bene_media_inject_entity_browser_count',
+      'current' => [
+        '#theme_wrappers' => [
+          0 => 'container',
+        ],
+        '#attributes' => [
+          'class' => [
+            0 => 'entities-list',
+          ],
+        ],
+        '#prefix' => '<p>You can select one media.</p>',
+        'items' => [],
       ],
     ];
 
@@ -118,6 +151,13 @@ class HomePageFeatureBlock extends BlockBase {
       'label' => $link['label'],
       'url' => $link['url'],
     ];
+
+    // Saving the background image entity reference value as a string here,
+    // to be converted when rendered. Looks like this:
+    // media:4
+    // TODO: Better way to do this?
+    $background_image = $form_state->getValue('background_image');
+    $this->configuration['background-image'] = $background_image['target_id'];
   }
 
   /**
