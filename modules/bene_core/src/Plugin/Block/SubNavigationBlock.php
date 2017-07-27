@@ -11,7 +11,7 @@ use Drupal\Core\Link;
  *
  * @Block(
  *  id = "bene_sub_navigation_block",
- *  admin_label = @Translation("Bene Sub Navigation"),
+ *  admin_label = @Translation("Bene sub navigation"),
  *  category = @Translation("Bene")
  * )
  */
