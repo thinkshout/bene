@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.header
+    - field.field.media.image.image
+    - media_entity.bundle.image
+    - responsive_image.styles.header
+  module:
+    - picture_background_formatter
+id: media.image.header
+targetEntityType: media
+bundle: image
+mode: header
+content:
+  image:
+    type: picture_background_formatter
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: header
+      selector: hero-image
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true
