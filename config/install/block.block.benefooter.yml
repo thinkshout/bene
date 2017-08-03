@@ -19,6 +19,12 @@ settings:
   address: '433 NW 4th Avenue, Portland, OR 97209'
   phone: '(503) 223-4956'
   email: info@synergygive.org
+  additional_contact:
+    value: '<p>Photograph by Some Person</p>'
+    format: restricted_html
+  additional_footer:
+    value: '<p>Office hours: 8-4p Pacific</p>'
+    format: restricted_html
   copyright: '2016 SynergyGive'
   facebook: ''
   google: ''
