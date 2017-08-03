@@ -127,7 +127,7 @@ textarea {
 }
 
 input[type='submit'] {
-  @include button;
+  @include button($white,$bright-blue);
   border: none;
 }
 

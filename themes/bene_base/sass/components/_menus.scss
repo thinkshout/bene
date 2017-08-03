@@ -132,7 +132,7 @@
       }
     }
     &:last-child a {
-      @include button;
+      @include button($white,$bright-blue);
       top: 6px;
       font-weight: 700;
       letter-spacing: 0;
