@@ -21,5 +21,9 @@
   .region-footer {
     @include outer-container;
     max-width: 100%;
+  }
+
+  .region-footer,
+  .site-header {
     padding: 0 2%;
   }

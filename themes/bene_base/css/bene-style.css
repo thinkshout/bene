@@ -250,8 +250,7 @@ fieldset {
   max-width: 112.5rem;
   margin-left: auto;
   margin-right: auto;
-  max-width: 100%;
-  padding: 0 2%; }
+  max-width: 100%; }
   #site-wrapper > header::after,
   .site_branding::after,
   .region-content::after,
@@ -259,6 +258,10 @@ fieldset {
     clear: both;
     content: "";
     display: table; }
+
+.region-footer,
+.site-header {
+  padding: 0 2%; }
 
 body.path-user .region.region-content,
 body.user-logged-in .region.region-content {
@@ -546,6 +549,37 @@ input[type='submit'] {
     .user-register-form:last-child,
     .user-pass:last-child {
       margin-right: 0; } }
+.block-hero {
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 49vw;
+  /* This sets the aspect ratio */
+  justify-content: center;
+  width: 100vw; }
+  @media (min-width: 769px) and (max-width: 1239px) {
+    .block-hero {
+      height: 24vw; } }
+  @media (min-width: 769px) {
+    .block-hero {
+      height: 24vw; } }
+  .block-hero h1, .block-hero h2 {
+    flex: 0 1 auto;
+    color: white;
+    font-size: 2rem;
+    line-height: 1;
+    margin-top: 0;
+    text-align: center;
+    text-shadow: 2px 2px 10px #000;
+    text-transform: uppercase; }
+    @media (min-width: 769px) and (max-width: 1239px) {
+      .block-hero h1, .block-hero h2 {
+        font-size: 3.75rem; } }
+    @media (min-width: 769px) {
+      .block-hero h1, .block-hero h2 {
+        font-size: 3.75rem; } }
+
 .block-system-branding-block {
   text-align-last: center;
   font-style: italic;
