@@ -99,6 +99,9 @@
       top: rem(25);
       width: rem(9);
     }
+    &.is-active {
+      color: $white;
+    }
   }
 }
 .mobile-nav .menu--utility .menu li {
@@ -114,6 +117,9 @@
     background-color: $blue;
     color: $black;
     font-weight: 600;
+    &.is-active {
+      color: $white;
+    }
   }
 }
 

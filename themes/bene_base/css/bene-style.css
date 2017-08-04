@@ -794,6 +794,8 @@ input[type='submit'] {
     right: 2.0625rem;
     top: 1.5625rem;
     width: 0.5625rem; }
+  .mobile-nav .menu a.is-active {
+    color: #FFF; }
 
 .mobile-nav .menu--utility .menu li a {
   font-size: 0.9375rem;
@@ -805,6 +807,8 @@ input[type='submit'] {
   background-color: #129FB5;
   color: #000;
   font-weight: 600; }
+  .mobile-nav .menu--utility .menu li:last-child a.is-active {
+    color: #FFF; }
 
 @media (min-width: 769px) {
   .block-system-branding-block {
