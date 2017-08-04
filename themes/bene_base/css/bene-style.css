@@ -188,6 +188,20 @@ fieldset {
   display: flex;
   flex-direction: column; }
 
+.block-bene-footer-block {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-between; }
+  .block-bene-footer-block .copyright {
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+
 .site-header {
   display: flex;
   min-height: 101px; }
@@ -386,6 +400,41 @@ body.user-logged-in .region.region-content {
 .field--name-field-intro {
   padding: 2%;
   text-align: center; }
+
+.block-bene-footer-block .social-links {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap; }
+  .block-bene-footer-block .social-links a {
+    background-color: #50CFE3;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 62% 62%;
+    border-radius: 50%;
+    display: inline-block;
+    height: 2.5rem;
+    margin-right: 0.625rem;
+    position: relative;
+    text-indent: -9999px;
+    width: 2.5rem; }
+    .block-bene-footer-block .social-links a:hover, .block-bene-footer-block .social-links a:focus {
+      background-color: #1e9db1; }
+  .block-bene-footer-block .social-links .facebook {
+    background-image: url("../images/svgs/facebook-f.svg"); }
+  .block-bene-footer-block .social-links .google {
+    background-image: url("../images/svgs/google-plus.svg"); }
+  .block-bene-footer-block .social-links .instagram {
+    background-image: url("../images/svgs/instagram.svg"); }
+  .block-bene-footer-block .social-links .linkedin {
+    background-image: url("../images/svgs/linkedin.svg"); }
+  .block-bene-footer-block .social-links .pinterest {
+    background-image: url("../images/svgs/pinterest-p.svg"); }
+  .block-bene-footer-block .social-links .tumblr {
+    background-image: url("../images/svgs/tumblr.svg"); }
+  .block-bene-footer-block .social-links .twitter {
+    background-image: url("../images/svgs/twitter.svg"); }
+  .block-bene-footer-block .social-links .youtube {
+    background-image: url("../images/svgs/youtube-play.svg"); }
 
 input[type="search"], textarea {
   -webkit-appearance: none;

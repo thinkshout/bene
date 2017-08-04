@@ -14,7 +14,7 @@ bundle: image
 mode: header
 content:
   image:
-    type: picture_background_formatter
+    type: picture_background_formatter_media
     weight: 0
     label: hidden
     settings:

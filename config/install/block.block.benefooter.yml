@@ -8,7 +8,7 @@ dependencies:
 id: benefooter
 theme: bene_child
 region: footer
-weight: 0
+weight: -6
 provider: null
 plugin: bene_footer_block
 settings:

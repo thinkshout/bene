@@ -4,6 +4,23 @@
   flex-direction: column;
 }
 
+.block-bene-footer-block {
+  margin-bottom: rem(24);
+  margin-top: rem(24);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-between;
+
+  .copyright {
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
 // Specific ranges - use sparingly.
 // Mobile - things specifically under 400px.
 @include mq(mobile) {  }
