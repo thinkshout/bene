@@ -48,7 +48,7 @@
       border-radius: 50%;
       display: inline-block;
       height: rem($social-icon-size);
-      margin-right: rem(10);
+      margin-left: rem(10);
       position: relative;
       text-indent: -9999px;
       width: rem($social-icon-size);
@@ -67,7 +67,6 @@
   }
 
   .copyright {
-
     font-size: rem(12);
   }
 }

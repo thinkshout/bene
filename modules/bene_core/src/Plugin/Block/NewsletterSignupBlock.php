@@ -103,19 +103,26 @@ class NewsletterSignupBlock extends BlockBase {
     switch ($this->configuration['style']) {
       case 'external':
         // External link.
-        $build['title'] = [
+        $build['external'] = [
+          '#type' => 'container',
+          '#weight' => 1,
+          '#attributes' => [
+            'class' => 'external-newsletter',
+          ],
+        ];
+        $build['external']['title'] = [
           '#type' => 'markup',
           '#markup' => $this->configuration['title'],
           '#prefix' => '<h4>',
           '#suffix' => '</h4>',
         ];
-        $build['signup_text'] = [
+        $build['external']['signup_text'] = [
           '#type' => 'markup',
           '#markup' => $this->configuration['signup_text'],
           '#prefix' => '<p>',
           '#suffix' => '</p>',
         ];
-        $build['link'] = [
+        $build['external']['link'] = [
           '#type' => 'link',
           '#title' => $this->configuration['external_link_label'],
           '#url' => Url::fromUri($this->configuration['external_link']),
@@ -126,6 +133,13 @@ class NewsletterSignupBlock extends BlockBase {
         // Embedded link.
         // TODO: Define "Embedded" display. On hold per GitHub issue #69.
         $build = [];
+        $build['embedded'] = [
+          '#type' => 'container',
+          '#weight' => 1,
+          '#attributes' => [
+            'class' => 'embedded-newsletter',
+          ],
+        ];
         break;
 
       default:

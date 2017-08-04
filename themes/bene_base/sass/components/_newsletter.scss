@@ -1,24 +1,28 @@
 // Default Styles (Mobile First!)
-.region-footer .bene-contact-links .fieldset-wrapper {
+.external-newsletter {
+  padding: rem(12);
+  background-color: $blue;
+  color: $white;
   display: flex;
   flex-direction: column;
-}
-
-.block-bene-footer-block {
-  padding: 0 2%;
-  margin-bottom: rem(24);
-  margin-top: rem(24);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  position: relative;
-  justify-content: space-between;
-
-  .copyright {
-    text-align: right;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: $white;
+    margin: rem(6) 0;
+  }
+  a {
+    color: $black;
+    &:after {
+      @include all-transition;
+      content: ' →';
+      display: inline-block;
+      position: relative;
+      left: rem(4);
+    }
+    &:hover:after {
+      left: rem(8);
+    }
   }
 }
 
