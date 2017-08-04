@@ -1,10 +1,22 @@
 // Default Styles (Mobile First!)
 .block-bene-footer-block {
 
+  .menu {
+    a {
+      font-size: rem(14);
+      color: $black;
+      font-weight: 600;
+      &:hover, &:focus, &.is-active {
+        color: $blue;
+      }
+    }
+  }
+
+
   .social-links {
     display: flex;
-    justify-content: flex-end;
     flex-wrap: wrap;
+    justify-content: flex-end;
     a {
       background-color: $social-icon-color;
       background-position: center center;

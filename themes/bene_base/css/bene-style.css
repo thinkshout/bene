@@ -8,11 +8,12 @@ html {
 /* Colors */
 /**
   * Fonts
-  * Open+Sans:300i,400,600,700,800
+  * Open+Sans:300,300i,400,600,700,800
   *
-  * light italic: 300
+  * light: 300
+  * light italic: 300 + style: italic
   * regular:      400
-  * semi-bold:    500
+  * semi-bold:    600
   * bold:         700
   * extrabold:    800
   *
@@ -155,7 +156,7 @@ table, table.tablesaw {
     padding: 1.125rem 2.625rem;
     text-align: left; }
     table th strong, table tr strong, table td strong, table tr:first-child th strong, table.tablesaw th strong, table.tablesaw tr strong, table.tablesaw td strong, table.tablesaw tr:first-child th strong {
-      font-weight: 500; }
+      font-weight: 600; }
   table th, table tr:first-child th, table.tablesaw th, table.tablesaw tr:first-child th {
     font-weight: 700;
     text-transform: uppercase;
@@ -398,13 +399,24 @@ body.user-logged-in .region.region-content {
       transform: rotate(0deg); }
 
 .field--name-field-intro {
+  font-size: 1.125rem;
+  font-weight: 300;
   padding: 2%;
   text-align: center; }
 
+@media (min-width: 769px) {
+  .field--name-field-intro {
+    font-size: 1.375rem; } }
+.block-bene-footer-block .menu a {
+  font-size: 0.875rem;
+  color: #000;
+  font-weight: 600; }
+  .block-bene-footer-block .menu a:hover, .block-bene-footer-block .menu a:focus, .block-bene-footer-block .menu a.is-active {
+    color: #129FB5; }
 .block-bene-footer-block .social-links {
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: flex-end; }
   .block-bene-footer-block .social-links a {
     background-color: #50CFE3;
     background-position: center center;
@@ -443,7 +455,7 @@ input[type="search"], textarea {
   box-sizing: border-box;
   color: #000;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   height: 3.125rem;
   padding: 1.125rem 3.125rem 1.125rem 1.375rem;
   width: 100%; }
@@ -524,7 +536,7 @@ textarea {
   box-sizing: border-box;
   color: #000;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   height: 3.125rem;
   padding: 1.125rem 3.125rem 1.125rem 1.375rem;
   width: 100%; }
@@ -619,8 +631,8 @@ input[type='submit'] {
     .block-hero {
       height: 24vw; } }
   .block-hero h1, .block-hero h2 {
-    flex: 0 1 auto;
     color: white;
+    flex: 0 1 auto;
     font-size: 2rem;
     line-height: 1;
     margin-top: 0;
@@ -635,22 +647,22 @@ input[type='submit'] {
         font-size: 3.75rem; } }
 
 .block-system-branding-block {
-  text-align-last: center;
+  font-size: 1.125rem;
   font-style: italic;
   font-weight: 300;
-  font-size: 1.125rem; }
+  text-align-last: center; }
 
 .mobile-menu-toggle {
-  height: 50px;
   display: inline-block;
   float: right;
+  height: 50px;
   width: 80px; }
   .mobile-menu-toggle div {
     height: 100%;
     position: relative;
+    top: -6px;
     width: 100%;
-    z-index: 9999;
-    top: -6px; }
+    z-index: 9999; }
     .mobile-menu-toggle div span {
       background-color: #50CFE3;
       display: block;
@@ -682,39 +694,39 @@ input[type='submit'] {
     background-color: transparent; }
     .mobile-menu-toggle.active div span:before, .mobile-menu-toggle.active div span:after {
       background: #50CFE3;
-      transition: transform 0.3s;
-      transform: rotate(45deg) translateY(0); }
+      transform: rotate(45deg) translateY(0);
+      transition: transform 0.3s; }
     .mobile-menu-toggle.active div span:after {
       transform: rotate(-45deg) translateY(0); }
 
 .mobile-nav .menu {
+  background-color: #000;
+  left: 0;
   position: absolute;
   top: 6.3125rem;
-  left: 0;
-  width: 100%;
-  background-color: #000; }
+  width: 100%; }
   .mobile-nav .menu a {
-    display: inline-block;
-    width: 100%;
     border-bottom: 1px solid #50CFE3;
-    padding: 1.5625rem 2.0625rem;
     color: #50CFE3;
-    text-transform: uppercase;
-    font-weight: 600;
+    display: inline-block;
     font-size: 1.125rem;
-    position: relative; }
+    font-weight: 600;
+    padding: 1.5625rem 2.0625rem;
+    position: relative;
+    text-transform: uppercase;
+    width: 100%; }
     .mobile-nav .menu a:after {
       -webkit-transition: all 0.3s linear;
       -moz-transition: all 0.3s linear;
       transition: all 0.3s linear;
       background: transparent url("../images/svgs/line-arrow.svg") no-repeat center center/cover;
       content: "";
-      position: absolute;
       display: inline-block;
+      height: 1.1875rem;
+      position: absolute;
       right: 2.0625rem;
       top: 1.5625rem;
-      width: 0.5625rem;
-      height: 1.1875rem; }
+      width: 0.5625rem; }
 
 .mobile-nav .menu--utility {
   display: none; }
@@ -731,7 +743,7 @@ input[type='submit'] {
   .desktop-nav .menu--utility .menu-item a {
     color: #7C7C7C;
     font-size: 0.875rem; }
-    .desktop-nav .menu--utility .menu-item a:hover, .desktop-nav .menu--utility .menu-item a:active, .desktop-nav .menu--utility .menu-item a.nice-select.open {
+    .desktop-nav .menu--utility .menu-item a:hover, .desktop-nav .menu--utility .menu-item a:focus, .desktop-nav .menu--utility .menu-item a.is-active {
       color: #129FB5; }
   .desktop-nav .menu--utility .menu-item:last-child a {
     -webkit-transition: background-color 0.3s linear, color 0.3s linear;
@@ -748,11 +760,11 @@ input[type='submit'] {
     padding: 1.25rem 1.875rem;
     position: relative;
     text-transform: uppercase;
-    top: 6px;
+    font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0;
-    font-size: 0.75rem;
-    padding: 0.625rem 0.9375rem; }
+    padding: 0.625rem 0.9375rem;
+    top: 6px; }
     .desktop-nav .menu--utility .menu-item:last-child a:hover {
       background-color: #1e9db1; }
 
@@ -761,8 +773,10 @@ input[type='submit'] {
     font-weight: 700;
     letter-spacing: 0.03125rem;
     text-transform: uppercase; }
-    .desktop-nav .menu--main .menu-item a:hover, .desktop-nav .menu--main .menu-item a:active, .desktop-nav .menu--main .menu-item a.nice-select.open {
-      color: #129FB5; } }
+    .desktop-nav .menu--main .menu-item a:hover, .desktop-nav .menu--main .menu-item a:focus, .desktop-nav .menu--main .menu-item a.is-active {
+      color: #129FB5; }
+    .desktop-nav .menu--main .menu-item a.is-active {
+      cursor: default; } }
 .nice-select {
   -webkit-tap-highlight-color: transparent;
   background-color: #5C5B5B;
