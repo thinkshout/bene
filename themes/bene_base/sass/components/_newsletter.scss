@@ -7,6 +7,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  h4, p, a {
+    max-width: 94%;
+    margin: 0 auto;
+    text-align: center;
+  }
   p {
     color: $white;
     margin: rem(6) 0;

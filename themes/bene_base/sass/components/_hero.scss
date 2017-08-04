@@ -1,4 +1,5 @@
 .block-hero {
+  visibility: hidden;
   align-items: center;
   background-color: $soft-cyan;
   background-repeat: no-repeat;
@@ -27,6 +28,15 @@
     }
     @include mq(desktop) {
       font-size: rem(60);
+    }
+  }
+  &.no-bgimage {
+    height: rem(100);
+    @include mq(tablet) {
+      height: rem(120);
+    }
+    @include mq(desktop) {
+      height: rem(120);
     }
   }
 }

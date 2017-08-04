@@ -67,13 +67,18 @@
     }
   }
 }
-.mobile-nav .menu {
-  background-color: $black;
-  left: 0;
-  position: absolute;
-  top: rem(101);
-  width: 100%;
-  a {
+.mobile-nav {
+  .region-primary-nav {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: $black;
+    left: 0;
+    position: absolute;
+    top: rem(101);
+    width: 100%;
+    z-index: 10;
+  }
+  .menu a {
     border-bottom: 1px solid $bright-blue;
     color: $bright-blue;
     display: inline-block;
@@ -96,8 +101,20 @@
     }
   }
 }
-.mobile-nav .menu--utility {
-  display: none;
+.mobile-nav .menu--utility .menu li {
+  a {
+    font-size: rem(15);
+    font-weight: 400;
+    padding: rem(15) rem(33);
+    &:after {
+      top: rem(15);
+    }
+  }
+  &:last-child a {
+    background-color: $blue;
+    color: $black;
+    font-weight: 600;
+  }
 }
 
 // Specific ranges - use sparingly.
