@@ -2,6 +2,7 @@
 .block-bene-footer-block {
 
   .menu {
+    flex: 0 1 20%;
     a {
       font-size: rem(14);
       color: $black;
@@ -12,6 +13,28 @@
     }
   }
 
+  .contact-links {
+    flex: 0 1 20%;
+    font-size: rem(13);
+    .address {
+      white-space: pre-line;
+    }
+    .phone, .email, .additional-contact {
+      display: block;
+      p {
+        margin: rem(5) 0;
+        font-size: rem(12);
+      }
+    }
+  }
+
+  .additional-footer {
+    flex: 0 1 20%;
+    p {
+      margin: 0 rem(5) 0;
+      font-size: rem(14);
+    }
+  }
 
   .social-links {
     display: flex;
@@ -41,6 +64,11 @@
     .tumblr { background-image: url('../images/svgs/tumblr.svg'); }
     .twitter { background-image: url('../images/svgs/twitter.svg'); }
     .youtube { background-image: url('../images/svgs/youtube-play.svg'); }
+  }
+
+  .copyright {
+
+    font-size: rem(12);
   }
 }
 
