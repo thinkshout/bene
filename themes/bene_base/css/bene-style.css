@@ -883,6 +883,16 @@ input[type='submit'] {
       left: 0.25rem; }
     .external-newsletter a:hover:after {
       left: 0.5rem; }
+  .external-newsletter a.button {
+    background-color: #FFF;
+    font-size: 0.75rem;
+    text-transform: none;
+    padding: 0.9375rem 1.25rem;
+    font-weight: 600; }
+    .external-newsletter a.button:after {
+      content: none; }
+    .external-newsletter a.button:hover {
+      background-color: #82ffff; }
 
 .nice-select {
   -webkit-tap-highlight-color: transparent;

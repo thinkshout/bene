@@ -110,23 +110,38 @@ class NewsletterSignupBlock extends BlockBase {
             'class' => 'external-newsletter',
           ],
         ];
-        $build['external']['title'] = [
-          '#type' => 'markup',
-          '#markup' => $this->configuration['title'],
-          '#prefix' => '<h4>',
-          '#suffix' => '</h4>',
-        ];
-        $build['external']['signup_text'] = [
-          '#type' => 'markup',
-          '#markup' => $this->configuration['signup_text'],
-          '#prefix' => '<p>',
-          '#suffix' => '</p>',
-        ];
-        $build['external']['link'] = [
-          '#type' => 'link',
-          '#title' => $this->configuration['external_link_label'],
-          '#url' => Url::fromUri($this->configuration['external_link']),
-        ];
+        if ( $this->configuration['title'] ) {
+          $build['external']['title'] = [
+            '#type' => 'markup',
+            '#markup' => $this->configuration['title'],
+            '#prefix' => '<h4>',
+            '#suffix' => '</h4>',
+          ];
+        }
+        if ( $this->configuration['signup_text'] ) {
+          $build['external']['signup_text'] = [
+            '#type' => 'markup',
+            '#markup' => $this->configuration['signup_text'],
+            '#prefix' => '<p>',
+            '#suffix' => '</p>',
+          ];
+        }
+        if ( $this->configuration['signup_text'] || $this->configuration['title'] ) {
+          $build['external']['link'] = [
+            '#type' => 'link',
+            '#title' => $this->configuration['external_link_label'],
+            '#url' => Url::fromUri($this->configuration['external_link']),
+            '#attributes' => [
+              'class' => 'button',
+            ],
+          ];
+        } else {
+          $build['external']['link'] = [
+            '#type' => 'link',
+            '#title' => $this->configuration['external_link_label'],
+            '#url' => Url::fromUri($this->configuration['external_link']),
+          ];
+        };
         break;
 
       case 'embedded':

@@ -29,6 +29,19 @@
       left: rem(8);
     }
   }
+  a.button {
+    background-color: $white;
+    font-size: rem(12);
+    text-transform: none;
+    padding: rem(15) rem(20);
+    font-weight: 600;
+    &:after {
+      content: none;
+    }
+    &:hover {
+      background-color: $bright-blue + 50;
+    }
+  }
 }
 
 // Specific ranges - use sparingly.
