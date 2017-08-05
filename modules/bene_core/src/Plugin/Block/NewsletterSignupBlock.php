@@ -110,7 +110,7 @@ class NewsletterSignupBlock extends BlockBase {
             'class' => 'external-newsletter',
           ],
         ];
-        if ( $this->configuration['title'] ) {
+        if ($this->configuration['title']) {
           $build['external']['title'] = [
             '#type' => 'markup',
             '#markup' => $this->configuration['title'],
@@ -118,7 +118,7 @@ class NewsletterSignupBlock extends BlockBase {
             '#suffix' => '</h4>',
           ];
         }
-        if ( $this->configuration['signup_text'] ) {
+        if ($this->configuration['signup_text']) {
           $build['external']['signup_text'] = [
             '#type' => 'markup',
             '#markup' => $this->configuration['signup_text'],
@@ -126,7 +126,7 @@ class NewsletterSignupBlock extends BlockBase {
             '#suffix' => '</p>',
           ];
         }
-        if ( $this->configuration['signup_text'] || $this->configuration['title'] ) {
+        if ($this->configuration['signup_text'] || $this->configuration['title']) {
           $build['external']['link'] = [
             '#type' => 'link',
             '#title' => $this->configuration['external_link_label'],
@@ -135,7 +135,8 @@ class NewsletterSignupBlock extends BlockBase {
               'class' => 'button',
             ],
           ];
-        } else {
+        }
+        else {
           $build['external']['link'] = [
             '#type' => 'link',
             '#title' => $this->configuration['external_link_label'],
