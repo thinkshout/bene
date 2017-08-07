@@ -460,10 +460,24 @@ body.user-logged-in .region.region-content {
       transform: rotate(0deg); }
 
 .page-node-type-page .field--name-field-intro {
-  font-size: 1.125rem;
-  font-weight: 300;
-  margin-top: 1.5rem;
-  text-align: center; }
+  margin-bottom: 1.5rem;
+  margin-top: 1rem; }
+  .page-node-type-page .field--name-field-intro h2 {
+    font-size: 2rem;
+    font-style: italic;
+    color: #50CFE3;
+    margin-top: 2rem;
+    font-weight: 600; }
+  .page-node-type-page .field--name-field-intro h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 1.125rem; }
+  .page-node-type-page .field--name-field-intro p {
+    font-size: 1.375rem;
+    font-weight: 300;
+    margin-top: 0.75rem;
+    line-height: 2.375rem; }
 .page-node-type-page .field--name-bene-content {
   clear: both; }
 .page-node-type-page .paragraph--type--media {
@@ -483,6 +497,32 @@ body.user-logged-in .region.region-content {
   margin-right: 2rem; }
 .page-node-type-page .paragraph--type--rich-text figure.align-right {
   margin-left: 2rem; }
+.page-node-type-page .paragraph--type--rich-text p,
+.page-node-type-page .paragraph--type--rich-text ol li,
+.page-node-type-page .paragraph--type--rich-text ul li {
+  color: #5C5B5B; }
+.page-node-type-page .paragraph--type--rich-text blockquote {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 80%; }
+  .page-node-type-page .paragraph--type--rich-text blockquote p {
+    margin: 0;
+    font-size: 1.625rem;
+    color: #50CFE3;
+    line-height: 2.4375rem;
+    font-style: italic;
+    font-weight: 600; }
+    .page-node-type-page .paragraph--type--rich-text blockquote p:before {
+      content: "“"; }
+    .page-node-type-page .paragraph--type--rich-text blockquote p:after {
+      content: "”"; }
+  .page-node-type-page .paragraph--type--rich-text blockquote:after {
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 25%;
+    height: 0.25rem;
+    background-color: #50CFE3; }
 
 @media (min-width: 769px) {
   .page-node-type-page .field--name-field-intro {

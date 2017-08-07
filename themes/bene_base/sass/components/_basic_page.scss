@@ -1,10 +1,27 @@
 // Default Styles (Mobile First!)
 .page-node-type-page {
   .field--name-field-intro {
-    font-size: rem(18);
-    font-weight: 300;
-    margin-top: rem(24);
-    text-align: center;
+    margin-bottom: rem(24);
+    margin-top: rem(16);
+    h2 {
+      font-size: rem(32);
+      font-style: italic;
+      color: $bright-blue;
+      margin-top: rem(32);
+      font-weight: 600;
+    }
+    h3 {
+      font-size: rem(24);
+      font-weight: 400;
+      margin-bottom: 0;
+      margin-top: rem(18);
+    }
+    p {
+      font-size: rem(22);
+      font-weight: 300;
+      margin-top: rem(12);
+      line-height: rem(38);
+    }
   }
   .field--name-bene-content {
     clear: both;
@@ -32,6 +49,39 @@
     }
     figure.align-right {
       margin-left: rem(32);
+    }
+    p,
+    ol li,
+    ul li {
+      color: $dark-grey;
+    }
+    blockquote {
+      text-align: center;
+      margin: rem(32) auto;
+      max-width: 80%;
+      p {
+        margin: 0;
+        font-size: rem(26);
+        color: $bright-blue;
+        line-height: rem(39);
+        font-style: italic;
+        font-weight: 600;
+        &:before {
+          content: "“";
+        }
+        &:after {
+          content: "”";
+        }
+      }
+
+      &:after {
+        content: "";
+        position: relative;
+        display: inline-block;
+        width: 25%;
+        height: rem(4);
+        background-color: $bright-blue;
+      }
     }
   }
 }
