@@ -71,8 +71,9 @@ p.standard,
 .region-content ul li,
 .region-content ol li {
   color: #000;
-  font-size: 0.875rem;
-  line-height: 1.9375rem; }
+  font-size: 1rem;
+  line-height: 1.9375rem;
+  font-weight: 400; }
 
 .region-content ol li {
   padding-bottom: 0;
@@ -466,11 +467,16 @@ body.user-logged-in .region.region-content {
 .page-node-type-page .field--name-field-intro {
   font-size: 1.125rem;
   font-weight: 300;
-  padding: 2%;
+  margin-top: 1.5rem;
   text-align: center; }
-.page-node-type-page p {
-  font-size: 1rem;
-  font-weight: 400; }
+.page-node-type-page .field--name-bene-content {
+  clear: both; }
+.page-node-type-page .paragraph--type--media {
+  width: 100%;
+  text-align: center;
+  font-size: 0.875rem;
+  font-style: italic;
+  margin: 1.5rem 0; }
 
 @media (min-width: 769px) {
   .page-node-type-page .field--name-field-intro {

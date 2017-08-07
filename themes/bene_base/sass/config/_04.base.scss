@@ -46,8 +46,9 @@ p.standard,
 .region-content ul li,
 .region-content ol li {
   color: $black;
-  font-size: rem(14);
+  font-size: rem(16);
   line-height: rem(31);
+  font-weight: 400;
 }
 .region-content ol li {
   padding-bottom: 0;

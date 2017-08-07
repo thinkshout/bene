@@ -3,12 +3,18 @@
   .field--name-field-intro {
     font-size: rem(18);
     font-weight: 300;
-    padding: 2%;
+    margin-top: rem(24);
     text-align: center;
   }
-  p {
-    font-size: rem(16);
-    font-weight: 400;
+  .field--name-bene-content {
+    clear: both;
+  }
+  .paragraph--type--media {
+    width: 100%;
+    text-align: center;
+    font-size: rem(14);
+    font-style: italic;
+    margin: rem(24) 0;
   }
 }
 
