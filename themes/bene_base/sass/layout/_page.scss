@@ -26,3 +26,22 @@
   .site-header {
     padding: 0 2%;
   }
+
+  .page-node-type-page {
+    .node__content .field--name-field-intro,
+    .field--name-bene-content .paragraph--type--rich-text {
+      clear: both;
+      padding: 0 2%;
+      @include mq(desktop) {
+        @include span-columns(8);
+        @include shift(2);
+      }
+    }
+    .field--name-bene-content .paragraph--type--media,
+    .field--name-bene-content .paragraph--type--feature-full-width,
+    .field--name-bene-content .paragraph--type--tiles {
+      clear: both;
+      padding: 0 2%;
+    }
+
+  }

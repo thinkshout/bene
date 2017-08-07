@@ -322,6 +322,27 @@ fieldset {
 .site-header {
   padding: 0 2%; }
 
+.page-node-type-page .node__content .field--name-field-intro,
+.page-node-type-page .field--name-bene-content .paragraph--type--rich-text {
+  clear: both;
+  padding: 0 2%; }
+  @media (min-width: 769px) {
+    .page-node-type-page .node__content .field--name-field-intro,
+    .page-node-type-page .field--name-bene-content .paragraph--type--rich-text {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%;
+      margin-left: 17.05961%; }
+      .page-node-type-page .node__content .field--name-field-intro:last-child,
+      .page-node-type-page .field--name-bene-content .paragraph--type--rich-text:last-child {
+        margin-right: 0; } }
+.page-node-type-page .field--name-bene-content .paragraph--type--media,
+.page-node-type-page .field--name-bene-content .paragraph--type--feature-full-width,
+.page-node-type-page .field--name-bene-content .paragraph--type--tiles {
+  clear: both;
+  padding: 0 2%; }
+
 body.path-user .region.region-content,
 body.user-logged-in .region.region-content {
   background-color: #FFF;
@@ -442,14 +463,17 @@ body.user-logged-in .region.region-content {
       -o-transform: rotate(0deg);
       transform: rotate(0deg); }
 
-.field--name-field-intro {
+.page-node-type-page .field--name-field-intro {
   font-size: 1.125rem;
   font-weight: 300;
   padding: 2%;
   text-align: center; }
+.page-node-type-page p {
+  font-size: 1rem;
+  font-weight: 400; }
 
 @media (min-width: 769px) {
-  .field--name-field-intro {
+  .page-node-type-page .field--name-field-intro {
     font-size: 1.375rem; } }
 .block-bene-footer-block .menu a {
   font-size: 0.875rem;

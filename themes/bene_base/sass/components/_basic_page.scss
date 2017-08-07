@@ -1,9 +1,15 @@
 // Default Styles (Mobile First!)
-.field--name-field-intro {
-  font-size: rem(18);
-  font-weight: 300;
-  padding: 2%;
-  text-align: center;
+.page-node-type-page {
+  .field--name-field-intro {
+    font-size: rem(18);
+    font-weight: 300;
+    padding: 2%;
+    text-align: center;
+  }
+  p {
+    font-size: rem(16);
+    font-weight: 400;
+  }
 }
 
 // Specific ranges - use sparingly.
@@ -19,8 +25,10 @@
 
 // Desktops - 769px or more. (This is the most common Media Query)
 @include mq(desktop) {
-  .field--name-field-intro {
-    font-size: rem(22)
+.page-node-type-page {
+    .field--name-field-intro {
+      font-size: rem(22)
+    }
   }
 }
 
