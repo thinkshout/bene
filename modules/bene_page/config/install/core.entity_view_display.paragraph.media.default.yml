@@ -6,7 +6,7 @@ dependencies:
     - field.field.paragraph.media.field_media
     - paragraphs.paragraphs_type.media
 id: paragraph.media.default
-targetEntityType: paragraph
+targetEntityType: thumbnail
 bundle: media
 mode: default
 content:
