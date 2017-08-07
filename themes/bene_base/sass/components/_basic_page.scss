@@ -15,6 +15,24 @@
     font-size: rem(14);
     font-style: italic;
     margin: rem(24) 0;
+    img {
+      max-width: 100%;
+    }
+  }
+  .paragraph--type--rich-text {
+    figure {
+      margin: rem(16) 0;
+    }
+    figcaption {
+      font-size: rem(14);
+      font-style: italic;
+    }
+    figure.align-left {
+      margin-right: rem(32);
+    }
+    figure.align-right {
+      margin-left: rem(32);
+    }
   }
 }
 

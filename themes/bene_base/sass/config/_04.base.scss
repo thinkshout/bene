@@ -42,17 +42,11 @@ h4 {
 }
 
 p,
-p.standard,
-.region-content ul li,
-.region-content ol li {
+p.standard {
   color: $black;
   font-size: rem(16);
   line-height: rem(31);
   font-weight: 400;
-}
-.region-content ol li {
-  padding-bottom: 0;
-  padding-left: rem(4);
 }
 
 a {
@@ -86,28 +80,29 @@ a.button {
   padding: 0;
   margin: 0 0 0 0;
   li {
-    padding-bottom: rem(24);
-    padding-left: rem(55);
-    text-indent: rem(-30);
-    color: $medium-grey;
+    padding-bottom: rem(14);
+    padding-left: rem(32);
+    text-indent: rem(-20);
+    color: $black;
     &:before {
-      color: $medium-grey;
+      color: $black;
       content: "•";
-      font-size: rem(12);
+      font-size: rem(16);
       line-height: 1;
-      padding-right: rem(25);
+      padding-right: rem(14);
       position: relative;
     }
   }
 }
 
 ol {
+    padding-left: rem(26);
   li {
-    padding-bottom: rem(24);
-    padding-left: rem(22);
+    padding-bottom: rem(14);
+    padding-left: rem(6);
     line-height: 1.4;
-    font-size: rem(18);
-    color: $medium-grey;
+    font-size: rem(16);
+    color: $black;
   }
 }
 
