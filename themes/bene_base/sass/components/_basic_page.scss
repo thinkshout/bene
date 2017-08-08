@@ -84,6 +84,53 @@
       }
     }
   }
+  .paragraph--type--feature-full-width {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100vw;
+    min-height: 38.2vw;
+    color: $white;
+    background-color: $blue;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: rem(24) rem(24) rem(36) rem(24);
+    position: relative;
+    &:before {
+      content: "";
+      background-color: rgba(0,0,0,0.4);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+    }
+    .field--name-field-title {
+      font-size: rem(36);
+      font-weight: 900;
+      z-index: 10;
+    }
+    .field--name-field-text {
+      z-index: 10;
+      p {
+        color: $white;
+        max-width: 65%;
+        margin: rem(32) auto;
+      }
+    }
+    .field--type-link {
+      z-index: 10;
+      a {
+        @include button($white, $bright-blue);
+        text-transform: none;
+        letter-spacing: 0;
+      }
+    }
+  }
 }
 
 // Specific ranges - use sparingly.
