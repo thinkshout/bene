@@ -42,5 +42,9 @@
     .field--name-bene-content .paragraph--type--tiles {
       clear: both;
     }
+    .paragraph--type--tiles {
+      @include outer-container;
+      max-width: rem(1440);
+    }
 
   }

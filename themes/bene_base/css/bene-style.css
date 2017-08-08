@@ -338,6 +338,15 @@ fieldset {
 .page-node-type-page .field--name-bene-content .paragraph--type--feature-full-width,
 .page-node-type-page .field--name-bene-content .paragraph--type--tiles {
   clear: both; }
+.page-node-type-page .paragraph--type--tiles {
+  max-width: 112.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90rem; }
+  .page-node-type-page .paragraph--type--tiles::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 body.path-user .region.region-content,
 body.user-logged-in .region.region-content {
@@ -474,10 +483,14 @@ body.user-logged-in .region.region-content {
     margin-bottom: 0;
     margin-top: 1.125rem; }
   .page-node-type-page .field--name-field-intro p {
-    font-size: 1.375rem;
+    font-size: 1.125rem;
     font-weight: 300;
     margin-top: 0.75rem;
-    line-height: 2.375rem; }
+    line-height: 2rem; }
+    @media (min-width: 769px) {
+      .page-node-type-page .field--name-field-intro p {
+        font-size: 1.375rem;
+        line-height: 2.375rem; } }
 .page-node-type-page .field--name-bene-content {
   clear: both; }
 .page-node-type-page .paragraph--type--media {
@@ -523,6 +536,8 @@ body.user-logged-in .region.region-content {
     width: 25%;
     height: 0.25rem;
     background-color: #50CFE3; }
+.page-node-type-page .paragraph--type--rich-text img {
+  max-width: 99%; }
 .page-node-type-page .paragraph--type--feature-full-width {
   background-size: cover;
   background-repeat: no-repeat;
@@ -555,8 +570,11 @@ body.user-logged-in .region.region-content {
     z-index: 10; }
     .page-node-type-page .paragraph--type--feature-full-width .field--name-field-text p {
       color: #FFF;
-      max-width: 65%;
+      max-width: 100%;
       margin: 2rem auto; }
+      @media (min-width: 769px) {
+        .page-node-type-page .paragraph--type--feature-full-width .field--name-field-text p {
+          max-width: 65%; } }
   .page-node-type-page .paragraph--type--feature-full-width .field--type-link {
     z-index: 10; }
     .page-node-type-page .paragraph--type--feature-full-width .field--type-link a {
@@ -1147,5 +1165,63 @@ input[type='submit'] {
   display: none; }
 .no-csspointerevents .nice-select.open .list {
   display: block; }
+
+.paragraph--type--tiles .field--name-field-tiles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem 1rem; }
+  @media (min-width: 1240px) {
+    .paragraph--type--tiles .field--name-field-tiles {
+      margin: 1.5rem auto; } }
+  .paragraph--type--tiles .field--name-field-tiles > .field__item {
+    display: flex;
+    flex: 1 1 auto;
+    text-align: center;
+    margin-bottom: 1.5rem; }
+    @media (min-width: 415px) and (max-width: 768px) {
+      .paragraph--type--tiles .field--name-field-tiles > .field__item {
+        flex: 0 1 calc(50% - 1rem);
+        min-width: 23.75rem; } }
+    @media (min-width: 769px) {
+      .paragraph--type--tiles .field--name-field-tiles > .field__item {
+        flex: 0 1 calc(33% - 1rem);
+        margin-bottom: 2.25rem;
+        min-width: 18.75rem; } }
+    @media (min-width: 1240px) {
+      .paragraph--type--tiles .field--name-field-tiles > .field__item {
+        margin-bottom: 3rem;
+        max-width: 23.75rem; } }
+    .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-image,
+    .paragraph--type--tiles .field--name-field-tiles > .field__item .bg-header {
+      background-color: #129FB5;
+      max-width: 23.75rem;
+      max-height: 14.25rem;
+      font-size: 0; }
+      .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-image img,
+      .paragraph--type--tiles .field--name-field-tiles > .field__item .bg-header img {
+        max-width: 100%; }
+    @media (min-width: 769px) {
+      .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-image,
+      .paragraph--type--tiles .field--name-field-tiles > .field__item .bg-header {
+        background-color: #129FB5;
+        width: 30.6vw;
+        height: 18.36vw; } }
+    .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.875rem;
+      margin-top: 1.75rem; }
+    .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-text p {
+      color: #5C5B5B;
+      line-height: 1.5rem;
+      margin-bottom: 0.75rem;
+      margin-top: 0.75rem; }
+    .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-link a {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-top: 0.75rem;
+      display: inline-block; }
 
 /*# sourceMappingURL=bene-style.css.map */
