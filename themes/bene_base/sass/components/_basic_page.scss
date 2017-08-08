@@ -51,12 +51,20 @@
       font-size: rem(14);
       font-style: italic;
     }
+    .embedded-entity.align-left,
     figure.align-left {
       margin-right: rem(32);
     }
+    .embedded-entity.align-right,
     figure.align-right {
       margin-left: rem(32);
     }
+
+    .embedded-entity.align-left,
+    .embedded-entity.align-right {
+      margin-bottom: rem(12);
+    }
+
     p,
     ol li,
     ul li {

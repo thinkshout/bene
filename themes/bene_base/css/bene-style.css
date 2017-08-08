@@ -542,10 +542,15 @@ body.user-logged-in .region.region-content {
 .page-node-type-page .paragraph--type--rich-text figcaption {
   font-size: 0.875rem;
   font-style: italic; }
+.page-node-type-page .paragraph--type--rich-text .embedded-entity.align-left,
 .page-node-type-page .paragraph--type--rich-text figure.align-left {
   margin-right: 2rem; }
+.page-node-type-page .paragraph--type--rich-text .embedded-entity.align-right,
 .page-node-type-page .paragraph--type--rich-text figure.align-right {
   margin-left: 2rem; }
+.page-node-type-page .paragraph--type--rich-text .embedded-entity.align-left,
+.page-node-type-page .paragraph--type--rich-text .embedded-entity.align-right {
+  margin-bottom: 0.75rem; }
 .page-node-type-page .paragraph--type--rich-text p,
 .page-node-type-page .paragraph--type--rich-text ol li,
 .page-node-type-page .paragraph--type--rich-text ul li {
