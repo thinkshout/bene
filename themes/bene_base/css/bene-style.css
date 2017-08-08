@@ -360,7 +360,6 @@ body.path-user .region.region-content,
 body.user-logged-in .region.region-content {
   background-color: #FFF;
   display: inline-block;
-  margin-bottom: -4px;
   width: 100%; }
 
 .toolbar .toolbar-bar {
@@ -494,6 +493,8 @@ body.user-logged-in .region.region-content {
       -o-transform: rotate(0deg);
       transform: rotate(0deg); }
 
+.page-node-type-page .region-content {
+  margin-bottom: 2rem; }
 .page-node-type-page .field--name-field-intro {
   margin-bottom: 1.5rem;
   margin-top: 1rem; }
@@ -624,6 +625,8 @@ body.user-logged-in .region.region-content {
         background-color: #1e9db1; }
 
 @media (min-width: 769px) {
+  .page-node-type-page .region-content {
+    margin-bottom: 3rem; }
   .page-node-type-page .field--name-field-intro {
     font-size: 1.375rem; } }
 .block-bene-footer-block .menu a {

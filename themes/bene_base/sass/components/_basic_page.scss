@@ -1,5 +1,8 @@
 // Default Styles (Mobile First!)
 .page-node-type-page {
+  .region-content {
+    margin-bottom: rem(32);
+  }
   .field--name-field-intro {
     margin-bottom: rem(24);
     margin-top: rem(16);
@@ -157,6 +160,9 @@
 // Desktops - 769px or more. (This is the most common Media Query)
 @include mq(desktop) {
 .page-node-type-page {
+    .region-content {
+      margin-bottom: rem(48);
+    }
     .field--name-field-intro {
       font-size: rem(22)
     }
