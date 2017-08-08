@@ -37,6 +37,8 @@
         @include shift(2);
       }
     }
+    .paragraph--type--media .media-instagram,
+    .paragraph--type--media .media-tweet,
     .paragraph--type--media .media-video {
       clear: both;
       padding: 0 2%;
@@ -45,6 +47,13 @@
         max-width: 65.88078%;
         margin-left: 17.05961%;
       }
+    }
+
+    .paragraph--type--media .media-instagram > div,
+    .paragraph--type--media .media-tweet > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .field--name-bene-content .paragraph--type--media,
     .field--name-bene-content .paragraph--type--feature-full-width,

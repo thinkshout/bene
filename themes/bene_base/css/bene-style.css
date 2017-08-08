@@ -334,14 +334,23 @@ fieldset {
       .page-node-type-page .node__content .field--name-field-intro:last-child,
       .page-node-type-page .field--name-bene-content .paragraph--type--rich-text:last-child {
         margin-right: 0; } }
+.page-node-type-page .paragraph--type--media .media-instagram,
+.page-node-type-page .paragraph--type--media .media-tweet,
 .page-node-type-page .paragraph--type--media .media-video {
   clear: both;
   padding: 0 2%; }
   @media (min-width: 769px) {
+    .page-node-type-page .paragraph--type--media .media-instagram,
+    .page-node-type-page .paragraph--type--media .media-tweet,
     .page-node-type-page .paragraph--type--media .media-video {
       margin-top: 3rem;
       max-width: 65.88078%;
       margin-left: 17.05961%; } }
+.page-node-type-page .paragraph--type--media .media-instagram > div,
+.page-node-type-page .paragraph--type--media .media-tweet > div {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 .page-node-type-page .field--name-bene-content .paragraph--type--media,
 .page-node-type-page .field--name-bene-content .paragraph--type--feature-full-width,
 .page-node-type-page .field--name-bene-content .paragraph--type--tiles {
