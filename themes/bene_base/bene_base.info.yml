@@ -5,6 +5,8 @@ package: Other
 core: 8.x
 libraries:
   - bene_base/bene_base
+ckeditor_stylesheets:
+  - css/ckeditor.css
 
 base theme: classy
 #Using Classy as a base theme https://www.drupal.org/theme-guide/8/classy

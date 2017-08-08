@@ -440,10 +440,10 @@ body.user-logged-in .region.region-content {
     background-color: #000;
     cursor: pointer;
     font-size: 2.1875rem;
-    height: 2.8125rem;
+    height: 2.375rem;
     left: -2.1875rem;
     width: 2.1875rem;
-    line-height: 2.8125rem;
+    line-height: 2.375rem;
     padding: 0 0.5rem 0 0.5625rem;
     position: absolute; }
     .user-logged-in #block-bene-child-local-tasks .show-hide span {
@@ -478,7 +478,7 @@ body.user-logged-in .region.region-content {
     margin-top: 2rem;
     font-weight: 600; }
   .page-node-type-page .field--name-field-intro h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 400;
     margin-bottom: 0;
     margin-top: 1.125rem; }
