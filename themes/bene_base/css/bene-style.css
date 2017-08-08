@@ -334,6 +334,14 @@ fieldset {
       .page-node-type-page .node__content .field--name-field-intro:last-child,
       .page-node-type-page .field--name-bene-content .paragraph--type--rich-text:last-child {
         margin-right: 0; } }
+.page-node-type-page .paragraph--type--media .media-video {
+  clear: both;
+  padding: 0 2%; }
+  @media (min-width: 769px) {
+    .page-node-type-page .paragraph--type--media .media-video {
+      margin-top: 3rem;
+      max-width: 65.88078%;
+      margin-left: 17.05961%; } }
 .page-node-type-page .field--name-bene-content .paragraph--type--media,
 .page-node-type-page .field--name-bene-content .paragraph--type--feature-full-width,
 .page-node-type-page .field--name-bene-content .paragraph--type--tiles {
@@ -354,6 +362,9 @@ body.user-logged-in .region.region-content {
   display: inline-block;
   margin-bottom: -4px;
   width: 100%; }
+
+.toolbar .toolbar-bar {
+  position: fixed; }
 
 .user-logged-in div.messages {
   position: fixed;
@@ -415,10 +426,14 @@ body.user-logged-in .region.region-content {
   bottom: 0;
   height: auto;
   position: fixed;
-  right: -55%;
-  width: 55%;
+  right: -90%;
+  width: 90%;
   padding-right: 45px;
   z-index: 1000; }
+  @media (min-width: 769px) {
+    .user-logged-in #block-bene-child-local-tasks {
+      right: -55%;
+      width: 55%; } }
   .user-logged-in #block-bene-child-local-tasks ul.tabs {
     margin: 0; }
   .user-logged-in #block-bene-child-local-tasks li {
@@ -428,10 +443,14 @@ body.user-logged-in .region.region-content {
       border: none;
       display: inline-block;
       font-weight: 800;
-      font-size: 1.125rem;
+      font-size: 0.9375rem;
       text-transform: uppercase;
       color: white;
-      padding: 0.4375rem 1.25rem 0.4375rem; }
+      padding: 0.3125rem 0.625rem 0.3125rem; }
+      @media (min-width: 769px) {
+        .user-logged-in #block-bene-child-local-tasks li a {
+          font-size: 1.125rem;
+          padding: 0.4375rem 1.25rem 0.4375rem; } }
       .user-logged-in #block-bene-child-local-tasks li a:hover {
         background-color: #006d83; }
       .user-logged-in #block-bene-child-local-tasks li a.is-active {
@@ -440,12 +459,16 @@ body.user-logged-in .region.region-content {
     background-color: #000;
     cursor: pointer;
     font-size: 2.1875rem;
-    height: 2.375rem;
-    left: -2.1875rem;
-    width: 2.1875rem;
-    line-height: 2.375rem;
+    height: 1.875rem;
+    left: -1.875rem;
+    width: 1.875rem;
+    line-height: 1.375rem;
     padding: 0 0.5rem 0 0.5625rem;
     position: absolute; }
+    @media (min-width: 769px) {
+      .user-logged-in #block-bene-child-local-tasks .show-hide {
+        height: 2.375rem;
+        line-height: 2.375rem; } }
     .user-logged-in #block-bene-child-local-tasks .show-hide span {
       -webkit-transform: rotate(180deg);
       -moz-transform: rotate(180deg);
@@ -457,8 +480,11 @@ body.user-logged-in .region.region-content {
       transition: all 0.5s linear;
       background: transparent url("../images/svgs/line-arrow.svg") no-repeat center center/cover !important;
       display: inline-block;
-      height: 1.5625rem;
+      height: 0.9375rem;
       width: 0.75rem; }
+      @media (min-width: 769px) {
+        .user-logged-in #block-bene-child-local-tasks .show-hide span {
+          height: 1.5625rem; } }
   .user-logged-in #block-bene-child-local-tasks.active {
     right: 0; }
     .user-logged-in #block-bene-child-local-tasks.active .show-hide span {
