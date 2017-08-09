@@ -50,9 +50,11 @@ dependencies:
   - path
   - pathauto
   - quickedit
+  - picture_background_formatter
   - r4032login
   - rdf
   - redirect
+  - responsive_image
   - search
   - shortcut
   - simple_sitemap

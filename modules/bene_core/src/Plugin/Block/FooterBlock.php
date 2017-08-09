@@ -286,7 +286,7 @@ Portland, OR 97209',
     ];
     foreach ($services as $service) {
       if ($this->configuration[$service]) {
-        $build['social'][$service]['#markup'] = '<a class="' . $service . '" href="' . $this->configuration[$service] . '">' . $service . '</a>';
+        $build['social'][$service]['#markup'] = '<span><a class="' . $service . '" href="' . $this->configuration[$service] . '">' . $service . '</a></span>';
       }
     }
     $build['copyright'] = [

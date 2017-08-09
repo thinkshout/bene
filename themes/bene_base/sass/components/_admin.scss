@@ -3,10 +3,11 @@ body.path-user .region.region-content,
 body.user-logged-in .region.region-content {
   background-color: $white;
   display: inline-block;
-  margin-bottom: -4px;
   width: 100%;
 }
-
+.toolbar .toolbar-bar {
+  position: fixed;
+}
 .user-logged-in {
   div.messages {
     position: fixed;
@@ -73,10 +74,14 @@ body.user-logged-in .region.region-content {
     bottom: 0;
     height: auto;
     position: fixed;
-    right: -55%;
-    width: 55%;
+    right: -90%;
+    width: 90%;
     padding-right: 45px;
     z-index: 1000;
+    @include mq(desktop) {
+      right: -55%;
+      width: 55%;
+    }
     ul.tabs {
       margin: 0;
     }
@@ -87,10 +92,14 @@ body.user-logged-in .region.region-content {
         border: none;
         display: inline-block;
         font-weight: 800;
-        font-size: rem(18);
+        font-size: rem(15);
         text-transform: uppercase;
         color: white;
-        padding: rem(7) rem(20) rem(7);
+        padding: rem(5) rem(10) rem(5);
+        @include mq(desktop) {
+          font-size: rem(18);
+          padding: rem(7) rem(20) rem(7);
+        }
         &:hover {
           background-color: $blue - 50;
         }
@@ -103,20 +112,26 @@ body.user-logged-in .region.region-content {
       background-color: $black;
       cursor: pointer;
       font-size: rem(35);
-      height: rem(45);
-      left: rem(-35);
-      width: rem(35);
-      line-height: rem(45);
+      height: rem(30);
+      left: rem(-30);
+      width: rem(30);
+      line-height: rem(22);
       padding: 0 rem(8) 0 rem(9);
       position: absolute;
+      @include mq(desktop) {
+        height: rem(38);
+        line-height: rem(38);
+      }
       span {
         @include transform(rotate(180deg));
         @include transition(all 0.5s linear);
         background: transparent url('../images/svgs/line-arrow.svg') no-repeat center center /cover !important;
         display: inline-block;
-        height: rem(25);
+        height: rem(15);
         width: rem(12);
-
+        @include mq(desktop) {
+          height: rem(25);
+        }
 
       }
     }

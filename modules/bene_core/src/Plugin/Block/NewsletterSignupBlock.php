@@ -103,29 +103,59 @@ class NewsletterSignupBlock extends BlockBase {
     switch ($this->configuration['style']) {
       case 'external':
         // External link.
-        $build['title'] = [
-          '#type' => 'markup',
-          '#markup' => $this->configuration['title'],
-          '#prefix' => '<h4>',
-          '#suffix' => '</h4>',
+        $build['external'] = [
+          '#type' => 'container',
+          '#weight' => 1,
+          '#attributes' => [
+            'class' => 'external-newsletter',
+          ],
         ];
-        $build['signup_text'] = [
-          '#type' => 'markup',
-          '#markup' => $this->configuration['signup_text'],
-          '#prefix' => '<p>',
-          '#suffix' => '</p>',
-        ];
-        $build['link'] = [
-          '#type' => 'link',
-          '#title' => $this->configuration['external_link_label'],
-          '#url' => Url::fromUri($this->configuration['external_link']),
-        ];
+        if ($this->configuration['title']) {
+          $build['external']['title'] = [
+            '#type' => 'markup',
+            '#markup' => $this->configuration['title'],
+            '#prefix' => '<h4>',
+            '#suffix' => '</h4>',
+          ];
+        }
+        if ($this->configuration['signup_text']) {
+          $build['external']['signup_text'] = [
+            '#type' => 'markup',
+            '#markup' => $this->configuration['signup_text'],
+            '#prefix' => '<p>',
+            '#suffix' => '</p>',
+          ];
+        }
+        if ($this->configuration['signup_text'] || $this->configuration['title']) {
+          $build['external']['link'] = [
+            '#type' => 'link',
+            '#title' => $this->configuration['external_link_label'],
+            '#url' => Url::fromUri($this->configuration['external_link']),
+            '#attributes' => [
+              'class' => 'button',
+            ],
+          ];
+        }
+        else {
+          $build['external']['link'] = [
+            '#type' => 'link',
+            '#title' => $this->configuration['external_link_label'],
+            '#url' => Url::fromUri($this->configuration['external_link']),
+          ];
+        };
         break;
 
       case 'embedded':
         // Embedded link.
         // TODO: Define "Embedded" display. On hold per GitHub issue #69.
         $build = [];
+        $build['embedded'] = [
+          '#type' => 'container',
+          '#weight' => 1,
+          '#attributes' => [
+            'class' => 'embedded-newsletter',
+          ],
+        ];
         break;
 
       default:

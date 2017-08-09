@@ -22,6 +22,7 @@ dependencies:
   - media_entity
   - media_entity_image
   - node
+  - picture_background_formatter
   - responsive_image
   - text
   - user

@@ -41,6 +41,7 @@ settings:
         -
           name: 'Block Formatting'
           items:
+            - Styles
             - Format
         -
           name: Tools
@@ -51,7 +52,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: ''
+      styles: "a.button|Button\r\n"
     linkit:
       linkit_profile: standard_link
 image_upload:
