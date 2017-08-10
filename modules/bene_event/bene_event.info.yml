@@ -12,3 +12,4 @@ dependencies:
   - path
   - text
   - user
+  - views
