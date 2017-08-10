@@ -10,7 +10,7 @@ id: node.event.bene_event_date_range
 field_name: bene_event_date_range
 entity_type: node
 bundle: event
-label: 'Date range'
+label: Date
 description: ''
 required: false
 translatable: false
