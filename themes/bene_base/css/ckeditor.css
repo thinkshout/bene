@@ -4,27 +4,6 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-/* Colors */
-/**
-  * Fonts
-  * Open+Sans:300,300i,400,600,700,800
-  *
-  * light: 300
-  * light italic: 300 + style: italic
-  * regular:      400
-  * semi-bold:    600
-  * bold:         700
-  * extrabold:    800
-  *
-  **/
-/* Turns off the element-invisible effect. */
-/* Makes an element visually hidden by default, but visible when focused. */
-/* Undo clearfix. Apply to .clearfix:after */
-/* Ensure parent has position: relative; */
-/* Default transition */
-/* All transition */
-/* Buttons */
-/* BASE ELEMENT STYLES */
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;

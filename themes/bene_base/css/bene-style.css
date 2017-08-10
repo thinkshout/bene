@@ -1209,6 +1209,15 @@ input[type='submit'] {
 .no-csspointerevents .nice-select.open .list {
   display: block; }
 
+.paragraph--type--tiles > .field--name-field-title {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 1.125rem auto 0rem; }
+  @media (min-width: 769px) {
+    .paragraph--type--tiles > .field--name-field-title {
+      margin: 2.25rem auto 0rem; } }
 .paragraph--type--tiles .field--name-field-tiles {
   display: flex;
   flex-direction: row;
