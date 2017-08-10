@@ -25,6 +25,7 @@ dependencies:
   - crop
   - crop_media_entity
   - datetime
+  - datetime_range
   - dblog
   - default_content
   - dynamic_page_cache
