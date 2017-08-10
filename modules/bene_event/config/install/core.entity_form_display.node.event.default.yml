@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.event.bene_event_date_range
     - field.field.node.event.bene_event_description
     - field.field.node.event.bene_event_location
     - field.field.node.event.body
-    - field.field.node.event.bene_event_date_range
     - node.type.event
   module:
     - datetime_range
@@ -16,8 +16,14 @@ targetEntityType: node
 bundle: event
 mode: default
 content:
+  bene_event_date_range:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
   bene_event_description:
-    weight: 6
+    weight: 8
     settings:
       rows: 9
       summary_rows: 3
@@ -26,7 +32,7 @@ content:
     type: text_textarea_with_summary
     region: content
   bene_event_location:
-    weight: 7
+    weight: 6
     settings:
       rows: 5
       placeholder: ''
@@ -39,12 +45,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  bene_event_date_range:
-    weight: 26
-    settings: {  }
-    third_party_settings: {  }
-    type: daterange_default
-    region: content
   path:
     type: path
     weight: 5
