@@ -23,9 +23,9 @@ content:
     region: content
     label: above
     settings:
-      separator: '-'
-      format_type: medium
       timezone_override: ''
+      format_type: long
+      separator: '-'
     third_party_settings: {  }
   bene_event_description:
     type: text_summary_or_trimmed

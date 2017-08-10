@@ -20,15 +20,15 @@ content:
     weight: 0
     label: above
     settings:
-      separator: '-'
-      format_type: medium
       timezone_override: ''
+      format_type: long
+      separator: '-'
     third_party_settings: {  }
     type: daterange_default
     region: content
   bene_event_description:
     weight: 2
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
