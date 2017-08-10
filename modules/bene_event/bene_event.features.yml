@@ -1,1 +1,4 @@
 bundle: bene
+excluded:
+  - field.field.node.event.body
+required: true

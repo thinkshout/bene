@@ -3,3 +3,11 @@ type: module
 core: 8.x
 version: 8.x-1.0
 package: Bene
+dependencies:
+  - allowed_formats
+  - field
+  - menu_ui
+  - node
+  - path
+  - text
+  - user
