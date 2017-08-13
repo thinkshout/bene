@@ -1,0 +1,45 @@
+uuid: 3039fdc0-6cc2-4b01-a1d5-b644288cd14e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.paragraph.thumbnail
+    - entity_browser.browser.media_browser_modal
+    - field.field.paragraph.media.field_caption
+    - field.field.paragraph.media.field_media
+    - paragraphs.paragraphs_type.media
+  module:
+    - entity_browser
+_core:
+  default_config_hash: JT3jEaAWZhyHPCe7VpaMdAeh-GZzDr56RbPfYuvN44I
+id: paragraph.media.thumbnail
+targetEntityType: paragraph
+bundle: media
+mode: thumbnail
+content:
+  field_caption:
+    weight: 1
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_media:
+    weight: 0
+    settings:
+      entity_browser: media_browser_modal
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
+      open: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

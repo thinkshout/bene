@@ -7,7 +7,7 @@ input[type="search"], textarea {
   box-sizing: border-box;
   color: $black;
   font-size: rem(16);
-  font-weight: 500;
+  font-weight: 600;
   height: rem(50);
   padding: rem(18) rem(50) rem(18) rem(22);
   width: 100%;
@@ -97,7 +97,7 @@ textarea {
   box-sizing: border-box;
   color: $black;
   font-size: rem(16);
-  font-weight: 500;
+  font-weight: 600;
   height: rem(50);
   padding: rem(18) rem(50) rem(18) rem(22);
   width: 100%;
@@ -127,7 +127,7 @@ textarea {
 }
 
 input[type='submit'] {
-  @include button;
+  @include button($white,$bright-blue);
   border: none;
 }
 

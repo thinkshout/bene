@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.tiles.field_tiles
+    - field.field.paragraph.tiles.field_title
     - paragraphs.paragraphs_type.tiles
   module:
     - paragraphs
@@ -13,7 +14,7 @@ mode: default
 content:
   field_tiles:
     type: paragraphs
-    weight: 0
+    weight: 1
     settings:
       title: Tile
       title_plural: Tiles
@@ -22,6 +23,14 @@ content:
       form_display_mode: default
       default_paragraph_type: tiles
     third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
 hidden:
   created: true

@@ -21,5 +21,48 @@
   .region-footer {
     @include outer-container;
     max-width: 100%;
+  }
+
+  .site-header {
     padding: 0 2%;
+  }
+
+  .page-node-type-page {
+    .node__content .field--name-field-intro,
+    .field--name-bene-content .paragraph--type--rich-text {
+      clear: both;
+      padding: 0 2%;
+      @include mq(desktop) {
+        @include span-columns(8);
+        @include shift(2);
+      }
+    }
+    .paragraph--type--media .media-instagram,
+    .paragraph--type--media .media-tweet,
+    .paragraph--type--media .media-video {
+      clear: both;
+      padding: 0 2%;
+      @include mq(desktop) {
+        margin-top: rem(48);
+        max-width: 65.88078%;
+        margin-left: 17.05961%;
+      }
+    }
+
+    .paragraph--type--media .media-instagram > div,
+    .paragraph--type--media .media-tweet > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .field--name-bene-content .paragraph--type--media,
+    .field--name-bene-content .paragraph--type--feature-full-width,
+    .field--name-bene-content .paragraph--type--tiles {
+      clear: both;
+    }
+    .paragraph--type--tiles {
+      @include outer-container;
+      max-width: rem(1440);
+    }
+
   }

@@ -8,7 +8,7 @@ dependencies:
 id: benenewslettersignup
 theme: bene_child
 region: footer
-weight: 90
+weight: -7
 provider: null
 plugin: bene_newsletter_signup_block
 settings:

@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: header_m
+label: Header-M
+effects:
+  47255da1-b7c8-4d37-9d94-bebcb05df99b:
+    uuid: 47255da1-b7c8-4d37-9d94-bebcb05df99b
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 768
+      height: 375

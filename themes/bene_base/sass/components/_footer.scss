@@ -1,0 +1,86 @@
+// Default Styles (Mobile First!)
+.block-bene-footer-block {
+
+  .menu {
+    a {
+      font-size: rem(14);
+      color: $black;
+      font-weight: 600;
+      &:hover, &:focus, &.is-active {
+        color: $blue;
+      }
+    }
+  }
+
+  .contact-links {
+    font-size: rem(13);
+    .address {
+      white-space: pre-line;
+    }
+    .phone, .email, .additional-contact {
+      display: block;
+      p {
+        margin: rem(5) 0;
+        font-size: rem(12);
+      }
+    }
+  }
+
+  .additional-footer {
+    p {
+      margin: 0 rem(5) 0;
+      font-size: rem(14);
+    }
+  }
+
+  .social-links {
+    a {
+      background-color: $social-icon-color;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 62% 62%;
+      border-radius: 50%;
+      display: inline-block;
+      height: rem($social-icon-size);
+      margin-bottom: rem(10);
+      margin-left: rem(10);
+      position: relative;
+      text-indent: -9999px;
+      width: rem($social-icon-size);
+      &:hover, &:focus {
+        background-color: $social-icon-color - 50;
+      }
+    }
+    .facebook { background-image:  url('../images/svgs/facebook-f.svg'); }
+    .google { background-image: url('../images/svgs/google-plus.svg'); }
+    .instagram { background-image: url('../images/svgs/instagram.svg'); }
+    .linkedin { background-image: url('../images/svgs/linkedin.svg'); }
+    .pinterest { background-image: url('../images/svgs/pinterest-p.svg'); }
+    .tumblr { background-image: url('../images/svgs/tumblr.svg'); }
+    .twitter { background-image: url('../images/svgs/twitter.svg'); }
+    .youtube { background-image: url('../images/svgs/youtube-play.svg'); }
+  }
+
+  .copyright {
+    font-size: rem(12);
+  }
+}
+
+// Specific ranges - use sparingly.
+// Mobile - things specifically under 400px.
+@include mq(mobile) {  }
+
+// Phablet - things between 401px and 768px.
+@include mq(phablet) {  }
+
+// Tablet - things between 769px and 1239px.
+@include mq(tablet) {  }
+
+
+// Desktops - 769px or more. (This is the most common Media Query)
+@include mq(desktop) {
+
+}
+
+// Extra Large Desktop: min-width: 1240px.
+@include mq(xl) {  }
