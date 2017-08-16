@@ -30,6 +30,10 @@ function bene_event_field_widget_form_alter(&$element, FormStateInterface $form_
   if ($field_definition->getType() == 'daterange' && ($field_definition->getName() == 'bene_event_date_range')) {
     $element['end_value']['#required'] = FALSE;
   }
+
+  if ($field_definition->getName() == 'bene_event_location') {
+
+  }
 }
 
 /**

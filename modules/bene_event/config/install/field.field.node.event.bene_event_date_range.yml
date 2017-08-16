@@ -10,9 +10,9 @@ id: node.event.bene_event_date_range
 field_name: bene_event_date_range
 entity_type: node
 bundle: event
-label: Date
-description: ''
-required: false
+label: Date/time
+description: 'To only show a start date/time, leave the end date empty or set to the same as the start date/time.'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

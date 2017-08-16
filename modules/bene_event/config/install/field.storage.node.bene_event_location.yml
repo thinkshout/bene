@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   module:
+    - address
     - node
-    - text
 id: node.bene_event_location
 field_name: bene_event_location
 entity_type: node
-type: text_long
+type: address
 settings: {  }
-module: text
+module: address
 locked: false
 cardinality: 1
 translatable: true

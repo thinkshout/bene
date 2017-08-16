@@ -5,14 +5,7 @@ dependencies:
     - field.storage.node.bene_event_location
     - node.type.event
   module:
-    - allowed_formats
-    - text
-third_party_settings:
-  allowed_formats:
-    basic_html: basic_html
-    restricted_html: '0'
-    full_html: '0'
-    plain_text: '0'
+    - address
 id: node.event.bene_event_location
 field_name: bene_event_location
 entity_type: node
@@ -23,5 +16,23 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings: {  }
-field_type: text_long
+settings:
+  available_countries:
+    CA: CA
+    UM: UM
+    VI: VI
+    US: US
+  fields:
+    administrativeArea: administrativeArea
+    locality: locality
+    dependentLocality: dependentLocality
+    postalCode: postalCode
+    addressLine1: addressLine1
+    addressLine2: addressLine2
+    organization: organization
+    sortingCode: '0'
+    givenName: '0'
+    additionalName: '0'
+    familyName: '0'
+  langcode_override: ''
+field_type: address

@@ -3,13 +3,14 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.event.bene_content
     - field.field.node.event.bene_event_date_range
-    - field.field.node.event.bene_event_description
+    - field.field.node.event.bene_header_media
+    - field.field.node.event.bene_intro
     - field.field.node.event.bene_event_location
     - node.type.event
   module:
     - datetime_range
-    - text
     - user
 id: node.event.teaser
 targetEntityType: node
@@ -26,21 +27,10 @@ content:
       format_type: long
       separator: '-'
     third_party_settings: {  }
-  bene_event_description:
-    type: text_summary_or_trimmed
-    weight: 2
-    region: content
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-  bene_event_location:
-    type: text_default
-    weight: 1
-    region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  bene_content: true
   body: true
+  bene_header_media: true
+  bene_intro: true
+  bene_event_location: true
   links: true
