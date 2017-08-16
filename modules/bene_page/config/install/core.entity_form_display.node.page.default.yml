@@ -61,29 +61,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_metatags:
-    weight: 9
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   path:
     type: path
-    weight: 8
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 6
-    third_party_settings: {  }
-    region: content
-  sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 7
+    settings: {  }
     third_party_settings: {  }
     region: content
   title:
@@ -103,4 +89,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  promote: true
+  sticky: true
