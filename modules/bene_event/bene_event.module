@@ -21,10 +21,11 @@ function bene_event_field_info_alter(&$info) {
 }
 
 /**
- *
+ * Implements hook_field_widget_form_alter().
  */
 function bene_event_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
-  // Add a css class to widget form elements for all fields of type mytype.
+  // Make the end date not required in daterange fields. End date will be
+  // populated with the start date when empty.
   $field_definition = $context['items']->getFieldDefinition();
   if ($field_definition->getType() == 'daterange' && ($field_definition->getName() == 'bene_event_date_range')) {
     $element['end_value']['#required'] = FALSE;
