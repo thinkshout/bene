@@ -15,7 +15,8 @@ use Drupal\datetime_range\Plugin\Field\FieldType\DateRangeItem as CoreDateRangeI
  *   description = @Translation("Create and store date ranges."),
  *   default_widget = "daterange_default",
  *   default_formatter = "daterange_default",
- *   list_class = "\Drupal\datetime_range\Plugin\Field\FieldType\DateRangeFieldItemList"
+ *   list_class =
+ *   "\Drupal\datetime_range\Plugin\Field\FieldType\DateRangeFieldItemList"
  * )
  */
 class DateRangeItem extends CoreDateRangeItem {
@@ -34,8 +35,8 @@ class DateRangeItem extends CoreDateRangeItem {
     $properties = parent::propertyDefinitions($field_definition);
 
     $properties['end_value'] = DataDefinition::create('datetime_iso8601')
-                                             ->setLabel(t('End date value'))
-                                             ->setRequired(FALSE);
+      ->setLabel(t('End date value'))
+      ->setRequired(FALSE);
 
     return $properties;
   }

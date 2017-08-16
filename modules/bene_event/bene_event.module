@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * @file
+ * Event specific functionality for Bene.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\EntityInterface;
 
 /**
@@ -14,7 +20,10 @@ function bene_event_field_info_alter(&$info) {
   }
 }
 
-function bene_event_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+/**
+ *
+ */
+function bene_event_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
   // Add a css class to widget form elements for all fields of type mytype.
   $field_definition = $context['items']->getFieldDefinition();
   if ($field_definition->getType() == 'daterange' && ($field_definition->getName() == 'bene_event_date_range')) {
@@ -35,7 +44,7 @@ function bene_event_entity_presave(EntityInterface $entity) {
     return;
   }
 
-  $daterange_fieldnames = array();
+  $daterange_fieldnames = [];
 
   // Fill $daterange_fieldnames array with fieldnames of each daterange field.
   $fields = $entity->getFieldDefinitions();
