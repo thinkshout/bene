@@ -1,0 +1,68 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_field_info_alter().
+ *
+ * Take over the DateRangeItem class from datetime_range so that we can remove
+ * the requirement on end_value.
+ */
+function bene_event_field_info_alter(&$info) {
+  if (isset($info['daterange']) && class_exists('Drupal\bene_event\Plugin\Field\FieldType\DateRangeItem')) {
+    $info['daterange']['class'] = 'Drupal\bene_event\Plugin\Field\FieldType\DateRangeItem';
+  }
+}
+
+function bene_event_field_widget_form_alter(&$element, \Drupal\Core\Form\FormStateInterface $form_state, $context) {
+  // Add a css class to widget form elements for all fields of type mytype.
+  $field_definition = $context['items']->getFieldDefinition();
+  if ($field_definition->getType() == 'daterange' && ($field_definition->getName() == 'bene_event_date_range')) {
+    $element['end_value']['#required'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ *
+ * Populate end date on daterange fields with start date if empty.
+ */
+function bene_event_entity_presave(EntityInterface $entity) {
+  // Limiting this to nodes for the time being. But If a daterange field is used
+  // on a different entity type and no end date is supplied, I think the site
+  // might blow up, so figure that out.
+  if ($entity->getEntityTypeId() !== 'node') {
+    return;
+  }
+
+  $daterange_fieldnames = array();
+
+  // Fill $daterange_fieldnames array with fieldnames of each daterange field.
+  $fields = $entity->getFieldDefinitions();
+  foreach ($fields as $fieldname => $field) {
+    if (substr($fieldname, 0, 5) !== 'bene_') {
+      continue;
+    }
+    $fieldtype = $field->getType();
+    if ($fieldtype !== 'daterange') {
+      continue;
+    }
+    $daterange_fieldnames[] = $fieldname;
+  }
+
+  // Handle each daterange field.
+  foreach ($daterange_fieldnames as $daterange_fieldname) {
+    $daterange_field = $entity->get($daterange_fieldname);
+    if ($daterange_field->isEmpty()) {
+      continue;
+    }
+
+    $start_value = $daterange_field->get(0)->get('value')->getValue('value');
+    $end_value = $daterange_field->get(0)->get('end_value')->getValue();
+
+    // If end_value is left empty, set it same as start_value.
+    if ($end_value === NULL || $end_value === '') {
+      $daterange_field->get(0)->get('end_value')->setValue($start_value);
+    }
+  }
+}
