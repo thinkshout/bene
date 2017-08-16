@@ -4,9 +4,9 @@ dependencies:
   config:
     - entity_browser.browser.media_browser_modal
     - field.field.node.page.bene_content
-    - field.field.node.page.field_header_media
-    - field.field.node.page.field_intro
-    - field.field.node.page.field_metatags
+    - field.field.node.page.bene_header_media
+    - field.field.node.page.bene_intro
+    - field.field.node.page.bene_metatags
     - node.type.page
   module:
     - entity_browser
@@ -37,7 +37,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_header_media:
+  bene_header_media:
     type: entity_browser_entity_reference
     weight: 1
     settings:
@@ -51,7 +51,7 @@ content:
         view_mode: thumbnail
     third_party_settings: {  }
     region: content
-  field_intro:
+  bene_intro:
     type: text_textarea_with_summary
     weight: 2
     region: content
@@ -60,7 +60,7 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
-  field_metatags:
+  bene_metatags:
     weight: 7
     settings: {  }
     third_party_settings: {  }

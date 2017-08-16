@@ -3,9 +3,9 @@ status: true
 dependencies:
   config:
     - field.field.node.page.bene_content
-    - field.field.node.page.field_header_media
-    - field.field.node.page.field_intro
-    - field.field.node.page.field_metatags
+    - field.field.node.page.bene_header_media
+    - field.field.node.page.bene_intro
+    - field.field.node.page.bene_metatags
     - node.type.page
     - responsive_image.styles.header
   module:
@@ -27,7 +27,7 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_header_media:
+  bene_header_media:
     type: picture_background_formatter_media
     weight: 0
     label: hidden
@@ -37,7 +37,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     region: content
-  field_intro:
+  bene_intro:
     type: text_default
     weight: 1
     region: content
@@ -45,9 +45,9 @@ content:
     settings: {  }
     third_party_settings: {  }
   hidden:
-    field_metatags: true
+    bene_metatags: true
     links: true
     region: content
 hidden:
-  field_metatags: true
+  bene_metatags: true
   links: true

@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_metatags
+    - field.storage.node.bene_metatags
     - node.type.page
   module:
     - metatag
-id: node.page.field_metatags
-field_name: field_metatags
+id: node.page.bene_metatags
+field_name: bene_metatags
 entity_type: node
 bundle: page
 label: Metatags

@@ -2,14 +2,15 @@ langcode: en
 status: true
 dependencies:
   module:
-    - metatag
+    - media_entity
     - node
-id: node.field_metatags
-field_name: field_metatags
+id: node.bene_header_media
+field_name: bene_header_media
 entity_type: node
-type: metatag
-settings: {  }
-module: metatag
+type: entity_reference
+settings:
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true
