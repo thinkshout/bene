@@ -31,12 +31,6 @@ content:
       default_paragraph_type: _none
     third_party_settings: {  }
     region: content
-  created:
-    type: datetime_timestamp
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   bene_header_media:
     type: entity_browser_entity_reference
     weight: 1
@@ -65,6 +59,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
     region: content
   path:
     type: path
