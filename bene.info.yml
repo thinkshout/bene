@@ -12,6 +12,7 @@ dependencies:
   - bene_event
   - bene_media
   - bene_migrate_google_sheets
+  - bene_news
   - bene_page
   - block
   - block_content

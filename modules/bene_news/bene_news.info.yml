@@ -1,0 +1,22 @@
+name: News
+type: module
+core: 8.x
+package: Bene
+dependencies:
+  - allowed_formats
+  - bene_media
+  - bene_page
+  - datetime
+  - entity_browser
+  - entity_reference_revisions
+  - field
+  - menu_ui
+  - metatag
+  - node
+  - paragraphs
+  - path
+  - picture_background_formatter
+  - text
+  - user
+  - views
+description: 'News content type, Views, and configuration.'
