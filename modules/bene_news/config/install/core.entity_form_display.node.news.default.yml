@@ -3,39 +3,33 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.media_browser_modal
-    - field.field.node.page.bene_content
-    - field.field.node.page.bene_header_media
-    - field.field.node.page.bene_intro
-    - field.field.node.page.bene_metatags
-    - node.type.page
+    - field.field.node.news.bene_content
+    - field.field.node.news.bene_header_media
+    - field.field.node.news.bene_intro
+    - field.field.node.news.bene_metatags
+    - node.type.news
   module:
     - entity_browser
     - metatag
     - paragraphs
     - path
     - text
-id: node.page.default
+id: node.news.default
 targetEntityType: node
-bundle: page
+bundle: news
 mode: default
 content:
   bene_content:
-    type: paragraphs
     weight: 3
     settings:
-      title: Section
-      title_plural: Sections
-      edit_mode: preview
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
       add_mode: dropdown
-      form_display_mode: thumbnail
-      default_paragraph_type: _none
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    region: content
-  created:
-    type: datetime_timestamp
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
+    type: entity_reference_paragraphs
     region: content
   bene_header_media:
     type: entity_browser_entity_reference
@@ -49,37 +43,43 @@ content:
       selection_mode: selection_append
       field_widget_display_settings:
         view_mode: thumbnail
+    region: content
     third_party_settings: {  }
-    region: content
   bene_intro:
-    type: text_textarea_with_summary
     weight: 2
-    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
   bene_metatags:
+    type: metatag_firehose
     weight: 7
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: metatag_firehose
+  created:
+    type: datetime_timestamp
+    weight: 5
     region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 6
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   title:
     type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 4
@@ -87,8 +87,8 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
-    third_party_settings: {  }
     region: content
+    third_party_settings: {  }
 hidden:
   promote: true
   sticky: true

@@ -1,4 +1,3 @@
-uuid: 3039fdc0-6cc2-4b01-a1d5-b644288cd14e
 langcode: en
 status: true
 dependencies:
@@ -10,8 +9,6 @@ dependencies:
     - paragraphs.paragraphs_type.media
   module:
     - entity_browser
-_core:
-  default_config_hash: JT3jEaAWZhyHPCe7VpaMdAeh-GZzDr56RbPfYuvN44I
 id: paragraph.media.thumbnail
 targetEntityType: paragraph
 bundle: media

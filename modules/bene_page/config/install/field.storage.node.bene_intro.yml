@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   module:
-    - metatag
     - node
-id: node.field_metatags
-field_name: field_metatags
+    - text
+id: node.bene_intro
+field_name: bene_intro
 entity_type: node
-type: metatag
+type: text_with_summary
 settings: {  }
-module: metatag
+module: text
 locked: false
 cardinality: 1
 translatable: true

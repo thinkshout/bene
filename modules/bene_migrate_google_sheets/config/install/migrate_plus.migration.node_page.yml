@@ -82,11 +82,11 @@ process:
       plugin: default_value
       default_value: 0 # Disable pathauto.
   path/alias: path
-  field_intro/value: intro
-  field_intro/format:
+  bene_intro/value: intro
+  bene_intro/format:
     plugin: default_value
     default_value: restricted_html
-  field_header_media/target_id:
+  bene_header_media/target_id:
     plugin: media_import
     source: headerimage
     process:

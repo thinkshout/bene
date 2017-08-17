@@ -2,51 +2,47 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.bene_content
-    - field.field.node.page.bene_header_media
-    - field.field.node.page.bene_intro
-    - field.field.node.page.bene_metatags
-    - node.type.page
+    - field.field.node.news.bene_content
+    - field.field.node.news.bene_header_media
+    - field.field.node.news.bene_intro
+    - field.field.node.news.bene_metatags
+    - node.type.news
     - responsive_image.styles.header
   module:
     - entity_reference_revisions
     - picture_background_formatter
     - text
     - user
-id: node.page.default
+id: node.news.default
 targetEntityType: node
-bundle: page
+bundle: news
 mode: default
 content:
   bene_content:
-    type: entity_reference_revisions_entity_view
     weight: 2
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   bene_header_media:
     type: picture_background_formatter_media
     weight: 0
+    region: content
     label: hidden
     settings:
       responsive_image_style: header
       selector: .block-page-title-block
       image_link: ''
     third_party_settings: {  }
-    region: content
   bene_intro:
-    type: text_default
     weight: 1
-    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  hidden:
-    bene_metatags: true
-    links: true
+    type: text_default
     region: content
 hidden:
   bene_metatags: true
