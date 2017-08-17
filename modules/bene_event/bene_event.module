@@ -14,11 +14,11 @@ use Drupal\Core\Entity\EntityInterface;
  * Take over the DateRangeItem class from datetime_range so that we can remove
  * the requirement on end_value.
  */
-function bene_event_field_info_alter(&$info) {
-  if (isset($info['daterange']) && class_exists('Drupal\bene_event\Plugin\Field\FieldType\DateRangeItem')) {
-    $info['daterange']['class'] = 'Drupal\bene_event\Plugin\Field\FieldType\DateRangeItem';
-  }
-}
+//function bene_event_field_info_alter(&$info) {
+//  if (isset($info['daterange']) && class_exists('Drupal\bene_event\Plugin\Field\FieldType\DateRangeItem')) {
+//    $info['daterange']['class'] = 'Drupal\bene_event\Plugin\Field\FieldType\DateRangeItem';
+//  }
+//}
 
 /**
  * Implements hook_field_widget_form_alter().

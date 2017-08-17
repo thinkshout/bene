@@ -4,9 +4,9 @@ dependencies:
   config:
     - field.field.node.event.bene_content
     - field.field.node.event.bene_event_date_range
+    - field.field.node.event.bene_event_location
     - field.field.node.event.bene_header_media
     - field.field.node.event.bene_intro
-    - field.field.node.event.bene_event_location
     - field.field.node.event.bene_metatags
     - node.type.event
     - responsive_image.styles.header
@@ -42,6 +42,13 @@ content:
     third_party_settings: {  }
     type: daterange_default
     region: content
+  bene_event_location:
+    weight: 2
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
   bene_header_media:
     weight: 0
     label: hidden
@@ -58,13 +65,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  bene_event_location:
-    weight: 2
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: address_default
     region: content
   bene_metatags:
     weight: 5

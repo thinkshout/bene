@@ -5,9 +5,10 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.bene_content
     - field.field.node.event.bene_event_date_range
+    - field.field.node.event.bene_event_location
     - field.field.node.event.bene_header_media
     - field.field.node.event.bene_intro
-    - field.field.node.event.bene_event_location
+    - field.field.node.event.bene_metatags
     - node.type.event
   module:
     - datetime_range
@@ -29,8 +30,9 @@ content:
     third_party_settings: {  }
 hidden:
   bene_content: true
-  body: true
+  bene_event_location: true
   bene_header_media: true
   bene_intro: true
-  bene_event_location: true
+  bene_metatags: true
+  body: true
   links: true

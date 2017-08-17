@@ -97,7 +97,9 @@
                 "2869592 - Disabled update module shouldn't produce a status report warning":
                 "https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch",
                 "2885441 - EntityReferenceAutocompleteWidget should define its size setting as an integer":
-                "https://www.drupal.org/files/issues/2885441-2.patch"
+                "https://www.drupal.org/files/issues/2885441-2.patch",
+                "2786577 - Improve the Views integration for DateRange fields":
+                "https://www.drupal.org/files/issues/2786577-177.patch"
             },
             "drupal/migrate_tools": {
                 "Migrate Tools dashboard plugin manager/config deriver UI issues - https://www.drupal.org/node/2825846#comment-12080570":

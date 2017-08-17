@@ -5,9 +5,9 @@ dependencies:
     - entity_browser.browser.media_browser_modal
     - field.field.node.event.bene_content
     - field.field.node.event.bene_event_date_range
+    - field.field.node.event.bene_event_location
     - field.field.node.event.bene_header_media
     - field.field.node.event.bene_intro
-    - field.field.node.event.bene_event_location
     - field.field.node.event.bene_metatags
     - node.type.event
   module:
@@ -41,12 +41,13 @@ content:
     third_party_settings: {  }
     type: daterange_default
     region: content
-  created:
-    type: datetime_timestamp
-    weight: 7
-    region: content
-    settings: {  }
+  bene_event_location:
+    weight: 3
+    settings:
+      default_country: null
     third_party_settings: {  }
+    type: address_default
+    region: content
   bene_header_media:
     type: entity_browser_entity_reference
     weight: 1
@@ -70,19 +71,18 @@ content:
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
-  bene_event_location:
-    weight: 3
-    settings:
-      default_country: null
-    third_party_settings: {  }
-    type: address_default
-    region: content
   bene_metatags:
     weight: 26
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
     region: content
+  created:
+    type: datetime_timestamp
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 8
