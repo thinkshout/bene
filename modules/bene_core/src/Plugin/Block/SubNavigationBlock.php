@@ -3,8 +3,14 @@
 namespace Drupal\bene_core\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Breadcrumb\BreadcrumbManager;
+use Drupal\Core\Controller\TitleResolver;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
+use Drupal\Core\Menu\MenuLinkManager;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\Routing\CurrentRouteMatch;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides a 'SubNavigationBlock' block.
@@ -15,7 +21,82 @@ use Drupal\Core\Link;
  *  category = @Translation("Bene")
  * )
  */
-class SubNavigationBlock extends BlockBase {
+class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInterface {
+
+  /**
+   * CurrentRouteMatch service.
+   *
+   * @var CurrentRouteMatch $current_route_match
+   */
+  protected $current_route_match;
+
+  /**
+   * BreadcrumbManager service.
+   *
+   * @var BreadcrumbManager $breadcrumb_manager
+   */
+  protected $breadcrumb_manager;
+
+  /**
+   * TitleResolver service.
+   *
+   * @var TitleResolver $title_resolver
+   */
+  protected $title_resolver;
+
+  /**
+   * MenuLinkManager service.
+   *
+   * @var MenuLinkManager $menu_link_manager */
+  protected $menu_link_manager;
+
+  /**
+   * Constructs a new SubNavigationBlock.
+   *
+   * @param array $configuration
+   *   A configuration array containing information about the plugin instance.
+   * @param string $plugin_id
+   *   The plugin ID for the plugin instance.
+   * @param mixed $plugin_definition
+   *   The plugin implementation definition.
+   * @param CurrentRouteMatch $current_route_match
+   *   The CurrentRouteMatch service.
+   * @param BreadcrumbManager $breadcrumb_manager
+   *   The BreadcrumbManager service.
+   * @param TitleResolver $title_resolver
+   *   The TitleResolver service.
+   * @param MenuLinkManager $menu_link_manager
+   *   The MenuLinkManager service.
+   */
+  public function __construct(array $configuration,
+                              $plugin_id,
+                              $plugin_definition,
+                              CurrentRouteMatch $current_route_match,
+                              BreadcrumbManager $breadcrumb_manager,
+                              TitleResolver $title_resolver,
+                              MenuLinkManager $menu_link_manager) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+
+    $this->current_route_match = $current_route_match;
+    $this->breadcrumb_manager = $breadcrumb_manager;
+    $this->title_resolver = $title_resolver;
+    $this->menu_link_manager = $menu_link_manager;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('current_route_match'),
+      $container->get('breadcrumb'),
+      $container->get('title_resolver'),
+      $container->get('plugin.manager.menu.link')
+    );
+  }
 
   /**
    * {@inheritdoc}
@@ -114,9 +195,8 @@ class SubNavigationBlock extends BlockBase {
    *   Array of Link objects representing breadcrumbs.
    */
   private function getBreadcrumbs() {
-    /** @var \Drupal\Core\Routing\RouteMatch $current_route */
-    $current_route = \Drupal::service('current_route_match')->getCurrentRouteMatch();
-    $breadcrumbs = \Drupal::service('breadcrumb')->build($current_route)->getLinks();
+    $current_route = $this->current_route_match->getCurrentRouteMatch();
+    $breadcrumbs = $this->breadcrumb_manager->build($current_route)->getLinks();
 
     return $breadcrumbs;
   }
@@ -130,9 +210,8 @@ class SubNavigationBlock extends BlockBase {
    * @see https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Controller%21TitleResolver.php/class/TitleResolver/8.2.x
    */
   private function getPageTitle() {
-    /** @var \Drupal\Core\Routing\RouteMatch $current_route */
-    $current_route = \Drupal::service('current_route_match')->getCurrentRouteMatch();
-    $title = \Drupal::service('title_resolver')->getTitle(\Drupal::request(), $current_route->getRouteObject());
+    $current_route = $this->current_route_match->getCurrentRouteMatch();
+    $title = $this->title_resolver->getTitle(\Drupal::request(), $current_route->getRouteObject());
 
     return $title;
   }
@@ -155,8 +234,7 @@ class SubNavigationBlock extends BlockBase {
     $node = \Drupal::routeMatch()->getParameter('node');
     if (!empty($node)) {
       /** @var \Drupal\Core\Menu\MenuLinkManager $menu_link_manager */
-      $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
-      $menu_links = $menu_link_manager->loadLinksByRoute('entity.node.canonical', ['node' => $node->id()]);
+      $menu_links = $this->menu_link_manager->loadLinksByRoute('entity.node.canonical', ['node' => $node->id()]);
 
       // Get the menu link associated with the current node.
       /** @var \Drupal\menu_link_content\Plugin\Menu\MenuLinkContent $current_menu_link */
@@ -164,10 +242,10 @@ class SubNavigationBlock extends BlockBase {
 
       // Get all child menu links of the current node's menu link.
       if (!empty($current_menu_link)) {
-        $child_menu_ids = $menu_link_manager->getChildIds($current_menu_link->getPluginId());
+        $child_menu_ids = $this->menu_link_manager->getChildIds($current_menu_link->getPluginId());
 
         foreach ($child_menu_ids as $menu_link_id) {
-          $child_menu_links[] = $menu_link_manager->getDefinition($menu_link_id);
+          $child_menu_links[] = $this->menu_link_manager->getDefinition($menu_link_id);
         }
       }
     }
