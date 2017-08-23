@@ -217,9 +217,9 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
   }
 
   /**
-   * Gets an array of menu link definitions for child nodes of the current node.
+   * Gets an array of menu link definitions for child links of the current item.
    *
-   * Based on the current node's menu link.
+   * Based on the current entity's menu link.
    *
    * @return array
    *   Array of menu link definitions (each definition is in array format).
@@ -229,18 +229,20 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
   private function getChildMenuLinks() {
     $child_menu_links = [];
 
-    // Get the current node from the current route.
-    /** @var \Drupal\node\Entity\Node $node */
-    $node = \Drupal::routeMatch()->getParameter('node');
-    if (!empty($node)) {
-      /** @var \Drupal\Core\Menu\MenuLinkManager $menu_link_manager */
-      $menu_links = $this->menu_link_manager->loadLinksByRoute('entity.node.canonical', ['node' => $node->id()]);
+    // Get the current entity from the current route.
+    $route = \Drupal::routeMatch();
+    $route_name = $route->getRouteName();
+    $route_parameters = \Drupal::routeMatch()->getParameters()->all();
+    $route_entity = reset($route_parameters);
 
-      // Get the menu link associated with the current node.
+    if (!empty($route_entity) && is_object($route_entity)) {
+      $menu_links = $this->menu_link_manager->loadLinksByRoute($route_name, [$route_entity->getEntityTypeId() => $route_entity->id()]);
+
+      // Get the menu link associated with the current entity.
       /** @var \Drupal\menu_link_content\Plugin\Menu\MenuLinkContent $current_menu_link */
       $current_menu_link = reset($menu_links);
 
-      // Get all child menu links of the current node's menu link.
+      // Get all child menu links of the current entity's menu link.
       if (!empty($current_menu_link)) {
         $child_menu_ids = $this->menu_link_manager->getChildIds($current_menu_link->getPluginId());
 
