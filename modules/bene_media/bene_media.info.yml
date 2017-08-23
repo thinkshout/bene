@@ -1,4 +1,4 @@
-name: 'Bene Media'
+name: Media
 core: 8.x
 type: module
 description: 'Media support for Bene'

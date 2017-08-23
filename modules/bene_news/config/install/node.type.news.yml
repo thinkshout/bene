@@ -9,7 +9,7 @@ third_party_settings:
     parent: ''
 name: News
 type: news
-description: ''
+description: 'Blog posts or other articles that will show a posted date and be listed in order.'
 help: ''
 new_revision: true
 preview_mode: 1
