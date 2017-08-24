@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.listing_page.bene_content
+    - field.field.node.listing_page.bene_header_media
+    - field.field.node.listing_page.bene_intro
+    - field.field.node.listing_page.bene_metatags
+    - node.type.listing_page
+    - responsive_image.styles.header
+  module:
+    - entity_reference_revisions
+    - picture_background_formatter
+    - text
+    - user
+id: node.listing_page.default
+targetEntityType: node
+bundle: listing_page
+mode: default
+content:
+  bene_content:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  bene_header_media:
+    type: picture_background_formatter_media
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      responsive_image_style: header
+      selector: .block-page-title-block
+      image_link: ''
+    third_party_settings: {  }
+  bene_intro:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  bene_metatags: true
+  links: true
