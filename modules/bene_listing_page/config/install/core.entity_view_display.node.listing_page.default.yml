@@ -2,31 +2,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.listing_page.bene_content
     - field.field.node.listing_page.bene_header_media
     - field.field.node.listing_page.bene_intro
     - field.field.node.listing_page.bene_metatags
+    - field.field.node.listing_page.field_listing
     - node.type.listing_page
     - responsive_image.styles.header
   module:
-    - entity_reference_revisions
     - picture_background_formatter
     - text
     - user
+    - viewsreference
 id: node.listing_page.default
 targetEntityType: node
 bundle: listing_page
 mode: default
 content:
-  bene_content:
-    weight: 2
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
   bene_header_media:
     type: picture_background_formatter_media
     weight: 0
@@ -43,6 +34,19 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_listing:
+    weight: 2
+    label: hidden
+    settings:
+      plugin_types:
+        block: block
+        default: 0
+        page: 0
+        entity_browser: 0
+        feed: 0
+    third_party_settings: {  }
+    type: viewsreference_formatter
     region: content
 hidden:
   bene_metatags: true

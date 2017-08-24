@@ -1,4 +1,4 @@
-name: Listing Page
+name: 'Listing Page'
 type: module
 core: 8.x
 package: Bene
@@ -18,4 +18,5 @@ dependencies:
   - text
   - user
   - views
+  - viewsreference
 description: 'Listing Page content type.'

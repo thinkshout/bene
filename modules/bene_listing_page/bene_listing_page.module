@@ -4,3 +4,12 @@
  * @file
  * Listing Page specific functionality for Bene.
  */
+
+/**
+ * Implements hook_views_plugins_display_alter().
+ */
+function bene_listing_page_views_plugins_display_alter(array &$plugins) {
+  // Force the block display plugin to use our block display plugin that allows
+  // exposed forms on block displays.
+  $plugins['block']['class'] = 'Drupal\bene_listing_page\Plugin\views\ListingPluginDisplayBlock';
+}

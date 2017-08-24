@@ -3,34 +3,22 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.media_browser_modal
-    - field.field.node.listing_page.bene_content
     - field.field.node.listing_page.bene_header_media
     - field.field.node.listing_page.bene_intro
     - field.field.node.listing_page.bene_metatags
+    - field.field.node.listing_page.field_listing
     - node.type.listing_page
   module:
     - entity_browser
     - metatag
-    - paragraphs
     - path
     - text
+    - viewsreference
 id: node.listing_page.default
 targetEntityType: node
 bundle: listing_page
 mode: default
 content:
-  bene_content:
-    weight: 3
-    settings:
-      title: Section
-      title_plural: Sections
-      edit_mode: preview
-      add_mode: dropdown
-      form_display_mode: thumbnail
-      default_paragraph_type: _none
-    third_party_settings: {  }
-    type: paragraphs
-    region: content
   bene_header_media:
     type: entity_browser_entity_reference
     weight: 1
@@ -66,6 +54,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_listing:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
   path:
     type: path
     weight: 6

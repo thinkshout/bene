@@ -7,7 +7,7 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
-name: Listing Page
+name: 'Listing Page'
 type: listing_page
 description: 'Pages that list content like News or Events.'
 help: ''

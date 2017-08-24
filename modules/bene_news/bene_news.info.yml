@@ -16,6 +16,7 @@ dependencies:
   - paragraphs
   - path
   - picture_background_formatter
+  - search
   - text
   - user
   - views
