@@ -230,9 +230,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_1:
+  block_events_all:
     display_plugin: block
-    id: block_1
+    id: block_events_all
     display_title: 'Block: All'
     position: 2
     display_options:

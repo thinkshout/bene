@@ -51,7 +51,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 2
+          items_per_page: 10
           offset: 0
           id: 0
           total_pages: null
@@ -157,7 +157,7 @@ display:
           exposed: true
           expose:
             operator_id: keys_op
-            label: Search
+            label: 'Search Keywords'
             description: ''
             use_operator: false
             operator: keys_op
@@ -200,12 +200,7 @@ display:
           entity_field: created
           plugin_id: date
       title: News
-      header:
-        entity_node:
-          id: entity_node
-          table: views
-          field: entity_node
-          plugin_id: entity
+      header: {  }
       footer: {  }
       empty:
         area:
@@ -235,9 +230,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_1:
+  bene_news_all:
     display_plugin: block
-    id: block_1
+    id: bene_news_all
     display_title: 'Block: All'
     position: 2
     display_options:
