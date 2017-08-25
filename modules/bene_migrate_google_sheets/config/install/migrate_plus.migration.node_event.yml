@@ -1,0 +1,186 @@
+# This migration demonstrates importing from a Google Spreadsheet XML feed.
+id: node_event
+label: BENE node events with Google Spreadsheet
+migration_group: bene
+dependencies:
+  enforced:
+    module:
+      - bene_migrate_google_sheets
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: google_sheets
+  item_selector: ''
+  # The feed file for the spreadsheet. The Google Spreadsheet should be either “Public” or set to “Anyone with link can
+  # view” in order for the feed to work. Note that the <SHEET> param is the order of the tabs and WILL change if the
+  # tabs are re-ordered.
+  # Template: 'https://spreadsheets.google.com/feeds/list/<KEY>/<SHEET>/public/values?alt=json'
+  urls: 'https://spreadsheets.google.com/feeds/list/1BkC1_65t5D4ZoDhTb0F0wlngPYBcZgwin7v45UYydFc/4/public/values?alt=json'
+  # Under 'fields', we list the data items to be imported. The first level keys
+  # are the source field names we want to populate (the names to be used as
+  # sources in the process configuration below). For each field we're importing,
+  # we provide a label (optional - this is for display in migration tools) and
+  # an selector (xpath) for retrieving that value. It's important to note that this xpath
+  # is relative to the elements retrieved by item_selector.
+  # item_selector: /response/variety
+  # For Google Spreadsheet XML feeds the actual columns are named with gsx: followed by the cleaned column name (lower,
+  # limited punctuation, etc).
+  fields:
+    -
+      name: id
+      label: 'Unique identifier'
+      selector: 'id'
+    -
+      name: title
+      label: 'Title'
+      selector: 'title'
+    -
+      name: status
+      label: 'Status'
+      selector: 'status'
+    -
+      name: path
+      label: 'Path'
+      selector: 'path'
+    -
+      name: redirect
+      label: 'Redirect'
+      selector: 'redirect'
+    -
+      name: image
+      label: 'Header Image'
+      selector: 'headerimage'
+    -
+      name: imagealt
+      label: 'Header Image Alt'
+      selector: 'headerimagealt'
+    -
+      name: startdate
+      label: 'Start Date'
+      selector: 'startdate'
+    -
+      name: enddate
+      label: 'End Date'
+      selector: 'enddate'
+    -
+      name: starttime
+      label: 'Start Time'
+      selector: 'starttime'
+    -
+      name: endtime
+      label: 'End Time'
+      selector: 'endtime'
+    -
+      name: company
+      label: 'Company'
+      selector: 'company'
+    -
+      name: address1
+      label: 'Address1'
+      selector: 'address1'
+    -
+      name: address2
+      label: 'Address2'
+      selector: 'address2'
+    -
+      name: city
+      label: 'City'
+      selector: 'city'
+    -
+      name: state
+      label: 'State'
+      selector: 'state'
+    -
+      name: zip
+      label: 'Zip'
+      selector: 'zip'
+    -
+      name: body
+      label: 'Body'
+      selector: 'body'
+    -
+      name: intro
+      label: 'Intro'
+      selector: 'intro'
+    -
+      name: content
+      label: 'Content'
+      selector: 'content'
+  # Under 'ids', we identify source fields populated above which will uniquely
+  # identify each imported item. The 'type' makes sure the migration map table
+  # uses the proper schema type for stored the IDs.
+  ids:
+    id:
+      type: integer
+# This is the mapping of the source values to the destination.
+process:
+  type:
+    plugin: default_value
+    default_value: event
+  # Note that the source field names here (id and title) were
+  # defined by the 'fields' configuration for the source plugin above.
+  title: title
+  status: status
+  # Pathauto needs to generate automatic url alias if value is not provided in migration.
+  # skip_on_empty plugin ensures that pathauto won't be disabled if there is a value provided.
+  path/pathauto:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: path
+    -
+      plugin: default_value
+      default_value: 0 # Disable pathauto.
+  path/alias: path
+  body/value: body
+  body/format:
+    plugin: default_value
+    default_value: full_html
+  bene_header_media/target_id:
+    plugin: media_import
+    source: image
+    process:
+      bundle: 'image'
+      image/alt: imagealt
+  bene_intro: intro
+  bene_event_date_range/value:
+    -
+      plugin: concat
+      source:
+        - startdate
+        - starttime
+      delimiter: T
+    -
+      plugin: timezone_import
+  bene_event_date_range/end_value:
+    -
+      plugin: concat
+      source:
+        - enddate
+        - endtime
+      delimiter: T
+    -
+      plugin: timezone_import
+  bene_event_location/country_code:
+    plugin: default_value
+    default_value: US
+  bene_event_location/langcode:
+    plugin: default_value
+    default_value: en
+  bene_event_location/organization: company
+  bene_event_location/address_line1: address1
+  bene_event_location/address_line2: address2
+  bene_event_location/locality: city
+  # This has the form US-IN.
+  bene_event_location/administrative_area: state
+  bene_event_location/postal_code: zip
+  bene_content:
+    plugin: entity_reference_revisions
+    source: content
+    migration: block_paragraphs
+    delimiter: ;
+destination:
+  plugin: entity:node
+migration_dependencies:
+  required:
+    - block_paragraphs

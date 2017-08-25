@@ -1,0 +1,89 @@
+# This migration demonstrates importing from a Google Spreadsheet XML feed.
+id: block_paragraphs
+label: University of Chicago block paragraphs with Google Spreadsheet
+dependencies:
+  enforced:
+    module:
+      - bene_media
+      - bene_migrate_google_sheets
+migration_group: bene
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: google_sheets
+  item_selector: ''
+  # The feed file for the spreadsheet. The Google Spreadsheet should be either “Public” or set to “Anyone with link can
+  # view” in order for the feed to work. Note that the <SHEET> param is the order of the tabs and WILL change if the
+  # tabs are re-ordered.
+  # Template: 'https://spreadsheets.google.com/feeds/list/<KEY>/<SHEET>/public/values?alt=json'
+  urls: 'https://spreadsheets.google.com/feeds/list/1BkC1_65t5D4ZoDhTb0F0wlngPYBcZgwin7v45UYydFc/5/public/values?alt=json'
+  # Under 'fields', we list the data items to be imported. The first level keys
+  # are the source field names we want to populate (the names to be used as
+  # sources in the process configuration below). For each field we're importing,
+  # we provide a label (optional - this is for display in migration tools) and
+  # an selector (xpath) for retrieving that value. It's important to note that this xpath
+  # is relative to the elements retrieved by item_selector.
+  #item_selector: /response/variety
+  # For Google Spreadsheet XML feeds the actual columns are named with gsx: followed by the cleaned column name (lower,
+  # limited punctuation, etc).
+  fields:
+    -
+      name: id
+      label: 'ID'
+      selector: 'id'
+    -
+      name: paragraphtype
+      label: "Paragraph Type"
+      selector: 'paragraphtype'
+    -
+      name: image
+      label: 'Image'
+      selector: 'image'
+    -
+      name: imagealt
+      label: 'Image Alt'
+      selector: 'imagealt'
+    -
+      name: linkuri
+      label: 'Link URI'
+      selector: 'linkuri'
+    -
+      name: linktitle
+      label: 'Link Title'
+      selector: 'linktitle'
+    -
+      name: title
+      label: 'Title'
+      selector: 'title'
+    -
+      name: text
+      label: 'Text'
+      selector: 'text'
+  # Under 'ids', we identify source fields populated above which will uniquely
+  # identify each imported item. The 'type' makes sure the migration map table
+  # uses the proper schema type for stored the IDs.
+  ids:
+    id:
+      type: integer
+# This is the mapping of the source values to the destination.
+process:
+  type: paragraphtype
+  # Note that the source field names here (id and title) were
+  # defined by the 'fields' configuration for the source plugin above.
+  field_title: title
+  field_link/uri:
+    plugin: link_url_import
+    source: linkuri
+  field_link/title: linktitle
+  field_background_image/target_id:
+    plugin: media_import
+    source: image
+    process:
+      bundle: 'image'
+      image/alt: imagealt
+  field_text: text
+destination:
+  plugin: entity:paragraph
+migration_dependencies:
+  required: {  }
+  optional: {  }
