@@ -10,6 +10,7 @@ dependencies:
   - automated_cron
   - bene_core
   - bene_event
+  - bene_listing_page
   - bene_media
   - bene_migrate_google_sheets
   - bene_news
