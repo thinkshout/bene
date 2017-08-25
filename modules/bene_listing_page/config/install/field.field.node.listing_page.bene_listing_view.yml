@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_listing
+    - field.storage.node.bene_listing_view
     - node.type.listing_page
   module:
     - viewsreference
-id: node.listing_page.field_listing
-field_name: field_listing
+id: node.listing_page.bene_listing_view
+field_name: bene_listing_view
 entity_type: node
 bundle: listing_page
 label: Listing

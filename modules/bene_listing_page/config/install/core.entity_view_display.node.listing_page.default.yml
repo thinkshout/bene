@@ -5,7 +5,7 @@ dependencies:
     - field.field.node.listing_page.bene_header_media
     - field.field.node.listing_page.bene_intro
     - field.field.node.listing_page.bene_metatags
-    - field.field.node.listing_page.field_listing
+    - field.field.node.listing_page.bene_listing_view
     - node.type.listing_page
     - responsive_image.styles.header
   module:
@@ -35,7 +35,7 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_listing:
+  bene_listing_view:
     weight: 2
     label: hidden
     settings:

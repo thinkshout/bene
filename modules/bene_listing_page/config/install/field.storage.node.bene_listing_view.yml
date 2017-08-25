@@ -5,8 +5,8 @@ dependencies:
     - node
     - views
     - viewsreference
-id: node.field_listing
-field_name: field_listing
+id: node.bene_listing_view
+field_name: bene_listing_view
 entity_type: node
 type: viewsreference
 settings:

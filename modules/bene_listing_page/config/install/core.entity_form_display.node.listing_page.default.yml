@@ -6,7 +6,7 @@ dependencies:
     - field.field.node.listing_page.bene_header_media
     - field.field.node.listing_page.bene_intro
     - field.field.node.listing_page.bene_metatags
-    - field.field.node.listing_page.field_listing
+    - field.field.node.listing_page.bene_listing_view
     - node.type.listing_page
   module:
     - entity_browser
@@ -54,7 +54,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_listing:
+  bene_listing_view:
     weight: 3
     settings: {  }
     third_party_settings: {  }
