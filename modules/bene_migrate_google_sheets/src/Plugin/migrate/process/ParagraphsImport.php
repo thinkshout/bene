@@ -15,11 +15,13 @@ use Drupal\paragraphs\Entity\Paragraph;
 use Drupal\migrate\MigrateException;
 
 /**
+ * Import paragraphs.
  *
  * @MigrateProcessPlugin(
  *   id = "paragraphs_import"
  * )
  */
+
 class ParagraphsImport extends ProcessPluginBase {
   /**
    * {@inheritdoc}
@@ -28,25 +30,26 @@ class ParagraphsImport extends ProcessPluginBase {
     if (!isset($this->configuration['paragraph_type'])) {
       throw new MigrateException('Specify a paragraph type.');
     }
-    $paragraphs = array();
-    $paragraph_values = array();
+    $paragraphs = [];
+    $paragraph_values = [];
     foreach ($this->configuration['fields'] as $delta => $fields) {
       foreach ($fields as $field_name => $source_field) {
         if (is_array($source_field)) {
           if (isset($source_field['plugin'])) {
             switch ($source_field['plugin']) {
               case 'media_import':
-                $migration = new MediaImport($source_field, $source_field['plugin'], array());
+                $migration = new MediaImport($source_field, $source_field['plugin'], []);
                 break;
               case 'link_url_import':
-                $migration = new LinkURLImport($source_field, $source_field['plugin'], array());
+                $migration = new LinkURLImport($source_field, $source_field['plugin'], []);
                 break;
+
               default:
                 $migration = FALSE;
             }
           }
 
-          if($migration) {
+          if ($migration) {
             $source_value = $row->getSourceProperty($source_field['source']);
             $field_value = $migration->transform($source_value, $migrate_executable, $row, $destination_property);
           }
@@ -60,7 +63,7 @@ class ParagraphsImport extends ProcessPluginBase {
           $field_value = $row->getSourceProperty($source_field);
         }
 
-        // extra handling for sub-elements in some forms like "link"
+        // Extra handling for sub-elements in some forms like "link".
         if (strpos($field_name, '/') !== FALSE) {
           $field_name_array = explode('/', $field_name);
           $paragraph_values[$field_name_array[0]][$field_name_array[1]] = $field_value;
@@ -69,13 +72,12 @@ class ParagraphsImport extends ProcessPluginBase {
           $paragraph_values[$field_name]['value'] = $field_value;
         }
       }
-      // don't create empty paragraphs
+      // Don't create empty paragraphs.
       if (count($paragraph_values)) {
         $paragraph_values = array_merge(
-          array(
-            'id' => NULL,
+          ['id' => NULL,
             'type' => $this->configuration['paragraph_type'],
-          ),
+          ],
           $paragraph_values);
         $paragraph = Paragraph::create($paragraph_values);
         $paragraph->save();
@@ -86,4 +88,5 @@ class ParagraphsImport extends ProcessPluginBase {
 
     return $paragraphs;
   }
+
 }

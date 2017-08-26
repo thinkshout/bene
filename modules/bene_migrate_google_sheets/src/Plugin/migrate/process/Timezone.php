@@ -25,13 +25,20 @@ class Timezone extends ProcessPluginBase {
    * Transforms given time into UTC time for storage.
    *
    * @param mixed $value
+   *  Comment.
    * @param \Drupal\migrate\MigrateExecutableInterface $migrate_executable
+   *  Comment.
    * @param \Drupal\migrate\Row $row
+   *  Comment.
    * @param string $destination_property
+   *  Comment.
+   *
    * @return mixed
+   *  Description.
    */
+
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
-    $timezone =  \Drupal::configFactory()->get('system.date')->get('timezone.default');
+    $timezone = \Drupal::configFactory()->get('system.date')->get('timezone.default');
     $date = new DrupalDateTime($value, $timezone);
     $date->setTimezone(new \DateTimeZone('UTC'));
     $final = $date->__toString();
@@ -39,4 +46,5 @@ class Timezone extends ProcessPluginBase {
     $final = str_replace(' ', 'T', $final);
     return $final;
   }
+
 }

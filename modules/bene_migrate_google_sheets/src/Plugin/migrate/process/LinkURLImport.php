@@ -39,13 +39,10 @@ class LinkURLImport extends ProcessPluginBase {
    *
    * @param mixed $value
    *  Comment.
-   *
    * @param \Drupal\migrate\MigrateExecutableInterface $migrate_executable
    *  Comment.
-   *
    * @param \Drupal\migrate\Row $row
    *  Comment.
-   *
    * @param string $destination_property
    *  Comment.
    *
