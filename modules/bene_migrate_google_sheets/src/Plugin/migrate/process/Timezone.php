@@ -21,22 +21,22 @@ use Drupal\Core\Datetime\DrupalDateTime;
  * )
  */
 class Timezone extends ProcessPluginBase {
+
   /**
    * Transforms given time into UTC time for storage.
    *
    * @param mixed $value
-   *  Comment.
+   *   Comment.
    * @param \Drupal\migrate\MigrateExecutableInterface $migrate_executable
-   *  Comment.
+   *   Comment.
    * @param \Drupal\migrate\Row $row
-   *  Comment.
+   *   Comment.
    * @param string $destination_property
-   *  Comment.
+   *   Comment.
    *
    * @return mixed
-   *  Description.
+   *   Description.
    */
-
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
     $timezone = \Drupal::configFactory()->get('system.date')->get('timezone.default');
     $date = new DrupalDateTime($value, $timezone);

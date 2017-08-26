@@ -21,8 +21,8 @@ use Drupal\migrate\MigrateException;
  *   id = "paragraphs_import"
  * )
  */
-
 class ParagraphsImport extends ProcessPluginBase {
+
   /**
    * {@inheritdoc}
    */
@@ -40,6 +40,7 @@ class ParagraphsImport extends ProcessPluginBase {
               case 'media_import':
                 $migration = new MediaImport($source_field, $source_field['plugin'], []);
                 break;
+
               case 'link_url_import':
                 $migration = new LinkURLImport($source_field, $source_field['plugin'], []);
                 break;
@@ -75,7 +76,8 @@ class ParagraphsImport extends ProcessPluginBase {
       // Don't create empty paragraphs.
       if (count($paragraph_values)) {
         $paragraph_values = array_merge(
-          ['id' => NULL,
+          [
+            'id' => NULL,
             'type' => $this->configuration['paragraph_type'],
           ],
           $paragraph_values);
