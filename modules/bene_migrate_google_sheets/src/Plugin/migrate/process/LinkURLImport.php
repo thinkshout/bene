@@ -64,9 +64,11 @@ class LinkURLImport extends ProcessPluginBase {
     $link_widget = new LinkWidget('link_default', $empty_plugin_definition, $field_base_definition, $empty_settings, $empty_third_party_settings);
 
     // Use massageFormValues to call getUserEnteredStringAsUri.
-    $as_if_it_were_a_form = $link_widget->massageFormValues([[
-        ('uri' => $value)
-      ], $empty_form, $empty_form_state];
+    $as_if_it_were_a_form = $link_widget->massageFormValues([
+        [
+          ('uri' => $value),
+        ], $empty_form, $empty_form_state
+      ];
 
     return isset($as_if_it_were_a_form[0]['uri']) ? $as_if_it_were_a_form[0]['uri'] : $value;
   }
