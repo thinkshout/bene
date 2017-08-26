@@ -67,7 +67,7 @@ class LinkURLImport extends ProcessPluginBase {
     $as_if_it_were_a_form = $link_widget->massageFormValues([
         [
           ('uri' => $value),
-        ], $empty_form, $empty_form_state
+        ], $empty_form, $empty_form_state,
       ];
 
     return isset($as_if_it_were_a_form[0]['uri']) ? $as_if_it_were_a_form[0]['uri'] : $value;
