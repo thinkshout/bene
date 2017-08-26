@@ -12,8 +12,7 @@ use Drupal\migrate\Plugin\migrate\process\Migration;
 use Drupal\migrate\Row;
 
 /**
- * Process a list of IDs passed from the google sheet into an array appropriate
- * for an Entity reference revisions type field.
+ * Process a list of IDs into an array for Entity reference revisions field.
  *
  * @MigrateProcessPlugin(
  *   id = "entity_reference_revisions"

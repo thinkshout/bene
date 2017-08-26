@@ -1,11 +1,12 @@
 <?php
 
+namespace Drupal\bene_migrate_google_sheets\Plugin\migrate\process;
+
 /**
  * @file
  * Contains \Drupal\bene_migrate_gogle_sheets\Plugin\migrate\process\ParagraphsImport.
  */
 
-namespace Drupal\bene_migrate_google_sheets\Plugin\migrate\process;
 
 use Drupal\migrate\MigrateExecutableInterface;
 use Drupal\migrate\ProcessPluginBase;

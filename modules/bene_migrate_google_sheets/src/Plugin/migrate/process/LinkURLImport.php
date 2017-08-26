@@ -38,11 +38,21 @@ class LinkURLImport extends ProcessPluginBase {
    * but that function is static protected.
    *
    * @param mixed $value
+   *  Comment.
+   *
    * @param \Drupal\migrate\MigrateExecutableInterface $migrate_executable
+   *  Comment.
+   *
    * @param \Drupal\migrate\Row $row
+   *  Comment.
+   *
    * @param string $destination_property
+   *  Comment.
+   *
    * @return mixed
+   *  Description.
    */
+
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
     $field_base_definition = new BaseFieldDefinition();
     $empty_form_state = new FormState();
@@ -51,7 +61,7 @@ class LinkURLImport extends ProcessPluginBase {
     $empty_plugin_definition =
       $empty_settings =
       $empty_third_party_settings =
-      $empty_form = array();
+      $empty_form = [];
 
     // All values populated, create an empty instance of LinkWidget.
     $link_widget = new LinkWidget('link_default', $empty_plugin_definition, $field_base_definition, $empty_settings, $empty_third_party_settings);
@@ -61,4 +71,5 @@ class LinkURLImport extends ProcessPluginBase {
 
     return isset($as_if_it_were_a_form[0]['uri']) ? $as_if_it_were_a_form[0]['uri'] : $value;
   }
+
 }
