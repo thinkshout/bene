@@ -183,4 +183,5 @@ destination:
   plugin: entity:node
 migration_dependencies:
   required:
+    - node_page
     - block_paragraphs
