@@ -10,32 +10,32 @@ body.user-logged-in .region.region-content {
 }
 .user-logged-in {
   div.messages {
-    position: fixed;
     bottom: 0;
-    left: 1px;
-    z-index: 1000;
     cursor: pointer;
+    left: 1px;
+    position: fixed;
+    z-index: 1000;
     &:after {
-      content: "×";
-      color: #325e1c;
       background-color: #f3faef;
       border-color: #c9e1bd #c9e1bd #c9e1bd transparent;
-      box-shadow: -1px 2px 5px #77b259;
       border-radius: 50%;
-      padding: rem(2) rem(6);
+      box-shadow: -1px 2px 5px #77b259;
+      color: #325e1c;
+      content: "×";
+      display: inline-block;
       font-size: rem(18);
-      text-transform: uppercase;
+      padding: rem(2) rem(6);
       position: absolute;
       right: rem(-13);
+      text-transform: uppercase;
       top: rem(-13);
-      display: inline-block;
     }
   }
 
   .contextual-links {
     background-color: #fff;
-    border: 1px solid #ccc;
     border-radius: 4px 0 4px 4px;
+    border: 1px solid #ccc;
     clear: both;
     float: right;
     margin: 0;
@@ -48,11 +48,11 @@ body.user-logged-in .region.region-content {
     li {
       background-color: #fff;
       border: none;
-      list-style: none;
+      line-height: 100%;
       list-style-image: none;
+      list-style: none;
       margin: 0;
       padding: 0;
-      line-height: 100%;
       a {
         background-color: #fff;
         color: #333;
@@ -73,10 +73,10 @@ body.user-logged-in .region.region-content {
     background-color: $black;
     bottom: 0;
     height: auto;
+    padding-right: 45px;
     position: fixed;
     right: -90%;
     width: 90%;
-    padding-right: 45px;
     z-index: 1000;
     @include mq(desktop) {
       right: -55%;
@@ -90,12 +90,12 @@ body.user-logged-in .region.region-content {
       a {
         background-color: $blue;
         border: none;
-        display: inline-block;
-        font-weight: 800;
-        font-size: rem(15);
-        text-transform: uppercase;
         color: white;
+        display: inline-block;
+        font-size: rem(15);
+        font-weight: 800;
         padding: rem(5) rem(10) rem(5);
+        text-transform: uppercase;
         @include mq(desktop) {
           font-size: rem(18);
           padding: rem(7) rem(20) rem(7);
@@ -114,10 +114,10 @@ body.user-logged-in .region.region-content {
       font-size: rem(35);
       height: rem(30);
       left: rem(-30);
-      width: rem(30);
       line-height: rem(22);
       padding: 0 rem(8) 0 rem(9);
       position: absolute;
+      width: rem(30);
       @include mq(desktop) {
         height: rem(38);
         line-height: rem(38);

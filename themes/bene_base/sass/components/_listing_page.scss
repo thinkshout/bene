@@ -16,7 +16,7 @@
 
 // Desktops - 769px or more. (This is the most common Media Query)
 @include mq(desktop) {
-.page-node-type-listing-page {
+  .page-node-type-listing-page {
     .block-system-main-block .field--name-bene-intro {
       font-size: rem(22);
       margin-bottom: rem(32);

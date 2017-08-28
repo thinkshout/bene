@@ -2,8 +2,8 @@
   $max-width: rem(1800) !global;
 
   #site-wrapper {
-    max-width: 1800px;
     margin: 0 auto;
+    max-width: 1800px;
     position: relative;
   }
 
@@ -29,7 +29,8 @@
 
   .page-node-type-page,
   .page-node-type-listing-page,
-  .page-node-type-event {
+  .page-node-type-event,
+  .page-node-type-news {
     .region-content {
       margin-bottom: rem(32);
       @include mq(desktop) {
@@ -53,17 +54,17 @@
       clear: both;
       padding: 0 2%;
       @include mq(desktop) {
+        margin-left: 17.05961%;
         margin-top: rem(48);
         max-width: 65.88078%;
-        margin-left: 17.05961%;
       }
     }
 
     .paragraph--type--media .media-instagram > div,
     .paragraph--type--media .media-tweet > div {
+      align-items: center;
       display: flex;
       justify-content: center;
-      align-items: center;
     }
     .field--name-bene-content .paragraph--type--media,
     .field--name-bene-content .paragraph--type--feature-full-width,

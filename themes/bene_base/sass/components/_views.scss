@@ -2,20 +2,16 @@
 .region-content .block-views {
   clear: both;
 
-  .view-filters {
-
-  }
-
   .view-content > .views-row {
     clear: both;
     margin-bottom: rem(24);
     .field--name-bene-header-media {
-      max-width: 30%;
-      margin-right: rem(24);
       float: left;
+      margin-right: rem(24);
+      max-width: 30%;
       img {
-        max-width: 100%;
         height: auto;
+        max-width: 100%;
       }
     }
   }

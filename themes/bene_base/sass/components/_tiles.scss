@@ -1,10 +1,11 @@
 .paragraph--type--tiles {
   &> .field--name-field-title {
     font-size: rem(24);
-    line-height: rem(36);
     font-weight: 400;
-    text-align: center;
+    line-height: rem(36);
     margin: rem(18) auto rem(0);
+    text-align: center;
+
     @include mq(desktop) {
       margin: rem(36) auto rem(0);
     }
@@ -23,8 +24,8 @@
     &> .field__item {
       display: flex;
       flex: 1 1 auto;
-      text-align: center;
       margin-bottom: rem(24);
+      text-align: center;
 
       @include mq(phablet) {
         flex: 0 1 calc(50% - 1rem);
@@ -45,9 +46,9 @@
       .field--name-field-image,
       .bg-header {
         background-color: $blue;
-        max-width: rem(380);
-        max-height: rem(228);
         font-size: 0;
+        max-height: rem(228);
+        max-width: rem(380);
         img {
           max-width: 100%;
         }
@@ -56,8 +57,8 @@
         .field--name-field-image,
         .bg-header {
           background-color: $blue;
-          width: 30.6vw;
           height: 18.36vw;
+          width: 30.6vw;
         }
       }
       .field--name-field-title {
@@ -75,10 +76,10 @@
       }
 
       .field--name-field-link a {
+        display: inline-block;
         font-size: rem(14);
         font-weight: 600;
         margin-top: rem(12);
-        display: inline-block;
       }
     }
   }
