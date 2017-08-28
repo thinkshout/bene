@@ -1,0 +1,41 @@
+// Default Styles (Mobile First!)
+.region-content .block-views {
+  clear: both;
+
+  .view-filters {
+
+  }
+
+  .view-content > .views-row {
+    clear: both;
+    margin-bottom: rem(24);
+    .field--name-bene-header-media {
+      max-width: 30%;
+      margin-right: rem(24);
+      float: left;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// Specific ranges - use sparingly.
+// Mobile - things specifically under 400px.
+@include mq(mobile) {  }
+
+// Phablet - things between 401px and 768px.
+@include mq(phablet) {  }
+
+// Tablet - things between 769px and 1239px.
+@include mq(tablet) {  }
+
+
+// Desktops - 769px or more. (This is the most common Media Query)
+@include mq(desktop) {
+
+}
+
+// Extra Large Desktop: min-width: 1240px.
+@include mq(xl) {  }

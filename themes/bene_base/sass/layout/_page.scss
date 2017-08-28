@@ -28,9 +28,12 @@
   }
 
   .page-node-type-page,
+  .page-node-type-listing-page,
   .page-node-type-event {
-    .node__content .field--name-bene-intro,
-    .field--name-bene-content .paragraph--type--rich-text {
+    .block-system-main-block .field--name-bene-intro,
+    .field--name-bene-content .paragraph--type--rich-text,
+    .block-system-main-block .field--name-bene-event-date-range,
+    .block-system-main-block .field--name-bene-event-location {
       clear: both;
       padding: 0 2%;
       @include mq(desktop) {
@@ -65,5 +68,26 @@
       @include outer-container;
       max-width: rem(1440);
     }
+  }
 
+  .page-node-type-listing-page {
+    .views-element-container {
+      clear: both;
+      padding: 0 2%;
+      @include mq(desktop) {
+        @include span-columns(10);
+        @include shift(1);
+        .view-bene-events {
+          display: flex;
+          flex-direction: row;
+          .view-filters {
+            flex: 1 1 25%;
+          }
+          .view-content {
+            flex: 1 1 73%;
+            margin-left: 2%;
+          }
+        }
+      }
+    }
   }
