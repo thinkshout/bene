@@ -36,7 +36,13 @@
 
 // Desktops - 769px or more. (This is the most common Media Query)
 @include mq(desktop) {
-
+  .page-node-type-event {
+    .block-system-main-block .field--name-bene-intro {
+      font-size: rem(22);
+      margin-bottom: rem(32);
+      margin-top: rem(24);
+    }
+  }
 }
 
 // Extra Large Desktop: min-width: 1240px.
