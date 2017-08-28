@@ -199,6 +199,13 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
     $current_route = $this->current_route_match->getCurrentRouteMatch();
     $breadcrumbs = $this->breadcrumb_manager->build($current_route)->getLinks();
 
+    // Remove 'Home' link from breadcrumbs.
+    if (isset($breadcrumbs[0]) && $breadcrumbs[0]->getUrl()->getRouteName() == '<front>') {
+      unset($breadcrumbs[0]);
+      // Reset array indexes.
+      $breadcrumbs = array_values($breadcrumbs);
+    }
+
     return $breadcrumbs;
   }
 
