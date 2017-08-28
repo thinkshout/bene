@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.bene_listing_view
+    - node.type.listing_page
+  module:
+    - viewsreference
+id: node.listing_page.bene_listing_view
+field_name: bene_listing_view
+entity_type: node
+bundle: listing_page
+label: Listing
+description: 'Select a dynamic listing to render on this page.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    page: page
+    block: block
+    default: 0
+    entity_browser: 0
+    feed: 0
+  preselect_views:
+    bene_events: bene_events
+    bene_news: bene_news
+    bene_media: 0
+    block_content: 0
+    contact_messages: 0
+    content: 0
+    content_recent: 0
+    files: 0
+    frontpage: 0
+    redirect: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    argument: argument
+    title: title
+    limit: 0
+    offset: 0
+    pager: 0
+field_type: viewsreference

@@ -61,7 +61,8 @@
         "drupal/allowed_formats": "^1.1",
         "drupal/picture_background_formatter": "1.x-dev",
         "drupal/address": "~1.0",
-        "commerceguys/addressing": "~1.0"
+        "commerceguys/addressing": "~1.0",
+        "drupal/viewsreference": "dev-2.x"
     },
     "replace": {
         "bower-asset/jquery": "*",

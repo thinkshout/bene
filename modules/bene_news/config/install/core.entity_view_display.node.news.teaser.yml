@@ -2,52 +2,43 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - field.field.node.news.bene_content
     - field.field.node.news.bene_header_media
     - field.field.node.news.bene_intro
     - field.field.node.news.bene_metatags
     - field.field.node.news.bene_date
+    - image.style.tile_l
     - node.type.news
-    - responsive_image.styles.header
   module:
     - datetime
-    - entity_reference_revisions
-    - picture_background_formatter
+    - media_entity
     - text
     - user
-id: node.news.default
+id: node.news.teaser
 targetEntityType: node
 bundle: news
-mode: default
+mode: teaser
 content:
-  bene_content:
-    weight: 3
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
   bene_header_media:
-    type: picture_background_formatter_media
-    weight: 0
+    type: media_thumbnail
+    weight: 1
     region: content
     label: hidden
     settings:
-      responsive_image_style: header
-      selector: .block-page-title-block
-      image_link: ''
+      image_style: tile_l
+      image_link: content
     third_party_settings: {  }
   bene_intro:
     weight: 2
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 600
     third_party_settings: {  }
-    type: text_default
+    type: text_summary_or_trimmed
     region: content
   bene_date:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       timezone_override: ''
@@ -56,5 +47,6 @@ content:
     type: datetime_default
     region: content
 hidden:
+  bene_content: true
   bene_metatags: true
   links: true

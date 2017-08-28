@@ -27,8 +27,9 @@
     padding: 0 2%;
   }
 
-  .page-node-type-page {
-    .node__content .field--name-field-intro,
+  .page-node-type-page,
+  .page-node-type-event {
+    .node__content .field--name-bene-intro,
     .field--name-bene-content .paragraph--type--rich-text {
       clear: both;
       padding: 0 2%;

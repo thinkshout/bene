@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.bene_metatags
+    - node.type.listing_page
+  module:
+    - metatag
+id: node.listing_page.bene_metatags
+field_name: bene_metatags
+entity_type: node
+bundle: listing_page
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:0:{}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

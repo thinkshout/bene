@@ -1,5 +1,6 @@
 // Default Styles (Mobile First!)
-.page-node-type-page {
+.page-node-type-page,
+.page-node-type-event {
   .region-content {
     margin-bottom: rem(32);
   }
@@ -167,7 +168,8 @@
 
 // Desktops - 769px or more. (This is the most common Media Query)
 @include mq(desktop) {
-.page-node-type-page {
+.page-node-type-page,
+.page-node-type-event {
     .region-content {
       margin-bottom: rem(48);
     }
