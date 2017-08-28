@@ -231,9 +231,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_1:
+  block_events_past:
     display_plugin: block
-    id: block_1
+    id: block_events_past
     display_title: 'Block: Past Events'
     position: 2
     display_options:

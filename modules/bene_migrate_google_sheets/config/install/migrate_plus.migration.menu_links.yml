@@ -93,4 +93,5 @@ migration_dependencies:
     - upgrade_menu
     - node_page
     - node_event
+    - node_listing_page
   optional: {  }
