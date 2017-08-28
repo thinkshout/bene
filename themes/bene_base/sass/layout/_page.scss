@@ -30,6 +30,12 @@
   .page-node-type-page,
   .page-node-type-listing-page,
   .page-node-type-event {
+    .region-content {
+      margin-bottom: rem(32);
+      @include mq(desktop) {
+        margin-bottom: rem(48);
+      }
+    }
     .block-system-main-block .field--name-bene-intro,
     .field--name-bene-content .paragraph--type--rich-text,
     .block-system-main-block .field--name-bene-event-date-range,

@@ -1,0 +1,27 @@
+.field--name-bene-intro {
+  margin-bottom: rem(24);
+  margin-top: rem(16);
+  h2 {
+    font-size: rem(32);
+    font-style: italic;
+    color: $bright-blue;
+    margin-top: rem(32);
+    font-weight: 600;
+  }
+  h3 {
+    font-size: rem(20);
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: rem(18);
+  }
+  p {
+    font-size: rem(18);
+    font-weight: 300;
+    margin-top: rem(12);
+    line-height: rem(32);
+    @include mq(desktop) {
+      font-size: rem(22);
+      line-height: rem(38);
+    }
+  }
+}
