@@ -126,6 +126,7 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
    */
   public function build() {
     // Disable block cache as page title will change per-page.
+    // TODO: Review this for potential caching with tags based on path.
     $build = [
       '#cache' => [
         'max-age' => 0,
