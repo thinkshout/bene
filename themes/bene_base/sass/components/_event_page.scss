@@ -1,7 +1,25 @@
 // Default Styles (Mobile First!)
-.page-node-type-page {
+.page-node-type-event {
   .field--name-bene-content {
     clear: both;
+  }
+  .field--name-bene-event-date-range {
+    margin-bottom: rem(32);
+    margin-top: rem(24);
+    time {
+      font-size: rem(18);
+      font-weight: 300;
+      line-height: rem(32);
+      margin-top: rem(12);
+      @include mq(desktop) {
+        font-size: rem(22);
+        line-height: rem(38);
+      }
+    }
+  }
+  .field--name-bene-event-location p.address {
+    line-height: 1.3;
+    margin-top: 0;
   }
 }
 
@@ -18,7 +36,7 @@
 
 // Desktops - 769px or more. (This is the most common Media Query)
 @include mq(desktop) {
-  .page-node-type-page {
+  .page-node-type-event {
     .block-system-main-block .field--name-bene-intro {
       font-size: rem(22);
       margin-bottom: rem(32);

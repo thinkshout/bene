@@ -1,8 +1,6 @@
 // Default Styles (Mobile First!)
-.page-node-type-page {
-  .field--name-bene-content {
-    clear: both;
-  }
+.page-node-type-listing-page {
+
 }
 
 // Specific ranges - use sparingly.
@@ -18,7 +16,7 @@
 
 // Desktops - 769px or more. (This is the most common Media Query)
 @include mq(desktop) {
-  .page-node-type-page {
+  .page-node-type-listing-page {
     .block-system-main-block .field--name-bene-intro {
       font-size: rem(22);
       margin-bottom: rem(32);

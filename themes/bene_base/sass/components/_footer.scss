@@ -3,8 +3,8 @@
 
   .menu {
     a {
-      font-size: rem(14);
       color: $black;
+      font-size: rem(14);
       font-weight: 600;
       &:hover, &:focus, &.is-active {
         color: $blue;
@@ -20,16 +20,16 @@
     .phone, .email, .additional-contact {
       display: block;
       p {
-        margin: rem(5) 0;
         font-size: rem(12);
+        margin: rem(5) 0;
       }
     }
   }
 
   .additional-footer {
     p {
-      margin: 0 rem(5) 0;
       font-size: rem(14);
+      margin: 0 rem(5) 0;
     }
   }
 

@@ -1,7 +1,19 @@
 // Default Styles (Mobile First!)
-.page-node-type-page {
-  .field--name-bene-content {
+.region-content .block-views {
+  clear: both;
+
+  .view-content > .views-row {
     clear: both;
+    margin-bottom: rem(24);
+    .field--name-bene-header-media {
+      float: left;
+      margin-right: rem(24);
+      max-width: 30%;
+      img {
+        height: auto;
+        max-width: 100%;
+      }
+    }
   }
 }
 
@@ -18,13 +30,7 @@
 
 // Desktops - 769px or more. (This is the most common Media Query)
 @include mq(desktop) {
-  .page-node-type-page {
-    .block-system-main-block .field--name-bene-intro {
-      font-size: rem(22);
-      margin-bottom: rem(32);
-      margin-top: rem(24);
-    }
-  }
+
 }
 
 // Extra Large Desktop: min-width: 1240px.

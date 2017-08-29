@@ -67,6 +67,10 @@
     }
   }
 }
+.menu-item--collapsed {
+  list-style-image: none;
+  list-style-type: none;
+}
 .mobile-nav {
   .region-primary-nav {
     display: flex;
@@ -76,7 +80,7 @@
     position: absolute;
     top: rem(101);
     width: 100%;
-    z-index: 10;
+    z-index: 20;
   }
   .menu a {
     border-bottom: 1px solid $bright-blue;

@@ -1,15 +1,15 @@
 // Default Styles (Mobile First!)
 .external-newsletter {
-  padding: rem(12);
+  align-items: center;
   background-color: $blue;
   color: $white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding: rem(12);
   h4, p, a {
-    max-width: 94%;
     margin: 0 auto;
+    max-width: 94%;
     text-align: center;
   }
   p {
@@ -22,8 +22,8 @@
       @include all-transition;
       content: ' →';
       display: inline-block;
-      position: relative;
       left: rem(4);
+      position: relative;
     }
     &:hover:after {
       left: rem(8);
@@ -32,9 +32,9 @@
   a.button {
     background-color: $white;
     font-size: rem(12);
-    text-transform: none;
-    padding: rem(15) rem(20);
     font-weight: 600;
+    padding: rem(15) rem(20);
+    text-transform: none;
     &:after {
       content: none;
     }

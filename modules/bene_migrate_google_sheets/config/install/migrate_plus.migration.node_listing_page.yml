@@ -1,6 +1,6 @@
 # This migration demonstrates importing from a Google Spreadsheet XML feed.
-id: node_page
-label: Bene node pages with Google Spreadsheet
+id: node_listing_page
+label: Bene node listing pages with Google Spreadsheet
 dependencies:
   enforced:
     module:
@@ -15,7 +15,7 @@ source:
   # view” in order for the feed to work. Note that the <SHEET> param is the order of the tabs and WILL change if the
   # tabs are re-ordered.
   # Template: 'https://spreadsheets.google.com/feeds/list/<KEY>/<SHEET>/public/values?alt=json'
-  urls: 'https://spreadsheets.google.com/feeds/list/1BkC1_65t5D4ZoDhTb0F0wlngPYBcZgwin7v45UYydFc/2/public/values?alt=json'
+  urls: 'https://spreadsheets.google.com/feeds/list/1BkC1_65t5D4ZoDhTb0F0wlngPYBcZgwin7v45UYydFc/6/public/values?alt=json'
   # Under 'fields', we list the data items to be imported. The first level keys
   # are the source field names we want to populate (the names to be used as
   # sources in the process configuration below). For each field we're importing,
@@ -42,9 +42,13 @@ source:
       label: 'Redirect'
       selector: 'urlonoldsite'
     -
-      name: summary
-      label: 'Summary'
-      selector: 'summary'
+      name: viewid
+      label: 'View ID'
+      selector: 'viewid'
+    -
+      name: blockid
+      label: 'Block ID'
+      selector: 'blockid'
     -
       name: intro
       label: 'Intro'
@@ -71,7 +75,7 @@ source:
 process:
   type:
     plugin: default_value
-    default_value: page
+    default_value: listing_page
   # Note that the source field names here (id and title) were
   # defined by the 'fields' configuration for the source plugin above.
   title: title
@@ -96,6 +100,8 @@ process:
     process:
       bundle: 'image'
       image/alt: headerimagealt
+  bene_listing_view/target_id: viewid
+  bene_listing_view/display_id: blockid
   bene_content:
     plugin: entity_reference_revisions
     source: content
