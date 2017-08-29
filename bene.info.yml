@@ -9,8 +9,11 @@ dependencies:
   - admin_toolbar_tools
   - automated_cron
   - bene_core
+  - bene_event
+  - bene_listing_page
   - bene_media
   - bene_migrate_google_sheets
+  - bene_news
   - bene_page
   - block
   - block_content
@@ -24,6 +27,7 @@ dependencies:
   - crop
   - crop_media_entity
   - datetime
+  - datetime_range
   - dblog
   - default_content
   - dynamic_page_cache
@@ -49,9 +53,11 @@ dependencies:
   - path
   - pathauto
   - quickedit
+  - picture_background_formatter
   - r4032login
   - rdf
   - redirect
+  - responsive_image
   - search
   - shortcut
   - simple_sitemap

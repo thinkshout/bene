@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.bene_event_date_range
+    - node.type.event
+  module:
+    - datetime_range
+id: node.event.bene_event_date_range
+field_name: bene_event_date_range
+entity_type: node
+bundle: event
+label: Date/time
+description: 'To only show a start date/time, leave the end date empty or set to the same as the start date/time.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

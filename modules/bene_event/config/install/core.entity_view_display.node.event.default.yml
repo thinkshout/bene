@@ -1,0 +1,78 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.bene_content
+    - field.field.node.event.bene_event_date_range
+    - field.field.node.event.bene_event_location
+    - field.field.node.event.bene_header_media
+    - field.field.node.event.bene_intro
+    - field.field.node.event.bene_metatags
+    - node.type.event
+    - responsive_image.styles.header
+  module:
+    - address
+    - datetime_range
+    - entity_reference_revisions
+    - metatag
+    - picture_background_formatter
+    - text
+    - user
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  bene_content:
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  bene_event_date_range:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: long
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  bene_event_location:
+    weight: 2
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  bene_header_media:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: header
+      selector: .block-page-title-block
+      image_link: ''
+    third_party_settings: {  }
+    type: picture_background_formatter_media
+    region: content
+  bene_intro:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  bene_metatags:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+hidden:
+  body: true
+  links: true

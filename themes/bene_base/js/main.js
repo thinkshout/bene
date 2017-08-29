@@ -44,6 +44,14 @@
           });
         },
 
+        beneHero: function(){
+          if ($('.block-hero').css('background-image') == 'none') {
+            $('.block-hero').addClass('no-bgimage').css('visibility','visible');
+          } else {
+            $('.block-hero').addClass('bgimage').css('visibility','visible');
+          };
+        },
+
         beneNiceSelect: function(){
           $.fn.niceSelect = function(method) {
 
@@ -234,6 +242,7 @@
           this.formCleanup();
           this.messageDismiss();
           this.showHideTabs();
+          this.beneHero();
           this.beneNiceSelect();
         }
       } // end _bene{}

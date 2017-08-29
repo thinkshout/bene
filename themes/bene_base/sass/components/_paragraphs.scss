@@ -1,0 +1,119 @@
+.paragraph--type--media {
+  font-size: rem(14);
+  font-style: italic;
+  margin: rem(24) 0;
+  text-align: center;
+  width: 100%;
+  img {
+    max-width: 100%;
+  }
+}
+.paragraph--type--rich-text {
+  figure {
+    margin: rem(16) 0;
+  }
+  figcaption {
+    font-size: rem(14);
+    font-style: italic;
+  }
+  .embedded-entity.align-left,
+  figure.align-left {
+    margin-right: rem(32);
+  }
+  .embedded-entity.align-right,
+  figure.align-right {
+    margin-left: rem(32);
+  }
+
+  .embedded-entity.align-left,
+  .embedded-entity.align-right {
+    margin-bottom: rem(12);
+  }
+
+  p,
+  ol li,
+  ul li {
+    color: $dark-grey;
+  }
+  blockquote {
+    margin: rem(32) auto;
+    max-width: 80%;
+    text-align: center;
+    p {
+      color: $bright-blue;
+      font-size: rem(26);
+      font-style: italic;
+      font-weight: 600;
+      line-height: rem(39);
+      margin: 0;
+      &:before {
+        content: "“";
+      }
+      &:after {
+        content: "”";
+      }
+    }
+
+    &:after {
+      background-color: $bright-blue;
+      content: "";
+      display: inline-block;
+      height: rem(4);
+      position: relative;
+      width: 25%;
+    }
+  }
+  img {
+    max-width: 99%;
+  }
+}
+.paragraph--type--feature-full-width {
+  align-items: center;
+  background-color: $blue;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 38.2vw;
+  padding: rem(24) rem(24) rem(36) rem(24);
+  position: relative;
+  text-align: center;
+  width: 100vw;
+  &:before {
+    background-color: rgba(0,0,0,0.4);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+  }
+  .field--name-field-title {
+    font-size: rem(36);
+    font-weight: 900;
+    z-index: 10;
+  }
+  .field--name-field-text {
+    z-index: 10;
+    p {
+      color: $white;
+      margin: rem(32) auto;
+      max-width: 100%;
+      @include mq(desktop) {
+        max-width: 65%;
+      }
+    }
+  }
+  .field--type-link {
+    z-index: 10;
+    a {
+      @include button($white, $bright-blue);
+      letter-spacing: 0;
+      text-transform: none;
+    }
+  }
+}

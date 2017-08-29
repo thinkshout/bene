@@ -34,12 +34,13 @@ settings:
         -
           name: 'Block Formatting'
           items:
+            - Styles
             - Format
   plugins:
     language:
       language_list: un
     stylescombo:
-      styles: ''
+      styles: a.button|Button
     linkit:
       linkit_profile: standard_link
 image_upload:

@@ -2,14 +2,15 @@ langcode: en
 status: true
 dependencies:
   module:
+    - datetime
     - node
-    - text
-id: node.field_intro
-field_name: field_intro
+id: node.bene_date
+field_name: bene_date
 entity_type: node
-type: text_with_summary
-settings: {  }
-module: text
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
 locked: false
 cardinality: 1
 translatable: true

@@ -2,15 +2,16 @@ langcode: en
 status: true
 dependencies:
   module:
-    - media_entity
     - node
-id: node.field_header_media
-field_name: field_header_media
+    - views
+    - viewsreference
+id: node.bene_listing_view
+field_name: bene_listing_view
 entity_type: node
-type: entity_reference
+type: viewsreference
 settings:
-  target_type: media
-module: core
+  target_type: view
+module: viewsreference
 locked: false
 cardinality: 1
 translatable: true

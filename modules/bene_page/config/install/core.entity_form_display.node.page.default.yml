@@ -4,9 +4,9 @@ dependencies:
   config:
     - entity_browser.browser.media_browser_modal
     - field.field.node.page.bene_content
-    - field.field.node.page.field_header_media
-    - field.field.node.page.field_intro
-    - field.field.node.page.field_metatags
+    - field.field.node.page.bene_header_media
+    - field.field.node.page.bene_intro
+    - field.field.node.page.bene_metatags
     - node.type.page
   module:
     - entity_browser
@@ -27,17 +27,11 @@ content:
       title_plural: Sections
       edit_mode: preview
       add_mode: dropdown
-      form_display_mode: default
+      form_display_mode: thumbnail
       default_paragraph_type: _none
     third_party_settings: {  }
     region: content
-  created:
-    type: datetime_timestamp
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_header_media:
+  bene_header_media:
     type: entity_browser_entity_reference
     weight: 1
     settings:
@@ -51,7 +45,7 @@ content:
         view_mode: thumbnail
     third_party_settings: {  }
     region: content
-  field_intro:
+  bene_intro:
     type: text_textarea_with_summary
     weight: 2
     region: content
@@ -60,30 +54,22 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
-  field_metatags:
-    weight: 9
+  bene_metatags:
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
     region: content
-  path:
-    type: path
-    weight: 8
+  created:
+    type: datetime_timestamp
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     region: content
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
+  path:
+    type: path
     weight: 6
-    third_party_settings: {  }
-    region: content
-  sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 7
+    settings: {  }
     third_party_settings: {  }
     region: content
   title:
@@ -103,4 +89,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  promote: true
+  sticky: true

@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_intro
+    - field.storage.node.bene_intro
     - node.type.page
   module:
     - allowed_formats
@@ -13,8 +13,8 @@ third_party_settings:
     full_html: full_html
     basic_html: '0'
     plain_text: '0'
-id: node.page.field_intro
-field_name: field_intro
+id: node.page.bene_intro
+field_name: bene_intro
 entity_type: node
 bundle: page
 label: Introduction

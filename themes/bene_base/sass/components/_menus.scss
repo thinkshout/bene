@@ -1,22 +1,22 @@
 // Default Styles (Mobile First!)
 
 .block-system-branding-block {
-  text-align-last: center;
+  font-size: rem(18);
   font-style: italic;
   font-weight: 300;
-  font-size: rem(18);
+  text-align-last: center;
 }
 .mobile-menu-toggle {
-  height: 50px;
   display: inline-block;
   float: right;
+  height: 50px;
   width: 80px;
   div {
     height: 100%;
     position: relative;
+    top: -6px;
     width: 100%;
     z-index: 9999;
-    top: -6px;
     span {
       background-color: $bright-blue;
       display: block;
@@ -58,8 +58,8 @@
       &:before,
       &:after {
         background: $bright-blue;
-        transition: transform 0.3s;
         transform: rotate(45deg) translateY(0);
+        transition: transform 0.3s;
       }
       &:after {
         transform: rotate(-45deg) translateY(0) ;
@@ -67,37 +67,64 @@
     }
   }
 }
-.mobile-nav .menu {
-  position: absolute;
-  top: rem(101);
-  left: 0;
-  width: 100%;
-  background-color: $black;
-  a {
-    display: inline-block;
+.menu-item--collapsed {
+  list-style-image: none;
+  list-style-type: none;
+}
+.mobile-nav {
+  .region-primary-nav {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: $black;
+    left: 0;
+    position: absolute;
+    top: rem(101);
     width: 100%;
+    z-index: 20;
+  }
+  .menu a {
     border-bottom: 1px solid $bright-blue;
-    padding: rem(25) rem(33);
     color: $bright-blue;
-    text-transform: uppercase;
-    font-weight: 600;
+    display: inline-block;
     font-size: rem(18);
+    font-weight: 600;
+    padding: rem(25) rem(33);
     position: relative;
+    text-transform: uppercase;
+    width: 100%;
     &:after {
       @include all-transition;
       background: transparent url('../images/svgs/line-arrow.svg') no-repeat center center /cover;
       content: "";
-      position: absolute;
       display: inline-block;
+      height: rem(19);
+      position: absolute;
       right: rem(33);
       top: rem(25);
       width: rem(9);
-      height: rem(19);
+    }
+    &.is-active {
+      color: $white;
     }
   }
 }
-.mobile-nav .menu--utility {
-  display: none;
+.mobile-nav .menu--utility .menu li {
+  a {
+    font-size: rem(15);
+    font-weight: 400;
+    padding: rem(15) rem(33);
+    &:after {
+      top: rem(15);
+    }
+  }
+  &:last-child a {
+    background-color: $blue;
+    color: $black;
+    font-weight: 600;
+    &.is-active {
+      color: $white;
+    }
+  }
 }
 
 // Specific ranges - use sparingly.
@@ -127,17 +154,17 @@
     a {
       color: $medium-grey;
       font-size: rem(14);
-      &:hover, &:active {
+      &:hover, &:focus, &.is-active {
         color: $blue;
       }
     }
     &:last-child a {
-      @include button;
-      top: 6px;
+      @include button($white,$bright-blue);
+      font-size: rem(12);
       font-weight: 700;
       letter-spacing: 0;
-      font-size: rem(12);
       padding: rem(10) rem(15);
+      top: 6px;
     }
   }
   .desktop-nav .menu--main .menu-item {
@@ -146,8 +173,11 @@
       font-weight: 700;
       letter-spacing: rem(0.5);
       text-transform: uppercase;
-      &:hover, &:active {
+      &:hover, &:focus, &.is-active {
         color: $blue;
+      }
+      &.is-active {
+        cursor: default;
       }
     }
   }

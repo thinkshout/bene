@@ -4,11 +4,11 @@ dependencies:
   module:
     - bene_core
   theme:
-    - bene
+    - bene_child
 id: benefooter
-theme: bene
+theme: bene_child
 region: footer
-weight: 0
+weight: -6
 provider: null
 plugin: bene_footer_block
 settings:
@@ -16,16 +16,22 @@ settings:
   label: 'Bene Footer'
   provider: bene_core
   label_display: '0'
-  address: '433 NW 4th Avenue, Portland, OR 97209'
-  phone: '(503) 223-4956'
-  email: info@synergygive.org
-  copyright: '2016 SynergyGive'
-  facebook: ''
-  google: ''
-  instagram: ''
-  linkedin: ''
-  pinterest: ''
-  tumblr: ''
-  twitter: ''
-  youtube: ''
+  address: "1234 Some Street\r\nPortland, OR 97209"
+  phone: '(123) 123-1234'
+  email: info@synergygive.com
+  additional_contact:
+    value: "<p>Photograph by Some Person</p>\r\n"
+    format: restricted_html
+  additional_footer:
+    value: "<p>Office hours: 8-4p Pacific</p>\r\n"
+    format: restricted_html
+  copyright: '&copy; Copyright 2017 SynergyGive'
+  facebook: 'https://facebook.com'
+  google: 'https://google.com'
+  instagram: 'https://instagram.com'
+  linkedin: 'https://linkedin.com'
+  pinterest: 'https://pinterest.com'
+  tumblr: 'https://tumblr.com'
+  twitter: 'https://twitter.com'
+  youtube: 'https://youtube.com'
 visibility: {  }

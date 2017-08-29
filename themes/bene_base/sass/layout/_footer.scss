@@ -4,6 +4,53 @@
   flex-direction: column;
 }
 
+.block-bene-footer-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: rem(42);
+  margin-top: rem(24);
+  padding: 0 2%;
+  position: relative;
+
+  .menu {
+    flex: 0 1 35%;
+  }
+
+  .contact-links {
+    flex: 0 1 65%;
+  }
+
+  .additional-footer {
+    flex: 0 1 100%;
+  }
+
+  div.social-links {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    justify-content: center;
+    margin-top: rem(24);
+    span {
+      min-width: 25%;
+      text-align: center;
+      a {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .copyright {
+    bottom: rem(-32);
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+  }
+}
+
 // Specific ranges - use sparingly.
 // Mobile - things specifically under 400px.
 @include mq(mobile) {  }
@@ -17,8 +64,48 @@
 
 // Desktops - 769px or more. (This is the most common Media Query)
 @include mq(desktop) {
+  .block-bene-footer-block {
 
+    .menu {
+      flex: 0 1 20%;
+    }
+
+    .contact-links {
+      flex: 0 1 20%;
+    }
+
+    .additional-footer {
+      flex: 0 1 20%;
+    }
+
+    div.social-links {
+      align-items: baseline;
+      flex: 0 1 30%;
+      margin-top: rem(0);
+      span {
+        min-width: 0;
+        a {
+          margin-left: rem(10);
+        }
+      }
+    }
+
+    .copyright {
+      bottom: 0;
+      position: absolute;
+      right: 2%;
+      text-align: right;
+    }
+  }
 }
 
 // Extra Large Desktop: min-width: 1240px.
-@include mq(xl) {  }
+@include mq(xl) {
+  .block-bene-footer-block {
+    div.social-links {
+      flex-wrap: nowrap;
+      flex: 0 1 40%;
+      justify-content: flex-end;
+    }
+  }
+}
