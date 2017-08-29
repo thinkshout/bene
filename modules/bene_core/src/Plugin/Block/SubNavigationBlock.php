@@ -26,29 +26,29 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
   /**
    * CurrentRouteMatch service.
    *
-   * @var CurrentRouteMatch $current_route_match
+   * @var \Drupal\Core\Routing\CurrentRouteMatch
    */
-  protected $current_route_match;
+  protected $currentRouteMatch;
 
   /**
    * BreadcrumbManager service.
    *
-   * @var BreadcrumbManager $breadcrumb_manager
+   * @var \Drupal\Core\Breadcrumb\BreadcrumbManager
    */
-  protected $breadcrumb_manager;
+  protected $breadcrumbManager;
 
   /**
    * TitleResolver service.
    *
-   * @var TitleResolver $title_resolver
+   * @var \Drupal\Core\Controller\TitleResolver
    */
-  protected $title_resolver;
+  protected $titleResolver;
 
   /**
    * MenuLinkManager service.
    *
-   * @var MenuLinkManager $menu_link_manager */
-  protected $menu_link_manager;
+   * @var \Drupal\Core\Menu\MenuLinkManager*/
+  protected $menuLinkManager;
 
   /**
    * Constructs a new SubNavigationBlock.
@@ -59,28 +59,28 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
    *   The plugin ID for the plugin instance.
    * @param mixed $plugin_definition
    *   The plugin implementation definition.
-   * @param CurrentRouteMatch $current_route_match
+   * @param \Drupal\Core\Routing\CurrentRouteMatch $currentRouteMatch
    *   The CurrentRouteMatch service.
-   * @param BreadcrumbManager $breadcrumb_manager
+   * @param \Drupal\Core\Breadcrumb\BreadcrumbManager $breadcrumbManager
    *   The BreadcrumbManager service.
-   * @param TitleResolver $title_resolver
+   * @param \Drupal\Core\Controller\TitleResolver $titleResolver
    *   The TitleResolver service.
-   * @param MenuLinkManager $menu_link_manager
+   * @param \Drupal\Core\Menu\MenuLinkManager $menuLinkManager
    *   The MenuLinkManager service.
    */
   public function __construct(array $configuration,
                               $plugin_id,
                               $plugin_definition,
-                              CurrentRouteMatch $current_route_match,
-                              BreadcrumbManager $breadcrumb_manager,
-                              TitleResolver $title_resolver,
-                              MenuLinkManager $menu_link_manager) {
+                              CurrentRouteMatch $currentRouteMatch,
+                              BreadcrumbManager $breadcrumbManager,
+                              TitleResolver $titleResolver,
+                              MenuLinkManager $menuLinkManager) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
 
-    $this->current_route_match = $current_route_match;
-    $this->breadcrumb_manager = $breadcrumb_manager;
-    $this->title_resolver = $title_resolver;
-    $this->menu_link_manager = $menu_link_manager;
+    $this->currentRouteMatch = $currentRouteMatch;
+    $this->breadcrumbManager = $breadcrumbManager;
+    $this->titleResolver = $titleResolver;
+    $this->menuLinkManager = $menuLinkManager;
   }
 
   /**
@@ -136,7 +136,7 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
     // Add breadcrumbs excluding current page.
     $breadcrumbs = $this->getBreadcrumbs();
     $breadcrumb_links = [];
-    /** @var Link $breadcrumb */
+    /** @var \Drupal\Core\Link $breadcrumb */
     foreach ($breadcrumbs as $breadcrumb) {
       $breadcrumb_links[] = Link::fromTextAndUrl($breadcrumb->getText(), $breadcrumb->getUrl());
     }
@@ -196,8 +196,8 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
    *   Array of Link objects representing breadcrumbs.
    */
   private function getBreadcrumbs() {
-    $current_route = $this->current_route_match->getCurrentRouteMatch();
-    $breadcrumbs = $this->breadcrumb_manager->build($current_route)->getLinks();
+    $current_route = $this->currentRouteMatch->getCurrentRouteMatch();
+    $breadcrumbs = $this->breadcrumbManager->build($current_route)->getLinks();
 
     // Remove 'Home' link from breadcrumbs.
     if (isset($breadcrumbs[0]) && $breadcrumbs[0]->getUrl()->getRouteName() == '<front>') {
@@ -212,14 +212,14 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
   /**
    * Gets the title of the current page.
    *
-   * @return array or string
+   * @return array|string
    *   The page title as a string or render array.
    *
    * @see https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Controller%21TitleResolver.php/class/TitleResolver/8.2.x
    */
   private function getPageTitle() {
-    $current_route = $this->current_route_match->getCurrentRouteMatch();
-    $title = $this->title_resolver->getTitle(\Drupal::request(), $current_route->getRouteObject());
+    $current_route = $this->currentRouteMatch->getCurrentRouteMatch();
+    $title = $this->titleResolver->getTitle(\Drupal::request(), $current_route->getRouteObject());
 
     return $title;
   }
@@ -244,7 +244,7 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
     $route_entity = reset($route_parameters);
 
     if (!empty($route_entity) && is_object($route_entity)) {
-      $menu_links = $this->menu_link_manager->loadLinksByRoute($route_name, [$route_entity->getEntityTypeId() => $route_entity->id()]);
+      $menu_links = $this->menuLinkManager->loadLinksByRoute($route_name, [$route_entity->getEntityTypeId() => $route_entity->id()]);
 
       // Get the menu link associated with the current entity.
       /** @var \Drupal\menu_link_content\Plugin\Menu\MenuLinkContent $current_menu_link */
@@ -252,14 +252,14 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
 
       // Get all child menu links of the current entity's menu link.
       if (!empty($current_menu_link)) {
-        $child_menu_ids = $this->menu_link_manager->getChildIds($current_menu_link->getPluginId());
+        $child_menu_ids = $this->menuLinkManager->getChildIds($current_menu_link->getPluginId());
 
         foreach ($child_menu_ids as $menu_link_id) {
-          $child_menu_link = $this->menu_link_manager->getDefinition($menu_link_id);
+          $child_menu_link = $this->menuLinkManager->getDefinition($menu_link_id);
 
           // Only display first-level child links.
           if ($child_menu_link['parent'] == $current_menu_link->getPluginId()) {
-            $child_menu_links[] = $this->menu_link_manager->getDefinition($menu_link_id);
+            $child_menu_links[] = $this->menuLinkManager->getDefinition($menu_link_id);
           }
         }
       }
