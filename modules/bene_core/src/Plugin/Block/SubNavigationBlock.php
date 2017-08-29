@@ -255,7 +255,12 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
         $child_menu_ids = $this->menu_link_manager->getChildIds($current_menu_link->getPluginId());
 
         foreach ($child_menu_ids as $menu_link_id) {
-          $child_menu_links[] = $this->menu_link_manager->getDefinition($menu_link_id);
+          $child_menu_link = $this->menu_link_manager->getDefinition($menu_link_id);
+
+          // Only display first-level child links.
+          if ($child_menu_link['parent'] == $current_menu_link->getPluginId()) {
+            $child_menu_links[] = $this->menu_link_manager->getDefinition($menu_link_id);
+          }
         }
       }
     }
