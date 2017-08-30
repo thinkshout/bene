@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: bene_background_image_hero
+label: 'Background Image Hero'
+revision: 0
+description: ''

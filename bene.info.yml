@@ -34,15 +34,19 @@ dependencies:
   - editor
   - email_registration
   - embed
+  - entity_browser
   - entity_embed
   - features
   - features_ui
+  - field
   - field_ui
   - file
   - help
   - history
   - image
+  - link
   - linkit
+  - media_entity
   - menu_link_content
   - menu_ui
   - metatag
@@ -52,8 +56,8 @@ dependencies:
   - page_cache
   - path
   - pathauto
-  - quickedit
   - picture_background_formatter
+  - quickedit
   - r4032login
   - rdf
   - redirect

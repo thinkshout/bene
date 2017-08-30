@@ -1,0 +1,53 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bene_background_image_hero
+    - field.field.block_content.bene_background_image_hero.bene_background_image_hero
+    - field.field.block_content.bene_background_image_hero.bene_lead
+    - field.field.block_content.bene_background_image_hero.bene_link
+    - field.field.block_content.bene_background_image_hero.bene_title
+  module:
+    - link
+id: block_content.bene_background_image_hero.default
+targetEntityType: block_content
+bundle: bene_background_image_hero
+mode: default
+content:
+  bene_background_image_hero:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  bene_lead:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  bene_link:
+    weight: 3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  bene_title:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

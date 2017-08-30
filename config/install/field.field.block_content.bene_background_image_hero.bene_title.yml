@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bene_background_image_hero
+    - field.storage.block_content.bene_title
+id: block_content.bene_background_image_hero.bene_title
+field_name: bene_title
+entity_type: block_content
+bundle: bene_background_image_hero
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
