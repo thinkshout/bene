@@ -5,8 +5,8 @@ dependencies:
     - entity_browser.browser.media_browser_modal
     - field.field.node.listing_page.bene_header_media
     - field.field.node.listing_page.bene_intro
-    - field.field.node.listing_page.bene_metatags
     - field.field.node.listing_page.bene_listing_view
+    - field.field.node.listing_page.bene_metatags
     - node.type.listing_page
   module:
     - entity_browser
@@ -42,6 +42,12 @@ content:
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
+  bene_listing_view:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
   bene_metatags:
     type: metatag_firehose
     weight: 7
@@ -54,12 +60,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  bene_listing_view:
-    weight: 3
-    settings: {  }
-    third_party_settings: {  }
-    type: viewsreference_select
-    region: content
   path:
     type: path
     weight: 6

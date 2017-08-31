@@ -4,10 +4,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.news.bene_content
+    - field.field.node.news.bene_date
     - field.field.node.news.bene_header_media
     - field.field.node.news.bene_intro
     - field.field.node.news.bene_metatags
-    - field.field.node.news.bene_date
     - image.style.tile_l
     - node.type.news
   module:
@@ -20,6 +20,15 @@ targetEntityType: node
 bundle: news
 mode: teaser
 content:
+  bene_date:
+    weight: 0
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: bene_date
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   bene_header_media:
     type: media_thumbnail
     weight: 1
@@ -36,15 +45,6 @@ content:
       trim_length: 600
     third_party_settings: {  }
     type: text_summary_or_trimmed
-    region: content
-  bene_date:
-    weight: 0
-    label: hidden
-    settings:
-      timezone_override: ''
-      format_type: bene_date
-    third_party_settings: {  }
-    type: datetime_default
     region: content
 hidden:
   bene_content: true

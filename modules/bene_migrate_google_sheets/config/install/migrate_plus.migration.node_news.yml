@@ -1,11 +1,11 @@
 # This migration demonstrates importing from a Google Spreadsheet XML feed.
-id: node_listing_page
-label: Bene node listing pages with Google Spreadsheet
+id: node_news
+label: BENE node news with Google Spreadsheet
+migration_group: bene
 dependencies:
   enforced:
     module:
       - bene_migrate_google_sheets
-migration_group: bene
 source:
   plugin: url
   data_fetcher_plugin: http
@@ -15,13 +15,14 @@ source:
   # view” in order for the feed to work. Note that the <SHEET> param is the order of the tabs and WILL change if the
   # tabs are re-ordered.
   # Template: 'https://spreadsheets.google.com/feeds/list/<KEY>/<SHEET>/public/values?alt=json'
-  urls: 'https://spreadsheets.google.com/feeds/list/1BkC1_65t5D4ZoDhTb0F0wlngPYBcZgwin7v45UYydFc/6/public/values?alt=json'
+  urls: 'https://spreadsheets.google.com/feeds/list/1BkC1_65t5D4ZoDhTb0F0wlngPYBcZgwin7v45UYydFc/7/public/values?alt=json'
   # Under 'fields', we list the data items to be imported. The first level keys
   # are the source field names we want to populate (the names to be used as
   # sources in the process configuration below). For each field we're importing,
   # we provide a label (optional - this is for display in migration tools) and
   # an selector (xpath) for retrieving that value. It's important to note that this xpath
   # is relative to the elements retrieved by item_selector.
+  # item_selector: /response/variety
   # For Google Spreadsheet XML feeds the actual columns are named with gsx: followed by the cleaned column name (lower,
   # limited punctuation, etc).
   fields:
@@ -34,33 +35,37 @@ source:
       label: 'Title'
       selector: 'title'
     -
+      name: status
+      label: 'Status'
+      selector: 'status'
+    -
       name: path
       label: 'Path'
       selector: 'path'
     -
       name: redirect
       label: 'Redirect'
-      selector: 'urlonoldsite'
+      selector: 'redirect'
     -
-      name: viewid
-      label: 'View ID'
-      selector: 'viewid'
+      name: image
+      label: 'Header Image'
+      selector: 'headerimage'
     -
-      name: displayid
-      label: 'Display ID'
-      selector: 'displayid'
+      name: imagealt
+      label: 'Header Image Alt'
+      selector: 'headerimagealt'
+    -
+      name: publishdate
+      label: 'Publish Date'
+      selector: 'publishdate'
+    -
+      name: body
+      label: 'Body'
+      selector: 'body'
     -
       name: intro
       label: 'Intro'
       selector: 'intro'
-    -
-      name: headerimage
-      label: 'Header Image'
-      selector: headerimage
-    -
-      name: headerimagealt
-      label: 'Header Image Alt'
-      selector: headerimagealt
     -
       name: content
       label: 'Content'
@@ -75,10 +80,11 @@ source:
 process:
   type:
     plugin: default_value
-    default_value: listing_page
+    default_value: news
   # Note that the source field names here (id and title) were
   # defined by the 'fields' configuration for the source plugin above.
   title: title
+  status: status
   # Pathauto needs to generate automatic url alias if value is not provided in migration.
   # skip_on_empty plugin ensures that pathauto won't be disabled if there is a value provided.
   path/pathauto:
@@ -90,18 +96,17 @@ process:
       plugin: default_value
       default_value: 0 # Disable pathauto.
   path/alias: path
-  bene_intro/value: intro
-  bene_intro/format:
+  body/value: body
+  body/format:
     plugin: default_value
-    default_value: restricted_html
+    default_value: full_html
   bene_header_media/target_id:
     plugin: media_import
-    source: headerimage
+    source: image
     process:
       bundle: 'image'
-      image/alt: headerimagealt
-  bene_listing_view/target_id: viewid
-  bene_listing_view/display_id: displayid
+      image/alt: imagealt
+  bene_intro: intro
   bene_content:
     plugin: entity_reference_revisions
     source: content
@@ -111,4 +116,5 @@ destination:
   plugin: entity:node
 migration_dependencies:
   required:
+    - node_page
     - block_paragraphs

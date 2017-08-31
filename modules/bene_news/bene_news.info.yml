@@ -16,6 +16,7 @@ dependencies:
   - node
   - paragraphs
   - path
+  - pathauto
   - picture_background_formatter
   - search
   - text

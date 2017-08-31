@@ -4,10 +4,10 @@ dependencies:
   config:
     - entity_browser.browser.media_browser_modal
     - field.field.node.news.bene_content
+    - field.field.node.news.bene_date
     - field.field.node.news.bene_header_media
     - field.field.node.news.bene_intro
     - field.field.node.news.bene_metatags
-    - field.field.node.news.bene_date
     - node.type.news
   module:
     - datetime
@@ -32,6 +32,12 @@ content:
       default_paragraph_type: _none
     third_party_settings: {  }
     type: paragraphs
+    region: content
+  bene_date:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   bene_header_media:
     type: entity_browser_entity_reference
@@ -68,12 +74,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  bene_date:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
   path:
     type: path
     weight: 7

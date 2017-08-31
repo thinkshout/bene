@@ -12,5 +12,5 @@ filters:
     weight: -10
     settings:
       allowed_html: '<b> <i> <u> <s> <ul type> <li> <h2 id> <h3 id> <cite> <blockquote cite> <quote> <center> <left> <right> <strong> <em> <ol> <a !href accesskey id rel target title href> <p>'
-      filter_html_help: true
+      filter_html_help: false
       filter_html_nofollow: false

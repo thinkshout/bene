@@ -17,6 +17,9 @@ settings:
             - Bold
             - Italic
             - Strike
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
             - Superscript
             - Subscript
             - '-'

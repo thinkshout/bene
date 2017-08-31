@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: events
+label: Events
+type: 'canonical_entities:node'
+pattern: 'events/[node:bene_event_date_range:start_date:custom:Y]/[node:title]'
+selection_criteria:
+  abb33236-ede5-4c3a-8648-a485808d909c:
+    id: node_type
+    bundles:
+      event: event
+    negate: false
+    context_mapping:
+      node: node
+    uuid: abb33236-ede5-4c3a-8648-a485808d909c
+selection_logic: and
+weight: -5
+relationships: {  }
