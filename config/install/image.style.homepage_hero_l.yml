@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: homepage_hero_l
+label: 'Homepage Hero-L'
+effects:
+  149800ae-6e81-4121-8c9f-31c1dcf7329a:
+    uuid: 149800ae-6e81-4121-8c9f-31c1dcf7329a
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 375

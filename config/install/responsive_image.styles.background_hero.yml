@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.homepage_hero_l
+    - image.style.homepage_hero_m
+    - image.style.homepage_hero_s
+    - image.style.homepage_hero_xl
+  theme:
+    - bene_base
+id: background_hero
+label: 'Background Hero'
+image_style_mappings:
+  -
+    breakpoint_id: bene.xlarge
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: homepage_hero_xl
+  -
+    breakpoint_id: bene.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: homepage_hero_l
+  -
+    breakpoint_id: bene.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: homepage_hero_m
+  -
+    breakpoint_id: bene.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: homepage_hero_s
+breakpoint_group: bene_base
+fallback_image_style: homepage_hero_s

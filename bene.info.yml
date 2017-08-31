@@ -41,6 +41,7 @@ dependencies:
   - field
   - field_ui
   - file
+  - focal_point
   - help
   - history
   - image
