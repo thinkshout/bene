@@ -47,19 +47,13 @@
   ]
 %}
 {% block paragraph %}
-  {% if (content.field_image[0]) %}
     <div{{ attributes.addClass(classes) }}>
-  {% else %}
-    <div{{ attributes.addClass(classes) }}>
-      <div class="bg-header"></div>
-  {% endif %}
-      {% block content %}
+    {% block content %}
+      {% if content.field_image %}
         {{ content }}
-      {% endblock %}
-  {% if (content.field_image[0]) %}
+      {% else %}
+        {{ content | without('field_image') }}
+      {% endif %}
+    {% endblock %}
     </div>
-  {% else %}
-      </div>
-    </div>
-  {% endif %}
 {% endblock paragraph %}
