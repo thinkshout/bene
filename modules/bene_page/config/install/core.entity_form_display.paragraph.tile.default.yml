@@ -4,6 +4,7 @@ dependencies:
   config:
     - entity_browser.browser.media_browser_modal
     - field.field.paragraph.tile.field_image
+    - field.field.paragraph.tile.field_lead
     - field.field.paragraph.tile.field_link
     - field.field.paragraph.tile.field_text
     - field.field.paragraph.tile.field_title
@@ -31,8 +32,16 @@ content:
     third_party_settings: {  }
     type: entity_browser_entity_reference
     region: content
+  field_lead:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_link:
-    weight: 3
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -40,7 +49,7 @@ content:
     type: link_default
     region: content
   field_text:
-    weight: 2
+    weight: 3
     settings:
       rows: 5
       placeholder: ''
@@ -48,7 +57,7 @@ content:
     type: text_textarea
     region: content
   field_title:
-    weight: 1
+    weight: 2
     settings:
       size: 60
       placeholder: ''
