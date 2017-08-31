@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - bene_core
+  theme:
+    - bene_child
+id: benesubnavigation
+theme: bene_child
+region: content
+weight: -3
+provider: null
+plugin: bene_sub_navigation_block
+settings:
+  id: bene_sub_navigation_block
+  label: 'Bene sub navigation'
+  provider: bene_core
+  label_display: '0'
+visibility: {  }

@@ -7,6 +7,8 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
 
 /**
  * Implements hook_field_info_alter().
@@ -77,6 +79,24 @@ function bene_event_entity_presave(EntityInterface $entity) {
     // If end_value is left empty, set it same as start_value.
     if ($end_value === NULL || $end_value === '') {
       $daterange_field->get(0)->get('end_value')->setValue($start_value);
+    }
+  }
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function bene_event_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if ($view->id() === 'bene_events' && $view->current_display === 'block_events_all') {
+    $input = $view->getExposedInput();
+    if (empty($input['date']['min']) && empty($input['date']['max'])) {
+      // @TODO fix "now" date to use DB.
+      $now = date('Y-m-d');
+      $query->where[1]['conditions'][] = [
+        'field' => 'DATE_FORMAT(node__bene_event_date_range.bene_event_date_range_end_value, \'%Y-%m-%d\T%H:%i:%s\') >= DATE_FORMAT(\'' . $now . '\', \'%Y-%m-%d\T%H:%i:%s\')',
+        'value' => [],
+        'operator' => 'formula',
+      ];
     }
   }
 }
