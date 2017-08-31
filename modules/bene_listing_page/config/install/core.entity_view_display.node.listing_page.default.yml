@@ -4,8 +4,8 @@ dependencies:
   config:
     - field.field.node.listing_page.bene_header_media
     - field.field.node.listing_page.bene_intro
-    - field.field.node.listing_page.bene_metatags
     - field.field.node.listing_page.bene_listing_view
+    - field.field.node.listing_page.bene_metatags
     - node.type.listing_page
     - responsive_image.styles.header
   module:
