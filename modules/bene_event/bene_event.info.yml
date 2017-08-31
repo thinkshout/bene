@@ -12,12 +12,14 @@ dependencies:
   - entity_browser
   - entity_reference_revisions
   - field
+  - media_entity
   - menu_ui
   - metatag
   - node
   - paragraphs
   - path
   - picture_background_formatter
+  - search
   - text
   - user
   - views
