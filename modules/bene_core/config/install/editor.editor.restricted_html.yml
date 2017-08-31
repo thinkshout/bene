@@ -31,6 +31,10 @@ settings:
           items:
             - Blockquote
         -
+          name: 'Block formatting'
+          items:
+            - Format
+        -
           name: Tools
           items:
             - Source

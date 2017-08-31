@@ -16,6 +16,10 @@ settings:
           items:
             - Bold
             - Italic
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - RemoveFormat
         -
           name: Linking
           items:
