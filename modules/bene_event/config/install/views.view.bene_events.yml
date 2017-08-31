@@ -7,7 +7,6 @@ dependencies:
   module:
     - datetime
     - node
-    - search
     - user
 id: bene_events
 label: 'Bene Events'
