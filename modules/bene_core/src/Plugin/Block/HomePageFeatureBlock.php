@@ -58,9 +58,17 @@ class HomePageFeatureBlock extends BlockBase {
   public function build() {
     $build = [];
 
-    $build['feature'] = [
-      '#type' => 'fieldset',
-    ];
+    $block_id = $this->configuration['block_id'];
+
+    if (!empty($block_id)) {
+      $block = \Drupal::entityTypeManager()->getStorage('block_content')->load($block_id);
+      $rendered_block = render(\Drupal::entityTypeManager()->getViewBuilder('block_content')->view($block));
+
+      $build['block'] = [
+        '#type' => 'markup',
+        '#markup' => $rendered_block,
+      ];
+    }
 
     return $build;
   }
