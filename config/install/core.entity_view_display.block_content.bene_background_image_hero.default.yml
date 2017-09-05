@@ -21,7 +21,7 @@ content:
     label: above
     settings:
       responsive_image_style: background_hero
-      selector: .block
+      selector: '#block-benehomepagefeature'
       image_link: ''
     third_party_settings: {  }
     type: picture_background_formatter_media
