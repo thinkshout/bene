@@ -62,12 +62,17 @@ class HomePageFeatureBlock extends BlockBase {
 
     if (!empty($block_id)) {
       $block = \Drupal::entityTypeManager()->getStorage('block_content')->load($block_id);
-      $rendered_block = render(\Drupal::entityTypeManager()->getViewBuilder('block_content')->view($block));
 
-      $build['block'] = [
-        '#type' => 'markup',
-        '#markup' => $rendered_block,
-      ];
+      if (!empty($block)) {
+        $rendered_block = render(\Drupal::entityTypeManager()
+          ->getViewBuilder('block_content')
+          ->view($block));
+
+        $build['block'] = [
+          '#type' => 'markup',
+          '#markup' => $rendered_block,
+        ];
+      }
     }
 
     return $build;
