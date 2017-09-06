@@ -18,7 +18,7 @@ mode: default
 content:
   bene_background_image_hero:
     weight: 4
-    label: above
+    label: hidden
     settings:
       responsive_image_style: background_hero
       selector: '#block-benehomepagefeature'
@@ -28,7 +28,7 @@ content:
     region: content
   bene_lead:
     weight: 1
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -36,7 +36,7 @@ content:
     region: content
   bene_link:
     weight: 3
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -48,7 +48,7 @@ content:
     region: content
   bene_title:
     weight: 2
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
