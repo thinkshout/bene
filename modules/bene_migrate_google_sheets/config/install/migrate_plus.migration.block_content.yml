@@ -69,7 +69,10 @@ process:
     plugin: link_url_import
     source: linkuri
   bene_link/title: linktitle
-  field_media: media
+  bene_background_image_hero:
+    plugin: migration
+    source: media
+    migration: media
 destination:
   plugin: entity:block_content
 migration_dependencies:
