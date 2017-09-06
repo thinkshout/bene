@@ -31,6 +31,10 @@ source:
       label: 'ID'
       selector: 'id'
     -
+      name: description
+      label: 'Description'
+      selector: 'description'
+    -
       name: title
       label: 'Title'
       selector: 'title'
@@ -63,6 +67,7 @@ process:
     default_value: bene_background_image_hero
   # Note that the source field names here (id and title) were
   # defined by the 'fields' configuration for the source plugin above.
+  info: description
   bene_title: title
   bene_lead: lead
   bene_link/uri:
