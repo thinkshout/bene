@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - bene_core
+  theme:
+    - bene_child
+id: benehomepagefeature
+theme: bene_child
+region: content
+weight: -4
+provider: null
+plugin: bene_home_page_feature_block
+settings:
+  id: bene_home_page_feature_block
+  label: 'Bene home page feature'
+  provider: bene_core
+  label_display: '0'
+  block_id: '1'
+visibility: {  }
