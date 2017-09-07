@@ -103,7 +103,10 @@ process:
     process:
       bundle: 'image'
       image/alt: imagealt
-  field_media: media
+  field_media:
+    plugin: migration
+    source: media
+    migration: media
   field_text: text
   field_caption: caption
   bene_content:
