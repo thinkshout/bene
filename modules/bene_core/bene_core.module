@@ -58,3 +58,28 @@ function bene_core_reorder_indexes(&$array, $first, $second) {
     $array = array_combine($indexed, array_fill(0, count($indexed), $value));
   }
 }
+
+/**
+ * Implements hook_user_format_name_alter().
+ */
+function bene_core_form_block_form_alter(&$form, FormStateInterface $form_state) {
+  // The "Bene homepage feature block" is configured to use a
+  // "bene_background_image_hero" content block provided by
+  // the "block_content" migration.
+  // This code sets the appropriate default value for the entity reference field
+  // on the block configuration form and prevents the form breaking if the
+  // migration has not been run.
+  if ($form['id']['#default_value'] == 'benehomepagefeature') {
+    // Attempt to load pre-defined "bene_background_image_hero" content block
+    // and set as default value for the entity reference field.
+    $block = \Drupal::entityTypeManager()->getStorage('block_content')->load($form['settings']['block_id']['#default_value']);
+
+    if (!empty($block)) {
+      $form['settings']['block_id']['#default_value'] = $block;
+    }
+    else {
+      // If block does not exist, remove default value from the field.
+      $form['settings']['block_id']['#default_value'] = NULL;
+    }
+  }
+}
