@@ -6,7 +6,7 @@ dependencies:
 id: bene_child_local_tasks
 theme: bene_child
 region: content
-weight: -5
+weight: -8
 provider: null
 plugin: local_tasks_block
 settings:

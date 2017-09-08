@@ -8,7 +8,7 @@ dependencies:
 id: benesubnavigation
 theme: bene_child
 region: content
-weight: -3
+weight: -6
 provider: null
 plugin: bene_sub_navigation_block
 settings:

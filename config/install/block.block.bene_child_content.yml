@@ -8,7 +8,7 @@ dependencies:
 id: bene_child_content
 theme: bene_child
 region: content
-weight: -2
+weight: -3
 provider: null
 plugin: system_main_block
 settings:

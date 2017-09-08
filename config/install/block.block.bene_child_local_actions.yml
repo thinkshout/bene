@@ -6,7 +6,7 @@ dependencies:
 id: bene_child_local_actions
 theme: bene_child
 region: content
-weight: -6
+weight: -9
 provider: null
 plugin: local_actions_block
 settings:

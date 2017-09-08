@@ -8,7 +8,7 @@ dependencies:
 id: bene_child_messages
 theme: bene_child
 region: content
-weight: -4
+weight: -7
 provider: null
 plugin: system_messages_block
 settings:

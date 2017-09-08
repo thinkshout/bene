@@ -6,7 +6,7 @@ dependencies:
 id: bene_child_page_title
 theme: bene_child
 region: content
-weight: -3
+weight: -4
 provider: null
 plugin: page_title_block
 settings:

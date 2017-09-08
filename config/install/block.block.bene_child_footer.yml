@@ -1,5 +1,5 @@
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -9,7 +9,7 @@ dependencies:
     - bene_child
 id: bene_child_footer
 theme: bene_child
-region: ''
+region: site_branding
 weight: -6
 provider: null
 plugin: 'system_menu_block:footer'
