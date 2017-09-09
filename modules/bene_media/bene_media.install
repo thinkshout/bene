@@ -27,4 +27,18 @@ function bene_media_install() {
       'bene_media_video',
     ]);
 
+  // Set permissions.
+  $staff_permissions = [
+    'access media_browser entity browser pages' => 1,
+    'access media_browser_modal entity browser pages' => 1,
+    'access media overview' => 1,
+    'create media' => 1,
+    'delete any media' => 1,
+    'delete media' => 1,
+    'update any media' => 1,
+    'update media' => 1,
+    'view media' => 1,
+  ];
+
+  user_role_change_permissions('staff', $staff_permissions);
 }
