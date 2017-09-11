@@ -9,7 +9,7 @@ dependencies:
 id: benehomepagefeature
 theme: bene_child
 region: content
-weight: -5
+weight: -4
 provider: null
 plugin: bene_home_page_feature_block
 settings:

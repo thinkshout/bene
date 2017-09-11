@@ -2,6 +2,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: utility
-label: 'Utility'
+label: Utility
 description: 'Utility links'
 locked: true
