@@ -4,3 +4,14 @@
  * @file
  * News specific functionality for Bene.
  */
+/**
+ * Implements hook_form_alter().
+ */
+function bene_news_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $view_names = array('bene_news');
+  $view = $form_state->getStorage('view');
+  if ($form_id == 'views_exposed_form' && in_array($view['view']->id(), $view_names)) {
+    $form['date']['min']['#type'] = 'date';
+    $form['date']['max']['#type'] = 'date';
+  }
+}
