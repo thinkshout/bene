@@ -4,8 +4,6 @@ namespace Drupal\bene_core\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\file\Entity\File;
-use Drupal\media_entity\Entity\Media;
 
 /**
  * Provides a 'HomePageFeature' block.
