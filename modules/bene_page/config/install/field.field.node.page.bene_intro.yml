@@ -18,7 +18,7 @@ field_name: bene_intro
 entity_type: node
 bundle: page
 label: Introduction
-description: 'A brief lead in paragraph that comes before the rest of the structured content. If a summary is not provided, a portion of this excerpt might be used as the summary.'
+description: 'This can be used as a one line intro text on the homepage or else an entire block on an interior page. It is wider than the other text content and allows for a feature or more prominence.  (suggested word count: ≤ 150)'
 required: false
 translatable: false
 default_value: {  }
