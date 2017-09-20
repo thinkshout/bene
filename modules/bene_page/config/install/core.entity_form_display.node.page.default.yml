@@ -25,7 +25,9 @@ content:
     settings:
       title: Section
       title_plural: Sections
-      edit_mode: preview
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: none
       add_mode: dropdown
       form_display_mode: thumbnail
       default_paragraph_type: _none

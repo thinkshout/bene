@@ -4,10 +4,7 @@ dependencies:
   config:
     - field.storage.node.bene_content
     - node.type.page
-    - paragraphs.paragraphs_type.feature_full_width
-    - paragraphs.paragraphs_type.media
-    - paragraphs.paragraphs_type.rich_text
-    - paragraphs.paragraphs_type.tiles
+    - paragraphs.paragraphs_type.tile
   module:
     - entity_reference_revisions
 id: node.page.bene_content
@@ -23,25 +20,23 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
+    negate: 1
     target_bundles:
-      rich_text: rich_text
-      media: media
-      feature_full_width: feature_full_width
-      tiles: tiles
+      tile: tile
     target_bundles_drag_drop:
       rich_text:
-        enabled: true
         weight: -11
-      media:
-        enabled: true
-        weight: -10
-      feature_full_width:
-        enabled: true
-        weight: -9
-      tiles:
-        enabled: true
-        weight: -8
-      tile:
-        weight: -7
         enabled: false
+      media:
+        weight: -10
+        enabled: false
+      feature_full_width:
+        weight: -9
+        enabled: false
+      tiles:
+        weight: -8
+        enabled: false
+      tile:
+        enabled: true
+        weight: -7
 field_type: entity_reference_revisions

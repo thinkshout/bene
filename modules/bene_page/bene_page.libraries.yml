@@ -1,0 +1,4 @@
+paragraphs-admin:
+  css:
+    component:
+      css/paragraphs-admin.css: {}

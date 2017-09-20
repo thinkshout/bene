@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_alter().
+ */
+function bene_page_field_widget_paragraphs_form_alter(&$element, &$form_state, $context) {
+  // Add css to paragraphs form element.
+  $element['#attached']['library'][] = 'bene_page/paragraphs-admin';
+}
