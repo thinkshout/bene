@@ -11,11 +11,11 @@ entity_type: node
 bundle: news
 label: 'Header image'
 description: '|
-a. Library: is composed of images you have already uploaded. 
-b. Upload: (can be enabled or disabled for different user permissions) 
-You can search your computer for an image and upload it here. 
-You can utilize the white plus sign over the image to select a focal point for it’s display on the site. 
-c. Embed: This is a link to an offsite image or video. You will just need the url.'
+   a. Library: is composed of images you have already uploaded. 
+   b. Upload: (can be enabled or disabled for different user permissions) 
+   You can search your computer for an image and upload it here. 
+   You can utilize the white plus sign over the image to select a focal point for it’s display on the site. 
+   c. Embed: This is a link to an offsite image or video. You will just need the url.'
 required: false
 translatable: true
 default_value: {  }
