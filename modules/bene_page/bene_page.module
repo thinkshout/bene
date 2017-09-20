@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Page specific functionality for Bene.
+ */
+
+/**
  * Implements hook_field_widget_WIDGET_TYPE_alter().
  */
 function bene_page_field_widget_paragraphs_form_alter(&$element, &$form_state, $context) {
