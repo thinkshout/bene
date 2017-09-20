@@ -764,7 +764,20 @@ display:
             label: ''
           granularity: second
       title: Media
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: "<ol>\n<li>Library: is composed of images you have already uploaded.</li>\n<li>Upload: (can be enabled or disabled for different user permissions)\n<ul>\n<li>You can search your computer for an image and upload it here. </li>\n<li>You can utilize the white plus sign over the image to select a focal point for it’s display on the site. </li>\n</ul>\n<li>Embed: This is a link to an offsite image or video. You will just need the url.</li>\n</ol>"
+            format: basic_html
+          plugin_id: text
       footer: {  }
       empty:
         area_text_custom:
