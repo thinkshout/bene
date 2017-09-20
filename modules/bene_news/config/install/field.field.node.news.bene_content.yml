@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.storage.node.bene_content
     - node.type.news
+    - paragraphs.paragraphs_type.tile
   module:
     - entity_reference_revisions
 id: node.news.bene_content
@@ -19,21 +20,23 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: null
+    negate: 1
+    target_bundles:
+      tile: tile
     target_bundles_drag_drop:
-      feature_full_width:
-        weight: 6
+      rich_text:
+        weight: -11
         enabled: false
       media:
-        weight: 7
+        weight: -10
         enabled: false
-      rich_text:
-        weight: 8
-        enabled: false
-      tile:
-        weight: 9
+      feature_full_width:
+        weight: -9
         enabled: false
       tiles:
-        weight: 10
+        weight: -8
         enabled: false
+      tile:
+        enabled: true
+        weight: -7
 field_type: entity_reference_revisions
