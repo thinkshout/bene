@@ -3,4 +3,6 @@ status: true
 dependencies: {  }
 id: feature_full_width
 label: Feature
+icon_uuid: null
+description: null
 behavior_plugins: {  }

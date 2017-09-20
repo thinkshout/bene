@@ -3,4 +3,6 @@ status: true
 dependencies: {  }
 id: tiles
 label: Tiles
+icon_uuid: null
+description: null
 behavior_plugins: {  }
