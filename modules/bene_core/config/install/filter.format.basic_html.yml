@@ -14,7 +14,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<b> <i> <u> <s> <ul type> <li> <h2 id> <h3 id> <h4 id> <h5 id> <cite> <blockquote cite> <quote> <center> <left> <right> <strong> <em> <ol> <img src alt title data-entity-type data-entity-uuid data-align data-caption> <p> <drupal-entity data-* alt title data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button> <a href !href accesskey id rel target title class=" button"> <hr>'
+      allowed_html: '<b> <i> <u> <s> <ul type> <li> <h2 id> <h3 id> <h4 id> <h5 id> <cite> <blockquote cite> <quote> <center> <left> <right> <strong> <em> <ol> <img src alt title data-entity-type data-entity-uuid data-align data-caption> <p class="text-align*"> <drupal-entity data-* alt title data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button> <a href !href accesskey id rel target title class=" button"> <hr>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:
