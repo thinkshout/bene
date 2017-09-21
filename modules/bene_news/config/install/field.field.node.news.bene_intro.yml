@@ -9,8 +9,8 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
-    basic_html: basic_html
-    restricted_html: '0'
+    restricted_html: restricted_html
+    basic_html: '0'
     full_html: '0'
     plain_text: '0'
 id: node.news.bene_intro
@@ -18,7 +18,7 @@ field_name: bene_intro
 entity_type: node
 bundle: news
 label: Introduction
-description: ''
+description: 'This can be used as a one line intro text on the homepage or else an entire block on an interior page. It is wider than the other text content and allows for a feature or more prominence.  (suggested word count: ≤ 150)'
 required: false
 translatable: true
 default_value: {  }

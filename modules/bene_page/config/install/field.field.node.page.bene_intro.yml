@@ -10,8 +10,8 @@ dependencies:
 third_party_settings:
   allowed_formats:
     restricted_html: restricted_html
-    full_html: full_html
     basic_html: '0'
+    full_html: '0'
     plain_text: '0'
 id: node.page.bene_intro
 field_name: bene_intro

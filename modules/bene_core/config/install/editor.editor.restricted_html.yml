@@ -16,6 +16,10 @@ settings:
           items:
             - Bold
             - Italic
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - RemoveFormat
         -
           name: Links
           items:
@@ -33,16 +37,18 @@ settings:
         -
           name: 'Block formatting'
           items:
+            - Styles
             - Format
         -
           name: Tools
           items:
+            - ShowBlocks
             - Source
   plugins:
     language:
       language_list: un
     stylescombo:
-      styles: ''
+      styles: a.button|Button
     linkit:
       linkit_profile: standard_link
 image_upload:

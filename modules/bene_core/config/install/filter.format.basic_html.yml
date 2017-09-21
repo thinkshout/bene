@@ -14,7 +14,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<b> <i> <u> <s> <ul type> <li> <h2 id> <h3 id> <cite> <blockquote cite> <quote> <center> <left> <right> <strong> <em> <ol> <img src alt title data-entity-type data-entity-uuid data-align data-caption> <p> <drupal-entity data-* alt title data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button> <a href !href accesskey id rel target title class=" button">'
+      allowed_html: '<b> <i> <u> <s> <ul type> <li> <h2 id> <h3 id> <cite> <blockquote cite> <quote> <center> <left> <right> <strong> <em> <ol> <img src alt title data-entity-type data-entity-uuid data-align data-caption> <p> <drupal-entity data-* alt title data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button> <a href !href accesskey id rel target title class=" button"> <hr>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:
@@ -40,4 +40,10 @@ filters:
     provider: entity_embed
     status: true
     weight: 0
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
     settings: {  }

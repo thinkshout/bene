@@ -39,8 +39,8 @@ settings:
           items:
             - Blockquote
             - media_browser
-            - Table
             - HorizontalRule
+            - Table
         -
           name: 'Block Formatting'
           items:

@@ -23,8 +23,8 @@ settings:
         -
           name: Linking
           items:
-            - DrupalUnlink
             - Linkit
+            - DrupalUnlink
         -
           name: Lists
           items:
@@ -35,11 +35,17 @@ settings:
           items:
             - Blockquote
             - media_browser
+            - HorizontalRule
         -
           name: 'Block Formatting'
           items:
             - Styles
             - Format
+        -
+          name: Tools
+          items:
+            - ShowBlocks
+            - Source
   plugins:
     language:
       language_list: un
