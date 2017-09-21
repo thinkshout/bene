@@ -39,26 +39,34 @@
  */
 #}
 {%
-  set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    'paragraph-' ~ paragraph.id(),
-  ]
+set classes = [
+'paragraph',
+'paragraph--type--' ~ paragraph.bundle|clean_class,
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+'paragraph-' ~ paragraph.id(),
+]
 %}
+{%  if content.field_link %}
+{%
+set href = content.field_link.0['#url']
+%}
+{% endif %}
 {% block paragraph %}
-  {% if (content.field_image[0]) %}
-    <div{{ attributes.addClass(classes) }}>
-  {% else %}
-    <div{{ attributes.addClass(classes) }}>
-      <div class="bg-header"></div>
-  {% endif %}
+  <div{{ attributes.addClass(classes) }}>
       {% block content %}
-        {{ content }}
+        {% if href %}
+          <a href="{{ href }}">
+        {% endif %}
+          {{ content.field_image }}
+        {% if href %}
+          </a>
+        {% endif %}
+        <div class="tile-text">
+            {{ content.field_lead }}
+            {{ content.field_title }}
+            {{ content.field_text }}
+            {{ content.field_link }}
+        </div>
       {% endblock %}
-  {% if (content.field_image[0]) %}
-    </div>
-  {% else %}
-    </div>
-  {% endif %}
+  </div>
 {% endblock paragraph %}
