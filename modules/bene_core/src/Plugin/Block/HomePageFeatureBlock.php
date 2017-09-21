@@ -41,7 +41,7 @@ class HomePageFeatureBlock extends BlockBase {
       '#required' => TRUE,
       '#description' => $this->t('Start typing the name of the feature block, then select it from the list. <a href=":url">Edit existing blocks or create new ones.</a>', [
         ':url' => Url::fromRoute('view.bene_blocks.page_1')->toString(),
-      ])
+      ]),
     ];
 
     return $form;
@@ -72,7 +72,8 @@ class HomePageFeatureBlock extends BlockBase {
 
         $build['block'] = $rendered_block;
 
-        // If we have contextual links, move them from the referenced block to the main block.
+        // If we have contextual links, move them from the referenced block to
+        // the main block.
         if (isset($build['block']['#contextual_links'])) {
           $build['#contextual_links'] = $build['block']['#contextual_links'];
           unset($build['block']['#contextual_links']);
