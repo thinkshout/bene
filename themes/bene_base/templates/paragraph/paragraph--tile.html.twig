@@ -38,35 +38,39 @@
  * @ingroup themeable
  */
 #}
-{%
-set classes = [
+{% set classes = [
 'paragraph',
 'paragraph--type--' ~ paragraph.bundle|clean_class,
 view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 'paragraph-' ~ paragraph.id(),
-]
-%}
-{%  if content.field_link %}
-{%
-set href = content.field_link.0['#url']
-%}
+] %}
+{% if content.field_link %}
+    {% set href = content.field_link.0['#url'] %}
 {% endif %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-      {% block content %}
-        {% if href %}
-          <a href="{{ href }}">
-        {% endif %}
-          {{ content.field_image }}
-        {% if href %}
-          </a>
-        {% endif %}
-        <div class="tile-text">
-            {{ content.field_lead }}
-            {{ content.field_title }}
-            {{ content.field_text }}
-            {{ content.field_link }}
-        </div>
-      {% endblock %}
-  </div>
+    <div{{ attributes.addClass(classes) }}>
+        {% block content %}
+            {% if href %}
+                <a href="{{ href }}">
+            {% endif %}
+            {{ content.field_image }}
+            {% if href %}
+                </a>
+            {% endif %}
+            <div class="tile-text">
+                {{ content.field_lead }}
+                {% if href %}
+                <a href="{{ href }}">
+                {% endif %}
+                {{ content.field_title }}
+                {% if href %}
+                </a>
+                {% endif %}
+                {{ content.field_text }}
+                {% if content.field_link.0['#title'] != content.field_link.0['#url'] %}
+                {{ content.field_link }}
+                {% endif %}
+            </div>
+        {% endblock %}
+    </div>
 {% endblock paragraph %}
