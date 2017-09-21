@@ -66,17 +66,19 @@ class HomePageFeatureBlock extends BlockBase {
       $block = \Drupal::entityTypeManager()->getStorage('block_content')->load($block_id);
 
       if (!empty($block)) {
-        $rendered_block = render(\Drupal::entityTypeManager()
+        $rendered_block = \Drupal::entityTypeManager()
           ->getViewBuilder('block_content')
-          ->view($block));
+          ->view($block);
 
-        $build['block'] = [
-          '#type' => 'markup',
-          '#markup' => $rendered_block,
-        ];
+        $build['block'] = $rendered_block;
+
+        // If we have contextual links, move them from the referenced block to the main block.
+        if (isset($build['block']['#contextual_links'])) {
+          $build['#contextual_links'] = $build['block']['#contextual_links'];
+          unset($build['block']['#contextual_links']);
+        }
       }
     }
-
     return $build;
   }
 
