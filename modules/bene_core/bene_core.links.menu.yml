@@ -1,0 +1,11 @@
+entity.block.collection:
+  title: 'Blocks'
+  parent: system.admin_content
+  description: 'Find and manage blocks.'
+  route_name: view.bene_blocks.page_1
+
+entity.block_content.add:
+  title: 'Add a new block'
+  parent: entity.block.collection
+  description: 'Add a new block.'
+  route_name: block_content.add_page

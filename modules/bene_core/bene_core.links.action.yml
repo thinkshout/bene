@@ -1,0 +1,5 @@
+bene_blocks.page_1:
+  route_name: block_content.add_page
+  title: 'Add block'
+  appears_on:
+    - view.bene_blocks.page_1

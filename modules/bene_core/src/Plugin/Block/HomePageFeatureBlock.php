@@ -4,6 +4,7 @@ namespace Drupal\bene_core\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * Provides a 'HomePageFeature' block.
@@ -38,6 +39,9 @@ class HomePageFeatureBlock extends BlockBase {
       '#title' => $this->t('Background image hero block'),
       '#default_value' => $this->configuration['block_id'],
       '#required' => TRUE,
+      '#description' => $this->t('Start typing the name of the feature block, then select it from the list. <a href=":url">Edit existing blocks or create new ones.</a>', [
+        ':url' => Url::fromRoute('view.bene_blocks.page_1')->toString(),
+      ])
     ];
 
     return $form;

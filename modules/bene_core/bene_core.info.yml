@@ -38,4 +38,5 @@ dependencies:
   - text
   - tour
   - user
+  - views
 package: Bene
