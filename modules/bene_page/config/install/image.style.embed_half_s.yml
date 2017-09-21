@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: embed_half_s
+label: Embed-Half-S
+effects:
+  e5c879e0-f044-454a-8f43-ffbbc9d08863:
+    uuid: e5c879e0-f044-454a-8f43-ffbbc9d08863
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: null
+      upscale: false

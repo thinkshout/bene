@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: embed_half_m
+label: Embed-Half-M
+effects:
+  84f65e42-3e4d-459b-a4fc-15445ee7ddf0:
+    uuid: 84f65e42-3e4d-459b-a4fc-15445ee7ddf0
+    id: image_scale
+    weight: 1
+    data:
+      width: 357
+      height: null
+      upscale: false

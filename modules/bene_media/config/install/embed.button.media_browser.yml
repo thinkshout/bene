@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.embedded
+    - core.entity_view_mode.media.embedded_half
   module:
     - entity_embed
     - media_entity
@@ -14,6 +15,7 @@ type_settings:
   bundles: {  }
   display_plugins:
     - 'view_mode:media.embedded'
+    - 'view_mode:media.embedded_half'
   entity_browser: media_browser
   entity_browser_settings:
     display_review: false

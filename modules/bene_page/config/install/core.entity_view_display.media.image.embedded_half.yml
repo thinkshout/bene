@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.embedded_half
+    - field.field.media.image.image
+    - media_entity.bundle.image
+    - responsive_image.styles.embed_half
+  module:
+    - responsive_image
+id: media.image.embedded_half
+targetEntityType: media
+bundle: image
+mode: embedded_half
+content:
+  image:
+    type: responsive_image
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: embed_half
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true
