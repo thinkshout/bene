@@ -7,11 +7,9 @@ dependencies:
     - field.field.paragraph.tile.field_link
     - field.field.paragraph.tile.field_text
     - field.field.paragraph.tile.field_title
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.tile
   module:
     - link
-    - media_entity
     - text
 id: paragraph.tile.default
 targetEntityType: paragraph
@@ -22,10 +20,10 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: thumbnail
-      image_link: ''
+      view_mode: tile
+      link: false
     third_party_settings: {  }
-    type: media_thumbnail
+    type: entity_reference_entity_view
     region: content
   field_lead:
     weight: 1

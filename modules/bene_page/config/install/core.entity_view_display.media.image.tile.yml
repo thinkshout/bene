@@ -19,7 +19,7 @@ content:
     label: hidden
     settings:
       responsive_image_style: tile
-      image_link: content
+      image_link: ''
     third_party_settings: {  }
     region: content
 hidden:
