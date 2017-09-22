@@ -12,7 +12,7 @@ field_name: bene_content
 entity_type: node
 bundle: event
 label: Content
-description: ''
+description: 'This is where you stack the content you want to add to your page.'
 required: false
 translatable: true
 default_value: {  }

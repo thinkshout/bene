@@ -18,7 +18,7 @@ field_name: field_text
 entity_type: paragraph
 bundle: rich_text
 label: Text
-description: ''
+description: "<p>This is just text! You can format it or make it a quote here. You can add bullets, style it as a header, or create a button. You can also insert an in-line image using the same “header image” functionality that is outlined above. (suggested word count: ≤ 400)</p>\r\n<p>To create a button type in the text that you would like to be displayed. Hyperlink the text and link it to an internal page or an external page/resource. Then with it still highlighted, you can head back to the style drop down and select button. Voila!</p>"
 required: false
 translatable: false
 default_value: {  }

@@ -8,8 +8,8 @@ id: paragraph.tiles.field_title
 field_name: field_title
 entity_type: paragraph
 bundle: tiles
-label: 'Tile Block Title'
-description: 'An optional title for this group of tiles.'
+label: Title
+description: 'An optional title for this group of tiles that will be displayed centered above the tiles.'
 required: false
 translatable: true
 default_value: {  }

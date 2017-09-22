@@ -12,7 +12,7 @@ field_name: field_tiles
 entity_type: paragraph
 bundle: tiles
 label: Tiles
-description: ''
+description: 'Add additional tiles with the “Add Tile” button. (Recommendation: place tiles in sets of three and not to exceed 6 total, or two rows, of tiles)'
 required: true
 translatable: false
 default_value: {  }
@@ -20,6 +20,7 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
+    negate: 0
     target_bundles:
       tile: tile
     target_bundles_drag_drop:

@@ -18,7 +18,7 @@ field_name: field_text
 entity_type: paragraph
 bundle: tile
 label: Text
-description: ''
+description: '(suggested word count: ≤ 40)'
 required: false
 translatable: true
 default_value: {  }

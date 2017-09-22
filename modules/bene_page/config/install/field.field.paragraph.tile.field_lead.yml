@@ -9,7 +9,7 @@ field_name: field_lead
 entity_type: paragraph
 bundle: tile
 label: Lead
-description: 'Text that comes before the Title.'
+description: 'Text that comes before the Title. (suggested word count: ≤ 7)'
 required: false
 translatable: false
 default_value: {  }

@@ -4,5 +4,5 @@ dependencies: {  }
 id: rich_text
 label: 'Rich Text'
 icon_uuid: null
-description: null
+description: ''
 behavior_plugins: {  }
