@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
  * Implements hook_module_implements_alter().
@@ -82,4 +83,23 @@ function bene_core_form_block_form_alter(&$form, FormStateInterface $form_state)
       $form['settings']['block_id']['#default_value'] = NULL;
     }
   }
+}
+
+/**
+ * Implements hook_help().
+ */
+function bene_core_help($route_name, RouteMatchInterface $route_match) {
+  $output = '';
+  switch ($route_name) {
+    case 'entity.menu.edit_form':
+      $output .= '<ul>';
+      $output .= '<li>' . t('Here you can edit an existing main navigation link or add a new one.') . '</li>';
+      $output .= '<li>' . t('You can organize how your navigation will appear by dragging and dropping each menu link up or down. The top listed menu link will be the farthest left on your screen.') . '</li>';
+      if ($route_match->getRawParameter('menu') == 'main') {
+        $output .= '<li>' . t('The last listed menu link will automatically appear as a button - the suggestion is to put “support us” or “donate” here.') . '</li>';
+      }
+      $output .= '</ul>';
+
+  }
+  return $output;
 }
