@@ -11,7 +11,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<b> <i> <u> <s> <ul type> <li> <h2 id class="text-align*"> <h3 id class="text-align*"> <h4 id class="text-align*"> <h5 id class="text-align*"> <cite> <blockquote cite> <quote> <center> <left> <right> <strong> <em> <ol> <p class="text-align*"> <a !href accesskey id rel target title href class="button">'
+      allowed_html: '<b> <i> <u> <s> <ul type> <li> <h2 id class="text-align*"> <h3 id class="text-align*"> <h4 id class="text-align*"> <h5 id class="text-align*"> <cite> <blockquote cite> <quote> <center> <left> <right> <strong> <em> <ol> <p class="text-align*"> <br> <a !href accesskey id rel target title href class="button">'
       filter_html_help: false
       filter_html_nofollow: false
   filter_htmlcorrector:
