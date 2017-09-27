@@ -100,7 +100,9 @@
                 "2885441 - EntityReferenceAutocompleteWidget should define its size setting as an integer":
                 "https://www.drupal.org/files/issues/2885441-2.patch",
                 "2786577 - Improve the Views integration for DateRange fields":
-                "https://www.drupal.org/files/issues/2786577-184-8-3-x-test-do-not-test.patch"
+                "https://www.drupal.org/files/issues/2786577-184-8-3-x-test-do-not-test.patch",
+                "2626716 - Edit Summary link not showing if Help Text is set":
+                "https://www.drupal.org/files/issues/edit-summary-not-showing-11411975-24.patch"
             },
             "drupal/migrate_tools": {
                 "Migrate Tools dashboard plugin manager/config deriver UI issues - https://www.drupal.org/node/2825846#comment-12080570":
