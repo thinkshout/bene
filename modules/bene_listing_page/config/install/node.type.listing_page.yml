@@ -5,8 +5,11 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus: {  }
-    parent: ''
+    available_menus:
+      - footer
+      - main
+      - utility
+    parent: 'utility:'
 name: 'Listing Page'
 type: listing_page
 description: 'Pages that list content like News or Events.'
