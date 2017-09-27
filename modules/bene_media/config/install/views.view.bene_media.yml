@@ -4,10 +4,12 @@ dependencies:
   config:
     - image.style.medium
     - image.style.thumbnail
+    - taxonomy.vocabulary.media_tags
   module:
     - entity_browser
     - image
     - media_entity
+    - taxonomy
     - user
     - views_infinite_scroll
 id: bene_media
@@ -747,6 +749,53 @@ display:
           entity_type: media
           entity_field: name
           plugin_id: string
+        media_tags_target_id:
+          id: media_tags_target_id
+          table: media__media_tags
+          field: media_tags_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: media_tags_target_id_op
+            label: Tags
+            description: ''
+            use_operator: false
+            operator: media_tags_target_id_op
+            identifier: tags
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              staff: '0'
+              staff_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: media_tags
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       sorts:
         created:
           id: created
@@ -801,6 +850,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - user.permissions
       tags: {  }
   media_browser:
@@ -1083,6 +1133,53 @@ display:
           entity_type: media
           entity_field: name
           plugin_id: string
+        media_tags_target_id:
+          id: media_tags_target_id
+          table: media__media_tags
+          field: media_tags_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: media_tags_target_id_op
+            label: Tags
+            description: ''
+            use_operator: false
+            operator: media_tags_target_id_op
+            identifier: tags
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              staff: '0'
+              staff_admin: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: media_tags
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       filter_groups:
         operator: AND
         groups:
@@ -1177,6 +1274,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - user.permissions
       tags: {  }
   media_page_list:
@@ -1204,5 +1302,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - user.permissions
       tags: {  }

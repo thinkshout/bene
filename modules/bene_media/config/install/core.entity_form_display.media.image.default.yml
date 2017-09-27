@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.image.media_tags
     - field.field.media.image.image
     - image.style.thumbnail
     - media_entity.bundle.image
@@ -12,6 +13,15 @@ targetEntityType: media
 bundle: image
 mode: default
 content:
+  media_tags:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
   image:
     type: image_image
     weight: 0

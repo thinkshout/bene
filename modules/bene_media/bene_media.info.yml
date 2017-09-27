@@ -24,6 +24,7 @@ dependencies:
   - node
   - picture_background_formatter
   - responsive_image
+  - taxonomy
   - text
   - user
   - video_embed_field

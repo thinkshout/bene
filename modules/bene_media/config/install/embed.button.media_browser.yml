@@ -1,9 +1,6 @@
 langcode: en
 status: true
 dependencies:
-  config:
-    - core.entity_view_mode.media.embedded
-    - core.entity_view_mode.media.embedded_half
   module:
     - entity_embed
     - media_entity
