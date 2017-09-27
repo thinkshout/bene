@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.search_result
     - field.field.node.news.bene_content
     - field.field.node.news.bene_date
     - field.field.node.news.bene_header_media
@@ -15,10 +15,10 @@ dependencies:
     - datetime
     - media_entity
     - user
-id: node.news.teaser
+id: node.news.search_result
 targetEntityType: node
 bundle: news
-mode: teaser
+mode: search_result
 content:
   bene_date:
     weight: 1

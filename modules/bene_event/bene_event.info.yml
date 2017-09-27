@@ -5,6 +5,7 @@ package: Bene
 dependencies:
   - address
   - allowed_formats
+  - bene_core
   - bene_media
   - bene_page
   - datetime

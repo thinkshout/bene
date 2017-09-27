@@ -7,9 +7,11 @@ dependencies:
     - field.field.node.page.bene_header_media
     - field.field.node.page.bene_intro
     - field.field.node.page.bene_metatags
+    - image.style.tile_m
     - node.type.page
   module:
-    - text
+    - bene_core
+    - media_entity
     - user
 id: node.page.teaser
 targetEntityType: node
@@ -17,21 +19,21 @@ bundle: page
 mode: teaser
 content:
   bene_header_media:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     weight: 0
     region: content
     label: hidden
     settings:
-      view_mode: thumbnail
-      link: false
+      image_style: tile_m
+      image_link: content
     third_party_settings: {  }
   bene_intro:
-    type: text_summary_or_trimmed
+    type: bene_fallback_summary
     weight: 1
     region: content
     label: hidden
     settings:
-      trim_length: 600
+      trim_length: '300'
     third_party_settings: {  }
 hidden:
   bene_content: true

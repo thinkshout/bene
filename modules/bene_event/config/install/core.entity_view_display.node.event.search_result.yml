@@ -9,13 +9,13 @@ dependencies:
     - field.field.node.event.bene_header_media
     - field.field.node.event.bene_intro
     - field.field.node.event.bene_metatags
-    - image.style.header_s
+    - image.style.tile_m
     - node.type.event
   module:
     - address
+    - bene_core
     - datetime_range
     - media_entity
-    - text
     - user
 id: node.event.search_result
 targetEntityType: node
@@ -27,7 +27,7 @@ content:
     label: hidden
     settings:
       timezone_override: ''
-      format_type: long
+      format_type: bene_date_time
       separator: '-'
     third_party_settings: {  }
     type: daterange_default
@@ -43,7 +43,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: header_s
+      image_style: tile_m
       image_link: content
     third_party_settings: {  }
     type: media_thumbnail
@@ -54,7 +54,7 @@ content:
     settings:
       trim_length: 300
     third_party_settings: {  }
-    type: text_trimmed
+    type: bene_fallback_summary
     region: content
 hidden:
   bene_content: true

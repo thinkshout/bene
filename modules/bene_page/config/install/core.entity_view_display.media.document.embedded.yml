@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.embedded
     - field.field.media.document.field_document
+    - field.field.media.document.media_tags
     - media_entity.bundle.document
   module:
     - file
@@ -21,6 +22,7 @@ content:
     region: content
 hidden:
   created: true
+  media_tags: true
   name: true
   thumbnail: true
   uid: true
