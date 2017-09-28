@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.image.media_tags
     - field.field.media.image.image
+    - field.field.media.image.media_tags
     - image.style.thumbnail
     - media_entity.bundle.image
   module:
@@ -13,6 +13,14 @@ targetEntityType: media
 bundle: image
 mode: default
 content:
+  image:
+    type: image_image
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    region: content
   media_tags:
     weight: 4
     settings:
@@ -21,14 +29,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
-    region: content
-  image:
-    type: image_image
-    weight: 0
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
     region: content
   name:
     type: string_textfield
