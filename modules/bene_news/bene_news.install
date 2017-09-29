@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update routines for Bene News.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function bene_news_install() {
+  // Set permissions.
+  $staff_permissions = [
+    'create news content' => 1,
+    'delete any news content' => 1,
+    'delete own news content' => 1,
+    'delete news revisions' => 1,
+    'edit any news content' => 1,
+    'edit own news content' => 1,
+    'revert news revisions' => 1,
+    'view news revisions' => 1,
+  ];
+
+  user_role_change_permissions('staff', $staff_permissions);
+}
