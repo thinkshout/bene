@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update routines for Bene Page.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function bene_page_install() {
+  // Set permissions.
+  $staff_permissions = [
+    'create page content' => 1,
+    'delete any page content' => 1,
+    'delete own page content' => 1,
+    'delete page revisions' => 1,
+    'edit any page content' => 1,
+    'edit own page content' => 1,
+    'revert page revisions' => 1,
+    'view page revisions' => 1,
+  ];
+
+  user_role_change_permissions('staff', $staff_permissions);
+}
