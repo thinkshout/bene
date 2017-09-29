@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update routines for Bene Core.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function bene_core_install() {
+  // Set permissions.
+  $staff_permissions = [
+    'access content overview' => 1,
+    'administer nodes' => 1,
+    'administer url aliases' => 1,
+    'create url aliases' => 1,
+    'administer menu' => 1,
+    'access site reports' => 1,
+  ];
+
+  user_role_change_permissions('staff', $staff_permissions);
+}
