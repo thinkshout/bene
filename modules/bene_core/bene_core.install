@@ -17,6 +17,15 @@ function bene_core_install() {
     'create url aliases' => 1,
     'administer menu' => 1,
     'access site reports' => 1,
+    'access site in maintenance mode' => 1,
+    'access toolbar' => 1,
+    // TODO: Find out if there's a better permission to use here.
+    // This is required to give users access to add / edit menu items,
+    // but also exposes other configuration links that the user does not
+    // have permission to use. The user simply receives an "access denied"
+    // page when clicking them, but it would be better to not have these
+    // appear in the menu at all.
+    'access administration pages' => 1,
   ];
 
   user_role_change_permissions('staff', $staff_permissions);
