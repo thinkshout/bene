@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update routines for Bene Event.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function bene_event_install() {
+  // Set permissions.
+  $staff_permissions = [
+    'create event content' => 1,
+    'delete any event content' => 1,
+    'delete own event content' => 1,
+    'delete event revisions' => 1,
+    'edit any event content' => 1,
+    'edit own event content' => 1,
+    'revert event revisions' => 1,
+    'view event revisions' => 1,
+  ];
+
+  user_role_change_permissions('staff', $staff_permissions);
+}
