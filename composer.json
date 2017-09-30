@@ -125,6 +125,10 @@
             "drupal/picture_background_formatter": {
                 "2896270 - Refactor to support tokens and a formatter specific to media entity reference fields":
                 "https://www.drupal.org/files/issues/token_and_media_formatter-2896270-2.patch"
+            },
+            "drupal/quickedit": {
+                "2303847 - Uncaught TypeError: Cannot read property 'getAttribute' of undefined on node/add and node/edit page":
+                "https://www.drupal.org/files/issues/quickedit_patch.patch"
             }
         }
     }
