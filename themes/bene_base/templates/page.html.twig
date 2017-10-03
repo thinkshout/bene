@@ -1,18 +1,20 @@
 <div id="site-wrapper">
   <header class="site-header">
-    <div class="logo-wrapper">
-      {{page.site_branding}}
-    </div>
-    <div class="desktop-nav">
-      {{page.secondary_nav}}
-      {{page.primary_nav}}
-    </div>
-    <div class="mobile-nav">
-      <a class="mobile-menu-toggle">
-        <div><span aria-hidden="false">Mobile Menu</span></div>
-      </a>
-      {{page.primary_nav}}
-      {{page.secondary_nav}}
+    <div class="inner">
+      <div class="logo-wrapper">
+        {{page.site_branding}}
+      </div>
+      <div class="desktop-nav">
+        {{page.secondary_nav}}
+        {{page.primary_nav}}
+      </div>
+      <div class="mobile-nav">
+        <a class="mobile-menu-toggle">
+          <div><span aria-hidden="false">Mobile Menu</span></div>
+        </a>
+        {{page.primary_nav}}
+        {{page.secondary_nav}}
+      </div>
     </div>
   </header>
 

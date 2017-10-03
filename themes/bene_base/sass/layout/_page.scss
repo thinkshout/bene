@@ -1,9 +1,15 @@
 // Default layout
   $max-width: rem(1800) !global;
 
+  .inner {
+    display: flex;
+    flex: 1;
+    margin: 0 auto;
+    max-width: rem(1240);
+  }
+
   #site-wrapper {
     margin: 0 auto;
-    max-width: 1800px;
     position: relative;
   }
 

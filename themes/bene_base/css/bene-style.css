@@ -288,9 +288,14 @@ fieldset {
 @media (min-width: 1240px) {
   .site-header .desktop-nav .menu .menu-item {
     margin-left: 2.25rem; } }
+.inner {
+  display: flex;
+  flex: 1;
+  margin: 0 auto;
+  max-width: 77.5rem; }
+
 #site-wrapper {
   margin: 0 auto;
-  max-width: 1800px;
   position: relative; }
 
 #page,
