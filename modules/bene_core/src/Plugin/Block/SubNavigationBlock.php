@@ -113,6 +113,9 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
    */
   public function build() {
     $menu_links = $this->menuLinkManager->loadLinksByRoute($this->currentRouteMatch->getRouteName(), $this->currentRouteMatch->getRawParameters()->all());
+    if (empty($menu_links)) {
+      return;
+    }
     $menu_link = reset($menu_links);
     $menu_name = $this->getMenuName();
 
@@ -153,7 +156,9 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
     // menu block must also be re-rendered for that user, because maybe a menu
     // link that is accessible for that user has been added.
     $cache_tags = parent::getCacheTags();
-    $cache_tags[] = 'config:system.menu.' . $this->getMenuName();
+    if ($menu_name = $this->getMenuName()) {
+      $cache_tags[] = 'config:system.menu.' . $menu_name;
+    }
     return $cache_tags;
   }
 
@@ -167,17 +172,26 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
     // trail of the rendered menu.
     // Additional cache contexts, e.g. those that determine link text or
     // accessibility of a menu, will be bubbled automatically.
-    $menu_name = $this->getMenuName();
-    return Cache::mergeContexts(parent::getCacheContexts(), ['route.menu_active_trails:' . $menu_name]);
+    if ($menu_name = $this->getMenuName()) {
+      return Cache::mergeContexts(parent::getCacheContexts(), ['route.menu_active_trails:' . $menu_name]);
+    }
+    else {
+      return parent::getCacheContexts();
+    }
   }
 
   /**
    * Get the menu name for the current page.
    */
   private function getMenuName() {
+    $menu_name = FALSE;
     $menu_links = $this->menuLinkManager->loadLinksByRoute($this->currentRouteMatch->getRouteName(), $this->currentRouteMatch->getRawParameters()->all());
-    $menu_link = reset($menu_links);
-    return $menu_link->getMenuName();
+    if ($menu_links) {
+      $menu_link = reset($menu_links);
+      $menu_name = $menu_link->getMenuName();
+    }
+
+    return $menu_name;
   }
 
 }
