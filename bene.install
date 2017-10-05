@@ -18,10 +18,13 @@ use Drupal\shortcut\Entity\Shortcut;
  */
 function bene_install() {
   // Set front page to "node".
-  \Drupal::configFactory()->getEditable('system.site')->set('page.front', '/node')->save(TRUE);
+  \Drupal::configFactory()
+    ->getEditable('system.site')
+    ->set('page.front', '/node')
+    ->save(TRUE);
 
   // Assign user 1 the "administrator" role.
-  $user = User::load(1);
+  $user          = User::load(1);
   $user->roles[] = 'administrator';
   $user->save();
 
@@ -42,17 +45,17 @@ function bene_install() {
   // Populate the default shortcut set.
   $shortcut = Shortcut::create([
     'shortcut_set' => 'default',
-    'title' => t('Add content'),
-    'weight' => -20,
-    'link' => ['uri' => 'internal:/node/add'],
+    'title'        => t('Add content'),
+    'weight'       => -20,
+    'link'         => ['uri' => 'internal:/node/add'],
   ]);
   $shortcut->save();
 
   $shortcut = Shortcut::create([
     'shortcut_set' => 'default',
-    'title' => t('All content'),
-    'weight' => -19,
-    'link' => ['uri' => 'internal:/admin/content'],
+    'title'        => t('All content'),
+    'weight'       => -19,
+    'link'         => ['uri' => 'internal:/admin/content'],
   ]);
   $shortcut->save();
 
@@ -60,6 +63,19 @@ function bene_install() {
   user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['search content']);
   user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['search content']);
 
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('default', 'bene_child')
+    ->save();
+
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('admin', 'seven')
+    ->save();
+
   // Enable the admin theme.
-  \Drupal::configFactory()->getEditable('node.settings')->set('use_admin_theme', TRUE)->save(TRUE);
+  \Drupal::configFactory()
+    ->getEditable('node.settings')
+    ->set('use_admin_theme', TRUE)
+    ->save(TRUE);
 }

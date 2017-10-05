@@ -15,6 +15,7 @@ dependencies:
   - bene_migrate_google_sheets
   - bene_news
   - bene_page
+  - bene_hero_block
   - block
   - block_content
   - breakpoint
