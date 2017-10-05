@@ -33,6 +33,7 @@ assignments:
     types:
       config:
         features_bundle: features_bundle
+        user_role: user_role
     curated: true
     module:
       installed: true

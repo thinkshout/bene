@@ -1,4 +1,2 @@
 bundle: bene
-excluded:
-  - system.theme
 required: true

@@ -29,4 +29,9 @@ excluded:
   - field.storage.paragraph.field_media
   - field.storage.paragraph.field_caption
   - core.entity_view_mode.paragraph.token
+  - user.role.anonymous
+  - user.role.authenticated
+  - user.role.administrator
+  - user.role.staff
+  - user.role.staff_admin
 required: true

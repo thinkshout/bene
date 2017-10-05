@@ -3,6 +3,7 @@ status: true
 dependencies:
   module:
     - bene_core
+    - system
   theme:
     - bene_child
 id: benesubnavigation

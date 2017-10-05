@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\bene_core\Plugin\Block;
+namespace Drupal\bene_hero_block\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;

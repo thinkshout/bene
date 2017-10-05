@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: staff_admin
-label: 'Staff admin'
-weight: 4
-is_admin: null
