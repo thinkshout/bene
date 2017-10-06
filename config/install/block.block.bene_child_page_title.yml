@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - bene_child
 id: bene_child_page_title

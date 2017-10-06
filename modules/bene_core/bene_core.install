@@ -5,10 +5,22 @@
  * Contains install and update routines for Bene Core.
  */
 
+use Drupal\user\Entity\Role;
+
 /**
  * Implements hook_install().
  */
 function bene_core_install() {
+
+  // Create roles.
+  $roles = ['staff' => 'Staff', 'staff_admin' => 'Staff Admin'];
+  foreach ($roles as $role_id => $role_name) {
+    $role = Role::load($role_id) ?: Role::create([
+      'id'    => $role_id,
+      'label' => $role_name,
+    ]);
+  }
+
   // Set permissions.
   $staff_permissions = [
     'access content overview' => 1,

@@ -1,0 +1,17 @@
+name: 'Hero Blocks'
+description: 'Hero blocks and their fields'
+type: module
+core: 8.x
+dependencies:
+  - bene_core
+  - bene_media
+  - block_content
+  - entity_browser
+  - field
+  - focal_point
+  - image
+  - link
+  - media_entity
+  - picture_background_formatter
+  - responsive_image
+package: Bene

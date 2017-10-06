@@ -108,7 +108,9 @@ function bene_event_form_alter(&$form, FormStateInterface $form_state, $form_id)
   $view_names = ['bene_events'];
   $view = $form_state->getStorage('view');
   if ($form_id == 'views_exposed_form' && in_array($view['view']->id(), $view_names)) {
+    $form['date']['min']['#title'] = t('From');
     $form['date']['min']['#type'] = 'date';
+    $form['date']['max']['#title'] = t('To');
     $form['date']['max']['#type'] = 'date';
   }
 }

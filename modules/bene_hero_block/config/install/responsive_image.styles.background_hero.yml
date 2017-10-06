@@ -6,8 +6,6 @@ dependencies:
     - image.style.homepage_hero_m
     - image.style.homepage_hero_s
     - image.style.homepage_hero_xl
-  theme:
-    - bene_base
 id: background_hero
 label: 'Background Hero'
 image_style_mappings:
