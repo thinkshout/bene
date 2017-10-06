@@ -1,4 +1,10 @@
 .paragraph.paragraph--type--tile.paragraph--view-mode--default {
-  width: 33%;
+  width: 30%;
   float: left;
+
+  padding: 1%;
+}
+
+.paragraph.paragraph--type--tile.paragraph--view-mode--default img {
+  width: 100%;
 }
