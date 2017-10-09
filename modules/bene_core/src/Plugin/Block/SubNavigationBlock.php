@@ -112,9 +112,11 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
    * {@inheritdoc}
    */
   public function build() {
+    $build = [];
+
     $menu_links = $this->menuLinkManager->loadLinksByRoute($this->currentRouteMatch->getRouteName(), $this->currentRouteMatch->getRawParameters()->all());
     if (empty($menu_links)) {
-      return;
+      return $build;
     }
     $menu_link = reset($menu_links);
     $menu_name = $this->getMenuName();
@@ -136,15 +138,20 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
     if (!$tree_item->hasChildren && $menu_link->getParent()) {
       $fallback_parameters->setRoot($menu_link->getParent());
       $tree = $this->menuTree->load($menu_name, $fallback_parameters);
+      $tree_item = reset($tree);
     }
 
-    $manipulators = [
-      ['callable' => 'menu.default_tree_manipulators:checkAccess'],
-      ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
-    ];
-    $tree = $this->menuTree->transform($tree, $manipulators);
-    return $this->menuTree->build($tree);
+    // If we have at least one child item, render the menu.
+    if ($tree_item->hasChildren) {
+      $manipulators = [
+        ['callable' => 'menu.default_tree_manipulators:checkAccess'],
+        ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
+      ];
+      $tree = $this->menuTree->transform($tree, $manipulators);
+      $build = $this->menuTree->build($tree);
+    }
 
+    return $build;
   }
 
   /**
