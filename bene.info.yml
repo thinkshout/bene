@@ -30,7 +30,6 @@ dependencies:
   - datetime
   - datetime_range
   - dblog
-  - default_content
   - dynamic_page_cache
   - editor
   - email_registration
