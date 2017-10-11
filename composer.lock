@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ef31822ca1568985af0272ca2f597f2",
+    "content-hash": "fcda61925b19ae385d36cb90f5893df4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -856,6 +856,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "2912618 - Hardcoded linebreaks in default address formatter": "https://www.drupal.org/files/issues/hardcoded_linebreaks_in-2912618-2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6260,7 +6263,7 @@
                 "test",
                 "web"
             ],
-            "time": "2017-04-09 08:39:37"
+            "time": "2017-04-09T08:39:37+00:00"
         },
         {
             "name": "drupal/drupal-extension",
@@ -6321,7 +6324,7 @@
                 "test",
                 "web"
             ],
-            "time": "2017-09-13 19:53:22"
+            "time": "2017-09-13T19:53:22+00:00"
         },
         {
             "name": "fabpot/goutte",
