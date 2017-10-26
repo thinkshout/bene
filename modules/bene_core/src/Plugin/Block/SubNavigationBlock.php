@@ -118,7 +118,10 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
     if (empty($menu_links)) {
       return $build;
     }
-    $menu_link = reset($menu_links);
+    // Get the deepest link to this page and use that for the subnav.
+    // @todo Consider a better approach like excluding utility nav links or
+    // sorting them by main menu then footer then utility nav.
+    $menu_link = end($menu_links);
     $menu_name = $this->getMenuName();
 
     $parameters = $this->menuTree->getCurrentRouteMenuTreeParameters($menu_name);
@@ -194,7 +197,10 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
     $menu_name = FALSE;
     $menu_links = $this->menuLinkManager->loadLinksByRoute($this->currentRouteMatch->getRouteName(), $this->currentRouteMatch->getRawParameters()->all());
     if ($menu_links) {
-      $menu_link = reset($menu_links);
+      // Get the deepest link to this page and use that for the subnav.
+      // @todo Consider a better approach like excluding utility nav links or
+      // sorting them by main menu then footer then utility nav.
+      $menu_link = end($menu_links);
       $menu_name = $menu_link->getMenuName();
     }
 
