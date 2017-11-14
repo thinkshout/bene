@@ -10,12 +10,12 @@ dependencies:
   - automated_cron
   - bene_core
   - bene_event
+  - bene_hero_block
   - bene_listing_page
   - bene_media
   - bene_migrate_google_sheets
   - bene_news
   - bene_page
-  - bene_hero_block
   - block
   - block_content
   - breakpoint
