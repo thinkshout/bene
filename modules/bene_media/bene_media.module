@@ -14,11 +14,11 @@ use Drupal\file\FileInterface;
 use Drupal\image\Entity\ImageStyle;
 use Drupal\image\Plugin\Field\FieldType\ImageItem;
 use Drupal\image\Plugin\ImageEffect\ResizeImageEffect;
-use Drupal\bene_core\BundleEntityStorage;
+use Drupal\bene_media\BundleEntityStorage;
 use Drupal\bene_media\Exception\IndeterminateBundleException;
 use Drupal\bene_media\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget;
 use Drupal\bene_media\MediaHelper;
-use Drupal\bene_core\OverrideHelper as Override;
+use Drupal\bene_media\OverrideHelper as Override;
 use Drupal\bene_media\Form\MediaForm;
 use Drupal\media_entity\Entity\MediaBundle;
 use Drupal\media_entity\MediaInterface;
@@ -337,7 +337,7 @@ function bene_media_entity_form_display_presave(EntityFormDisplayInterface $disp
     return $field->getType() == 'entity_reference' && $field->getSetting('target_type') == 'media';
   };
 
-  $new_components = \Drupal::service('bene.display_helper')
+  $new_components = \Drupal::service('bene_media.display_helper')
     ->getNewFields($display, $filter);
 
   foreach ($new_components as $key => $component) {
@@ -369,7 +369,7 @@ function bene_media_entity_form_display_presave(EntityFormDisplayInterface $disp
   $filter = function (FieldStorageDefinitionInterface $field) {
     return $field->getType() == 'image';
   };
-  $new_components = \Drupal::service('bene.display_helper')
+  $new_components = \Drupal::service('bene_media.display_helper')
     ->getNewFields($display, $filter);
 
   foreach ($new_components as $key => $component) {

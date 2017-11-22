@@ -5,7 +5,7 @@
  * Support for document media assets in Bene.
  */
 
-use Drupal\bene_core\OverrideHelper as Override;
+use Drupal\bene_media\OverrideHelper as Override;
 use Drupal\bene_media_document\Plugin\MediaEntity\Type\Document;
 
 /**

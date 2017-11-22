@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\bene_core;
+namespace Drupal\bene_media;
 
 use Drupal\Component\Uuid\UuidInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;

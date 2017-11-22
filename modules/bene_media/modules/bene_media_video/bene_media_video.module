@@ -6,7 +6,7 @@
  */
 
 use Drupal\media_entity\MediaInterface;
-use Drupal\bene_core\OverrideHelper as Override;
+use Drupal\bene_media\OverrideHelper as Override;
 use Drupal\bene_media_video\Plugin\MediaEntity\Type\Video;
 
 /**

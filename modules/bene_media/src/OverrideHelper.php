@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\bene_core;
+namespace Drupal\bene_media;
 
 use Drupal\Core\Entity\EntityTypeInterface;
 

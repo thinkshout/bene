@@ -8,3 +8,8 @@ services:
     tags:
       -
         name: event_subscribe
+  bene_media.display_helper:
+    class: 'Drupal\bene_media\DisplayHelper'
+    arguments:
+      - '@entity.query'
+      - '@entity_field.manager'
