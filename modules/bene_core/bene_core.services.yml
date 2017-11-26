@@ -1,6 +1,0 @@
-services:
-  bene.display_helper:
-    class: 'Drupal\bene_core\DisplayHelper'
-    arguments:
-      - '@entity.query'
-      - '@entity_field.manager'
