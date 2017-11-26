@@ -4,7 +4,6 @@ namespace Drupal\bene_media\Form;
 
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\bene_media\Form\BulkCreationEntityFormTrait;
 use Drupal\bene_media\MediaHelper as Helper;
 use Drupal\media_entity\MediaForm as BaseMediaForm;
 use Drupal\media_entity\MediaInterface;
