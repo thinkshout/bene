@@ -4,9 +4,7 @@ type: module
 description: 'Media support for Bene'
 package: Bene
 dependencies:
-  - bene_media
   - ckeditor
-  - crop
   - editor
   - embed
   - entity_browser
@@ -20,12 +18,10 @@ dependencies:
   - link
   - media_entity
   - media_entity_image
-  - node
   - picture_background_formatter
   - responsive_image
   - taxonomy
   - text
   - user
-  - video_embed_field
   - views
   - views_infinite_scroll
