@@ -19,6 +19,10 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/thinkshout/bene_media.git"
         }
     ],
     "require": {
@@ -60,7 +64,8 @@
         "drupal/picture_background_formatter": "1.x-dev",
         "drupal/address": "~1.2",
         "commerceguys/addressing": "~1.0",
-        "drupal/viewsreference": "dev-2.x#9af27ed"
+        "drupal/viewsreference": "dev-2.x#9af27ed",
+        "thinkshout/bene_media": "dev-8.x-1.x"
     },
     "replace": {
         "bower-asset/jquery": "*",
