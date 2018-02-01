@@ -14,11 +14,13 @@ bundle: image
 mode: media_browser
 content:
   image:
-    type: image_immutable
+    type: image_focal_point
     weight: 0
     settings:
       preview_image_style: medium
       progress_indicator: throbber
+      preview_link: true
+      offsets: '50,50'
     third_party_settings: {  }
     region: content
   name:
