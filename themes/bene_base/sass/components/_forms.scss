@@ -131,6 +131,10 @@ input[type='submit'] {
   border: none;
 }
 
+.region-content form {
+  width: 95%;
+  padding: 1rem;
+}
 
 // Specific ranges - use sparingly.
 // Mobile - things specifically under 400px.
@@ -145,12 +149,11 @@ input[type='submit'] {
 
 // Desktops - 769px or more. (This is the most common Media Query)
 @include mq(desktop) {
-  .user-login-form,
-  .user-register-form,
-  .user-pass {
+  .region-content form {
     @include span-columns(6);
     @include shift(3);
     float: none;
+    padding: 1rem;
   }
 }
 
