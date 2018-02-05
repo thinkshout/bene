@@ -101,7 +101,7 @@ body.user-logged-in .region.region-content {
           padding: rem(7) rem(20) rem(7);
         }
         &:hover {
-          background-color: $blue - 50;
+          background-color: darken($blue, 20%);
         }
         &.is-active {
           background-color: $bright-blue;

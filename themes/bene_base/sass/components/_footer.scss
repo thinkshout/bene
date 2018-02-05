@@ -48,7 +48,7 @@
       text-indent: -9999px;
       width: rem($social-icon-size);
       &:hover, &:focus {
-        background-color: $social-icon-color - 50;
+        background-color: darken($social-icon-color, 20%);
       }
     }
     .facebook { background-image:  url('../images/svgs/facebook-f.svg'); }

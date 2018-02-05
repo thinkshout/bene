@@ -39,7 +39,7 @@
       content: none;
     }
     &:hover {
-      background-color: $bright-blue + 50;
+      background-color: lighten($bright-blue, 20%);
     }
   }
 }

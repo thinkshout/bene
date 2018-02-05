@@ -81,7 +81,7 @@ a {
   cursor: pointer;
   text-decoration: none; }
   a:hover, a:active, a.nice-select.open {
-    color: #44d1e7; }
+    color: #41d5ec; }
 
 table a,
 li a,
@@ -94,7 +94,7 @@ p a {
   p a:hover,
   p a:active,
   p a.nice-select.open {
-    color: #44d1e7; }
+    color: #41d5ec; }
 
 a.button {
   -webkit-transition: background-color 0.3s linear, color 0.3s linear;
@@ -578,7 +578,7 @@ body.user-logged-in .region.region-content {
           font-size: 1.125rem;
           padding: 0.4375rem 1.25rem 0.4375rem; } }
       .user-logged-in #block-bene-child-local-tasks li a:hover {
-        background-color: #006d83; }
+        background-color: #094e58; }
       .user-logged-in #block-bene-child-local-tasks li a.is-active {
         background-color: #50CFE3; }
   .user-logged-in #block-bene-child-local-tasks .show-hide {
@@ -707,7 +707,7 @@ body.user-logged-in .region.region-content {
   text-indent: -9999px;
   width: 2.5rem; }
   .block-bene-footer-block .social-links a:hover, .block-bene-footer-block .social-links a:focus {
-    background-color: #1e9db1; }
+    background-color: #1c9db1; }
 .block-bene-footer-block .social-links .facebook {
   background-image: url("../images/svgs/facebook-f.svg"); }
 .block-bene-footer-block .social-links .google {
@@ -877,7 +877,7 @@ input[type='submit'] {
   text-transform: uppercase;
   border: none; }
   input[type='submit']:hover {
-    background-color: #1e9db1; }
+    background-color: #1c9db1; }
 
 .region-content form {
   width: 95%;
@@ -1079,7 +1079,7 @@ input[type='submit'] {
     padding: 0.625rem 0.9375rem;
     top: 6px; }
     .desktop-nav .menu--utility .menu-item:last-child a:hover {
-      background-color: #1e9db1; }
+      background-color: #1c9db1; }
 
   .desktop-nav .menu--main .menu-item a {
     color: #000;
@@ -1126,7 +1126,7 @@ input[type='submit'] {
     .external-newsletter a.button:after {
       content: none; }
     .external-newsletter a.button:hover {
-      background-color: #82ffff; }
+      background-color: #a8e7f1; }
 
 .nice-select {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -1360,7 +1360,7 @@ input[type='submit'] {
       letter-spacing: 0;
       text-transform: none; }
       .paragraph--type--feature-full-width .field--type-link a:hover {
-        background-color: #1e9db1; }
+        background-color: #1c9db1; }
 
 .paragraph--type--tiles > .field--name-field-title {
   font-size: 1.5rem;
