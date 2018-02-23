@@ -13,7 +13,7 @@ dependencies:
   - focal_point
   - image
   - link
-  - media_entity
+  - media
   - menu_ui
   - metatag
   - node

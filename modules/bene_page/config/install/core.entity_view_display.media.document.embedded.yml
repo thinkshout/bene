@@ -5,7 +5,7 @@ dependencies:
     - core.entity_view_mode.media.embedded
     - field.field.media.document.field_document
     - field.field.media.document.media_tags
-    - media_entity.bundle.document
+    - media.bundle.document
   module:
     - file
 id: media.document.embedded

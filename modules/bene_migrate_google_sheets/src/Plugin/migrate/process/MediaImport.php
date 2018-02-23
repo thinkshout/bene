@@ -11,7 +11,7 @@ use Drupal\migrate\MigrateExecutableInterface;
 use Drupal\migrate\ProcessPluginBase;
 use Drupal\migrate\Row;
 use Drupal\migrate\MigrateSkipProcessException;
-use Drupal\media_entity\Entity\Media;
+use Drupal\media\Entity\Media;
 
 /**
  * Import a file to create a media entity as a side-effect of a migration.

@@ -5,7 +5,7 @@ dependencies:
     - core.entity_view_mode.media.paragraph
     - field.field.media.image.image
     - field.field.media.image.media_tags
-    - media_entity.bundle.image
+    - media.bundle.image
     - responsive_image.styles.full_width_feature
   module:
     - responsive_image

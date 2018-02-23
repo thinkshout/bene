@@ -5,7 +5,7 @@ dependencies:
     - core.entity_view_mode.media.tile
     - field.field.media.image.image
     - field.field.media.image.media_tags
-    - media_entity.bundle.image
+    - media.bundle.image
     - responsive_image.styles.tile
   module:
     - responsive_image

@@ -5,7 +5,7 @@ dependencies:
     - core.entity_view_mode.media.header
     - field.field.media.image.image
     - field.field.media.image.media_tags
-    - media_entity.bundle.image
+    - media.bundle.image
     - responsive_image.styles.header
   module:
     - picture_background_formatter
