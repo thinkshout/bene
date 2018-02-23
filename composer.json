@@ -47,6 +47,7 @@
         "drupal/simple_sitemap": "2.11",
         "drupal/token": "1.0",
         "drupal/paragraphs": "^1.2",
+        "drupal/media_entity": "^2.0",
         "drupal/migrate_google_sheets": "^1.0@beta",
         "drupal/migrate_tools": "^4.0.0-beta1",
         "drupal/redirect": "^1.0-alpha5",
