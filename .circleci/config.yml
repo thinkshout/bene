@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-       - image: thinkshout/nginx-php-fpm@sha256:e24a56b754eaac4e4292a1e162d2d20e69cac551def51c8da3b592b7f2787e4e
+       - image: thinkshout/nginx-php-fpm@sha256:25c3088a5f4d3581416ba15df243add03f93f1f80c96142ec7093d061e080414
          environment:
            WEBROOT: /var/www/html/build/web
            GIT_EMAIL: "ci@thinkshout.com"
@@ -30,7 +30,7 @@ jobs:
             composer create-project thinkshout/bene-project:dev-pantheon /var/www/html/build --stability dev --no-interaction --no-install
       - restore_cache:
           keys:
-            - composer-v3-{{ checksum "composer.lock" }}
+            - composer-v4-{{ checksum "composer.lock" }}
       - run:
           name: Install dependencies
           command: |
