@@ -47,6 +47,7 @@ dependencies:
   - image
   - link
   - linkit
+  - media
   - menu_link_content
   - menu_ui
   - metatag
@@ -72,6 +73,7 @@ dependencies:
   - tour
   - user
   - views
+  - views_infinite_scroll
   - views_ui
 themes:
   - bartik

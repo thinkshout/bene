@@ -4,6 +4,7 @@ type: module
 core: 8.x
 dependencies:
   - allowed_formats
+  - bene
   - bene_core
   - bene_media
   - entity_browser
@@ -26,4 +27,5 @@ dependencies:
   - text
   - user
   - video_embed_field
+  - video_embed_media
 package: Bene

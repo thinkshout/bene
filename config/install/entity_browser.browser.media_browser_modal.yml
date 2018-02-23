@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.bene_media
+  module:
+    - bene_media
+    - views
+name: media_browser_modal
+label: 'Media browser (Modal)'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select media item(s)'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  dabbdd80-918d-4cf0-bcf0-9792107cf7bc:
+    settings:
+      view: bene_media
+      view_display: media_browser
+      submit_text: Select
+      auto_select: false
+    uuid: dabbdd80-918d-4cf0-bcf0-9792107cf7bc
+    weight: 1
+    label: Library
+    id: view
+  5024d5d9-cd5d-4dca-a2ba-d66e0e6f5986:
+    settings:
+      submit_text: Select
+      form_mode: media_browser
+      return_file: false
+    uuid: 5024d5d9-cd5d-4dca-a2ba-d66e0e6f5986
+    weight: 2
+    label: Upload
+    id: file_upload
+  71461a84-c23a-4ffd-8eeb-0949beef94e9:
+    settings:
+      submit_text: Place
+      form_mode: media_browser
+    uuid: 71461a84-c23a-4ffd-8eeb-0949beef94e9
+    weight: 3
+    label: 'Create embed'
+    id: embed_code

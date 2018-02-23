@@ -3,8 +3,8 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_media
-    - media.bundle.image
-    - media.bundle.video
+    - media.type.image
+    - media.type.video
     - paragraphs.paragraphs_type.media
 id: paragraph.media.field_media
 field_name: field_media
