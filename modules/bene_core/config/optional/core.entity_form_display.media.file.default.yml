@@ -2,31 +2,37 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.document.field_document
-    - media.type.document
+    - field.field.media.file.field_media_file
+    - media.type.file
   module:
     - file
     - path
-id: media.document.default
+id: media.file.default
 targetEntityType: media
-bundle: document
+bundle: file
 mode: default
 content:
-  field_document:
-    weight: 0
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_media_file:
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    weight: 0
     region: content
   name:
     type: string_textfield
-    weight: 2
+    weight: -5
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   path:
     type: path
     weight: 30
@@ -40,6 +46,13 @@ content:
     weight: 100
     region: content
     third_party_settings: {  }
-hidden:
-  created: true
-  uid: true
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

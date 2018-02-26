@@ -43,39 +43,36 @@ function bene_install() {
   user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['access shortcuts']);
 
   // Populate the default shortcut set.
-  $shortcut = Shortcut::create([
-    'shortcut_set' => 'default',
-    'title'        => t('Add content'),
-    'weight'       => -20,
-    'link'         => ['uri' => 'internal:/node/add'],
-  ]);
-  $shortcut->save();
-
-  $shortcut = Shortcut::create([
-    'shortcut_set' => 'default',
-    'title'        => t('All content'),
-    'weight'       => -19,
-    'link'         => ['uri' => 'internal:/admin/content'],
-  ]);
-  $shortcut->save();
+//  $shortcut = Shortcut::create([
+//    'shortcut_set' => 'default',
+//    'title'        => t('Add content'),
+//    'weight'       => -20,
+//    'link'         => ['uri' => 'internal:/node/add'],
+//  ]);
+//  $shortcut->save();
+//
+//  $shortcut = Shortcut::create([
+//    'shortcut_set' => 'default',
+//    'title'        => t('All content'),
+//    'weight'       => -19,
+//    'link'         => ['uri' => 'internal:/admin/content'],
+//  ]);
+//  $shortcut->save();
 
   // Allow all users to use search.
   user_role_grant_permissions(RoleInterface::ANONYMOUS_ID, ['search content']);
   user_role_grant_permissions(RoleInterface::AUTHENTICATED_ID, ['search content']);
 
+  // Set the default and admin theme.
   \Drupal::configFactory()
-    ->getEditable('system.theme')
-    ->set('default', 'bene_child')
-    ->save();
+         ->getEditable('system.theme')
+         ->set('default', 'bene_child')
+         ->set('admin', 'seven')
+         ->save(TRUE);
 
-  \Drupal::configFactory()
-    ->getEditable('system.theme')
-    ->set('admin', 'seven')
-    ->save();
-
-  // Enable the admin theme.
-  \Drupal::configFactory()
-    ->getEditable('node.settings')
-    ->set('use_admin_theme', TRUE)
-    ->save(TRUE);
+//  // Enable the admin theme.
+//  \Drupal::configFactory()
+//    ->getEditable('node.settings')
+//    ->set('use_admin_theme', TRUE)
+//    ->save(TRUE);
 }

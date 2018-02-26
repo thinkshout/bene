@@ -16,18 +16,14 @@ settings:
           items:
             - Bold
             - Italic
-            - Strike
-            - JustifyLeft
-            - JustifyCenter
-            - JustifyRight
-            - Superscript
-            - Subscript
+            - Underline
+            - HorizontalRule
+            - Blockquote
             - '-'
-            - RemoveFormat
         -
           name: Linking
           items:
-            - Linkit
+            - DrupalLink
             - DrupalUnlink
         -
           name: Lists
@@ -37,27 +33,25 @@ settings:
         -
           name: Media
           items:
-            - Blockquote
             - media_browser
-            - HorizontalRule
             - Table
         -
           name: 'Block Formatting'
           items:
             - Styles
+            - '-'
             - Format
         -
           name: Tools
           items:
-            - ShowBlocks
+            - Undo
+            - Redo
             - Source
   plugins:
+    stylescombo:
+      styles: "a.button-solid|Button Solid\r\na.button-white|Button White"
     language:
       language_list: un
-    stylescombo:
-      styles: "a.button|Button\r\n"
-    linkit:
-      linkit_profile: standard_link
 image_upload:
   status: true
   scheme: public

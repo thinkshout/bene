@@ -16,10 +16,12 @@ dependencies:
   - field
   - file
   - filter
+  - focal_point
   - image
   - inline_entity_form
   - link
   - linkit
+  - media
   - menu_link_content
   - migrate
   - migrate_google_sheets
@@ -30,6 +32,7 @@ dependencies:
   - path
   - r4032login
   - rdf
+  - responsive_image
   - shortcut
   - system
   - taxonomy
@@ -37,4 +40,8 @@ dependencies:
   - tour
   - user
   - views
+themes:
+  - bene_base
+  - bene_child
+  - seven
 package: Bene

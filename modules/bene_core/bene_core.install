@@ -41,4 +41,11 @@ function bene_core_install() {
   ];
 
   user_role_change_permissions('staff', $staff_permissions);
+
+  // Set the default and admin theme.
+  \Drupal::configFactory()
+         ->getEditable('system.theme')
+         ->set('default', 'bene_child')
+         ->set('admin', 'seven')
+         ->save(TRUE);
 }

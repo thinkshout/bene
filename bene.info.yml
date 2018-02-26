@@ -13,6 +13,10 @@ dependencies:
   - bene_hero_block
   - bene_listing_page
   - bene_media
+  - bene_media_twitter
+  - bene_media_instagram
+  - bene_media_video
+  - bene_media_file
   - bene_migrate_google_sheets
   - bene_news
   - bene_page
@@ -76,7 +80,6 @@ dependencies:
   - views_infinite_scroll
   - views_ui
 themes:
-  - bartik
   - bene_base
   - bene_child
   - seven
