@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8adf49e4dd8c3028541d9b0b34394a62",
+    "content-hash": "ca44fa40c47cb8360afbd2637f025047",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5064,11 +5064,11 @@
         },
         {
             "name": "thinkshout/bene_media",
-            "version": "dev-8.x-2.x",
+            "version": "dev-work-with-bene",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thinkshout/bene_media.git",
-                "reference": "deb7f363784f1c53693a7335d9f27de378c27570"
+                "reference": "a1b9d27642aebf9f7161a6d49d3d976d9652df67"
             },
             "require": {
                 "drupal/config_rewrite": "^1.1",
@@ -5108,7 +5108,7 @@
                 }
             ],
             "description": "Media related functionality and configuration for the Bene Distribution.",
-            "time": "2018-02-23T21:47:42+00:00"
+            "time": "2018-02-26T18:21:58+00:00"
         },
         {
             "name": "twig/twig",

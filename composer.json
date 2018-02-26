@@ -57,7 +57,7 @@
         "drupal/address": "~1.2",
         "commerceguys/addressing": "~1.0",
         "drupal/viewsreference": "dev-2.x#9af27ed",
-        "thinkshout/bene_media": "dev-8.x-2.x"
+        "thinkshout/bene_media": "dev-work-with-bene"
     },
     "replace": {
         "bower-asset/jquery": "*",
