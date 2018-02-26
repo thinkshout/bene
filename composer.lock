@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e88b3aa5787af15d9a2aa16891f72b0c",
+    "content-hash": "2805065282960180f2d0d0ba616272ad",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2914,7 +2914,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/picture_background_formatter",
-                "reference": "09d445a2c3a4050a88cf7ff9fae48bba55a57483"
+                "reference": "8869b7b5b311288984034bf4247266b55ed0261d"
             },
             "require": {
                 "drupal/core": "*"
@@ -2931,9 +2931,6 @@
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
                     }
-                },
-                "patches_applied": {
-                    "2948091 - Work with core media": "https://www.drupal.org/files/issues/core-media-support-2948091-2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2951,7 +2948,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/picture_background_formatter"
             },
-            "time": "2017-12-10T04:05:10+00:00"
+            "time": "2018-02-26T19:49:34+00:00"
         },
         {
             "name": "drupal/r4032login",
@@ -5249,7 +5246,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thinkshout/bene_media.git",
-                "reference": "a1b9d27642aebf9f7161a6d49d3d976d9652df67"
+                "reference": "c8781acff534afcbb2d4a815948e3238c2a75f35"
             },
             "require": {
                 "drupal/config_rewrite": "^1.1",
@@ -5289,7 +5286,7 @@
                 }
             ],
             "description": "Media related functionality and configuration for the Bene Distribution.",
-            "time": "2018-02-26T18:21:58+00:00"
+            "time": "2018-02-26T20:04:02+00:00"
         },
         {
             "name": "twig/twig",
