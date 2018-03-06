@@ -85,7 +85,7 @@ class MediaImport extends ProcessPluginBase {
     }
 
     if (empty($field_name)) {
-      $field_name = 'field_image';
+      $field_name = 'field_media_image';
     }
 
     // Save the file, return its ID.

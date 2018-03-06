@@ -105,7 +105,7 @@ process:
     source: image
     process:
       bundle: 'image'
-      image/alt: imagealt
+      field_media_image/alt: imagealt
   bene_intro: intro
   bene_content:
     plugin: entity_reference_revisions

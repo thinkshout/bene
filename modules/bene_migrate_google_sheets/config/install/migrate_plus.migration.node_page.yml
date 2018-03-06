@@ -95,7 +95,7 @@ process:
     source: headerimage
     process:
       bundle: 'image'
-      image/alt: headerimagealt
+      field_media_image/alt: headerimagealt
   bene_content:
     plugin: entity_reference_revisions
     source: content
