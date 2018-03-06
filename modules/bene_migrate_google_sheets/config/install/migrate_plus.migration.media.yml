@@ -80,7 +80,7 @@ process:
       plugin: get
       source: image_alt
   field_media_video_embed_field: video_url
-  field_document/target_id:
+  field_media_file/target_id:
     plugin: file_import
     source: document_url
   embed_code:
