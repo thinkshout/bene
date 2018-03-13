@@ -5,6 +5,7 @@ namespace Drupal\bene_core\Plugin\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
+use \Drupal\mailchimp_signup\Form\MailchimpSignupPageForm;
 
 /**
  * Provides a 'NewsletterSignupBlock' block.
@@ -42,7 +43,7 @@ class NewsletterSignupBlock extends BlockBase {
       '#options' => [
         'disabled' => $this->t('Disabled'),
         'external' => $this->t('External'),
-        'embedded' => $this->t('Embedded Form'),
+        'embedded' => $this->t('MailChimp Form'),
       ],
     ];
     $form['title'] = [
@@ -79,6 +80,31 @@ class NewsletterSignupBlock extends BlockBase {
       '#required' => TRUE,
     ];
 
+    $form['mailchimp_settings'] = [
+      '#type' => 'fieldset',
+      '#title' => $this->t('MailChimp settings'),
+      '#states' => [
+        'visible' => [
+          ':input[name="settings[style]"]' => ['value' => 'embedded'],
+        ],
+      ],
+    ];
+
+    $options = [];
+    $signups = mailchimp_signup_load_multiple();
+    foreach ($signups as $signup_key => $signup) {
+      $options[$signup_key] = $signup->title;
+    }
+    $form['mailchimp_settings']['signup_block'] = [
+      '#type' => 'select',
+      '#options' => $options,
+      '#title' => $this->t('Signup Block'),
+      '#description' => t('Select a MailChimp Signup block or <a href="/admin/config/services/mailchimp/signup/add">create a new Signup Block</a>.'),
+      '#default_value' => $this->configuration['signup_block'],
+      '#required' => TRUE,
+    ];
+
+
     return $form;
   }
 
@@ -93,6 +119,9 @@ class NewsletterSignupBlock extends BlockBase {
     $external_link_settings = $form_state->getValue('external_link_settings');
     $this->configuration['external_link'] = $external_link_settings['external_link'];
     $this->configuration['external_link_label'] = $external_link_settings['external_link_label'];
+
+    $mailchimp_settings = $form_state->getValue('mailchimp_settings');
+    $this->configuration['signup_block'] = $mailchimp_settings['signup_block'];
   }
 
   /**
@@ -100,34 +129,38 @@ class NewsletterSignupBlock extends BlockBase {
    */
   public function build() {
     $build = [];
-    switch ($this->configuration['style']) {
+    $style = $this->configuration['style'];
+
+    if ($style == 'external' || $style == 'embedded') {
+      $build['signup'] = [
+        '#type' => 'container',
+        '#weight' => 1,
+        '#attributes' => [
+          'class' => 'external-newsletter',
+        ],
+      ];
+      if ($this->configuration['title']) {
+        $build['signup']['title'] = [
+          '#type' => 'markup',
+          '#markup' => $this->configuration['title'],
+          '#prefix' => '<h4>',
+          '#suffix' => '</h4>',
+        ];
+      }
+      if ($this->configuration['signup_text']) {
+        $build['signup']['signup_text'] = [
+          '#type' => 'markup',
+          '#markup' => $this->configuration['signup_text'],
+          '#prefix' => '<p>',
+          '#suffix' => '</p>',
+        ];
+      }
+    }
+    switch ($style) {
       case 'external':
         // External link.
-        $build['external'] = [
-          '#type' => 'container',
-          '#weight' => 1,
-          '#attributes' => [
-            'class' => 'external-newsletter',
-          ],
-        ];
-        if ($this->configuration['title']) {
-          $build['external']['title'] = [
-            '#type' => 'markup',
-            '#markup' => $this->configuration['title'],
-            '#prefix' => '<h4>',
-            '#suffix' => '</h4>',
-          ];
-        }
-        if ($this->configuration['signup_text']) {
-          $build['external']['signup_text'] = [
-            '#type' => 'markup',
-            '#markup' => $this->configuration['signup_text'],
-            '#prefix' => '<p>',
-            '#suffix' => '</p>',
-          ];
-        }
         if ($this->configuration['signup_text'] || $this->configuration['title']) {
-          $build['external']['link'] = [
+          $build['signup']['link'] = [
             '#type' => 'link',
             '#title' => $this->configuration['external_link_label'],
             '#url' => Url::fromUri($this->configuration['external_link']),
@@ -137,7 +170,7 @@ class NewsletterSignupBlock extends BlockBase {
           ];
         }
         else {
-          $build['external']['link'] = [
+          $build['signup']['link'] = [
             '#type' => 'link',
             '#title' => $this->configuration['external_link_label'],
             '#url' => Url::fromUri($this->configuration['external_link']),
@@ -146,21 +179,23 @@ class NewsletterSignupBlock extends BlockBase {
         break;
 
       case 'embedded':
-        // Embedded link.
-        // TODO: Define "Embedded" display. On hold per GitHub issue #69.
-        $build = [];
-        $build['embedded'] = [
-          '#type' => 'container',
-          '#weight' => 1,
-          '#attributes' => [
-            'class' => 'embedded-newsletter',
-          ],
-        ];
+
+        // Embedded a signup block.
+        $signup_entity = $this->configuration['signup_block'];
+        $signup = mailchimp_signup_load($signup_entity);
+
+        $form = new MailchimpSignupPageForm();
+
+        $form_id = 'mailchimp_signup_subscribe_block_' . $signup->id . '_form';
+        $form->setFormID($form_id);
+        $form->setSignup($signup);
+
+        $build['signup']['form'] = \Drupal::formBuilder()->getForm($form);
+
         break;
 
       default:
         // No link.
-        $build = [];
     }
 
     return $build;
