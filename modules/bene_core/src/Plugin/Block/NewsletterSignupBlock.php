@@ -90,20 +90,50 @@ class NewsletterSignupBlock extends BlockBase {
       ],
     ];
 
-    $options = [];
-    $signups = mailchimp_signup_load_multiple();
-    foreach ($signups as $signup_key => $signup) {
-      $options[$signup_key] = $signup->title;
+    // Help the user turn on MailChimp
+    $moduleHandler = \Drupal::service('module_handler');
+    if (!$moduleHandler->moduleExists('mailchimp') || !$moduleHandler->moduleExists('mailchimp_signup')) {
+      $form['mailchimp_settings']['help_text'] = [
+        '#type' => 'markup',
+        '#markup' => 'Please <a href="/admin/modules?destination=/admin/structure/block/manage/benenewslettersignup">enable and configure MailChimp and a MailChimp Signup block</a> to begin.',
+        '#prefix' => '<p>',
+        '#suffix' => '</p>',
+      ];
     }
-    $form['mailchimp_settings']['signup_block'] = [
-      '#type' => 'select',
-      '#options' => $options,
-      '#title' => $this->t('Signup Block'),
-      '#description' => t('Select a MailChimp Signup block or <a href="/admin/config/services/mailchimp/signup/add">create a new Signup Block</a>.'),
-      '#default_value' => $this->configuration['signup_block'],
-      '#required' => TRUE,
-    ];
+    else {
 
+      // Help the User set a key.
+      $mailchimp_config = \Drupal::config('mailchimp.settings');('mailchimp.settings');
+      $key = $mailchimp_config->get('api_key');
+
+      if (!$key) {
+        $form['mailchimp_settings']['help_text'] = [
+          '#type' => 'markup',
+          '#markup' => 'Please add a <a href="/admin/config/services/mailchimp?destination=/admin/structure/block/manage/benenewslettersignup">MailChimp API</a> key and create a signup block to begin.',
+          '#prefix' => '<p>',
+          '#suffix' => '</p>',
+        ];
+      }
+      else {
+
+        // Rely on help text to encourage the user to create a signup block.
+        $options = [];
+        $signups = mailchimp_signup_load_multiple();
+
+        foreach ($signups as $signup_key => $signup) {
+          $options[$signup_key] = $signup->title;
+        }
+
+        $form['mailchimp_settings']['signup_block'] = [
+          '#type' => 'select',
+          '#options' => $options,
+          '#title' => $this->t('Signup Block'),
+          '#description' => t('Select a MailChimp Signup block or <a href="/admin/config/services/mailchimp/signup/add?destination=/admin/structure/block/manage/benenewslettersignup">create a new Signup Block</a>.'),
+          '#default_value' => $this->configuration['signup_block'],
+          '#required' => TRUE,
+        ];
+      }
+    }
 
     return $form;
   }
@@ -129,6 +159,7 @@ class NewsletterSignupBlock extends BlockBase {
    */
   public function build() {
     $build = [];
+
     $style = $this->configuration['style'];
 
     if ($style == 'external' || $style == 'embedded') {
@@ -158,6 +189,7 @@ class NewsletterSignupBlock extends BlockBase {
     }
     switch ($style) {
       case 'external':
+
         // External link.
         if ($this->configuration['signup_text'] || $this->configuration['title']) {
           $build['signup']['link'] = [
@@ -176,6 +208,7 @@ class NewsletterSignupBlock extends BlockBase {
             '#url' => Url::fromUri($this->configuration['external_link']),
           ];
         };
+
         break;
 
       case 'embedded':
