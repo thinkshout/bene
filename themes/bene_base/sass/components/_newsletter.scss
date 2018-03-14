@@ -7,10 +7,33 @@
   flex-direction: column;
   justify-content: center;
   padding: rem(12);
-  h4, p, a {
+  .mailchimp-signup-subscribe-form,
+  .mailchimp-newsletter-mergefields {
+    display: flex;
+    justify-content: center;
+  }
+  .mailchimp-newsletter-mergefields {
+    width: 75%
+  }
+  .form-actions {
+    input {
+      height: 3.125rem;
+      padding: 1rem 1.875rem;
+      margin-top: .9rem;
+    }
+  }
+  .form-item {
+    flex-grow: 1;
+    width: 30%;
+    margin: 0 10px;
+  }
+  h2, p, a {
     margin: 0 auto;
     max-width: 94%;
     text-align: center;
+  }
+  label {
+    color: $white;
   }
   p {
     color: $white;

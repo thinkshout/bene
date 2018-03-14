@@ -123,12 +123,11 @@ class NewsletterSignupBlock extends BlockBase {
         foreach ($signups as $signup_key => $signup) {
           $options[$signup_key] = $signup->title;
         }
-
         $form['mailchimp_settings']['signup_block'] = [
           '#type' => 'select',
           '#options' => $options,
           '#title' => $this->t('Signup Block'),
-          '#description' => t('Select a MailChimp Signup block or <a href="/admin/config/services/mailchimp/signup/add?destination=/admin/structure/block/manage/benenewslettersignup">create a new Signup Block</a>.'),
+          '#description' => t('Select a MailChimp Signup block or <a href="/admin/config/services/mailchimp/signup?destination=/admin/structure/block/manage/benenewslettersignup">create a new Signup Block</a>.'),
           '#default_value' => $this->configuration['signup_block'],
           '#required' => TRUE,
         ];
@@ -174,8 +173,8 @@ class NewsletterSignupBlock extends BlockBase {
         $build['signup']['title'] = [
           '#type' => 'markup',
           '#markup' => $this->configuration['title'],
-          '#prefix' => '<h4>',
-          '#suffix' => '</h4>',
+          '#prefix' => '<h2>',
+          '#suffix' => '</h2>',
         ];
       }
       if ($this->configuration['signup_text']) {
