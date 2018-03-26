@@ -22,7 +22,6 @@
         }
     ],
     "require": {
-        "php": "7.0",
         "composer/installers": "^1.2",
         "oomphinc/composer-installers-extender": "^1.1",
         "cweagans/composer-patches": "~1.0",
