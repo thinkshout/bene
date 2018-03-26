@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-       - image: thinkshout/nginx-php-fpm@sha256:e24a56b754eaac4e4292a1e162d2d20e69cac551def51c8da3b592b7f2787e4e
+       - image: thinkshout/nginx-php-fpm@sha256:4db25cbaa957873c4a454a494915d02db3469b1f763c0311180a61a9375dadaf
          environment:
            WEBROOT: /var/www/html/build/web
            GIT_EMAIL: "ci@thinkshout.com"
