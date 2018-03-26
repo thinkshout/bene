@@ -5,6 +5,10 @@
     "license": "GPL-2.0+",
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "source"
+    },
     "authors": [
         {
             "name": "ThinkShout",
