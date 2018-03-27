@@ -101,10 +101,6 @@
                 "2912618 - Hardcoded linebreaks in default address formatter":
                 "https://www.drupal.org/files/issues/hardcoded_linebreaks_in-2912618-2.patch"
             },
-            "drupal/migrate_tools": {
-                "Migrate Tools dashboard plugin manager/config deriver UI issues - https://www.drupal.org/node/2825846#comment-12080570":
-                "https://www.drupal.org/files/issues/migrate_tools_dashboard-2825846-4.patch"
-            },
             "drupal/entity_browser": {
                 "2865928 - The View widget should filter based on field settings":
                 "https://www.drupal.org/files/issues/entity-browser-view-context-2865928-14.patch",
