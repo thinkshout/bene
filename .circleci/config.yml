@@ -27,6 +27,7 @@ jobs:
             composer global require -n "consolidation/cgr"
             cgr "pantheon-systems/terminus:~1"
             cd /var/www/html
+            which patch
             composer create-project thinkshout/bene-project:dev-pantheon /var/www/html/build --stability dev --no-interaction --no-install
       - restore_cache:
           keys:
