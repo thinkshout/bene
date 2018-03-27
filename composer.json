@@ -25,7 +25,7 @@
         "composer/installers": "^1.2",
         "oomphinc/composer-installers-extender": "^1.1",
         "cweagans/composer-patches": "~1.5",
-        "drupal/core": "8.4.2",
+        "drupal/core": "8.4.5",
         "drupal/admin_toolbar": "1.20",
         "drupal/config_update": "^1.1",
         "drupal/contact_storage": "1.0-beta9",
@@ -90,8 +90,6 @@
                 "https://www.drupal.org/files/issues/2484693-47.patch",
                 "2880374 - Experimental modules should not have warnings after being installed":
                 "https://www.drupal.org/files/issues/2880374-remove-experimental-warnings-6.patch",
-                "2880445 - Config sync should not throw a warning when not being writable":
-                "https://www.drupal.org/files/issues/2880445-remove-config-write-warning-2.patch",
                 "2869592 - Disabled update module shouldn't produce a status report warning":
                 "https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch",
                 "2885441 - EntityReferenceAutocompleteWidget should define its size setting as an integer":
