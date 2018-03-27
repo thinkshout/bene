@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "01c570e1097c50d187f94b5b2fb494da",
+    "content-hash": "7e6e83badf39b78ab13c754509c7c2ca",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1291,8 +1291,7 @@
                     "2880445 - Config sync should not throw a warning when not being writable": "https://www.drupal.org/files/issues/2880445-remove-config-write-warning-2.patch",
                     "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch",
                     "2885441 - EntityReferenceAutocompleteWidget should define its size setting as an integer": "https://www.drupal.org/files/issues/2885441-2.patch",
-                    "2786577 - Improve the Views integration for DateRange fields": "https://www.drupal.org/files/issues/2786577-184-8-3-x-test-do-not-test.patch",
-                    "2626716 - Edit Summary link not showing if Help Text is set": "https://www.drupal.org/files/issues/edit-summary-not-showing-11411975-24.patch"
+                    "2786577 - Improve the Views integration for DateRange fields": "https://www.drupal.org/files/issues/2786577-184-8-3-x-test-do-not-test.patch"
                 }
             },
             "autoload": {
