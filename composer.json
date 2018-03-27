@@ -5,10 +5,6 @@
     "license": "GPL-2.0+",
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "config": {
-        "sort-packages": true,
-        "preferred-install": "source"
-    },
     "authors": [
         {
             "name": "ThinkShout",
@@ -29,7 +25,7 @@
         "composer/installers": "^1.2",
         "oomphinc/composer-installers-extender": "^1.1",
         "cweagans/composer-patches": "~1.5",
-        "drupal/core": "8.4.3",
+        "drupal/core": "8.4.2",
         "drupal/admin_toolbar": "1.20",
         "drupal/config_update": "^1.1",
         "drupal/contact_storage": "1.0-beta9",
@@ -101,7 +97,9 @@
                 "2885441 - EntityReferenceAutocompleteWidget should define its size setting as an integer":
                 "https://www.drupal.org/files/issues/2885441-2.patch",
                 "2786577 - Improve the Views integration for DateRange fields":
-                "https://www.drupal.org/files/issues/2786577-184-8-3-x-test-do-not-test.patch"
+                "https://www.drupal.org/files/issues/2786577-184-8-3-x-test-do-not-test.patch",
+                "2626716 - Edit Summary link not showing if Help Text is set":
+                "https://www.drupal.org/files/issues/edit-summary-not-showing-11411975-24.patch"
             },
             "drupal/address": {
                 "2912618 - Hardcoded linebreaks in default address formatter":
