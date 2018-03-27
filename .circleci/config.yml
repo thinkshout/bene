@@ -37,7 +37,7 @@ jobs:
             cd /var/www/html/build
             composer config repositories.bene path /var/www/html/bene
             composer require "drupal/bene:*"
-            composer install -n --prefer-dist
+            composer install -nv --prefer-dist
       - save_cache:
           key: composer-v3-{{ checksum "composer.lock" }}
           paths:
