@@ -99,7 +99,7 @@
                 "2786577 - Improve the Views integration for DateRange fields":
                 "https://www.drupal.org/files/issues/2786577-184-8-3-x-test-do-not-test.patch",
                 "2626716 - Edit Summary link not showing if Help Text is set":
-                "https://www.drupal.org/files/issues/edit-summary-not-showing-11411975-24.patch"
+                "https://www.drupal.org/files/issues/2626716-29.patch"
             },
             "drupal/address": {
                 "2912618 - Hardcoded linebreaks in default address formatter":
