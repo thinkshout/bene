@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "826fed1c1100925e68b900ded0b6c624",
+    "content-hash": "5406ef46190a7ca980a6463becf4db9d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1006,17 +1006,17 @@
         },
         {
             "name": "drupal/config_update",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/config_update",
-                "reference": "8.x-1.4"
+                "reference": "8.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_update-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "0de82ba4aa7caf054711ab16ad038765215a489d"
+                "url": "https://ftp.drupal.org/files/projects/config_update-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "2f7ae5f90b1c0ab8edf84680d2651e81fab6a126"
             },
             "require": {
                 "drupal/core": "*"
@@ -1027,8 +1027,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1505755744",
+                    "version": "8.x-1.5",
+                    "datestamp": "1512587912",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1037,7 +1037,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -1121,16 +1121,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.4.2",
+            "version": "8.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "68d25c07b7306340900abc4020c38683a817f0eb"
+                "reference": "44a857df6f7ffd063cffed9a41767cdc50dd7474"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/68d25c07b7306340900abc4020c38683a817f0eb",
-                "reference": "68d25c07b7306340900abc4020c38683a817f0eb",
+                "url": "https://api.github.com/repos/drupal/core/zipball/44a857df6f7ffd063cffed9a41767cdc50dd7474",
+                "reference": "44a857df6f7ffd063cffed9a41767cdc50dd7474",
                 "shasum": ""
             },
             "require": {
@@ -1286,13 +1286,12 @@
             "type": "drupal-core",
             "extra": {
                 "patches_applied": {
-                    "Telephone field with 5 digits or less fatally breaks formatter": "https://www.drupal.org/files/issues/2484693-47.patch",
+                    "2484693 - Telephone field with 5 digits or less fatally breaks formatter": "https://www.drupal.org/files/issues/2484693-54.patch",
                     "2880374 - Experimental modules should not have warnings after being installed": "https://www.drupal.org/files/issues/2880374-remove-experimental-warnings-6.patch",
-                    "2880445 - Config sync should not throw a warning when not being writable": "https://www.drupal.org/files/issues/2880445-remove-config-write-warning-2.patch",
                     "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch",
                     "2885441 - EntityReferenceAutocompleteWidget should define its size setting as an integer": "https://www.drupal.org/files/issues/2885441-2.patch",
                     "2786577 - Improve the Views integration for DateRange fields": "https://www.drupal.org/files/issues/2786577-184-8-3-x-test-do-not-test.patch",
-                    "2626716 - Edit Summary link not showing if Help Text is set": "https://www.drupal.org/files/issues/edit-summary-not-showing-11411975-24.patch"
+                    "2626716 - Edit Summary link not showing if Help Text is set": "https://www.drupal.org/files/issues/2626716-29.patch"
                 }
             },
             "autoload": {
@@ -1316,7 +1315,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2017-11-03T13:20:16+00:00"
+            "time": "2018-02-20T21:35:13+00:00"
         },
         {
             "name": "drupal/crop",
@@ -2946,7 +2945,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/picture_background_formatter"
             },
-            "time": "2017-10-27 21:09:10"
+            "time": "2017-10-27T21:09:10+00:00"
         },
         {
             "name": "drupal/r4032login",
@@ -3020,7 +3019,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/r4032login"
             },
-            "time": "2017-02-08 04:20:19"
+            "time": "2017-02-08T04:20:19+00:00"
         },
         {
             "name": "drupal/redirect",
@@ -3363,7 +3362,7 @@
                 "source": "http://cgit.drupalcode.org/viewsreference",
                 "issues": "http://drupal.org/project/issues/viewsreference"
             },
-            "time": "2017-10-02 01:29:04"
+            "time": "2017-10-02T01:29:04+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -6074,7 +6073,7 @@
                 "test",
                 "web"
             ],
-            "time": "2017-11-13 17:54:21"
+            "time": "2017-11-13T17:54:21+00:00"
         },
         {
             "name": "drupal/drupal-extension",
@@ -6135,7 +6134,7 @@
                 "test",
                 "web"
             ],
-            "time": "2017-09-13 19:53:22"
+            "time": "2017-09-13T19:53:22+00:00"
         },
         {
             "name": "fabpot/goutte",
