@@ -213,17 +213,20 @@ class NewsletterSignupBlock extends BlockBase {
       case 'embedded':
 
         // Embedded a signup block.
-        $signup_entity = $this->configuration['signup_block'];
-        $signup = mailchimp_signup_load($signup_entity);
+        $moduleHandler = \Drupal::service('module_handler');
+        if ($moduleHandler->moduleExists('mailchimp') && $moduleHandler->moduleExists('mailchimp_signup')) {
 
-        $form = new MailchimpSignupPageForm();
+          $signup_entity = $this->configuration['signup_block'];
+          $signup = mailchimp_signup_load($signup_entity);
 
-        $form_id = 'mailchimp_signup_subscribe_block_' . $signup->id . '_form';
-        $form->setFormID($form_id);
-        $form->setSignup($signup);
+          $form = new MailchimpSignupPageForm();
 
-        $build['signup']['form'] = \Drupal::formBuilder()->getForm($form);
+          $form_id = 'mailchimp_signup_subscribe_block_' . $signup->id . '_form';
+          $form->setFormID($form_id);
+          $form->setSignup($signup);
 
+          $build['signup']['form'] = \Drupal::formBuilder()->getForm($form);
+        }
         break;
 
       default:
