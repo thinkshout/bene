@@ -129,7 +129,7 @@ class NewsletterSignupBlock extends BlockBase {
           '#title' => $this->t('Signup Block'),
           '#description' => t('Select a MailChimp Signup block or <a href="/admin/config/services/mailchimp/signup?destination=/admin/structure/block/manage/benenewslettersignup">create a new Signup Block</a>.'),
           '#default_value' => $this->configuration['signup_block'],
-          '#required' => TRUE,
+          '#required' => FALSE,
         ];
       }
     }
