@@ -5,7 +5,7 @@ namespace Drupal\bene_core\Plugin\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
-use \Drupal\mailchimp_signup\Form\MailchimpSignupPageForm;
+use Drupal\mailchimp_signup\Form\MailchimpSignupPageForm;
 
 /**
  * Provides a 'NewsletterSignupBlock' block.
@@ -90,7 +90,7 @@ class NewsletterSignupBlock extends BlockBase {
       ],
     ];
 
-    // Help the user turn on MailChimp
+    // Help the user turn on MailChimp.
     $moduleHandler = \Drupal::service('module_handler');
     if (!$moduleHandler->moduleExists('mailchimp') || !$moduleHandler->moduleExists('mailchimp_signup')) {
       $form['mailchimp_settings']['help_text'] = [
