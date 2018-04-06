@@ -129,12 +129,26 @@ class NewsletterSignupBlock extends BlockBase {
           '#title' => $this->t('Signup Block'),
           '#description' => t('Select a MailChimp Signup block or <a href="/admin/config/services/mailchimp/signup?destination=/admin/structure/block/manage/benenewslettersignup">create a new Signup Block</a>.'),
           '#default_value' => $this->configuration['signup_block'],
-          '#required' => TRUE,
+          '#required' => FALSE,
         ];
       }
     }
 
     return $form;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function validateConfigurationForm(array &$form, FormStateInterface $form_state) {
+    parent::validateConfigurationForm($form, $form_state);
+
+    $mailchimp_settings = $form_state->getValue('mailchimp_settings');
+    $has_value = $mailchimp_settings['signup_block'];
+
+    if ($form_state->getValue('style') == 'embedded' && !$has_value) {
+      $form_state->setErrorByName('mailchimp_settings', t('Please create a Sign Up form to use MailChimp.'));
+    }
   }
 
   /**
@@ -237,5 +251,4 @@ class NewsletterSignupBlock extends BlockBase {
 
     return $build;
   }
-
 }
