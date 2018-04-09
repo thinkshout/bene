@@ -118,19 +118,38 @@ class NewsletterSignupBlock extends BlockBase {
 
         // Rely on help text to encourage the user to create a signup block.
         $options = [];
-        $signups = mailchimp_signup_load_multiple();
+        $signup_blocks = mailchimp_signup_load_multiple();
+        $default_signup_block = '';
 
-        foreach ($signups as $signup_key => $signup) {
+        foreach ($signup_blocks as $signup_key => $signup) {
           $options[$signup_key] = $signup->title;
+          if ($this->configuration['signup_block'] == $signup_key) {
+            $default_signup_block = $this->configuration['signup_block'];
+          }
         }
-        $form['mailchimp_settings']['signup_block'] = [
-          '#type' => 'select',
-          '#options' => $options,
-          '#title' => $this->t('Signup Block'),
-          '#description' => t('Select a MailChimp Signup block or <a href="/admin/config/services/mailchimp/signup?destination=/admin/structure/block/manage/benenewslettersignup">create a new Signup Block</a>.'),
-          '#default_value' => $this->configuration['signup_block'],
-          '#required' => FALSE,
-        ];
+        if ($options) {
+          $form['mailchimp_settings']['signup_block'] = [
+            '#type'          => 'select',
+            '#options'       => $options,
+            '#title'         => $this->t('Signup Block'),
+            '#description'   => $this->t('Select a MailChimp signup block or <a href="/admin/config/services/mailchimp/signup?destination=/admin/structure/block/manage/benenewslettersignup">create a new signup block</a>.'),
+            '#default_value' => $default_signup_block,
+            '#required'      => FALSE,
+            '#states'        => [
+              'required' => [
+                ':input[name="settings[style]"]' => ['value' => 'embedded'],
+              ],
+            ],
+          ];
+        }
+        else {
+          $form['mailchimp_settings']['signup_block_warning'] = [
+            '#type' => 'markup',
+            '#markup' => $this->t('To use the MailChimp form style you will need to <a href="/admin/config/services/mailchimp/signup?destination=/admin/structure/block/manage/benenewslettersignup">create a new MailChimp signup block</a> and return to this page to select it.'),
+            '#prefix' => '<p>',
+            '#suffix' => '</p>',
+          ];
+        }
       }
     }
 
@@ -147,7 +166,7 @@ class NewsletterSignupBlock extends BlockBase {
     $has_value = $mailchimp_settings['signup_block'];
 
     if ($form_state->getValue('style') == 'embedded' && !$has_value) {
-      $form_state->setErrorByName('mailchimp_settings', t('Please create a Sign Up form to use MailChimp.'));
+      $form_state->setErrorByName('mailchimp_settings', t('A valid MailChimp signup block is required, please create one or choose a different style.'));
     }
   }
 
@@ -251,4 +270,5 @@ class NewsletterSignupBlock extends BlockBase {
 
     return $build;
   }
+
 }
