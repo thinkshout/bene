@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9af5b73bf03740a004aeec8a8499141a",
+    "content-hash": "1e4b1c42459be3878292bd2dd78143fe",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1089,16 +1089,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.4.6",
+            "version": "8.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "f439a43c7da1df8d16067f797c0bc3498eb4c699"
+                "reference": "3fed96d0c2d9c922c6ec2e4cbbfdf2d50f4c9878"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/f439a43c7da1df8d16067f797c0bc3498eb4c699",
-                "reference": "f439a43c7da1df8d16067f797c0bc3498eb4c699",
+                "url": "https://api.github.com/repos/drupal/core/zipball/3fed96d0c2d9c922c6ec2e4cbbfdf2d50f4c9878",
+                "reference": "3fed96d0c2d9c922c6ec2e4cbbfdf2d50f4c9878",
                 "shasum": ""
             },
             "require": {
@@ -1283,7 +1283,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2018-03-27T10:03:10+00:00"
+            "time": "2018-04-25T15:39:04+00:00"
         },
         {
             "name": "drupal/crop",
@@ -6128,12 +6128,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jhedstrom/DrupalDriver.git",
-                "reference": "acf9c1bd9588fb9d1e43f9848b79339a27f32675"
+                "reference": "2febeef81825bd87bd400ac8484096046621bdea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jhedstrom/DrupalDriver/zipball/acf9c1bd9588fb9d1e43f9848b79339a27f32675",
-                "reference": "acf9c1bd9588fb9d1e43f9848b79339a27f32675",
+                "url": "https://api.github.com/repos/jhedstrom/DrupalDriver/zipball/2febeef81825bd87bd400ac8484096046621bdea",
+                "reference": "2febeef81825bd87bd400ac8484096046621bdea",
                 "shasum": ""
             },
             "require": {
@@ -6179,7 +6179,7 @@
                 "test",
                 "web"
             ],
-            "time": "2018-03-21T21:06:17+00:00"
+            "time": "2018-04-18T17:16:48+00:00"
         },
         {
             "name": "drupal/drupal-extension",
