@@ -15,6 +15,7 @@ dependencies:
   - node
   - path
   - picture_background_formatter
+  - simple_sitemap
   - text
   - user
   - views

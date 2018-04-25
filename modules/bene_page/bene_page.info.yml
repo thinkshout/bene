@@ -23,6 +23,7 @@ dependencies:
   - picture_background_formatter
   - rdf
   - responsive_image
+  - simple_sitemap
   - text
   - user
   - video_embed_field

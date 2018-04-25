@@ -22,6 +22,7 @@ dependencies:
   - pathauto
   - picture_background_formatter
   - search
+  - simple_sitemap
   - text
   - user
   - views
