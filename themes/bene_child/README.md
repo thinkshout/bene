@@ -3,7 +3,10 @@
 Bene_child can be found in /new-project-name/web/profiles/contrib/bene/themes/bene_child where new-project-name is your project.
 
 ## Setup
-- Update `Rakefile` to have the correct site path
+- Update `Rakefile` to have the correct site path.
+  For example, the line in the Rakefile should read
+  `system 'browser-sync start --proxy "https://web.bene-test.localhost" --files "css/*.css" --no-inject-changes'`
+  if your site is named bene-test
 - Run `rake install` to install dependencies
 
 ## Compiling assets
