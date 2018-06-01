@@ -1,5 +1,7 @@
 # Bene Child
 
+Bene_child can be found in /new-project-name/web/profiles/contrib/bene/themes/bene_child where new-project-name is your project.
+
 ## Setup
 - Update `Rakefile` to have the correct site path
 - Run `rake install` to install dependencies
