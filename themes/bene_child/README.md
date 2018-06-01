@@ -8,6 +8,9 @@ Bene_child can be found in /new-project-name/web/profiles/contrib/bene/themes/be
   `system 'browser-sync start --proxy "https://web.bene-test.localhost" --files "css/*.css" --no-inject-changes'`
   if your site is named bene-test
 - Run `rake install` to install dependencies
+- Log in using `drush uli --no-browser`
+- Go to `https://localhost:3000/admin/appearance` and remove Bartik.
+- Set `Bene Child` as the default theme.
 
 ## Compiling assets
 This project uses Browsersync, Sass and Browserify
