@@ -1,8 +1,8 @@
 // Default Styles (Mobile First!)
 .external-newsletter {
   align-items: center;
-  background-color: $blue;
-  color: $white;
+  background-color: $color-theme-primary;
+  color: $color-text-inverse;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,14 +33,14 @@
     text-align: center;
   }
   label {
-    color: $white;
+    color: $color-text-inverse;
   }
   p {
-    color: $white;
+    color: $color-text-inverse;
     margin: rem(6) 0;
   }
   a {
-    color: $black;
+    color: $color-text-primary;
     &:after {
       @include all-transition;
       content: ' →';
@@ -53,7 +53,7 @@
     }
   }
   a.button {
-    background-color: $white;
+    background-color: $color-background-default;
     font-size: rem(12);
     font-weight: 600;
     padding: rem(15) rem(20);
@@ -62,7 +62,7 @@
       content: none;
     }
     &:hover {
-      background-color: lighten($bright-blue, 20%);
+      background-color: lighten($color-theme-primary-bright, 20%);
     }
   }
 }

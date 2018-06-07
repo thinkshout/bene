@@ -17,7 +17,7 @@ $ns-arrow_color: $ns-gray !default;
 // Style the dropdown
 .nice-select {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background-color: $dark-grey;
+  background-color: $color-background-darker;
   border-radius: $ns-input_border_radius;
   border: none;
   box-sizing: border-box;
@@ -40,7 +40,7 @@ $ns-arrow_color: $ns-gray !default;
   white-space: nowrap;
   width: 100%;
   .current {
-    color: $white;
+    color: $color-text-inverse;
   }
 
   // Arrow
@@ -74,7 +74,7 @@ $ns-arrow_color: $ns-gray !default;
   }
   &.disabled {
     border-color: lighten($ns-gray_light, 2%);
-    color: $white;
+    color: $color-text-inverse;
     pointer-events: none;
     &:after {
       border-color: lighten($ns-arrow_color, 20%);

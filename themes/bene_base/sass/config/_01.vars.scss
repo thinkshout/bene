@@ -14,6 +14,25 @@ $bright-blue: $soft-cyan;
 $strong-cyan: #129FB5;
 $blue: $strong-cyan;
 
+
+/*
+ * Second-level color variables named with functional names.
+ * These are the variables we use throughout the sass files.
+ */
+$color-theme-primary: $strong-cyan;
+$color-theme-primary-bright: $soft-cyan;
+$color-text-primary: $black;
+$color-text-secondary: $dark-grey;
+$color-text-placeholder: $placeholder-grey;
+$color-text-medium-dark: $medium-grey;
+$color-text-inverse: $white;
+$color-text-light: $light-grey;
+$color-background-default: $white;
+$color-background-lightest: $light-grey;
+$color-background-darker: $dark-grey;
+$color-background-darkest: $black;
+
+
 /**
   * Fonts
   * Open+Sans:300,300i,400,600,700,800

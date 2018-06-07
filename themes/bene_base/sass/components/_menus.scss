@@ -18,7 +18,7 @@
     width: 100%;
     z-index: 9999;
     span {
-      background-color: $bright-blue;
+      background-color: $color-theme-primary-bright;
       display: block;
       font-size: 0px;
       height: 6px;
@@ -30,7 +30,7 @@
       z-index: 9999;
       &:before,
       &:after {
-        background: $bright-blue;
+        background: $color-theme-primary-bright;
         content: '';
         height: 100%;
         left: 0;
@@ -45,10 +45,10 @@
       }
     }
     &:hover span {
-      background: $blue;
+      background: $color-theme-primary;
       &:before,
       &:after {
-        background: $blue;
+        background: $color-theme-primary;
       }
     }
   }
@@ -57,7 +57,7 @@
       background-color: transparent;
       &:before,
       &:after {
-        background: $bright-blue;
+        background: $color-theme-primary-bright;
         transform: rotate(45deg) translateY(0);
         transition: transform 0.3s;
       }
@@ -75,7 +75,7 @@
   .region-primary-nav {
     display: flex;
     flex-direction: column-reverse;
-    background-color: $black;
+    background-color: $color-background-darkest;
     left: 0;
     position: absolute;
     top: rem(101);
@@ -83,8 +83,8 @@
     z-index: 20;
   }
   .menu a {
-    border-bottom: 1px solid $bright-blue;
-    color: $bright-blue;
+    border-bottom: 1px solid $color-theme-primary-bright;
+    color: $color-theme-primary-bright;
     display: inline-block;
     font-size: rem(18);
     font-weight: 600;
@@ -104,7 +104,7 @@
       width: rem(9);
     }
     &.is-active {
-      color: $white;
+      color: $color-text-inverse;
     }
   }
 }
@@ -118,11 +118,11 @@
     }
   }
   &:last-child a {
-    background-color: $blue;
-    color: $black;
+    background-color: $color-theme-primary;
+    color: $color-text-primary;
     font-weight: 600;
     &.is-active {
-      color: $white;
+      color: $color-text-inverse;
     }
   }
 }
@@ -152,14 +152,14 @@
   }
   .desktop-nav .menu--utility .menu-item {
     a {
-      color: $medium-grey;
+      color: $color-text-medium-dark;
       font-size: rem(14);
       &:hover, &:focus, &.is-active {
-        color: $blue;
+        color: $color-theme-primary;
       }
     }
     &:last-child a {
-      @include button($white,$bright-blue);
+      @include button($color-text-inverse, $color-theme-primary-bright);
       font-size: rem(12);
       font-weight: 700;
       letter-spacing: 0;
@@ -169,12 +169,12 @@
   }
   .desktop-nav .menu--main .menu-item {
     a {
-      color: $black;
+      color: $color-text-primary;
       font-weight: 700;
       letter-spacing: rem(0.5);
       text-transform: uppercase;
       &:hover, &:focus, &.is-active {
-        color: $blue;
+        color: $color-theme-primary;
       }
       &.is-active {
         cursor: default;

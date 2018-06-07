@@ -43,7 +43,7 @@ h4 {
 
 p,
 p.standard {
-  color: $black;
+  color: $color-text-primary;
   font-size: rem(16);
   line-height: rem(31);
   font-weight: 400;
@@ -51,22 +51,22 @@ p.standard {
 
 a {
   @include default-transition;
-  color: $blue;
+  color: $color-theme-primary;
   cursor: pointer;
   text-decoration: none;
   &:hover,
   &:active {
-    color: lighten($blue, 20%);
+    color: lighten($color-theme-primary, 20%);
   }
 }
 
 table a,
 li a,
 p a {
-  color: $blue;
+  color: $color-theme-primary;
   &:hover,
   &:active {
-    color: lighten($blue, 20%);
+    color: lighten($color-theme-primary, 20%);
   }
 }
 
@@ -83,9 +83,9 @@ a.button {
     padding-bottom: rem(14);
     padding-left: rem(32);
     text-indent: rem(-20);
-    color: $black;
+    color: $color-text-primary;
     &:before {
-      color: $black;
+      color: $color-text-primary;
       content: "•";
       font-size: rem(16);
       line-height: 1;
@@ -102,17 +102,17 @@ ol {
     padding-left: rem(6);
     line-height: 1.4;
     font-size: rem(16);
-    color: $black;
+    color: $color-text-primary;
   }
 }
 
 table, table.tablesaw {
-  border: 1px solid $light-grey;
+  border: 1px solid $color-text-light;
   margin: rem(24) 0;
   table-layout: auto;
   th, tr, td, tr:first-child th {
     border: none;
-    color: $medium-grey;
+    color: $color-text-medium-dark;
     font-size: rem(14);
     font-weight: 400;
     padding: rem(18) rem(42);
@@ -124,15 +124,15 @@ table, table.tablesaw {
   th, tr:first-child th {
     font-weight: 700;
     text-transform: uppercase;
-    color: $medium-grey;
+    color: $color-text-medium-dark;
     font-size: rem(14);
     margin: 0;
   }
   tr {
-    background-color: $white;
+    background-color: $color-background-default;
   }
   th,tr:nth-of-type(2n) {
-    background-color: $light-grey;
+    background-color: $color-background-lightest;
   }
 }
 
@@ -152,7 +152,7 @@ fieldset {
   legend {
     font-size: rem(30);
     font-weight: 700;
-    color: $dark-grey;
+    color: $color-text-secondary;
   }
 }
 

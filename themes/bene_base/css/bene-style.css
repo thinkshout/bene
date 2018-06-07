@@ -6,6 +6,10 @@ html {
   box-sizing: inherit; }
 
 /* Colors */
+/*
+ * Second-level color variables named with functional names.
+ * These are the variables we use throughout the sass files.
+ */
 /**
   * Fonts
   * Open+Sans:300,300i,400,600,700,800
@@ -372,9 +376,9 @@ fieldset {
     .page-node-type-news .block-system-main-block .field--name-bene-event-location {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 65.88078%;
-      margin-left: 17.05961%; }
+      margin-right: 2.3576515979%;
+      width: 65.8807828007%;
+      margin-left: 17.0596085997%; }
       .page-node-type-page .block-system-main-block .field--name-bene-intro:last-child,
       .page-node-type-page .field--name-bene-content .paragraph--type--rich-text:last-child,
       .page-node-type-page .block-system-main-block .field--name-bene-event-date-range:last-child,
@@ -469,9 +473,9 @@ fieldset {
     .page-node-type-listing-page .views-element-container {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 82.94039%;
-      margin-left: 8.5298%; }
+      margin-right: 2.3576515979%;
+      width: 82.9403914003%;
+      margin-left: 8.5298042998%; }
       .page-node-type-listing-page .views-element-container:last-child {
         margin-right: 0; }
       .page-node-type-listing-page .views-element-container .view-bene-events {
@@ -887,9 +891,9 @@ input[type='submit'] {
   .region-content form {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-left: 25.58941%;
+    margin-right: 2.3576515979%;
+    width: 48.821174201%;
+    margin-left: 25.5894128995%;
     float: none;
     padding: 1rem; }
     .region-content form:last-child {
@@ -1145,7 +1149,7 @@ input[type='submit'] {
       background-color: #a8e7f1; }
 
 .nice-select {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: #5C5B5B;
   border-radius: 0px;
   border: none;
