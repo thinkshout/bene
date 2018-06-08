@@ -1,30 +1,30 @@
 // Default Styles (Mobile First!)
 input[type="search"], textarea {
   -webkit-appearance: none;
-  //background-color: $white;
+  //background-color: $color-background-default;
   border-radius: 0;
   border: none;
   box-sizing: border-box;
-  color: $black;
+  color: $color-text-primary;
   font-size: rem(16);
   font-weight: 600;
   height: rem(50);
   padding: rem(18) rem(50) rem(18) rem(22);
   width: 100%;
   &::-webkit-input-placeholder {
-    color: $placeholder-grey;
+    color: $color-text-placeholder;
   }
   &::-moz-placeholder {
-    color: $placeholder-grey;
+    color: $color-text-placeholder;
   }
   &:-ms-input-placeholder {
-    color: $placeholder-grey;
+    color: $color-text-placeholder;
   }
   &:-moz-placeholder {
-    color: $placeholder-grey;
+    color: $color-text-placeholder;
   }
   &:focus {
-    outline: 1px solid $light-grey;
+    outline: 1px solid $color-text-light;
   }
 }
 
@@ -34,7 +34,7 @@ input[type="search"], textarea {
     display: none;
   }
   label {
-    color: $dark-grey;
+    color: $color-text-secondary;
     display: inline-block;
     font-size: rem(18);
     margin-bottom: rem(8);
@@ -48,7 +48,7 @@ input[type="search"], textarea {
     &::before {
       @include default-transition;
       border-radius: rem(1);
-      border: 1px solid $dark-grey;
+      border: 1px solid $color-text-secondary;
       color: transparent;
       content: "✓";
       display: inline-block;
@@ -69,19 +69,19 @@ input[type="search"], textarea {
     }
   }
   input[type="checkbox"]:checked + label::before {
-    color: $dark-grey;
+    color: $color-text-secondary;
     text-shadow: 1px 1px 1px rgba(240, 240, 240, 0.5);
   }
 }
 
 label {
-  color: $dark-grey;
+  color: $color-text-secondary;
   font-weight: 600;
   margin-bottom: rem(24);
 }
 
 input:focus {
-  outline-color: $light-grey;
+  outline-color: $color-text-light;
 }
 
 input[type='text'],
@@ -93,25 +93,25 @@ textarea {
   -webkit-appearance: none;
   background-color: white;
   border-radius: rem(3);
-  border: 1px solid $light-grey;
+  border: 1px solid $color-text-light;
   box-sizing: border-box;
-  color: $black;
+  color: $color-text-primary;
   font-size: rem(16);
   font-weight: 600;
   height: rem(50);
   padding: rem(18) rem(50) rem(18) rem(22);
   width: 100%;
   &::-webkit-input-placeholder {
-    color: $placeholder-grey;
+    color: $color-text-placeholder;
   }
   &::-moz-placeholder {
-    color: $placeholder-grey;
+    color: $color-text-placeholder;
   }
   &:-ms-input-placeholder {
-    color: $placeholder-grey;
+    color: $color-text-placeholder;
   }
   &:-moz-placeholder {
-    color: $placeholder-grey;
+    color: $color-text-placeholder;
   }
   &:focus {
     outline: none;
@@ -127,7 +127,7 @@ textarea {
 }
 
 input[type='submit'] {
-  @include button($white,$bright-blue);
+  @include button($color-text-inverse, $color-theme-primary-bright);
   border: none;
 }
 

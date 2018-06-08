@@ -54,7 +54,7 @@
 }
 
 /* Buttons */
-@mixin button($color: $white, $bgcolor: $black) {
+@mixin button($color: $color-text-inverse, $bgcolor: $color-background-darkest) {
   @include transition(background-color 0.3s linear,color 0.3s linear);
   background-color: $bgcolor;
   border-radius: rem(3);
@@ -72,7 +72,7 @@
   }
 }
 
-@mixin thick_gradient($direction: to bottom, $color: $white) {
+@mixin thick_gradient($direction: to bottom, $color: $color-background-default) {
   background-image: linear-gradient($direction,
     rgba($color, 1.0) 0%,
     rgba($color, 0.95) 10%,
@@ -90,7 +90,7 @@
   width: 100%;
 }
 
-@mixin thin_gradient($direction: to bottom, $color: $white) {
+@mixin thin_gradient($direction: to bottom, $color: $color-background-default) {
   background-image: linear-gradient($direction,
     rgba($color, 1.0) 0%,
     rgba($color, 1.0) 5%,

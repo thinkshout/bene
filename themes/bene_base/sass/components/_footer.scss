@@ -3,11 +3,11 @@
 
   .menu {
     a {
-      color: $black;
+      color: $color-text-primary;
       font-size: rem(14);
       font-weight: 600;
       &:hover, &:focus, &.is-active {
-        color: $blue;
+        color: $color-theme-primary;
       }
     }
   }
