@@ -126,7 +126,7 @@ textarea {
 }
 
 input[type='submit'] {
-  @include button();
+  @include button;
   background-color: var(--color-theme-primary-bright);
   color: var(--color-text-inverse);
   &:hover {

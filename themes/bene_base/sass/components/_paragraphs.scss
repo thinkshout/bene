@@ -112,7 +112,7 @@
   .field--type-link {
     z-index: 10;
     a {
-      @include button();
+      @include button;
       color: var(--color-text-inverse);
       background-color: var(--color-theme-primary-bright);
       &:hover {

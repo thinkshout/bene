@@ -1,6 +1,7 @@
 :root {
   --color-theme-primary: #129FB5;
   --color-theme-primary-darken20: darken(#129FB5, 20%);
+  --color-theme-primary-lighten20: lighten(#129FB5, 20%);
   --color-theme-primary-bright: #50CFE3;
   --color-theme-primary-bright-darken20: darken(#50CFE3, 20%);
   --color-theme-primary-bright-lighten20: lighten(#50CFE3, 20%);
@@ -16,8 +17,7 @@
   --color-background-darkest: black;
 
   --social-icon-color: #50CFE3;
-  --social-icon-color-darken20: darken(#50CFE3,20%);
-  --social-icon-size: 40;
+  --social-icon-color-darken20: #1C9DB1; // darken(#50CFE3, 20%);
 }
 
 //-- VENDOR

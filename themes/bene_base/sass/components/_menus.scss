@@ -159,7 +159,7 @@
       }
     }
     &:last-child a {
-      @include button();
+      @include button;
       color: var(--color-text-inverse);
       background-color: var(--color-theme-primary-bright);
       &:hover {

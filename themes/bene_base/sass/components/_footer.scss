@@ -41,12 +41,12 @@
       background-size: 62% 62%;
       border-radius: 50%;
       display: inline-block;
-      height: var(--social-icon-size);
+      height: rem($social-icon-size); // var(--social-icon-size);
       margin-bottom: rem(10);
       margin-left: rem(10);
       position: relative;
       text-indent: -9999px;
-      width: var(--social-icon-size);
+      width: rem($social-icon-size); // var(--social-icon-size);
       &:hover, &:focus {
         background-color: var(--social-icon-color-darken20);
       }
