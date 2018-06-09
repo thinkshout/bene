@@ -54,11 +54,9 @@
 }
 
 /* Buttons */
-@mixin button($color: $color-text-inverse, $bgcolor: $color-background-darkest) {
+@mixin button() {
   @include transition(background-color 0.3s linear,color 0.3s linear);
-  background-color: $bgcolor;
   border-radius: rem(3);
-  color: $color;
   font-weight: 800;
   display: inline-block;
   font-size: rem(16);
@@ -67,9 +65,6 @@
   padding: rem(20) rem(30);
   position: relative;
   text-transform: uppercase;
-  &:hover {
-    background-color: darken($bgcolor, 20%);
-  }
 }
 
 @mixin thick_gradient($direction: to bottom, $color: $color-background-default) {

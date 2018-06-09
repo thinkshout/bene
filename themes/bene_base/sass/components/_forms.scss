@@ -126,18 +126,9 @@ textarea {
 }
 
 input[type='submit'] {
-  @include transition(background-color 0.3s linear,color 0.3s linear);
+  @include button();
   background-color: var(--color-theme-primary-bright);
-  border-radius: rem(3);
   color: var(--color-text-inverse);
-  font-weight: 800;
-  display: inline-block;
-  font-size: rem(16);
-  letter-spacing: 0.1rem;
-  line-height: 1;
-  padding: rem(20) rem(30);
-  position: relative;
-  text-transform: uppercase;
   &:hover {
     background-color: var(--color-theme-primary-bright-darken20);
   }

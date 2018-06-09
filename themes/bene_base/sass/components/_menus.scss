@@ -159,19 +159,9 @@
       }
     }
     &:last-child a {
-      // @include button(var(--color-text-inverse), var(--color-theme-primary-bright));
-      @include transition(background-color 0.3s linear,color 0.3s linear);
-      background-color: var(--color-theme-primary-bright);
-      border-radius: rem(3);
+      @include button();
       color: var(--color-text-inverse);
-      font-weight: 800;
-      display: inline-block;
-      font-size: rem(16);
-      letter-spacing: 0.1rem;
-      line-height: 1;
-      padding: rem(20) rem(30);
-      position: relative;
-      text-transform: uppercase;
+      background-color: var(--color-theme-primary-bright);
       &:hover {
         background-color: var(--color-theme-primary-bright-darken20);
       }
