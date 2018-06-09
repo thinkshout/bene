@@ -3,11 +3,11 @@
 
   .menu {
     a {
-      color: $color-text-primary;
+      color: var(--color-text-primary);
       font-size: rem(14);
       font-weight: 600;
       &:hover, &:focus, &.is-active {
-        color: $color-theme-primary;
+        color: var(--color-theme-primary);
       }
     }
   }
@@ -35,20 +35,20 @@
 
   .social-links {
     a {
-      background-color: $social-icon-color;
+      background-color: var(--social-icon-color);
       background-position: center center;
       background-repeat: no-repeat;
       background-size: 62% 62%;
       border-radius: 50%;
       display: inline-block;
-      height: rem($social-icon-size);
+      height: var(--social-icon-size);
       margin-bottom: rem(10);
       margin-left: rem(10);
       position: relative;
       text-indent: -9999px;
-      width: rem($social-icon-size);
+      width: var(--social-icon-size);
       &:hover, &:focus {
-        background-color: darken($social-icon-color, 20%);
+        background-color: var(--social-icon-color-darken20);
       }
     }
     .facebook { background-image:  url('../images/svgs/facebook-f.svg'); }

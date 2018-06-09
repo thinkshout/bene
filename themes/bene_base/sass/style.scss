@@ -1,3 +1,24 @@
+:root {
+  --color-theme-primary: #129FB5;
+  --color-theme-primary-darken20: darken(#129FB5, 20%);
+  --color-theme-primary-bright: #50CFE3;
+  --color-theme-primary-bright-darken20: darken(#50CFE3, 20%);
+  --color-theme-primary-bright-lighten20: lighten(#50CFE3, 20%);
+  --color-text-primary: black;
+  --color-text-secondary: #5C5B5B;
+  --color-text-placeholder: #979797;
+  --color-text-medium-dark: #7C7C7C;
+  --color-text-inverse: white;
+  --color-text-light: #D8D8D8;
+  --color-background-default: white;
+  --color-background-lightest: #D8D8D8;
+  --color-background-darker: #5C5B5B;
+  --color-background-darkest: black;
+
+  --social-icon-color: #50CFE3;
+  --social-icon-size: 40;
+}
+
 //-- VENDOR
 @import 'lib/bourbon/bourbon';
 @import 'lib/neat/neat';

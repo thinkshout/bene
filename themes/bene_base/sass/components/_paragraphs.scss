@@ -33,14 +33,14 @@
   p,
   ol li,
   ul li {
-    color: $color-text-secondary;
+    color: var(--color-text-secondary);
   }
   blockquote {
     margin: rem(32) auto;
     max-width: 80%;
     text-align: center;
     p {
-      color: $color-theme-primary-bright;
+      color: var(--color-theme-primary-bright);
       font-size: rem(26);
       font-style: italic;
       font-weight: 600;
@@ -55,7 +55,7 @@
     }
 
     &:after {
-      background-color: $color-theme-primary-bright;
+      background-color: var(--color-theme-primary-bright);
       content: "";
       display: inline-block;
       height: rem(4);
@@ -69,11 +69,11 @@
 }
 .paragraph--type--feature-full-width {
   align-items: center;
-  background-color: $color-theme-primary;
+  background-color: var(--color-theme-primary);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: $color-text-inverse;
+  color: var(--color-text-inverse);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -101,7 +101,7 @@
   .field--name-field-text {
     z-index: 10;
     p {
-      color: $color-text-inverse;
+      color: var(--color-text-inverse);
       margin: rem(32) auto;
       max-width: 100%;
       @include mq(desktop) {
@@ -112,7 +112,21 @@
   .field--type-link {
     z-index: 10;
     a {
-      @include button($color-text-inverse, $color-theme-primary-bright);
+      @include transition(background-color 0.3s linear,color 0.3s linear);
+      background-color: var(--color-theme-primary-bright);
+      border-radius: rem(3);
+      color: var(--color-text-inverse);
+      font-weight: 800;
+      display: inline-block;
+      font-size: rem(16);
+      letter-spacing: 0.1rem;
+      line-height: 1;
+      padding: rem(20) rem(30);
+      position: relative;
+      text-transform: uppercase;
+      &:hover {
+        background-color: var(--color-theme-primary-bright-darken20);
+      }
       letter-spacing: 0;
       text-transform: none;
     }

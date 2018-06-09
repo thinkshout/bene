@@ -1,7 +1,7 @@
 .block-hero {
   visibility: hidden;
   align-items: center;
-  background-color: $color-theme-primary-bright;
+  background-color: var(--color-theme-primary-bright);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -15,7 +15,7 @@
     height: 24vw;
   }
   h1, h2 {
-    color: white;
+    color: var(--color-text-inverse);
     flex: 0 1 auto;
     font-size: rem(32);
     line-height: 1;

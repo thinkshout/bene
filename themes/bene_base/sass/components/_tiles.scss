@@ -45,7 +45,7 @@
 
       .field--name-field-image,
       .bg-header {
-        background-color: $color-theme-primary;
+        background-color: var(--color-theme-primary);
         font-size: 0;
         max-height: rem(228);
         max-width: rem(380);
@@ -56,7 +56,7 @@
       @include mq(desktop) {
         .field--name-field-image,
         .bg-header {
-          background-color: $color-theme-primary;
+          background-color: var(--color-theme-primary);
           height: 18.36vw;
           width: 30.6vw;
         }
@@ -69,7 +69,7 @@
       }
 
       .field--name-field-text p {
-        color: $color-text-secondary;
+        color: var(--color-text-secondary);
         line-height: rem(24);
         margin-bottom: rem(12);
         margin-top: rem(12);

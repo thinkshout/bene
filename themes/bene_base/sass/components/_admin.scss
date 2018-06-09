@@ -1,7 +1,7 @@
 // Admin adjustments (ODFW Theme)
 body.path-user .region.region-content,
 body.user-logged-in .region.region-content {
-  background-color: $color-background-default;
+  background-color: var(--color-background-default);
   display: inline-block;
   width: 100%;
 }
@@ -33,7 +33,7 @@ body.user-logged-in .region.region-content {
   }
 
   .contextual-links {
-    background-color: #fff;
+    background-color: var(--color-background-default);
     border-radius: 4px 0 4px 4px;
     border: 1px solid #ccc;
     clear: both;
@@ -46,15 +46,15 @@ body.user-logged-in .region.region-content {
     top: -1px;
     white-space: nowrap;
     li {
-      background-color: #fff;
+      background-color: var(--color-background-default);
       border: none;
       line-height: 100%;
-      list-style-image: none;
+      // list-style-image: none;
       list-style: none;
       margin: 0;
       padding: 0;
       a {
-        background-color: #fff;
+        background-color: var(--color-background-default);
         color: #333;
         display: block;
         font-family: sans-serif;
@@ -70,7 +70,7 @@ body.user-logged-in .region.region-content {
   }
   #block-bene-child-local-tasks {
     @include transition(all 0.4s linear);
-    background-color: $color-background-darkest;
+    background-color: var(--color-background-darkest);
     bottom: 0;
     height: auto;
     padding-right: 45px;
@@ -86,9 +86,9 @@ body.user-logged-in .region.region-content {
       margin: 0;
     }
     li {
-      background-color: $color-background-default;
+      background-color: var(--color-background-default);
       a {
-        background-color: $color-theme-primary;
+        background-color: var(--color-theme-primary);
         border: none;
         color: white;
         display: inline-block;
@@ -101,15 +101,15 @@ body.user-logged-in .region.region-content {
           padding: rem(7) rem(20) rem(7);
         }
         &:hover {
-          background-color: darken($color-theme-primary, 20%);
+          background-color: var(--color-theme-primary-darken20);
         }
         &.is-active {
-          background-color: $color-theme-primary-bright;
+          background-color: var(--color-theme-primary-bright);
         }
       }
     }
     .show-hide {
-      background-color: $color-background-darkest;
+      background-color: var(--color-background-darkest);
       cursor: pointer;
       font-size: rem(35);
       height: rem(30);
