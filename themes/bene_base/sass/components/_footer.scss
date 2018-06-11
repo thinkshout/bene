@@ -45,6 +45,7 @@
       background-position: center center;
       background-repeat: no-repeat;
       background-size: 62% 62%;
+      border: rem(1) solid var(--social-icon-color);
       border-radius: 50%;
       display: inline-block;
       height: rem($social-icon-size); // var(--social-icon-size);
@@ -54,7 +55,7 @@
       position: relative;
       text-indent: -9999px;
       width: rem($social-icon-size); // var(--social-icon-size);
-      &:hover, &:focus {
+      &:hover, &:focus, &:active {
         background-color: var(--social-icon-color-darken20);
       }
     }
