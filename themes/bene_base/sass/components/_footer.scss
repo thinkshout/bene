@@ -15,6 +15,11 @@
 
     .menu-item {
       line-height: rem(30);
+
+      a {
+        @include font-style(--font-menu-primary);
+        fontsize: rem(16);
+      }
     }
   }
 
