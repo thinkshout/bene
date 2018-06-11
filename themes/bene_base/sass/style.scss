@@ -11,6 +11,7 @@
   --color-text-medium-dark: #7C7C7C;
   --color-text-inverse: white;
   --color-text-light: #D8D8D8;
+  --color-text-link: black;
   --color-background-default: white;
   --color-background-lightest: #D8D8D8;
   --color-background-darker: #5C5B5B;
@@ -18,6 +19,8 @@
 
   --social-icon-color: #50CFE3;
   --social-icon-color-darken20: #1C9DB1; // darken(#50CFE3, 20%);
+
+  --font-menu-primary: 'bold';
 }
 
 //-- VENDOR
