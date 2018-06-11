@@ -1,5 +1,7 @@
 // Default Styles (Mobile First!)
 .block-bene-footer-block {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 
   .menu {
     a {
@@ -9,6 +11,10 @@
       &:hover, &:focus, &.is-active {
         color: var(--color-theme-primary);
       }
+    }
+
+    .menu-item {
+      line-height: rem(30);
     }
   }
 
@@ -44,6 +50,7 @@
       height: rem($social-icon-size); // var(--social-icon-size);
       margin-bottom: rem(10);
       margin-left: rem(10);
+      padding: 1rem;
       position: relative;
       text-indent: -9999px;
       width: rem($social-icon-size); // var(--social-icon-size);

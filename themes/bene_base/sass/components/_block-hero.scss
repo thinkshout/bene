@@ -1,0 +1,10 @@
+.block-hero {
+  position: relative;
+  background-color: var(--color-theme-primary-bright);
+
+  h1 {
+    text-shadow: none;
+    text-transform: none;
+    z-index: 1;
+  }
+}
