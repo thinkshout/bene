@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quote_with_background_color_.field_attribution
+    - field.field.paragraph.quote_with_background_color_.field_quote
+    - paragraphs.paragraphs_type.quote_with_background_color_
+  module:
+    - text
+id: paragraph.quote_with_background_color_.default
+targetEntityType: paragraph
+bundle: quote_with_background_color_
+mode: default
+content:
+  field_attribution:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_quote:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

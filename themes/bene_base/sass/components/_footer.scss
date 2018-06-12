@@ -17,7 +17,7 @@
       line-height: rem(30);
 
       a {
-        @include font-style(--font-menu-primary);
+        //@include font-style(var(--font-menu-primary));
         fontsize: rem(16);
         &:hover, &:focus, &.is-active {
           color: var(--color-theme-primary);

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_attribution
+    - paragraphs.paragraphs_type.quote_with_background_color_
+id: paragraph.quote_with_background_color_.field_attribution
+field_name: field_attribution
+entity_type: paragraph
+bundle: quote_with_background_color_
+label: Attribution
+description: 'Who said or wrote the quote?'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

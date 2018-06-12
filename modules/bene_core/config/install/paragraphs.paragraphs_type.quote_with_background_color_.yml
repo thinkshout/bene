@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: quote_with_background_color_
+label: 'Quote (with background color)'
+icon_uuid: null
+description: 'Title, quote, and attribution'
+behavior_plugins: {  }
