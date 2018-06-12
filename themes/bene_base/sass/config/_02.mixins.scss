@@ -1,3 +1,31 @@
+@mixin font-style($style) {
+  @if $style == 'italic' { // Italic Light
+    font-family: var(--font-primary);
+    font-style: italic;
+    font-weight: 300;
+  } @else if $style == 'regular' {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-style: normal;
+  } @else if $style == 'semibold' {
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-style: normal;
+  } @else if $style == 'bold' {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-style: normal;
+  } @else if $style == 'black' {
+    font-family: var(--font-primary);
+    font-weight: 900;
+    font-style: normal;
+  } @else if $style == 'light' { // Light is the default font
+    font-family: var(--font-primary);
+    font-weight: 300;
+    font-style: normal;
+  }
+}
+
 // Makes an element visually hidden, but accessible.
 // @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin element-invisible {

@@ -19,8 +19,20 @@
       a {
         @include font-style(--font-menu-primary);
         fontsize: rem(16);
+        &:hover, &:focus, &.is-active {
+          color: var(--color-theme-primary);
+        }
       }
     }
+  }
+
+  .copyright,
+  .contact-links,
+  .contact-links .additional-contact p,
+  .contact-links .additional-footer p {
+    @include font-style('regular');
+    font-size: rem(14);
+    line-height: rem(25);
   }
 
   .contact-links {
