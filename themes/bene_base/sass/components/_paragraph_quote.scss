@@ -1,0 +1,60 @@
+.paragraph--type--quote-with-background-color- {
+  background-color: var(--color-theme-primary);
+  color: var(--color-text-inverse);
+  // display: inline-block;
+  // overflow: hidden;
+  padding: 115px;
+  text-align: center;
+  width: 100%;
+
+  .field--name-field-quote p {
+    // background-color: var(--color-theme-primary-bright);
+    display: inline-block;
+    font-family:"Open Sans",sans-serif;
+    //font-style:normal;
+    //font-weight:normal;
+    //font-size: 30px;
+    //line-height: 44px;
+    margin-bottom: 1em;
+    quotes: "“" "”" "‘" "’";
+
+    color: var(--color-text-inverse);
+    position: relative;
+    // font-family: 'Sanchez', serif;
+    font-size: 30px;
+    line-height: 44px;
+    font-style: italic;
+    &:before {
+      content: '\201C';
+      position: absolute;
+      top: 0.25em;
+      left: -0.15em;
+      color: var(--color-theme-primary-darken20);
+      font-size: 40px;
+      z-index: -1;
+    }
+    //&:before {
+    //  content: open-quote;
+    //  font-size: 46px;
+    //}
+    &:after {
+      color: var(--color-theme-primary-darken20);
+      content: close-quote;
+      font-size: 46px;
+    }
+  }
+
+
+  .field--name-field-attribution {
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin-bottom: 3em;
+    text-transform: uppercase;
+  }
+  .field--name-field-attribution:before {
+    content: "\2013  "; // n-dash
+  }
+
+}
