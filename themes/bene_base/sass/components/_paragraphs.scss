@@ -33,6 +33,7 @@
   p,
   ol li,
   ul li {
+    color: bbv(dark-grey); // in case css variables are not supported
     color: var(--color-text-secondary);
   }
   blockquote {
@@ -40,6 +41,7 @@
     max-width: 80%;
     text-align: center;
     p {
+      color: bbv(bright-blue); // in case css variables are not supported
       color: var(--color-theme-primary-bright);
       font-size: rem(26);
       font-style: italic;
@@ -55,6 +57,7 @@
     }
 
     &:after {
+      background-color: bbv(bright-blue); // in case css variables are not supported
       background-color: var(--color-theme-primary-bright);
       content: "";
       display: inline-block;
@@ -69,10 +72,12 @@
 }
 .paragraph--type--feature-full-width {
   align-items: center;
+  background-color: bbv(main-blue); // in case css variables are not supported
   background-color: var(--color-theme-primary);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: bbv(main-white); // in case css variables are not supported
   color: var(--color-text-inverse);
   display: flex;
   flex-direction: column;
@@ -101,6 +106,7 @@
   .field--name-field-text {
     z-index: 10;
     p {
+      color: bbv(main-white); // in case css variables are not supported
       color: var(--color-text-inverse);
       margin: rem(32) auto;
       max-width: 100%;
@@ -113,9 +119,12 @@
     z-index: 10;
     a {
       @include button;
+      color: bbv(main-white); // in case css variables are not supported
       color: var(--color-text-inverse);
+      background-color: bbv(bright-blue); // in case css variables are not supported
       background-color: var(--color-theme-primary-bright);
       &:hover {
+        background-color: #1c9db1; // in case css variables are not supported
         background-color: var(--color-theme-primary-bright-darken20);
       }
       letter-spacing: 0;

@@ -5,10 +5,12 @@
 
   .menu {
     a {
+      color: bbv(main-black); // in case css variables are not supported
       color: var(--color-text-primary);
       font-size: rem(14);
       font-weight: 600;
       &:hover, &:focus, &.is-active {
+        color: bbv(main-blue); // in case css variables are not supported
         color: var(--color-theme-primary);
       }
     }
@@ -17,9 +19,10 @@
       line-height: rem(30);
 
       a {
-        @include font-style(--font-menu-primary);
+        @include font-style('bold'); // font-menu-primary
         fontsize: rem(16);
         &:hover, &:focus, &.is-active {
+          color: bbv(main-blue); // in case css variables are not supported
           color: var(--color-theme-primary);
         }
       }
@@ -58,11 +61,13 @@
 
   .social-links {
     a {
-      background-color: var(--social-icon-color);
+      background-color: bbv(bright-blue); // in case css variables are not supported
+      background-color: var(--color-social-icon);
       background-position: center center;
       background-repeat: no-repeat;
       background-size: 62% 62%;
-      border: rem(1) solid var(--social-icon-color);
+      border: rem(1) solid bbv(bright-blue); // in case css variables are not supported
+      border: rem(1) solid var(--color-social-icon);
       border-radius: 50%;
       display: inline-block;
       height: rem($social-icon-size); // var(--social-icon-size);
@@ -73,7 +78,10 @@
       text-indent: -9999px;
       width: rem($social-icon-size); // var(--social-icon-size);
       &:hover, &:focus, &:active {
-        background-color: var(--social-icon-color-darken20);
+        border: rem(1) solid #1c9db1; // in case css variables are not supported
+        border: rem(1) solid var(--color-social-icon-darken20);
+        background-color: #1c9db1; // in case css variables are not supported
+        background-color: var(--color-social-icon-darken20);
       }
     }
     .facebook { background-image:  url('../images/svgs/facebook-f.svg'); }

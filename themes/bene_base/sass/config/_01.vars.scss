@@ -1,4 +1,47 @@
+/**
+ * First-level variables. Do not use these except to define
+ * second-level css variables or where css variables are not supported.
+ **/
+$bene-base-variables: (
+  main-white: #FFF,
+  light-grey: #D8D8D8,
+  placeholder-grey: #979797,
+  medium-grey: #7C7C7C,
+  dark-grey: #5C5B5B,
+  main-black: #000,
+  bright-blue: #50CFE3,
+  main-blue: #129FB5,
+);
 
+// bbv = bene base variable
+// access the above variables with this function
+@function bbv($var-name) {
+  @return map-get($bene-base-variables, #{$var-name});
+}
+
+$bene-functional: (
+  color-theme-primary: bbv(main-blue),
+  color-theme-primary-darken20: darken(bbv(main-blue), 20% ),
+  color-theme-primary-lighten20: lighten(bbv(main-blue), 20%),
+  color-theme-primary-bright: bbv(bright-blue),
+  color-theme-primary-bright-darken20: darken(bbv(bright-blue), 20%),
+  color-theme-primary-bright-lighten20: lighten(bbv(bright-blue), 20%),
+  color-text-primary: bbv(main-black),
+  color-text-secondary: bbv(dark-grey),
+  color-text-accent: bbv(dark-grey),
+  color-text-placeholder: bbv(placeholder-grey),
+  color-text-medium-dark: bbv(medium-grey),
+  color-text-inverse: bbv(main-white),
+  color-text-light: bbv(light-grey),
+  color-text-link: bbv(main-black),
+  color-background-default: bbv(main-white),
+  color-background-lightest: bbv(light-grey),
+  color-background-darker: bbv(dark-grey),
+  color-background-darkest: bbv(main-black),
+
+  color-social-icon: bbv(bright-blue),
+  color-social-icon-darken20: darken(bbv(bright-blue), 20%),
+);
 /**
   * Fonts
   * Open+Sans:300,300i,400,600,700,800
@@ -12,5 +55,27 @@
   *
   **/
 $sans: 'Open Sans', sans-serif;
-
 $social-icon-size: 40;
+
+
+/**
+ * These are second-level css variables. They should be used throughout the scss code.
+ */
+:root {
+  // place each item in color map here so they are defined in root scope
+  // output of this loop will be:
+  // ...
+  // --color-light-grey: #D8D8D8;
+  // --color-placeholder-grey: #979797;
+  // ...
+  @each $name, $color-num in $bene-functional {
+    --#{$name}: #{$color-num};
+  }
+
+  --font-family-primary: 'Open Sans', sans-serif;
+  --font-family-secondary: 'Open Sans', sans-serif;
+  --font-weight-primary: normal;
+  --font-weight-menu-primary: bold;
+  --font-style-primary: normal;
+  --font-size-primary: rem(24);
+}

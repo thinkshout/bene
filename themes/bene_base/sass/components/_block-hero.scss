@@ -1,5 +1,6 @@
 .block-hero {
   position: relative;
+  background-color: bbv(bright-blue); // in case css variables are not supported
   background-color: var(--color-theme-primary-bright);
 
   h1 {

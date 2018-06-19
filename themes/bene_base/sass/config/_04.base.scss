@@ -43,6 +43,7 @@ h4 {
 
 p,
 p.standard {
+  color: bbv(main-black); // in case css variables are not supported
   color: var(--color-text-primary);
   font-size: rem(16);
   line-height: rem(31);
@@ -51,11 +52,13 @@ p.standard {
 
 a {
   @include default-transition;
+  color: bbv(main-blue); // in case css variables are not supported
   color: var(--color-theme-primary);
   cursor: pointer;
   text-decoration: none;
   &:hover,
   &:active {
+    color: #41d5ec; // in case css variables are not supported
     color: var(--color-theme-primary-lighten20);
   }
 }
@@ -63,9 +66,11 @@ a {
 table a,
 li a,
 p a {
+  color: bbv(main-blue); // in case css variables are not supported
   color: var(--color-theme-primary);
   &:hover,
   &:active {
+    color: #41d5ec; // in case css variables are not supported
     color: var(--color-theme-primary-lighten20);
   }
 }
@@ -83,8 +88,10 @@ a.button {
     padding-bottom: rem(14);
     padding-left: rem(32);
     text-indent: rem(-20);
+    color: bbv(main-black); // in case css variables are not supported
     color: var(--color-text-primary);
     &:before {
+      color: bbv(main-black); // in case css variables are not supported
       color: var(--color-text-primary);
       content: "•";
       font-size: rem(16);
@@ -102,16 +109,19 @@ ol {
     padding-left: rem(6);
     line-height: 1.4;
     font-size: rem(16);
+    color: bbv(main-black); // in case css variables are not supported
     color: var(--color-text-primary);
   }
 }
 
 table, table.tablesaw {
+  border: 1px solid bbv(light-grey); // in case css variables are not supported
   border: 1px solid var(--color-text-light);
   margin: rem(24) 0;
   table-layout: auto;
   th, tr, td, tr:first-child th {
     border: none;
+    color: bbv(medium-grey); // in case css variables are not supported
     color: var(--color-text-medium-dark);
     font-size: rem(14);
     font-weight: 400;
@@ -124,14 +134,17 @@ table, table.tablesaw {
   th, tr:first-child th {
     font-weight: 700;
     text-transform: uppercase;
+    color: bbv(medium-grey); // in case css variables are not supported
     color: var(--color-text-medium-dark);
     font-size: rem(14);
     margin: 0;
   }
   tr {
+    background-color: bbv(main-white); // in case css variables are not supported
     background-color: var(--color-background-default);
   }
   th,tr:nth-of-type(2n) {
+    background-color: bbv(light-grey); // in case css variables are not supported
     background-color: var(--color-background-lightest);
   }
 }
@@ -152,6 +165,7 @@ fieldset {
   legend {
     font-size: rem(30);
     font-weight: 700;
+    color: bbv(dark_grey); // in case css variables are not supported
     color: var(--color-text-secondary);
   }
 }
