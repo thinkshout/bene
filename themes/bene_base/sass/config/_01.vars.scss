@@ -1,8 +1,12 @@
 /**
  * First-level variables. Do not use these except to define
- * second-level css variables or where css variables are not supported.
+ * buildup css variables in the next section.
+ *
+ * Notice that the variable names are specific to the color
+ * they refer to... that means these can be thrown out and a
+ * whole new set of variables brought in for a new theme.
  **/
-$bene-base-variables: (
+$bene-a-level-variables: (
   main-white: #FFF,
   light-grey: #D8D8D8,
   placeholder-grey: #979797,
@@ -11,71 +15,125 @@ $bene-base-variables: (
   main-black: #000,
   bright-blue: #50CFE3,
   main-blue: #129FB5,
+  sans-font: "'Open Sans', sans-serif",
 );
 
-// bbv = bene base variable
+// bav = bene a-level variable
 // access the above variables with this function
-@function bbv($var-name) {
-  @return map-get($bene-base-variables, #{$var-name});
+@function bav($var-name) {
+  @return map-get($bene-a-level-variables, #{$var-name});
 }
 
-$bene-functional: (
-  color-theme-primary: bbv(main-blue),
-  color-theme-primary-darken20: darken(bbv(main-blue), 20% ),
-  color-theme-primary-lighten20: lighten(bbv(main-blue), 20%),
-  color-theme-primary-bright: bbv(bright-blue),
-  color-theme-primary-bright-darken20: darken(bbv(bright-blue), 20%),
-  color-theme-primary-bright-lighten20: lighten(bbv(bright-blue), 20%),
-  color-text-primary: bbv(main-black),
-  color-text-secondary: bbv(dark-grey),
-  color-text-accent: bbv(dark-grey),
-  color-text-placeholder: bbv(placeholder-grey),
-  color-text-medium-dark: bbv(medium-grey),
-  color-text-inverse: bbv(main-white),
-  color-text-light: bbv(light-grey),
-  color-text-link: bbv(main-black),
-  color-background-default: bbv(main-white),
-  color-background-lightest: bbv(light-grey),
-  color-background-darker: bbv(dark-grey),
-  color-background-darkest: bbv(main-black),
-
-  color-social-icon: bbv(bright-blue),
-  color-social-icon-darken20: darken(bbv(bright-blue), 20%),
+$bene-buildup-variables: (
+  color-theme-primary: bav(main-blue),
+  color-theme-primary-darken20: darken(bav(main-blue), 20% ),
+  color-theme-primary-lighten20: lighten(bav(main-blue), 20%),
+  color-theme-primary-bright: bav(bright-blue),
+  color-theme-primary-bright-darken20: darken(bav(bright-blue), 20%),
+  color-theme-primary-bright-lighten20: lighten(bav(bright-blue), 20%),
+  color-text-primary: bav(main-black),
+  color-text-secondary: bav(dark-grey),
+  color-text-accent: bav(dark-grey),
+  color-text-placeholder: bav(placeholder-grey),
+  color-text-medium-dark: bav(medium-grey),
+  color-text-inverse: bav(main-white),
+  color-text-light: bav(light-grey),
+  color-text-link: bav(main-black),
+  color-background-default: bav(main-white),
+  color-background-lightest: bav(light-grey),
+  color-background-darker: bav(dark-grey),
+  color-background-darkest: bav(main-black),
+  color-social-icon: bav(bright-blue),
+  color-social-icon-darken20: darken(bav(bright-blue), 20%),
+  social-icon-size: rem(40),
+  font-family-primary: bav(sans-font),
+  font-family-secondary: bav(sans-font),
+  font-weight-primary: normal,
+  font-weight-menu-primary: bold,
+  font-weight-extra-heavy: 900,
+  font-style-primary: normal,
+  font-size-primary: rem(24),
+  font-size-header: rem(36),
+  gradient-direction: -180deg,
+  gradient-from-color: rgba(bav(main-black), 0.00), // 0.00 means fully transparent
+  gradient-to-color: rgba(bav(main-black), 0.00), // 0.00 means fully transparent, 1 means opaque
 );
-/**
-  * Fonts
-  * Open+Sans:300,300i,400,600,700,800
-  *
-  * light: 300
-  * light italic: 300 + style: italic
-  * regular:      400
-  * semi-bold:    600
-  * bold:         700
-  * extrabold:    800
-  *
-  **/
-$sans: 'Open Sans', sans-serif;
-$social-icon-size: 40;
+
+// bbv = bene buildup variable
+// access the above variables with this function
+@function bbv($var-name) {
+  @return map-get($bene-buildup-variables, #{$var-name});
+}
 
 
-/**
- * These are second-level css variables. They should be used throughout the scss code.
- */
 :root {
-  // place each item in color map here so they are defined in root scope
+  // place each item in bene-buildup-variables here so they are defined in root scope
   // output of this loop will be:
   // ...
-  // --color-light-grey: #D8D8D8;
-  // --color-placeholder-grey: #979797;
+  // --color-theme-primary: #129FB5;
+  // --color-theme-primary-darken20: #094e58;
+  // --color-theme-primary-lighten20: #41d5ec;
+  // --color-social-icon: #50CFE3;
+  // --color-social-icon-darken20: #1c9db1;
   // ...
-  @each $name, $color-num in $bene-functional {
+  @each $name, $color-num in $bene-buildup-variables {
     --#{$name}: #{$color-num};
   }
 
-  --font-family-primary: 'Open Sans', sans-serif;
-  --font-family-secondary: 'Open Sans', sans-serif;
-  --font-weight-primary: normal;
-  --font-weight-menu-primary: bold;
-  --font-style-primary: normal;
-  --font-size-primary: rem(24);
+  /**
+   * These are the css variables that should be used throughout the scss code.
+   * They should also refer to the buildup variables above as much as possible.
+   **/
+
+  // base_styles -- these apply to everything unless overridden here or in bene_base.
+  --base_style-font-family: var(--font-family-primary);
+  --base_style-paragraph-color: var(--color-text-primary);
+  --base_style-link-color: var(--color-theme-primary);
+  --base_style-active-link-color: var(--color-theme-primary-lighten20);
+  --base_style-formatted-text-ul-li-color: var(--color-text-primary);
+  --base_style-formatted-text-ul-li-bullet-color: var(--color-text-primary);
+  --base_style-formatted-text-ol-li-color: var(--color-text-primary);
+  --base_style-table-border-color: var(--color-text-light);
+  --base_style-table-text-color: var(--color-text-medium-dark);
+  --base_style-table-headerrow-leftcolumn-text-color: var(--color-text-medium-dark);
+  --base_style-table-background-color: var(--color-background-default);
+  --base_style-table-background-stripe-color: var(--color-background-lightest);
+  --base_style-fieldset-legend-color: var(--color-text-secondary);
+
+  // rich_text
+  --rich_text-background-paragraph-and-list-color: var(--color-text-secondary);
+  --rich_text-background-blockquote-paragraph-color: var(--color-theme-primary-bright);
+  --rich_text-background-blockquote-horizontal-line-color: var(--color-theme-primary-bright);
+
+  // bene_home_page_feature_block
+  // bene_sub_navigation_block
+  // bene_listing_page_plugin_display_block
+
+  // bene_home_page_feature_block
+  --bene_home_page_feature_block-background-color: var(--color-theme-primary);
+  --bene_home_page_feature_block-linear-gradient-direction: var(--gradient-direction);
+  --bene_home_page_feature_block-linear-gradient-color1: var(--gradient-from-color);
+  --bene_home_page_feature_block-linear-gradient-color2: var(--gradient-to-color);
+  --bene_home_page_feature_block-header-color: var(--color-text-inverse);
+  --bene_home_page_feature_block-header-font-family: var(--font-family-primary);
+  --bene_home_page_feature_block-header-font-size: var(--font-size-header);
+  --bene_home_page_feature_block-header-font-weight: var(--font-weight-extra-heavy);
+  --bene_home_page_feature_block-description-color: var(--color-text-inverse);
+  --bene_home_page_feature_block-description-font-family: var(--font-family-primary);
+  --bene_home_page_feature_block-linear-gradient: linear-gradient(var(--bene-home-page-feature-block-linear-gradient-direction), var(--bene-home-page-feature-block-linear-gradient-color1), var(--bene-home-page-feature-block-linear-gradient-color2));
+  --bene_home_page_feature_block-link-button-color: var(--color-text-inverse);
+  --bene_home_page_feature_block-link-button-background-color: var(--color-theme-primary-bright);
+  --bene_home_page_feature_block-link-button-hover-background-color: var(--color-theme-primary-bright-darken20);
+
+  // bene_newsletter_signup_block
+
+  // bene_footer_block
+  --bene_footer_block-social-icon-size: var(--social-icon-size);
+  --bene_footer_block-social-background-color: var(--color-social-icon);
+  --bene_footer_block-social-hover-background-color: var(--color-social-icon-darken20);
+  --bene_footer_block-social-border-color: var(--color-social-icon);
+  --bene_footer_block-menu-link-color: var(--color-text-primary);
+  --bene_footer_block-menu-link-hover-color: var(--color-theme-primary);
+  --bene_footer_block-menu-item-link-hover-color: var(--color-theme-primary);
+
 }
