@@ -51,6 +51,7 @@ html {
    * They should also refer to the buildup variables above as much as possible.
    **/
   --base_style-font-family: var(--font-family-primary);
+  --base_style-font-family-secondary: var(--font-family-secondary);
   --base_style-paragraph-color: var(--color-text-primary);
   --base_style-link-color: var(--color-theme-primary);
   --base_style-active-link-color: var(--color-theme-primary-lighten20);
@@ -84,6 +85,7 @@ html {
   --bene_footer_block-social-background-color: var(--color-social-icon);
   --bene_footer_block-social-hover-background-color: var(--color-social-icon-darken20);
   --bene_footer_block-social-border-color: var(--color-social-icon);
+  --bene_footer_block-social-hover-border-color: var(--color-social-icon-darken20);
   --bene_footer_block-menu-link-color: var(--color-text-primary);
   --bene_footer_block-menu-link-hover-color: var(--color-theme-primary);
   --bene_footer_block-menu-item-link-hover-color: var(--color-theme-primary); }
