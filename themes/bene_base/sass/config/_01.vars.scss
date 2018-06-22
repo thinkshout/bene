@@ -85,7 +85,7 @@ $bene-buildup-variables: (
    * They should also refer to the buildup variables above as much as possible.
    **/
 
-  // base_styles -- these apply to everything unless overridden here or in bene_base.
+  // base_style -- these apply to everything unless overridden here or in bene_base.
   --base_style-font-family: var(--font-family-primary);
   --base_style-font-family-secondary: var(--font-family-secondary);
   --base_style-paragraph-color: var(--color-text-primary);
@@ -100,6 +100,12 @@ $bene-buildup-variables: (
   --base_style-table-background-color: var(--color-background-default);
   --base_style-table-background-stripe-color: var(--color-background-lightest);
   --base_style-fieldset-legend-color: var(--color-text-secondary);
+  // _admin.scss:
+  --base_style-body-background-color: var(--color-background-default);
+  --base_style-contextual-links-background-color: var(--color-background-default);
+  --base_style-contextual-links-list-item-background-color: var(--color-background-default);
+  --base_style-contextual-links-list-item-link-background-color: var(--color-background-default);
+  --base_style-block-local-tasks-background-color: var(--color-background-darkest);
 
   // rich_text
   --rich_text-background-paragraph-and-list-color: var(--color-text-secondary);
