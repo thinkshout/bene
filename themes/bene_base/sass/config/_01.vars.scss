@@ -57,6 +57,7 @@ $bene-buildup-variables: (
   gradient-direction: -180deg,
   gradient-from-color: rgba(bav(main-black), 0.00), // 0.00 means fully transparent
   gradient-to-color: rgba(bav(main-black), 0.00), // 0.00 means fully transparent, 1 means opaque
+  preferred-alignment: left,
 );
 
 // bbv = bene buildup variable
@@ -115,6 +116,14 @@ $bene-buildup-variables: (
   // bene_home_page_feature_block
   // bene_sub_navigation_block
   // bene_listing_page_plugin_display_block
+
+  // bene_mobile_nav
+  --bene_mobile_nav-color: --color-text-inverse;
+  --bene_mobile_nav-menu-link-color: --color-text-inverse;
+  --bene_mobile_nav-background: --color-theme-primary;
+  --bene_mobile_nav-menu-text-align: --preferred-alignment;
+  --bene_mobile_nav-font-face: --font-family-primary;
+  --bene_mobile_nav-font-size: --font-size-primary;
 
   // bene_home_page_feature_block
   --bene_home_page_feature_block-background-color: var(--color-theme-primary);
