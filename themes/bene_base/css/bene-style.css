@@ -109,14 +109,14 @@ html {
   --inner_page-link-hover-color: var(--color-theme-primary-bright-darken20);
   --inner_page-paragraph-color: var(--color-text-primary);
   --inner_page-blockquote-paragraph-color: var(--color-text-accent);
-  --feature-block-color: var(--color-text-inverse);
-  --feature-block-background-color: var(--color-theme-primary-bright);
-  --link-border-color: var(--color-text-inverse);
-  --link-color: var(--color-text-inverse);
-  --link-hover-color: var(--color-text-inverse);
-  --link-hover-background-color: var(color-background-lightest);
-  --block-background-color: var(--color-theme-primary-bright);
-  --block-header-one-two-color: var(--color-text-inverse);
+  --home_hero-bene-home-page-feature-block-color: var(--color-text-inverse);
+  --home_hero-bene-home-page-feature-block-background-color: var(--color-theme-primary-bright);
+  --home_hero-bene-link-border-color: var(--color-text-inverse);
+  --home_hero-bene-link-color: var(--color-text-inverse);
+  --home_hero-bene-link-hover-color: var(--color-text-inverse);
+  --home_hero-bene-link-hover-background-color: var(color-background-lightest);
+  --block_hero-bene-background-color: var(--color-theme-primary-bright);
+  --block_hero-bene-header-color: var(--color-text-inverse);
   --bene_home_page_feature_block-background-color: var(--color-theme-primary);
   --bene_home_page_feature_block-linear-gradient-direction: var(--gradient-direction);
   --bene_home_page_feature_block-linear-gradient-color1: var(--gradient-from-color);
@@ -1094,7 +1094,7 @@ input[type='submit'] {
   visibility: hidden;
   align-items: center;
   background-color: #50CFE3;
-  background-color: var(--block-background-color);
+  background-color: var(--block_hero-bene-background-color);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -1110,7 +1110,7 @@ input[type='submit'] {
       height: 24vw; } }
   .block-hero h1, .block-hero h2 {
     color: #FFF;
-    color: var(--block-header-one-two-color);
+    color: var(--block_hero-bene-header-color);
     flex: 0 1 auto;
     font-size: 2rem;
     line-height: 1;
@@ -1135,7 +1135,7 @@ input[type='submit'] {
 
 .block-bene-home-page-feature-block {
   color: #FFF;
-  color: var(--feature-block-color);
+  color: var(--home_hero-bene-home-page-feature-block-color);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1143,7 +1143,7 @@ input[type='submit'] {
   text-align: center;
   padding: 10rem 1rem;
   background-color: #50CFE3;
-  background-color: var(--feature-block-background-color); }
+  background-color: var(--home_hero-bene-home-page-feature-block-background-color); }
   @media (max-width: 414px) {
     .block-bene-home-page-feature-block {
       background-size: 100%;
@@ -1177,10 +1177,10 @@ input[type='submit'] {
     z-index: 1; }
     .block-bene-home-page-feature-block .field--name-bene-link a {
       border: 0.125rem solid #FFF;
-      border: 0.125rem solid var(--link-border-color);
+      border: 0.125rem solid var(--home_hero-bene-link-border-color);
       border-radius: 0;
       color: #FFF;
-      color: var(--link-color);
+      color: var(--home_hero-bene-link-color);
       padding: 1rem 2rem;
       font-size: 0.875rem;
       font-family: 'Open Sans', sans-serif;
@@ -1190,9 +1190,9 @@ input[type='submit'] {
       text-transform: uppercase; }
       .block-bene-home-page-feature-block .field--name-bene-link a:hover {
         color: #000;
-        color: var(--link-hover-color);
+        color: var(--home_hero-link-hover-color);
         background-color: #D8D8D8;
-        background-color: var(--link-hover-background-color); }
+        background-color: var(--home_hero-bene-link-hover-background-color); }
 
 .page-node-type-page .block-system-main-block .field--name-bene-intro {
   float: none;

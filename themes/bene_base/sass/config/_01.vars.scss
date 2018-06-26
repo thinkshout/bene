@@ -162,16 +162,16 @@ $bene-buildup-variables: (
   --inner_page-blockquote-paragraph-color: var(--color-text-accent);
 
   //_home_hero.scss
-  --feature-block-color: var(--color-text-inverse);
-  --feature-block-background-color: var(--color-theme-primary-bright);
-  --link-border-color: var(--color-text-inverse);
-  --link-color: var(--color-text-inverse);
-  --link-hover-color: var(--color-text-inverse);
-  --link-hover-background-color: var(color-background-lightest);
+  --home_hero-bene-home-page-feature-block-color: var(--color-text-inverse);
+  --home_hero-bene-home-page-feature-block-background-color: var(--color-theme-primary-bright);
+  --home_hero-bene-link-border-color: var(--color-text-inverse);
+  --home_hero-bene-link-color: var(--color-text-inverse);
+  --home_hero-bene-link-hover-color: var(--color-text-inverse);
+  --home_hero-bene-link-hover-background-color: var(color-background-lightest);
 
   //_hero.scss
-  --block-background-color: var(--color-theme-primary-bright);
-  --block-header-one-two-color: var(--color-text-inverse);
+  --block_hero-bene-background-color: var(--color-theme-primary-bright);
+  --block_hero-bene-header-color: var(--color-text-inverse);
 
 
   // bene_home_page_feature_block
