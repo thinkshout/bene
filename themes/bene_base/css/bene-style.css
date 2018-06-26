@@ -618,6 +618,7 @@ fieldset {
 
 body.path-user .region.region-content,
 body.user-logged-in .region.region-content {
+  background-color: #FFF;
   background-color: var(--base_style-body-background-color);
   display: inline-block;
   width: 100%; }
@@ -646,6 +647,7 @@ body.user-logged-in .region.region-content {
     text-transform: uppercase;
     top: -0.8125rem; }
 .user-logged-in .contextual-links {
+  background-color: #FFF;
   background-color: var(--base_style-contextual-links-background-color);
   border-radius: 4px 0 4px 4px;
   border: 1px solid #ccc;
@@ -659,6 +661,7 @@ body.user-logged-in .region.region-content {
   top: -1px;
   white-space: nowrap; }
   .user-logged-in .contextual-links li {
+    background-color: #FFF;
     background-color: var(--base_style-contextual-links-list-item-background-color);
     border: none;
     line-height: 100%;
@@ -666,6 +669,7 @@ body.user-logged-in .region.region-content {
     margin: 0;
     padding: 0; }
     .user-logged-in .contextual-links li a {
+      background-color: #FFF;
       background-color: var(--base_style-contextual-links-list-item-link-background-color);
       color: #333;
       display: block;
@@ -680,6 +684,7 @@ body.user-logged-in .region.region-content {
   -webkit-transition: all 0.4s linear;
   -moz-transition: all 0.4s linear;
   transition: all 0.4s linear;
+  background-color: #000;
   background-color: var(--base_style-block-local-tasks-background-color);
   bottom: 0;
   height: auto;
