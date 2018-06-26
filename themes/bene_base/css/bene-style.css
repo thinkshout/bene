@@ -64,11 +64,6 @@ html {
   --base_style-table-background-color: var(--color-background-default);
   --base_style-table-background-stripe-color: var(--color-background-lightest);
   --base_style-fieldset-legend-color: var(--color-text-secondary);
-  --base_style-body-background-color: var(--color-background-default);
-  --base_style-contextual-links-background-color: var(--color-background-default);
-  --base_style-contextual-links-list-item-background-color: var(--color-background-default);
-  --base_style-contextual-links-list-item-link-background-color: var(--color-background-default);
-  --base_style-block-local-tasks-background-color: var(--color-background-darkest);
   --rich_text-background-paragraph-and-list-color: var(--color-text-secondary);
   --rich_text-background-blockquote-paragraph-color: var(--color-theme-primary-bright);
   --rich_text-background-blockquote-horizontal-line-color: var(--color-theme-primary-bright);
@@ -572,8 +567,7 @@ fieldset {
 
 body.path-user .region.region-content,
 body.user-logged-in .region.region-content {
-  background-color: #FFF;
-  background-color: var(--base_style-body-background-color);
+  background-color: var(--color-background-default);
   display: inline-block;
   width: 100%; }
 
@@ -601,8 +595,7 @@ body.user-logged-in .region.region-content {
     text-transform: uppercase;
     top: -0.8125rem; }
 .user-logged-in .contextual-links {
-  background-color: #FFF;
-  background-color: var(--base_style-contextual-links-background-color);
+  background-color: var(--color-background-default);
   border-radius: 4px 0 4px 4px;
   border: 1px solid #ccc;
   clear: both;
@@ -615,16 +608,14 @@ body.user-logged-in .region.region-content {
   top: -1px;
   white-space: nowrap; }
   .user-logged-in .contextual-links li {
-    background-color: #FFF;
-    background-color: var(--base_style-contextual-links-list-item-background-color);
+    background-color: var(--color-background-default);
     border: none;
     line-height: 100%;
     list-style: none;
     margin: 0;
     padding: 0; }
     .user-logged-in .contextual-links li a {
-      background-color: #FFF;
-      background-color: var(--base_style-contextual-links-list-item-link-background-color);
+      background-color: var(--color-background-default);
       color: #333;
       display: block;
       font-family: sans-serif;

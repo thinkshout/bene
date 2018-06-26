@@ -1,8 +1,8 @@
 // Admin adjustments (ODFW Theme)
 body.path-user .region.region-content,
 body.user-logged-in .region.region-content {
-  background-color: bbv(color-background-default); // in case css variables are not supported
-  background-color: var(--base_style-body-background-color);
+  background-color: bbv(main-white); // in case css variables are not supported
+  background-color: var(--color-background-default);
   display: inline-block;
   width: 100%;
 }
@@ -34,8 +34,8 @@ body.user-logged-in .region.region-content {
   }
 
   .contextual-links {
-    background-color: bbv(color-background-default); // in case css variables are not supported
-    background-color: var(--base_style-contextual-links-background-color);
+    background-color: bbv(main-white); // in case css variables are not supported
+    background-color: var(--color-background-default);
     border-radius: 4px 0 4px 4px;
     border: 1px solid #ccc;
     clear: both;
@@ -48,8 +48,8 @@ body.user-logged-in .region.region-content {
     top: -1px;
     white-space: nowrap;
     li {
-      background-color: bbv(color-background-default); // in case css variables are not supported
-      background-color: var(--base_style-contextual-links-list-item-background-color);
+      background-color: bbv(main-white); // in case css variables are not supported
+      background-color: var(--color-background-default);
       border: none;
       line-height: 100%;
       // list-style-image: none;
@@ -57,8 +57,8 @@ body.user-logged-in .region.region-content {
       margin: 0;
       padding: 0;
       a {
-        background-color: bbv(color-background-default); // in case css variables are not supported
-        background-color: var(--base_style-contextual-links-list-item-link-background-color);
+        background-color: bbv(main-white); // in case css variables are not supported
+        background-color: var(--color-background-default);
         color: #333;
         display: block;
         font-family: sans-serif;
@@ -74,7 +74,7 @@ body.user-logged-in .region.region-content {
   }
   #block-bene-child-local-tasks {
     @include transition(all 0.4s linear);
-    background-color: bbv(--color-background-darkest); // in case css variables are not supported
+    background-color: bbv(main-black); // in case css variables are not supported
     background-color: var(--color-background-darkest);
     bottom: 0;
     height: auto;

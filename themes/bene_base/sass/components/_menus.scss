@@ -21,6 +21,7 @@
       background-color: bbv(bright-blue); // in case css variables are not supported
       background-color: var(--color-theme-primary-bright);
       display: block;
+      font-size: 0;
       height: 6px;
       left: 25%;
       position: absolute;

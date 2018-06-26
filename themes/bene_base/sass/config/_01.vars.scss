@@ -57,7 +57,6 @@ $bene-buildup-variables: (
   gradient-direction: -180deg,
   gradient-from-color: rgba(bav(main-black), 0.00), // 0.00 means fully transparent
   gradient-to-color: rgba(bav(main-black), 0.00), // 0.00 means fully transparent, 1 means opaque
-  preferred-alignment: left,
 );
 
 // bbv = bene buildup variable
@@ -86,7 +85,7 @@ $bene-buildup-variables: (
    * They should also refer to the buildup variables above as much as possible.
    **/
 
-  // base_style -- these apply to everything unless overridden here or in bene_base.
+  // base_styles -- these apply to everything unless overridden here or in bene_base.
   --base_style-font-family: var(--font-family-primary);
   --base_style-font-family-secondary: var(--font-family-secondary);
   --base_style-paragraph-color: var(--color-text-primary);
@@ -101,12 +100,6 @@ $bene-buildup-variables: (
   --base_style-table-background-color: var(--color-background-default);
   --base_style-table-background-stripe-color: var(--color-background-lightest);
   --base_style-fieldset-legend-color: var(--color-text-secondary);
-  // _admin.scss:
-  --base_style-body-background-color: var(--color-background-default);
-  --base_style-contextual-links-background-color: var(--color-background-default);
-  --base_style-contextual-links-list-item-background-color: var(--color-background-default);
-  --base_style-contextual-links-list-item-link-background-color: var(--color-background-default);
-  --base_style-block-local-tasks-background-color: var(--color-background-darkest);
 
   // rich_text
   --rich_text-background-paragraph-and-list-color: var(--color-text-secondary);
@@ -116,14 +109,6 @@ $bene-buildup-variables: (
   // bene_home_page_feature_block
   // bene_sub_navigation_block
   // bene_listing_page_plugin_display_block
-
-  // bene_mobile_nav
-  --bene_mobile_nav-color: --color-text-inverse;
-  --bene_mobile_nav-menu-link-color: --color-text-inverse;
-  --bene_mobile_nav-background: --color-theme-primary;
-  --bene_mobile_nav-menu-text-align: --preferred-alignment;
-  --bene_mobile_nav-font-face: --font-family-primary;
-  --bene_mobile_nav-font-size: --font-size-primary;
 
   // bene_home_page_feature_block
   --bene_home_page_feature_block-background-color: var(--color-theme-primary);
