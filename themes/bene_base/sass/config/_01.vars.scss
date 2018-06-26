@@ -101,10 +101,78 @@ $bene-buildup-variables: (
   --base_style-table-background-stripe-color: var(--color-background-lightest);
   --base_style-fieldset-legend-color: var(--color-text-secondary);
 
-  // rich_text
+  // _admin.scss:
+  --base_style-body-background-color: var(--color-background-default);
+  --base_style-contextual-links-background-color: var(--color-background-default);
+  --base_style-contextual-links-list-item-background-color: var(--color-background-default);
+  --base_style-contextual-links-list-item-link-background-color: var(--color-background-default);
+  --base_style-block-local-tasks-background-color: var(--color-background-darkest);
+
+  //_tiles.scss
+  --base_style-field-image-header: var(--color-theme-primary);
+  --base_style-desktop-field-image-header: var(--color-theme-primary);
+  --base_style-field-image-text: var(--color-text-secondary);
+
+  //_nice_select.scss
+  --drop_down-background-color: var(--color-background-darker);
+  --drop_down-active-text-color: var(--color-text-inverse);
+  --drop_down-disabled-text-color: var(--color-text-inverse);
+
+
+  // rich_text (_paragraphs.scss)
   --rich_text-background-paragraph-and-list-color: var(--color-text-secondary);
   --rich_text-background-blockquote-paragraph-color: var(--color-theme-primary-bright);
   --rich_text-background-blockquote-horizontal-line-color: var(--color-theme-primary-bright);
+
+  //_newsletter.scss
+  --newsletter-background-color: var(--color-theme-primary);
+  --newsletter-main-color: var(--color-text-inverse);
+  --newsletter-label-color: var(--color-text-inverse);
+  --newsletter-paragraph-color: var(--color-text-inverse);
+  --newsletter-link-color: var(--color-text-primary);
+  --newsletter-link-button-color: var(--color-background-default);
+  --newsletter-link-button-hover-color: var(--color-theme-primary-bright-lighten20);
+
+  //_menus.scss
+  --menu-closed-background-color: var(--color-theme-primary-bright);
+  --menu-open-background-color: var(--color-theme-primary-bright);
+  --menu-hover-background-color: var(--color-theme-primary);
+  --menu-after-hover-background-color: var(--color-theme-primary);
+  --menu-active-background-color: var(--color-theme-primary-bright);
+  --menu-mobile-background-color: var(--color-background-darkest);
+  --menu-mobile-link-color: var(--color-theme-primary-bright);
+  --menu-mobile-active-link-color: var(--color-text-inverse);
+  --menu-mobile-list-background-color: var(--color-theme-primary);
+  --menu-mobile-list-color: var(--color-text-primary);
+  --menu-mobile-list-active-color: var(--color-text-inverse);
+  --menu-desktop-link-color: var(--color-text-medium-dark);
+  --menu-desktop-active-link-color: var(--color-theme-primary);
+  --menu-desktop-last-active-link-color: var(--color-text-inverse);
+  --menu-desktop-last-active-link-background-color: var(--color-theme-primary-bright);
+  --menu-desktop-last-active-link-hover-background-color: var(--color-theme-primary-bright-darken20);
+  --menu-desktop-main-link-color: var(--color-text-primary);
+  --menu-desktop-main-active-link-color: var(--color-theme-primary);
+
+  //_inner-page.scss
+  --inner_page-header-two-color: var(--color-text-primary);
+  --inner_page-header-three-color: var(--color-text-primary);
+  --inner_page-link-color: var(--color-theme-primary-bright);
+  --inner_page-link-hover-color: var(--color-theme-primary-bright-darken20);
+  --inner_page-paragraph-color: var(--color-text-primary);
+  --inner_page-blockquote-paragraph-color: var(--color-text-accent);
+
+  //_home_hero.scss
+  --feature-block-color: var(--color-text-inverse);
+  --feature-block-background-color: var(--color-theme-primary-bright);
+  --link-border-color: var(--color-text-inverse);
+  --link-color: var(--color-text-inverse);
+  --link-hover-color: var(--color-text-inverse);
+  --link-hover-background-color: var(color-background-lightest);
+
+  //_hero.scss
+  --block-background-color: var(--color-theme-primary-bright);
+  --block-header-one-two-color: var(--color-text-inverse);
+
 
   // bene_home_page_feature_block
   // bene_sub_navigation_block
