@@ -18,7 +18,7 @@
     width: 100%;
     z-index: 9999;
     span {
-      background-color: bbv(bright-blue); // in case css variables are not supported
+      background-color: bbv(bene-bright-blue); // in case css variables are not supported
       background-color: var(--color-theme-primary-bright);
       display: block;
       font-size: 0;
@@ -31,7 +31,7 @@
       z-index: 9999;
       &:before,
       &:after {
-        background: bbv(bright-blue); // in case css variables are not supported
+        background: bbv(bene-bright-blue); // in case css variables are not supported
         background: var(--color-theme-primary-bright);
         content: '';
         height: 100%;
@@ -47,11 +47,11 @@
       }
     }
     &:hover span {
-      background: bbv(main-blue); // in case css variables are not supported
+      background: bbv(bene-main-blue); // in case css variables are not supported
       background: var(--color-theme-primary);
       &:before,
       &:after {
-        background: bbv(main-blue); // in case css variables are not supported
+        background: bbv(bene-main-blue); // in case css variables are not supported
         background: var(--color-theme-primary);
       }
     }
@@ -61,7 +61,7 @@
       background-color: transparent;
       &:before,
       &:after {
-        background: bbv(bright-blue); // in case css variables are not supported
+        background: bbv(bene-bright-blue); // in case css variables are not supported
         background: var(--color-theme-primary-bright);
         transform: rotate(45deg) translateY(0);
         transition: transform 0.3s;
@@ -80,7 +80,7 @@
   .region-primary-nav {
     display: flex;
     flex-direction: column-reverse;
-    background-color: bbv(main-black); // in case css variables are not supported
+    background-color: bbv(bene-main-black); // in case css variables are not supported
     background-color: var(--color-background-darkest);
     left: 0;
     position: absolute;
@@ -89,9 +89,9 @@
     z-index: 20;
   }
   .menu a {
-    border-bottom: 1px solid bbv(bright-blue); // in case css variables are not supported
+    border-bottom: 1px solid bbv(bene-bright-blue); // in case css variables are not supported
     border-bottom: 1px solid var(--color-theme-primary-bright);
-    color: bbv(bright-blue); // in case css variables are not supported
+    color: bbv(bene-bright-blue); // in case css variables are not supported
     color: var(--color-theme-primary-bright);
     display: inline-block;
     font-size: rem(18);
@@ -112,7 +112,7 @@
       width: rem(9);
     }
     &.is-active {
-      color: bbv(main-white); // in case css variables are not supported
+      color: bbv(bene-main-white); // in case css variables are not supported
       color: var(--color-text-inverse);
     }
   }
@@ -127,13 +127,13 @@
     }
   }
   &:last-child a {
-    background-color: bbv(main-blue); // in case css variables are not supported
+    background-color: bbv(bene-main-blue); // in case css variables are not supported
     background-color: var(--color-theme-primary);
-    color: bbv(main-black); // in case css variables are not supported
+    color: bbv(bene-main-black); // in case css variables are not supported
     color: var(--color-text-primary);
     font-weight: 600;
     &.is-active {
-      color: bbv(main-white); // in case css variables are not supported
+      color: bbv(bene-main-white); // in case css variables are not supported
       color: var(--color-text-inverse);
     }
   }
@@ -164,19 +164,19 @@
   }
   .desktop-nav .menu--utility .menu-item {
     a {
-      color: bbv(medium-grey); // in case css variables are not supported
+      color: bbv(bene-medium-grey); // in case css variables are not supported
       color: var(--color-text-medium-dark);
       font-size: rem(14);
       &:hover, &:focus, &.is-active {
-        color: bbv(main-blue); // in case css variables are not supported
+        color: bbv(bene-main-blue); // in case css variables are not supported
         color: var(--color-theme-primary);
       }
     }
     &:last-child a {
       @include button;
-      color: bbv(main-white); // in case css variables are not supported
+      color: bbv(bene-main-white); // in case css variables are not supported
       color: var(--color-text-inverse);
-      background-color: bbv(bright-blue); // in case css variables are not supported
+      background-color: bbv(bene-bright-blue); // in case css variables are not supported
       background-color: var(--color-theme-primary-bright);
       &:hover {
         background-color: #1c9db1; // in case css variables are not supported
@@ -191,13 +191,13 @@
   }
   .desktop-nav .menu--main .menu-item {
     a {
-      color: bbv(main-black); // in case css variables are not supported
+      color: bbv(bene-main-black); // in case css variables are not supported
       color: var(--color-text-primary);
       font-weight: 700;
       letter-spacing: rem(0.5);
       text-transform: uppercase;
       &:hover, &:focus, &.is-active {
-        color: bbv(main-blue); // in case css variables are not supported
+        color: bbv(bene-main-blue); // in case css variables are not supported
         color: var(--color-theme-primary);
       }
       &.is-active {

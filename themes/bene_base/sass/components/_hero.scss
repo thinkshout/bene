@@ -1,7 +1,7 @@
 .block-hero {
   visibility: hidden;
   align-items: center;
-  background-color: bbv(bright-blue); // in case css variables are not supported
+  background-color: bbv(bene-bright-blue); // in case css variables are not supported
   background-color: var(--color-theme-primary-bright);
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,7 +16,7 @@
     height: 24vw;
   }
   h1, h2 {
-    color: bbv(main-white); // in case css variables are not supported
+    color: bbv(bene-main-white); // in case css variables are not supported
     color: var(--color-text-inverse);
     flex: 0 1 auto;
     font-size: rem(32);

@@ -1,12 +1,12 @@
 // Default Styles (Mobile First!)
 input[type="search"], textarea {
   -webkit-appearance: none;
-  //background-color: bbv(main-white); // in case css variables are not supported
+  //background-color: bbv(bene-main-white); // in case css variables are not supported
   //background-color: var(--color-background-default);
   border-radius: 0;
   border: none;
   box-sizing: border-box;
-  color: bbv(main-black); // in case css variables are not supported
+  color: bbv(bene-main-black); // in case css variables are not supported
   color: var(--color-text-primary);
   font-size: rem(16);
   font-weight: 600;
@@ -14,23 +14,23 @@ input[type="search"], textarea {
   padding: rem(18) rem(50) rem(18) rem(22);
   width: 100%;
   &::-webkit-input-placeholder {
-    color: bbv(placeholder-grey); // in case css variables are not supported
+    color: bbv(bene-placeholder-grey); // in case css variables are not supported
     color: var(--color-text-placeholder);
   }
   &::-moz-placeholder {
-    color: bbv(placeholder-grey); // in case css variables are not supported
+    color: bbv(bene-placeholder-grey); // in case css variables are not supported
     color: var(--color-text-placeholder);
   }
   &:-ms-input-placeholder {
-    color: bbv(placeholder-grey); // in case css variables are not supported
+    color: bbv(bene-placeholder-grey); // in case css variables are not supported
     color: var(--color-text-placeholder);
   }
   &:-moz-placeholder {
-    color: bbv(placeholder-grey); // in case css variables are not supported
+    color: bbv(bene-placeholder-grey); // in case css variables are not supported
     color: var(--color-text-placeholder);
   }
   &:focus {
-    outline: 1px solid bbv(light-grey); // in case css variables are not supported
+    outline: 1px solid bbv(bene-light-grey); // in case css variables are not supported
     outline: 1px solid var(--color-text-light);
   }
 }
@@ -41,7 +41,7 @@ input[type="search"], textarea {
     display: none;
   }
   label {
-    color: bbv(dark-grey); // in case css variables are not supported
+    color: bbv(bene-dark-grey); // in case css variables are not supported
     color: var(--color-text-secondary);
     display: inline-block;
     font-size: rem(18);
@@ -56,7 +56,7 @@ input[type="search"], textarea {
     &::before {
       @include default-transition;
       border-radius: rem(1);
-      border: 1px solid bbv(dark-grey); // in case css variables are not supported
+      border: 1px solid bbv(bene-dark-grey); // in case css variables are not supported
       border: 1px solid var(--color-text-secondary);
       color: transparent;
       content: "✓";
@@ -77,21 +77,21 @@ input[type="search"], textarea {
     }
   }
   input[type="checkbox"]:checked + label::before {
-    color: bbv(dark-grey); // in case css variables are not supported
+    color: bbv(bene-dark-grey); // in case css variables are not supported
     color: var(--color-text-secondary);
     text-shadow: 1px 1px 1px rgba(240, 240, 240, 0.5);
   }
 }
 
 label {
-  color: bbv(dark-grey); // in case css variables are not supported
+  color: bbv(bene-dark-grey); // in case css variables are not supported
   color: var(--color-text-secondary);
   font-weight: 600;
   margin-bottom: rem(24);
 }
 
 input:focus {
-  outline-color: bbv(light-grey); // in case css variables are not supported
+  outline-color: bbv(bene-light-grey); // in case css variables are not supported
   outline-color: var(--color-text-light);
 }
 
@@ -102,12 +102,12 @@ input[type='password'],
 input[type='tel'],
 textarea {
   -webkit-appearance: none;
-  background-color: bbv(main-white);
+  background-color: bbv(bene-main-white);
   border-radius: rem(3);
-  border: 1px solid bbv(light-grey); // in case css variables are not supported
+  border: 1px solid bbv(bene-light-grey); // in case css variables are not supported
   border: 1px solid var(--color-text-light);
   box-sizing: border-box;
-  color: bbv(main-black); // in case css variables are not supported
+  color: bbv(bene-main-black); // in case css variables are not supported
   color: var(--color-text-primary);
   font-size: rem(16);
   font-weight: 600;
@@ -115,19 +115,19 @@ textarea {
   padding: rem(18) rem(50) rem(18) rem(22);
   width: 100%;
   &::-webkit-input-placeholder {
-    color: bbv(placeholder-grey); // in case css variables are not supported
+    color: bbv(bene-placeholder-grey); // in case css variables are not supported
     color: var(--color-text-placeholder);
   }
   &::-moz-placeholder {
-    color: bbv(placeholder-grey); // in case css variables are not supported
+    color: bbv(bene-placeholder-grey); // in case css variables are not supported
     color: var(--color-text-placeholder);
   }
   &:-ms-input-placeholder {
-    color: bbv(placeholder-grey); // in case css variables are not supported
+    color: bbv(bene-placeholder-grey); // in case css variables are not supported
     color: var(--color-text-placeholder);
   }
   &:-moz-placeholder {
-    color: bbv(placeholder-grey); // in case css variables are not supported
+    color: bbv(bene-placeholder-grey); // in case css variables are not supported
     color: var(--color-text-placeholder);
   }
   &:focus {
@@ -145,9 +145,9 @@ textarea {
 
 input[type='submit'] {
   @include button;
-  background-color: bbv(bright-blue); // in case css variables are not supported
+  background-color: bbv(bene-bright-blue); // in case css variables are not supported
   background-color: var(--color-theme-primary-bright);
-  color: bbv(main-white); // in case css variables are not supported
+  color: bbv(bene-main-white); // in case css variables are not supported
   color: var(--color-text-inverse);
   &:hover {
     background-color: #1c9db1; // in case css variables are not supported

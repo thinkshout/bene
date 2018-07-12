@@ -19,7 +19,7 @@
     font-family: var(--font-family-primary);
     font-weight: 700;
     font-style: normal;
-  } @else if $style == '$main-black' {
+  } @else if $style == 'black' {
     font-family: 'Open Sans', sans-serif; // in case css variables are not supported
     font-family: var(--font-family-primary);
     font-weight: 900;
