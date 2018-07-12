@@ -2,7 +2,7 @@
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: bbv(--font-family-primary);
+  font-family: bbv(font-family-primary);
   font-family: var(--base_style-font-family); // or main-font-family
   font-size: rem(16);
   font-style: normal;

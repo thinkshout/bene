@@ -1,14 +1,14 @@
 .block-bene-home-page-feature-block {
-  color: bbv(main-white); // in case css variables are not supported
-  color: var(--color-text-inverse);
+  color: bbv(color-text-inverse); // in case css variables are not supported
+  color: var(--home_hero-bene-home-page-feature-block-color);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   text-align: center;
   padding: 10rem 1rem;
-  background-color: bbv(bright-blue); // in case css variables are not supported
-  background-color: var(--color-theme-primary-bright);
+  background-color: bbv(color-theme-primary-bright); // in case css variables are not supported
+  background-color: var(--home_hero-bene-home-page-feature-block-background-color);
 
   @include mq(mobile) {
     background-size: 100%;
@@ -50,21 +50,21 @@
     position: relative;
     z-index: 1;
     a {
-      border: rem(2) solid bbv(main-white); // in case css variables are not supported
-      border: rem(2) solid var(--color-text-inverse);
+      border: rem(2) solid bbv(color-text-inverse); // in case css variables are not supported
+      border: rem(2) solid var(--home_hero-bene-link-border-color);
       border-radius: 0;
-      color: bbv(main-white); // in case css variables are not supported
-      color: var(--color-text-inverse);
+      color: bbv(color-text-inverse); // in case css variables are not supported
+      color: var(--home_hero-bene-link-color);
       padding: 1rem 2rem;
       font-size: rem(14);
       @include font-style('bold');
       text-transform: uppercase;
 
       &:hover {
-        color: bbv(main-white); // in case css variables are not supported
-        color: var(--color-text-link);
-        background-color: bbv(light-grey); // in case css variables are not supported
-        background-color: var(--color-background-lightest);
+        color: bbv(color-text-link); // in case css variables are not supported
+        color: var(--home_hero-link-hover-color);
+        background-color: bbv(color-background-lightest); // in case css variables are not supported
+        background-color: var(--home_hero-bene-link-hover-background-color);
       }
     }
 

@@ -116,7 +116,7 @@
     p {
       font-family: bbv(main-font-family); // in case css variables are not supported
       font-family: var(--bene_home_page_feature_block-description-font-family);
-      color: bbv(main-white); // in case css variables are not supported
+      color: bbv(bene-main-white); // in case css variables are not supported
       color: var(--bene_home_page_feature_block-description-color);
       margin: rem(32) auto;
       max-width: 100%;

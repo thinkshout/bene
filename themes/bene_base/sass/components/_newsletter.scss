@@ -1,10 +1,10 @@
 // Default Styles (Mobile First!)
 .external-newsletter {
   align-items: center;
-  background-color: bbv(main-blue); // in case css variables are not supported
-  background-color: var(--color-theme-primary);
-  color: bbv(main-white); // in case css variables are not supported
-  color: var(--color-text-inverse);
+  background-color: bbv(color-theme-primary); // in case css variables are not supported
+  background-color: var(--newsletter-background-color);
+  color: bbv(color-text-inverse); // in case css variables are not supported
+  color: var(--newsletter-main-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,17 +35,17 @@
     text-align: center;
   }
   label {
-    color: bbv(main-white); // in case css variables are not supported
-    color: var(--color-text-inverse);
+    color: bbv(color-text-inverse); // in case css variables are not supported
+    color: var(--newsletter-label-color);
   }
   p {
-    color: bbv(main-white); // in case css variables are not supported
-    color: var(--color-text-inverse);
+    color: bbv(color-text-inverse); // in case css variables are not supported
+    color: var(--newsletter-paragraph-color);
     margin: rem(6) 0;
   }
   a {
-    color: bbv(main-black); // in case css variables are not supported
-    color: var(--color-text-primary);
+    color: bbv(color-text-primary); // in case css variables are not supported
+    color: var(--newsletter-link-color);
     &:after {
       @include all-transition;
       content: ' →';
@@ -58,8 +58,8 @@
     }
   }
   a.button {
-    background-color: bbv(main-white); // in case css variables are not supported
-    background-color: var(--color-background-default);
+    background-color: bbv(color-background-default); // in case css variables are not supported
+    background-color: var(--newsletter-link-button-color);
     font-size: rem(12);
     font-weight: 600;
     padding: rem(15) rem(20);
@@ -68,8 +68,8 @@
       content: none;
     }
     &:hover {
-      background-color: #a8e7f1; // in case css variables are not supported
-      background-color: var(--color-theme-primary-bright-lighten20);
+      background-color: bbv(color-theme-primary-bright-lighten20); // in case css variables are not supported
+      background-color: var(--newsletter-link-button-hover-color);
     }
   }
 }
