@@ -74,8 +74,8 @@ body.user-logged-in .region.region-content {
   }
   #block-bene-child-local-tasks {
     @include transition(all 0.4s linear);
-    background-color: bbv(main-black); // in case css variables are not supported
-    background-color: var(--color-background-darkest);
+    background-color: bbv(color-background-darkest); // in case css variables are not supported
+    background-color: var(--base_style-block-local-tasks-background-color);
     bottom: 0;
     height: auto;
     padding-right: 45px;

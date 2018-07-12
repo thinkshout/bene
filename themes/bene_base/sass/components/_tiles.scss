@@ -45,8 +45,8 @@
 
       .field--name-field-image,
       .bg-header {
-        background-color: bbv(bene-main-blue); // in case css variables are not supported
-        background-color: var(--color-theme-primary);
+        background-color: bbv(color-theme-primary); // in case css variables are not supported
+        background-color: var(--base_style-field-image-header);
         font-size: 0;
         max-height: rem(228);
         max-width: rem(380);
@@ -57,8 +57,8 @@
       @include mq(desktop) {
         .field--name-field-image,
         .bg-header {
-          background-color: bbv(bene-main-blue); // in case css variables are not supported
-          background-color: var(--color-theme-primary);
+          background-color: bbv(color-theme-primary); // in case css variables are not supported
+          background-color: var(--base_style-desktop-field-image-header);
           height: 18.36vw;
           width: 30.6vw;
         }
@@ -71,8 +71,8 @@
       }
 
       .field--name-field-text p {
-        color: bbv(bene-dark-grey); // in case css variables are not supported
-        color: var(--color-text-secondary);
+        color: bbv(color-text-secondary); // in case css variables are not supported
+        color: var(--base_style-field-image-text);
         line-height: rem(24);
         margin-bottom: rem(12);
         margin-top: rem(12);

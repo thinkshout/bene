@@ -10,8 +10,8 @@
   }
 
   h2 {
-    color: bbv(bene-main-black); // in case css variables are not supported
-    color: var(--color-text-primary);
+    color: bbv(color-text-primary); // in case css variables are not supported
+    color: var(--inner_page-header-two-color);
     font-style: normal;
     font-weight: normal;
     font-size: medium;
@@ -23,26 +23,26 @@
   }
 
   h3 {
-    color: bbv(bene-main-black); // in case css variables are not supported
-    color: var(--color-text-primary);
+    color: bbv(color-text-primary); // in case css variables are not supported
+    color: var(--inner_page-header-three-color);
     font-size: medium;
     font-weight: normal;
     line-height: normal;
     margin-bottom: 0;
 
     a {
-      color: bbv(bene-bright-blue); // in case css variables are not supported
-      color: var(--color-theme-primary-bright);
+      color: bbv(color-theme-primary-bright); // in case css variables are not supported
+      color: var(--inner_page-link-color);
     }
     a:hover {
-      color: #0CC6E3; // in case css variables are not supported
-      color: var(--color-theme-primary-bright-darken20);
+      color: bbv(color-theme-primary-bright-darken20); // in case css variables are not supported
+      color: var(--inner_page-link-hover-color);
     }
   }
 
   p {
-    color: bbv(bene-main-black); // in case css variables are not supported
-    color: var(--color-text-primary);
+    color: bbv(color-text-primary); // in case css variables are not supported
+    color: var(--inner_page-paragraph-color);
     font-size: rem(18);
     font-weight: normal;
     line-height: normal;
@@ -58,8 +58,8 @@
 
   blockquote {
     p {
-      color: bbv(bene-dark-grey); // in case css variables are not supported
-      color: var(--color-text-accent);
+      color: bbv(color-text-accent); // in case css variables are not supported
+      color: var(--inner_page-blockquote-paragraph-color);
       font-size: rem(24);
       float: none;
       font-style: normal;
