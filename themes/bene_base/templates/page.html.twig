@@ -4,13 +4,13 @@
       <div class="logo-wrapper">
         {{page.site_branding}}
       </div>
-      <div class="desktop-nav">
+      <div class="desktop-nav" role="navigation">
         {{page.secondary_nav}}
         {{page.primary_nav}}
       </div>
-      <div class="mobile-nav">
+      <div class="mobile-nav" role="navigation">
         <a class="mobile-menu-toggle">
-          <div><span aria-hidden="false">Mobile Menu</span></div>
+          <div><span></span></div>
         </a>
         {{page.primary_nav}}
         {{page.secondary_nav}}
@@ -19,7 +19,7 @@
   </header>
 
   {% if page.content %}
-    {{page.content}}
+    <main id="main-content">{{page.content}}</main>
   {% endif %}
 
   {% if page.footer %}

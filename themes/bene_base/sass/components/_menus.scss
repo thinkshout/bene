@@ -21,7 +21,6 @@
       background-color: bbv(color-theme-primary-bright); // in case css variables are not supported
       background-color: var(--menu-closed-background-color);
       display: block;
-      font-size: 0;
       height: 6px;
       left: 25%;
       position: absolute;
@@ -89,7 +88,7 @@
     z-index: 20;
   }
   .menu a {
-    border-bottom: 1px solid bbv(bright-blue); // in case css variables are not supported
+    border-bottom: 1px solid bbv(bene-bright-blue); // in case css variables are not supported
     border-bottom: 1px solid var(--color-theme-primary-bright);
     color: bbv(color-theme-primary-bright); // in case css variables are not supported
     color: var(--menu-mobile-link-color);
