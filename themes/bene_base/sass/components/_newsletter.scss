@@ -1,9 +1,9 @@
 // Default Styles (Mobile First!)
 .external-newsletter {
   align-items: center;
-  background-color: bbv(main-blue); // in case css variables are not supported
+  background-color: bbv(bene-main-blue); // in case css variables are not supported
   background-color: var(--color-theme-primary);
-  color: bbv(main-white); // in case css variables are not supported
+  color: bbv(bene-main-white); // in case css variables are not supported
   color: var(--color-text-inverse);
   display: flex;
   flex-direction: column;
@@ -35,16 +35,16 @@
     text-align: center;
   }
   label {
-    color: bbv(main-white); // in case css variables are not supported
+    color: bbv(bene-main-white); // in case css variables are not supported
     color: var(--color-text-inverse);
   }
   p {
-    color: bbv(main-white); // in case css variables are not supported
+    color: bbv(bene-main-white); // in case css variables are not supported
     color: var(--color-text-inverse);
     margin: rem(6) 0;
   }
   a {
-    color: bbv(main-black); // in case css variables are not supported
+    color: bbv(bene-main-black); // in case css variables are not supported
     color: var(--color-text-primary);
     &:after {
       @include all-transition;
@@ -58,7 +58,7 @@
     }
   }
   a.button {
-    background-color: bbv(main-white); // in case css variables are not supported
+    background-color: bbv(bene-main-white); // in case css variables are not supported
     background-color: var(--color-background-default);
     font-size: rem(12);
     font-weight: 600;

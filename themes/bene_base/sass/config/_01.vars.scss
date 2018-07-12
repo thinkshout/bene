@@ -7,15 +7,15 @@
  * whole new set of variables brought in for a new theme.
  **/
 $bene-a-level-variables: (
-  main-white: #FFF,
-  light-grey: #D8D8D8,
-  placeholder-grey: #979797,
-  medium-grey: #7C7C7C,
-  dark-grey: #5C5B5B,
-  main-black: #000,
-  bright-blue: #50CFE3,
-  main-blue: #129FB5,
-  sans-font: "'Open Sans', sans-serif",
+  bene-main-white: #FFF,
+  bene-light-grey: #D8D8D8,
+  bene-placeholder-grey: #979797,
+  bene-medium-grey: #7C7C7C,
+  bene-dark-grey: #5C5B5B,
+  bene-main-black: #000,
+  bene-bright-blue: #50CFE3,
+  bene-main-blue: #129FB5,
+  bene-sans-font: "'Open Sans', sans-serif",
 );
 
 // bav = bene a-level variable
@@ -25,29 +25,29 @@ $bene-a-level-variables: (
 }
 
 $bene-buildup-variables: (
-  color-theme-primary: bav(main-blue),
-  color-theme-primary-darken20: darken(bav(main-blue), 20% ),
-  color-theme-primary-lighten20: lighten(bav(main-blue), 20%),
-  color-theme-primary-bright: bav(bright-blue),
-  color-theme-primary-bright-darken20: darken(bav(bright-blue), 20%),
-  color-theme-primary-bright-lighten20: lighten(bav(bright-blue), 20%),
-  color-text-primary: bav(main-black),
-  color-text-secondary: bav(dark-grey),
-  color-text-accent: bav(dark-grey),
-  color-text-placeholder: bav(placeholder-grey),
-  color-text-medium-dark: bav(medium-grey),
-  color-text-inverse: bav(main-white),
-  color-text-light: bav(light-grey),
-  color-text-link: bav(main-black),
-  color-background-default: bav(main-white),
-  color-background-lightest: bav(light-grey),
-  color-background-darker: bav(dark-grey),
-  color-background-darkest: bav(main-black),
-  color-social-icon: bav(bright-blue),
-  color-social-icon-darken20: darken(bav(bright-blue), 20%),
+  color-theme-primary: bav(bene-main-blue),
+  color-theme-primary-darken20: darken(bav(bene-main-blue), 20% ),
+  color-theme-primary-lighten20: lighten(bav(bene-main-blue), 20%),
+  color-theme-primary-bright: bav(bene-bright-blue),
+  color-theme-primary-bright-darken20: darken(bav(bene-bright-blue), 20%),
+  color-theme-primary-bright-lighten20: lighten(bav(bene-bright-blue), 20%),
+  color-text-primary: bav(bene-main-black),
+  color-text-secondary: bav(bene-dark-grey),
+  color-text-accent: bav(bene-dark-grey),
+  color-text-placeholder: bav(bene-placeholder-grey),
+  color-text-medium-dark: bav(bene-medium-grey),
+  color-text-inverse: bav(bene-main-white),
+  color-text-light: bav(bene-light-grey),
+  color-text-link: bav(bene-main-black),
+  color-background-default: bav(bene-main-white),
+  color-background-lightest: bav(bene-light-grey),
+  color-background-darker: bav(bene-dark-grey),
+  color-background-darkest: bav(bene-main-black),
+  color-social-icon: bav(bene-bright-blue),
+  color-social-icon-darken20: darken(bav(bene-bright-blue), 20%),
   social-icon-size: rem(40),
-  font-family-primary: bav(sans-font),
-  font-family-secondary: bav(sans-font),
+  font-family-primary: bav(bene-sans-font),
+  font-family-secondary: bav(bene-sans-font),
   font-weight-primary: normal,
   font-weight-menu-primary: bold,
   font-weight-extra-heavy: 900,
@@ -55,8 +55,8 @@ $bene-buildup-variables: (
   font-size-primary: rem(24),
   font-size-header: rem(36),
   gradient-direction: -180deg,
-  gradient-from-color: rgba(bav(main-black), 0.00), // 0.00 means fully transparent
-  gradient-to-color: rgba(bav(main-black), 0.00), // 0.00 means fully transparent, 1 means opaque
+  gradient-from-color: rgba(bav(bene-main-black), 0.00), // 0.00 means fully transparent
+  gradient-to-color: rgba(bav(bene-main-black), 0.00), // 0.00 means fully transparent, 1 means opaque
   preferred-alignment: left,
 );
 

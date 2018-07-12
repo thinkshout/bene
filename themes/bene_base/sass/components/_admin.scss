@@ -91,13 +91,13 @@ body.user-logged-in .region.region-content {
       margin: 0;
     }
     li {
-      background-color: bbv(main-white); // in case css variables are not supported
+      background-color: bbv(bene-main-white); // in case css variables are not supported
       background-color: var(--color-background-default);
       a {
-        background-color: bbv(main-blue); // in case css variables are not supported
+        background-color: bbv(bene-main-blue); // in case css variables are not supported
         background-color: var(--color-theme-primary);
         border: none;
-        color: bbv(main-white); // in case css variables are not supported
+        color: bbv(bene-main-white); // in case css variables are not supported
         color: var(--color-text-inverse);
         display: inline-block;
         font-size: rem(15);
@@ -113,13 +113,13 @@ body.user-logged-in .region.region-content {
           background-color: var(--color-theme-primary-darken20);
         }
         &.is-active {
-          background-color: bbv(bright-blue); // in case css variables are not supported
+          background-color: bbv(bene-bright-blue); // in case css variables are not supported
           background-color: var(--color-theme-primary-bright);
         }
       }
     }
     .show-hide {
-      background-color: bbv(main-black); // in case css variables are not supported
+      background-color: bbv(bene-main-black); // in case css variables are not supported
       background-color: var(--color-background-darkest);
       cursor: pointer;
       font-size: rem(35);

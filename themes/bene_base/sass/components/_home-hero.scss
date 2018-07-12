@@ -1,5 +1,5 @@
 .block-bene-home-page-feature-block {
-  color: bbv(main-white); // in case css variables are not supported
+  color: bbv(bene-main-white); // in case css variables are not supported
   color: var(--color-text-inverse);
   background-position: center center;
   background-repeat: no-repeat;
@@ -7,7 +7,7 @@
   position: relative;
   text-align: center;
   padding: 10rem 1rem;
-  background-color: bbv(bright-blue); // in case css variables are not supported
+  background-color: bbv(bene-bright-blue); // in case css variables are not supported
   background-color: var(--color-theme-primary-bright);
 
   @include mq(mobile) {
@@ -50,10 +50,10 @@
     position: relative;
     z-index: 1;
     a {
-      border: rem(2) solid bbv(main-white); // in case css variables are not supported
+      border: rem(2) solid bbv(bene-main-white); // in case css variables are not supported
       border: rem(2) solid var(--color-text-inverse);
       border-radius: 0;
-      color: bbv(main-white); // in case css variables are not supported
+      color: bbv(bene-main-white); // in case css variables are not supported
       color: var(--color-text-inverse);
       padding: 1rem 2rem;
       font-size: rem(14);
@@ -61,9 +61,9 @@
       text-transform: uppercase;
 
       &:hover {
-        color: bbv(main-white); // in case css variables are not supported
+        color: bbv(bene-main-white); // in case css variables are not supported
         color: var(--color-text-link);
-        background-color: bbv(light-grey); // in case css variables are not supported
+        background-color: bbv(bene-light-grey); // in case css variables are not supported
         background-color: var(--color-background-lightest);
       }
     }
