@@ -4,9 +4,9 @@ dependencies:
   module:
     - search
   theme:
-    - bene_base
-id: bene_base_search
-theme: bene_base
+    - bene_parent
+id: bene_parent_search
+theme: bene_parent
 region: secondary_nav
 weight: -4
 provider: null

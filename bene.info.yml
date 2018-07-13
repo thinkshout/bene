@@ -76,7 +76,7 @@ dependencies:
   - views_ui
 themes:
   - bartik
-  - bene_base
+  - bene_parent
   - bene_child
   - seven
 package: Bene

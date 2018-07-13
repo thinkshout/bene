@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - bene_base
-id: bene_base_breadcrumbs
-theme: bene_base
+    - bene_parent
+id: bene_parent_breadcrumbs
+theme: bene_parent
 region: secondary_nav
 weight: -6
 provider: null

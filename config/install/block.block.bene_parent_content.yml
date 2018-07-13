@@ -4,16 +4,16 @@ dependencies:
   module:
     - system
   theme:
-    - bene_base
-id: bene_base_messages
-theme: bene_base
+    - bene_parent
+id: bene_parent_content
+theme: bene_parent
 region: content
-weight: -4
+weight: -2
 provider: null
-plugin: system_messages_block
+plugin: system_main_block
 settings:
-  id: system_messages_block
-  label: 'Status messages'
+  id: system_main_block
+  label: 'Main page content'
   provider: system
   label_display: '0'
 visibility: {  }

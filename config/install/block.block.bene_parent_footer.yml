@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - bene_base
-id: bene_base_footer
-theme: bene_base
+    - bene_parent
+id: bene_parent_footer
+theme: bene_parent
 region: footer
 weight: -6
 provider: null
