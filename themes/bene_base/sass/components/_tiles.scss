@@ -51,14 +51,22 @@
         max-width: rem(380);
         img {
           max-width: 100%;
+
+          @include mq(phablet) {
+            min-width: rem(380);
+          }
+
+          @include mq(desktop) {
+            min-width: rem(300);
+          }
         }
       }
       @include mq(desktop) {
         .field--name-field-image,
         .bg-header {
           background-color: $blue;
-          height: 18.36vw;
-          width: 30.6vw;
+          height: auto;
+          width: auto;
         }
       }
       .field--name-field-title {
