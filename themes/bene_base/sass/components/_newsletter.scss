@@ -1,0 +1,87 @@
+// Default Styles (Mobile First!)
+.external-newsletter {
+  align-items: center;
+  background-color: $blue;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: rem(12);
+  .mailchimp-signup-subscribe-form,
+  .mailchimp-newsletter-mergefields {
+    display: flex;
+    justify-content: center;
+  }
+  .mailchimp-newsletter-mergefields {
+    width: 75%
+  }
+  .form-actions {
+    input {
+      height: 3.125rem;
+      padding: 1rem 1.875rem;
+      margin-top: .9rem;
+    }
+  }
+  .form-item {
+    flex-grow: 1;
+    width: 30%;
+    margin: 0 10px;
+  }
+  h2, p, a {
+    margin: 0 auto;
+    max-width: 94%;
+    text-align: center;
+  }
+  label {
+    color: $white;
+  }
+  p {
+    color: $white;
+    margin: rem(6) 0;
+  }
+  a {
+    color: $black;
+    &:after {
+      @include all-transition;
+      content: ' →';
+      display: inline-block;
+      left: rem(4);
+      position: relative;
+    }
+    &:hover:after {
+      left: rem(8);
+    }
+  }
+  a.button {
+    background-color: $white;
+    font-size: rem(12);
+    font-weight: 600;
+    padding: rem(15) rem(20);
+    text-transform: none;
+    &:after {
+      content: none;
+    }
+    &:hover {
+      background-color: lighten($bright-blue, 20%);
+    }
+  }
+}
+
+// Specific ranges - use sparingly.
+// Mobile - things specifically under 400px.
+@include mq(mobile) {  }
+
+// Phablet - things between 401px and 768px.
+@include mq(phablet) {  }
+
+// Tablet - things between 769px and 1239px.
+@include mq(tablet) {  }
+
+
+// Desktops - 769px or more. (This is the most common Media Query)
+@include mq(desktop) {
+
+}
+
+// Extra Large Desktop: min-width: 1240px.
+@include mq(xl) {  }

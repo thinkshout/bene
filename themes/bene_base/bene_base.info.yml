@@ -1,0 +1,19 @@
+name: Bene Base
+type: theme
+description: A base theme for Bene
+package: Other
+core: 8.x
+libraries:
+  - bene_base/bene_base
+ckeditor_stylesheets:
+  - css/ckeditor.css
+
+base theme: classy
+#Using Classy as a base theme https://www.drupal.org/theme-guide/8/classy
+
+regions:
+  site_branding: Site Branding
+  primary_nav: Primary Nav
+  secondary_nav: Secondary Nav
+  content: Content
+  footer: Footer

@@ -1,0 +1,74 @@
+// Default Styles (Mobile First!)
+.site-header {
+  display: flex;
+  min-height: 101px;
+  .logo-wrapper {
+    align-items: center;
+    display: flex;
+  }
+  .desktop-nav,
+  .mobile-nav .menu {
+    display: none;
+  }
+  .mobile-nav {
+    align-items: center;
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+}
+
+
+// Specific ranges - use sparingly.
+// Mobile - things specifically under 400px.
+@include mq(mobile) {  }
+
+// Phablet - things between 401px and 768px.
+@include mq(phablet) {  }
+
+// Tablet - things between 769px and 1239px.
+@include mq(tablet) {  }
+
+
+// Desktops - 769px or more. (This is the most common Media Query)
+@include mq(desktop) {
+  .site-header {
+    min-height: rem(133);
+    .mobile-nav {
+      display: none;
+    }
+    .desktop-nav {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      padding-bottom: rem(33);
+      .region-primary-nav {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        nav {
+          flex: 1 1 50%;
+        }
+      }
+
+      .menu {
+        align-items: flex-end;
+        display: flex;
+        height: 100%;
+        justify-content: flex-end;
+        .menu-item {
+          margin-left: rem(22);
+        }
+      }
+    }
+  }
+}
+
+// Extra Large Desktop: min-width: 1240px.
+@include mq(xl) {
+  .site-header .desktop-nav .menu .menu-item {
+    margin-left: rem(36);
+  }
+}

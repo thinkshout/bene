@@ -1,0 +1,159 @@
+/* BASE ELEMENT STYLES */
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: $sans;
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  text-rendering: optimizeLegibility; /* Fix the character spacing for headings */
+}
+
+h1 {
+  font-size: rem(48);
+  line-height: rem(62);
+  font-weight: 800;
+}
+h2 {
+  font-size: rem(32);
+  line-height: rem(38);
+  font-weight: 400;
+}
+h3 {
+  font-size: rem(20);
+  line-height: rem(30);
+  font-weight: 600;
+}
+h4 {
+  font-size: rem(16);
+  line-height: rem(20);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+p,
+p.standard {
+  color: $black;
+  font-size: rem(16);
+  line-height: rem(31);
+  font-weight: 400;
+}
+
+a {
+  @include default-transition;
+  color: $blue;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover,
+  &:active {
+    color: lighten($blue, 20%);
+  }
+}
+
+table a,
+li a,
+p a {
+  color: $blue;
+  &:hover,
+  &:active {
+    color: lighten($blue, 20%);
+  }
+}
+
+a.button {
+  @include button;
+}
+
+/* List bullets in content. */
+.text-formatted ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 0;
+  li {
+    padding-bottom: rem(14);
+    padding-left: rem(32);
+    text-indent: rem(-20);
+    color: $black;
+    &:before {
+      color: $black;
+      content: "•";
+      font-size: rem(16);
+      line-height: 1;
+      padding-right: rem(14);
+      position: relative;
+    }
+  }
+}
+
+ol {
+    padding-left: rem(26);
+  li {
+    padding-bottom: rem(14);
+    padding-left: rem(6);
+    line-height: 1.4;
+    font-size: rem(16);
+    color: $black;
+  }
+}
+
+table, table.tablesaw {
+  border: 1px solid $light-grey;
+  margin: rem(24) 0;
+  table-layout: auto;
+  th, tr, td, tr:first-child th {
+    border: none;
+    color: $medium-grey;
+    font-size: rem(14);
+    font-weight: 400;
+    padding: rem(18) rem(42);
+    text-align: left;
+    strong {
+      font-weight: 600;
+    }
+  }
+  th, tr:first-child th {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $medium-grey;
+    font-size: rem(14);
+    margin: 0;
+  }
+  tr {
+    background-color: $white;
+  }
+  th,tr:nth-of-type(2n) {
+    background-color: $light-grey;
+  }
+}
+
+ul.menu {
+  list-style: none outside;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  .menu-item {
+    padding: 0;
+  }
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  legend {
+    font-size: rem(30);
+    font-weight: 700;
+    color: $dark-grey;
+  }
+}
+
+/* END BASE ELEMENT STYLES */

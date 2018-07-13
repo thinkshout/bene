@@ -1,0 +1,6 @@
+{
+  "name": "drupal/bene_base",
+  "type": "drupal-theme",
+  "require": {
+  }
+}

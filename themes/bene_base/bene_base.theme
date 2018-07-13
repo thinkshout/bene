@@ -1,0 +1,164 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the bene_base theme.
+ */
+
+use Drupal\Core\Render\Markup;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function bene_base_preprocess_html(array &$variables) {
+  // If the current route represents a user profile page,
+  // replace the username in the title with the user's email address.
+  $route_match = \Drupal::service('current_route_match');
+  $parameters = $route_match->getParameters();
+
+  /** @var \Drupal\user\Entity\User $user */
+  $user = $parameters->get('user');
+  if (!empty($user)) {
+    $new_title = bene_base_replace_username_with_email($user, $variables['head_title']['title']);
+    $variables['head_title']['title'] = $new_title;
+  }
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function bene_base_page_attachments_alter(array &$page) {
+}
+
+/**
+ * Implements hook_preprocess_page() for page.html.twig.
+ */
+function bene_base_preprocess_page(array &$variables) {
+}
+
+/**
+ * Implements hook_preprocess_page_title() for page.html.twig.
+ */
+function bene_base_preprocess_page_title(&$variables) {
+  // If the current route represents a user profile page,
+  // replace the username in the title with the user's email address.
+  $route_match = \Drupal::service('current_route_match');
+  $parameters = $route_match->getParameters();
+
+  /** @var \Drupal\user\Entity\User $user */
+  $user = $parameters->get('user');
+  if (!empty($user)) {
+    $old_title = is_object($variables['title']['#markup']) ? $variables['title']['#markup']->__toString() : $variables['title']['#markup'];
+    $new_title = bene_base_replace_username_with_email($user, $old_title);
+    $variables['title']['#markup'] = Markup::create($new_title);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ */
+function bene_base_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_node_alter().
+ */
+function bene_base_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for Block document templates.
+ */
+function bene_base_preprocess_block(array &$variables) {
+}
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function bene_base_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  /*$element = $variables['element'];
+  $suggestions[] = 'field__' . $element['#view_mode'];
+  $suggestions[] = 'field__' . $element['#view_mode'] . '__' . $element['#field_name'];*/
+}
+
+/**
+ * Implements hook_theme_suggestions_field_alter().
+ */
+function bene_base_theme_suggestions_fieldset_alter(array &$suggestions, array $variables) {
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function bene_base_preprocess_node(array &$variables) {
+}
+
+/**
+ * Implements hook_theme_suggestions_views_view_alter().
+ */
+function bene_base_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+}
+
+/**
+ * Implements hook_preprocess_form().
+ */
+function bene_base_preprocess_form(array &$variables) {
+}
+
+/**
+ * Implements hook_preprocess_select().
+ */
+function bene_base_preprocess_select(array &$variables) {
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function bene_base_preprocess_field(array &$variables, $hook) {
+}
+
+/**
+ * Implements hook_preprocess_details().
+ */
+function bene_base_preprocess_details(array &$variables) {
+}
+
+/**
+ * Implements hook_theme_suggestions_details_alter().
+ */
+function bene_base_theme_suggestions_details_alter(array &$suggestions, array $variables) {
+}
+
+/**
+ * Implements hook_preprocess_menu_local_task().
+ */
+function bene_base_preprocess_menu_local_task(array &$variables) {
+}
+
+/**
+ * Replaces a username with the user's email address in a string.
+ *
+ * @param \Drupal\user\Entity\User $user
+ *   The user.
+ * @param string $string
+ *   The string containing the username.
+ *
+ * @return string
+ *   A string containing the user's email address in place of their username.
+ */
+function bene_base_replace_username_with_email(User $user, $string) {
+  $username = $user->getUsername();
+  $email = $user->getEmail();
+
+  $new_string = $string;
+
+  if (!empty($email)) {
+    $new_string = str_replace($username, $email, $string);
+  }
+
+  return $new_string;
+}
