@@ -86,7 +86,7 @@ $bene-buildup-variables: (
    * They should also refer to the buildup variables above as much as possible.
    **/
 
-  // base_style -- these apply to everything unless overridden here or in bene_base.
+  // base_style -- these apply to everything unless overridden here or in bene_parent.
   --base_style-font-family: var(--font-family-primary);
   --base_style-font-family-secondary: var(--font-family-secondary);
   --base_style-paragraph-color: var(--color-text-primary);

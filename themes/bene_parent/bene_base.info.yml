@@ -4,7 +4,7 @@ description: A base theme for Bene
 package: Other
 core: 8.x
 libraries:
-  - bene_base/bene_base
+  - bene_parent/bene_parent
 ckeditor_stylesheets:
   - css/ckeditor.css
 

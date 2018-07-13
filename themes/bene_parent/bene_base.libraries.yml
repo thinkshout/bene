@@ -1,4 +1,4 @@
-bene_base:
+bene_parent:
   version: VERSION
   css:
     theme:
