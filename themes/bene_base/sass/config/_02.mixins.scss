@@ -1,37 +1,3 @@
-@mixin font-style($style) {
-  @if $style == 'italic' { // Italic Light
-    font-family: 'Open Sans', sans-serif; // in case css variables are not supported
-    font-family: var(--font-family-primary);
-    font-style: italic;
-    font-weight: 300;
-  } @else if $style == 'regular' {
-    font-family: 'Open Sans', sans-serif; // in case css variables are not supported
-    font-family: var(--font-family-primary);
-    font-weight: 400;
-    font-style: normal;
-  } @else if $style == 'semibold' {
-    font-family: 'Open Sans', sans-serif; // in case css variables are not supported
-    font-family: var(--font-family-primary);
-    font-weight: 600;
-    font-style: normal;
-  } @else if $style == 'bold' {
-    font-family: 'Open Sans', sans-serif; // in case css variables are not supported
-    font-family: var(--font-family-primary);
-    font-weight: 700;
-    font-style: normal;
-  } @else if $style == 'black' {
-    font-family: 'Open Sans', sans-serif; // in case css variables are not supported
-    font-family: var(--font-family-primary);
-    font-weight: 900;
-    font-style: normal;
-  } @else if $style == 'light' { // Light is the default font
-    font-family: 'Open Sans', sans-serif; // in case css variables are not supported
-    font-family: var(--font-family-primary);
-    font-weight: 300;
-    font-style: normal;
-  }
-}
-
 // Makes an element visually hidden, but accessible.
 // @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin element-invisible {
@@ -79,7 +45,7 @@
 
 /* Default transition */
 @mixin default-transition {
-  @include transition(color 0.3s linear, background-color 0.3s linear);
+  @include transition(color 0.3s linear,background-color 0.3s linear);
 }
 
 /* All transition */
@@ -88,9 +54,11 @@
 }
 
 /* Buttons */
-@mixin button {
+@mixin button($color: $white, $bgcolor: $black) {
   @include transition(background-color 0.3s linear,color 0.3s linear);
+  background-color: $bgcolor;
   border-radius: rem(3);
+  color: $color;
   font-weight: 800;
   display: inline-block;
   font-size: rem(16);
@@ -99,9 +67,12 @@
   padding: rem(20) rem(30);
   position: relative;
   text-transform: uppercase;
+  &:hover {
+    background-color: darken($bgcolor, 20%);
+  }
 }
 
-@mixin thick_gradient($direction: to bottom, $color: white) {
+@mixin thick_gradient($direction: to bottom, $color: $white) {
   background-image: linear-gradient($direction,
     rgba($color, 1.0) 0%,
     rgba($color, 0.95) 10%,
@@ -119,7 +90,7 @@
   width: 100%;
 }
 
-@mixin thin_gradient($direction: to bottom, $color: white) {
+@mixin thin_gradient($direction: to bottom, $color: $white) {
   background-image: linear-gradient($direction,
     rgba($color, 1.0) 0%,
     rgba($color, 1.0) 5%,

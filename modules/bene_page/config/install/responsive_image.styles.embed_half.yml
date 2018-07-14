@@ -23,5 +23,5 @@ image_style_mappings:
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: embed_half_s
-breakpoint_group: bene_base
+breakpoint_group: bene_parent
 fallback_image_style: embed_half_s

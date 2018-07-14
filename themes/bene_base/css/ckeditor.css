@@ -46,8 +46,7 @@ h4 {
 
 p,
 p.standard {
-  color: #000; /* in case css variables are not supported */
-  color: var(--color-text-primary);
+  color: #000;
   font-size: 1rem;
   line-height: 1.9375rem;
   font-weight: 400; }
@@ -56,20 +55,16 @@ a {
   -webkit-transition: color 0.3s linear, background-color 0.3s linear;
   -moz-transition: color 0.3s linear, background-color 0.3s linear;
   transition: color 0.3s linear, background-color 0.3s linear;
-  color: #129FB5; /* in case css variables are not supported */
-  color: var(--color-theme-primary);
+  color: #129FB5;
   cursor: pointer;
   text-decoration: none; }
   a:hover, a:active, a.nice-select.open {
-    color: #44d1e7; /* in case css variables are not supported */
-    color: var(--color-theme-primary-bright-lighten20);
-  }
+    color: #44d1e7; }
 
 table a,
 li a,
 p a {
-  color: #129FB5; /* in case css variables are not supported */
-  color: var(--color-theme-primary); }
+  color: #129FB5; }
   table a:hover, table a:active, table a.nice-select.open,
   li a:hover,
   li a:active,
@@ -77,19 +72,15 @@ p a {
   p a:hover,
   p a:active,
   p a.nice-select.open {
-    color: #44d1e7; /* in case css variables are not supported */
-    color: var(--color-theme-primary-bright-lighten20);
-  }
+    color: #44d1e7; }
 
 a.button {
   -webkit-transition: background-color 0.3s linear, color 0.3s linear;
   -moz-transition: background-color 0.3s linear, color 0.3s linear;
   transition: background-color 0.3s linear, color 0.3s linear;
-  background-color: #000; /* in case css variables are not supported */
-  background-color: var(--color-background-darkest);
+  background-color: #000;
   border-radius: 0.1875rem;
-  color: #FFF; /* in case css variables are not supported */
-  color: var(--color-text-inverse);
+  color: #FFF;
   font-weight: 800;
   display: inline-block;
   font-size: 1rem;
@@ -99,9 +90,7 @@ a.button {
   position: relative;
   text-transform: uppercase; }
   a.button:hover {
-    background-color: #000; /* in case css variables are not supported */
-    background-color: var(--color-background-darkest);
-  }
+    background-color: black; }
 
 /* List bullets in content. */
 .text-formatted ul {
@@ -112,12 +101,9 @@ a.button {
     padding-bottom: 0.875rem;
     padding-left: 2rem;
     text-indent: -1.25rem;
-    color: #000; /* in case css variables are not supported */
-    color: var(--color-text-primary);
-  }
+    color: #000; }
     .text-formatted ul li:before {
-      color: #000; /* in case css variables are not supported */
-      color: var(--color-text-primary);
+      color: #000;
       content: "•";
       font-size: 1rem;
       line-height: 1;
@@ -131,19 +117,15 @@ ol {
     padding-left: 0.375rem;
     line-height: 1.4;
     font-size: 1rem;
-    color: #000; /* in case css variables are not supported */
-    color: var(--color-text-primary);
-  }
+    color: #000; }
 
 table, table.tablesaw {
-  border: 1px solid #D8D8D8; /* in case css variables are not supported */
-  border: 1px solid var(--color-text-light);
+  border: 1px solid #D8D8D8;
   margin: 1.5rem 0;
   table-layout: auto; }
   table th, table tr, table td, table tr:first-child th, table.tablesaw th, table.tablesaw tr, table.tablesaw td, table.tablesaw tr:first-child th {
     border: none;
-    color: #7C7C7C; /* in case css variables are not supported */
-    color: var(--color-text-medium-dark);
+    color: #7C7C7C;
     font-size: 0.875rem;
     font-weight: 400;
     padding: 1.125rem 2.625rem;
@@ -153,18 +135,13 @@ table, table.tablesaw {
   table th, table tr:first-child th, table.tablesaw th, table.tablesaw tr:first-child th {
     font-weight: 700;
     text-transform: uppercase;
-    color: #7C7C7C; /* in case css variables are not supported */
-    color: var(--color-text-medium-dark);
+    color: #7C7C7C;
     font-size: 0.875rem;
     margin: 0; }
   table tr, table.tablesaw tr {
-    background-color: #FFF; /* in case css variables are not supported */
-    background-color: var(--color-background-default);
-  }
+    background-color: #FFF; }
   table th, table tr:nth-of-type(2n), table.tablesaw th, table.tablesaw tr:nth-of-type(2n) {
-    background-color: #D8D8D8; /* in case css variables are not supported */
-    background-color: var(--color-background-lightest);
-  }
+    background-color: #D8D8D8; }
 
 ul.menu {
   list-style: none outside;
@@ -180,6 +157,4 @@ fieldset {
   fieldset legend {
     font-size: 1.875rem;
     font-weight: 700;
-    color: #5C5B5B; /* in case css variables are not supported */
-    color: var(--color-text-accent);
-  }
+    color: #5C5B5B; }

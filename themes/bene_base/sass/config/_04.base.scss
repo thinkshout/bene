@@ -2,8 +2,7 @@
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: bbv(font-family-primary);
-  font-family: var(--base_style-font-family); // or main-font-family
+  font-family: $sans;
   font-size: rem(16);
   font-style: normal;
   font-weight: 400;
@@ -44,8 +43,7 @@ h4 {
 
 p,
 p.standard {
-  color: bbv(color-text-primary); // in case css variables are not supported
-  color: var(--base_style-paragraph-color);
+  color: $black;
   font-size: rem(16);
   line-height: rem(31);
   font-weight: 400;
@@ -53,26 +51,22 @@ p.standard {
 
 a {
   @include default-transition;
-  color: bbv(color-theme-primary); // in case css variables are not supported
-  color: var(--base_style-link-color);
+  color: $blue;
   cursor: pointer;
   text-decoration: none;
   &:hover,
   &:active {
-    color: bbv(color-theme-primary-lighten20); // in case css variables are not supported
-    color: var(--base_style-active-link-color);
+    color: lighten($blue, 20%);
   }
 }
 
 table a,
 li a,
 p a {
-  color: bbv(color-theme-primary); // in case css variables are not supported
-  color: var(--base_style-link-color);
+  color: $blue;
   &:hover,
   &:active {
-    color: bbv(color-theme-primary-lighten20); // in case css variables are not supported
-    color: var(--base_style-active-link-color);
+    color: lighten($blue, 20%);
   }
 }
 
@@ -89,11 +83,9 @@ a.button {
     padding-bottom: rem(14);
     padding-left: rem(32);
     text-indent: rem(-20);
-    color: bbv(color-text-primary); // in case css variables are not supported
-    color: var(--base_style-formatted-text-ul-li-color);
+    color: $black;
     &:before {
-      color: bbv(color-text-primary); // in case css variables are not supported
-      color: var(--base_style-formatted-text-ul-li-bullet-color);
+      color: $black;
       content: "•";
       font-size: rem(16);
       line-height: 1;
@@ -110,20 +102,17 @@ ol {
     padding-left: rem(6);
     line-height: 1.4;
     font-size: rem(16);
-    color: bbv(color-text-primary); // in case css variables are not supported
-    color: var(--base_style-formatted-text-ol-li-color);
+    color: $black;
   }
 }
 
 table, table.tablesaw {
-  border: 1px solid bbv(color-text-light); // in case css variables are not supported
-  border: 1px solid var(--base_style-table-border-color);
+  border: 1px solid $light-grey;
   margin: rem(24) 0;
   table-layout: auto;
   th, tr, td, tr:first-child th {
     border: none;
-    color: bbv(color-text-medium-dark); // in case css variables are not supported
-    color: var(--base_style-table-text-color);
+    color: $medium-grey;
     font-size: rem(14);
     font-weight: 400;
     padding: rem(18) rem(42);
@@ -135,18 +124,15 @@ table, table.tablesaw {
   th, tr:first-child th {
     font-weight: 700;
     text-transform: uppercase;
-    color: bbv(color-text-medium-dark); // in case css variables are not supported
-    color: var(--base_style-table-headerrow-leftcolumn-text-color);
+    color: $medium-grey;
     font-size: rem(14);
     margin: 0;
   }
   tr {
-    background-color: bbv(color-background-default); // in case css variables are not supported
-    background-color: var(--base_style-table-background-color);
+    background-color: $white;
   }
   th,tr:nth-of-type(2n) {
-    background-color: bbv(color-background-lightest); // in case css variables are not supported
-    background-color: var(--base_style-table-background-stripe-color);
+    background-color: $light-grey;
   }
 }
 
@@ -166,8 +152,7 @@ fieldset {
   legend {
     font-size: rem(30);
     font-weight: 700;
-    color: bbv(color-text-secondary); // in case css variables are not supported
-    color: var(--base_style-fieldset-legend-color);
+    color: $dark-grey;
   }
 }
 

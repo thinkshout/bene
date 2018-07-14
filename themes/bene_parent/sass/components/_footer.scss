@@ -1,0 +1,119 @@
+// Default Styles (Mobile First!)
+.block-bene-footer-block {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  .menu {
+    a {
+      color: bbv(color-text-primary); // in case css variables are not supported
+      color: var(--bene_footer_block-menu-link-color);
+      font-size: rem(14);
+      font-weight: 600;
+      &:hover, &:focus, &.is-active {
+        color: bbv(color-theme-primary); // in case css variables are not supported
+        color: var(--bene_footer_block-menu-link-hover-color);
+      }
+    }
+
+    .menu-item {
+      line-height: rem(30);
+
+      a {
+        @include font-style('bold'); // font-menu-primary
+        fontsize: rem(16);
+        &:hover, &:focus, &.is-active {
+          color: bbv(color-theme-primary); // in case css variables are not supported
+          color: var(--bene_footer_block-menu-item-link-hover-color);
+        }
+      }
+    }
+  }
+
+  .copyright,
+  .contact-links,
+  .contact-links .additional-contact p,
+  .contact-links .additional-footer p {
+    @include font-style('regular');
+    font-size: rem(14);
+    line-height: rem(25);
+  }
+
+  .contact-links {
+    font-size: rem(13);
+    .address {
+      white-space: pre-line;
+    }
+    .phone, .email, .additional-contact {
+      display: block;
+      p {
+        font-size: rem(12);
+        margin: rem(5) 0;
+      }
+    }
+  }
+
+  .additional-footer {
+    p {
+      font-size: rem(14);
+      margin: 0 rem(5) 0;
+    }
+  }
+
+  .social-links {
+    a {
+      background-color: bbv(color-social-icon); // in case css variables are not supported
+      background-color: var(--bene_footer_block-social-background-color);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 62% 62%;
+      border: rem(1) solid bbv(color-social-icon); // in case css variables are not supported
+      border: rem(1) solid var(--bene_footer_block-social-border-color);
+      border-radius: 50%;
+      display: inline-block;
+      height: bbv(social-icon-size); // in case css variables are not supported
+      height: var(--bene_footer_block-social-icon-size);
+      margin-bottom: rem(10);
+      margin-left: rem(10);
+      padding: 1rem;
+      position: relative;
+      text-indent: -9999px;
+      width: bbv(social-icon-size); // in case css variables are not supported
+      width: var(--bene_footer_block-social-icon-size);
+      &:hover, &:focus, &:active {
+        background-color: bbv(color-social-icon-darken20); // in case css variables are not supported
+        background-color: var(--bene_footer_block-social-hover-background-color);
+      }
+    }
+    .facebook { background-image:  url('../images/svgs/facebook-f.svg'); }
+    .google { background-image: url('../images/svgs/google-plus.svg'); }
+    .instagram { background-image: url('../images/svgs/instagram.svg'); }
+    .linkedin { background-image: url('../images/svgs/linkedin.svg'); }
+    .pinterest { background-image: url('../images/svgs/pinterest-p.svg'); }
+    .tumblr { background-image: url('../images/svgs/tumblr.svg'); }
+    .twitter { background-image: url('../images/svgs/twitter.svg'); }
+    .youtube { background-image: url('../images/svgs/youtube-play.svg'); }
+  }
+
+  .copyright {
+    font-size: rem(12);
+  }
+}
+
+// Specific ranges - use sparingly.
+// Mobile - things specifically under 400px.
+@include mq(mobile) {  }
+
+// Phablet - things between 401px and 768px.
+@include mq(phablet) {  }
+
+// Tablet - things between 769px and 1239px.
+@include mq(tablet) {  }
+
+
+// Desktops - 769px or more. (This is the most common Media Query)
+@include mq(desktop) {
+
+}
+
+// Extra Large Desktop: min-width: 1240px.
+@include mq(xl) {  }

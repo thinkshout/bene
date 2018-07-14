@@ -1,0 +1,89 @@
+.paragraph--type--tiles {
+  &> .field--name-field-title {
+    font-size: rem(24);
+    font-weight: 400;
+    line-height: rem(36);
+    margin: rem(18) auto rem(0);
+    text-align: center;
+
+    @include mq(desktop) {
+      margin: rem(36) auto rem(0);
+    }
+  }
+  .field--name-field-tiles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: rem(16) rem(16);
+
+    @include mq(xl) {
+      margin: rem(24) auto;
+    }
+
+    &> .field__item {
+      display: flex;
+      flex: 1 1 auto;
+      margin-bottom: rem(24);
+      text-align: center;
+
+      @include mq(phablet) {
+        flex: 0 1 calc(50% - 1rem);
+        min-width: rem(380);
+      }
+
+      @include mq(desktop) {
+        flex: 0 1 calc(33% - 1rem);
+        margin-bottom: rem(36);
+        min-width: rem(300);
+      }
+
+      @include mq(xl) {
+        margin-bottom: rem(48);
+        max-width: rem(380);
+      }
+
+      .field--name-field-image,
+      .bg-header {
+        background-color: bbv(color-theme-primary); // in case css variables are not supported
+        background-color: var(--base_style-field-image-header);
+        font-size: 0;
+        max-height: rem(228);
+        max-width: rem(380);
+        img {
+          max-width: 100%;
+        }
+      }
+      @include mq(desktop) {
+        .field--name-field-image,
+        .bg-header {
+          background-color: bbv(color-theme-primary); // in case css variables are not supported
+          background-color: var(--base_style-desktop-field-image-header);
+          height: 18.36vw;
+          width: 30.6vw;
+        }
+      }
+      .field--name-field-title {
+        font-size: rem(20);
+        font-weight: 600;
+        line-height: rem(30);
+        margin-top: rem(28);
+      }
+
+      .field--name-field-text p {
+        color: bbv(color-text-secondary); // in case css variables are not supported
+        color: var(--base_style-field-image-text);
+        line-height: rem(24);
+        margin-bottom: rem(12);
+        margin-top: rem(12);
+      }
+
+      .field--name-field-link a {
+        display: inline-block;
+        font-size: rem(14);
+        font-weight: 600;
+        margin-top: rem(12);
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+<div id="site-wrapper">
+  <header class="site-header">
+    <div class="inner">
+      <div class="logo-wrapper">
+        {{page.site_branding}}
+      </div>
+      <div class="desktop-nav" role="navigation">
+        {{page.secondary_nav}}
+        {{page.primary_nav}}
+      </div>
+      <div class="mobile-nav" role="navigation">
+        <a class="mobile-menu-toggle">
+          <div><span></span></div>
+        </a>
+        {{page.primary_nav}}
+        {{page.secondary_nav}}
+      </div>
+    </div>
+  </header>
+
+  {% if page.content %}
+    <main id="main-content">{{page.content}}</main>
+  {% endif %}
+
+  {% if page.footer %}
+    {{page.footer}}
+  {% endif %}
+</div>

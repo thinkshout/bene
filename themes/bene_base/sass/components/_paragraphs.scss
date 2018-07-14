@@ -8,7 +8,6 @@
     max-width: 100%;
   }
 }
-
 .paragraph--type--rich-text {
   figure {
     margin: rem(16) 0;
@@ -34,16 +33,14 @@
   p,
   ol li,
   ul li {
-    color: bbv(color-text-secondary); // in case css variables are not supported
-    color: var(--rich_text-background-paragraph-and-list-color);
+    color: $dark-grey;
   }
   blockquote {
     margin: rem(32) auto;
     max-width: 80%;
     text-align: center;
     p {
-      color: bbv(color-theme-primary-bright); // in case css variables are not supported
-      color: var(--rich_text-background-blockquote-paragraph-color);
+      color: $bright-blue;
       font-size: rem(26);
       font-style: italic;
       font-weight: 600;
@@ -58,8 +55,7 @@
     }
 
     &:after {
-      background-color: bbv(color-theme-primary-bright); // in case css variables are not supported
-      background-color: var(--rich_text-background-blockquote-horizontal-line-color);
+      background-color: $bright-blue;
       content: "";
       display: inline-block;
       height: rem(4);
@@ -71,16 +67,13 @@
     max-width: 99%;
   }
 }
-
 .paragraph--type--feature-full-width {
   align-items: center;
-  background-color: bbv(color-theme-primary); // in case css variables are not supported
-  background-color: var(--bene_home_page_feature_block-background-color);
+  background-color: $blue;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: bbv(color-text-inverse); // in case css variables are not supported
-  color: var(--bene_home_page_feature_block-header-color);
+  color: $white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -101,23 +94,14 @@
     z-index: 2;
   }
   .field--name-field-title {
-    color: bbv(color-text-inverse); // in case css variables are not supported
-    color: var(--bene_home_page_feature_block-header-color);
-    font-family: bbv(main-font-family); // in case css variables are not supported
-    font-family: var(--bene_home_page_feature_block-header-font-family);
-    font-size: bbv(font-size-header); // in case css variables are not supported
-    font-size: var(--bene_home_page_feature_block-header-font-size);
-    font-weight: bbv(font-weight-extra-heavy); // in case css variables are not supported
-    font-weight: var(--bene_home_page_feature_block-header-font-weight);
+    font-size: rem(36);
+    font-weight: 900;
     z-index: 10;
   }
   .field--name-field-text {
     z-index: 10;
     p {
-      font-family: bbv(main-font-family); // in case css variables are not supported
-      font-family: var(--bene_home_page_feature_block-description-font-family);
-      color: bbv(bene-main-white); // in case css variables are not supported
-      color: var(--bene_home_page_feature_block-description-color);
+      color: $white;
       margin: rem(32) auto;
       max-width: 100%;
       @include mq(desktop) {
@@ -128,31 +112,9 @@
   .field--type-link {
     z-index: 10;
     a {
-      @include button;
-      color: bbv(color-text-inverse); // in case css variables are not supported
-      color: var(--bene_home_page_feature_block-link-button-color);
-      background-color: bbv(color-theme-primary-bright); // in case css variables are not supported
-      background-color: var(--bene_home_page_feature_block-link-button-background-color);
-      &:hover {
-        background-color: bbv(color-theme-primary-bright-darken20); // in case css variables are not supported
-        background-color: var(--bene_home_page_feature_block-link-button-hover-background-color);
-      }
+      @include button($white, $bright-blue);
       letter-spacing: 0;
       text-transform: none;
     }
-  }
-
-  // Gradient overlay
-  &::after {
-    background-image: linear-gradient(-180deg, rgba(0,0,0,0.00), #000000); // in case css variables are not supported
-    background-image: var(--bene_home_page_feature_block-linear-gradient);
-    content: '';
-    display: block;
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
   }
 }
