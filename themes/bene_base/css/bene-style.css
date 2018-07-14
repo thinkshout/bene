@@ -1423,12 +1423,20 @@ input[type='submit'] {
       .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-image img,
       .paragraph--type--tiles .field--name-field-tiles > .field__item .bg-header img {
         max-width: 100%; }
+        @media (min-width: 415px) and (max-width: 768px) {
+          .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-image img,
+          .paragraph--type--tiles .field--name-field-tiles > .field__item .bg-header img {
+            min-width: 23.75rem; } }
+        @media (min-width: 769px) {
+          .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-image img,
+          .paragraph--type--tiles .field--name-field-tiles > .field__item .bg-header img {
+            min-width: 18.75rem; } }
     @media (min-width: 769px) {
       .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-image,
       .paragraph--type--tiles .field--name-field-tiles > .field__item .bg-header {
         background-color: #129FB5;
-        height: 18.36vw;
-        width: 30.6vw; } }
+        height: auto;
+        width: auto; } }
     .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-title {
       font-size: 1.25rem;
       font-weight: 600;
