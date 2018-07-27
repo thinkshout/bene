@@ -1,0 +1,224 @@
+/**
+ * First-level variables. Do not use these except to define
+ * buildup css variables in the next section.
+ *
+ * Notice that the variable names are specific to the color
+ * they refer to... that means these can be thrown out and a
+ * whole new set of variables brought in for a new theme.
+ **/
+$bene-a-level-variables: (
+  bene-main-white: #FFF,
+  bene-light-grey: #D8D8D8,
+  bene-placeholder-grey: #979797,
+  bene-medium-grey: #7C7C7C,
+  bene-dark-grey: #5C5B5B,
+  bene-main-black: #000,
+  bene-bright-blue: #50CFE3,
+  bene-main-blue: #129FB5,
+  bene-sans-font: "'Open Sans', sans-serif",
+);
+
+// bav = bene a-level variable
+// access the above variables with this function
+@function bav($var-name) {
+  @return map-get($bene-a-level-variables, #{$var-name});
+}
+
+$bene-buildup-variables: (
+  color-theme-primary: bav(bene-main-blue),
+  color-theme-primary-darken20: darken(bav(bene-main-blue), 20% ),
+  color-theme-primary-lighten20: lighten(bav(bene-main-blue), 20%),
+  color-theme-primary-bright: bav(bene-bright-blue),
+  color-theme-primary-bright-darken20: darken(bav(bene-bright-blue), 20%),
+  color-theme-primary-bright-lighten20: lighten(bav(bene-bright-blue), 20%),
+  color-text-primary: bav(bene-main-black),
+  color-text-secondary: bav(bene-dark-grey),
+  color-text-accent: bav(bene-dark-grey),
+  color-text-placeholder: bav(bene-placeholder-grey),
+  color-text-medium-dark: bav(bene-medium-grey),
+  color-text-inverse: bav(bene-main-white),
+  color-text-light: bav(bene-light-grey),
+  color-text-link: bav(bene-main-black),
+  color-background-default: bav(bene-main-white),
+  color-background-lightest: bav(bene-light-grey),
+  color-background-darker: bav(bene-dark-grey),
+  color-background-darkest: bav(bene-main-black),
+  color-social-icon: bav(bene-bright-blue),
+  color-social-icon-darken20: darken(bav(bene-bright-blue), 20%),
+  social-icon-size: rem(40),
+  font-family-primary: bav(bene-sans-font),
+  font-family-secondary: bav(bene-sans-font),
+  font-weight-primary: normal,
+  font-weight-menu-primary: bold,
+  font-weight-extra-heavy: 900,
+  font-style-primary: normal,
+  font-size-primary: rem(24),
+  font-size-header: rem(36),
+  gradient-direction: -180deg,
+  gradient-from-color: rgba(bav(bene-main-black), 0.00), // 0.00 means fully transparent
+  gradient-to-color: rgba(bav(bene-main-black), 0.00), // 0.00 means fully transparent, 1 means opaque
+  preferred-alignment: left,
+);
+
+// bbv = bene buildup variable
+// access the above variables with this function
+@function bbv($var-name) {
+  @return map-get($bene-buildup-variables, #{$var-name});
+}
+
+
+:root {
+  // place each item in bene-buildup-variables here so they are defined in root scope
+  // output of this loop will be:
+  // ...
+  // --color-theme-primary: #129FB5;
+  // --color-theme-primary-darken20: #094e58;
+  // --color-theme-primary-lighten20: #41d5ec;
+  // --color-social-icon: #50CFE3;
+  // --color-social-icon-darken20: #1c9db1;
+  // ...
+  @each $name, $color-num in $bene-buildup-variables {
+    --#{$name}: #{$color-num};
+  }
+
+  /**
+   * These are the css variables that should be used throughout the scss code.
+   * They should also refer to the buildup variables above as much as possible.
+   **/
+
+  // base_style -- these apply to everything unless overridden here or in bene_parent.
+  --base_style-font-family: var(--font-family-primary);
+  --base_style-font-family-secondary: var(--font-family-secondary);
+  --base_style-paragraph-color: var(--color-text-primary);
+  --base_style-link-color: var(--color-theme-primary);
+  --base_style-active-link-color: var(--color-theme-primary-lighten20);
+  --base_style-formatted-text-ul-li-color: var(--color-text-primary);
+  --base_style-formatted-text-ul-li-bullet-color: var(--color-text-primary);
+  --base_style-formatted-text-ol-li-color: var(--color-text-primary);
+  --base_style-table-border-color: var(--color-text-light);
+  --base_style-table-text-color: var(--color-text-medium-dark);
+  --base_style-table-headerrow-leftcolumn-text-color: var(--color-text-medium-dark);
+  --base_style-table-background-color: var(--color-background-default);
+  --base_style-table-background-stripe-color: var(--color-background-lightest);
+  --base_style-fieldset-legend-color: var(--color-text-secondary);
+  // _admin.scss:
+  --base_style-body-background-color: var(--color-background-default);
+  --base_style-contextual-links-background-color: var(--color-background-default);
+  --base_style-contextual-links-list-item-background-color: var(--color-background-default);
+  --base_style-contextual-links-list-item-link-background-color: var(--color-background-default);
+  --base_style-block-local-tasks-background-color: var(--color-background-darkest);
+
+  // _admin.scss:
+  --base_style-body-background-color: var(--color-background-default);
+  --base_style-contextual-links-background-color: var(--color-background-default);
+  --base_style-contextual-links-list-item-background-color: var(--color-background-default);
+  --base_style-contextual-links-list-item-link-background-color: var(--color-background-default);
+  --base_style-block-local-tasks-background-color: var(--color-background-darkest);
+
+  //_tiles.scss
+  --base_style-field-image-header: var(--color-theme-primary);
+  --base_style-desktop-field-image-header: var(--color-theme-primary);
+  --base_style-field-image-text: var(--color-text-secondary);
+
+  //_nice_select.scss
+  --drop_down-background-color: var(--color-background-darker);
+  --drop_down-active-text-color: var(--color-text-inverse);
+  --drop_down-disabled-text-color: var(--color-text-inverse);
+
+
+  // rich_text (_paragraphs.scss)
+  --rich_text-background-paragraph-and-list-color: var(--color-text-secondary);
+  --rich_text-background-blockquote-paragraph-color: var(--color-theme-primary-bright);
+  --rich_text-background-blockquote-horizontal-line-color: var(--color-theme-primary-bright);
+
+  //_newsletter.scss
+  --newsletter-background-color: var(--color-theme-primary);
+  --newsletter-main-color: var(--color-text-inverse);
+  --newsletter-label-color: var(--color-text-inverse);
+  --newsletter-paragraph-color: var(--color-text-inverse);
+  --newsletter-link-color: var(--color-text-primary);
+  --newsletter-link-button-color: var(--color-background-default);
+  --newsletter-link-button-hover-color: var(--color-theme-primary-bright-lighten20);
+
+  //_menus.scss
+  --menu-closed-background-color: var(--color-theme-primary-bright);
+  --menu-open-background-color: var(--color-theme-primary-bright);
+  --menu-hover-background-color: var(--color-theme-primary);
+  --menu-after-hover-background-color: var(--color-theme-primary);
+  --menu-active-background-color: var(--color-theme-primary-bright);
+  --menu-mobile-background-color: var(--color-background-darkest);
+  --menu-mobile-link-color: var(--color-theme-primary-bright);
+  --menu-mobile-active-link-color: var(--color-text-inverse);
+  --menu-mobile-list-background-color: var(--color-theme-primary);
+  --menu-mobile-list-color: var(--color-text-primary);
+  --menu-mobile-list-active-color: var(--color-text-inverse);
+  --menu-desktop-link-color: var(--color-text-medium-dark);
+  --menu-desktop-active-link-color: var(--color-theme-primary);
+  --menu-desktop-last-active-link-color: var(--color-text-inverse);
+  --menu-desktop-last-active-link-background-color: var(--color-theme-primary-bright);
+  --menu-desktop-last-active-link-hover-background-color: var(--color-theme-primary-bright-darken20);
+  --menu-desktop-main-link-color: var(--color-text-primary);
+  --menu-desktop-main-active-link-color: var(--color-theme-primary);
+
+  //_inner-page.scss
+  --inner_page-header-two-color: var(--color-text-primary);
+  --inner_page-header-three-color: var(--color-text-primary);
+  --inner_page-link-color: var(--color-theme-primary-bright);
+  --inner_page-link-hover-color: var(--color-theme-primary-bright-darken20);
+  --inner_page-paragraph-color: var(--color-text-primary);
+  --inner_page-blockquote-paragraph-color: var(--color-text-accent);
+
+  //_home_hero.scss
+  --home_hero-bene-home-page-feature-block-color: var(--color-text-inverse);
+  --home_hero-bene-home-page-feature-block-background-color: var(--color-theme-primary-bright);
+  --home_hero-bene-link-border-color: var(--color-text-inverse);
+  --home_hero-bene-link-color: var(--color-text-inverse);
+  --home_hero-bene-link-hover-color: var(--color-text-inverse);
+  --home_hero-bene-link-hover-background-color: var(color-background-lightest);
+
+  //_hero.scss
+  --block_hero-bene-background-color: var(--color-theme-primary-bright);
+  --block_hero-bene-header-color: var(--color-text-inverse);
+
+
+  // bene_home_page_feature_block
+  // bene_sub_navigation_block
+  // bene_listing_page_plugin_display_block
+
+  // bene_mobile_nav
+  --bene_mobile_nav-color: --color-text-inverse;
+  --bene_mobile_nav-menu-link-color: --color-text-inverse;
+  --bene_mobile_nav-background: --color-theme-primary;
+  --bene_mobile_nav-menu-text-align: --preferred-alignment;
+  --bene_mobile_nav-font-face: --font-family-primary;
+  --bene_mobile_nav-font-size: --font-size-primary;
+
+  // bene_home_page_feature_block
+  --bene_home_page_feature_block-background-color: var(--color-theme-primary);
+  --bene_home_page_feature_block-linear-gradient-direction: var(--gradient-direction);
+  --bene_home_page_feature_block-linear-gradient-color1: var(--gradient-from-color);
+  --bene_home_page_feature_block-linear-gradient-color2: var(--gradient-to-color);
+  --bene_home_page_feature_block-header-color: var(--color-text-inverse);
+  --bene_home_page_feature_block-header-font-family: var(--font-family-primary);
+  --bene_home_page_feature_block-header-font-size: var(--font-size-header);
+  --bene_home_page_feature_block-header-font-weight: var(--font-weight-extra-heavy);
+  --bene_home_page_feature_block-description-color: var(--color-text-inverse);
+  --bene_home_page_feature_block-description-font-family: var(--font-family-primary);
+  --bene_home_page_feature_block-linear-gradient: linear-gradient(var(--bene-home-page-feature-block-linear-gradient-direction), var(--bene-home-page-feature-block-linear-gradient-color1), var(--bene-home-page-feature-block-linear-gradient-color2));
+  --bene_home_page_feature_block-link-button-color: var(--color-text-inverse);
+  --bene_home_page_feature_block-link-button-background-color: var(--color-theme-primary-bright);
+  --bene_home_page_feature_block-link-button-hover-background-color: var(--color-theme-primary-bright-darken20);
+
+  // bene_newsletter_signup_block
+
+  // bene_footer_block
+  --bene_footer_block-social-icon-size: var(--social-icon-size);
+  --bene_footer_block-social-background-color: var(--color-social-icon);
+  --bene_footer_block-social-hover-background-color: var(--color-social-icon-darken20);
+  --bene_footer_block-social-border-color: var(--color-social-icon);
+  --bene_footer_block-social-hover-border-color: var(--color-social-icon-darken20);
+  --bene_footer_block-menu-link-color: var(--color-text-primary);
+  --bene_footer_block-menu-link-hover-color: var(--color-theme-primary);
+  --bene_footer_block-menu-item-link-hover-color: var(--color-theme-primary);
+
+}

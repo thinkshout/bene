@@ -1,0 +1,74 @@
+.block-bene-home-page-feature-block {
+  color: bbv(color-text-inverse); // in case css variables are not supported
+  color: var(--home_hero-bene-home-page-feature-block-color);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  padding: 10rem 1rem;
+  background-color: bbv(color-theme-primary-bright); // in case css variables are not supported
+  background-color: var(--home_hero-bene-home-page-feature-block-background-color);
+
+  @include mq(mobile) {
+    background-size: 100%;
+    background-position: center top;
+    max-height: rem(539);
+  }
+
+  @include mq(desktop) {
+    min-height: rem(603);
+  }
+
+  .field--name-bene-lead {
+    font-size: rem(20);
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+
+    @include mq(mobile) {
+      font-size: rem(16);
+      line-height: rem(20);
+      padding-top: 7rem;
+    }
+  }
+
+  .field--name-bene-title {
+    font-size: rem(48);
+    margin: 0 auto 2rem;
+    max-width: rem(900);
+    position: relative;
+    z-index: 1;
+    line-height: rem(31);
+
+    @include mq(mobile) {
+      font-size: rem(24);
+    }
+  }
+
+  .field--name-bene-link {
+    position: relative;
+    z-index: 1;
+    a {
+      border: rem(2) solid bbv(color-text-inverse); // in case css variables are not supported
+      border: rem(2) solid var(--home_hero-bene-link-border-color);
+      border-radius: 0;
+      color: bbv(color-text-inverse); // in case css variables are not supported
+      color: var(--home_hero-bene-link-color);
+      padding: 1rem 2rem;
+      font-size: rem(14);
+      @include font-style('bold');
+      text-transform: uppercase;
+
+      &:hover {
+        color: bbv(color-text-link); // in case css variables are not supported
+        color: var(--home_hero-link-hover-color);
+        background-color: bbv(color-background-lightest); // in case css variables are not supported
+        background-color: var(--home_hero-bene-link-hover-background-color);
+      }
+    }
+
+
+  }
+
+}

@@ -1,0 +1,68 @@
+.page-node-type-page .block-system-main-block {
+  .field--name-bene-intro {
+    float: none;
+    margin-bottom: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: none;
+
+  }
+
+  h2 {
+    color: bbv(color-text-primary); // in case css variables are not supported
+    color: var(--inner_page-header-two-color);
+    font-style: normal;
+    font-weight: normal;
+    font-size: medium;
+    margin-top: 0;
+
+    @include mq(mobile) {
+      font-size: rem(32);
+    }
+  }
+
+  h3 {
+    color: bbv(color-text-primary); // in case css variables are not supported
+    color: var(--inner_page-header-three-color);
+    font-size: medium;
+    font-weight: normal;
+    line-height: normal;
+    margin-bottom: 0;
+
+    a {
+      color: bbv(color-theme-primary-bright); // in case css variables are not supported
+      color: var(--inner_page-link-color);
+    }
+    a:hover {
+      color: bbv(color-theme-primary-bright-darken20); // in case css variables are not supported
+      color: var(--inner_page-link-hover-color);
+    }
+  }
+
+  p {
+    color: bbv(color-text-primary); // in case css variables are not supported
+    color: var(--inner_page-paragraph-color);
+    font-size: rem(18);
+    font-weight: normal;
+    line-height: normal;
+
+    @include mq(mobile) {
+      font-size: rem(20);
+    }
+
+    @include mq(desktop) {
+      font-size: rem(24);
+    }
+  }
+
+  blockquote {
+    p {
+      color: bbv(color-text-accent); // in case css variables are not supported
+      color: var(--inner_page-blockquote-paragraph-color);
+      font-size: rem(24);
+      float: none;
+      font-style: normal;
+    }
+  }
+}
