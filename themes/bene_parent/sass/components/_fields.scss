@@ -2,8 +2,8 @@
   margin-bottom: rem(24);
   margin-top: rem(16);
   h2 {
-    color: bbv(bene-bright-blue); // in case css variables are not supported
-    color: var(--color-theme-primary-bright);
+    color: bbv(color-theme-primary-bright); // in case css variables are not supported
+    color: var(--field-name-bene-intro-h2);
     font-size: rem(32);
     font-style: italic;
     font-weight: 600;

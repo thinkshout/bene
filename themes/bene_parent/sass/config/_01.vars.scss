@@ -115,6 +115,11 @@ $bene-buildup-variables: (
   --base_style-block-local-tasks-link-active-color: var(--color-theme-primary-bright);
   --base_style-block-local-tasks-show-hide-background-color: var(--color-background-darkest);
 
+  //_basic_hero.scss
+  --block-hero-background-color: var(--color-theme-primary-bright);
+
+  //_fields.scss
+  --field-name-bene-intro-h2: var(--color-theme-primary-bright);
 
   //_tiles.scss
   --base_style-field-image-header: var(--color-theme-primary);
