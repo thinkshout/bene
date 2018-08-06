@@ -101,12 +101,6 @@ $bene-buildup-variables: (
   --base_style-table-background-color: var(--color-background-default);
   --base_style-table-background-stripe-color: var(--color-background-lightest);
   --base_style-fieldset-legend-color: var(--color-text-secondary);
-  // _admin.scss:
-  --base_style-body-background-color: var(--color-background-default);
-  --base_style-contextual-links-background-color: var(--color-background-default);
-  --base_style-contextual-links-list-item-background-color: var(--color-background-default);
-  --base_style-contextual-links-list-item-link-background-color: var(--color-background-default);
-  --base_style-block-local-tasks-background-color: var(--color-background-darkest);
 
   // _admin.scss:
   --base_style-body-background-color: var(--color-background-default);
@@ -114,6 +108,13 @@ $bene-buildup-variables: (
   --base_style-contextual-links-list-item-background-color: var(--color-background-default);
   --base_style-contextual-links-list-item-link-background-color: var(--color-background-default);
   --base_style-block-local-tasks-background-color: var(--color-background-darkest);
+  --base_style-block-local-tasks-list-item-background-color: var(--color-background-default);
+  --base_style-block-local-tasks-link-background-color: var(--color-theme-primary);
+  --base_style-block-local-tasks-link-color: var(--color-text-inverse);
+  --base_style-block-local-tasks-link-hover-color: var(--color-theme-primary-darken20);
+  --base_style-block-local-tasks-link-active-color: var(--color-theme-primary-bright);
+  --base_style-block-local-tasks-show-hide-background-color: var(--color-background-darkest);
+
 
   //_tiles.scss
   --base_style-field-image-header: var(--color-theme-primary);
