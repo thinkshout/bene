@@ -121,6 +121,29 @@ $bene-buildup-variables: (
   //_fields.scss
   --field-name-bene-intro-h2: var(--color-theme-primary-bright);
 
+  //_forms.scss
+  --forms-input-textarea-color: var(--color-text-primary);
+  --forms-input-textarea-webkit-placeholder-color: var(--color-text-placeholder);
+  --forms-input-textarea-moz-placeholder-color: var(--color-text-placeholder);
+  --forms-input-textarea-ms-placeholder-color: var(--color-text-placeholder);
+  --forms-input-textarea--moz-placeholder-color: var(--color-text-placeholder);
+  --forms-input-textarea-focus-outline-color: var(--color-text-light);
+  --forms-checkbox-label-color: var(--color-text-secondary);
+  --forms-checkbox-label-before-border-color: var(--color-text-secondary);
+  --forms-checkbox-input-color: var(--color-text-secondary);
+  --forms-label-color: var(--color-text-secondary);
+  --forms-input-focus-color: var(--color-text-light);
+  --forms-textarea-background-color: var(--color-theme-primary-bright);
+  --forms-textarea-border-color: var(--color-text-light);
+  --forms-textarea-color: var(--color-text-primary);
+  --forms-textarea-webkit-input-placeholder-color: var(--color-text-placeholder);
+  --forms-textarea-moz-input-placeholder-color: var(--color-text-placeholder);
+  --forms-textarea-ms-input-placeholder-color: var(--color-text-placeholder);
+  --forms-textarea--moz-input-placeholder-color: var(--color-text-placeholder);
+  --forms-input-submit-background-color: var(--color-theme-primary-bright);
+  --forms-input-submit-color: var(--color-text-inverse);
+  --forms-input-submit-hover-background-color: var(--color-theme-primary-bright-darken20);
+
   //_tiles.scss
   --base_style-field-image-header: var(--color-theme-primary);
   --base_style-desktop-field-image-header: var(--color-theme-primary);
