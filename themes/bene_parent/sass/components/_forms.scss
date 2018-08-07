@@ -103,7 +103,7 @@ input[type='tel'],
 textarea {
   -webkit-appearance: none;
   background-color: bbv(color-theme-primary-bright);
-  background-color: bbv(--forms-textarea-background-color);
+  background-color: var(--forms-textarea-background-color);
   border-radius: rem(3);
   border: 1px solid bbv(color-text-light); // in case css variables are not supported
   border: 1px solid var(--forms-textarea-border-color);
