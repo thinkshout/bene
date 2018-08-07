@@ -91,14 +91,14 @@ body.user-logged-in .region.region-content {
       margin: 0;
     }
     li {
-      background-color: bbv(bene-main-white); // in case css variables are not supported
-      background-color: var(--color-background-default);
+      background-color: bbv(color-background-default); // in case css variables are not supported
+      background-color: var(--base_style-block-local-tasks-list-item-background-color);
       a {
-        background-color: bbv(bene-main-blue); // in case css variables are not supported
-        background-color: var(--color-theme-primary);
+        background-color: bbv(color-theme-primary); // in case css variables are not supported
+        background-color: var(--base_style-block-local-tasks-link-background-color);
         border: none;
-        color: bbv(bene-main-white); // in case css variables are not supported
-        color: var(--color-text-inverse);
+        color: bbv(color-text-inverse); // in case css variables are not supported
+        color: var(--base_style-block-local-tasks-link-color);
         display: inline-block;
         font-size: rem(15);
         font-weight: 800;
@@ -109,18 +109,18 @@ body.user-logged-in .region.region-content {
           padding: rem(7) rem(20) rem(7);
         }
         &:hover {
-          background-color: #00859A; // in case css variables are not supported
-          background-color: var(--color-theme-primary-darken20);
+          background-color: bbv(color-theme-primary-darken20); // in case css variables are not supported
+          background-color: var(--base_style-block-local-tasks-link-hover-color);
         }
         &.is-active {
-          background-color: bbv(bene-bright-blue); // in case css variables are not supported
-          background-color: var(--color-theme-primary-bright);
+          background-color: bbv(color-theme-primary-bright); // in case css variables are not supported
+          background-color: var(--base_style-block-local-tasks-link-active-color);
         }
       }
     }
     .show-hide {
-      background-color: bbv(bene-main-black); // in case css variables are not supported
-      background-color: var(--color-background-darkest);
+      background-color: bbv(color-background-darkest); // in case css variables are not supported
+      background-color: var(--base_style-block-local-tasks-show-hide-background-color);
       cursor: pointer;
       font-size: rem(35);
       height: rem(30);
