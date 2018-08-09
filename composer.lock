@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0bb428922ccb0c72917fafcd1a696acc",
+    "content-hash": "d0cff5f92eb4e18aa0d973b4014330e1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3383,8 +3383,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.1-beta1+0-dev",
-                    "datestamp": "1532080685",
+                    "version": "8.x-1.0-beta1+1-dev",
+                    "datestamp": "1529070524",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -3732,7 +3732,7 @@
         },
         {
             "name": "drupal/viewsreference",
-            "version": "dev-2.x",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/viewsreference",
@@ -3747,11 +3747,11 @@
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-2.x": "2.x-dev"
+                    "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-alpha4+2-dev",
-                    "datestamp": "1521623884",
+                    "version": "8.x-1.1+2-dev",
+                    "datestamp": "1515534184",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -3776,7 +3776,7 @@
                     "homepage": "https://www.drupal.org/user/545912"
                 }
             ],
-            "description": "Views reference",
+            "description": "Views Reference",
             "homepage": "http://drupal.org/project/viewsreference",
             "keywords": [
                 "Drupal"

@@ -64,7 +64,7 @@
         "drupal/picture_background_formatter": "1.x-dev",
         "drupal/address": "~1.2",
         "commerceguys/addressing": "~1.0",
-        "drupal/viewsreference": "dev-2.x#9af27ed",
+        "drupal/viewsreference": "dev-1.x#9af27ed",
         "drupal/mailchimp": "^1.6",
         "thinkshout/bene_media": "dev-8.x-2.x"
     },
