@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0cff5f92eb4e18aa0d973b4014330e1",
+    "content-hash": "ee846d5cdad660eb8b376c7cd5365554",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3383,8 +3383,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta1+1-dev",
-                    "datestamp": "1529070524",
+                    "version": "8.x-1.1-beta1+0-dev",
+                    "datestamp": "1532080685",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -5714,11 +5714,11 @@
         },
         {
             "name": "thinkshout/bene_media",
-            "version": "dev-8.x-2.x",
+            "version": "dev-8.x-2.x-bene",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thinkshout/bene_media.git",
-                "reference": "7b0319032d65b8e5d911e1d90da5a13d806c070c"
+                "reference": "053fe8bd9b8d8778287bdd8a5d8a1e9291975457"
             },
             "require": {
                 "drupal/config_rewrite": "^1.1",
@@ -5758,7 +5758,7 @@
                 }
             ],
             "description": "Media related functionality and configuration for the Bene Distribution.",
-            "time": "2018-06-26T19:33:46+00:00"
+            "time": "2018-08-10T18:07:07+00:00"
         },
         {
             "name": "thinkshout/mailchimp-api-php",
