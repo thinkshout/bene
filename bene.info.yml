@@ -47,6 +47,7 @@ dependencies:
   - image
   - link
   - linkit
+  - media
   - menu_link_content
   - menu_ui
   - metatag
