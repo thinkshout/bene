@@ -1,4 +1,6 @@
 .paragraph--type--tiles {
+  background-color: bbv(color-background-darker);
+  background-color: var(--base_style-tiles-background-color);
   &> .field--name-field-title {
     font-size: rem(24);
     font-weight: 400;
