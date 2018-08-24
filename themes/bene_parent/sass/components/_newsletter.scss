@@ -1,10 +1,10 @@
 // Default Styles (Mobile First!)
 .external-newsletter {
   align-items: center;
-  background-color: bbv(color-theme-primary); // in case css variables are not supported
+  background-color: bbv(color-primary-first);
   background-color: var(--newsletter-background-color);
-  color: bbv(color-text-inverse); // in case css variables are not supported
-  color: var(--newsletter-main-color);
+  color: bbv(font-color-tertiary);
+  color: var(--newsletter-font-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,17 +35,17 @@
     text-align: center;
   }
   label {
-    color: bbv(color-text-inverse); // in case css variables are not supported
-    color: var(--newsletter-label-color);
+    color: bbv(font-color-tertiary); // in case css variables are not supported
+    color: var(--newsletter-font-color);
   }
   p {
-    color: bbv(color-text-inverse); // in case css variables are not supported
-    color: var(--newsletter-paragraph-color);
+    color: bbv(font-color-tertiary); // in case css variables are not supported
+    color: var(--newsletter-font-color);
     margin: rem(6) 0;
   }
   a {
-    color: bbv(color-text-primary); // in case css variables are not supported
-    color: var(--newsletter-link-color);
+    color: bbv(font-color-link); // in case css variables are not supported
+    color: var(--general-link-color);
     &:after {
       @include all-transition;
       content: ' →';
@@ -58,8 +58,8 @@
     }
   }
   a.button {
-    background-color: bbv(color-background-default); // in case css variables are not supported
-    background-color: var(--newsletter-link-button-color);
+    background-color: bbv(color-primary-second); // in case css variables are not supported
+    background-color: var(--newsletter-button-color);
     font-size: rem(12);
     font-weight: 600;
     padding: rem(15) rem(20);
@@ -68,8 +68,8 @@
       content: none;
     }
     &:hover {
-      background-color: bbv(color-theme-primary-bright-lighten20); // in case css variables are not supported
-      background-color: var(--newsletter-link-button-hover-color);
+      background-color: bbv(color-primary-second);
+      background-color: var(--newsletter-button-hover-color);
     }
   }
 }

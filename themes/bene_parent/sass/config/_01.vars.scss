@@ -25,39 +25,51 @@ $bene-a-level-variables: (
 }
 
 $bene-buildup-variables: (
-  color-theme-primary: bav(bene-main-blue),
-  color-theme-primary-darken20: darken(bav(bene-main-blue), 20% ),
-  color-theme-primary-lighten20: lighten(bav(bene-main-blue), 20%),
-  color-theme-primary-bright: bav(bene-bright-blue),
-  color-theme-primary-bright-darken20: darken(bav(bene-bright-blue), 20%),
-  color-theme-primary-bright-lighten20: lighten(bav(bene-bright-blue), 20%),
-  color-text-primary: bav(bene-main-black),
-  color-text-secondary: bav(bene-dark-grey),
-  color-text-accent: bav(bene-dark-grey),
-  color-text-placeholder: bav(bene-placeholder-grey),
-  color-text-medium-dark: bav(bene-medium-grey),
-  color-text-inverse: bav(bene-main-white),
-  color-text-light: bav(bene-light-grey),
-  color-text-link: bav(bene-main-black),
-  color-background-default: bav(bene-main-white),
-  color-background-lightest: bav(bene-light-grey),
-  color-background-darker: bav(bene-dark-grey),
-  color-background-darkest: bav(bene-main-black),
-  color-social-icon: bav(bene-bright-blue),
-  color-social-icon-darken20: darken(bav(bene-bright-blue), 20%),
-  social-icon-size: rem(40),
+  color-primary-first: bav(bene-bright-blue),
+  color-primary-second: bav(bene-main-blue),
+  color-primary-third: bav(bene-dark-grey),
+  color-primary-fourth: bav(bene-main-white),
+
+  color-secondary-first: bav(bene-main-black),
+  color-secondary-second: bav(bene-medium-grey),
+  color-secondary-third: bav(bene-placeholder-grey),
+  color-secondary-fourth: bav(bene-light-grey),
+
+  background-color-primary: bav(bene-main-white),
+  background-color-secondary: bav(bene-bright-blue),
+  background-color-tertiary: bav(bene-main-blue),
+  background-color-hover: bav(bene-light-grey),
+
+  button-size-large: rem(56),
+  button-size-medium: rem(30),
+  button-size-small: rem(27),
+
   font-family-primary: bav(bene-sans-font),
   font-family-secondary: bav(bene-sans-font),
-  font-weight-primary: normal,
-  font-weight-menu-primary: bold,
-  font-weight-extra-heavy: 900,
-  font-style-primary: normal,
-  font-size-primary: rem(24),
-  font-size-header: rem(36),
+
+  font-size-large: rem(61),
+  font-size-medium: rem(50),
+  font-size-small: rem(25),
+  font-size-accent: rem(30),
+
+  font-color-primary: bav(bene-main-black),
+  font-color-secondary: bav(bene-main-white),
+  font-color-tertiary: bav(bene-dark-grey),
+  font-color-accent: bav(bene-bright-blue),
+  font-color-link: bav(bene-bright-blue),
+  font-color-hover-link: bav(bene-main-blue),
+
+  font-weight-bold: bold,
+  font-weight-normal: normal,
+  font-weight-light: 100,
+
   gradient-direction: -180deg,
-  gradient-from-color: rgba(bav(bene-main-black), 0.00), // 0.00 means fully transparent
-  gradient-to-color: rgba(bav(bene-main-black), 0.00), // 0.00 means fully transparent, 1 means opaque
+  gradient-start-color: rgba(bav(bene-main-blue), 1), // 0.00 = transparent
+  gradient-end-color: rgba(bav(bene-bright-blue), 1), //  1 = opaque
+
+  logo-size: rem(170),
   preferred-alignment: left,
+  social-media-icon-size: rem(36),
 );
 
 // bbv = bene buildup variable
@@ -71,11 +83,11 @@ $bene-buildup-variables: (
   // place each item in bene-buildup-variables here so they are defined in root scope
   // output of this loop will be:
   // ...
-  // --color-theme-primary: #129FB5;
-  // --color-theme-primary-darken20: #094e58;
-  // --color-theme-primary-lighten20: #41d5ec;
-  // --color-social-icon: #50CFE3;
-  // --color-social-icon-darken20: #1c9db1;
+  // --color-primary-first: #129FB5;
+  // --color-primary-first: #094e58;
+  // --color-primary-first-lighten20: #41d5ec;
+  // --background-color-secondary: #50CFE3;
+  // --background-color-secondary-darken20: #1c9db1;
   // ...
   @each $name, $color-num in $bene-buildup-variables {
     --#{$name}: #{$color-num};
@@ -86,168 +98,297 @@ $bene-buildup-variables: (
    * They should also refer to the buildup variables above as much as possible.
    **/
 
-  // base_style -- these apply to everything unless overridden here or in bene_parent.
+
+
+  // Colors --------------------------------------------------------------------------- Colors //
+
+    // General
+    --general-primary-background-color: var(--background-color-primary); //dark grey
+    --general-secondary-background-color: var(--background-color-secondary); //white
+    --general-tertiary-background-color: var(--background-color-tertiary); //light blue
+    --general-font-primary-color: var(--font-color-primary); //light blue
+    --general-font-secondary-color: var(--font-color-secondary); //main black
+    --general-font-tertiary-color: var(--font-color-tertiary); //white
+    --general-font-accent-color: var(--font-color-accent); //light yellow
+    --general-link-color: var(--font-color-link); //light yellow
+    --general-link-hover-color: var(--font-color-hover-link); //dark yellow
+
+
+    //Old General Variables - possibly change or remove
+
+      --general-formatted-text-ul-li-color: var(--font-color-secondary);
+      --general-formatted-text-ul-li-bullet-color: var(--font-color-secondary);
+      --general-formatted-text-ol-li-color: var(--font-color-secondary);
+      --general-table-border-color: var(--font-color-secondary);
+      --general-table-text-color: var(--font-color-secondary);
+      --general-table-headerrow-leftcolumn-text-color: var(--font-color-secondary);
+      --general-table-background-color: var(--background-color-primary);
+      --general-table-background-stripe-color: var(--background-color-primary);
+      --general-fieldset-legend-color: var(--font-color-secondary);
+
+
+  // Header
+      --header-background-color: var(--background-color-primary); //dark grey
+      --header-primary-main-font-color: var(--font-color-secondary);
+      --header-primary-utility-font-color: var(--font-color-secondary);
+      --header-primary-button-background-color: var(--font-color-link); //yellow
+      --header-primary-button-background-hover-color: var(--font-color-secondary);
+      --header-primary-button-font-color: var(--font-color-secondary);
+      --header-primary-button-font-hover-color: var(--font-color-secondary);
+      --header-primary-font-hover-color: var(--font-color-secondary);
+
+  // Secondary Navigation
+      --secondary-nav-background-color: var(--background-color-primary);
+      --secondary-nav-font-color: var(--font-color-secondary);
+      --secondary-nav-font-hover-color: var(--font-color-secondary);
+      --secondary-nav-active-font-color: var(--font-color-secondary);
+      --secondary-nav-button-background-color: var(--background-color-primary);
+      --secondary-nav-button-background-hover-color: var(--background-color-secondary);
+      --secondary-nav-button-font-color: var(--font-color-secondary);
+      --secondary-nav-button-font-hover-color: var(--font-color-secondary);
+
+
+  // Hero
+      --hero-font-color: var(--font-color-secondary);
+      --hero-button-background-color: var(--font-color-secondary);
+      --hero-button-background-hover-color: var(--font-color-secondary);
+      --hero-button-border-color: var(--font-color-secondary);
+      --hero-button-font-color: var(--font-color-secondary);
+      --hero-button-font-hover-color: var(--font-color-secondary);
+      --hero-block-background-color: var(--background-color-primary);
+
+
+  // Paragraph - Feature
+      --feature-background-color: var(--font-color-secondary);
+      --feature-font-color: var(--font-color-secondary);
+      --feature-button-background-color: var(--font-color-secondary);
+      --feature-button-background-hover-color: var(--font-color-secondary);
+      --feature-button-font-color: var(--font-color-secondary);
+      --feature-button-font-hover-color: var(--font-color-secondary);
+      --feature_block-linear-gradient: linear-gradient(var(--gradient-direction), var(--gradient-start-color), var(--gradient-end-color));
+
+  // Paragraph - Rich Text
+      --rich-header-font-color: var(--font-color-secondary);
+      --rich-paragraph-font-color: var(--font-color-secondary);
+      --rich-link-font-color: var(--font-color-secondary);
+      --rich-link-font-hover-color: var(--font-color-secondary);
+
+  // Paragraph - Tiles
+      --tile-background-color: var(--color-primary-first);
+      --tile-section-background-color: var(--color-primary-first);
+      --tile-header-font-color: var(--color-primary-first);
+      --tile-sub-header-font-color: var(--color-primary-first);
+      --tile-paragraph-color: var(--color-primary-second);
+      --tile-button-color: var(--color-primary-second);
+      --tile-button-hover-color: var(--color-primary-second);
+      --tile-button-text-color: var(--color-primary-second);
+      --tile-button-text-hover-color: var(--color-primary-second);
+      --tile-sub-button-color: var(--color-primary-second);
+      --tile-sub-button-hover-color: var(--color-primary-second);
+      --tile-sub-button-text-color: var(--color-primary-second);
+      --tile-sub-button-text-hover-color: var(--color-primary-second);
+
+  // Newsletter
+      --newsletter-background-color: var(--color-primary-first);
+      --newsletter-font-color: var(--font-color-tertiary);
+      --newsletter-font-hover-color: var(--font-color-tertiary);
+      --newsletter-button-color: var(--color-primary-second);
+      --newsletter-button-hover-color: var(--color-primary-second);
+      --newsletter-button-text-color: var(--color-primary-second);
+      --newsletter-button-text-hover-color: var(--color-primary-second);
+
+  // Forms
+      --form-background-color: var(--color-primary-first);
+      --form-input-background-color: var(--color-primary-first);
+      --form-input-font-color: var(--color-primary-first);
+      --form-input-checkbox-color: var(--color-primary-first);
+      --form-input-placeholder-color: var(--color-primary-first);
+      --form-input-outline-color: var(--color-primary-first);
+      --form-label-color: var(--color-primary-first);
+      --form-label-before-color: var(--color-primary-first);
+      --form-label-required-symbol-color: var(--color-primary-first);
+      --form-input-textarea-border-color: var(--color-primary-first);
+      --form-input-textarea-color: var(--color-primary-first);
+      --form-input-textarea-placeholder-color: var(--color-primary-first);
+      --form-button-color: var(--color-primary-first);
+      --form-button-hover-color: var(--color-primary-second);
+      --form-button-background-color: var(--color-primary-second);
+      --form-button-hover-background-color: var(--color-primary-first);
+      --form-button-text-color: var(--color-primary-second);
+      --form-button-text-hover-color: var(--color-primary-second);
+
+  //Footer
+      --footer-block-background-color: var(--background-color-primary);
+      --footer-social-background-color: var(--background-color-secondary);
+      --footer-social-hover-background-color: var(--background-color-hover);
+      --footer-social-border-color: var(--background-color-secondary);
+      --footer-social-hover-border-color: var(--background-color-hover);
+      --footer-menu-link-color: var(--font-color-link);
+      --footer-menu-link-hover-color: var(--font-color-hover-link);
+      --footer-font-color: var(--font-color-tertiary);
+      --footer-font-hover-color: var(--font-color-tertiary);
+      --footer-social-icon-size: var(--social-media-icon-size);
+
+
+  // Font  --------------------------------------------------------------------------- Font //
+
+    // General
+      --general-font-family-primary: var(--font-family-primary);
+      --general-font-family-secondary: var(--font-family-secondary);
+      --general-preferred-alignment: var(--preferred-alignment);
+
+      --general-font-size-small: var(--font-size-small);
+      --general-font-size-medium: var(--font-size-medium);
+      --general-font-size-large: var(--font-size-large);
+      --general-font-size-accent: var(--font-size-accent);
+
+      --general-font-weight-bold: var(--font-weight-bold);
+      --general-font-weight-normal: var(--font-weight-normal);
+      --general-font-weight-light: var(--font-weight-light);
+
+
+   //base_style -- these apply to everything unless overridden here or in bene_parent.
   --base_style-font-family: var(--font-family-primary);
   --base_style-font-family-secondary: var(--font-family-secondary);
-  --base_style-paragraph-color: var(--color-text-primary);
-  --base_style-link-color: var(--color-theme-primary);
-  --base_style-active-link-color: var(--color-theme-primary-lighten20);
-  --base_style-formatted-text-ul-li-color: var(--color-text-primary);
-  --base_style-formatted-text-ul-li-bullet-color: var(--color-text-primary);
-  --base_style-formatted-text-ol-li-color: var(--color-text-primary);
-  --base_style-table-border-color: var(--color-text-light);
-  --base_style-table-text-color: var(--color-text-medium-dark);
-  --base_style-table-headerrow-leftcolumn-text-color: var(--color-text-medium-dark);
-  --base_style-table-background-color: var(--color-background-default);
-  --base_style-table-background-stripe-color: var(--color-background-lightest);
-  --base_style-fieldset-legend-color: var(--color-text-secondary);
+  --base_style-paragraph-color: var(--font-color-secondary);
+  --base_style-link-color: var(--font-color-link);
+  --base_style-active-link-color: var(--font-color-link);
+  --base_style-formatted-text-ul-li-color: var(--font-color-secondary);
+  --base_style-formatted-text-ul-li-bullet-color: var(--font-color-secondary);
+  --base_style-formatted-text-ol-li-color: var(--font-color-secondary);
+  --base_style-table-border-color: var(--font-color-secondary);
+  --base_style-table-text-color: var(--font-color-secondary);
+  --base_style-table-headerrow-leftcolumn-text-color: var(--font-color-secondary);
+  --base_style-table-background-color: var(--background-color-primary);
+  --base_style-table-background-stripe-color: var(--background-color-primary);
+  --base_style-fieldset-legend-color: var(--font-color-secondary);
 
   // _admin.scss:
-  --base_style-body-background-color: var(--color-background-default);
-  --base_style-contextual-links-background-color: var(--color-background-default);
-  --base_style-contextual-links-list-item-background-color: var(--color-background-default);
-  --base_style-contextual-links-list-item-link-background-color: var(--color-background-default);
-  --base_style-block-local-tasks-background-color: var(--color-background-darkest);
-  --base_style-block-local-tasks-list-item-background-color: var(--color-background-default);
-  --base_style-block-local-tasks-link-background-color: var(--color-theme-primary);
-  --base_style-block-local-tasks-link-color: var(--color-text-inverse);
-  --base_style-block-local-tasks-link-hover-color: var(--color-theme-primary-darken20);
-  --base_style-block-local-tasks-link-active-color: var(--color-theme-primary-bright);
-  --base_style-block-local-tasks-show-hide-background-color: var(--color-background-darkest);
+  --base_style-body-background-color: var(--background-color-primary);
+  --base_style-contextual-links-background-color: var(--background-color-primary);
+  --base_style-contextual-links-list-item-background-color: var(--background-color-primary);
+  --base_style-contextual-links-list-item-link-background-color: var(--background-color-primary);
+  --base_style-block-local-tasks-background-color: var(--background-color-primary);
+  --base_style-block-local-tasks-list-item-background-color: var(--background-color-primary);
+  --base_style-block-local-tasks-link-background-color: var(--color-primary-first);
+  --base_style-block-local-tasks-link-color: var(--font-color-tertiary);
+  --base_style-block-local-tasks-link-hover-color: var(--color-primary-first);
+  --base_style-block-local-tasks-link-active-color: var(--color-secondary-first);
+  --base_style-block-local-tasks-show-hide-background-color: var(--background-color-primary);
 
-  //_basic_hero.scss
-  --block-hero-background-color: var(--color-theme-primary-bright);
-
-  //_fields.scss
-  --field-name-bene-intro-h2: var(--color-theme-primary-bright);
-
-  //_forms.scss
-  --forms-input-textarea-color: var(--color-text-primary);
-  --forms-input-textarea-webkit-placeholder-color: var(--color-text-placeholder);
-  --forms-input-textarea-moz-placeholder-color: var(--color-text-placeholder);
-  --forms-input-textarea-ms-placeholder-color: var(--color-text-placeholder);
-  --forms-input-textarea--moz-placeholder-color: var(--color-text-placeholder);
-  --forms-input-textarea-focus-outline-color: var(--color-text-light);
-  --forms-checkbox-label-color: var(--color-text-secondary);
-  --forms-checkbox-label-before-border-color: var(--color-text-secondary);
-  --forms-checkbox-input-color: var(--color-text-secondary);
-  --forms-label-color: var(--color-text-secondary);
-  --forms-input-focus-color: var(--color-text-light);
-  --forms-textarea-background-color: var(--color-theme-primary-bright);
-  --forms-textarea-border-color: var(--color-text-light);
-  --forms-textarea-color: var(--color-text-primary);
-  --forms-textarea-webkit-input-placeholder-color: var(--color-text-placeholder);
-  --forms-textarea-moz-input-placeholder-color: var(--color-text-placeholder);
-  --forms-textarea-ms-input-placeholder-color: var(--color-text-placeholder);
-  --forms-textarea--moz-input-placeholder-color: var(--color-text-placeholder);
-  --forms-input-submit-background-color: var(--color-theme-primary-bright);
-  --forms-input-submit-color: var(--color-text-inverse);
-  --forms-input-submit-hover-background-color: var(--color-theme-primary-bright-darken20);
 
   //_tiles.scss
-  --base_style-field-image-header: var(--color-theme-primary);
-  --base_style-desktop-field-image-header: var(--color-theme-primary);
-  --base_style-field-image-text: var(--color-text-secondary);
+  --base_style-field-image-header: var(--color-primary-first);
+  --base_style-desktop-field-image-header: var(--color-primary-first);
+  --base_style-field-image-text: var(--font-color-primary);
 
   //_nice_select.scss
-  --drop_down-background-color: var(--color-background-darker);
-  --drop_down-active-text-color: var(--color-text-inverse);
-  --drop_down-disabled-text-color: var(--color-text-inverse);
+  --drop_down-background-color: var(--background-color-primary);
+  --drop_down-active-text-color: var(--font-color-tertiary);
+  --drop_down-disabled-text-color: var(--font-color-tertiary);
 
 
   // rich_text (_paragraphs.scss)
-  --rich_text-background-paragraph-and-list-color: var(--color-text-secondary);
-  --rich_text-background-blockquote-paragraph-color: var(--color-theme-primary-bright);
-  --rich_text-background-blockquote-horizontal-line-color: var(--color-theme-primary-bright);
+  --rich_text-background-paragraph-and-list-color: var(--font-color-primary);
+  --rich_text-background-blockquote-paragraph-color: var(--color-secondary-first);
+  --rich_text-background-blockquote-horizontal-line-color: var(--color-secondary-first);
 
   //_newsletter.scss
-  --newsletter-background-color: var(--color-theme-primary);
-  --newsletter-main-color: var(--color-text-inverse);
-  --newsletter-label-color: var(--color-text-inverse);
-  --newsletter-paragraph-color: var(--color-text-inverse);
+  --newsletter-background-color: var(--color-primary-first);
+  --newsletter-main-color: var(--font-color-tertiary);
+  --newsletter-label-color: var(--font-color-tertiary);
+  --newsletter-paragraph-color: var(--font-color-tertiary);
   --newsletter-link-color: var(--color-text-primary);
-  --newsletter-link-button-color: var(--color-background-default);
-  --newsletter-link-button-hover-color: var(--color-theme-primary-bright-lighten20);
+  --newsletter-link-button-color: var(--background-color-primary);
+  --newsletter-link-button-hover-color: var(--color-secondary-first-lighten20);
 
   //_menus.scss
-  --menu-closed-background-color: var(--color-theme-primary-bright);
-  --menu-open-background-color: var(--color-theme-primary-bright);
-  --menu-hover-background-color: var(--color-theme-primary);
-  --menu-after-hover-background-color: var(--color-theme-primary);
-  --menu-active-background-color: var(--color-theme-primary-bright);
-  --menu-mobile-background-color: var(--color-background-darkest);
-  --menu-mobile-link-color: var(--color-theme-primary-bright);
-  --menu-mobile-active-link-color: var(--color-text-inverse);
-  --menu-mobile-list-background-color: var(--color-theme-primary);
+  --menu-closed-background-color: var(--color-secondary-first);
+  --menu-open-background-color: var(--color-secondary-first);
+  --menu-hover-background-color: var(--color-primary-first);
+  --menu-after-hover-background-color: var(--color-primary-first);
+  --menu-active-background-color: var(--color-secondary-first);
+  --menu-mobile-background-color: var(--background-color-primary);
+  --menu-mobile-link-color: var(--color-secondary-first);
+  --menu-mobile-active-link-color: var(--font-color-tertiary);
+  --menu-mobile-list-background-color: var(--color-primary-first);
   --menu-mobile-list-color: var(--color-text-primary);
-  --menu-mobile-list-active-color: var(--color-text-inverse);
+  --menu-mobile-list-active-color: var(--font-color-tertiary);
   --menu-desktop-link-color: var(--color-text-medium-dark);
-  --menu-desktop-active-link-color: var(--color-theme-primary);
-  --menu-desktop-last-active-link-color: var(--color-text-inverse);
-  --menu-desktop-last-active-link-background-color: var(--color-theme-primary-bright);
-  --menu-desktop-last-active-link-hover-background-color: var(--color-theme-primary-bright-darken20);
+  --menu-desktop-active-link-color: var(--color-primary-first);
+  --menu-desktop-last-active-link-color: var(--font-color-tertiary);
+  --menu-desktop-last-active-link-background-color: var(--color-secondary-first);
+  --menu-desktop-last-active-link-hover-background-color: var(--color-primary-second);
   --menu-desktop-main-link-color: var(--color-text-primary);
-  --menu-desktop-main-active-link-color: var(--color-theme-primary);
+  --menu-desktop-main-active-link-color: var(--color-primary-first);
 
   //_inner-page.scss
   --inner_page-header-two-color: var(--color-text-primary);
   --inner_page-header-three-color: var(--color-text-primary);
-  --inner_page-link-color: var(--color-theme-primary-bright);
-  --inner_page-link-hover-color: var(--color-theme-primary-bright-darken20);
+  --inner_page-link-color: var(--color-secondary-first);
+  --inner_page-link-hover-color: var(--color-primary-second);
   --inner_page-paragraph-color: var(--color-text-primary);
   --inner_page-blockquote-paragraph-color: var(--color-text-accent);
 
   //_home_hero.scss
-  --home_hero-bene-home-page-feature-block-color: var(--color-text-inverse);
-  --home_hero-bene-home-page-feature-block-background-color: var(--color-theme-primary-bright);
-  --home_hero-bene-link-border-color: var(--color-text-inverse);
-  --home_hero-bene-link-color: var(--color-text-inverse);
-  --home_hero-bene-link-hover-color: var(--color-text-inverse);
+  --home_hero-bene-home-page-feature-block-color: var(--font-color-tertiary);
+  --home_hero-bene-home-page-feature-block-background-color: var(--color-secondary-first);
+  --home_hero-bene-link-border-color: var(--font-color-tertiary);
+  --home_hero-bene-link-color: var(--font-color-tertiary);
+  --home_hero-bene-link-hover-color: var(--font-color-tertiary);
   --home_hero-bene-link-hover-background-color: var(color-background-lightest);
 
   //_hero.scss
-  --block_hero-bene-background-color: var(--color-theme-primary-bright);
-  --block_hero-bene-header-color: var(--color-text-inverse);
+  --block_hero-bene-background-color: var(--color-secondary-first);
+  --block_hero-bene-header-color: var(--font-color-tertiary);
 
 
   // bene_home_page_feature_block
+
   // bene_sub_navigation_block
   // bene_listing_page_plugin_display_block
 
   // bene_mobile_nav
-  --bene_mobile_nav-color: --color-text-inverse;
-  --bene_mobile_nav-menu-link-color: --color-text-inverse;
-  --bene_mobile_nav-background: --color-theme-primary;
-  --bene_mobile_nav-menu-text-align: --preferred-alignment;
-  --bene_mobile_nav-font-face: --font-family-primary;
-  --bene_mobile_nav-font-size: --font-size-primary;
+  --bene_mobile_nav-color: var(--font-color-tertiary);
+  --bene_mobile_nav-menu-link-color: var(--font-color-tertiary);
+  --bene_mobile_nav-background: var(--color-primary-first);
+  --bene_mobile_nav-menu-text-align: var(--preferred-alignment);
+  --bene_mobile_nav-font-face: var(--font-family-primary);
+  --bene_mobile_nav-font-size: var(--font-size-primary);
 
   // bene_home_page_feature_block
-  --bene_home_page_feature_block-background-color: var(--color-theme-primary);
+  --bene_home_page_feature_block-background-color: var(--color-primary-first);
   --bene_home_page_feature_block-linear-gradient-direction: var(--gradient-direction);
-  --bene_home_page_feature_block-linear-gradient-color1: var(--gradient-from-color);
-  --bene_home_page_feature_block-linear-gradient-color2: var(--gradient-to-color);
-  --bene_home_page_feature_block-header-color: var(--color-text-inverse);
+  --bene_home_page_feature_block-linear-gradient-color1: var(--gradient-start-color);
+  --bene_home_page_feature_block-linear-gradient-color2: var(--gradient-end-color);
+  --bene_home_page_feature_block-header-color: var(--font-color-tertiary);
   --bene_home_page_feature_block-header-font-family: var(--font-family-primary);
   --bene_home_page_feature_block-header-font-size: var(--font-size-header);
   --bene_home_page_feature_block-header-font-weight: var(--font-weight-extra-heavy);
-  --bene_home_page_feature_block-description-color: var(--color-text-inverse);
+  --bene_home_page_feature_block-description-color: var(--font-color-tertiary);
   --bene_home_page_feature_block-description-font-family: var(--font-family-primary);
-  --bene_home_page_feature_block-linear-gradient: linear-gradient(var(--bene-home-page-feature-block-linear-gradient-direction), var(--bene-home-page-feature-block-linear-gradient-color1), var(--bene-home-page-feature-block-linear-gradient-color2));
-  --bene_home_page_feature_block-link-button-color: var(--color-text-inverse);
-  --bene_home_page_feature_block-link-button-background-color: var(--color-theme-primary-bright);
-  --bene_home_page_feature_block-link-button-hover-background-color: var(--color-theme-primary-bright-darken20);
+  --bene_home_page_feature_block-linear-gradient: linear-gradient(var(--gradient-direction), var(--gradient-start-color), var(--gradient-end-color));
+  --bene_home_page_feature_block-link-button-color: var(--font-color-tertiary);
+  --bene_home_page_feature_block-link-button-background-color: var(--color-secondary-first);
+  --bene_home_page_feature_block-link-button-hover-background-color: var(--color-primary-second);
 
   // bene_newsletter_signup_block
 
   // bene_footer_block
-  --bene_footer_block-social-icon-size: var(--social-icon-size);
-  --bene_footer_block-social-background-color: var(--color-social-icon);
-  --bene_footer_block-social-hover-background-color: var(--color-social-icon-darken20);
-  --bene_footer_block-social-border-color: var(--color-social-icon);
-  --bene_footer_block-social-hover-border-color: var(--color-social-icon-darken20);
+  --bene_footer_block-social-icon-size: var(--social-media-icon-size);
+  --bene_footer_block-social-background-color: var(--background-color-secondary);
+  --bene_footer_block-social-hover-background-color: var(--background-color-secondary-darken20);
+  --bene_footer_block-social-border-color: var(--background-color-secondary);
+  --bene_footer_block-social-hover-border-color: var(--background-color-secondary-darken20);
   --bene_footer_block-menu-link-color: var(--color-text-primary);
-  --bene_footer_block-menu-link-hover-color: var(--color-theme-primary);
-  --bene_footer_block-menu-item-link-hover-color: var(--color-theme-primary);
+  --bene_footer_block-menu-link-hover-color: var(--color-primary-first);
+  --bene_footer_block-menu-item-link-hover-color: var(--color-primary-first);
+
+
+
+  // background colors
+
+  //header
+  //footer
 
 }
