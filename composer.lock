@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b7e9eaea9b7d35e75b3815a4ce1fb54",
+    "content-hash": "ce2176a80db0580021a8a63d202533c6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3245,8 +3245,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.1-beta1+0-dev",
-                    "datestamp": "1532080685",
+                    "version": "8.x-1.0-beta1+1-dev",
+                    "datestamp": "1529070524",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -5580,7 +5580,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thinkshout/bene_media.git",
-                "reference": "486755255b5e8bca43bca3b667361d659366fa59"
+                "reference": "486755255b"
             },
             "require": {
                 "drupal/config_rewrite": "^1.1",
