@@ -33,7 +33,6 @@
         "drupal/admin_toolbar": "1.20",
         "drupal/config_update": "^1.1",
         "drupal/contact_storage": "1.0-beta9",
-        "drupal/crop": "^1.0",
         "drupal/ctools": "3.0",
         "drupal/entity": "^1.0",
         "drupal/entity_browser": "^1.3",
