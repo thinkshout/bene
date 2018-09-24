@@ -139,3 +139,7 @@
   width: 100%;
 }
 
+@mixin set-bbv-var($property, $bbv-value, $var-value) {
+  $property: var($var-value);
+  $property: var($bbv-value);
+}

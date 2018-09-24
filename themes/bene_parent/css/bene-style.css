@@ -281,8 +281,6 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: "'Open Sans', sans-serif";
   font-family: var(--base_style-font-family);
-  font-size: 1rem;
-  font-size: var(--base_style-font-size);
   font-style: normal;
   font-weight: 400; }
 

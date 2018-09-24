@@ -79,7 +79,6 @@ $bene-buildup-variables: (
   @return map-get($bene-buildup-variables, #{$var-name});
 }
 
-
 :root {
   // place each item in bene-buildup-variables here so they are defined in root scope
   // output of this loop will be:
