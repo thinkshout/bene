@@ -279,8 +279,6 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: "'Open Sans', sans-serif";
-  font-family: var(--base_style-font-family);
   font-style: normal;
   font-weight: 400; }
 
@@ -318,7 +316,6 @@ h4 {
 
 p,
 p.standard {
-  color: var(--base_style-paragraph-color);
   font-size: 1rem;
   line-height: 1.9375rem;
   font-weight: 400; }
@@ -327,24 +324,8 @@ a {
   -webkit-transition: color 0.3s linear, background-color 0.3s linear;
   -moz-transition: color 0.3s linear, background-color 0.3s linear;
   transition: color 0.3s linear, background-color 0.3s linear;
-  color: var(--base_style-link-color);
   cursor: pointer;
   text-decoration: none; }
-  a:hover, a:active, a.nice-select.open {
-    color: var(--base_style-active-link-color); }
-
-table a,
-li a,
-p a {
-  color: var(--base_style-link-color); }
-  table a:hover, table a:active, table a.nice-select.open,
-  li a:hover,
-  li a:active,
-  li a.nice-select.open,
-  p a:hover,
-  p a:active,
-  p a.nice-select.open {
-    color: var(--base_style-active-link-color); }
 
 a.button {
   -webkit-transition: background-color 0.3s linear, color 0.3s linear;
@@ -368,13 +349,9 @@ a.button {
   .text-formatted ul li {
     padding-bottom: 0.875rem;
     padding-left: 2rem;
-    text-indent: -1.25rem;
-    color: var(--base_style-formatted-text-ul-li-color); }
+    text-indent: -1.25rem; }
     .text-formatted ul li:before {
-      color: var(--base_style-formatted-text-ul-li-bullet-color);
       content: "•";
-      font-size: 1rem;
-      font-size: var(--base_style-font-size);
       line-height: 1;
       padding-right: 0.875rem;
       position: relative; }
@@ -385,17 +362,13 @@ ol {
     padding-bottom: 0.875rem;
     padding-left: 0.375rem;
     line-height: 1.4;
-    font-size: 1rem;
-    color: var(--base_style-formatted-text-ol-li-color); }
+    font-size: 1rem; }
 
 table, table.tablesaw {
-  border: 1px solid;
-  border: 1px solid var(--base_style-table-border-color);
   margin: 1.5rem 0;
   table-layout: auto; }
   table th, table tr, table td, table tr:first-child th, table.tablesaw th, table.tablesaw tr, table.tablesaw td, table.tablesaw tr:first-child th {
     border: none;
-    color: var(--base_style-table-text-color);
     font-size: 0.875rem;
     font-weight: 400;
     padding: 1.125rem 2.625rem;
@@ -405,13 +378,8 @@ table, table.tablesaw {
   table th, table tr:first-child th, table.tablesaw th, table.tablesaw tr:first-child th {
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--base_style-table-headerrow-leftcolumn-text-color);
     font-size: 0.875rem;
     margin: 0; }
-  table tr, table.tablesaw tr {
-    background-color: var(--base_style-table-background-color); }
-  table th, table tr:nth-of-type(2n), table.tablesaw th, table.tablesaw tr:nth-of-type(2n) {
-    background-color: var(--base_style-table-background-stripe-color); }
 
 ul.menu {
   list-style: none outside;
@@ -426,8 +394,7 @@ fieldset {
   padding: 0; }
   fieldset legend {
     font-size: 1.875rem;
-    font-weight: 700;
-    color: var(--base_style-fieldset-legend-color); }
+    font-weight: 700; }
 
 /* END BASE ELEMENT STYLES */
 .region-footer .bene-contact-links .fieldset-wrapper {
