@@ -51,6 +51,7 @@ $bene-buildup-variables: (
   font-size-medium: rem(50),
   font-size-small: rem(25),
   font-size-accent: rem(30),
+  font-size-base: rem(16), // Base font size for the body
 
   font-color-primary: bav(bene-main-black),
   font-color-secondary: bav(bene-main-white),
@@ -250,6 +251,7 @@ $bene-buildup-variables: (
    //base_style -- these apply to everything unless overridden here or in bene_parent.
   --base_style-font-family: var(--font-family-primary);
   --base_style-font-family-secondary: var(--font-family-secondary);
+  --base_style-font-size: var(--font-size-base);
   --base_style-paragraph-color: var(--font-color-secondary);
   --base_style-link-color: var(--font-color-link);
   --base_style-active-link-color: var(--font-color-link);

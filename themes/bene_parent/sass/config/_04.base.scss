@@ -4,7 +4,8 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: bbv(font-family-primary);
   font-family: var(--base_style-font-family); // or main-font-family
-  font-size: rem(16);
+  font-size: bbv(font-size-base);
+  font-size: var(--base_style-font-size);
   font-style: normal;
   font-weight: 400;
 }

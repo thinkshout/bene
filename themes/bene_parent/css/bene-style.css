@@ -35,6 +35,7 @@ html {
   --font-size-medium: 3.125rem;
   --font-size-small: 1.5625rem;
   --font-size-accent: 1.875rem;
+  --font-size-base: 1rem;
   --font-color-primary: #000;
   --font-color-secondary: #FFF;
   --font-color-tertiary: #5C5B5B;
@@ -166,6 +167,7 @@ html {
   --general-font-weight-light: var(--font-weight-light);
   --base_style-font-family: var(--font-family-primary);
   --base_style-font-family-secondary: var(--font-family-secondary);
+  --base_style-font-size: var(--font-size-base);
   --base_style-paragraph-color: var(--font-color-secondary);
   --base_style-link-color: var(--font-color-link);
   --base_style-active-link-color: var(--font-color-link);
@@ -280,6 +282,7 @@ body {
   font-family: "'Open Sans', sans-serif";
   font-family: var(--base_style-font-family);
   font-size: 1rem;
+  font-size: var(--base_style-font-size);
   font-style: normal;
   font-weight: 400; }
 
