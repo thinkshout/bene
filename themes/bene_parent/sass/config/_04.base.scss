@@ -96,7 +96,8 @@ a.button {
       color: bbv(color-text-primary); // in case css variables are not supported
       color: var(--base_style-formatted-text-ul-li-bullet-color);
       content: "•";
-      font-size: rem(16);
+      font-size: bbv(font-size-base);
+      font-size: var(--base_style-font-size);
       line-height: 1;
       padding-right: rem(14);
       position: relative;
