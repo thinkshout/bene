@@ -3594,7 +3594,7 @@
         },
         {
             "name": "drupal/viewsreference",
-            "version": "dev-1.x",
+            "version": "dev-2.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/viewsreference",
@@ -3609,11 +3609,11 @@
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-1.x": "1.x-dev"
+                    "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.1+2-dev",
-                    "datestamp": "1515534184",
+                    "version": "8.x-2.0-alpha4+2-dev",
+                    "datestamp": "1521623884",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -3638,7 +3638,7 @@
                     "homepage": "https://www.drupal.org/user/545912"
                 }
             ],
-            "description": "Views Reference",
+            "description": "Views reference",
             "homepage": "http://drupal.org/project/viewsreference",
             "keywords": [
                 "Drupal"
