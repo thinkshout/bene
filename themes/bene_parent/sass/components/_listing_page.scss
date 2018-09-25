@@ -59,7 +59,7 @@
 @include mq(desktop) {
   .page-node-type-listing-page {
     .block-system-main-block .field--name-bene-intro {
-      font-size: rem(22);
+      @include set-bbv-var(font-size, font-size-x-small, --bene_listing_page_intro-desktop);
       margin-bottom: rem(32);
       margin-top: rem(24);
     }
