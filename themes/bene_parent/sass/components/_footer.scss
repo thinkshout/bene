@@ -38,7 +38,7 @@
   }
 
   .contact-links {
-    @include set-bbv-var(font-size, font-size-base-x-small, --bene_footer_block-menu-item-contact-links);
+    @include set-bbv-var(font-size, font-size-base-xx-small, --bene_footer_block-menu-item-contact-links);
     .address {
       white-space: pre-line;
     }

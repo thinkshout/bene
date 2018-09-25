@@ -56,7 +56,6 @@ $bene-buildup-variables: (
   font-size-xx-small: rem(18),
   font-size-base: rem(16), // Base font size for the body
   font-size-base-small: rem(14),
-  font-size-base-x-small: rem(13),
   font-size-base-xx-small: rem(12),
 
   font-color-primary: bav(bene-main-black),
@@ -73,6 +72,7 @@ $bene-buildup-variables: (
   gradient-direction: -180deg,
   gradient-start-color: rgba(bav(bene-main-blue), 1), // 0.00 = transparent
   gradient-end-color: rgba(bav(bene-bright-blue), 1), //  1 = opaque
+  preferred-border-radius: 0px,
 
   logo-size: rem(170),
   preferred-alignment: left,
@@ -301,7 +301,10 @@ $bene-buildup-variables: (
   --drop_down-background-color: var(--background-color-primary);
   --drop_down-active-text-color: var(--font-color-tertiary);
   --drop_down-disabled-text-color: var(--font-color-tertiary);
-
+  --drop_down-font-weight: var(--font-weight-bold);
+  --drop_down-font-size: var(--font-size-base-small);
+  --drop_down-font-size-small: var(--font-size-base-xx-small);
+  --drop_down-border-radius: var(--preferred-border-radius);
 
   // rich_text (_paragraphs.scss)
   --rich_text-background-paragraph-and-list-color: var(--font-color-primary);
@@ -309,7 +312,7 @@ $bene-buildup-variables: (
   --rich_text-background-blockquote-horizontal-line-color: var(--color-secondary-first);
 
   //_newsletter.scss
-  --newsletter-background-color: var(--color-primary-first);
+  // --newsletter-background-color: var(--color-primary-first); // already defined above.
   --newsletter-main-color: var(--font-color-tertiary);
   --newsletter-label-color: var(--font-color-tertiary);
   --newsletter-paragraph-color: var(--font-color-tertiary);
@@ -402,7 +405,7 @@ $bene-buildup-variables: (
   --bene_footer_block-menu-font-size: var(--font-size-base-small);
   --bene_footer_block-menu-item-link: var(--font-size-base);
   --bene_footer_block-menu-item-contact-links-additional: var(--font-size-base-small);
-  --bene_footer_block-menu-item-contact-links: var(--font-size-base-x-small);
+  --bene_footer_block-menu-item-contact-links: var(--font-size-base-xx-small);
   --bene_footer_block-phone-p-fontsize: var(--font-size-base-xx-small);
 
   // bene_intro_text

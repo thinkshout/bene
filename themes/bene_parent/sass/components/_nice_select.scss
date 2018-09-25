@@ -1,8 +1,4 @@
 // Default variables
-$ns-font_size: 14px !default;
-$ns-font_size_small: 12px !default;
-
-$ns-input_border_radius: 0px !default;
 $ns-input_height: 50px !default;
 $ns-input_height_small: 36px !default;
 $ns-dropdown_padding: 18px !default;
@@ -17,9 +13,8 @@ $ns-arrow_color: $ns-gray !default;
 // Style the dropdown
 .nice-select {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background-color: bbv(background-color-secondary); // in case css variables are not supported
-  background-color: var(--general-secondary-background-color);
-  border-radius: $ns-input_border_radius;
+  @include set-bbv-var(background-color, background-color-secondary, --general-secondary-background-color);
+  @include set-bbv-var(border-radius, preferred-border-radius, --drop_down-border-radius);
   border: none;
   box-sizing: border-box;
   clear: both;
@@ -27,8 +22,8 @@ $ns-arrow_color: $ns-gray !default;
   display: block;
   float: left;
   font-family: inherit;
-  font-size: $ns-font_size;
-  font-weight: 700;
+  @include set-bbv-var(font-size, font-size-base-small, --drop_down-font-size);
+  @include set-bbv-var(font-weight, font-weight-bold, --drop_down-font-weight);
   height: $ns-input_height;
   line-height: $ns-input_height - 2;
   outline: none;
@@ -41,8 +36,7 @@ $ns-arrow_color: $ns-gray !default;
   white-space: nowrap;
   width: 100%;
   .current {
-    color: bbv(font-color-accent); // in case css variables are not supported
-    color: var(--general-font-accent-color);
+    @include set-bbv-var(color, font-color-accent, --general-font-accent-color);
   }
 
   // Arrow
@@ -76,8 +70,7 @@ $ns-arrow_color: $ns-gray !default;
   }
   &.disabled {
     border-color: lighten($ns-gray_light, 2%);
-    color: bbv(font-color-secondary);
-    color: var(--general-font-secondary-color);
+    @include set-bbv-var(color, font-color-secondary, --general-font-secondary-color);
     pointer-events: none;
     &:after {
       border-color: lighten($ns-arrow_color, 20%);
@@ -100,7 +93,7 @@ $ns-arrow_color: $ns-gray !default;
     }
   }
   &.small {
-    font-size: $ns-font_size_small;
+    @include set-bbv-var(font-size, font-size-base-xx-small, $ns-font_size_small);
     height: $ns-input_height_small;
     line-height: $ns-input_height_small - 2;
     &:after {
