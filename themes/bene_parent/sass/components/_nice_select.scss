@@ -64,7 +64,7 @@ $ns-arrow_color: $ns-gray !default;
   }
 
   &.open {
-    @extend :active;
+    @extend .active;
     &:after {
       transform: rotate(-90deg);
     }
