@@ -1,7 +1,6 @@
 .block-hero {
   position: relative;
-  background-color: bbv(background-color-tertiary); // in case css variables are not supported
-  background-color: var(--general-tertiary-background-color);
+  @include set-bbv-var(background-color, background-color-tertiary, --general-tertiary-background-color);
 
   h1 {
     font-size: rem(50);
