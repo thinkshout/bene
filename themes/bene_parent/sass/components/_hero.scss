@@ -1,13 +1,12 @@
 .block-hero {
   visibility: hidden;
-  align-items: center;
-  background-color: bbv(background-color-primary);
-  background-color: var(--hero-block-background-color);
+  @include set-bbv-var(align-items, hero-alignment, --hero-block-align-items);
+  @include set-bbv-var(background-color, background-color-primary, --hero-block-background-color);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   height: 49vw; /* This sets the aspect ratio */
-  justify-content: center;
+  @include set-bbv-var(justify-content, hero-alignment, --hero-block-alignment);
   width: 100vw;
   @include mq(tablet) {
     height: 24vw;
@@ -16,20 +15,19 @@
     height: 24vw;
   }
   h1, h2 {
-    color: bbv(font-color-secondary); // in case css variables are not supported
-    color: var(--hero-font-color);
+    @include set-bbv-var(color, font-color-secondary, --hero-font-color);
     flex: 0 1 auto;
-    font-size: rem(32);
+    @include set-bbv-var(font-size, font-size-medium-small, --hero-block-headline-fontsize);
     line-height: 1;
     margin-top: 0;
-    text-align: center;
+    @include set-bbv-var(text-align, hero-alignment, --hero-block-headline-text-align);
     text-shadow: 2px 2px 10px #000;
     text-transform: uppercase;
     @include mq(tablet) {
-      font-size: rem(60);
+      @include set-bbv-var(font-size, font-size-large, --hero-block-headline-fontsize-tablet);
     }
     @include mq(desktop) {
-      font-size: rem(60);
+      @include set-bbv-var(font-size, font-size-large, --hero-block-headline-fontsize-desktop);
     }
   }
   &.no-bgimage {

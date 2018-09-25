@@ -49,6 +49,7 @@ $bene-buildup-variables: (
 
   font-size-large: rem(61),
   font-size-medium: rem(50),
+  font-size-medium-small: rem(32),
   font-size-accent: rem(30),
   font-size-small: rem(25),
   font-size-x-small: rem(22),
@@ -75,7 +76,9 @@ $bene-buildup-variables: (
 
   logo-size: rem(170),
   preferred-alignment: left,
+  hero-alignment: center,
   social-media-icon-size: rem(36),
+
 );
 
 // bbv = bene buildup variable
@@ -161,6 +164,12 @@ $bene-buildup-variables: (
       --hero-button-font-color: var(--font-color-secondary);
       --hero-button-font-hover-color: var(--font-color-secondary);
       --hero-block-background-color: var(--background-color-primary);
+      --hero-block-alignment: var(--hero-alignment);
+      --hero-block-align-items: var(--hero-alignment);
+      --hero-block-headline-text-align: var(--hero-alignment);
+      --hero-block-headline-fontsize: var(--font-size-medium-small);
+      --hero-block-headline-fontsize-tablet: var(--font-size-large);
+      --hero-block-headline-fontsize-desktop: var(--font-size-large);
 
 
   // Paragraph - Feature
