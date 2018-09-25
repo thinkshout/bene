@@ -56,7 +56,7 @@ $bene-buildup-variables: (
   font-size-xx-small: rem(18),
   font-size-base: rem(16), // Base font size for the body
   font-size-base-small: rem(14),
-  font-size-base-xx-small: rem(12),
+  font-size-base-x-small: rem(12),
 
   font-color-primary: bav(bene-main-black),
   font-color-secondary: bav(bene-main-white),
@@ -303,7 +303,7 @@ $bene-buildup-variables: (
   --drop_down-disabled-text-color: var(--font-color-tertiary);
   --drop_down-font-weight: var(--font-weight-bold);
   --drop_down-font-size: var(--font-size-base-small);
-  --drop_down-font-size-small: var(--font-size-base-xx-small);
+  --drop_down-font-size-small: var(--font-size-base-x-small);
   --drop_down-border-radius: var(--preferred-border-radius);
 
   // rich_text (_paragraphs.scss)
@@ -405,8 +405,8 @@ $bene-buildup-variables: (
   --bene_footer_block-menu-font-size: var(--font-size-base-small);
   --bene_footer_block-menu-item-link: var(--font-size-base);
   --bene_footer_block-menu-item-contact-links-additional: var(--font-size-base-small);
-  --bene_footer_block-menu-item-contact-links: var(--font-size-base-xx-small);
-  --bene_footer_block-phone-p-fontsize: var(--font-size-base-xx-small);
+  --bene_footer_block-menu-item-contact-links: var(--font-size-base-x-small);
+  --bene_footer_block-phone-p-fontsize: var(--font-size-base-x-small);
 
   // bene_intro_text
   --bene_intro_text-block-system-main-block: var(--font-size-x-small);

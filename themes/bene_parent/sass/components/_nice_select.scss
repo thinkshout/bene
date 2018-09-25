@@ -93,7 +93,7 @@ $ns-arrow_color: $ns-gray !default;
     }
   }
   &.small {
-    @include set-bbv-var(font-size, font-size-base-xx-small, $ns-font_size_small);
+    @include set-bbv-var(font-size, font-size-base-x-small, $ns-font_size_small);
     height: $ns-input_height_small;
     line-height: $ns-input_height_small - 2;
     &:after {
