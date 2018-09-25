@@ -2,19 +2,16 @@
 .block-bene-footer-block {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background-color: bbv(background-color-primary);
-  background-color: var(--footer-block-background-color);
+  @include set-bbv-var(background-color, background-color-primary, --footer-block-background-color);
 
 
   .menu {
     a {
-      color: bbv(color-text-primary);
-      color: var(--footer-menu-link-color);
-      font-size: rem(14);
+      @include set-bbv-var(color, color-text-primary, --footer-menu-link-color);
+      @include set-bbv-var(font-size, font-size-base-small, --bene_footer_block-menu-font-size);
       font-weight: 600;
       &:hover, &:focus, &.is-active {
-        color: bbv(color-primary-first); // in case css variables are not supported
-        color: var(--footer-menu-link-hover-color);
+        @include set-bbv-var(color, color-primary-first, --footer-menu-link-hover-color);
       }
     }
 
@@ -23,10 +20,9 @@
 
       a {
         @include font-style('bold'); // font-menu-primary
-        fontsize: rem(16);
+        @include set-bbv-var(font-size, font-size-base, --bene_footer_block-menu-item-link);
         &:hover, &:focus, &.is-active {
-          color: bbv(color-text-primary); // in case css variables are not supported
-          color: var(--footer-menu-link-color);
+          @include set-bbv-var(color, font-color-link, --footer-menu-link-color);
         }
       }
     }
@@ -37,19 +33,19 @@
   .contact-links .additional-contact p,
   .contact-links .additional-footer p {
     @include font-style('regular');
-    font-size: rem(14);
+    @include set-bbv-var(font-size, font-size-base-small, --bene_footer_block-menu-item-contact-links-additional);
     line-height: rem(25);
   }
 
   .contact-links {
-    font-size: rem(13);
+    @include set-bbv-var(font-size, font-size-base-x-small, --bene_footer_block-menu-item-contact-links);
     .address {
       white-space: pre-line;
     }
     .phone, .email, .additional-contact {
       display: block;
       p {
-        font-size: rem(12);
+        @include set-bbv-var(font-size, --font-size-base-xx-small, --bene_footer_block-phone-p-fontsize);
         margin: rem(5) 0;
       }
     }
@@ -64,27 +60,23 @@
 
   .social-links {
     a {
-      background-color: bbv(background-color-secondary);
-      background-color: var(--footer-social-background-color);
+      @include set-bbv-var(background-color, background-color-secondary, --footer-social-background-color);
       background-position: center center;
       background-repeat: no-repeat;
       background-size: 62% 62%;
-      border: rem(1) solid bbv(background-color-secondary);
+      border: rem(1) solid bbv(background-color-secondary);  // in case css variables are not supported
       border: rem(1) solid var(--footer-social-border-color);
       border-radius: 50%;
       display: inline-block;
-      height: bbv(social-media-icon-size); // in case css variables are not supported
-      height: var(--footer-social-icon-size);
+      @include set-bbv-var(height, social-media-icon-size, --footer-social-icon-size);
       margin-bottom: rem(10);
       margin-left: rem(10);
       padding: 1rem;
       position: relative;
       text-indent: -9999px;
-      width: bbv(social-media-icon-size); // in case css variables are not supported
-      width: var(--footer-social-icon-size);
+      @include set-bbv-var(width, social-media-icon-size, --footer-social-icon-size);
       &:hover, &:focus, &:active {
-        background-color: bbv(background-color-tertiary);
-        background-color: var(--footer-social-hover-background-color);
+        @include set-bbv-var(background-color, background-color-tertiary, --footer-social-hover-background-color);
       }
     }
     .facebook { background-image:  url('../images/svgs/facebook-f.svg'); }
