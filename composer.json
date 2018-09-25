@@ -59,7 +59,8 @@
         "drupal/address": "~1.2",
         "commerceguys/addressing": "~1.0",
         "drupal/viewsreference": "^2.0-alpha4",
-        "drupal/mailchimp": "^1.6"
+        "drupal/mailchimp": "^1.6",
+        "thinkshout/bene_media": "dev-8.x-2.x-bene"
     },
     "replace": {
         "bower-asset/jquery": "*",

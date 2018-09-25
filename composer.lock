@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "03f5543c2eb3446e12e6b256fdf28352",
+    "content-hash": "13f5d67fb78347fac88a28db3cb55e43",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3245,8 +3245,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.1-beta1+0-dev",
-                    "datestamp": "1532080685",
+                    "version": "8.x-1.0-beta1+1-dev",
+                    "datestamp": "1529070524",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -5589,13 +5589,13 @@
             },
             "require": {
                 "drupal/config_rewrite": "^1.1",
-                "drupal/crop": "^1.5",
+                "drupal/crop": "^2.0-rc1",
                 "drupal/ctools": "^3.0",
                 "drupal/entity_browser": "^1.4",
                 "drupal/entity_embed": "^1.0@beta",
                 "drupal/focal_point": "^1.0@beta",
                 "drupal/inline_entity_form": "^1.0@beta",
-                "drupal/media_entity": "~2.0",
+                "drupal/media_entity": "2.0-beta2",
                 "drupal/media_entity_actions": "^1.0@alpha",
                 "drupal/media_entity_instagram": "^2.0",
                 "drupal/media_entity_twitter": "^2.0",
@@ -8479,7 +8479,6 @@
         "drupal/r4032login": 20,
         "drupal/migrate_google_sheets": 10,
         "drupal/picture_background_formatter": 20,
-        "drupal/viewsreference": 20,
         "thinkshout/bene_media": 20,
         "drupal/drupal-driver": 20,
         "drupal/drupal-extension": 20
