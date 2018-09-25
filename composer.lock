@@ -5716,7 +5716,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thinkshout/bene_media.git",
-                "reference": "7553cb8a34338a6ea924fefc43b7b3d436932326"
+                "reference": "c0ae7d1dbedee4832140e9de2700865ffc30fa4d"
             },
             "require": {
                 "drupal/config_rewrite": "^1.1",
@@ -5761,7 +5761,7 @@
                 }
             ],
             "description": "Media related functionality and configuration for the Bene Distribution.",
-            "time": "2018-09-25T16:23:51+00:00"
+            "time": "2018-09-25T17:01:03+00:00"
         },
         {
             "name": "thinkshout/mailchimp-api-php",
