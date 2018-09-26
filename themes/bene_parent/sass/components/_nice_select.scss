@@ -2,11 +2,7 @@
 $ns-input_height: 50px !default;
 $ns-dropdown_padding: 18px !default;
 
-$ns-gray: #999 !default;
 $ns-gray_light: #e8e8e8 !default;
-$ns-gray_lighter: #f6f6f6 !default;
-$ns-primary_light: $ns-gray !default;
-$ns-arrow_color: $ns-gray !default;
 
 // Style the dropdown
 .nice-select {
@@ -71,7 +67,7 @@ $ns-arrow_color: $ns-gray !default;
     @include set-bbv-var(color, font-color-secondary, --general-font-secondary-color);
     pointer-events: none;
     &:after {
-      border-color: lighten($ns-arrow_color, 20%);
+      @include set-bbv-var(border-color, disabled-border-color, --drop_down-disabled-after-border-color);
     }
   }
 
@@ -142,14 +138,14 @@ $ns-arrow_color: $ns-gray !default;
     transition: all 0.2s;
     width: 100%;
     &:hover, &.focus, &.selected.focus {
-      background-color: $ns-gray_lighter;
+      @include set-bbv-var(background-color, background-color-hover, --drop_down-option-hover-color);
     }
     &.selected {
       font-weight: bold;
     }
     &.disabled {
       background-color: transparent;
-      color: $ns-gray;
+      @include set-bbv-var(color, disabled-color, --drop_down-option-disabled-color);
       cursor: default;
     }
   }

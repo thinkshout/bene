@@ -8,6 +8,7 @@
  **/
 $bene-a-level-variables: (
   bene-main-white: #FFF,
+  bene-x-light-grey: #f6f6f6,
   bene-light-grey: #D8D8D8,
   bene-placeholder-grey: #979797,
   bene-medium-grey: #7C7C7C,
@@ -42,6 +43,9 @@ $bene-buildup-variables: (
   background-color-secondary: bav(bene-bright-blue),
   background-color-tertiary: bav(bene-main-blue),
   background-color-hover: bav(bene-light-grey),
+
+  disabled-color: bav(bene-placeholder-grey),
+  disabled-border-color: lighten(bav(bene-placeholder-grey), 20%),
 
   button-size-large: rem(56),
   button-size-medium: rem(30),
@@ -324,6 +328,9 @@ $bene-buildup-variables: (
   --drop_down-small-line-height-option: calc(var(--input-height-small) - 2px);
   --drop_down-small-min-height-option: calc(var(--input-height-small) - 2px);
   --drop_down-list-shadow: var(--shadow-transparent-color);
+  --drop_down-disabled-after-border-color: var(--disabled-border-color);
+  --drop_down-option-disabled-color: var(--disabled-color);
+  --drop_down-option-hover-color: var(--background-color-hover);
 
   // rich_text (_paragraphs.scss)
   --rich_text-background-paragraph-and-list-color: var(--font-color-primary);
