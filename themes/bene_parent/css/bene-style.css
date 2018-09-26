@@ -886,7 +886,6 @@ body.user-logged-in .region.region-content {
 .block-hero {
   position: relative; }
   .block-hero h1 {
-    font-size: 3.125rem;
     padding: 0 1rem;
     text-shadow: none;
     text-transform: none;
@@ -894,16 +893,13 @@ body.user-logged-in .region.region-content {
     @media (max-width: 414px) {
       .block-hero h1 {
         flex: 0 1 100%;
-        text-align: left;
-        font-size: 2rem; } }
+        text-align: left; } }
     @media (min-width: 769px) and (max-width: 1239px) {
       .block-hero h1 {
-        flex: inherit;
-        font-size: 3.125rem; } }
+        flex: inherit; } }
     @media (min-width: 769px) {
       .block-hero h1 {
-        flex: inherit;
-        font-size: 3.125rem; } }
+        flex: inherit; } }
 
 .page-node-type-event .field--name-bene-content {
   clear: both; }

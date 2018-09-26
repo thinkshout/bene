@@ -3,7 +3,7 @@
   @include set-bbv-var(background-color, background-color-tertiary, --general-tertiary-background-color);
 
   h1 {
-    font-size: rem(50);
+    @include set-bbv-var(font-size, font-size-medium, --hero-heading-font-size);
     padding: 0 1rem;
     text-shadow: none;
     text-transform: none;
@@ -12,17 +12,18 @@
     @include mq(mobile) {
       flex: 0 1 100%;
       text-align: left;
-      font-size: rem(32);
+      @include set-bbv-var(font-size, font-size-medium-small, --hero-heading-font-size-mobile);
     }
 
     @include mq(tablet) {
       flex: inherit;
-      font-size: rem(50);
+      @include set-bbv-var(font-size, font-size-medium, --hero-heading-font-size);
     }
+
 
     @include mq(desktop) {
       flex: inherit;
-      font-size: rem(50);
+      @include set-bbv-var(font-size, font-size-medium, --hero-heading-font-size);
     }
 
   }
