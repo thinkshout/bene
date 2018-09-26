@@ -24,7 +24,7 @@ $ns-arrow_color: $ns-gray !default;
   @include set-bbv-var(font-size, font-size-base-small, --drop_down-font-size);
   @include set-bbv-var(font-weight, font-weight-bold, --drop_down-font-weight);
   @include set-bbv-var(height, input-height, --drop_down-height);
-  @include set-bbv-var(line-height, input-line-height, --drop_down-line-height);
+  @include set-bbv-var(line-height, input-height - 2px, --drop_down-line-height);
   outline: none;
   padding-left: $ns-dropdown_padding;
   padding-right: $ns-dropdown_padding + 12;
@@ -94,14 +94,14 @@ $ns-arrow_color: $ns-gray !default;
   &.small {
     @include set-bbv-var(font-size, font-size-base-x-small, $ns-font_size_small);
     @include set-bbv-var(height, input-height-small, --drop_down-small-height);
-    @include set-bbv-var(line-height, input-line-height-small, --drop_down-small-line-height);
+    @include set-bbv-var(line-height, input-height-small - 2px, --drop_down-small-line-height);
     &:after {
       height: 4px;
       width: 4px;
     }
     .option {
-      @include set-bbv-var(line-height, input-line-height-small, --drop_down-small-line-height-option);
-      @include set-bbv-var(min-height, input-line-height-small, --drop_down-small-min-height-option);
+      @include set-bbv-var(line-height, input-height-small - 2px, --drop_down-small-line-height-option);
+      @include set-bbv-var(min-height, input-height-small - 2px, --drop_down-small-min-height-option);
     }
   }
 
@@ -130,9 +130,9 @@ $ns-arrow_color: $ns-gray !default;
   .option {
     cursor: pointer;
     font-weight: 400;
-    @include set-bbv-var(line-height, input-line-height, --drop_down-option-line-height);
+    @include set-bbv-var(line-height, input-height - 2px, --drop_down-option-line-height);
     list-style: none;
-    @include set-bbv-var(min-height, input-line-height, --drop_down-option-min-height);
+    @include set-bbv-var(min-height, input-height - 2px, --drop_down-option-min-height);
     outline: none;
     padding-left: $ns-dropdown_padding;
     padding-right: $ns-dropdown_padding + 11;
