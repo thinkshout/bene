@@ -108,8 +108,8 @@ $ns-arrow_color: $ns-gray !default;
   .list {
     background-color: #fff;
     border-radius: $ns-input_border_radius;
-    box-shadow: 0 0 0 1px rgba(shadow-transparent-color, .11);
-    box-shadow: 0 0 0 1px rgba(var(--drop_down-list-shadow), .11);
+    // box-shadow: 0 0 0 1px shadow-transparent-color; // in case css variables are not supported
+    box-shadow: 0 0 0 1px var(--drop_down-list-shadow);
     box-sizing: border-box;
     margin-top: 0;
     opacity: 0;
