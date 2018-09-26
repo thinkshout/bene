@@ -2,8 +2,6 @@
 $ns-input_height: 50px !default;
 $ns-dropdown_padding: 18px !default;
 
-$ns-gray_light: #e8e8e8 !default;
-
 // Style the dropdown
 .nice-select {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -63,7 +61,7 @@ $ns-gray_light: #e8e8e8 !default;
     }
   }
   &.disabled {
-    border-color: lighten($ns-gray_light, 2%);
+    @include set-bbv-var(border-color, disabled-border-color, --drop_down-disabled-border-color);
     @include set-bbv-var(color, font-color-secondary, --general-font-secondary-color);
     pointer-events: none;
     &:after {
