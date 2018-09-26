@@ -1,6 +1,5 @@
 // Default variables
 $ns-input_height: 50px !default;
-$ns-dropdown_padding: 18px !default;
 
 // Style the dropdown
 .nice-select {
@@ -19,8 +18,8 @@ $ns-dropdown_padding: 18px !default;
   @include set-bbv-var(height, input-height, --drop_down-height);
   @include set-bbv-var(line-height, input-height - 2px, --drop_down-line-height);
   outline: none;
-  padding-left: $ns-dropdown_padding;
-  padding-right: $ns-dropdown_padding + 12;
+  padding-left: 18px;
+  padding-right: 30px;
   position: relative;
   text-align: left !important;
   transition: all 0.2s ease-in-out;
@@ -130,8 +129,8 @@ $ns-dropdown_padding: 18px !default;
     list-style: none;
     @include set-bbv-var(min-height, input-height - 2px, --drop_down-option-min-height);
     outline: none;
-    padding-left: $ns-dropdown_padding;
-    padding-right: $ns-dropdown_padding + 11;
+    padding-left: 18px;
+    padding-right: 29px;
     text-align: left;
     transition: all 0.2s;
     width: 100%;
