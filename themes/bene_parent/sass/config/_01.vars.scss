@@ -12,6 +12,7 @@ $bene-a-level-variables: (
   bene-placeholder-grey: #979797,
   bene-medium-grey: #7C7C7C,
   bene-dark-grey: #5C5B5B,
+  bene-shadow: rgba(#444, .11),
   bene-main-black: #000,
   bene-bright-blue: #50CFE3,
   bene-main-blue: #129FB5,
@@ -75,11 +76,13 @@ $bene-buildup-variables: (
   gradient-start-color: rgba(bav(bene-main-blue), 1), // 0.00 = transparent
   gradient-end-color: rgba(bav(bene-bright-blue), 1), //  1 = opaque
   preferred-border-radius: 0px,
+  shadow-transparent-color: bav(bene-shadow),
 
   logo-size: rem(170),
   social-media-icon-size: rem(36),
   input-height: bav(bene-input-height), // can we change to rem?
   input-height-small: bav(bene-input-height-small),
+  // y-offset:  - input-height / 2,
 
   preferred-alignment: left,
   hero-alignment: center,
@@ -314,10 +317,13 @@ $bene-buildup-variables: (
   --drop_down-line-height: calc(var(--input-height) - 2px);
   --drop_down-option-line-height: calc(var(--input-height) - 2px);
   --drop_down-option-min-height: calc(var(--input-height) - 2px);
+  //--drop_down-list-transform: scale(.75) translateY(--y-offset);
+  --drop_down-small-font-size: var(--font-size-base-x-small);
   --drop_down-small-height: var(--input-height-small);
   --drop_down-small-line-height: calc(var(--input-height-small) - 2px);
   --drop_down-small-line-height-option: calc(var(--input-height-small) - 2px);
   --drop_down-small-min-height-option: calc(var(--input-height-small) - 2px);
+  --drop_down-list-shadow: var(--shadow-transparent-color);
 
   // rich_text (_paragraphs.scss)
   --rich_text-background-paragraph-and-list-color: var(--font-color-primary);

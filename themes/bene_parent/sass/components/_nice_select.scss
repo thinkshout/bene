@@ -2,7 +2,6 @@
 $ns-input_height: 50px !default;
 $ns-dropdown_padding: 18px !default;
 
-$ns-gray_dark: #444 !default;
 $ns-gray: #999 !default;
 $ns-gray_light: #e8e8e8 !default;
 $ns-gray_lighter: #f6f6f6 !default;
@@ -92,7 +91,7 @@ $ns-arrow_color: $ns-gray !default;
     }
   }
   &.small {
-    @include set-bbv-var(font-size, font-size-base-x-small, $ns-font_size_small);
+    @include set-bbv-var(font-size, font-size-base-x-small, --drop_down-small-font-size);
     @include set-bbv-var(height, input-height-small, --drop_down-small-height);
     @include set-bbv-var(line-height, input-height-small - 2px, --drop_down-small-line-height);
     &:after {
@@ -109,7 +108,8 @@ $ns-arrow_color: $ns-gray !default;
   .list {
     background-color: #fff;
     border-radius: $ns-input_border_radius;
-    box-shadow: 0 0 0 1px rgba($ns-gray_dark, .11);
+    box-shadow: 0 0 0 1px rgba(shadow-transparent-color, .11);
+    box-shadow: 0 0 0 1px rgba(var(--drop_down-list-shadow), .11);
     box-sizing: border-box;
     margin-top: 0;
     opacity: 0;
@@ -120,6 +120,8 @@ $ns-arrow_color: $ns-gray !default;
     top: 100%; left: 0;
     transform-origin: 50% 0;
     transform: scale(.75) translateY(- $ns-input_height / 2);
+    //transform: scale(.75) translateY(- $ns-input_height / 2); // in case css variables are not supported
+    //transform: var(--drop_down-list-transform);
     transition: all .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
     width: 100%;
     z-index: 9;
