@@ -75,9 +75,13 @@ $bene-buildup-variables: (
   preferred-border-radius: 0px,
 
   logo-size: rem(170),
+  social-media-icon-size: rem(36),
+  input-height: 50px, // can we change to rem?
+  input-line-height: calc(input-height - 2px), // can we change to rem?
+  input-height-small: 36px, // can we change to rem?
+
   preferred-alignment: left,
   hero-alignment: center,
-  social-media-icon-size: rem(36),
 
 );
 
@@ -305,6 +309,10 @@ $bene-buildup-variables: (
   --drop_down-font-size: var(--font-size-base-small);
   --drop_down-font-size-small: var(--font-size-base-x-small);
   --drop_down-border-radius: var(--preferred-border-radius);
+  --drop_down-height: var(--input-height);
+  --drop_down-line-height: var(--input-line-height);
+  --drop_down-option-line-height: var(--input-line-height);
+  --drop_down-option-min-height: var(--input-line-height);
 
   // rich_text (_paragraphs.scss)
   --rich_text-background-paragraph-and-list-color: var(--font-color-primary);
