@@ -331,6 +331,7 @@ $bene-buildup-variables: (
   --drop_down-disabled-after-border-color: var(--disabled-border-color);
   --drop_down-option-disabled-color: var(--disabled-color);
   --drop_down-option-hover-color: var(--background-color-hover);
+  --drop_down-list-transform-move-y: calc(var(--input-height) / 2);
 
   // rich_text (_paragraphs.scss)
   --rich_text-background-paragraph-and-list-color: var(--font-color-primary);
