@@ -16,6 +16,8 @@ $bene-a-level-variables: (
   bene-bright-blue: #50CFE3,
   bene-main-blue: #129FB5,
   bene-sans-font: "'Open Sans', sans-serif",
+  bene-input-height: 50px,
+  bene-input-height-small: 36px,
 );
 
 // bav = bene a-level variable
@@ -76,9 +78,10 @@ $bene-buildup-variables: (
 
   logo-size: rem(170),
   social-media-icon-size: rem(36),
-  input-height: 50px, // can we change to rem?
-  input-line-height: calc(input-height - 2px), // can we change to rem?
-  input-height-small: 36px, // can we change to rem?
+  input-height: bav(bene-input-height), // can we change to rem?
+  input-line-height: bav(bene-input-height) - 2px, // can we change to rem?
+  input-height-small: bav(bene-input-height-small),
+  input-line-height-small: bav(bene-input-height-small) - 2px, // can we change to rem?
 
   preferred-alignment: left,
   hero-alignment: center,
@@ -313,6 +316,10 @@ $bene-buildup-variables: (
   --drop_down-line-height: var(--input-line-height);
   --drop_down-option-line-height: var(--input-line-height);
   --drop_down-option-min-height: var(--input-line-height);
+  --drop_down-small-height: var(--input-height-small);
+  --drop_down-small-line-height: var(--input-line-height-small);
+  --drop_down-small-line-height-option: var(--input-line-height-small);
+  --drop_down-small-min-height-option: var(--input-line-height-small);
 
   // rich_text (_paragraphs.scss)
   --rich_text-background-paragraph-and-list-color: var(--font-color-primary);

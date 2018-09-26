@@ -1,6 +1,5 @@
 // Default variables
 $ns-input_height: 50px !default;
-$ns-input_height_small: 36px !default;
 $ns-dropdown_padding: 18px !default;
 
 $ns-gray_dark: #444 !default;
@@ -94,15 +93,15 @@ $ns-arrow_color: $ns-gray !default;
   }
   &.small {
     @include set-bbv-var(font-size, font-size-base-x-small, $ns-font_size_small);
-    height: $ns-input_height_small;
-    line-height: $ns-input_height_small - 2;
+    @include set-bbv-var(height, input-height-small, --drop_down-small-height);
+    @include set-bbv-var(line-height, input-line-height-small, --drop_down-small-line-height);
     &:after {
       height: 4px;
       width: 4px;
     }
     .option {
-      line-height: $ns-input_height_small - 2;
-      min-height: $ns-input_height_small - 2;
+      @include set-bbv-var(line-height, input-line-height-small, --drop_down-small-line-height-option);
+      @include set-bbv-var(min-height, input-line-height-small, --drop_down-small-min-height-option);
     }
   }
 
