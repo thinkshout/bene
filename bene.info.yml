@@ -26,7 +26,6 @@ dependencies:
   - contact_storage
   - contextual
   - crop
-  - crop_media_entity
   - datetime
   - datetime_range
   - dblog
