@@ -46,7 +46,7 @@
   }
 
   &.open {
-    @extend :active;
+    @extend .active;
     &:after {
       transform: rotate(-90deg);
     }

@@ -5,7 +5,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    sass (3.5.6)
+    sass (3.6.0)
       sass-listen (~> 4.0.0)
     sass-globbing (1.1.5)
       sass (>= 3.1)
@@ -17,7 +17,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  sass (= 3.5.6)
+  sass (= 3.6.0)
   sass-globbing (= 1.1.5)
 
 BUNDLED WITH

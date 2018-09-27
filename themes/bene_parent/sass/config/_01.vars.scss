@@ -169,6 +169,9 @@ $bene-buildup-variables: (
 
   // Hero
       --hero-font-color: var(--font-color-secondary);
+      --hero-heading-font-size: var(--font-size-medium);
+      --hero-heading-font-size-mobile: var(--font-size-medium-small);
+      --hero-heading-font-size-tablet: var(--font-size-medium);
       --hero-button-background-color: var(--font-color-secondary);
       --hero-button-background-hover-color: var(--font-color-secondary);
       --hero-button-border-color: var(--font-color-secondary);

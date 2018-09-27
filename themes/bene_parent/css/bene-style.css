@@ -33,9 +33,15 @@ html {
   --font-family-secondary: 'Open Sans', sans-serif;
   --font-size-large: 3.8125rem;
   --font-size-medium: 3.125rem;
-  --font-size-small: 1.5625rem;
+  --font-size-medium-small: 2rem;
   --font-size-accent: 1.875rem;
+  --font-size-small: 1.5625rem;
+  --font-size-x-small: 1.375rem;
+  --font-size-xx-small: 1.125rem;
   --font-size-base: 1rem;
+  --font-size-base-small: 0.875rem;
+  --font-size-base-x-small: 0.8125rem;
+  --font-size-base-xx-small: 0.75rem;
   --font-color-primary: #000;
   --font-color-secondary: #FFF;
   --font-color-tertiary: #5C5B5B;
@@ -50,6 +56,7 @@ html {
   --gradient-end-color: #50cfe3;
   --logo-size: 10.625rem;
   --preferred-alignment: left;
+  --hero-alignment: center;
   --social-media-icon-size: 2.25rem;
   /**
    * These are the css variables that should be used throughout the scss code.
@@ -90,12 +97,21 @@ html {
   --secondary-nav-button-font-color: var(--font-color-secondary);
   --secondary-nav-button-font-hover-color: var(--font-color-secondary);
   --hero-font-color: var(--font-color-secondary);
+  --hero-heading-font-size: var(--font-size-medium);
+  --hero-heading-font-size-mobile: var(--font-size-medium-small);
+  --hero-heading-font-size-tablet: var(--font-size-medium);
   --hero-button-background-color: var(--font-color-secondary);
   --hero-button-background-hover-color: var(--font-color-secondary);
   --hero-button-border-color: var(--font-color-secondary);
   --hero-button-font-color: var(--font-color-secondary);
   --hero-button-font-hover-color: var(--font-color-secondary);
   --hero-block-background-color: var(--background-color-primary);
+  --hero-block-alignment: var(--hero-alignment);
+  --hero-block-align-items: var(--hero-alignment);
+  --hero-block-headline-text-align: var(--hero-alignment);
+  --hero-block-headline-fontsize: var(--font-size-medium-small);
+  --hero-block-headline-fontsize-tablet: var(--font-size-large);
+  --hero-block-headline-fontsize-desktop: var(--font-size-large);
   --feature-background-color: var(--font-color-secondary);
   --feature-font-color: var(--font-color-secondary);
   --feature-button-background-color: var(--font-color-secondary);
@@ -266,7 +282,16 @@ html {
   --bene_footer_block-social-hover-border-color: var(--background-color-secondary-darken20);
   --bene_footer_block-menu-link-color: var(--color-text-primary);
   --bene_footer_block-menu-link-hover-color: var(--color-primary-first);
-  --bene_footer_block-menu-item-link-hover-color: var(--color-primary-first); }
+  --bene_footer_block-menu-item-link-hover-color: var(--color-primary-first);
+  --bene_footer_block-menu-font-size: var(--font-size-base-small);
+  --bene_footer_block-menu-item-link: var(--font-size-base);
+  --bene_footer_block-menu-item-contact-links-additional: var(--font-size-base-small);
+  --bene_footer_block-menu-item-contact-links: var(--font-size-base-x-small);
+  --bene_footer_block-phone-p-fontsize: var(--font-size-base-xx-small);
+  --bene_intro_text-block-system-main-block: var(--font-size-x-small);
+  --bene_event_page-field--name-bene-event-date-range-time: var(--font-size-xx-small);
+  --bene_event_page-field--name-bene-event-date-range-time-desktop: var(--font-size-x-small);
+  --bene_event_page-desktop-block-system-main-block: var(--font-size-x-small); }
 
 /* Turns off the element-invisible effect. */
 /* Makes an element visually hidden by default, but visible when focused. */
@@ -842,9 +867,9 @@ body.user-logged-in .region.region-content {
       @media (min-width: 769px) {
         .user-logged-in #block-bene-child-local-tasks .show-hide span {
           height: 1.5625rem; } }
-  .user-logged-in #block-bene-child-local-tasks.active {
+  .user-logged-in #block-bene-child-local-tasks.active, .user-logged-in #block-bene-child-local-tasks.nice-select.open {
     right: 0; }
-    .user-logged-in #block-bene-child-local-tasks.active .show-hide span {
+    .user-logged-in #block-bene-child-local-tasks.active .show-hide span, .user-logged-in #block-bene-child-local-tasks.nice-select.open .show-hide span {
       -webkit-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
@@ -856,15 +881,11 @@ body.user-logged-in .region.region-content {
 
 @media (min-width: 769px) {
   .page-node-type-page .block-system-main-block .field--name-bene-intro {
-    font-size: 1.375rem;
     margin-bottom: 2rem;
     margin-top: 1.5rem; } }
 .block-hero {
-  position: relative;
-  background-color: #129FB5;
-  background-color: var(--general-tertiary-background-color); }
+  position: relative; }
   .block-hero h1 {
-    font-size: 3.125rem;
     padding: 0 1rem;
     text-shadow: none;
     text-transform: none;
@@ -872,16 +893,13 @@ body.user-logged-in .region.region-content {
     @media (max-width: 414px) {
       .block-hero h1 {
         flex: 0 1 100%;
-        text-align: left;
-        font-size: 2rem; } }
+        text-align: left; } }
     @media (min-width: 769px) and (max-width: 1239px) {
       .block-hero h1 {
-        flex: inherit;
-        font-size: 3.125rem; } }
+        flex: inherit; } }
     @media (min-width: 769px) {
       .block-hero h1 {
-        flex: inherit;
-        font-size: 3.125rem; } }
+        flex: inherit; } }
 
 .page-node-type-event .field--name-bene-content {
   clear: both; }
@@ -889,13 +907,11 @@ body.user-logged-in .region.region-content {
   margin-bottom: 2rem;
   margin-top: 1.5rem; }
   .page-node-type-event .field--name-bene-event-date-range time {
-    font-size: 1.125rem;
     font-weight: 300;
     line-height: 2rem;
     margin-top: 0.75rem; }
     @media (min-width: 769px) {
       .page-node-type-event .field--name-bene-event-date-range time {
-        font-size: 1.375rem;
         line-height: 2.375rem; } }
 .page-node-type-event .field--name-bene-event-location p.address {
   line-height: 1.3;
@@ -903,7 +919,6 @@ body.user-logged-in .region.region-content {
 
 @media (min-width: 769px) {
   .page-node-type-event .block-system-main-block .field--name-bene-intro {
-    font-size: 1.375rem;
     margin-bottom: 2rem;
     margin-top: 1.5rem; } }
 .field--name-bene-intro {
@@ -933,26 +948,16 @@ body.user-logged-in .region.region-content {
 
 .block-bene-footer-block {
   padding-top: 2rem;
-  padding-bottom: 2rem;
-  background-color: #FFF;
-  background-color: var(--footer-block-background-color); }
+  padding-bottom: 2rem; }
   .block-bene-footer-block .menu a {
-    color: var(--footer-menu-link-color);
-    font-size: 0.875rem;
     font-weight: 600; }
-    .block-bene-footer-block .menu a:hover, .block-bene-footer-block .menu a:focus, .block-bene-footer-block .menu a.is-active {
-      color: #50CFE3;
-      color: var(--footer-menu-link-hover-color); }
   .block-bene-footer-block .menu .menu-item {
     line-height: 1.875rem; }
     .block-bene-footer-block .menu .menu-item a {
       font-family: 'Open Sans', sans-serif;
       font-family: var(--font-family-primary);
       font-weight: 700;
-      font-style: normal;
-      fontsize: 1rem; }
-      .block-bene-footer-block .menu .menu-item a:hover, .block-bene-footer-block .menu .menu-item a:focus, .block-bene-footer-block .menu .menu-item a.is-active {
-        color: var(--footer-menu-link-color); }
+      font-style: normal; }
   .block-bene-footer-block .copyright,
   .block-bene-footer-block .contact-links,
   .block-bene-footer-block .contact-links .additional-contact p,
@@ -961,23 +966,17 @@ body.user-logged-in .region.region-content {
     font-family: var(--font-family-primary);
     font-weight: 400;
     font-style: normal;
-    font-size: 0.875rem;
     line-height: 1.5625rem; }
-  .block-bene-footer-block .contact-links {
-    font-size: 0.8125rem; }
-    .block-bene-footer-block .contact-links .address {
-      white-space: pre-line; }
-    .block-bene-footer-block .contact-links .phone, .block-bene-footer-block .contact-links .email, .block-bene-footer-block .contact-links .additional-contact {
-      display: block; }
-      .block-bene-footer-block .contact-links .phone p, .block-bene-footer-block .contact-links .email p, .block-bene-footer-block .contact-links .additional-contact p {
-        font-size: 0.75rem;
-        margin: 0.3125rem 0; }
+  .block-bene-footer-block .contact-links .address {
+    white-space: pre-line; }
+  .block-bene-footer-block .contact-links .phone, .block-bene-footer-block .contact-links .email, .block-bene-footer-block .contact-links .additional-contact {
+    display: block; }
+    .block-bene-footer-block .contact-links .phone p, .block-bene-footer-block .contact-links .email p, .block-bene-footer-block .contact-links .additional-contact p {
+      margin: 0.3125rem 0; }
   .block-bene-footer-block .additional-footer p {
     font-size: 0.875rem;
     margin: 0 0.3125rem 0; }
   .block-bene-footer-block .social-links a {
-    background-color: #50CFE3;
-    background-color: var(--footer-social-background-color);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 62% 62%;
@@ -985,18 +984,11 @@ body.user-logged-in .region.region-content {
     border: 0.0625rem solid var(--footer-social-border-color);
     border-radius: 50%;
     display: inline-block;
-    height: 2.25rem;
-    height: var(--footer-social-icon-size);
     margin-bottom: 0.625rem;
     margin-left: 0.625rem;
     padding: 1rem;
     position: relative;
-    text-indent: -9999px;
-    width: 2.25rem;
-    width: var(--footer-social-icon-size); }
-    .block-bene-footer-block .social-links a:hover, .block-bene-footer-block .social-links a:focus, .block-bene-footer-block .social-links a:active, .block-bene-footer-block .social-links a.nice-select.open {
-      background-color: #129FB5;
-      background-color: var(--footer-social-hover-background-color); }
+    text-indent: -9999px; }
   .block-bene-footer-block .social-links .facebook {
     background-image: url("../images/svgs/facebook-f.svg"); }
   .block-bene-footer-block .social-links .google {
@@ -1205,15 +1197,11 @@ input[type='submit'] {
       margin-right: 0; } }
 .block-hero {
   visibility: hidden;
-  align-items: center;
-  background-color: #FFF;
-  background-color: var(--hero-block-background-color);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   height: 49vw;
   /* This sets the aspect ratio */
-  justify-content: center;
   width: 100vw; }
   @media (min-width: 769px) and (max-width: 1239px) {
     .block-hero {
@@ -1222,21 +1210,11 @@ input[type='submit'] {
     .block-hero {
       height: 24vw; } }
   .block-hero h1, .block-hero h2 {
-    color: #FFF;
-    color: var(--hero-font-color);
     flex: 0 1 auto;
-    font-size: 2rem;
     line-height: 1;
     margin-top: 0;
-    text-align: center;
     text-shadow: 2px 2px 10px #000;
     text-transform: uppercase; }
-    @media (min-width: 769px) and (max-width: 1239px) {
-      .block-hero h1, .block-hero h2 {
-        font-size: 3.75rem; } }
-    @media (min-width: 769px) {
-      .block-hero h1, .block-hero h2 {
-        font-size: 3.75rem; } }
   .block-hero.no-bgimage {
     height: 6.25rem; }
     @media (min-width: 769px) and (max-width: 1239px) {
@@ -1463,14 +1441,14 @@ input[type='submit'] {
       .mobile-menu-toggle div:hover span:before, .mobile-menu-toggle div:hover span:after {
         background: #129FB5;
         background: var(--general-tertiary-background-color); }
-  .mobile-menu-toggle.active div span {
+  .mobile-menu-toggle.active div span, .mobile-menu-toggle.nice-select.open div span {
     background-color: transparent; }
-    .mobile-menu-toggle.active div span:before, .mobile-menu-toggle.active div span:after {
+    .mobile-menu-toggle.active div span:before, .mobile-menu-toggle.nice-select.open div span:before, .mobile-menu-toggle.active div span:after, .mobile-menu-toggle.nice-select.open div span:after {
       background: #129FB5;
       background: var(--general-tertiary-background-color);
       transform: rotate(45deg) translateY(0);
       transition: transform 0.3s; }
-    .mobile-menu-toggle.active div span:after {
+    .mobile-menu-toggle.active div span:after, .mobile-menu-toggle.nice-select.open div span:after {
       transform: rotate(-45deg) translateY(0); }
 
 .menu-item--collapsed {
