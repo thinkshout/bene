@@ -34,16 +34,16 @@
   p,
   ol li,
   ul li {
-    color: bbv(color-text-secondary); // in case css variables are not supported
-    color: var(--rich_text-background-paragraph-and-list-color);
+    color: bbv(font-color-primary); // in case css variables are not supported
+    color: var(--general-font-primary-color);
   }
   blockquote {
     margin: rem(32) auto;
     max-width: 80%;
     text-align: center;
     p {
-      color: bbv(color-theme-primary-bright); // in case css variables are not supported
-      color: var(--rich_text-background-blockquote-paragraph-color);
+      color: bbv(font-color-primary); // in case css variables are not supported
+      color: var(--general-font-primary-color);
       font-size: rem(26);
       font-style: italic;
       font-weight: 600;
@@ -58,8 +58,8 @@
     }
 
     &:after {
-      background-color: bbv(color-theme-primary-bright); // in case css variables are not supported
-      background-color: var(--rich_text-background-blockquote-horizontal-line-color);
+      background-color: bbv(background-color-tertiary); // in case css variables are not supported
+      background-color: var(--general-tertiary-background-color);
       content: "";
       display: inline-block;
       height: rem(4);
@@ -74,17 +74,17 @@
 
 .paragraph--type--feature-full-width {
   align-items: center;
-  background-color: bbv(color-theme-primary); // in case css variables are not supported
-  background-color: var(--bene_home_page_feature_block-background-color);
+  background-color: bbv(background-color-tertiary); // in case css variables are not supported
+  background-color: var(--general-tertiary-background-color);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: bbv(color-text-inverse); // in case css variables are not supported
-  color: var(--bene_home_page_feature_block-header-color);
+  color: bbv(font-color-primary); // in case css variables are not supported
+  color: var(--general-font-primary-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 38.2vw;
+  min-height: 25vw;
   padding: rem(24) rem(24) rem(36) rem(24);
   position: relative;
   text-align: center;
@@ -100,24 +100,42 @@
     top: 0;
     z-index: 2;
   }
+
+  .paragraph--type--feature-full-width::after {
+    background-image: none;
+  }
+
+  .paragraph--type--feature-full-width.image:after {
+    background-color: bbv(color-primary-third);
+    background-color: var(--feature-background-color);
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: .45;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
   .field--name-field-title {
-    color: bbv(color-text-inverse); // in case css variables are not supported
-    color: var(--bene_home_page_feature_block-header-color);
-    font-family: bbv(main-font-family); // in case css variables are not supported
-    font-family: var(--bene_home_page_feature_block-header-font-family);
-    font-size: bbv(font-size-header); // in case css variables are not supported
-    font-size: var(--bene_home_page_feature_block-header-font-size);
-    font-weight: bbv(font-weight-extra-heavy); // in case css variables are not supported
-    font-weight: var(--bene_home_page_feature_block-header-font-weight);
+    color: bbv(font-color-primary);
+    color: var(--general-font-primary-color);
+    font-family: bbv(font-family-primary);
+    font-family: var(--general-font-family-primary);
+    font-size: bbv(font-size-large);
+    font-size: var(--general-font-size-large);
+    font-weight: bbv(font-weight-bold);
+    font-weight: var(--general-font-weight-bold);
     z-index: 10;
   }
   .field--name-field-text {
     z-index: 10;
     p {
-      font-family: bbv(main-font-family); // in case css variables are not supported
-      font-family: var(--bene_home_page_feature_block-description-font-family);
-      color: bbv(bene-main-white); // in case css variables are not supported
-      color: var(--bene_home_page_feature_block-description-color);
+      font-family: bbv(font-family-primary);
+      font-family: var(--general-font-family-primary);
+      color: bbv(font-color-primary);
+      color: var(--general-font-primary-color);
       margin: rem(32) auto;
       max-width: 100%;
       @include mq(desktop) {
@@ -129,13 +147,13 @@
     z-index: 10;
     a {
       @include button;
-      color: bbv(color-text-inverse); // in case css variables are not supported
-      color: var(--bene_home_page_feature_block-link-button-color);
-      background-color: bbv(color-theme-primary-bright); // in case css variables are not supported
-      background-color: var(--bene_home_page_feature_block-link-button-background-color);
+      color: bbv(font-color-link);
+      color: var(--general-link-color);
+      background-color: bbv(background-color-secondary);
+      background-color: var(--general-secondary-background-color);
       &:hover {
-        background-color: bbv(color-theme-primary-bright-darken20); // in case css variables are not supported
-        background-color: var(--bene_home_page_feature_block-link-button-hover-background-color);
+        background-color: bbv(background-color-tertiary);
+        background-color: var(--general-tertiary-background-color);
       }
       letter-spacing: 0;
       text-transform: none;
@@ -144,8 +162,8 @@
 
   // Gradient overlay
   &::after {
-    background-image: linear-gradient(-180deg, rgba(0,0,0,0.00), #000000); // in case css variables are not supported
-    background-image: var(--bene_home_page_feature_block-linear-gradient);
+    background-image: linear-gradient(bbv(--gradient-direction), bbv(--gradient-start-color), bbv(--gradient-end-color));
+    background-image: var(--feature_block-linear-gradient);
     content: '';
     display: block;
     opacity: 0.5;
@@ -155,4 +173,21 @@
     width: 100%;
     height: 100%;
   }
+}
+
+.feature-full-width-paragraph .paragraph--type--feature-full-width {
+  .field--name-field-title{
+    color: bbv(font-color-tertiary);
+    color: var(--rich-paragraph-font-color);
+  }
+  .field--name-field-text {
+    p {
+      color: bbv(font-color-tertiary);
+      color: var(--rich-paragraph-font-color);
+    }
+  }
+}
+
+.paragraph--type--feature-full-width.image{
+  min-height: 38.2vw;
 }

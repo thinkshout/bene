@@ -1,8 +1,8 @@
 .block-hero {
   visibility: hidden;
   align-items: center;
-  background-color: bbv(color-theme-primary-bright); // in case css variables are not supported
-  background-color: var(--block_hero-bene-background-color);
+  background-color: bbv(background-color-primary);
+  background-color: var(--hero-block-background-color);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -16,8 +16,8 @@
     height: 24vw;
   }
   h1, h2 {
-    color: bbv(color-text-inverse); // in case css variables are not supported
-    color: var(--block_hero-bene-header-color);
+    color: bbv(font-color-secondary); // in case css variables are not supported
+    color: var(--hero-font-color);
     flex: 0 1 auto;
     font-size: rem(32);
     line-height: 1;

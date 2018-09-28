@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAGE,IAAK;EACH,UAAU,EAAE,UAAU;;AAItB,sBAEU;EACR,UAAU,EAAE,OAAO;;ACXzB,8CAA8C",
-"sources": ["../sass/lib/neat/grid/_box-sizing.scss","../sass/components-slash-star"],
-"names": [],
-"file": "style.css"
-}
