@@ -97,7 +97,7 @@
   // List and options
   .list {
     background-color: #fff;
-    border-radius: $ns-input_border_radius;
+    @include set-bbv-var(border-radius, preferred-border-radius, --drop_down-list-border-radius);
     // box-shadow: 0 0 0 1px shadow-transparent-color; // in case css variables are not supported
     box-shadow: 0 0 0 1px var(--drop_down-list-shadow);
     box-sizing: border-box;
