@@ -319,6 +319,7 @@ $bene-buildup-variables: (
   --drop_down-font-size: var(--font-size-base-small);
   --drop_down-font-size-small: var(--font-size-base-x-small);
   --drop_down-border-radius: var(--preferred-border-radius);
+  --drop_down-list-border-radius: var(--preferred-border-radius);
   --drop_down-height: var(--input-height);
   --drop_down-line-height: calc(var(--input-height) - 2px);
   --drop_down-option-line-height: calc(var(--input-height) - 2px);
@@ -385,6 +386,7 @@ $bene-buildup-variables: (
   --home_hero-bene-link-color: var(--font-color-tertiary);
   --home_hero-bene-link-hover-color: var(--font-color-tertiary);
   --home_hero-bene-link-hover-background-color: var(color-background-lightest);
+  --home_hero-bene-home-page-feature-block-text-align: var(--hero-alignment);
 
   //_hero.scss
   --block_hero-bene-background-color: var(--color-secondary-first);

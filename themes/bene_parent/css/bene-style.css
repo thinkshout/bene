@@ -26,6 +26,8 @@ html {
   --background-color-secondary: #50CFE3;
   --background-color-tertiary: #129FB5;
   --background-color-hover: #D8D8D8;
+  --disabled-color: #979797;
+  --disabled-border-color: #cacaca;
   --button-size-large: 3.5rem;
   --button-size-medium: 1.875rem;
   --button-size-small: 1.6875rem;
@@ -40,8 +42,7 @@ html {
   --font-size-xx-small: 1.125rem;
   --font-size-base: 1rem;
   --font-size-base-small: 0.875rem;
-  --font-size-base-x-small: 0.8125rem;
-  --font-size-base-xx-small: 0.75rem;
+  --font-size-base-x-small: 0.75rem;
   --font-color-primary: #000;
   --font-color-secondary: #FFF;
   --font-color-tertiary: #5C5B5B;
@@ -54,10 +55,14 @@ html {
   --gradient-direction: -180deg;
   --gradient-start-color: #129fb5;
   --gradient-end-color: #50cfe3;
+  --preferred-border-radius: 0px;
+  --shadow-transparent-color: rgba(68, 68, 68, 0.11);
   --logo-size: 10.625rem;
+  --social-media-icon-size: 2.25rem;
+  --input-height: 50px;
+  --input-height-small: 36px;
   --preferred-alignment: left;
   --hero-alignment: center;
-  --social-media-icon-size: 2.25rem;
   /**
    * These are the css variables that should be used throughout the scss code.
    * They should also refer to the buildup variables above as much as possible.
@@ -213,10 +218,29 @@ html {
   --drop_down-background-color: var(--background-color-primary);
   --drop_down-active-text-color: var(--font-color-tertiary);
   --drop_down-disabled-text-color: var(--font-color-tertiary);
+  --drop_down-font-weight: var(--font-weight-bold);
+  --drop_down-font-size: var(--font-size-base-small);
+  --drop_down-font-size-small: var(--font-size-base-x-small);
+  --drop_down-border-radius: var(--preferred-border-radius);
+  --drop_down-list-border-radius: var(--preferred-border-radius);
+  --drop_down-height: var(--input-height);
+  --drop_down-line-height: calc(var(--input-height) - 2px);
+  --drop_down-option-line-height: calc(var(--input-height) - 2px);
+  --drop_down-option-min-height: calc(var(--input-height) - 2px);
+  --drop_down-small-font-size: var(--font-size-base-x-small);
+  --drop_down-small-height: var(--input-height-small);
+  --drop_down-small-line-height: calc(var(--input-height-small) - 2px);
+  --drop_down-small-line-height-option: calc(var(--input-height-small) - 2px);
+  --drop_down-small-min-height-option: calc(var(--input-height-small) - 2px);
+  --drop_down-list-shadow: var(--shadow-transparent-color);
+  --drop_down-disabled-border-color: var(--disabled-border-color);
+  --drop_down-disabled-after-border-color: var(--disabled-border-color);
+  --drop_down-option-disabled-color: var(--disabled-color);
+  --drop_down-option-hover-color: var(--background-color-hover);
+  --drop_down-list-transform-move-y: calc(var(--input-height) / 2);
   --rich_text-background-paragraph-and-list-color: var(--font-color-primary);
   --rich_text-background-blockquote-paragraph-color: var(--color-secondary-first);
   --rich_text-background-blockquote-horizontal-line-color: var(--color-secondary-first);
-  --newsletter-background-color: var(--color-primary-first);
   --newsletter-main-color: var(--font-color-tertiary);
   --newsletter-label-color: var(--font-color-tertiary);
   --newsletter-paragraph-color: var(--font-color-tertiary);
@@ -253,8 +277,10 @@ html {
   --home_hero-bene-link-color: var(--font-color-tertiary);
   --home_hero-bene-link-hover-color: var(--font-color-tertiary);
   --home_hero-bene-link-hover-background-color: var(color-background-lightest);
+  --home_hero-bene-home-page-feature-block-text-align: var(--hero-alignment);
   --block_hero-bene-background-color: var(--color-secondary-first);
   --block_hero-bene-header-color: var(--font-color-tertiary);
+  --bene_listing_page_intro-desktop: var(--font-size-x-small);
   --bene_mobile_nav-color: var(--font-color-tertiary);
   --bene_mobile_nav-menu-link-color: var(--font-color-tertiary);
   --bene_mobile_nav-background: var(--color-primary-first);
@@ -287,7 +313,7 @@ html {
   --bene_footer_block-menu-item-link: var(--font-size-base);
   --bene_footer_block-menu-item-contact-links-additional: var(--font-size-base-small);
   --bene_footer_block-menu-item-contact-links: var(--font-size-base-x-small);
-  --bene_footer_block-phone-p-fontsize: var(--font-size-base-xx-small);
+  --bene_footer_block-phone-p-fontsize: var(--font-size-base-x-small);
   --bene_intro_text-block-system-main-block: var(--font-size-x-small);
   --bene_event_page-field--name-bene-event-date-range-time: var(--font-size-xx-small);
   --bene_event_page-field--name-bene-event-date-range-time-desktop: var(--font-size-x-small);
@@ -1225,16 +1251,11 @@ input[type='submit'] {
         height: 7.5rem; } }
 
 .block-bene-home-page-feature-block {
-  color: #FFF;
-  color: var(--hero-font-color);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  text-align: center;
-  padding: 10rem 1rem;
-  background-color: #FFF;
-  background-color: var(--hero-block-background-color); }
+  padding: 10rem 1rem; }
   @media (max-width: 414px) {
     .block-bene-home-page-feature-block {
       background-size: 100%;
@@ -1270,8 +1291,6 @@ input[type='submit'] {
       border: 0.125rem solid #FFF;
       border: 0.125rem solid var(--hero-button-border-color);
       border-radius: 0;
-      color: #FFF;
-      color: var(--hero-button-font-color);
       padding: 1rem 2rem;
       font-size: 0.875rem;
       font-family: 'Open Sans', sans-serif;
@@ -1279,11 +1298,6 @@ input[type='submit'] {
       font-weight: 700;
       font-style: normal;
       text-transform: uppercase; }
-      .block-bene-home-page-feature-block .field--name-bene-link a:hover {
-        color: #FFF;
-        color: var(--hero-button-font-hover-color);
-        background-color: #FFF;
-        background-color: var(--hero-button-background-hover-color); }
 
 .page-node-type-page .block-system-main-block .field--name-bene-intro {
   float: none;
@@ -1391,7 +1405,6 @@ input[type='submit'] {
 
 @media (min-width: 769px) {
   .page-node-type-listing-page .block-system-main-block .field--name-bene-intro {
-    font-size: 1.375rem;
     margin-bottom: 2rem;
     margin-top: 1.5rem; } }
 .block-system-branding-block {
@@ -1562,26 +1575,12 @@ input[type='submit'] {
       color: var(--general-link-hover-color); }
     .desktop-nav .menu--main .menu-item a.is-active {
       cursor: default; } }
-.mobile-menu-toggle {
-  color: #50CFE3;
-  color: var(--general-font-accent-color); }
-
-.mobile-nav .region-primary-nav {
-  background: #129FB5;
-  background: var(--general-tertiary-background-color); }
-.mobile-nav .menu {
-  text-align: left;
-  text-align: var(--general-preferred-alignment); }
 .mobile-nav .menu a {
-  color: #50CFE3;
-  color: var(--general-link-color);
   border-bottom: none;
   font-family: 'Open Sans', sans-serif;
   font-family: var(--font-family-primary);
   font-weight: 400;
   font-style: normal;
-  font-size: 1.5625rem;
-  font-size: var(--general-font-size-small);
   padding: 0.5rem; }
   .mobile-nav .menu a:after {
     display: none; }
@@ -1591,9 +1590,7 @@ input[type='submit'] {
     font-family: 'Open Sans', sans-serif;
     font-family: var(--font-family-primary);
     font-weight: 900;
-    font-style: normal;
-    font-size: 1.5625rem;
-    font-size: var(--general-font-size-small); }
+    font-style: normal; }
   .mobile-nav .menu a .menu--utility li:last-of-type {
     padding: 1rem; }
 
@@ -1660,9 +1657,6 @@ input[type='submit'] {
 
 .nice-select {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background-color: #50CFE3;
-  background-color: var(--general-secondary-background-color);
-  border-radius: 0px;
   border: none;
   box-sizing: border-box;
   clear: both;
@@ -1670,10 +1664,6 @@ input[type='submit'] {
   display: block;
   float: left;
   font-family: inherit;
-  font-size: 14px;
-  font-weight: 700;
-  height: 50px;
-  line-height: 48px;
   outline: none;
   padding-left: 18px;
   padding-right: 30px;
@@ -1683,9 +1673,6 @@ input[type='submit'] {
   user-select: none;
   white-space: nowrap;
   width: 100%; }
-  .nice-select .current {
-    color: #50CFE3;
-    color: var(--general-font-accent-color); }
   .nice-select:after {
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
@@ -1712,12 +1699,7 @@ input[type='submit'] {
     pointer-events: auto;
     transform: scale(1) translateY(0); }
   .nice-select.disabled {
-    border-color: #ededed;
-    color: #FFF;
-    color: var(--general-font-secondary-color);
     pointer-events: none; }
-    .nice-select.disabled:after {
-      border-color: #cccccc; }
   .nice-select.wide {
     width: 100%; }
     .nice-select.wide .list {
@@ -1728,20 +1710,12 @@ input[type='submit'] {
     .nice-select.right .list {
       left: auto;
       right: 0; }
-  .nice-select.small {
-    font-size: 12px;
-    height: 36px;
-    line-height: 34px; }
-    .nice-select.small:after {
-      height: 4px;
-      width: 4px; }
-    .nice-select.small .option {
-      line-height: 34px;
-      min-height: 34px; }
+  .nice-select.small:after {
+    height: 4px;
+    width: 4px; }
   .nice-select .list {
     background-color: #fff;
-    border-radius: 0px;
-    box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+    box-shadow: 0 0 0 1px var(--drop_down-list-shadow);
     box-sizing: border-box;
     margin-top: 0;
     opacity: 0;
@@ -1752,7 +1726,8 @@ input[type='submit'] {
     top: 100%;
     left: 0;
     transform-origin: 50% 0;
-    transform: scale(0.75) translateY(-25px);
+    transform: scale(0.75) translateY(-input-height/2);
+    transform: scale(0.75) translateY(-var(--drop_down-list-transform-move-y));
     transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
     width: 100%;
     z-index: 9; }
@@ -1761,22 +1736,17 @@ input[type='submit'] {
   .nice-select .option {
     cursor: pointer;
     font-weight: 400;
-    line-height: 48px;
     list-style: none;
-    min-height: 48px;
     outline: none;
     padding-left: 18px;
     padding-right: 29px;
     text-align: left;
     transition: all 0.2s;
     width: 100%; }
-    .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
-      background-color: #f6f6f6; }
     .nice-select .option.selected {
       font-weight: bold; }
     .nice-select .option.disabled {
       background-color: transparent;
-      color: #999;
       cursor: default; }
 
 .no-csspointerevents .nice-select .list {
