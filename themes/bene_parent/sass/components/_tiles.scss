@@ -89,3 +89,26 @@
     }
   }
 }
+
+.page-node-type-page .block-system-main-block .field--name-bene-intro{
+  h1, h2, h3, h4, h5{
+    font-family: bbv(font-family-secondary);
+    font-family: var(--general-font-family-secondary);
+    margin: 50px 0;
+  }
+
+  span, p {
+    padding: 0 100px;
+    color: bbv(color-secondary-third);
+    color: var(--rich-paragraph-font-secondary-color);
+  }
+}
+
+.page-node-type-page .block-system-main-block .field--name-bene-intro{
+
+  h1, h2, h3, h4, h5, a{
+    color: bbv(font-color-secondary);
+    color: var(--general-font-secondary-color);
+  }
+}
+

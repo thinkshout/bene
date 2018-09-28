@@ -1,8 +1,8 @@
 // Default Styles (Mobile First!)
 .external-newsletter {
   align-items: center;
-  background-color: bbv(color-primary-first);
-  background-color: var(--newsletter-background-color);
+  background-image: linear-gradient(bbv(color-secondary-second), bbv(color-secondary-first));
+  background-image: var(--newsletter-gradient-color);
   color: bbv(font-color-tertiary);
   color: var(--newsletter-font-color);
   display: flex;
@@ -42,10 +42,12 @@
     color: bbv(font-color-tertiary); // in case css variables are not supported
     color: var(--newsletter-font-color);
     margin: rem(6) 0;
+    font-family: bbv(font-family-secondary);
+    font-family: var(--general-font-family-secondary);
   }
   a {
-    color: bbv(font-color-link); // in case css variables are not supported
-    color: var(--general-link-color);
+    color: bbv(color-primary-third);
+    color: var(--newsletter-link-color);
     &:after {
       @include all-transition;
       content: ' →';
@@ -58,7 +60,7 @@
     }
   }
   a.button {
-    background-color: bbv(color-primary-second); // in case css variables are not supported
+    background-color: bbv(background-color-tertiary); // in case css variables are not supported
     background-color: var(--newsletter-button-color);
     font-size: rem(12);
     font-weight: 600;
