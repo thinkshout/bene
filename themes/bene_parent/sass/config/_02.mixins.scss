@@ -99,6 +99,10 @@
   padding: rem(20) rem(30);
   position: relative;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: map-get($colors, primary);
+  }
 }
 
 @mixin thick_gradient($direction: to bottom, $color: white) {
@@ -143,4 +147,11 @@
 @mixin set-bbv-var($property, $bbv-value, $var-value) {
   $property: var($var-value);
   $property: var($bbv-value);
+}
+
+// Set properties and values for a component
+@mixin set-component-values($component-property) {
+  @each $property, $value in $component-property {
+    #{$property}: #{$value};
+  }
 }

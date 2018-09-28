@@ -72,87 +72,87 @@
   }
 }
 
-.paragraph--type--feature-full-width {
-  align-items: center;
-  background-color: bbv(background-color-tertiary); // in case css variables are not supported
-  background-color: var(--general-tertiary-background-color);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: bbv(font-color-primary); // in case css variables are not supported
-  color: var(--general-font-primary-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 38.2vw;
-  padding: rem(24) rem(24) rem(36) rem(24);
-  position: relative;
-  text-align: center;
-  width: 100vw;
-  max-width: 100%;
-  &:before {
-    background-color: rgba(0,0,0,0.4);
-    bottom: 0;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 2;
-  }
-  .field--name-field-title {
-    color: bbv(font-color-primary);
-    color: var(--general-font-primary-color);
-    font-family: bbv(font-family-primary);
-    font-family: var(--general-font-family-primary);
-    font-size: bbv(font-size-large);
-    font-size: var(--general-font-size-large);
-    font-weight: bbv(font-weight-bold);
-    font-weight: var(--general-font-weight-bold);
-    z-index: 10;
-  }
-  .field--name-field-text {
-    z-index: 10;
-    p {
-      font-family: bbv(font-family-primary);
-      font-family: var(--general-font-family-primary);
-      color: bbv(font-color-primary);
-      color: var(--general-font-primary-color);
-      margin: rem(32) auto;
-      max-width: 100%;
-      @include mq(desktop) {
-        max-width: 65%;
-      }
-    }
-  }
-  .field--type-link {
-    z-index: 10;
-    a {
-      @include button;
-      color: bbv(font-color-link);
-      color: var(--general-link-color);
-      background-color: bbv(background-color-secondary);
-      background-color: var(--general-secondary-background-color);
-      &:hover {
-        background-color: bbv(background-color-tertiary);
-        background-color: var(--general-tertiary-background-color);
-      }
-      letter-spacing: 0;
-      text-transform: none;
-    }
-  }
+// .paragraph--type--feature-full-width {
+//   align-items: center;
+//   background-color: bbv(background-color-tertiary); // in case css variables are not supported
+//   background-color: var(--general-tertiary-background-color);
+//   background-position: center center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   color: bbv(font-color-primary); // in case css variables are not supported
+//   color: var(--general-font-primary-color);
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   min-height: 38.2vw;
+//   padding: rem(24) rem(24) rem(36) rem(24);
+//   position: relative;
+//   text-align: center;
+//   width: 100vw;
+//   max-width: 100%;
+//   &:before {
+//     background-color: rgba(0,0,0,0.4);
+//     bottom: 0;
+//     content: "";
+//     left: 0;
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//     z-index: 2;
+//   }
+//   .field--name-field-title {
+//     color: bbv(font-color-primary);
+//     color: var(--general-font-primary-color);
+//     font-family: bbv(font-family-primary);
+//     font-family: var(--general-font-family-primary);
+//     font-size: bbv(font-size-large);
+//     font-size: var(--general-font-size-large);
+//     font-weight: bbv(font-weight-bold);
+//     font-weight: var(--general-font-weight-bold);
+//     z-index: 10;
+//   }
+//   .field--name-field-text {
+//     z-index: 10;
+//     p {
+//       font-family: bbv(font-family-primary);
+//       font-family: var(--general-font-family-primary);
+//       color: bbv(font-color-primary);
+//       color: var(--general-font-primary-color);
+//       margin: rem(32) auto;
+//       max-width: 100%;
+//       @include mq(desktop) {
+//         max-width: 65%;
+//       }
+//     }
+//   }
+//   .field--type-link {
+//     z-index: 10;
+//     a {
+//       @include button;
+//       color: bbv(font-color-link);
+//       color: var(--general-link-color);
+//       background-color: bbv(background-color-secondary);
+//       background-color: var(--general-secondary-background-color);
+//       &:hover {
+//         background-color: bbv(background-color-tertiary);
+//         background-color: var(--general-tertiary-background-color);
+//       }
+//       letter-spacing: 0;
+//       text-transform: none;
+//     }
+//   }
 
-  // Gradient overlay
-  &::after {
-    background-image: linear-gradient(bbv(--gradient-direction), bbv(--gradient-start-color), bbv(--gradient-end-color));
-    background-image: var(--feature_block-linear-gradient);
-    content: '';
-    display: block;
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
+//   // Gradient overlay
+//   &::after {
+//     background-image: linear-gradient(bbv(--gradient-direction), bbv(--gradient-start-color), bbv(--gradient-end-color));
+//     background-image: var(--feature_block-linear-gradient);
+//     content: '';
+//     display: block;
+//     opacity: 0.5;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//   }
+// }

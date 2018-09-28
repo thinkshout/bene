@@ -1,72 +1,37 @@
 /* BASE ELEMENT STYLES */
-body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  @include set-bbv-var(font-family, font-family-primary, --base_style-font-family);
-  @include set-bbv-var(font-size, font-size-base, --base_style_font-size);
-  font-style: normal;
-  font-weight: 400;
+body { @include set-component-values($body); }
+
+h1, h2, h3, h4, h5, h6 {
+  @include set-component-values($headings-common);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  text-rendering: optimizeLegibility; /* Fix the character spacing for headings */
-}
+h1 { @include set-component-values($h1); }
+h2 { @include set-component-values($h2); }
+h3 { @include set-component-values($h3); }
+h4 { @include set-component-values($h4); }
 
-h1 {
-  font-size: rem(48);
-  line-height: rem(62);
-  font-weight: 800;
-}
-h2 {
-  font-size: rem(32);
-  line-height: rem(38);
-  font-weight: 400;
-}
-h3 {
-  font-size: rem(20);
-  line-height: rem(30);
-  font-weight: 600;
-}
-h4 {
-  font-size: rem(16);
-  line-height: rem(20);
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-p,
-p.standard {
-  @include set-bbv-var(color, color-text-primary, --base_style-paragraph-color);
-  font-size: rem(16);
-  line-height: rem(31);
-  font-weight: 400;
+p, p.standard {
+  @include set-component-values($p);
 }
 
 a {
   @include default-transition;
-  @include set-bbv-var(color, color-theme-primary, --base_style-link-color);
-  cursor: pointer;
-  text-decoration: none;
+  @include set-component-values($a);
+  
   &:hover,
   &:active {
-    @include set-bbv-var(color, color-theme-primary-lighten20, --base_style-active-link-color);
+    @include set-component-values($a-hover-active);
   }
 }
 
 table a,
 li a,
 p a {
-  @include set-bbv-var(color, color-theme-primary, --base_style-link-color);
+  @include set-component-values($a);
+
   &:hover,
   &:active {
-    @include set-bbv-var(color, color-theme-primary-lighten20, --base_style-active-link-color);
+    @include set-component-values($a-hover-active);
   }
 }
 
@@ -76,84 +41,42 @@ a.button {
 
 /* List bullets in content. */
 .text-formatted ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 0 0;
-  li {
-    padding-bottom: rem(14);
-    padding-left: rem(32);
-    text-indent: rem(-20);
-    @include set-bbv-var(color, color-text-primary, --base_style-formatted-text-ul-li-color);
-    &:before {
-      @include set-bbv-var(color, color-text-primary, --base_style-formatted-text-ul-li-bullet-color);
-      content: "•";
-      @include set-bbv-var(font-size, font-size-base, --base_style-font-size);
-      line-height: 1;
-      padding-right: rem(14);
-      position: relative;
-    }
-  }
+  @include set-component-values($ul);
+
+  li { @include set-component-values($ul-li); }
+  li::before { @include set-component-values($ul-li-bullet); }
 }
 
 ol {
-    padding-left: rem(26);
-  li {
-    padding-bottom: rem(14);
-    padding-left: rem(6);
-    line-height: 1.4;
-    font-size: rem(16);
-    @include set-bbv-var(color, color-text-primary, --base_style-formatted-text-ol-li-color);
-  }
+  @include set-component-values($ol);
+
+  li { @include set-component-values($ol-li); }
 }
 
 table, table.tablesaw {
-  @include set-bbv-var(border, color-text-light, --base_style-table-border-color);
-  margin: rem(24) 0;
-  table-layout: auto;
+  @include set-component-values($table);
+
   th, tr, td, tr:first-child th {
-    border: none;
-    @include set-bbv-var(color, color-text-medium-dark, --base_style-table-text-color);
-    font-size: rem(14);
-    font-weight: 400;
-    padding: rem(18) rem(42);
-    text-align: left;
-    strong {
-      font-weight: 600;
-    }
+    @include set-component-values($table-th-tr-td);
+
+    strong { @include set-component-values($strong); }
   }
-  th, tr:first-child th {
-    font-weight: 700;
-    text-transform: uppercase;
-    @include set-bbv-var(color, color-text-medium-dark, --base_style-table-headerrow-leftcolumn-text-color);
-    font-size: rem(14);
-    margin: 0;
-  }
-  tr {
-    @include set-bbv-var(background-color, color-background-default, --base_style-table-background-color);
-  }
-  th,tr:nth-of-type(2n) {
-    @include set-bbv-var(background-color, color-background-lightest, --base_style-table-background-stripe-color);
-  }
+
+  th, tr:first-child th { @include set-component-values($table-th); }
+  tr { @include set-component-values($table-tr); }
+  th,tr:nth-of-type(2n) { @include set-component-values($table-th-tr-odd); }
 }
 
 ul.menu {
-  list-style: none outside;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  .menu-item {
-    padding: 0;
-  }
+  @include set-component-values($ul-menu);
+
+  .menu-item { @include set-component-values($ul-menu); }
 }
 
 fieldset {
-  border: none;
-  padding: 0;
-  legend {
-    font-size: rem(30);
-    font-weight: 700;
-    @include set-bbv-var(color, color-text-secondary, --base_style-fieldset-legend-color);
-  }
+  @include set-component-values($fieldset);
+
+  legend { @include set-component-values($fieldset-legend); }
 }
 
 /* END BASE ELEMENT STYLES */

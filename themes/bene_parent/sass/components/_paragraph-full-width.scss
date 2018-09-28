@@ -1,0 +1,19 @@
+.paragraph--type--feature-full-width {
+  @include set-component-values($fwcta);
+  @include set-component-values($fwcta-background);
+
+  &::after { @include set-component-values($fwcta-overlay); }
+
+  .field--name-field-title { @include set-component-values($fwcta-title); }
+
+  .field--type-text-long p {
+    @include set-component-values($fwcta-teaser);
+
+    @include mq(desktop) { @include set-component-values($fwcta-teaser-desktop); }
+  }
+
+  .field--type-link a {
+    @include button;
+    @include set-component-values($fwcta-link);
+  }
+}

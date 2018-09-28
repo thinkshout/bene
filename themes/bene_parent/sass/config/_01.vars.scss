@@ -71,9 +71,11 @@ $bene-buildup-variables: (
   font-color-link: bav(bene-bright-blue),
   font-color-hover-link: bav(bene-main-blue),
 
-  font-weight-bold: bold,
+  font-weight-bold: 600,
   font-weight-normal: normal,
   font-weight-light: 100,
+  
+  font-style-italic: italic,
 
   gradient-direction: -180deg,
   gradient-start-color: rgba(bav(bene-main-blue), 1), // 0.00 = transparent
@@ -131,6 +133,9 @@ $bene-buildup-variables: (
     --general-font-accent-color: var(--font-color-accent); //light yellow
     --general-link-color: var(--font-color-link); //light yellow
     --general-link-hover-color: var(--font-color-hover-link); //dark yellow
+    --general-font-weight-bold: var(--font-weight-bold);
+    --general-font-weight-normal: var(--font-weight-normal);
+    --general-font-style-italic: var(--font-style-italic);
 
 
     //Old General Variables - possibly change or remove
@@ -439,6 +444,8 @@ $bene-buildup-variables: (
   --bene_footer_block-phone-p-fontsize: var(--font-size-base-x-small);
 
   // bene_intro_text
+  --bene_intro_text-h2-font-size: var(--font-size-medium-small);
+  --bene_intro_text-h3-font-size: var(--font-size-medium-small);
   --bene_intro_text-block-system-main-block: var(--font-size-x-small);
 
   // bene_event_page
@@ -453,3 +460,264 @@ $bene-buildup-variables: (
   //footer
 
 }
+
+
+// Too many duplicate vars. CSS file is doubling and perfomance is taking a hit
+// We should take the properties of a component and make them sass vars
+// COMPONENT LIST:
+
+/**
+ * Colors
+ */
+
+$colors: (
+  primary: #129FB5,
+  secondary: #50CFE3,
+  white: #FFF,
+  black: #000,
+  neutral-1: #D8D8D8,
+  neutral-2: #979797,
+  neutral-3: #7C7C7C,
+  neutral-4: #5C5B5B,
+);
+
+$fonts: (
+  font-family-primary: "'Open Sans', sans-serif",
+  font-family-secondary: '',
+  weight-regular: 400,
+  weight-medium: 600,
+  weight-bold: 700,
+  weight-black: 800,
+  style-italic: italic,
+  style-normal: normal,
+);
+
+/** 
+ * Text Styles 
+ */
+$body: (
+  -moz-osx-font-smoothing: grayscale,
+  -webkit-font-smoothing: antialiased,
+  font-family: map-get($fonts, font-family-primary),
+  font-size: rem(16),
+  font-style: map-get($fonts, style-normal),
+  font-weight: map-get($fonts, weight-regular),
+);
+
+$headings-common: (
+  margin: 0,
+  text-rendering: optimizeLegibility, /* Fix the character spacing for headings */
+);
+
+$h1: (
+  font-size: rem(48),
+  line-height: rem(62),
+  font-weight: map-get($fonts, weight-black),
+);
+
+$h2: (
+  font-size: rem(32),
+  line-height: rem(38),
+  font-weight: map-get($fonts, weight-normal),
+);
+
+$h3: (
+  font-size: rem(20),
+  line-height: rem(30),
+  font-weight: map-get($fonts, weight-medium),
+);
+
+$h4: (
+  font-size: rem(16),
+  line-height: rem(20),
+  letter-spacing: 1.2px,
+  text-transform: uppercase,
+  font-weight: map-get($fonts, weight-bold),
+);
+
+$p: (
+  color: map-get($colors, black),
+  font-size: rem(16),
+  line-height: rem(31),
+  font-weight: map-get($fonts, weight-normal),
+);
+
+$strong: (
+  font-weight: map-get($fonts, weight-medium),
+);
+
+$a: (
+  color: map-get($colors, primary),
+  text-decoration: none,
+);
+$a-hover-active: (
+  color: map-get($colors, primary) - 20,
+);
+
+$ul: (
+  list-style: none,
+  padding: 0,
+  margin: 0 0 0 0,
+);
+$ul-menu: (
+  list-style: none outside,
+  margin: 0,
+  padding: 0,
+  text-align: left,
+);
+$ul-li: (
+  color: map-get($colors, primary),
+  padding-bottom: rem(14),
+  padding-left: rem(32),
+  text-indent: rem(-20),
+);
+$ul-li-menu-item: (
+  padding: 0,
+);
+$ul-li-bullet: (
+  color: map-get($colors, black),
+  content: "•",
+  font-size: rem(16),
+  line-height: 1,
+  padding-right: rem(14),
+  position: relative,
+);
+
+$ol: (
+  padding-left: rem(26),
+);
+$ol-li: (
+  color: map-get($colors, black),
+  padding-bottom: rem(14),
+  padding-left: rem(6),
+  line-height: 1.4,
+  font-size: rem(16),
+);
+
+$table: (
+  border-color: map-get($colors, white),
+  margin: rem(24) 0,
+  table-layout: auto,
+);
+$table-th-tr-td: (
+  border: none,
+  color: map-get($colors, white),
+  font-size: rem(14),
+  font-weight: 400,
+  padding: rem(18) rem(42),
+  text-align: left,
+);
+$table-th: (
+  font-weight: map-get($fonts, weight-bold),
+  text-transform: uppercase,
+  color: map-get($colors, neutral-4),
+  font-size: rem(14),
+  margin: 0,
+);
+$table-tr: (
+  background-color: map-get($colors, white),
+);
+$table-th-tr-odd: (
+  background-color: map-get($colors, white),
+);
+
+/** 
+ * Containers
+ */
+
+/** 
+ * Forms 
+ */
+$fieldset: (
+  border: none,
+  padding: 0,
+);
+$fieldset-legend: (
+  color: map-get($colors, secondary),
+  font-size: rem(30),
+  font-weight: map-get($fonts, weight-bold),
+);
+
+/** 
+ * Buttons
+ */
+
+
+/** 
+ * Navbar 
+ * includes logo, utility and main nav
+ */
+ // menu common
+ // logo
+ // utility-nav
+ // main-nav
+
+/** 
+ * Footer
+ */
+
+/** 
+ * Intro Text
+ * includes heading and paragraph text
+ */
+
+/** 
+ * Full Width CTA
+ */
+$fwcta: (
+  display: flex,
+  flex-direction: column,
+  justify-content: center,
+  min-height: 38.2vw,
+  padding: rem(24) rem(24) rem(36) rem(24),
+  position: relative,
+  text-align: center,
+  width: 100vw,
+);
+
+$fwcta-overlay: (
+  background-image: linear-gradient(bbv(--gradient-direction), bbv(--gradient-start-color), bbv(--gradient-end-color)),
+  content: '',
+  display: block,
+  opacity: 0.5,
+  position: absolute,
+  top: 0,
+  left: 0,
+  width: 100%,
+  height: 100%,
+);
+ 
+$fwcta-background: (
+  background-color: map-get($colors, primary),
+  background-size: cover,
+  background-repeat: no-repeat,
+  background-position: center center,
+);
+
+$fwcta-title: (
+  color: map-get($colors, white),
+  font-size: rem(61),
+  font-weight: map-get($fonts, weight-bold),
+  line-height: rem(41),
+  text-align: center,
+  z-index: 10,
+);
+
+$fwcta-teaser: (
+  color: map-get($colors, white),
+  font-size: rem(24),
+  line-height: normal,
+  margin: rem(32) auto,
+  text-align: center,
+  z-index: 10,
+);
+
+$fwcta-teaser-desktop: (
+  width: 65%,
+);
+
+$fwcta-link: (
+  color: map-get($colors, white), 
+  background-color: map-get($colors, secondary),
+  z-index: 10,
+);
