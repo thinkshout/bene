@@ -18,7 +18,7 @@ input[type="search"], textarea {
     @include set-bbv-var(color, color-primary-first, --form-input-placeholder-color);
   }
   &:-ms-input-placeholder {
-    @include set-bbv-var(color, color-primary-first);
+    @include set-bbv-var(color, color-primary-first, --form-input-placeholder-color);
     color: var(--form-input-placeholder-color);
   }
   &:-moz-placeholder {

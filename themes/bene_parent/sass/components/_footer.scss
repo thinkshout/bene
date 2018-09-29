@@ -45,7 +45,7 @@
     .phone, .email, .additional-contact {
       display: block;
       p {
-        @include set-bbv-var(font-size, --font-size-base-x-small, --bene_footer_block-phone-p-fontsize);
+        @include set-bbv-var(font-size, font-size-base-x-small, --bene_footer_block-phone-p-fontsize);
         margin: rem(5) 0;
       }
     }

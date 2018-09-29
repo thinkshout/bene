@@ -25,9 +25,20 @@ for x in $(ls ./components/*.scss);
   #
   # for lines that look like a path and filename, output two slashes and a space followed
   # by everything after the last slash underscore from the input
-  do echo $x | sed 's/.*\/_/\/\/ /';
+  # then removing the filename extension (everything after the last dot)
+  do echo $x | sed 's/.*\/_/\/\/ /' | sed 's/\.[^.]*$//';
 
-  # for lines that look like they have set-bbv-var in them
-  cat $x | grep 'set-bbv-var';
+  # for lines that have set-bbv-var in them like this
+  #
+  #       @include set-bbv-var(font-size, font-size-x-small, --bene_intro_text-block-system-main-block);
+  #
+  # edit them so that they output
+  #
+  # --bene_intro_text-block-system-main-block: var(--font-size-x-small);
+  #
+  # because this sets the new c-level variable to the value of the b-level variable. Then use that output
+  # to create the c-level css variables.
+  cat $x | grep 'set-bbv-var' | sed 's/ *@include set-bbv-var(\(.*\),[ \t]*\(.*\),[ \t]*\(.*\));/\3: var(--\2);/g';
+
 done
 
