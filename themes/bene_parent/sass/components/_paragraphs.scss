@@ -34,16 +34,14 @@
   p,
   ol li,
   ul li {
-    color: bbv(font-color-primary); // in case css variables are not supported
-    color: var(--general-font-primary-color);
+    @include set-bbv-var(color, font-color-primary, --general-font-primary-color);
   }
   blockquote {
     margin: rem(32) auto;
     max-width: 80%;
     text-align: center;
     p {
-      color: bbv(font-color-primary); // in case css variables are not supported
-      color: var(--general-font-primary-color);
+      @include set-bbv-var(color, font-color-primary, --general-font-primary-color);
       font-size: rem(26);
       font-style: italic;
       font-weight: 600;
@@ -58,8 +56,7 @@
     }
 
     &:after {
-      background-color: bbv(background-color-tertiary); // in case css variables are not supported
-      background-color: var(--general-tertiary-background-color);
+      @include set-bbv-var(background-color, background-color-tertiary, --general-tertiary-background-color);
       content: "";
       display: inline-block;
       height: rem(4);
@@ -74,13 +71,11 @@
 
 .paragraph--type--feature-full-width {
   align-items: center;
-  background-color: bbv(background-color-tertiary); // in case css variables are not supported
-  background-color: var(--general-tertiary-background-color);
+  @include set-bbv-var(background-color, background-color-tertiary, --general-tertiary-background-color);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: bbv(font-color-primary); // in case css variables are not supported
-  color: var(--general-font-primary-color);
+  @include set-bbv-var(color, font-color-primary, --general-font-primary-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -101,23 +96,17 @@
     z-index: 2;
   }
   .field--name-field-title {
-    color: bbv(font-color-primary);
-    color: var(--general-font-primary-color);
-    font-family: bbv(font-family-primary);
-    font-family: var(--general-font-family-primary);
-    font-size: bbv(font-size-large);
-    font-size: var(--general-font-size-large);
-    font-weight: bbv(font-weight-bold);
-    font-weight: var(--general-font-weight-bold);
+    @include set-bbv-var(color, font-color-primary, --general-font-primary-color);
+    @include set-bbv-var(font-family, font-family-primary, --general-font-family-primary);
+    @include set-bbv-var(font-size, font-size-large, --general-font-size-large);
+    @include set-bbv-var(font-weight, font-weight-bold, --general-font-weight-bold);
     z-index: 10;
   }
   .field--name-field-text {
     z-index: 10;
     p {
-      font-family: bbv(font-family-primary);
-      font-family: var(--general-font-family-primary);
-      color: bbv(font-color-primary);
-      color: var(--general-font-primary-color);
+      @include set-bbv-var(font-family, font-family-primary, --general-font-family-primary);
+      @include set-bbv-var(color, font-color-primary, --general-font-primary-color);
       margin: rem(32) auto;
       max-width: 100%;
       @include mq(desktop) {
@@ -129,13 +118,10 @@
     z-index: 10;
     a {
       @include button;
-      color: bbv(font-color-link);
-      color: var(--general-link-color);
-      background-color: bbv(background-color-secondary);
-      background-color: var(--general-secondary-background-color);
+      @include set-bbv-var(color, font-color-link, --general-link-color);
+      @include set-bbv-var(background-color, background-color-secondary, --general-secondary-background-color);
       &:hover {
-        background-color: bbv(background-color-tertiary);
-        background-color: var(--general-tertiary-background-color);
+        @include set-bbv-var(background-color, background-color-tertiary, --general-tertiary-background-color);
       }
       letter-spacing: 0;
       text-transform: none;
