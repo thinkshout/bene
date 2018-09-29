@@ -1,8 +1,7 @@
 // Admin adjustments
 body.path-user .region.region-content,
 body.user-logged-in .region.region-content {
-  background-color: bbv(background-color-primary);
-  background-color: var(--general-primary-background-color);
+  @include set-bbv-var(background-color, background-color-primary, --general-primary-background-color);
   display: inline-block;
   width: 100%;
 }
@@ -17,14 +16,11 @@ body.user-logged-in .region.region-content {
     position: fixed;
     z-index: 1000;
     &:after {
-      background-color: bbv(background-color-secondary);
-      background-color: var(--general-secondary-background-color);
-      border-color: bbv(background-color-tertiary);
-      border-color: var(--general-tertiary-background-color);
+      @include set-bbv-var(background-color,background-color-secondary, --general-secondary-background-color);
+      @include set-bbv-var(border-color, background-color-tertiary, --general-tertiary-background-color);
       border-radius: 50%;
       box-shadow: -1px 2px 5px #77b259;
-      color: bbv(font-color-primary);
-      color: var(--general-font-primary-color);
+      @include set-bbv-var(color, font-color-primary, --general-font-primary-color);
       content: "×";
       display: inline-block;
       font-size: rem(18);
@@ -37,8 +33,7 @@ body.user-logged-in .region.region-content {
   }
 
   .contextual-links {
-    background-color: bbv(background-color-primary);
-    background-color: var(--general-primary-background-color);
+    @include set-bbv-var(background-color, background-color-primary, --general-primary-background-color);
     border-radius: 4px 0 4px 4px;
     border: 1px solid #ccc;
     clear: both;
@@ -51,8 +46,7 @@ body.user-logged-in .region.region-content {
     top: -1px;
     white-space: nowrap;
     li {
-      background-color: bbv(background-color-primary);
-      background-color: var(--general-primary-background-color);
+      @include set-bbv-var(background-color, background-color-primary, --general-primary-background-color);
       border: none;
       line-height: 100%;
       // list-style-image: none;
@@ -60,10 +54,8 @@ body.user-logged-in .region.region-content {
       margin: 0;
       padding: 0;
       a {
-        background-color: bbv(background-color-primary);
-        background-color: var(--general-primary-background-color);
-        color: bbv(font-color-link);
-        color: var(--general-link-color);
+        @include set-bbv-var(background-color, background-color-primary, --general-primary-background-color);
+        @include set-bbv-var(color, font-color-link, --general-link-color);
         display: block;
         font-family: sans-serif;
         font-size: small;
@@ -78,8 +70,7 @@ body.user-logged-in .region.region-content {
   }
   #block-bene-child-local-tasks {
     @include transition(all 0.4s linear);
-    background-color: bbv(background-color-primary);
-    background-color: var(--general-primary-background-color);
+    @include set-bbv-var(background-color, background-color-primary, --general-primary-background-color);
     bottom: 0;
     height: auto;
     padding-right: 45px;
@@ -95,14 +86,11 @@ body.user-logged-in .region.region-content {
       margin: 0;
     }
     li {
-      background-color: bbv(background-color-primary);
-      background-color: var(--general-primary-background-color);
+      @include set-bbv-var(background-color, background-color-primary, --general-primary-background-color);
       a {
-        background-color: bbv(background-color-primary);
-        background-color: var(--general-primary-background-color);
+        @include set-bbv-var(background-color, background-color-primary, --general-primary-background-color);
         border: none;
-        color: bbv(font-color-link);
-        color: var(--general-link-color);
+        @include set-bbv-var(color, font-color-link, --general-link-color);
         display: inline-block;
         font-size: rem(15);
         font-weight: 800;
@@ -113,18 +101,15 @@ body.user-logged-in .region.region-content {
           padding: rem(7) rem(20) rem(7);
         }
         &:hover {
-          background-color: bbv(background-color-secondary);
-          background-color: var(--general-secondary-background-color);
+          @include set-bbv-var(background-color, background-color-secondary, --general-secondary-background-color);
         }
         &.is-active {
-          background-color: bbv(background-color-tertiary);
-          background-color: var(--general-tertiary-background-color);
+          @include set-bbv-var(background-color, background-color-tertiary, --general-tertiary-background-color);
         }
       }
     }
     .show-hide {
-      background-color: bbv(background-color-tertiary);
-      background-color: var(--general-tertiary-background-color);
+      @include set-bbv-var(background-color, background-color-tertiary, --general-tertiary-background-color);
       cursor: pointer;
       font-size: rem(35);
       height: rem(30);

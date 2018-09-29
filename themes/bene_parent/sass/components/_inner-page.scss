@@ -10,8 +10,7 @@
   }
 
   h2 {
-    color: bbv(font-color-primary); // in case css variables are not supported
-    color: var(--general-font-primary-color);
+    @include set-bbv-var(color,font-color-primary, --general-font-primary-color);
     font-style: normal;
     font-weight: normal;
     font-size: medium;
@@ -23,26 +22,22 @@
   }
 
   h3 {
-    color: bbv(font-color-secondary); // in case css variables are not supported
-    color: var(--general-font-secondary-color);
+    @include set-bbv-var(color, font-color-secondary, --general-font-secondary-color);
     font-size: medium;
     font-weight: normal;
     line-height: normal;
     margin-bottom: 0;
 
     a {
-      color: bbv(font-color-link); // in case css variables are not supported
-      color: var(--general-link-color);
+      @include set-bbv-var(color, font-color-link, --general-link-color);
     }
     a:hover {
-      color: bbv(font-color-hover-link); // in case css variables are not supported
-      color: var(--general-link-hover-color);
+      @include set-bbv-var(color, font-color-hover-link, --general-link-hover-color);
     }
   }
 
   p {
-    color: bbv(font-color-primary); // in case css variables are not supported
-    color: var(--general-font-primary-color);
+    @include set-bbv-var(color, font-color-primary, --general-font-primary-color);
     font-size: rem(18);
     font-weight: normal;
     line-height: normal;
@@ -58,8 +53,7 @@
 
   blockquote {
     p {
-      color: bbv(font-color-tertiary); // in case css variables are not supported
-      color: var(--general-font-tertiary-color);
+      @include set-bbv-var(color, font-color-tertiary, --general-font-tertiary-color);
       font-size: rem(24);
       float: none;
       font-style: normal;

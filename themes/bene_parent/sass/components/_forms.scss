@@ -1,33 +1,28 @@
 // Default Styles (Mobile First!)
 input[type="search"], textarea {
   -webkit-appearance: none;
-  background-color: bbv(color-primary-first);
-  background-color: var(--form-input-background-color);
+  @include set-bbv-var(background-color, color-primary-first, --form-input-background-color);
   border-radius: 0;
   border: none;
   box-sizing: border-box;
-  color: bbv(color-primary-first);
-  color: var(--form-input-font-color);
+  @include set-bbv-var(color, color-primary-first, --form-input-font-color);
   font-size: rem(16);
   font-weight: 600;
   height: rem(50);
   padding: rem(18) rem(50) rem(18) rem(22);
   width: 100%;
   &::-webkit-input-placeholder {
-    color: bbv(color-primary-first);
-    color: var(--form-input-placeholder-color);
+    @include set-bbv-var(color, color-primary-first, --form-input-placeholder-color);
   }
   &::-moz-placeholder {
-    color: bbv(color-primary-first);
-    color: var(--form-input-placeholder-color);
+    @include set-bbv-var(color, color-primary-first, --form-input-placeholder-color);
   }
   &:-ms-input-placeholder {
-    color: bbv(color-primary-first);
+    @include set-bbv-var(color, color-primary-first);
     color: var(--form-input-placeholder-color);
   }
   &:-moz-placeholder {
-    color: bbv(color-primary-first);
-    color: var(--form-input-placeholder-color);
+    @include set-bbv-var(color, color-primary-first, --form-input-placeholder-color);
   }
   &:focus {
     outline: 1px solid bbv(color-primary-first);
@@ -41,8 +36,7 @@ input[type="search"], textarea {
     display: none;
   }
   label {
-    color: bbv(color-primary-first);
-    color: var(--form-label-color);
+    @include set-bbv-var(color, color-primary-first, --form-label-color);
     display: inline-block;
     font-size: rem(18);
     margin-bottom: rem(8);
@@ -77,22 +71,19 @@ input[type="search"], textarea {
     }
   }
   input[type="checkbox"]:checked + label::before {
-    color: bbv(color-primary-first);
-    color: var(--form-input-checkbox-color);
+    @include set-bbv-var(color, color-primary-first, --form-input-checkbox-color);
     text-shadow: 1px 1px 1px rgba(240, 240, 240, 0.5);
   }
 }
 
 label {
-  color: bbv(color-primary-first);
-  color: var(--form-label-color);
+  @include set-bbv-var(color, color-primary-first, --form-label-color);
   font-weight: 600;
   margin-bottom: rem(24);
 }
 
 input:focus {
-  outline-color: bbv(color-primary-first);
-  outline-color: var(--form-input-outline-color);
+  @include set-bbv-var(outline-color, color-primary-first, --form-input-outline-color);
 }
 
 input[type='text'],
@@ -107,28 +98,23 @@ textarea {
   border: 1px solid bbv(color-primary-first);
   border: 1px solid var(--form-input-textarea-border-color);
   box-sizing: border-box;
-  color: bbv(color-primary-first);
-  color: var(--form-input-textarea-color);
+  @include set-bbv-var(color, color-primary-first, --form-input-textarea-color);
   font-size: rem(16);
   font-weight: 600;
   height: rem(50);
   padding: rem(18) rem(50) rem(18) rem(22);
   width: 100%;
   &::-webkit-input-placeholder {
-    color: bbv(color-primary-first);
-    color: var(--form-input-textarea-placeholder-color);
+    @include set-bbv-var(color, color-primary-first, --form-input-textarea-placeholder-color);
   }
   &::-moz-placeholder {
-    color: bbv(color-primary-first);
-    color: var(--form-input-textarea-placeholder-color);
+    @include set-bbv-var(color, color-primary-first, --form-input-textarea-placeholder-color);
   }
   &:-ms-input-placeholder {
-    color: bbv(color-primary-first);
-    color: var(--form-input-textarea-placeholder-color);
+    @include set-bbv-var(color, color-primary-first, --form-input-textarea-placeholder-color);
   }
   &:-moz-placeholder {
-    color: bbv(color-primary-first);
-    color: var(--form-input-textarea-placeholder-color);
+    @include set-bbv-var(color, color-primary-first, --form-input-textarea-placeholder-color);
   }
   &:focus {
     outline: none;
@@ -145,13 +131,10 @@ textarea {
 
 input[type='submit'] {
   @include button;
-  background-color: bbv(color-primary-second);
-  background-color: var(--form-button-background-color);
-  color: bbv(color-primary-first);
-  color: var(--form-button-color);
+  @include set-bbv-var(background-color, color-primary-second, --form-button-background-color);
+  @include set-bbv-var(color, color-primary-first, --form-button-color);
   &:hover {
-    background-color: bbv(color-primary-first);
-    background-color: var(--form-button-hover-background-color);
+    @include set-bbv-var(background-color, color-primary-first, --form-button-hover-background-color);
   }
   border: none;
 }
