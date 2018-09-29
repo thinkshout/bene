@@ -24,9 +24,9 @@ for x in $(ls ./components/*.scss);
   #          @include set-bbv-var(border-color, disabled-border-color, --drop_down-disabled-after-border-color);
   #
   # for lines that look like a path and filename, output two slashes and a space followed
-  # by everything after the last slash underscore from the input
-  # then removing the filename extension (everything after the last dot)
-  do echo $x | sed 's/.*\/_/\/\/ /' | sed 's/\.[^.]*$//';
+  # by everything after the last slash underscore from the input. FYI \'$'\n'' means newline.
+  # then removing the filename extension (everything after the last dot) and adding a newline
+  do echo $x | sed 's/.*\/_/\'$'\n''\/\/ /' | sed 's/\.[^.]*$/\'$'\n''/';
 
   # for lines that have set-bbv-var in them like this
   #
