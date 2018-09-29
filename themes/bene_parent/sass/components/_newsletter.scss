@@ -1,10 +1,8 @@
 // Default Styles (Mobile First!)
 .external-newsletter {
   align-items: center;
-  background-color: bbv(color-primary-first);
-  background-color: var(--newsletter-background-color);
-  color: bbv(font-color-tertiary);
-  color: var(--newsletter-font-color);
+  @include set-bbv-var(background-color, color-primary-first, --newsletter-background-color);
+  @include set-bbv-var(color, font-color-tertiary, --newsletter-font-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,17 +33,14 @@
     text-align: center;
   }
   label {
-    color: bbv(font-color-tertiary); // in case css variables are not supported
-    color: var(--newsletter-font-color);
+    @include set-bbv-var(color, font-color-tertiary, --newsletter-font-color);
   }
   p {
-    color: bbv(font-color-tertiary); // in case css variables are not supported
-    color: var(--newsletter-font-color);
+    @include set-bbv-var(color, font-color-tertiary, --newsletter-font-color);
     margin: rem(6) 0;
   }
   a {
-    color: bbv(font-color-link); // in case css variables are not supported
-    color: var(--general-link-color);
+    @include set-bbv-var(color, font-color-link, --general-link-color);
     &:after {
       @include all-transition;
       content: ' →';
@@ -58,8 +53,7 @@
     }
   }
   a.button {
-    background-color: bbv(color-primary-second); // in case css variables are not supported
-    background-color: var(--newsletter-button-color);
+    @include set-bbv-var(background-color, color-primary-second, --newsletter-button-color);
     font-size: rem(12);
     font-weight: 600;
     padding: rem(15) rem(20);
@@ -68,8 +62,7 @@
       content: none;
     }
     &:hover {
-      background-color: bbv(color-primary-second);
-      background-color: var(--newsletter-button-hover-color);
+      @include set-bbv-var(background-color, color-primary-second, --newsletter-button-hover-color);
     }
   }
 }

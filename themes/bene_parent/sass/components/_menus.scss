@@ -18,8 +18,7 @@
     width: 100%;
     z-index: 9999;
     span {
-      background-color: bbv(background-color-primary); // in case css variables are not supported
-      background-color: var(--general-primary-background-color);
+      @include set-bbv-var(background-color, background-color-primary, --general-primary-background-color);
       display: block;
       height: 6px;
       left: 25%;
@@ -79,8 +78,7 @@
   .region-primary-nav {
     display: flex;
     flex-direction: column-reverse;
-    background-color: bbv(background-color-primary); // in case css variables are not supported
-    background-color: var(--general-primary-background-color);
+    @include set-bbv-var(background-color, background-color-primary, --general-primary-background-color);
     left: 0;
     position: absolute;
     top: rem(101);
@@ -90,8 +88,7 @@
   .menu a {
     border-bottom: 1px solid bbv(font-color-accent); // in case css variables are not supported
     border-bottom: 1px solid var(--general-font-accent-color);
-    color: bbv(font-color-link); // in case css variables are not supported
-    color: var(--general-link-color);
+    @include set-bbv-var(color, font-color-link, --general-link-color);
     display: inline-block;
     font-size: rem(18);
     font-weight: 600;
@@ -111,8 +108,7 @@
       width: rem(9);
     }
     &.is-active {
-      color: bbv(font-color-hover-link); // in case css variables are not supported
-      color: var(--general-link-hover-color);
+      @include set-bbv-var(color, font-color-hover-link, --general-link-hover-color);
     }
   }
 }
@@ -126,14 +122,11 @@
     }
   }
   &:last-child a {
-    background-color: bbv(background-color-secondary); // in case css variables are not supported
-    background-color: var(--general-secondary-background-color);
-    color: bbv(font-color-primary); // in case css variables are not supported
-    color: var(--general-font-primary-color);
+    @include set-bbv-var(background-color, background-color-secondary, --general-secondary-background-color);
+    @include set-bbv-var(color, font-color-primary, --general-font-primary-color);
     font-weight: 600;
     &.is-active {
-      color: bbv(font-color-accent); // in case css variables are not supported
-      color: var(--general-font-accent-color);
+      @include set-bbv-var(color, font-color-accent, --general-font-accent-color);
     }
   }
 }
@@ -163,23 +156,18 @@
   }
   .desktop-nav .menu--utility .menu-item {
     a {
-      color: bbv(font-color-link); // in case css variables are not supported
-      color: var(--general-link-color);
+      @include set-bbv-var(color, font-color-link, --general-link-color);
       font-size: rem(14);
       &:hover, &:focus, &.is-active {
-        color: bbv(font-color-hover-link); // in case css variables are not supported
-        color: var(--general-link-hover-color);
+        @include set-bbv-var(color, font-color-hover-link, --general-link-hover-color);
       }
     }
     &:last-child a {
       @include button;
-      color: bbv(font-color-accent);
-      color: var(--general-font-accent-color);
-      background-color: bbv(background-color-tertiary);
-      background-color: var(--general-tertiary-background-color);
+      @include set-bbv-var(color, font-color-accent, --general-font-accent-color);
+      @include set-bbv-var(background-color, background-color-tertiary, --general-tertiary-background-color);
       &:hover {
-        background-color: bbv(background-color-secondary);
-        background-color: var(--general-secondary-background-color);
+        @include set-bbv-var(background-color, background-color-secondary, --general-secondary-background-color);
       }
       font-size: rem(12);
       font-weight: 700;
@@ -190,14 +178,12 @@
   }
   .desktop-nav .menu--main .menu-item {
     a {
-      color: bbv(font-color-tertiary); // in case css variables are not supported
-      color: var(--general-font-tertiary-color);
+      @include set-bbv-var(color, font-color-tertiary, --general-font-tertiary-color);
       font-weight: 700;
       letter-spacing: rem(0.5);
       text-transform: uppercase;
       &:hover, &:focus, &.is-active {
-        color: bbv(font-color-hover-link); // in case css variables are not supported
-        color: var(--general-link-hover-color);
+        @include set-bbv-var(color, font-color-hover-link, --general-link-hover-color);
       }
       &.is-active {
         cursor: default;
