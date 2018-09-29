@@ -141,6 +141,6 @@
 
 // Sets a CSS variable and a fallback at the same time
 @mixin set-bbv-var($property, $bbv-value, $var-value) {
-  $property: var($var-value);
-  $property: var($bbv-value);
+  #{$property}: #{bbv($bbv-value)};
+  #{$property}: var($var-value);
 }

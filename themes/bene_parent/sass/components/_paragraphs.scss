@@ -144,7 +144,7 @@
 
   // Gradient overlay
   &::after {
-    background-image: linear-gradient(bbv(--gradient-direction), bbv(--gradient-start-color), bbv(--gradient-end-color));
+    background-image: linear-gradient(bbv(gradient-direction), bbv(gradient-start-color), bbv(gradient-end-color));
     background-image: var(--feature_block-linear-gradient);
     content: '';
     display: block;
