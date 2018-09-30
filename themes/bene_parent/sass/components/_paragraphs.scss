@@ -34,14 +34,14 @@
   p,
   ol li,
   ul li {
-    @include set-bbv-var(color, font-color-primary, --general-font-primary-color);
+    @include set-bbv-var(color, font-color-primary, --paragraph-rich-text-p-li-text-color);
   }
   blockquote {
     margin: rem(32) auto;
     max-width: 80%;
     text-align: center;
     p {
-      @include set-bbv-var(color, font-color-primary, --general-font-primary-color);
+      @include set-bbv-var(color, font-color-primary, --paragraph-rich-text-blockquote-p-font-color);
       font-size: rem(26);
       font-style: italic;
       font-weight: 600;
@@ -56,7 +56,7 @@
     }
 
     &:after {
-      @include set-bbv-var(background-color, background-color-tertiary, --general-tertiary-background-color);
+      @include set-bbv-var(background-color, background-color-tertiary, --paragraph-rich-text-blockquote-after-background-color);
       content: "";
       display: inline-block;
       height: rem(4);
@@ -71,11 +71,11 @@
 
 .paragraph--type--feature-full-width {
   align-items: center;
-  @include set-bbv-var(background-color, background-color-tertiary, --general-tertiary-background-color);
+  @include set-bbv-var(background-color, background-color-tertiary, --paragraph-feature-full-width-background-color);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  @include set-bbv-var(color, font-color-primary, --general-font-primary-color);
+  @include set-bbv-var(color, font-color-primary, --paragraph-feature-full-width-text-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -96,17 +96,17 @@
     z-index: 2;
   }
   .field--name-field-title {
-    @include set-bbv-var(color, font-color-primary, --general-font-primary-color);
-    @include set-bbv-var(font-family, font-family-primary, --general-font-family-primary);
-    @include set-bbv-var(font-size, font-size-large, --general-font-size-large);
-    @include set-bbv-var(font-weight, font-weight-bold, --general-font-weight-bold);
+    @include set-bbv-var(color, font-color-primary, --paragraph-feature-full-width-field-title-text-color);
+    @include set-bbv-var(font-family, font-family-primary, --paragraph-feature-full-width-field-title-font-family);
+    @include set-bbv-var(font-size, font-size-large, --paragraph-feature-full-width-field-title-font-size);
+    @include set-bbv-var(font-weight, font-weight-bold, --paragraph-feature-full-width-field-title-font-weight);
     z-index: 10;
   }
   .field--name-field-text {
     z-index: 10;
     p {
-      @include set-bbv-var(font-family, font-family-primary, --general-font-family-primary);
-      @include set-bbv-var(color, font-color-primary, --general-font-primary-color);
+      @include set-bbv-var(font-family, font-family-primary, --paragraph-feature-full-width-field-text-font-family);
+      @include set-bbv-var(color, font-color-primary, --paragraph-feature-full-width-field-text-color);
       margin: rem(32) auto;
       max-width: 100%;
       @include mq(desktop) {
@@ -118,10 +118,10 @@
     z-index: 10;
     a {
       @include button;
-      @include set-bbv-var(color, font-color-link, --general-link-color);
-      @include set-bbv-var(background-color, background-color-secondary, --general-secondary-background-color);
+      @include set-bbv-var(color, font-color-link, --paragraph-feature-full-width-field-type-link-link-color);
+      @include set-bbv-var(background-color, background-color-secondary, --paragraph-feature-full-width-field-type-link-background-color);
       &:hover {
-        @include set-bbv-var(background-color, background-color-tertiary, --general-tertiary-background-color);
+        @include set-bbv-var(background-color, background-color-tertiary, --paragraph-feature-full-width-field-type-link-hover-background-color);
       }
       letter-spacing: 0;
       text-transform: none;

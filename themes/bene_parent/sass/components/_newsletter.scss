@@ -1,8 +1,8 @@
 // Default Styles (Mobile First!)
 .external-newsletter {
   align-items: center;
-  @include set-bbv-var(background-color, color-primary-first, --newsletter-background-color);
-  @include set-bbv-var(color, font-color-tertiary, --newsletter-font-color);
+  @include set-bbv-var(background-color, color-primary-first, --external-newsletter-background-color);
+  @include set-bbv-var(color, font-color-tertiary, --external-newsletter-text-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,14 +33,14 @@
     text-align: center;
   }
   label {
-    @include set-bbv-var(color, font-color-tertiary, --newsletter-font-color);
+    @include set-bbv-var(color, font-color-tertiary, --external-newsletter-label-text-color);
   }
   p {
-    @include set-bbv-var(color, font-color-tertiary, --newsletter-font-color);
+    @include set-bbv-var(color, font-color-tertiary, --external-newsletter-p-text-color);
     margin: rem(6) 0;
   }
   a {
-    @include set-bbv-var(color, font-color-link, --general-link-color);
+    @include set-bbv-var(color, font-color-link, --external-newsletter-link-color);
     &:after {
       @include all-transition;
       content: ' →';
@@ -53,7 +53,7 @@
     }
   }
   a.button {
-    @include set-bbv-var(background-color, color-primary-second, --newsletter-button-color);
+    @include set-bbv-var(background-color, color-primary-second, --external-newsletter-link-button-background-color);
     font-size: rem(12);
     font-weight: 600;
     padding: rem(15) rem(20);
@@ -62,7 +62,7 @@
       content: none;
     }
     &:hover {
-      @include set-bbv-var(background-color, color-primary-second, --newsletter-button-hover-color);
+      @include set-bbv-var(background-color, color-primary-second, --external-newsletter-link-button-hover-background-color);
     }
   }
 }

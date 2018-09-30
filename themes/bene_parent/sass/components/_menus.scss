@@ -18,7 +18,7 @@
     width: 100%;
     z-index: 9999;
     span {
-      @include set-bbv-var(background-color, background-color-primary, --general-primary-background-color);
+      @include set-bbv-var(background-color, background-color-primary, --mobile-menu-toggle-div-span-background-color);
       display: block;
       height: 6px;
       left: 25%;
@@ -78,7 +78,7 @@
   .region-primary-nav {
     display: flex;
     flex-direction: column-reverse;
-    @include set-bbv-var(background-color, background-color-primary, --general-primary-background-color);
+    @include set-bbv-var(background-color, background-color-primary, --mobile-nav-region-primary-nav-background-color);
     left: 0;
     position: absolute;
     top: rem(101);
@@ -88,7 +88,7 @@
   .menu a {
     border-bottom: 1px solid bbv(font-color-accent); // in case css variables are not supported
     border-bottom: 1px solid var(--general-font-accent-color);
-    @include set-bbv-var(color, font-color-link, --general-link-color);
+    @include set-bbv-var(color, font-color-link, --mobile-nav-menu-link-color);
     display: inline-block;
     font-size: rem(18);
     font-weight: 600;
@@ -108,7 +108,7 @@
       width: rem(9);
     }
     &.is-active {
-      @include set-bbv-var(color, font-color-hover-link, --general-link-hover-color);
+      @include set-bbv-var(color, font-color-hover-link, --mobile-nav-menu-link-active-color);
     }
   }
 }
@@ -122,11 +122,11 @@
     }
   }
   &:last-child a {
-    @include set-bbv-var(background-color, background-color-secondary, --general-secondary-background-color);
-    @include set-bbv-var(color, font-color-primary, --general-font-primary-color);
+    @include set-bbv-var(background-color, background-color-secondary, --mobile-nav-menu-li-last-child-link-background-color);
+    @include set-bbv-var(color, font-color-primary, --mobile-nav-menu-li-last-child-link-text-color);
     font-weight: 600;
     &.is-active {
-      @include set-bbv-var(color, font-color-accent, --general-font-accent-color);
+      @include set-bbv-var(color, font-color-accent, --mobile-nav-menu-li-last-child-link-active-text-color);
     }
   }
 }
@@ -156,18 +156,18 @@
   }
   .desktop-nav .menu--utility .menu-item {
     a {
-      @include set-bbv-var(color, font-color-link, --general-link-color);
+      @include set-bbv-var(color, font-color-link, --desktop-nav-menu-utility-menu-item-link-color);
       font-size: rem(14);
       &:hover, &:focus, &.is-active {
-        @include set-bbv-var(color, font-color-hover-link, --general-link-hover-color);
+        @include set-bbv-var(color, font-color-hover-link, --desktop-nav-menu-utility-menu-item-link-hover-color);
       }
     }
     &:last-child a {
       @include button;
-      @include set-bbv-var(color, font-color-accent, --general-font-accent-color);
-      @include set-bbv-var(background-color, background-color-tertiary, --general-tertiary-background-color);
+      @include set-bbv-var(color, font-color-accent, --desktop-nav-menu-utility-menu-item-last-child-link-text-color);
+      @include set-bbv-var(background-color, background-color-tertiary, --desktop-nav-menu-utility-menu-item-last-child-link-background-color);
       &:hover {
-        @include set-bbv-var(background-color, background-color-secondary, --general-secondary-background-color);
+        @include set-bbv-var(background-color, background-color-secondary, --desktop-nav-menu-utility-menu-item-last-child-link-hover-background-color);
       }
       font-size: rem(12);
       font-weight: 700;
@@ -178,12 +178,12 @@
   }
   .desktop-nav .menu--main .menu-item {
     a {
-      @include set-bbv-var(color, font-color-tertiary, --general-font-tertiary-color);
+      @include set-bbv-var(color, font-color-tertiary, --desktop-nav-main-menu-item-link-text-color);
       font-weight: 700;
       letter-spacing: rem(0.5);
       text-transform: uppercase;
       &:hover, &:focus, &.is-active {
-        @include set-bbv-var(color, font-color-hover-link, --general-link-hover-color);
+        @include set-bbv-var(color, font-color-hover-link, --desktop-nav-main-menu-item-link-hover-focus-active-text-color);
       }
       &.is-active {
         cursor: default;

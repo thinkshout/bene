@@ -1,12 +1,12 @@
 .block-bene-home-page-feature-block {
-  @include set-bbv-var(color, font-color-secondary, --hero-font-color);
+  @include set-bbv-var(color, font-color-secondary, --block-bene-home-page-feature-block-text-color);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  @include set-bbv-var(text-align, hero-alignment, --home_hero-bene-home-page-feature-block-text-align);
+  @include set-bbv-var(text-align, hero-alignment, --block-bene-home-page-feature-block-text-align);
   padding: 10rem 1rem;
-  @include set-bbv-var(background-color, background-color-primary, --hero-block-background-color);
+  @include set-bbv-var(background-color, background-color-primary, --block-bene-home-page-feature-block-background-color);
 
   @include mq(mobile) {
     background-size: 100%;
@@ -32,7 +32,7 @@
   }
 
   .field--name-bene-title {
-    @include set-bbv-var(color, font-color-secondary, --hero-font-color);
+    @include set-bbv-var(color, font-color-secondary, --block-bene-home-page-feature-block-title-text-color);
     font-size: rem(48);
     margin: 0 auto 2rem;
     max-width: rem(900);
@@ -52,15 +52,15 @@
       border: rem(2) solid bbv(font-color-secondary); // in case css variables are not supported
       border: rem(2) solid var(--hero-button-border-color);
       border-radius: 0;
-      @include set-bbv-var(color, font-color-secondary, --hero-button-font-color);
+      @include set-bbv-var(color, font-color-secondary, --block-bene-home-page-feature-block-title-link-text-color);
       padding: 1rem 2rem;
       font-size: rem(14);
       @include font-style('bold');
       text-transform: uppercase;
 
       &:hover {
-        @include set-bbv-var(color, font-color-secondary, --hero-button-font-hover-color);
-        @include set-bbv-var(background-color, background-color-primary, --hero-button-background-hover-color);
+        @include set-bbv-var(color, font-color-secondary, --block-bene-home-page-feature-block-link-text-hover-color);
+        @include set-bbv-var(background-color, background-color-primary, --block-bene-home-page-feature-block-link-text-hover-background-color);
       }
     }
 

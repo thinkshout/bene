@@ -1,8 +1,8 @@
 // Style the dropdown
 .nice-select {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  @include set-bbv-var(background-color, background-color-secondary, --general-secondary-background-color);
-  @include set-bbv-var(border-radius, preferred-border-radius, --drop_down-border-radius);
+  @include set-bbv-var(background-color, background-color-secondary, --nice-select-background-color);
+  @include set-bbv-var(border-radius, preferred-border-radius, --nice-select-border-radius);
   border: none;
   box-sizing: border-box;
   clear: both;
@@ -10,10 +10,10 @@
   display: block;
   float: left;
   font-family: inherit;
-  @include set-bbv-var(font-size, font-size-base-small, --drop_down-font-size);
-  @include set-bbv-var(font-weight, font-weight-bold, --drop_down-font-weight);
-  @include set-bbv-var(height, input-height, --drop_down-height);
-  @include set-bbv-var(line-height, input-height - 2px, --drop_down-line-height);
+  @include set-bbv-var(font-size, font-size-base-small, --nice-select-font-size);
+  @include set-bbv-var(font-weight, font-weight-bold, --nice-select-font-weight);
+  @include set-bbv-var(height, input-height, --nice-select-height);
+  @include set-bbv-var(line-height, input-height - 2px, --nice-select-line-height);
   outline: none;
   padding-left: 18px;
   padding-right: 30px;
@@ -24,7 +24,7 @@
   white-space: nowrap;
   width: 100%;
   .current {
-    @include set-bbv-var(color, font-color-accent, --general-font-accent-color);
+    @include set-bbv-var(color, font-color-accent, --nice-select-current-text-color);
   }
 
   // Arrow
@@ -57,11 +57,11 @@
     }
   }
   &.disabled {
-    @include set-bbv-var(border-color, disabled-border-color, --drop_down-disabled-border-color);
-    @include set-bbv-var(color, font-color-secondary, --general-font-secondary-color);
+    @include set-bbv-var(border-color, disabled-border-color, --nice-select-disabled-border-color);
+    @include set-bbv-var(color, font-color-secondary, --nice-select-disabled-text-color);
     pointer-events: none;
     &:after {
-      @include set-bbv-var(border-color, disabled-border-color, --drop_down-disabled-after-border-color);
+      @include set-bbv-var(border-color, disabled-border-color, --nice-select-disabled-after-border-color);
     }
   }
 
@@ -81,25 +81,25 @@
     }
   }
   &.small {
-    @include set-bbv-var(font-size, font-size-base-x-small, --drop_down-small-font-size);
-    @include set-bbv-var(height, input-height-small, --drop_down-small-height);
-    @include set-bbv-var(line-height, input-height-small - 2px, --drop_down-small-line-height);
+    @include set-bbv-var(font-size, font-size-base-x-small, --nice-select-small-font-size);
+    @include set-bbv-var(height, input-height-small, --nice-select-small-height);
+    @include set-bbv-var(line-height, input-height-small - 2px, --nice-select-small-line-height);
     &:after {
       height: 4px;
       width: 4px;
     }
     .option {
-      @include set-bbv-var(line-height, input-height-small - 2px, --drop_down-small-line-height-option);
-      @include set-bbv-var(min-height, input-height-small - 2px, --drop_down-small-min-height-option);
+      @include set-bbv-var(line-height, input-height-small - 2px, --nice-select-small-option-line-height);
+      @include set-bbv-var(min-height, input-height-small - 2px, --nice-select-small-option-min-height);
     }
   }
 
   // List and options
   .list {
     background-color: #fff;
-    @include set-bbv-var(border-radius, preferred-border-radius, --drop_down-list-border-radius);
+    @include set-bbv-var(border-radius, preferred-border-radius, --nice-select-list-border-radius);
     // box-shadow: 0 0 0 1px shadow-transparent-color; // in case css variables are not supported
-    box-shadow: 0 0 0 1px var(--drop_down-list-shadow);
+    box-shadow: 0 0 0 1px var(--nice-select-list-shadow);
     box-sizing: border-box;
     margin-top: 0;
     opacity: 0;
@@ -110,7 +110,7 @@
     top: 100%; left: 0;
     transform-origin: 50% 0;
     transform: scale(.75) translateY(- input-height / 2); // in case css variables are not supported
-    transform: scale(.75) translateY(- var(--drop_down-list-transform-move-y));
+    transform: scale(.75) translateY(- var(--nice-select-list-transform-move-y));
     transition: all .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
     width: 100%;
     z-index: 9;
@@ -121,9 +121,9 @@
   .option {
     cursor: pointer;
     font-weight: 400;
-    @include set-bbv-var(line-height, input-height - 2px, --drop_down-option-line-height);
+    @include set-bbv-var(line-height, input-height - 2px, --nice-select-option-line-height);
     list-style: none;
-    @include set-bbv-var(min-height, input-height - 2px, --drop_down-option-min-height);
+    @include set-bbv-var(min-height, input-height - 2px, --nice-select-option-min-height);
     outline: none;
     padding-left: 18px;
     padding-right: 29px;
@@ -131,14 +131,14 @@
     transition: all 0.2s;
     width: 100%;
     &:hover, &.focus, &.selected.focus {
-      @include set-bbv-var(background-color, background-color-hover, --drop_down-option-hover-color);
+      @include set-bbv-var(background-color, background-color-hover, --nice-select-option-hover-focus-selected-background-color);
     }
     &.selected {
       font-weight: bold;
     }
     &.disabled {
       background-color: transparent;
-      @include set-bbv-var(color, disabled-color, --drop_down-option-disabled-color);
+      @include set-bbv-var(color, disabled-color, --nice-select-option-disabled-text-color);
       cursor: default;
     }
   }

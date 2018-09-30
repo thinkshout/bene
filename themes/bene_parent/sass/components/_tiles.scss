@@ -1,5 +1,5 @@
 .paragraph--type--tiles {
-  @include set-bbv-var(background-color, color-primary-first, --tile-background-color);
+  @include set-bbv-var(background-color, color-primary-first, --paragraph-tile-background-color);
   &> .field--name-field-title {
     font-size: rem(24);
     font-weight: 400;
@@ -46,7 +46,7 @@
 
       .field--name-field-image,
       .bg-header {
-        @include set-bbv-var(background-color, background-color-secondary, --general-secondary-background-color);
+        @include set-bbv-var(background-color, background-color-secondary, --paragraph-tile-field-name-field-tiles-item-image-bg-header-background-color);
         font-size: 0;
         max-height: rem(228);
         max-width: rem(380);
@@ -57,7 +57,7 @@
       @include mq(desktop) {
         .field--name-field-image,
         .bg-header {
-          @include set-bbv-var(background-color, background-color-secondary, --general-secondary-background-color);
+          @include set-bbv-var(background-color, background-color-secondary, --paragraph-tile-field-name-field-tiles-item-desktop-background-color);
           height: 18.36vw;
           width: 30.6vw;
         }
@@ -70,7 +70,7 @@
       }
 
       .field--name-field-text p {
-        @include set-bbv-var(color, color-primary-second, --tile-paragraph-color);
+        @include set-bbv-var(color, color-primary-second, --paragraph-tile-field-name-field-tiles-item-field-text-p-color);
         line-height: rem(24);
         margin-bottom: rem(12);
         margin-top: rem(12);

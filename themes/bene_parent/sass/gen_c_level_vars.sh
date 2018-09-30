@@ -1,5 +1,22 @@
 #! /bin/bash
 
+echo "/*"
+echo Generated content - do not change! Changes will be overwritten!
+echo
+echo To make changes to these css variables find the one you want to change and go to
+echo "it's declaration in one of the component files, for example in _admin.scss you will"
+echo "find several calls to mixin @include set-bbv-var(...). these provide the input to"
+echo this script.
+echo
+echo The purpose of these variables is to provide the ability to override them
+echo in bene child themes. This is important because the b-level or bene-buildup-variables
+echo are used in multiple places. These provide the ability to fine-tune a child theme.
+echo
+echo This file should be named sass/config/_05.cssvars.scss
+echo "*/"
+
+echo :root {
+
 # This script reads through all the files in the components directory
 # picks out the lines that contain a call to the mixin set-bbv-var
 #
@@ -24,12 +41,12 @@ for x in $(ls ./components/*.scss);
   #          @include set-bbv-var(border-color, disabled-border-color, --drop_down-disabled-after-border-color);
 
   # For lines that look like a path and filename, output two slashes and a space followed
-  # by everything after the last slash underscore from the input. FYI \'$'\n'' means newline - we are using use
+  # by everything after the last slash underscore from the input. note: \'$'\n'' means newline - we are using use
   # an ANSI C-quoted string ($'...') to splice in the newline $'\n'
   # then removing the filename extension (everything after the last dot) and adding a newline
   do echo $x | \
   sed 's/.*\/_/\'$'\n''\/\/ /' | \
-  sed 's/\.[^.]*$/\'$'\n''/';
+  sed 's/\.[^.]*$//';
 
   # for lines that have set-bbv-var in them like this
   #
@@ -48,7 +65,7 @@ for x in $(ls ./components/*.scss);
   #
   # If we get one of these we want to change it to
   #
-  # --drop_down-small-line-height: calc(var(--input-height-small) - 2px);
+  # --drop_down-small-line-height: calc( var(--input-height-small) - 2px);
   #
   # note: the square brackets below contain both a space and a tab but for some reason \s was not working.
   cat $x | grep 'set-bbv-var' | \
@@ -57,3 +74,4 @@ for x in $(ls ./components/*.scss);
 
 done
 
+echo }

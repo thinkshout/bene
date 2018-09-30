@@ -139,7 +139,28 @@
   width: 100%;
 }
 
+
+// Important instructions for using this mixin:
+//
 // Sets a CSS variable and a fallback at the same time
+//
+// $property - the property name. For example background-color or font-size
+//
+// $bbv-value - these values can be found in _01.vars.css in the map $bene-buildup-variables
+//              for example color-primary-first
+//
+// $var-value - this is a valid css variable name beginning with '--'
+//   Make up a name for the var-value that will make it easy for developers
+//   to find while debugging. (For example if you are using this variable
+//   setting in a class called mobile-menu-toggle which contains a div which
+//   contains a span and it is setting the background-color you might consider
+//   calling it --mobile-menu-toggle-div-span-background-color. Be sure to
+//   include the two dashes on the beginning because it must be a valid css
+//   variable name.)
+//
+// To generate c-level variables run the script sass/gen_c_level_vars.sh and
+// save the output in _05.cssvars.scss
+//
 @mixin set-bbv-var($property, $bbv-value, $var-value) {
   #{$property}: #{bbv($bbv-value)};
   #{$property}: var($var-value);

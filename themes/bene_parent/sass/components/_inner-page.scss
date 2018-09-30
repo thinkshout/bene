@@ -10,7 +10,7 @@
   }
 
   h2 {
-    @include set-bbv-var(color,font-color-primary, --general-font-primary-color);
+    @include set-bbv-var(color, font-color-primary, --page-node-type-page-block-system-main-block-h2-text-color);
     font-style: normal;
     font-weight: normal;
     font-size: medium;
@@ -22,22 +22,22 @@
   }
 
   h3 {
-    @include set-bbv-var(color, font-color-secondary, --general-font-secondary-color);
+    @include set-bbv-var(color, font-color-secondary, --page-node-type-page-block-system-main-block-h3-text-color);
     font-size: medium;
     font-weight: normal;
     line-height: normal;
     margin-bottom: 0;
 
     a {
-      @include set-bbv-var(color, font-color-link, --general-link-color);
+      @include set-bbv-var(color, font-color-link, --page-node-type-page-block-system-main-block-h3-link-color);
     }
     a:hover {
-      @include set-bbv-var(color, font-color-hover-link, --general-link-hover-color);
+      @include set-bbv-var(color, font-color-hover-link, --page-node-type-page-block-system-main-block-h3-link-hover-color);
     }
   }
 
   p {
-    @include set-bbv-var(color, font-color-primary, --general-font-primary-color);
+    @include set-bbv-var(color, font-color-primary, --page-node-type-page-block-system-main-block-p-text-color);
     font-size: rem(18);
     font-weight: normal;
     line-height: normal;
@@ -53,7 +53,7 @@
 
   blockquote {
     p {
-      @include set-bbv-var(color, font-color-tertiary, --general-font-tertiary-color);
+      @include set-bbv-var(color, font-color-tertiary, --page-node-type-page-block-system-main-block-blockquote-p-text-color);
       font-size: rem(24);
       float: none;
       font-style: normal;

@@ -2,16 +2,16 @@
 .block-bene-footer-block {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  @include set-bbv-var(background-color, background-color-primary, --footer-block-background-color);
+  @include set-bbv-var(background-color, background-color-primary, --block-bene-footer-background-color);
 
 
   .menu {
     a {
-      @include set-bbv-var(color, color-text-primary, --footer-menu-link-color);
-      @include set-bbv-var(font-size, font-size-base-small, --bene_footer_block-menu-font-size);
+      @include set-bbv-var(color, color-text-primary, --block-bene-footer-menu-link-color);
+      @include set-bbv-var(font-size, font-size-base-small, --block-bene-footer-menu-link-font-size);
       font-weight: 600;
       &:hover, &:focus, &.is-active {
-        @include set-bbv-var(color, color-primary-first, --footer-menu-link-hover-color);
+        @include set-bbv-var(color, color-primary-first, --block-bene-footer-menu-link-hover-focus-active-color);
       }
     }
 
@@ -20,9 +20,9 @@
 
       a {
         @include font-style('bold'); // font-menu-primary
-        @include set-bbv-var(font-size, font-size-base, --bene_footer_block-menu-item-link);
+        @include set-bbv-var(font-size, font-size-base, --block-bene-footer-menu-item-link-font-size);
         &:hover, &:focus, &.is-active {
-          @include set-bbv-var(color, font-color-link, --footer-menu-link-color);
+          @include set-bbv-var(color, font-color-link, --block-bene-footer-menu-item-link-color);
         }
       }
     }
@@ -33,19 +33,19 @@
   .contact-links .additional-contact p,
   .contact-links .additional-footer p {
     @include font-style('regular');
-    @include set-bbv-var(font-size, font-size-base-small, --bene_footer_block-menu-item-contact-links-additional);
+    @include set-bbv-var(font-size, font-size-base-small, --block-bene-footer-copyright-contact-links-font-size);
     line-height: rem(25);
   }
 
   .contact-links {
-    @include set-bbv-var(font-size, font-size-base-x-small, --bene_footer_block-menu-item-contact-links);
+    @include set-bbv-var(font-size, font-size-base-x-small, --block-bene-footer-contact-links-font-size);
     .address {
       white-space: pre-line;
     }
     .phone, .email, .additional-contact {
       display: block;
       p {
-        @include set-bbv-var(font-size, font-size-base-x-small, --bene_footer_block-phone-p-fontsize);
+        @include set-bbv-var(font-size, font-size-base-x-small, --block-bene-footer-contact-links-phone-email-additional-contact-p-fontsize);
         margin: rem(5) 0;
       }
     }
@@ -60,7 +60,7 @@
 
   .social-links {
     a {
-      @include set-bbv-var(background-color, background-color-secondary, --footer-social-background-color);
+      @include set-bbv-var(background-color, background-color-secondary, --block-bene-footer-social-links-a-background-color);
       background-position: center center;
       background-repeat: no-repeat;
       background-size: 62% 62%;
@@ -68,7 +68,7 @@
       border: rem(1) solid var(--footer-social-border-color);
       border-radius: 50%;
       display: inline-block;
-      @include set-bbv-var(height, social-media-icon-size, --footer-social-icon-size);
+      @include set-bbv-var(height, social-media-icon-size, --block-bene-footer-social-links-a-height);
       margin-bottom: rem(10);
       margin-left: rem(10);
       padding: 1rem;
@@ -76,7 +76,7 @@
       text-indent: -9999px;
       @include set-bbv-var(width, social-media-icon-size, --footer-social-icon-size);
       &:hover, &:focus, &:active {
-        @include set-bbv-var(background-color, background-color-tertiary, --footer-social-hover-background-color);
+        @include set-bbv-var(background-color, background-color-tertiary, --block-bene-footer-social-links-a-hover-focus-active-background-color);
       }
     }
     .facebook { background-image:  url('../images/svgs/facebook-f.svg'); }

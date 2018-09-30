@@ -1,9 +1,8 @@
 .block-hero {
   position: relative;
-  @include set-bbv-var(background-color, background-color-tertiary, --general-tertiary-background-color);
 
   h1 {
-    @include set-bbv-var(font-size, font-size-medium, --hero-heading-font-size);
+    @include set-bbv-var(font-size, font-size-medium, --block-hero-h1-font-size);
     padding: 0 1rem;
     text-shadow: none;
     text-transform: none;
@@ -12,18 +11,18 @@
     @include mq(mobile) {
       flex: 0 1 100%;
       text-align: left;
-      @include set-bbv-var(font-size, font-size-medium-small, --hero-heading-font-size-mobile);
+      @include set-bbv-var(font-size, font-size-medium-small, --block-hero-h1-mobile-font-size);
     }
 
     @include mq(tablet) {
       flex: inherit;
-      @include set-bbv-var(font-size, font-size-medium, --hero-heading-font-size);
+      @include set-bbv-var(font-size, font-size-medium, --block-hero-h1-tablet-font-size);
     }
 
 
     @include mq(desktop) {
       flex: inherit;
-      @include set-bbv-var(font-size, font-size-medium, --hero-heading-font-size);
+      @include set-bbv-var(font-size, font-size-medium, --block-hero-h1-desktop-font-size);
     }
 
   }
