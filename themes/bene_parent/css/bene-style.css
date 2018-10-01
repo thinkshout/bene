@@ -529,8 +529,9 @@ This file should be named sass/config/_05.cssvars.scss
   --block-bene-footer-contact-links-font-size: var(--font-size-base-x-small);
   --block-bene-footer-contact-links-phone-email-additional-contact-p-fontsize: var(--font-size-base-x-small);
   --block-bene-footer-social-links-a-background-color: var(--background-color-secondary);
+  --block-bene-footer-social-links-a-border-color: rem(1) solid var(--background-color-secondary);
   --block-bene-footer-social-links-a-height: var(--social-media-icon-size);
-  --footer-social-icon-size: var(--social-media-icon-size);
+  --block-bene-footer-social-links-a-width: var(--social-media-icon-size);
   --block-bene-footer-social-links-a-hover-focus-active-background-color: var(--background-color-tertiary);
   --form-input-textarea-background-color: var(--color-primary-first);
   --form-input-textarea-font-color: var(--color-primary-first);
@@ -538,10 +539,13 @@ This file should be named sass/config/_05.cssvars.scss
   --form-input-textarea-placeholder-color: var(--color-primary-first);
   --form-input-textarea-placeholder-color: var(--color-primary-first);
   --form-input-textarea-placeholder-color: var(--color-primary-first);
+  --form-input-textarea-focus-outline-color: 1px solid var(--color-primary-first);
   --form-js-checkbox-label-text-color: var(--color-primary-first);
+  --form-js-checkbox-label-before-border-color: 1px solid var(--color-primary-first);
   --form-js-checkbox-input-checkbox-checked-label-before-color: var(--color-primary-first);
   --form-label-text-color: var(--color-primary-first);
   --form-input-focus-outline-color: var(--color-primary-first);
+  --form-input-textarea-border-color: 1px solid var(--color-primary-first);
   --form-input-textarea-text-color: var(--color-primary-first);
   --form-input-textarea-placeholder-text-color: var(--color-primary-first);
   --form-input-textarea-placeholder-text-color: var(--color-primary-first);
@@ -562,6 +566,7 @@ This file should be named sass/config/_05.cssvars.scss
   --block-bene-home-page-feature-block-text-align: var(--hero-alignment);
   --block-bene-home-page-feature-block-background-color: var(--background-color-primary);
   --block-bene-home-page-feature-block-title-text-color: var(--font-color-secondary);
+  --block-bene-home-page-feature-block-field-bene-link-border-color: rem(2) solid var(--font-color-secondary);
   --block-bene-home-page-feature-block-title-link-text-color: var(--font-color-secondary);
   --block-bene-home-page-feature-block-link-text-hover-color: var(--font-color-secondary);
   --block-bene-home-page-feature-block-link-text-hover-background-color: var(--background-color-primary);
@@ -1235,7 +1240,7 @@ body.user-logged-in .region.region-content {
     background-repeat: no-repeat;
     background-size: 62% 62%;
     border: 0.0625rem solid #50CFE3;
-    border: 0.0625rem solid var(--footer-social-border-color);
+    border: 0.0625rem solid var(--block-bene-footer-social-links-a-border-color);
     border-radius: 50%;
     display: inline-block;
     height: 2.25rem;
@@ -1246,7 +1251,7 @@ body.user-logged-in .region.region-content {
     position: relative;
     text-indent: -9999px;
     width: 2.25rem;
-    width: var(--footer-social-icon-size); }
+    width: var(--block-bene-footer-social-links-a-width); }
     .block-bene-footer-block .social-links a:hover, .block-bene-footer-block .social-links a:focus, .block-bene-footer-block .social-links a:active {
       background-color: #129FB5;
       background-color: var(--block-bene-footer-social-links-a-hover-focus-active-background-color); }
@@ -1298,7 +1303,7 @@ input[type="search"], textarea {
     color: var(--form-input-textarea-placeholder-color); }
   input[type="search"]:focus, textarea:focus {
     outline: 1px solid #50CFE3;
-    outline: 1px solid var(--form-input-outline-color); }
+    outline: 1px solid var(--form-input-textarea-focus-outline-color); }
 
 .js-facets-checkbox-links input,
 .js-form-type-checkbox input {
@@ -1324,7 +1329,7 @@ input[type="search"], textarea {
     transition: color 0.3s linear, background-color 0.3s linear;
     border-radius: 0.0625rem;
     border: 1px solid #50CFE3;
-    border: 1px solid var(--form-label-before-color);
+    border: 1px solid var(--form-js-checkbox-label-before-border-color);
     color: transparent;
     content: "✓";
     display: inline-block;
@@ -1553,7 +1558,7 @@ input[type='submit'] {
     z-index: 1; }
     .block-bene-home-page-feature-block .field--name-bene-link a {
       border: 0.125rem solid #FFF;
-      border: 0.125rem solid var(--hero-button-border-color);
+      border: 0.125rem solid var(--block-bene-home-page-feature-block-field-bene-link-border-color);
       border-radius: 0;
       color: #FFF;
       color: var(--block-bene-home-page-feature-block-title-link-text-color);

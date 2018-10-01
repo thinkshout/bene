@@ -161,7 +161,27 @@
 // To generate c-level variables run the script sass/gen_c_level_vars.sh and
 // save the output in _05.cssvars.scss
 //
+// This mixin takes input like this
+//   @include set-bbv-var(color, font-color-primary, --paragraph-feature-full-width-field-text-color);
+// and produces output like this
+//   color: bbv(font-color-primary);
+//   color: var(--paragraph-feature-full-width-field-text-color);
 @mixin set-bbv-var($property, $bbv-value, $var-value) {
-  #{$property}: #{bbv($bbv-value)};
+  #{$property}: #{bbv($bbv-value)}; // in case css variables are not supported
   #{$property}: var($var-value);
+}
+
+// Same arguments as the mixin above plus
+//
+// $arg - this value is to hold any other arguments that come before the one that
+//        holds the variable. For example the border width (rem(1)) and style (solid).
+//
+// This mixin is similar to the one above but takes input like this
+//   @include set-bbv-with-arg-before-var(border, rem(1) solid, background-color-secondary, --block-bene-footer-social-links-a-border-color);
+// and produces output like this
+//   border: rem(1) solid bbv(background-color-secondary);
+//   border: rem(1) solid var(--block-bene-footer-social-links-a-border-color);
+@mixin set-bbv-with-arg-before-var($property, $arg, $bbv-value, $var-value) {
+  #{$property}: $arg #{bbv($bbv-value)};  // in case css variables are not supported
+  #{$property}: $arg var($var-value);
 }

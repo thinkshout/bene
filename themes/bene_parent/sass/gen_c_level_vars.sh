@@ -52,14 +52,30 @@ for x in $(ls ./components/*.scss);
   #
   #       @include set-bbv-var(font-size, font-size-x-small, --bene_intro_text-block-system-main-block);
   #
-  # edit them so that they output
+  # edit them so they output
   #
   # --bene_intro_text-block-system-main-block: var(--font-size-x-small);
   #
-  # because this sets the new c-level variable to the value of the b-level variable. Then use that output
-  # to create the c-level css variables.
+  # and for lines that have set-bbv-with-arg-before-var like this
   #
-  # And finally we look at the few lines that contain calculations. For example we might get a line that looks like this
+  #      @include set-bbv-with-arg-before-var(border, rem(1) solid, background-color-secondary, --footer-social-border-color);
+  #
+  # edit them so they output
+  #
+  # --footer-social-border-color: rem(1) solid var(--background-color-secondary);
+  #
+  # because this sets the new c-level variable to the value of the b-level variable in the correct location.
+  # Use that output to create the c-level css variables.
+  #
+  cat $x | \
+  grep 'set-bbv-var\|set-bbv-with-arg-before-var' | \
+
+  # This next line looks for only those lines with @include set-bbv-var and outputs the correct setting of a css var.
+  # note: the square brackets below contain both a space and a tab but for some reason \s was not working.
+  #
+  sed 's/ *@include set-bbv-var(\(.*\),[    ]*\(.*\),[  ]*\(.*\));/\3: var(--\2);/g' | \
+
+  # Now look at the few lines that contain calculations. For example we might get a line that looks like this
   #
   # --drop_down-small-line-height: var(--input-height-small - 2px);
   #
@@ -67,10 +83,21 @@ for x in $(ls ./components/*.scss);
   #
   # --drop_down-small-line-height: calc( var(--input-height-small) - 2px);
   #
+  sed 's/\([^     ]*\):[    ]*var(\(.*\)--\([^    ]*\) [    ]*\(.*\));/\1: calc(\2 var(--\3) \4);/' | \
+
+  # This next line looks for only those lines with @include set-bbv-with-arg-before-var and outputs the correct setting
+  # of a css var.
   # note: the square brackets below contain both a space and a tab but for some reason \s was not working.
-  cat $x | grep 'set-bbv-var' | \
-  sed 's/ *@include set-bbv-var(\(.*\),[    ]*\(.*\),[  ]*\(.*\));/\3: var(--\2);/g' | \
-  sed 's/\([^     ]*\):[    ]*var(\(.*\)--\([^    ]*\) [    ]*\(.*\));/\1: calc(\2 var(--\3) \4);/';
+  #
+  # and for lines that have set-bbv-with-arg-before-var like this
+  #
+  #      @include set-bbv-with-arg-before-var(border, rem(1) solid, background-color-secondary, --footer-social-border-color);
+  #
+  # edit them so they output
+  #
+  # --footer-social-border-color: rem(1) solid var(--background-color-secondary);
+  #
+  sed 's/ *@include set-bbv-with-arg-before-var(\(.*\),[    ]*\(.*\),[    ]*\(.*\),[  ]*\(.*\));/\4: \2 var(--\3);/';
 
 done
 

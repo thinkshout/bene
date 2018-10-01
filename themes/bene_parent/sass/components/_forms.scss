@@ -25,8 +25,7 @@ input[type="search"], textarea {
     @include set-bbv-var(color, color-primary-first, --form-input-textarea-placeholder-color);
   }
   &:focus {
-    outline: 1px solid bbv(color-primary-first);
-    outline: 1px solid var(--form-input-outline-color);
+    @include set-bbv-with-arg-before-var(outline, 1px solid, color-primary-first, --form-input-textarea-focus-outline-color);
   }
 }
 
@@ -50,8 +49,7 @@ input[type="search"], textarea {
     &::before {
       @include default-transition;
       border-radius: rem(1);
-      border: 1px solid bbv(color-primary-first);
-      border: 1px solid var(--form-label-before-color);
+      @include set-bbv-with-arg-before-var(border, 1px solid, color-primary-first, --form-js-checkbox-label-before-border-color);
       color: transparent;
       content: "✓";
       display: inline-block;
@@ -95,8 +93,7 @@ textarea {
   -webkit-appearance: none;
   background-color: bbv(bene-main-white);
   border-radius: rem(3);
-  border: 1px solid bbv(color-primary-first);
-  border: 1px solid var(--form-input-textarea-border-color);
+  @include set-bbv-with-arg-before-var(border, 1px solid, color-primary-first, --form-input-textarea-border-color);
   box-sizing: border-box;
   @include set-bbv-var(color, color-primary-first, --form-input-textarea-text-color);
   font-size: rem(16);

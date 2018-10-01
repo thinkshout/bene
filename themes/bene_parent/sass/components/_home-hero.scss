@@ -49,8 +49,7 @@
     position: relative;
     z-index: 1;
     a {
-      border: rem(2) solid bbv(font-color-secondary); // in case css variables are not supported
-      border: rem(2) solid var(--hero-button-border-color);
+      @include set-bbv-with-arg-before-var(border, rem(2) solid, font-color-secondary, --block-bene-home-page-feature-block-field-bene-link-border-color);
       border-radius: 0;
       @include set-bbv-var(color, font-color-secondary, --block-bene-home-page-feature-block-title-link-text-color);
       padding: 1rem 2rem;

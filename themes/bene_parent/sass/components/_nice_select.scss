@@ -109,6 +109,7 @@
     position: absolute;
     top: 100%; left: 0;
     transform-origin: 50% 0;
+    //include set-bbv-with-arg-before-var(transform, scale(.75), translateY(- input-height / 2), translateY(- var(--nice-select-list-transform-move-y) / 2));
     transform: scale(.75) translateY(- input-height / 2); // in case css variables are not supported
     transform: scale(.75) translateY(- var(--nice-select-list-transform-move-y));
     transition: all .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;

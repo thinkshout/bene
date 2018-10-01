@@ -100,13 +100,16 @@ $bene-buildup-variables: (
 
 :root {
   // place each item in bene-buildup-variables here so they are defined in root scope
-  // output of this loop will be:
+  // output of this loop will be (just a brief sampling):
   // ...
-  // --color-primary-first: #129FB5;
-  // --color-primary-first: #094e58;
-  // --color-primary-first-lighten20: #41d5ec;
-  // --background-color-secondary: #50CFE3;
-  // --background-color-secondary-darken20: #1c9db1;
+  //  --color-primary-first: #50CFE3;
+  //  --color-secondary-third: #979797;
+  //  --background-color-secondary: #50CFE3;
+  //  --background-color-hover: #D8D8D8;
+  //  --disabled-color: #979797;
+  //  --button-size-large: 3.5rem;
+  //  --font-family-secondary: 'Open Sans', sans-serif;
+  //  --font-size-large: 3.8125rem;
   // ...
   @each $name, $color-num in $bene-buildup-variables {
     --#{$name}: #{$color-num};

@@ -64,8 +64,7 @@
       background-position: center center;
       background-repeat: no-repeat;
       background-size: 62% 62%;
-      border: rem(1) solid bbv(background-color-secondary);  // in case css variables are not supported
-      border: rem(1) solid var(--footer-social-border-color);
+      @include set-bbv-with-arg-before-var(border, rem(1) solid, background-color-secondary, --block-bene-footer-social-links-a-border-color);
       border-radius: 50%;
       display: inline-block;
       @include set-bbv-var(height, social-media-icon-size, --block-bene-footer-social-links-a-height);
@@ -74,7 +73,7 @@
       padding: 1rem;
       position: relative;
       text-indent: -9999px;
-      @include set-bbv-var(width, social-media-icon-size, --footer-social-icon-size);
+      @include set-bbv-var(width, social-media-icon-size, --block-bene-footer-social-links-a-width);
       &:hover, &:focus, &:active {
         @include set-bbv-var(background-color, background-color-tertiary, --block-bene-footer-social-links-a-hover-focus-active-background-color);
       }

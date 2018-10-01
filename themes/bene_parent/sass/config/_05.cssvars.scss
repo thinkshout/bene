@@ -59,8 +59,9 @@ This file should be named sass/config/_05.cssvars.scss
 --block-bene-footer-contact-links-font-size: var(--font-size-base-x-small);
 --block-bene-footer-contact-links-phone-email-additional-contact-p-fontsize: var(--font-size-base-x-small);
 --block-bene-footer-social-links-a-background-color: var(--background-color-secondary);
+--block-bene-footer-social-links-a-border-color: rem(1) solid var(--background-color-secondary);
 --block-bene-footer-social-links-a-height: var(--social-media-icon-size);
---footer-social-icon-size: var(--social-media-icon-size);
+--block-bene-footer-social-links-a-width: var(--social-media-icon-size);
 --block-bene-footer-social-links-a-hover-focus-active-background-color: var(--background-color-tertiary);
 
 // forms
@@ -70,10 +71,13 @@ This file should be named sass/config/_05.cssvars.scss
 --form-input-textarea-placeholder-color: var(--color-primary-first);
 --form-input-textarea-placeholder-color: var(--color-primary-first);
 --form-input-textarea-placeholder-color: var(--color-primary-first);
+--form-input-textarea-focus-outline-color: 1px solid var(--color-primary-first);
 --form-js-checkbox-label-text-color: var(--color-primary-first);
+--form-js-checkbox-label-before-border-color: 1px solid var(--color-primary-first);
 --form-js-checkbox-input-checkbox-checked-label-before-color: var(--color-primary-first);
 --form-label-text-color: var(--color-primary-first);
 --form-input-focus-outline-color: var(--color-primary-first);
+--form-input-textarea-border-color: 1px solid var(--color-primary-first);
 --form-input-textarea-text-color: var(--color-primary-first);
 --form-input-textarea-placeholder-text-color: var(--color-primary-first);
 --form-input-textarea-placeholder-text-color: var(--color-primary-first);
@@ -98,6 +102,7 @@ This file should be named sass/config/_05.cssvars.scss
 --block-bene-home-page-feature-block-text-align: var(--hero-alignment);
 --block-bene-home-page-feature-block-background-color: var(--background-color-primary);
 --block-bene-home-page-feature-block-title-text-color: var(--font-color-secondary);
+--block-bene-home-page-feature-block-field-bene-link-border-color: rem(2) solid var(--font-color-secondary);
 --block-bene-home-page-feature-block-title-link-text-color: var(--font-color-secondary);
 --block-bene-home-page-feature-block-link-text-hover-color: var(--font-color-secondary);
 --block-bene-home-page-feature-block-link-text-hover-background-color: var(--background-color-primary);
@@ -163,6 +168,7 @@ This file should be named sass/config/_05.cssvars.scss
 --nice-select-small-option-line-height: calc( var(--input-height-small) - 2px);
 --nice-select-small-option-min-height: calc( var(--input-height-small) - 2px);
 --nice-select-list-border-radius: var(--preferred-border-radius);
+    //include set-bbv-with-arg-before-var(transform, scale(.75), translateY(- input-height / 2), translateY(- var(--nice-select-list-transform-move-y) / 2));
 --nice-select-option-line-height: calc( var(--input-height) - 2px);
 --nice-select-option-min-height: calc( var(--input-height) - 2px);
 --nice-select-option-hover-focus-selected-background-color: var(--background-color-hover);
