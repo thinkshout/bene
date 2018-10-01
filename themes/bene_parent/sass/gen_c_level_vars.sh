@@ -6,7 +6,7 @@ echo
 echo To make changes to these css variables find the one you want to change and go to
 echo "it's declaration in one of the component files, for example in _admin.scss you will"
 echo "find several calls to mixin @include set-bbv-var(...). these provide the input to"
-echo this script.
+echo the script gen_c_level_vars.sh.
 echo
 echo The purpose of these variables is to provide the ability to override them
 echo in bene child themes. This is important because the b-level or bene-buildup-variables
@@ -31,7 +31,7 @@ echo :root {
 # > ./gen_c_level_vars.sh
 #
 
-for x in $(ls ./components/*.scss);
+for x in $(ls ./sass/components/*.scss);
 
   # input will look like each filename followed by lines from that file that include 'set-bbv-var':
   #

@@ -4,7 +4,7 @@ Generated content - do not change! Changes will be overwritten!
 To make changes to these css variables find the one you want to change and go to
 it's declaration in one of the component files, for example in _admin.scss you will
 find several calls to mixin @include set-bbv-var(...). these provide the input to
-this script.
+the script gen_c_level_vars.sh.
 
 The purpose of these variables is to provide the ability to override them
 in bene child themes. This is important because the b-level or bene-buildup-variables

@@ -16,7 +16,7 @@ body.user-logged-in .region.region-content {
     position: fixed;
     z-index: 1000;
     &:after {
-      @include set-bbv-var(background-color,background-color-secondary, --body-user-logged-in-messages-after-background-color);
+      @include set-bbv-var(background-color, background-color-secondary, --body-user-logged-in-messages-after-background-color);
       @include set-bbv-var(border-color, background-color-tertiary, --body-user-logged-in-messages-after-border-color);
       border-radius: 50%;
       box-shadow: -1px 2px 5px #77b259;
