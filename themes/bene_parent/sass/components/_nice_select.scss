@@ -10,7 +10,7 @@
   display: block;
   float: left;
   font-family: inherit;
-  @include set-bbv-var(font-size, font-size-base-small, --nice-select-font-size);
+  @include set-bbv-var(font-size, font-size-base - 2rem, --nice-select-font-size);
   @include set-bbv-var(font-weight, font-weight-bold, --nice-select-font-weight);
   @include set-bbv-var(height, input-height, --nice-select-height);
   @include set-bbv-var(line-height, input-height - 2px, --nice-select-line-height);
@@ -81,7 +81,7 @@
     }
   }
   &.small {
-    @include set-bbv-var(font-size, font-size-base-x-small, --nice-select-small-font-size);
+    @include set-bbv-var(font-size, font-size-base - 4rem, --nice-select-small-font-size);
     @include set-bbv-var(height, input-height-small, --nice-select-small-height);
     @include set-bbv-var(line-height, input-height-small - 2px, --nice-select-small-line-height);
     &:after {

@@ -32,18 +32,18 @@ This file should be named sass/config/_05.cssvars.scss
 --body-user-logged-in-block-bene-child-local-tasks-show-hide-background-color: var(--background-color-tertiary);
 
 // basic_page
---node-type-page-block-system-main-block-field-intro-font-size: var(--font-size-x-small);
+--node-type-page-block-system-main-block-field-intro-font-size: calc( var(--font-size-small) - 3rem);
 
 // block-hero
 --block-hero-h1-font-size: var(--font-size-medium);
---block-hero-h1-mobile-font-size: var(--font-size-medium-small);
+--block-hero-h1-mobile-font-size: calc( var(--font-size-medium) - 18rem);
 --block-hero-h1-tablet-font-size: var(--font-size-medium);
 --block-hero-h1-desktop-font-size: var(--font-size-medium);
 
 // event_page
---page-node-type-event-field--name-bene-event-date-range-time-font-size: var(--font-size-xx-small);
---page-node-type-event-field--name-bene-event-date-range-time-font-size-desktop: var(--font-size-x-small);
---event-main-block-bene-intro-desktop-font-size: var(--font-size-x-small);
+--page-node-type-event-field--name-bene-event-date-range-time-font-size: calc( var(--font-size-small) - 7rem);
+--page-node-type-event-field--name-bene-event-date-range-time-font-size-desktop: calc( var(--font-size-small) - 3rem);
+--event-main-block-bene-intro-desktop-font-size: calc( var(--font-size-small) - 3rem);
 
 // fields
 --field--name-bene-intro-h2-font-color: var(--font-color-primary);
@@ -51,13 +51,13 @@ This file should be named sass/config/_05.cssvars.scss
 // footer
 --block-bene-footer-background-color: var(--background-color-primary);
 --block-bene-footer-menu-link-color: var(--color-text-primary);
---block-bene-footer-menu-link-font-size: var(--font-size-base-small);
+--block-bene-footer-menu-link-font-size: calc( var(--font-size-base) - 2rem);
 --block-bene-footer-menu-link-hover-focus-active-color: var(--color-primary-first);
 --block-bene-footer-menu-item-link-font-size: var(--font-size-base);
 --block-bene-footer-menu-item-link-color: var(--font-color-link);
---block-bene-footer-copyright-contact-links-font-size: var(--font-size-base-small);
---block-bene-footer-contact-links-font-size: var(--font-size-base-x-small);
---block-bene-footer-contact-links-phone-email-additional-contact-p-fontsize: var(--font-size-base-x-small);
+--block-bene-footer-copyright-contact-links-font-size: calc( var(--font-size-base) - 2rem);
+--block-bene-footer-contact-links-font-size: calc( var(--font-size-base) - 4rem);
+--block-bene-footer-contact-links-phone-email-additional-contact-p-fontsize: calc( var(--font-size-base) - 4rem);
 --block-bene-footer-social-links-a-background-color: var(--background-color-secondary);
 --block-bene-footer-social-links-a-border-color: rem(1) solid var(--background-color-secondary);
 --block-bene-footer-social-links-a-height: var(--social-media-icon-size);
@@ -92,7 +92,7 @@ This file should be named sass/config/_05.cssvars.scss
 --block-hero-background-color: var(--background-color-primary);
 --block-hero-justify-content: var(--hero-alignment);
 --block-hero-h1-h2-text-color: var(--font-color-secondary);
---block-hero-h1-h2-font-size: var(--font-size-medium-small);
+--block-hero-h1-h2-font-size: calc( var(--font-size-medium) - 18rem);
 --block-hero-h1-h2-text-align: var(--hero-alignment);
 --block-hero-h1-h2-font-size-tablet: var(--font-size-large);
 --block-hero-h1-h2-font-size-desktop: var(--font-size-large);
@@ -116,7 +116,7 @@ This file should be named sass/config/_05.cssvars.scss
 --page-node-type-page-block-system-main-block-blockquote-p-text-color: var(--font-color-tertiary);
 
 // listing_page
---listing-page-page-node-type-listing-page-block-system-main-block-field-intro-desktop-font-size: var(--font-size-x-small);
+--listing-page-page-node-type-listing-page-block-system-main-block-field-intro-desktop-font-size: calc( var(--font-size-small) - 3rem);
 
 // menus
 --mobile-menu-toggle-div-span-background-color: var(--background-color-primary);
@@ -154,7 +154,7 @@ This file should be named sass/config/_05.cssvars.scss
 // nice_select
 --nice-select-background-color: var(--background-color-secondary);
 --nice-select-border-radius: var(--preferred-border-radius);
---nice-select-font-size: var(--font-size-base-small);
+--nice-select-font-size: calc( var(--font-size-base) - 2rem);
 --nice-select-font-weight: var(--font-weight-bold);
 --nice-select-height: var(--input-height);
 --nice-select-line-height: calc( var(--input-height) - 2px);
@@ -162,7 +162,7 @@ This file should be named sass/config/_05.cssvars.scss
 --nice-select-disabled-border-color: var(--disabled-border-color);
 --nice-select-disabled-text-color: var(--font-color-secondary);
 --nice-select-disabled-after-border-color: var(--disabled-border-color);
---nice-select-small-font-size: var(--font-size-base-x-small);
+--nice-select-small-font-size: calc( var(--font-size-base) - 4rem);
 --nice-select-small-height: var(--input-height-small);
 --nice-select-small-line-height: calc( var(--input-height-small) - 2px);
 --nice-select-small-option-line-height: calc( var(--input-height-small) - 2px);

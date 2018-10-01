@@ -20,7 +20,7 @@
 @include mq(desktop) {
   .page-node-type-page {
     .block-system-main-block .field--name-bene-intro {
-      @include set-bbv-var(font-size, font-size-x-small, --node-type-page-block-system-main-block-field-intro-font-size);
+      @include set-bbv-var(font-size, font-size-small - 3rem, --node-type-page-block-system-main-block-field-intro-font-size);
       margin-bottom: rem(32);
       margin-top: rem(24);
     }

@@ -55,14 +55,9 @@ $bene-buildup-variables: (
 
   font-size-large: rem(61),
   font-size-medium: rem(50),
-  font-size-medium-small: rem(32),
   font-size-accent: rem(30),
   font-size-small: rem(25),
-  font-size-x-small: rem(22),
-  font-size-xx-small: rem(18),
   font-size-base: rem(16), // Base font size for the body
-  font-size-base-small: rem(14),
-  font-size-base-x-small: rem(12),
 
   font-color-primary: bav(bene-main-black),
   font-color-secondary: bav(bene-main-white),
@@ -85,7 +80,6 @@ $bene-buildup-variables: (
   social-media-icon-size: rem(36),
   input-height: bav(bene-input-height), // can we change to rem?
   input-height-small: bav(bene-input-height-small),
-  // y-offset:  - input-height / 2,
 
   preferred-alignment: left,
   hero-alignment: center,
@@ -319,8 +313,8 @@ $bene-buildup-variables: (
   --drop_down-active-text-color: var(--font-color-tertiary);
   --drop_down-disabled-text-color: var(--font-color-tertiary);
   --drop_down-font-weight: var(--font-weight-bold);
-  --drop_down-font-size: var(--font-size-base-small);
-  --drop_down-font-size-small: var(--font-size-base-x-small);
+  --drop_down-font-size: calc(var(--font-size-base) - 2rem);
+  --drop_down-font-size-small: calc(var(--font-size-base) - 4rem);
   --drop_down-border-radius: var(--preferred-border-radius);
   --drop_down-list-border-radius: var(--preferred-border-radius);
   --drop_down-height: var(--input-height);
@@ -328,7 +322,7 @@ $bene-buildup-variables: (
   --drop_down-option-line-height: calc(var(--input-height) - 2px);
   --drop_down-option-min-height: calc(var(--input-height) - 2px);
   //--drop_down-list-transform: scale(.75) translateY(--y-offset);
-  --drop_down-small-font-size: var(--font-size-base-x-small);
+  --drop_down-small-font-size: calc(var(--font-size-base) - 4rem);
   --drop_down-small-height: var(--input-height-small);
   --drop_down-small-line-height: calc(var(--input-height-small) - 2px);
   --drop_down-small-line-height-option: calc(var(--input-height-small) - 2px);
@@ -400,7 +394,7 @@ $bene-buildup-variables: (
 
   // bene_sub_navigation_block
   // bene_listing_page_plugin_display_block
-  --bene_listing_page_intro-desktop: var(--font-size-x-small);
+  --bene_listing_page_intro-desktop: calc( var(--font-size-small) - 3rem);
 
   // bene_mobile_nav
   --bene_mobile_nav-color: var(--font-color-tertiary);
@@ -437,19 +431,19 @@ $bene-buildup-variables: (
   --bene_footer_block-menu-link-color: var(--color-text-primary);
   --bene_footer_block-menu-link-hover-color: var(--color-primary-first);
   --bene_footer_block-menu-item-link-hover-color: var(--color-primary-first);
-  --bene_footer_block-menu-font-size: var(--font-size-base-small);
+  --bene_footer_block-menu-font-size: calc(var(--font-size-base) - 2rem);
   --bene_footer_block-menu-item-link: var(--font-size-base);
-  --bene_footer_block-menu-item-contact-links-additional: var(--font-size-base-small);
-  --bene_footer_block-menu-item-contact-links: var(--font-size-base-x-small);
-  --bene_footer_block-phone-p-fontsize: var(--font-size-base-x-small);
+  --bene_footer_block-menu-item-contact-links-additional: calc(var(--font-size-base) - 2rem);
+  --bene_footer_block-menu-item-contact-links: calc(var(--font-size-base) - 4rem);
+  --bene_footer_block-phone-p-fontsize: calc(var(--font-size-base) - 4rem);
 
   // bene_intro_text
-  --bene_intro_text-block-system-main-block: var(--font-size-x-small);
+  --bene_intro_text-block-system-main-block: calc( var(--font-size-small) - 3rem);
 
   // bene_event_page
-  --bene_event_page-field--name-bene-event-date-range-time: var(--font-size-xx-small);
-  --bene_event_page-field--name-bene-event-date-range-time-desktop: var(--font-size-x-small);
-  --bene_event_page-desktop-block-system-main-block: var(--font-size-x-small);
+  --bene_event_page-field--name-bene-event-date-range-time: var(--font-size-small - 7rem);
+  --bene_event_page-field--name-bene-event-date-range-time-desktop: calc(var(--font-size-small) - 3rem);
+  --bene_event_page-desktop-block-system-main-block: calc(var(--font-size-small) - 3rem);
 
 
   // background colors

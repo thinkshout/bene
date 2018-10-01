@@ -7,12 +7,12 @@
     margin-bottom: rem(32);
     margin-top: rem(24);
     time {
-      @include set-bbv-var(font-size, font-size-xx-small, --page-node-type-event-field--name-bene-event-date-range-time-font-size);
+      @include set-bbv-var(font-size, font-size-small - 7rem, --page-node-type-event-field--name-bene-event-date-range-time-font-size);
       font-weight: 300;
       line-height: rem(32);
       margin-top: rem(12);
       @include mq(desktop) {
-        @include set-bbv-var(font-size,font-size-x-small, --page-node-type-event-field--name-bene-event-date-range-time-font-size-desktop);
+        @include set-bbv-var(font-size, font-size-small - 3rem, --page-node-type-event-field--name-bene-event-date-range-time-font-size-desktop);
         line-height: rem(38);
       }
     }
@@ -38,7 +38,7 @@
 @include mq(desktop) {
   .page-node-type-event {
     .block-system-main-block .field--name-bene-intro {
-      @include set-bbv-var(font-size, font-size-x-small, --event-main-block-bene-intro-desktop-font-size);
+      @include set-bbv-var(font-size, font-size-small - 3rem, --event-main-block-bene-intro-desktop-font-size);
       margin-bottom: rem(32);
       margin-top: rem(24);
     }

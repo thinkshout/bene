@@ -8,7 +8,7 @@
   .menu {
     a {
       @include set-bbv-var(color, color-text-primary, --block-bene-footer-menu-link-color);
-      @include set-bbv-var(font-size, font-size-base-small, --block-bene-footer-menu-link-font-size);
+      @include set-bbv-var(font-size, font-size-base - 2rem, --block-bene-footer-menu-link-font-size);
       font-weight: 600;
       &:hover, &:focus, &.is-active {
         @include set-bbv-var(color, color-primary-first, --block-bene-footer-menu-link-hover-focus-active-color);
@@ -33,19 +33,19 @@
   .contact-links .additional-contact p,
   .contact-links .additional-footer p {
     @include font-style('regular');
-    @include set-bbv-var(font-size, font-size-base-small, --block-bene-footer-copyright-contact-links-font-size);
+    @include set-bbv-var(font-size, font-size-base - 2rem, --block-bene-footer-copyright-contact-links-font-size);
     line-height: rem(25);
   }
 
   .contact-links {
-    @include set-bbv-var(font-size, font-size-base-x-small, --block-bene-footer-contact-links-font-size);
+    @include set-bbv-var(font-size, font-size-base - 4rem, --block-bene-footer-contact-links-font-size);
     .address {
       white-space: pre-line;
     }
     .phone, .email, .additional-contact {
       display: block;
       p {
-        @include set-bbv-var(font-size, font-size-base-x-small, --block-bene-footer-contact-links-phone-email-additional-contact-p-fontsize);
+        @include set-bbv-var(font-size, font-size-base - 4rem, --block-bene-footer-contact-links-phone-email-additional-contact-p-fontsize);
         margin: rem(5) 0;
       }
     }

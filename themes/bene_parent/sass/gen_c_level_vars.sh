@@ -20,11 +20,11 @@ echo :root {
 # This script reads through all the files in the components directory
 # picks out the lines that contain a call to the mixin set-bbv-var
 #
-# @include set-bbv-var(font-size, font-size-x-small, --bene_intro_text-block-system-main-block);
+# @include set-bbv-var(font-size, font-size-small, --bene_intro_text-block-system-main-block);
 #
 # and generates output that looks like this
 #
-# --bene_intro_text-block-system-main-block: var(--font-size-x-small);
+# --bene_intro_text-block-system-main-block: var(--font-size-small);
 #
 # call like this:
 # > cd web/profiles/bene/themes/bene_parent/sass
@@ -50,11 +50,11 @@ for x in $(ls ./components/*.scss);
 
   # for lines that have set-bbv-var in them like this
   #
-  #       @include set-bbv-var(font-size, font-size-x-small, --bene_intro_text-block-system-main-block);
+  #       @include set-bbv-var(font-size, font-size-small, --bene_intro_text-block-system-main-block);
   #
   # edit them so they output
   #
-  # --bene_intro_text-block-system-main-block: var(--font-size-x-small);
+  # --bene_intro_text-block-system-main-block: var(--font-size-small);
   #
   # and for lines that have set-bbv-with-arg-before-var like this
   #
