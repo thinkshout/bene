@@ -2,16 +2,19 @@
 .block-bene-footer-block {
   padding-top: 2rem;
   padding-bottom: 2rem;
+  background-color: bbv(background-color-primary);
+  background-color: var(--footer-block-background-color);
+
 
   .menu {
     a {
-      color: bbv(color-text-primary); // in case css variables are not supported
-      color: var(--bene_footer_block-menu-link-color);
+      color: bbv(color-text-primary);
+      color: var(--footer-menu-link-color);
       font-size: rem(14);
       font-weight: 600;
       &:hover, &:focus, &.is-active {
-        color: bbv(color-theme-primary); // in case css variables are not supported
-        color: var(--bene_footer_block-menu-link-hover-color);
+        color: bbv(color-primary-first); // in case css variables are not supported
+        color: var(--footer-menu-link-hover-color);
       }
     }
 
@@ -22,8 +25,8 @@
         @include font-style('bold'); // font-menu-primary
         fontsize: rem(16);
         &:hover, &:focus, &.is-active {
-          color: bbv(color-theme-primary); // in case css variables are not supported
-          color: var(--bene_footer_block-menu-item-link-hover-color);
+          color: bbv(color-text-primary); // in case css variables are not supported
+          color: var(--footer-menu-link-color);
         }
       }
     }
@@ -61,27 +64,27 @@
 
   .social-links {
     a {
-      background-color: bbv(color-social-icon); // in case css variables are not supported
-      background-color: var(--bene_footer_block-social-background-color);
+      background-color: bbv(background-color-secondary);
+      background-color: var(--footer-social-background-color);
       background-position: center center;
       background-repeat: no-repeat;
       background-size: 62% 62%;
-      border: rem(1) solid bbv(color-social-icon); // in case css variables are not supported
-      border: rem(1) solid var(--bene_footer_block-social-border-color);
+      border: rem(1) solid bbv(background-color-secondary);
+      border: rem(1) solid var(--footer-social-border-color);
       border-radius: 50%;
       display: inline-block;
-      height: bbv(social-icon-size); // in case css variables are not supported
-      height: var(--bene_footer_block-social-icon-size);
+      height: bbv(social-media-icon-size); // in case css variables are not supported
+      height: var(--footer-social-icon-size);
       margin-bottom: rem(10);
       margin-left: rem(10);
       padding: 1rem;
       position: relative;
       text-indent: -9999px;
-      width: bbv(social-icon-size); // in case css variables are not supported
-      width: var(--bene_footer_block-social-icon-size);
+      width: bbv(social-media-icon-size); // in case css variables are not supported
+      width: var(--footer-social-icon-size);
       &:hover, &:focus, &:active {
-        background-color: bbv(color-social-icon-darken20); // in case css variables are not supported
-        background-color: var(--bene_footer_block-social-hover-background-color);
+        background-color: bbv(background-color-tertiary);
+        background-color: var(--footer-social-hover-background-color);
       }
     }
     .facebook { background-image:  url('../images/svgs/facebook-f.svg'); }

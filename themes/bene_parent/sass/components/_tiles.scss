@@ -1,4 +1,6 @@
 .paragraph--type--tiles {
+  background-color: bbv(color-primary-first);
+  background-color: var(--tile-background-color);
   &> .field--name-field-title {
     font-size: rem(24);
     font-weight: 400;
@@ -45,8 +47,8 @@
 
       .field--name-field-image,
       .bg-header {
-        background-color: bbv(color-theme-primary); // in case css variables are not supported
-        background-color: var(--base_style-field-image-header);
+        background-color: bbv(background-color-secondary);
+        background-color: var(--general-secondary-background-color);
         font-size: 0;
         max-height: rem(228);
         max-width: rem(380);
@@ -57,8 +59,8 @@
       @include mq(desktop) {
         .field--name-field-image,
         .bg-header {
-          background-color: bbv(color-theme-primary); // in case css variables are not supported
-          background-color: var(--base_style-desktop-field-image-header);
+          background-color: bbv(background-color-secondary);
+          background-color: var(--general-secondary-background-color);
           height: 18.36vw;
           width: 30.6vw;
         }
@@ -71,8 +73,8 @@
       }
 
       .field--name-field-text p {
-        color: bbv(color-text-secondary); // in case css variables are not supported
-        color: var(--base_style-field-image-text);
+        color: bbv(color-primary-second); // in case css variables are not supported
+        color: var(--tile-paragraph-color);
         line-height: rem(24);
         margin-bottom: rem(12);
         margin-top: rem(12);
@@ -87,3 +89,26 @@
     }
   }
 }
+
+.page-node-type-page .block-system-main-block .field--name-bene-intro{
+  h1, h2, h3, h4, h5{
+    font-family: bbv(font-family-secondary);
+    font-family: var(--general-font-family-secondary);
+    margin: 50px 0;
+  }
+
+  span, p {
+    padding: 0 100px;
+    color: bbv(color-secondary-third);
+    color: var(--rich-paragraph-font-secondary-color);
+  }
+}
+
+.page-node-type-page .block-system-main-block .field--name-bene-intro{
+
+  h1, h2, h3, h4, h5, a{
+    color: bbv(font-color-secondary);
+    color: var(--general-font-secondary-color);
+  }
+}
+

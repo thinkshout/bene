@@ -4,8 +4,11 @@
 }
 
 .field--name-bene-listing-view {
+  background-color: bbv(background-color-secondary);
+  background-color: var(--listing-page-background-color);
+
   .view-filters {
-    @include span-columnt(3);
+    @include span-columns(3);
   }
 }
 
