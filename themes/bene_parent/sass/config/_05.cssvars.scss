@@ -16,20 +16,20 @@ This file should be named sass/config/_05.cssvars.scss
 
 // admin
 --body-background-color: var(--background-color-primary);
---body-user-logged-in-messages-after-background-color: var(--background-color-secondary);
---body-user-logged-in-messages-after-border-color: var(--background-color-tertiary);
---body-user-logged-in-messages-after-font-color: var(--font-color-primary);
---body-user-logged-in-contextual-links-background-color: var(--background-color-primary);
---body-user-logged-in-contextual-links-li-background-color: var(--background-color-primary);
---body-user-logged-in-contextual-links-li-a-background-color: var(--background-color-primary);
---body-user-logged-in-contextual-links-li-a-link-color: var(--font-color-link);
---body-user-logged-in-block-bene-child-local-tasks-background-color: var(--background-color-primary);
---body-user-logged-in-block-bene-child-local-tasks-li-background-color: var(--background-color-primary);
---body-user-logged-in-block-bene-child-local-tasks-li-a-background-color: var(--background-color-primary);
---body-user-logged-in-block-bene-child-local-tasks-li-link-color: var(--font-color-link);
---body-user-logged-in-block-bene-child-local-tasks-li-a-hover-background-color: var(--background-color-secondary);
---body-user-logged-in-block-bene-child-local-tasks-li-a-is-active-background-color: var(--background-color-tertiary);
---body-user-logged-in-block-bene-child-local-tasks-show-hide-background-color: var(--background-color-tertiary);
+--user-logged-in-messages-after-background-color: var(--background-color-secondary);
+--user-logged-in-messages-after-border-color: var(--background-color-tertiary);
+--user-logged-in-messages-after-font-color: var(--font-color-primary);
+--user-logged-in-contextual-links-background-color: var(--background-color-primary);
+--user-logged-in-contextual-links-li-background-color: var(--background-color-primary);
+--user-logged-in-contextual-links-li-a-background-color: var(--background-color-primary);
+--user-logged-in-contextual-links-li-a-link-color: var(--font-color-link);
+--user-logged-in-block-bene-child-local-tasks-background-color: var(--background-color-primary);
+--user-logged-in-block-bene-child-local-tasks-li-background-color: var(--background-color-primary);
+--user-logged-in-block-bene-child-local-tasks-li-a-background-color: var(--background-color-primary);
+--user-logged-in-block-bene-child-local-tasks-li-link-color: var(--font-color-link);
+--user-logged-in-block-bene-child-local-tasks-li-a-hover-background-color: var(--background-color-secondary);
+--user-logged-in-block-bene-child-local-tasks-li-a-is-active-background-color: var(--background-color-tertiary);
+--user-logged-in-block-bene-child-local-tasks-show-hide-background-color: var(--background-color-tertiary);
 
 // basic_page
 --node-type-page-block-system-main-block-field-intro-font-size: calc( var(--font-size-small) - 3rem);
@@ -93,6 +93,7 @@ This file should be named sass/config/_05.cssvars.scss
 --block-hero-justify-content: var(--hero-alignment);
 --block-hero-h1-h2-text-color: var(--font-color-secondary);
 --block-hero-h1-h2-font-size: calc( var(--font-size-medium) - 18rem);
+--block-hero-h1-h2-background-color: var(--background-color-primary);
 --block-hero-h1-h2-text-align: var(--hero-alignment);
 --block-hero-h1-h2-font-size-tablet: var(--font-size-large);
 --block-hero-h1-h2-font-size-desktop: var(--font-size-large);

@@ -16,11 +16,11 @@ body.user-logged-in .region.region-content {
     position: fixed;
     z-index: 1000;
     &:after {
-      @include set-bbv-var(background-color, background-color-secondary, --body-user-logged-in-messages-after-background-color);
-      @include set-bbv-var(border-color, background-color-tertiary, --body-user-logged-in-messages-after-border-color);
+      @include set-bbv-var(background-color, background-color-secondary, --user-logged-in-messages-after-background-color);
+      @include set-bbv-var(border-color, background-color-tertiary, --user-logged-in-messages-after-border-color);
       border-radius: 50%;
       box-shadow: -1px 2px 5px #77b259;
-      @include set-bbv-var(color, font-color-primary, --body-user-logged-in-messages-after-font-color);
+      @include set-bbv-var(color, font-color-primary, --user-logged-in-messages-after-font-color);
       content: "×";
       display: inline-block;
       font-size: rem(18);
@@ -33,7 +33,7 @@ body.user-logged-in .region.region-content {
   }
 
   .contextual-links {
-    @include set-bbv-var(background-color, background-color-primary, --body-user-logged-in-contextual-links-background-color);
+    @include set-bbv-var(background-color, background-color-primary, --user-logged-in-contextual-links-background-color);
     border-radius: 4px 0 4px 4px;
     border: 1px solid #ccc;
     clear: both;
@@ -46,7 +46,7 @@ body.user-logged-in .region.region-content {
     top: -1px;
     white-space: nowrap;
     li {
-      @include set-bbv-var(background-color, background-color-primary, --body-user-logged-in-contextual-links-li-background-color);
+      @include set-bbv-var(background-color, background-color-primary, --user-logged-in-contextual-links-li-background-color);
       border: none;
       line-height: 100%;
       // list-style-image: none;
@@ -54,8 +54,8 @@ body.user-logged-in .region.region-content {
       margin: 0;
       padding: 0;
       a {
-        @include set-bbv-var(background-color, background-color-primary, --body-user-logged-in-contextual-links-li-a-background-color);
-        @include set-bbv-var(color, font-color-link, --body-user-logged-in-contextual-links-li-a-link-color);
+        @include set-bbv-var(background-color, background-color-primary, --user-logged-in-contextual-links-li-a-background-color);
+        @include set-bbv-var(color, font-color-link, --user-logged-in-contextual-links-li-a-link-color);
         display: block;
         font-family: sans-serif;
         font-size: small;
@@ -70,7 +70,7 @@ body.user-logged-in .region.region-content {
   }
   #block-bene-child-local-tasks {
     @include transition(all 0.4s linear);
-    @include set-bbv-var(background-color, background-color-primary, --body-user-logged-in-block-bene-child-local-tasks-background-color);
+    @include set-bbv-var(background-color, background-color-primary, --user-logged-in-block-bene-child-local-tasks-background-color);
     bottom: 0;
     height: auto;
     padding-right: 45px;
@@ -86,11 +86,11 @@ body.user-logged-in .region.region-content {
       margin: 0;
     }
     li {
-      @include set-bbv-var(background-color, background-color-primary, --body-user-logged-in-block-bene-child-local-tasks-li-background-color);
+      @include set-bbv-var(background-color, background-color-primary, --user-logged-in-block-bene-child-local-tasks-li-background-color);
       a {
-        @include set-bbv-var(background-color, background-color-primary, --body-user-logged-in-block-bene-child-local-tasks-li-a-background-color);
+        @include set-bbv-var(background-color, background-color-primary, --user-logged-in-block-bene-child-local-tasks-li-a-background-color);
         border: none;
-        @include set-bbv-var(color, font-color-link, --body-user-logged-in-block-bene-child-local-tasks-li-link-color);
+        @include set-bbv-var(color, font-color-link, --user-logged-in-block-bene-child-local-tasks-li-link-color);
         display: inline-block;
         font-size: rem(15);
         font-weight: 800;
@@ -101,15 +101,15 @@ body.user-logged-in .region.region-content {
           padding: rem(7) rem(20) rem(7);
         }
         &:hover {
-          @include set-bbv-var(background-color, background-color-secondary, --body-user-logged-in-block-bene-child-local-tasks-li-a-hover-background-color);
+          @include set-bbv-var(background-color, background-color-secondary, --user-logged-in-block-bene-child-local-tasks-li-a-hover-background-color);
         }
         &.is-active {
-          @include set-bbv-var(background-color, background-color-tertiary, --body-user-logged-in-block-bene-child-local-tasks-li-a-is-active-background-color);
+          @include set-bbv-var(background-color, background-color-tertiary, --user-logged-in-block-bene-child-local-tasks-li-a-is-active-background-color);
         }
       }
     }
     .show-hide {
-      @include set-bbv-var(background-color, background-color-tertiary, --body-user-logged-in-block-bene-child-local-tasks-show-hide-background-color);
+      @include set-bbv-var(background-color, background-color-tertiary, --user-logged-in-block-bene-child-local-tasks-show-hide-background-color);
       cursor: pointer;
       font-size: rem(35);
       height: rem(30);
