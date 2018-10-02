@@ -5,6 +5,7 @@
  * Contains install and update routines for Bene Core.
  */
 
+use Drupal\Core\Config\FileStorage;
 use Drupal\user\Entity\Role;
 
 /**
@@ -41,4 +42,14 @@ function bene_core_install() {
   ];
 
   user_role_change_permissions('staff', $staff_permissions);
+}
+
+/**
+ * Change location of image embed icon.
+ */
+function bene_core_update_8501() {
+  $config_path = drupal_get_path('module', 'bene_media') . '/config/install';
+  $source = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+  $config_storage->write('embed.button.media_browser', $source->read('embed.button.media_browser'));
 }

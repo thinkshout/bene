@@ -11,7 +11,7 @@ dependencies:
   - focal_point
   - image
   - link
-  - media_entity
+  - media
   - picture_background_formatter
   - responsive_image
 package: Bene

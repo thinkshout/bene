@@ -5,6 +5,7 @@ vendor/
 
 node_modules
 modules/*
+modules/bene_media
 core
 
 benefit.css.map

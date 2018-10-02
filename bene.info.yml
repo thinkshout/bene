@@ -26,7 +26,6 @@ dependencies:
   - contact_storage
   - contextual
   - crop
-  - crop_media_entity
   - datetime
   - datetime_range
   - dblog
@@ -47,7 +46,7 @@ dependencies:
   - image
   - link
   - linkit
-  - media_entity
+  - media
   - menu_link_content
   - menu_ui
   - metatag

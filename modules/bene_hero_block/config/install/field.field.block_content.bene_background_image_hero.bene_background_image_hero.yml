@@ -4,7 +4,7 @@ dependencies:
   config:
     - block_content.type.bene_background_image_hero
     - field.storage.block_content.bene_background_image_hero
-    - media_entity.bundle.image
+    - media.type.image
 id: block_content.bene_background_image_hero.bene_background_image_hero
 field_name: bene_background_image_hero
 entity_type: block_content
