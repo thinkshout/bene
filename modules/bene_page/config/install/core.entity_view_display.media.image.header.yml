@@ -3,9 +3,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.header
-    - field.field.media.image.image
+    - field.field.media.image.field_media_image
     - field.field.media.image.media_tags
-    - media_entity.bundle.image
+    - media.type.image
     - responsive_image.styles.header
   module:
     - picture_background_formatter
@@ -14,7 +14,7 @@ targetEntityType: media
 bundle: image
 mode: header
 content:
-  image:
+  field_media_image:
     type: picture_background_formatter_media
     weight: 0
     label: hidden

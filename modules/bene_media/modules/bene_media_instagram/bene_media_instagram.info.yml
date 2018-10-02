@@ -1,8 +1,0 @@
-name: 'Media Instagram'
-core: 8.x
-type: module
-description: 'Instagram support for Bene Media.'
-package: Bene
-dependencies:
-  - bene_media
-  - media_entity_instagram
