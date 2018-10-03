@@ -3375,8 +3375,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.1-beta1+0-dev",
-                    "datestamp": "1532080685",
+                    "version": "8.x-1.0-beta1+1-dev",
+                    "datestamp": "1529070524",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -5716,7 +5716,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thinkshout/bene_media.git",
-                "reference": "0520021a5c2aa9189db44af63ebae08481364418"
+                "reference": "e1a8392fa835b2db6952c126475574f0ac7ae9a8"
             },
             "require": {
                 "drupal/config_rewrite": "^1.1",
@@ -5761,7 +5761,7 @@
                 }
             ],
             "description": "Media related functionality and configuration for the Bene Distribution.",
-            "time": "2018-09-25T22:07:35+00:00"
+            "time": "2018-10-03T15:45:03+00:00"
         },
         {
             "name": "thinkshout/mailchimp-api-php",
