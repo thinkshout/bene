@@ -12,6 +12,7 @@ are used in multiple places. These provide the ability to fine-tune a child them
 
 This file should be named sass/config/_05.cssvars.scss
 */
+
 :root {
 
 // admin
@@ -93,7 +94,6 @@ This file should be named sass/config/_05.cssvars.scss
 --block-hero-justify-content: var(--hero-alignment);
 --block-hero-h1-h2-text-color: var(--font-color-secondary);
 --block-hero-h1-h2-font-size: calc( var(--font-size-medium) - 18rem);
---block-hero-h1-h2-background-color: var(--background-color-primary);
 --block-hero-h1-h2-text-align: var(--hero-alignment);
 --block-hero-h1-h2-font-size-tablet: var(--font-size-large);
 --block-hero-h1-h2-font-size-desktop: var(--font-size-large);

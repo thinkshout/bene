@@ -98,7 +98,7 @@ html {
   --secondary-nav-button-font-hover-color: var(--font-color-secondary);
   --hero-font-color: var(--font-color-secondary);
   --hero-heading-font-size: var(--font-size-medium);
-  --hero-heading-font-size-mobile: var(--font-size-medium-small);
+  --hero-heading-font-size-mobile: calc(var(--font-size-medium) - 18rem);
   --hero-heading-font-size-tablet: var(--font-size-medium);
   --hero-button-background-color: var(--font-color-secondary);
   --hero-button-background-hover-color: var(--font-color-secondary);
@@ -109,7 +109,7 @@ html {
   --hero-block-alignment: var(--hero-alignment);
   --hero-block-align-items: var(--hero-alignment);
   --hero-block-headline-text-align: var(--hero-alignment);
-  --hero-block-headline-fontsize: var(--font-size-medium-small);
+  --hero-block-headline-fontsize: calc(var(--font-size-medium) - 18rem);
   --hero-block-headline-fontsize-tablet: var(--font-size-large);
   --hero-block-headline-fontsize-desktop: var(--font-size-large);
   --feature-background-color: var(--font-color-secondary);
@@ -554,7 +554,6 @@ This file should be named sass/config/_05.cssvars.scss
   --block-hero-justify-content: var(--hero-alignment);
   --block-hero-h1-h2-text-color: var(--font-color-secondary);
   --block-hero-h1-h2-font-size: calc( var(--font-size-medium) - 18rem);
-  --block-hero-h1-h2-background-color: var(--background-color-primary);
   --block-hero-h1-h2-text-align: var(--hero-alignment);
   --block-hero-h1-h2-font-size-tablet: var(--font-size-large);
   --block-hero-h1-h2-font-size-desktop: var(--font-size-large);

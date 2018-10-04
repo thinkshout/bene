@@ -167,7 +167,7 @@ $bene-buildup-variables: (
   // Hero
       --hero-font-color: var(--font-color-secondary);
       --hero-heading-font-size: var(--font-size-medium);
-      --hero-heading-font-size-mobile: var(--font-size-medium-small);
+      --hero-heading-font-size-mobile: calc(var(--font-size-medium) - 18rem);
       --hero-heading-font-size-tablet: var(--font-size-medium);
       --hero-button-background-color: var(--font-color-secondary);
       --hero-button-background-hover-color: var(--font-color-secondary);
@@ -178,7 +178,7 @@ $bene-buildup-variables: (
       --hero-block-alignment: var(--hero-alignment);
       --hero-block-align-items: var(--hero-alignment);
       --hero-block-headline-text-align: var(--hero-alignment);
-      --hero-block-headline-fontsize: var(--font-size-medium-small);
+      --hero-block-headline-fontsize: calc(var(--font-size-medium) - 18rem);
       --hero-block-headline-fontsize-tablet: var(--font-size-large);
       --hero-block-headline-fontsize-desktop: var(--font-size-large);
 

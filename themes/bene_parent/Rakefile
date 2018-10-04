@@ -14,6 +14,18 @@ task :browsersync do
   system 'browser-sync start --proxy "bene-theme.dev" --files "css/*.css" --no-inject-changes'
 end
 
+desc 'Watch bene-style.css in the file system'
+task :fswatch do
+puts
+  # generate cssvars and watch for changes that require re-generation
+  system('./sass/gen_c_level_vars.sh ./sass/components ./sass/config/_05.cssvars.scss')
+  system 'fswatch ./sass/components | xargs -n1 ./sass/gen_c_level_vars.sh ./sass/components ./sass/config/_05.cssvars.scss'
+  system 'fswatch ./sass/config/_01.vars.scss | xargs -n1 ./sass/gen_c_level_vars.sh ./sass/components ./sass/config/_05.cssvars.scss'
+  system 'fswatch ./sass/config/_02.mixins.scss | xargs -n1 ./sass/gen_c_level_vars.sh ./sass/components ./sass/config/_05.cssvars.scss'
+  system 'fswatch ./sass/config/_03.breakpoints.scss | xargs -n1 ./sass/gen_c_level_vars.sh ./sass/components ./sass/config/_05.cssvars.scss'
+  system 'fswatch ./sass/config/_04.base.scss | xargs -n1 ./sass/gen_c_level_vars.sh ./sass/components ./sass/config/_05.cssvars.scss'
+end
+
 desc 'Watch sass'
 task :sasswatch do
   system 'sass -r sass-globbing --watch sass/style.scss:css/bene-style.css'
@@ -27,7 +39,7 @@ end
 desc 'Serve'
 task :serve do
   threads = []
-  %w{browsersync sasswatch browserify}.each do |task|
+  %w{browsersync fswatch sasswatch browserify}.each do |task|
     threads << Thread.new(task) do |devtask|
       Rake::Task[devtask].invoke
     end
