@@ -1,11 +1,9 @@
 # Bene Child
 
 Bene_child can be found in
-/new-project-name/web/profiles/contrib/bene/themes/bene_child
-where new-project-name is your project.
+/new-project-name/web/profiles/contrib/bene/themes/bene_child where new-project-name is your project.
 
-Bene_child can be found in a project called "new-project-name" here:
-/new-project-name/web/profiles/contrib/bene/themes/bene_child
+Bene_child can be found in a project called "new-project-name" here: /new-project-name/web/profiles/contrib/bene/themes/bene_child
 
 ## Setup
 - Update `Rakefile` to have the correct site path.
