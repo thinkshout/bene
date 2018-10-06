@@ -20,7 +20,7 @@ dependencies:
   - inline_entity_form
   - link
   - linkit
-  - media_entity
+  - media
   - menu_link_content
   - migrate
   - migrate_google_sheets

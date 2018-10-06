@@ -6,6 +6,8 @@ dependencies:
   - allowed_formats
   - bene_core
   - bene_media
+  - bene_media:bene_media_video
+  - bene_media:bene_media_file
   - entity_browser
   - entity_reference_revisions
   - field
@@ -13,7 +15,7 @@ dependencies:
   - focal_point
   - image
   - link
-  - media_entity
+  - media
   - menu_ui
   - metatag
   - node

@@ -79,7 +79,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 38.2vw;
+  min-height: 25vw;
   padding: rem(24) rem(24) rem(36) rem(24);
   position: relative;
   text-align: center;
@@ -95,6 +95,24 @@
     top: 0;
     z-index: 2;
   }
+
+  .paragraph--type--feature-full-width::after {
+    background-image: none;
+  }
+
+  .paragraph--type--feature-full-width.image:after {
+    background-color: bbv(color-primary-third);
+    background-color: var(--feature-background-color);
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: .45;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
   .field--name-field-title {
     @include set-bbv-var(color, font-color-primary, --paragraph-feature-full-width-field-title-text-color);
     @include set-bbv-var(font-family, font-family-primary, --paragraph-feature-full-width-field-title-font-family);
@@ -142,4 +160,21 @@
     width: 100%;
     height: 100%;
   }
+}
+
+.feature-full-width-paragraph .paragraph--type--feature-full-width {
+  .field--name-field-title{
+    color: bbv(font-color-tertiary);
+    color: var(--rich-paragraph-font-color);
+  }
+  .field--name-field-text {
+    p {
+      color: bbv(font-color-tertiary);
+      color: var(--rich-paragraph-font-color);
+    }
+  }
+}
+
+.paragraph--type--feature-full-width.image{
+  min-height: 38.2vw;
 }

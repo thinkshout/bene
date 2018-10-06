@@ -1,8 +1,0 @@
-name: 'Media Twitter'
-core: 8.x
-type: module
-package: Bene
-description: 'Twitter support for Bene Media.'
-dependencies:
-  - bene_media
-  - media_entity_twitter
