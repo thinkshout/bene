@@ -2,24 +2,23 @@
 
 #
 # Call this script like this
-# ./sass/gen_c_level_vars.sh ./sass/components ./sass/config/_05.cssvars.scss
+# ./sass/gen_c_level_vars.sh ./sass/config/_05.cssvars.scss ./sass/components
 # or for default values call like this
 # ./sass/gen_c_level_vars.sh
 #
 
 if [ "$1" == "" ]; then
     # Use default values
-    directoryname="./sass/components"
     outfilename="./sass/config/_05.cssvars.scss"
 else
-    directoryname=$1
+    outfilename=$1
 fi
 
 if [ "$2" == "" ]; then
     # Use default values
-    outfilename="./sass/config/_05.cssvars.scss"
+    directorynames=("./sass/components" "./sass/layout")
 else
-    outfilename=$2
+    directorynames=($2)
 fi
 
 echo "/*" > $outfilename
@@ -53,7 +52,9 @@ echo :root { >> $outfilename
 # > ./gen_c_level_vars.sh
 #
 
-for x in $(ls $directoryname/*.scss);
+for directoryname in ${directorynames[@]}; do
+
+ for x in $(ls $directoryname/*.scss); do
 
   # input will look like each outfilename followed by lines from that file that include 'set-bbv-var':
   #
@@ -66,7 +67,7 @@ for x in $(ls $directoryname/*.scss);
   # by everything after the last slash underscore from the input. note: \'$'\n'' means newline - we are using use
   # an ANSI C-quoted string ($'...') to splice in the newline $'\n'
   # then removing the outfilename extension (everything after the last dot) and adding a newline
-  do echo $x | \
+  echo $x | \
   sed 's/.*\/_/\'$'\n''\/\/ /' | \
   sed 's/\.[^.]*$//' \
   >> $outfilename;
@@ -123,6 +124,7 @@ for x in $(ls $directoryname/*.scss);
   sed 's/ *@include set-bbv-with-arg-before-var(\(.*\),[    ]*\(.*\),[    ]*\(.*\),[  ]*\(.*\));/\4: \2 var(--\3);/' \
   >> $outfilename;
 
+ done
 done
 
 echo } >> $outfilename;
