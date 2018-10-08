@@ -38,8 +38,6 @@
   p {
     @include set-bbv-var(color, font-color-tertiary, --external-newsletter-p-text-color);
     margin: rem(6) 0;
-    font-family: bbv(font-family-secondary);
-    font-family: var(--general-font-family-secondary);
   }
   a {
     @include set-bbv-var(color, font-color-link, --external-newsletter-link-color);

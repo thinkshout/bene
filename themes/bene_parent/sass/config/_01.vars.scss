@@ -109,10 +109,4 @@ $bene-buildup-variables: (
     --#{$name}: #{$color-num};
   }
 
-  /**
-   * These are the css variables that should be used throughout the scss code.
-   * They should also refer to the buildup variables above as much as possible.
-   **/
-
-
 }
