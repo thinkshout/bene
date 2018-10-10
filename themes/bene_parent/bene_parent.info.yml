@@ -1,6 +1,6 @@
-name: Bene Base
+name: Bene Parent
 type: theme
-description: A base theme for Bene
+description: A parent theme for Bene
 package: Other
 core: 8.x
 libraries:
