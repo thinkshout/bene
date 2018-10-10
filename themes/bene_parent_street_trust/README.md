@@ -1,4 +1,4 @@
-# Bene Base
+# Bene Parent Street Trust
 
 ## Setup
 - Update `Rakefile` to have the correct site path

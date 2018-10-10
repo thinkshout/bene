@@ -1,10 +1,10 @@
-name: Bene Base
+name: Bene Parent Street Trust
 type: theme
-description: A base theme for Bene
+description: A parent theme for Bene
 package: Other
 core: 8.x
 libraries:
-  - bene_parent/bene_parent
+  - bene_parent_street_trust/bene_parent_street_trust
 ckeditor_stylesheets:
   - css/ckeditor.css
 

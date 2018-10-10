@@ -1,5 +1,5 @@
 {
-  "name": "bene_parent",
+  "name": "bene_parent_street_trust",
   "version": "1.0.0",
   "description": "## Setup - Update `Rakefile` to have the correct theme - Run `rake install` to install dependencies",
   "main": "main.js",
