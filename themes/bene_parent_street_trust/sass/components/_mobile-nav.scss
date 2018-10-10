@@ -1,0 +1,44 @@
+.mobile-menu-toggle {
+  color: bbv(font-color-accent); // in case css variables are not supported
+  color: var(--general-font-accent-color);
+}
+
+.mobile-nav {
+  .region-primary-nav {
+    background: bbv(background-color-tertiary); // in case css variables are not supported
+    background: var(--general-tertiary-background-color);
+  }
+
+  .menu {
+    text-align: bbv(preferred-alignment);
+    text-align: var(--general-preferred-alignment);
+  }
+
+  .menu a {
+    color: bbv(font-color-link);
+    color: var(--general-link-color);
+    border-bottom: none;
+    @include font-style('regular');
+    font-size: bbv(font-size-small);
+    font-size: var(--general-font-size-small);
+    padding: 0.5rem;
+
+    &:after {
+      display: none;
+    }
+
+    menu--main {
+      li:first-of-type { padding-top: 1rem; }
+      a {
+        @include font-style('black');
+        font-size: bbv(font-size-small);
+        font-size: var(--general-font-size-small);
+      }
+    }
+
+    .menu--utility {
+      li:last-of-type { padding: 1rem; }
+    }
+
+  }
+}
