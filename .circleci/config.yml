@@ -39,6 +39,13 @@ jobs:
             composer config repositories.bene path /var/www/html/bene
             composer require "drupal/bene:*"
             composer install -n --prefer-dist
+      - run:
+          name: Run CS tests
+          command: |
+             export PATH="./vendor/bin:../vendor/bin:/root/.composer/vendor/bin:$PATH"
+             cd /var/www/html/build
+             phpcs --config-set installed_paths ../../drupal/coder/coder_sniffer/
+             phpcs --standard=Drupal --ignore=*/css/*,*/node_modules/* /var/www/html/build/web/profiles/bene
       - save_cache:
           key: composer-v3-{{ checksum "composer.lock" }}
           paths:
@@ -52,13 +59,6 @@ jobs:
             robo configure --db-name=drupal --db-user=drupal --db-pass=drupal --db-host=127.0.0.1
             robo install
 #           robo test --profile ci
-      - run:
-          name: Run CS tests
-          command: |
-             export PATH="./vendor/bin:../vendor/bin:/root/.composer/vendor/bin:$PATH"
-             cd /var/www/html/build
-             phpcs --config-set installed_paths ../../drupal/coder/coder_sniffer/
-             phpcs --standard=Drupal --ignore=*/css/*,*/node_modules/* /var/www/html/build/web/profiles/bene
 #      - deploy:
 #          command: |
 #            BRANCH_PATTERN='^[-0-9a-z]{1,11}$'
