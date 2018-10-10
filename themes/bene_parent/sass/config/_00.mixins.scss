@@ -139,3 +139,9 @@
   width: 100%;
 }
 
+// Used for settings CSS variables
+// usage: @include vars(color, primary-color);
+@mixin vars($property, $var) {
+  #{$property}: #{map-get($vars, $var)};
+  #{$property}: var(--#{$var});
+}
