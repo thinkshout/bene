@@ -46,10 +46,6 @@
   sed "s/bene_child/${THEME_NAME}/g" $THEME_DEST/package.child >$THEME_DEST/package.json
   rm $THEME_DEST/package.child
 
-  mv $THEME_DEST/package.json $THEME_DEST/package.child
-  sed "s/bene_child/${THEME_NAME}/g" $THEME_DEST/package.child >$THEME_DEST/package.json
-  rm $THEME_DEST/package.child
-
   # fix up the README file so it reflects the new theme name and location
   mv $THEME_DEST/README.md $THEME_DEST/README.md.child
   sed "s/Bene Child/${THEME_NAME}/g" $THEME_DEST/README.md.child | \
