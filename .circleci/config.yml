@@ -28,7 +28,7 @@ jobs:
             cgr "pantheon-systems/terminus:~1"
             cd /var/www/html
             which patch
-            composer create-project thinkshout/bene-project:dev-master /var/www/html/build --stability dev --no-interaction --no-install
+            composer create-project thinkshout/bene-project:dev-pantheon-fix /var/www/html/build --stability dev --no-interaction --no-install
       - restore_cache:
           keys:
             - composer-v3-{{ checksum "composer.lock" }}
