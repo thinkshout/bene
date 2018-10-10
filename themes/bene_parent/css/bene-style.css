@@ -1618,6 +1618,13 @@ input[type='submit'] {
       color: var(--general-link-hover-color); }
     .desktop-nav .menu--main .menu-item a.is-active {
       cursor: default; } }
+.block-bene-sub-navigation-block {
+  background-image: var(--interior-menu-background-gradient);
+  padding: 1.5rem 2%;
+  text-align: center; }
+  .block-bene-sub-navigation-block ul.menu {
+    text-align: center; }
+
 .mobile-menu-toggle {
   color: #50CFE3;
   color: var(--general-font-accent-color); }
