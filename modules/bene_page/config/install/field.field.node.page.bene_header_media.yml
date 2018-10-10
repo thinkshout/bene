@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.bene_header_media
-    - media.type.image
+    - media_entity.bundle.image
     - node.type.page
 id: node.page.bene_header_media
 field_name: bene_header_media

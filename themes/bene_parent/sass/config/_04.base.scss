@@ -2,10 +2,10 @@
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  @include set-bbv-var(font-family, font-family-primary, --base_style-font-family);
-  @include set-bbv-var(font-size, font-size-base, --base_style_font-size);
-  font-style: normal;
-  font-weight: 400;
+  @include set-bbv-var(font-family, font-family-primary, --body-font-family);
+  @include set-bbv-var(font-size, font-size-base, --body-font-size);
+  @include set-bbv-var(font-style, font-style-normal, --body-font-style);
+  @include set-bbv-var(font-weight, font-weight-normal, --body-font-weight);
 }
 
 h1,
@@ -19,31 +19,31 @@ h6 {
 }
 
 h1 {
-  font-size: rem(48);
-  line-height: rem(62);
-  font-weight: 800;
+  @include set-bbv-var(font-size, font-size-medium, --h1-font-size);
+  @include set-bbv-var(line-height, line-height-medium, --h1-line-height);
+  @include set-bbv-var(font-weight, font-weight-bold, --h1-font-weight);
 }
 h2 {
-  font-size: rem(32);
-  line-height: rem(38);
-  font-weight: 400;
+  @include set-bbv-var(font-size, font-size-accent, --h2-font-size);
+  @include set-bbv-var(line-height, line-height-accent, --h2-line-height);
+  @include set-bbv-var(font-weight, font-weight-normal, --h2-font-weight);
 }
 h3 {
-  font-size: rem(20);
-  line-height: rem(30);
-  font-weight: 600;
+  @include set-bbv-var(font-size, font-size-small, --h3-font-size);
+  @include set-bbv-var(line-height, line-height-small, --h3-line-height);
+  @include set-bbv-var(font-weight, font-weight-bold, --h3-font-weight);
 }
 h4 {
-  font-size: rem(16);
-  line-height: rem(20);
+  @include set-bbv-var(font-size, font-size-base, --h4-font-size);
+  @include set-bbv-var(line-height, line-height-base, --h4-line-height);
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  font-weight: 700;
+  @include set-bbv-var(font-weight, font-weight-bold, --h4-font-weight);
 }
 
 p,
 p.standard {
-  @include set-bbv-var(color, color-text-primary, --base_style-paragraph-color);
+  @include set-bbv-var(color, color-text-over-color-primary-background, --paragraph-color);
   font-size: rem(16);
   line-height: rem(31);
   font-weight: 400;
@@ -51,22 +51,22 @@ p.standard {
 
 a {
   @include default-transition;
-  @include set-bbv-var(color, color-theme-primary, --base_style-link-color);
+  @include set-bbv-var(color, color-text-link-over-color-primary-background, --link-color);
   cursor: pointer;
   text-decoration: none;
   &:hover,
   &:active {
-    @include set-bbv-var(color, color-theme-primary-lighten20, --base_style-active-link-color);
+    @include set-bbv-var(color, color-text-link-over-color-primary-background-hover, --active-link-color);
   }
 }
 
 table a,
 li a,
 p a {
-  @include set-bbv-var(color, color-theme-primary, --base_style-link-color);
+  @include set-bbv-var(color, color-text-link-over-color-primary-background, --li-link-color);
   &:hover,
   &:active {
-    @include set-bbv-var(color, color-theme-primary-lighten20, --base_style-active-link-color);
+    @include set-bbv-var(color, color-text-link-over-color-primary-background-hover, --active-li-link-color);
   }
 }
 
@@ -83,11 +83,11 @@ a.button {
     padding-bottom: rem(14);
     padding-left: rem(32);
     text-indent: rem(-20);
-    @include set-bbv-var(color, color-text-primary, --base_style-formatted-text-ul-li-color);
+    @include set-bbv-var(color, color-text-over-color-primary-background, --formatted-text-ul-li-color);
     &:before {
-      @include set-bbv-var(color, color-text-primary, --base_style-formatted-text-ul-li-bullet-color);
+      @include set-bbv-var(color, color-text-over-color-primary-background, --formatted-text-ul-li-bullet-color);
       content: "•";
-      @include set-bbv-var(font-size, font-size-base, --base_style-font-size);
+      @include set-bbv-var(font-size, font-size-base, --font-size);
       line-height: 1;
       padding-right: rem(14);
       position: relative;
@@ -101,38 +101,38 @@ ol {
     padding-bottom: rem(14);
     padding-left: rem(6);
     line-height: 1.4;
-    font-size: rem(16);
-    @include set-bbv-var(color, color-text-primary, --base_style-formatted-text-ol-li-color);
+    @include set-bbv-var(font-size, font-size-base, --ol-li-font-size);
+    @include set-bbv-var(color, color-text-over-color-primary-background, --formatted-text-ol-li-color);
   }
 }
 
 table, table.tablesaw {
-  @include set-bbv-var(border, color-text-light, --base_style-table-border-color);
+  @include set-bbv-var(border, color-text-subtitle-over-color-primary-background, --table-border-color);
   margin: rem(24) 0;
   table-layout: auto;
   th, tr, td, tr:first-child th {
     border: none;
-    @include set-bbv-var(color, color-text-medium-dark, --base_style-table-text-color);
-    font-size: rem(14);
-    font-weight: 400;
+    @include set-bbv-var(color, color-text-subtitle-over-color-primary-background, --table-text-color);
+    @include set-bbv-var(font-size, font-size-base - rem(2), --table-tr-td-font-size);
+    @include set-bbv-var(font-weight, font-weight-normal, --table-tr-td-font-weight);
     padding: rem(18) rem(42);
-    text-align: left;
+    @include set-bbv-var(text-align, preferred-alignment, --table-tr-td-text-align);
     strong {
-      font-weight: 600;
+      @include set-bbv-var(font-weight, font-weight-bold, --table-tr-td-strong-font-weight);
     }
   }
   th, tr:first-child th {
-    font-weight: 700;
+    @include set-bbv-var(font-weight, font-weight-bold, --table-headerrow-leftcolumn-font-weight);
     text-transform: uppercase;
-    @include set-bbv-var(color, color-text-medium-dark, --base_style-table-headerrow-leftcolumn-text-color);
-    font-size: rem(14);
+    @include set-bbv-var(color, color-text-subtitle-over-color-primary-background, --table-headerrow-leftcolumn-text-color);
+    @include set-bbv-var(font-size, font-size-base - rem(2), --table-headerrow-leftcolumn-font-size);
     margin: 0;
   }
   tr {
-    @include set-bbv-var(background-color, color-background-default, --base_style-table-background-color);
+    @include set-bbv-var(background-color, background-color-primary, --table-background-color);
   }
   th,tr:nth-of-type(2n) {
-    @include set-bbv-var(background-color, color-background-lightest, --base_style-table-background-stripe-color);
+    @include set-bbv-var(background-color, background-color-tertiary, --table-background-stripe-color);
   }
 }
 
@@ -140,7 +140,7 @@ ul.menu {
   list-style: none outside;
   margin: 0;
   padding: 0;
-  text-align: left;
+  @include set-bbv-var(text-align, preferred-alignment, --ul-menu-text-align);
   .menu-item {
     padding: 0;
   }
@@ -150,9 +150,9 @@ fieldset {
   border: none;
   padding: 0;
   legend {
-    font-size: rem(30);
-    font-weight: 700;
-    @include set-bbv-var(color, color-text-secondary, --base_style-fieldset-legend-color);
+    @include set-bbv-var(font-size, font-size-accent, --fieldset-legend-font-size);
+    @include set-bbv-var(font-weight, font-weight-bold, --fieldset-legend-font-weight);
+    @include set-bbv-var(color, color-text-secondary, --fieldset-legend-color);
   }
 }
 

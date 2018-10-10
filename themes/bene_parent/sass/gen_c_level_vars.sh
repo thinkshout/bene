@@ -16,7 +16,7 @@ fi
 
 if [ "$2" == "" ]; then
     # Use default values
-    directorynames=("./sass/components" "./sass/layout")
+    directorynames=("./sass/components" "./sass/layout" "./sass/config")
 else
     directorynames=($2)
 fi
@@ -55,6 +55,8 @@ echo :root { >> $outfilename
 for directoryname in ${directorynames[@]}; do
 
  for x in $(ls $directoryname/*.scss); do
+  # only do this if it's not the mixins file or the cssvars output file
+  if [ $x != $directoryname/_02.mixins.scss ] && [ $x != $directoryname/_05.cssvars.scss ]; then
 
   # input will look like each outfilename followed by lines from that file that include 'set-bbv-var':
   #
@@ -124,6 +126,7 @@ for directoryname in ${directorynames[@]}; do
   sed 's/ *@include set-bbv-with-arg-before-var(\(.*\),[    ]*\(.*\),[    ]*\(.*\),[  ]*\(.*\));/\4: \2 var(--\3);/' \
   >> $outfilename;
 
+  fi
  done
 done
 

@@ -15,7 +15,7 @@ dependencies:
     - address
     - bene_core
     - datetime_range
-    - media
+    - media_entity
     - user
 id: node.event.search_result
 targetEntityType: node

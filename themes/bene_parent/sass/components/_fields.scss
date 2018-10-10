@@ -2,26 +2,26 @@
   margin-bottom: rem(24);
   margin-top: rem(16);
   h2 {
-    @include set-bbv-var(color, font-color-primary, --field--name-bene-intro-h2-font-color);
-    font-size: rem(32);
-    font-style: italic;
-    font-weight: 600;
+    @include set-bbv-var(color, font-color-primary, --field-name-bene-intro-h2-font-color);
+    @include set-bbv-var(font-size, font-size-accent, --field-name-bene-intro-h2-font-size);
+    @include set-bbv-var(font-style, font-style-italic, --field-name-bene-intro-h2-font-style);
+    @include set-bbv-var(font-weight, font-style-bold, --field-name-bene-intro-h2-font-weight);
     margin-top: rem(32);
   }
   h3 {
-    font-size: rem(20);
-    font-weight: 400;
+    @include set-bbv-var(font-size, font-size-small - 5rem, --field-name-bene-intro-h3-font-size);
+    @include set-bbv-var(font-weight, font-weight-normal, --field-name-bene-intro-h3-font-weight);
     margin-bottom: 0;
     margin-top: rem(18);
   }
   p {
-    font-size: rem(18);
-    font-weight: 300;
-    line-height: rem(32);
+    @include set-bbv-var(font-size, font-size-base + 2rem, --field-name-bene-intro-p-font-size);
+    @include set-bbv-var(font-weight, font-weight-light, --field-name-bene-intro-p-font-weight);
+    @include set-bbv-var(line-height, line-height-small, --field-name-bene-intro-p-line-height);
     margin-top: rem(12);
     @include mq(desktop) {
-      font-size: rem(22);
-      line-height: rem(38);
+      @include set-bbv-var(font-size, font-size-small, --field-name-bene-intro-p-desktop-font-size);
+      @include set-bbv-var(line-height, line-height-accent, --field-name-bene-intro-p-desktop-line-height);
     }
   }
 }

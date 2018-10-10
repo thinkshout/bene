@@ -5,7 +5,7 @@ dependencies:
     - core.entity_view_mode.media.paragraph
     - field.field.media.video.field_media_video_embed_field
     - field.field.media.video.media_tags
-    - media.type.video
+    - media_entity.bundle.video
   module:
     - video_embed_field
 id: media.video.paragraph

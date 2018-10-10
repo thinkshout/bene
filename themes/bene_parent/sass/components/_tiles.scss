@@ -1,11 +1,11 @@
 .paragraph--type--tiles {
   @include set-bbv-var(background-color, color-primary-first, --paragraph-tile-background-color);
   &> .field--name-field-title {
-    font-size: rem(24);
-    font-weight: 400;
-    line-height: rem(36);
+    @include set-bbv-var(font-size, font-size-small, --paragraph-tile-title-font-size);
+    @include set-bbv-var(font-weight, font-weight-normal, --paragraph-tile-title-font-weight);
+    @include set-bbv-var(line-height, line-height-accent, --paragraph-tile-title-line-height);
     margin: rem(18) auto rem(0);
-    text-align: center;
+    @include set-bbv-var(text-align, hero-alignment, --paragraph-tile-title-text-align);
 
     @include mq(desktop) {
       margin: rem(36) auto rem(0);
@@ -26,6 +26,7 @@
       display: flex;
       flex: 1 1 auto;
       margin-bottom: rem(24);
+      @include set-bbv-var(text-align, hero-alignment, --paragraph-tile-item-text-align);
       text-align: center;
 
       @include mq(phablet) {
@@ -63,23 +64,23 @@
         }
       }
       .field--name-field-title {
-        font-size: rem(20);
-        font-weight: 600;
-        line-height: rem(30);
+        @include set-bbv-var(font-size, font-size-small - 4rem, --paragraph-tile-field-name-field-tiles-item-title-font-size);
+        @include set-bbv-var(font-weight, font-weight-normal, --paragraph-tile-field-name-field-tiles-item-title-font-weight);
+        @include set-bbv-var(line-height, line-height-small, --paragraph-tile-field-name-field-tiles-item-title-line-height);
         margin-top: rem(28);
       }
 
       .field--name-field-text p {
         @include set-bbv-var(color, color-primary-second, --paragraph-tile-field-name-field-tiles-item-field-text-p-color);
-        line-height: rem(24);
+        @include set-bbv-var(line-height, line-height-small - rem(6), --paragraph-tile-field-name-field-tiles-item-field-text-p-line-height);
         margin-bottom: rem(12);
         margin-top: rem(12);
       }
 
       .field--name-field-link a {
         display: inline-block;
-        font-size: rem(14);
-        font-weight: 600;
+        @include set-bbv-var(font-size, font-size-base - 2rem, --paragraph-tile-field-name-field-tiles-item-field-text-link-font-size);
+        @include set-bbv-var(font-weight, font-weight-normal, --paragraph-tile-field-name-field-tiles-item-field-text-link-font-weight);
         margin-top: rem(12);
       }
     }

@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - media
+    - media_entity
     - node
 id: node.bene_header_media
 field_name: bene_header_media

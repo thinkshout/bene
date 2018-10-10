@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Media tags'
+vid: media_tags
+description: 'Tags for organizing media items'
+hierarchy: 0
+weight: 0

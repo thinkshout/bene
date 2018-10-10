@@ -1,10 +1,10 @@
 // Default Styles (Mobile First!)
 
 .block-system-branding-block {
-  font-size: rem(18);
-  font-style: italic;
-  font-weight: 300;
-  text-align-last: center;
+  @include set-bbv-var(font-size, font-size-base + rem(2), --branding-block-font-size);
+  @include set-bbv-var(font-style, font-style-italic, --branding-block-font-style);
+  @include set-bbv-var(font-weight, font-weight-normal, --branding-block-font-weight);
+  @include set-bbv-var(text-align-last, hero-alignment, --branding-block-text-align-last);
 }
 .mobile-menu-toggle {
   display: inline-block;
@@ -29,8 +29,7 @@
       z-index: 9999;
       &:before,
       &:after {
-        background: bbv(background-color-secondary); // in case css variables are not supported
-        background: var(--general-secondary-background-color);
+        @include set-bbv-var(background, background-color-secondary, --mobile-menu-toggle-div-span-after-background-color);
         content: '';
         height: 100%;
         left: 0;
@@ -45,12 +44,10 @@
       }
     }
     &:hover span {
-      background: bbv(background-color-tertiary); // in case css variables are not supported
-      background: var(--general-tertiary-background-color);
+      @include set-bbv-var(background, background-color-tertiary, --mobile-menu-toggle-div-hover-background-color);
       &:before,
       &:after {
-        background: bbv(background-color-tertiary); // in case css variables are not supported
-        background: var(--general-tertiary-background-color);
+        @include set-bbv-var(background, background-color-tertiary, --mobile-menu-toggle-div-hover-after-background-color);
       }
     }
   }
@@ -59,8 +56,7 @@
       background-color: transparent;
       &:before,
       &:after {
-        background: bbv(background-color-tertiary); // in case css variables are not supported
-        background: var(--general-tertiary-background-color);
+        @include set-bbv-var(background, background-color-tertiary, --mobile-menu-toggle-active-background-color);
         transform: rotate(45deg) translateY(0);
         transition: transform 0.3s;
       }
@@ -86,9 +82,8 @@
     z-index: 20;
   }
   .menu a {
-    border-bottom: 1px solid bbv(font-color-accent); // in case css variables are not supported
-    border-bottom: 1px solid var(--general-font-accent-color);
-    @include set-bbv-var(color, font-color-link, --mobile-nav-menu-link-color);
+    @include set-bbv-with-arg-before-var(border-bottom, 1px solid, color-text-link-over-color-primary-background, --mobile-nav-menu-link-border-bottom);
+    @include set-bbv-var(color, color-text-link-over-color-primary-background, --mobile-nav-menu-link-color);
     display: inline-block;
     font-size: rem(18);
     font-weight: 600;
@@ -108,14 +103,14 @@
       width: rem(9);
     }
     &.is-active {
-      @include set-bbv-var(color, font-color-hover-link, --mobile-nav-menu-link-active-color);
+      @include set-bbv-var(color, color-text-link-over-color-primary-background-hover, --mobile-nav-menu-link-active-color);
     }
   }
 }
 .mobile-nav .menu--utility .menu li {
   a {
-    font-size: rem(15);
-    font-weight: 400;
+    @include set-bbv-var(font-size, font-size-base, --mobile-nav-menu-li-link-font-size);
+    @include set-bbv-var(font-weight, font-weight-normal, --mobile-nav-menu-li-link-font-weight);
     padding: rem(15) rem(33);
     &:after {
       top: rem(15);
@@ -123,10 +118,10 @@
   }
   &:last-child a {
     @include set-bbv-var(background-color, background-color-secondary, --mobile-nav-menu-li-last-child-link-background-color);
-    @include set-bbv-var(color, font-color-primary, --mobile-nav-menu-li-last-child-link-text-color);
-    font-weight: 600;
+    @include set-bbv-var(color, color-text-link-over-color-secondary-background, --mobile-nav-menu-li-last-child-link-text-color);
+    @include set-bbv-var(font-weight, font-weight-bold, --mobile-nav-menu-li-last-child-link-font-weight);
     &.is-active {
-      @include set-bbv-var(color, font-color-accent, --mobile-nav-menu-li-last-child-link-active-text-color);
+      @include set-bbv-var(color, color-text-link-over-color-secondary-background-hover, --mobile-nav-menu-li-last-child-link-active-text-color);
     }
   }
 }
@@ -156,21 +151,22 @@
   }
   .desktop-nav .menu--utility .menu-item {
     a {
-      @include set-bbv-var(color, font-color-link, --desktop-nav-menu-utility-menu-item-link-color);
-      font-size: rem(14);
+      @include set-bbv-var(color, color-text-menu-over-color-primary-background, --desktop-nav-menu-utility-menu-item-link-color);
+      @include set-bbv-var(font-size, font-size-base - rem(2), --desktop-nav-menu-utility-menu-item-font-size);
       &:hover, &:focus, &.is-active {
-        @include set-bbv-var(color, font-color-hover-link, --desktop-nav-menu-utility-menu-item-link-hover-color);
+        @include set-bbv-var(color, color-text-menu-over-color-primary-background-hover, --desktop-nav-menu-utility-menu-item-link-hover-color);
       }
     }
     &:last-child a {
       @include button;
-      @include set-bbv-var(color, font-color-accent, --desktop-nav-menu-utility-menu-item-last-child-link-text-color);
-      @include set-bbv-var(background-color, background-color-tertiary, --desktop-nav-menu-utility-menu-item-last-child-link-background-color);
+      @include set-bbv-var(color, button-primary-text-and-outline-color, --desktop-nav-menu-utility-menu-item-last-child-link-text-color);
+      @include set-bbv-var(background-color, button-primary-color-background, --desktop-nav-menu-utility-menu-item-last-child-link-background-color);
       &:hover {
-        @include set-bbv-var(background-color, background-color-secondary, --desktop-nav-menu-utility-menu-item-last-child-link-hover-background-color);
+        @include set-bbv-var(color, button-primary-text-and-outline-hover-color, --desktop-nav-menu-utility-menu-item-last-child-link-hover-text-color);
+        @include set-bbv-var(background-color, button-primary-hover-color-background, --desktop-nav-menu-utility-menu-item-last-child-link-hover-background-color);
       }
-      font-size: rem(12);
-      font-weight: 700;
+      @include set-bbv-var(font-size, font-size-base - rem(2), --desktop-nav-menu-utility-menu-item-last-child-link-font-size);
+      @include set-bbv-var(font-weight, font-weight-bold, --desktop-nav-menu-utility-menu-item-last-child-link-font-weight);
       letter-spacing: 0;
       padding: rem(10) rem(15);
       top: 6px;
@@ -178,12 +174,12 @@
   }
   .desktop-nav .menu--main .menu-item {
     a {
-      @include set-bbv-var(color, font-color-tertiary, --desktop-nav-main-menu-item-link-text-color);
-      font-weight: 700;
+      @include set-bbv-var(color, color-text-secondary-menu-over-color-primary-background, --desktop-nav-main-menu-item-link-text-color);
+      @include set-bbv-var(font-weight, font-weight-bold, --desktop-nav-main-menu-font-weight);
       letter-spacing: rem(0.5);
       text-transform: uppercase;
       &:hover, &:focus, &.is-active {
-        @include set-bbv-var(color, font-color-hover-link, --desktop-nav-main-menu-item-link-hover-focus-active-text-color);
+        @include set-bbv-var(color, color-text-secondary-menu-hover-over-color-primary-background, --desktop-nav-main-menu-item-link-hover-focus-active-text-color);
       }
       &.is-active {
         cursor: default;

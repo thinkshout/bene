@@ -11,7 +11,7 @@ dependencies:
   - entity_browser
   - entity_reference_revisions
   - field
-  - media
+  - media_entity
   - menu_ui
   - metatag
   - node

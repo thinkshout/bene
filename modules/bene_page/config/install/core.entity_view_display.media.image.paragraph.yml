@@ -3,9 +3,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.paragraph
-    - field.field.media.image.field_media_image
+    - field.field.media.image.image
     - field.field.media.image.media_tags
-    - media.type.image
+    - media_entity.bundle.image
     - responsive_image.styles.full_width_feature
   module:
     - responsive_image
@@ -14,7 +14,7 @@ targetEntityType: media
 bundle: image
 mode: paragraph
 content:
-  field_media_image:
+  image:
     type: responsive_image
     weight: 0
     label: hidden

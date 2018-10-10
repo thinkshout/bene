@@ -28,61 +28,148 @@ $bene-a-level-variables: (
 }
 
 $bene-buildup-variables: (
-  color-primary-first: bav(bene-bright-blue),
-  color-primary-second: bav(bene-main-blue),
-  color-primary-third: bav(bene-dark-grey),
-  color-primary-fourth: bav(bene-main-white),
+  //color-primary-first: bav(bene-bright-blue),
+  //color-primary-second: bav(bene-main-blue),
+  //color-primary-third: bav(bene-dark-grey),
+  //color-primary-fourth: bav(bene-main-white),
+  //
+  //color-secondary-first: bav(bene-main-black),
+  //color-secondary-second: bav(bene-medium-grey),
+  //color-secondary-third: bav(bene-placeholder-grey),
+  //color-secondary-fourth: bav(bene-light-grey),
 
-  color-secondary-first: bav(bene-main-black),
-  color-secondary-second: bav(bene-medium-grey),
-  color-secondary-third: bav(bene-placeholder-grey),
-  color-secondary-fourth: bav(bene-light-grey),
+  //background-color-primary: bav(bene-main-white),
+  //background-color-secondary: bav(bene-bright-blue),
+  //background-color-tertiary: bav(bene-main-blue),
+  //background-color-hover: bav(bene-light-grey),
+  //
+  //disabled-color: bav(bene-placeholder-grey),
+  //disabled-border-color: lighten(bav(bene-placeholder-grey), 20%),
+  //
+  //button-size-large: rem(56),
+  //button-size-medium: rem(30),
+  //button-size-small: rem(27),
+  //
+  //font-family-primary: bav(bene-sans-font),
+  //font-family-secondary: bav(bene-sans-font),
+  //
+  //font-color-primary: bav(bene-main-black),
+  //font-color-secondary: bav(bene-main-white),
+  //font-color-tertiary: bav(bene-dark-grey),
+  //font-color-accent: bav(bene-bright-blue),
+  //font-color-link: bav(bene-bright-blue),
+  //font-color-hover-link: bav(bene-main-blue),
+  //
+  //gradient-direction: -180deg,
+  //gradient-start-color: rgba(bav(bene-main-blue), 1), // 0.00 = transparent
+  //gradient-end-color: rgba(bav(bene-bright-blue), 1), //  1 = opaque
+  //preferred-border-radius: 0px,
+  //shadow-transparent-color: bav(bene-shadow),
+  //
+  //logo-size: rem(170),
+  //social-media-icon-size: rem(36),
+  //input-height: bav(bene-input-height), // can we change to rem?
+  //input-height-small: bav(bene-input-height-small),
 
-  background-color-primary: bav(bene-main-white),
-  background-color-secondary: bav(bene-bright-blue),
-  background-color-tertiary: bav(bene-main-blue),
-  background-color-hover: bav(bene-light-grey),
 
-  disabled-color: bav(bene-placeholder-grey),
-  disabled-border-color: lighten(bav(bene-placeholder-grey), 20%),
+  background-color-primary: bav(bene-main-white), // used for (header, footer)
+  // Text and foreground colors that go with the above background color:
+        color-text-title-over-color-primary-background: bav(bene-main-blue),
+        color-text-subtitle-over-color-primary-background: bav(bene-dark-grey),
+        color-text-over-color-primary-background: bav(bene-main-black),
+        color-text-link-over-color-primary-background: bav(bene-bright-blue),
+        color-text-link-over-color-primary-background-hover: bav(bene-main-blue),
+        color-text-menu-over-color-primary-background: bav(bene-dark-grey),
+        color-text-menu-over-color-primary-background-hover: bav(bene-main-blue),
+        color-text-menu-over-color-primary-background-disabled: bav(bene-light-grey),
+        color-text-secondary-menu-over-color-primary-background: bav(bene-bright-blue),
+        color-text-secondary-menu-hover-over-color-primary-background: bav(bene-main-blue),
+        color-text-secondary-menu-disabled-over-color-primary-background: bav(bene-light-grey),
 
-  button-size-large: rem(56),
-  button-size-medium: rem(30),
-  button-size-small: rem(27),
+  background-color-secondary: bav(bene-main-blue), // (3-up background, newsletter signup background, block quote background, photo credit paragraph background)
+  // Text and foreground colors that go with the color above:
+        color-text-title-over-color-secondary-background: bav(bene-main-white),
+        color-text-subtitle-over-color-secondary-background: bav(bene-light-grey),
+        color-text-over-color-secondary-background: bav(bene-main-white),
+        color-text-link-over-color-secondary-background: bav(bene-bright-blue),
+        color-text-link-over-color-secondary-background-hover: lighten(bav(bene-bright-blue), 20%),
 
-  font-family-primary: bav(bene-sans-font),
-  font-family-secondary: bav(bene-sans-font),
+  background-color-tertiary: bav(bene-light-grey), // (info block background)
+  // Text and foreground colors that go with the color above:
+        color-text-title-over-color-tertiary-background: bav(bene-main-blue),
+        color-text-subtitle-over-color-tertiary-background: bav(bene-dark-grey),
+        color-text-over-color-tertiary-background: bav(bene-main-black),
+        color-text-link-over-color-tertiary-background: bav(bene-bright-blue),
+        color-text-link-over-color-tertiary-background-hover: bav(bene-main-blue),
 
-  font-size-large: rem(61),
-  font-size-medium: rem(50),
-  font-size-accent: rem(30),
-  font-size-small: rem(25),
-  font-size-base: rem(16), // Base font size for the body
+  background-color-inset: bav(bene-main-white), // (3-up under photo)
+  // Text and foreground colors that go with the color above:
+        color-text-title-over-color-inset-background: bav(bene-main-blue),
+        color-text-subtitle-over-color-inset-background: bav(bene-dark-grey),
+        color-text-over-color-inset-background: bav(bene-main-black),
+        color-text-link-over-color-inset-background: bav(bene-bright-blue),
+        color-text-link-over-color-inset-background-hover: bav(bene-main-blue),
 
-  font-color-primary: bav(bene-main-black),
-  font-color-secondary: bav(bene-main-white),
-  font-color-tertiary: bav(bene-dark-grey),
-  font-color-accent: bav(bene-bright-blue),
-  font-color-link: bav(bene-bright-blue),
-  font-color-hover-link: bav(bene-main-blue),
+  background-color-photo-overlay: bav(bene-shadow),
+  // Text and foreground colors that go with the color above:
+        color-text-title-over-color-photo-overlay-background: bav(bene-main-white),
+        color-text-subtitle-over-color-photo-overlay-background: bav(bene-main-white),
+        color-text-over-color-photo-overlay-background: bav(bene-main-white),
+        color-text-link-over-color-photo-overlay-background: bav(bene-bright-blue),
+        color-text-link-over-color-photo-overlay-background-hover: lighten(bav(bene-bright-blue), 20%),
 
-  font-weight-bold: bold,
-  font-weight-normal: normal,
-  font-weight-light: 100,
+  // Button Colors:
+        button-primary-color-background: bav(bene-bright-blue),
+        button-primary-hover-color-background: bav(bene-main-white),
+        button-primary-text-and-outline-color: bav(bene-main-white),
+        button-primary-text-and-outline-hover-color: bav(bene-bright-blue),
 
-  gradient-direction: -180deg,
-  gradient-start-color: rgba(bav(bene-main-blue), 1), // 0.00 = transparent
-  gradient-end-color: rgba(bav(bene-bright-blue), 1), //  1 = opaque
-  preferred-border-radius: 0px,
-  shadow-transparent-color: bav(bene-shadow),
+        button-secondary-color-background: bav(bene-main-blue),
+        button-secondary-color-hover-background: bav(main-white),
+        button-secondary-text-and-outline-color: bav(main-white),
+        button-secondary-text-and-outline-hover-color: bav(bene-main-blue),
 
-  logo-size: rem(170),
-  social-media-icon-size: rem(36),
-  input-height: bav(bene-input-height), // can we change to rem?
-  input-height-small: bav(bene-input-height-small),
+        button-tertiary-color-background: transparent,
+        button-tertiary-color-hover-background: bav(bene-main-blue),
+        button-tertiary-text-and-outline-color: bav(bene-main-white),
+        button-tertiary-text-and-outline-hover-color: bav(bene-main-white),
 
-  preferred-alignment: left,
-  hero-alignment: center,
+  // Button Characteristics:
+        button-height: rem(4),
+        preferred-border-radius: 0px,
+        social-media-icon-border-radius: 0px,
+        social-media-icon-size: rem(36),
+
+  // Text characteristics:
+        font-family-primary: bav(bene-sans-font),
+        font-family-secondary: bav(bene-sans-font),
+
+        font-style-normal: normal,
+        font-style-bold: bold,
+        font-style-italic: italic,
+
+        font-size-large: rem(61),
+        font-size-medium: rem(50),
+        font-size-accent: rem(30),
+        font-size-small: rem(25),
+        font-size-base: rem(16),
+
+        line-height-large: rem(72),
+        line-height-medium: rem(62),
+        line-height-accent: rem(38),
+        line-height-small: rem(30),
+        line-height-base: rem(20),
+
+        font-weight-bold: bold,
+        font-weight-normal: normal,
+        font-weight-light: 100,
+
+  // Other:
+        logo-size: rem(17),
+        input-height: rem(3),
+        input-height-small: rem(2),
+        preferred-alignment: left,
+        hero-alignment: center,
 
 );
 

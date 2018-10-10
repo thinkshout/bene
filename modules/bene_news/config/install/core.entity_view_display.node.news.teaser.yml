@@ -13,7 +13,7 @@ dependencies:
   module:
     - bene_core
     - datetime
-    - media
+    - media_entity
     - user
 id: node.news.teaser
 targetEntityType: node

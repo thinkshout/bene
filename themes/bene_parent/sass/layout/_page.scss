@@ -31,8 +31,7 @@
 
   .site-header {
     padding: 0 2%;
-    background-color: bbv(background-color-primary);
-    background-color: var(--header-background-color);
+    @include set-bbv-var(background-color, background-color-primary, --site-header-background-color);
   }
 
   .page-node-type-page,

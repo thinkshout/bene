@@ -1,0 +1,143 @@
+/**
+ * Instructions for building a bene theme:
+ * TODO: set these variables to match your contact sheet
+ *
+ * First-level variables. Do not use these except to define
+ * buildup css variables in the next section.
+ *
+ * Notice that the variable names are specific to the color
+ * they refer to... that means these can be thrown out and a
+ * whole new set of variables brought in for a new theme.
+ **/
+$bene-a-level-variables: (
+        main-white: #FFF,
+        sans-font: "'Open Sans', sans-serif",
+        // TODO: add your colors, fonts and other items here and change the font above to your own
+);
+
+// bav = bene a-level variable
+// access the above variables with this function
+@function bav($var-name) {
+  @return map-get($bene-a-level-variables, #{$var-name});
+}
+
+$bene-buildup-variables: (
+
+        // TODO: replace all these variables with your own color palette.
+        // TODO: it would be a boring website if everything was white!
+
+  // Background colors:
+  background-color-primary: bav(main-white), // used for (header, footer)
+  background-color-secondary: bav(main-white),// (3-up background, newsletter signup background, block quote background, photo credit paragraph background)
+  background-color-tertiary: bav(main-white), // (info block background)
+  background-color-inset: bav(main-white), // (3-up under photo)
+  background-color-photo-overlay: bav(main-white),
+
+  // Button Colors:
+  button-primary-color-background: bav(main-white),
+  button-secondary-color-background: bav(main-white),
+  button-tertiary-color-background: bav(main-white),
+  button-primary-hover-color-background: bav(main-white),
+  button-secondary-color-hover-background: bav(main-white),
+  button-tertiary-color-hover-background: bav(main-white),
+  button-primary-text-and-outline-color: bav(main-white),
+  button-secondary-text-and-outline-color: bav(main-white),
+  button-tertiary-text-and-outline-color: bav(main-white),
+
+  // Button Characteristics:
+  button-height: rem(4),
+  preferred-border-radius: 0px,
+  social-media-icon-border-radius: 0px,
+  social-media-icon-size: rem(36),
+
+  // Text and foreground colors:
+  color-text-title-over-color-primary-background: bav(main-white),
+  color-text-title-over-color-secondary-background: bav(main-white),
+  color-text-title-over-color-tertiary-background: bav(main-white),
+  color-text-title-over-color-inset-background: bav(main-white),
+  color-text-title-over-color-photo-overlay-background: bav(main-white),
+
+  color-text-subtitle-over-color-primary-background: bav(main-white),
+  color-text-subtitle-over-color-secondary-background: bav(main-white),
+  color-text-subtitle-over-color-tertiary-background: bav(main-white),
+  color-text-subtitle-over-color-inset-background: bav(main-white),
+  color-text-subtitle-over-color-photo-overlay-background: bav(main-white),
+
+  color-text-over-color-primary-background: bav(main-white),
+  color-text-over-color-secondary-background: bav(main-white),
+  color-text-over-color-tertiary-background: bav(main-white),
+  color-text-over-color-inset-background: bav(main-white),
+  color-text-over-color-photo-overlay-background: bav(main-white),
+
+  color-text-link-over-color-primary-background: bav(main-white),
+  color-text-link-over-color-primary-background-hover: bav(main-white),
+  color-text-link-over-color-secondary-background: bav(main-white),
+  color-text-link-over-color-secondary-background-hover: bav(main-white),
+  color-text-link-over-color-tertiary-background: bav(main-white),
+  color-text-link-over-color-tertiary-background-hover: bav(main-white),
+  color-text-link-over-color-inset-background: bav(main-white),
+  color-text-link-over-color-inset-background-hover: bav(main-white),
+  color-text-link-over-color-photo-overlay-background: bav(main-white),
+  color-text-link-over-color-photo-overlay-background-hover: bav(main-white),
+
+  color-text-menu-over-color-primary-background: bav(main-white),
+  color-text-menu-over-color-primary-background-hover: bav(main-white),
+  color-text-menu-over-color-primary-background-disabled: bav(main-white),
+  color-text-secondary-menu-over-color-primary-background: bav(main-white),
+  color-text-secondary-menu-hover-over-color-primary-background: bav(main-white),
+  color-text-secondary-menu-disabled-over-color-primary-background: bav(main-white),
+
+  // Text characteristics:
+  font-family-primary: bav(sans-font),
+  font-family-secondary: bav(sans-font),
+
+  font-size-large: rem(61),
+  font-size-medium: rem(50),
+  font-size-accent: rem(30),
+  font-size-small: rem(25),
+  font-size-base: rem(16),
+
+  font-weight-bold: bold,
+  font-weight-normal: normal,
+  font-weight-light: 100,
+
+  // Other:
+  logo-size: rem(17),
+  input-height: rem(3),
+  input-height-small: rem(2),
+  preferred-alignment: left,
+  hero-alignment: center,
+);
+
+// bbv = bene buildup variable
+// access the above variables with this function
+@function bbv($var-name) {
+  @return map-get($bene-buildup-variables, #{$var-name});
+}
+
+:root {
+  // place each item in bene-buildup-variables here so they are defined in root scope
+  // output of this loop will be (just a brief sampling):
+  // ...
+  //  --background-color-primary: #50CFE3;
+  //  --color-text-title-over-color-primary-background: #979797;
+  // ...
+  @each $name, $color-num in $bene-buildup-variables {
+    --#{$name}: #{$color-num};
+  }
+
+  // place additional overrides here. This is useful if you want to change just one
+  // occurrance of a color, but not all the places the color is used. You can find the
+  // variables that can be overriden in
+  // web/profiles/bene/themes/bene_parent/sass/config/_05.cssvars.scss
+  // you do not have to override any if you don't want to.
+  //
+  // for example you might override like this:
+  // --block-bene-footer-menu-link-color: var(--button-secondary-text-and-outline-color);
+  // and you can do calculations if necessary:
+  // --nice-select-option-min-height: calc( var(--input-height) - 2px);
+  // and you can keep it simple if that's preferred.
+  // --user-logged-in-messages-after-background-color: bav(main-white);
+  // or even
+  // --user-logged-in-messages-after-background-color: #ffffff;
+}
