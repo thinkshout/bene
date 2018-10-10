@@ -28,7 +28,7 @@ jobs:
             cgr "pantheon-systems/terminus:~1"
             cd /var/www/html
             which patch
-            composer create-project thinkshout/bene-project:dev-pantheon-fix /var/www/html/build --stability dev --no-interaction --no-install
+            composer create-project thinkshout/bene-project:dev-pantheon /var/www/html/build --stability dev --no-interaction --no-install
       - restore_cache:
           keys:
             - composer-v3-{{ checksum "composer.lock" }}
@@ -58,12 +58,3 @@ jobs:
             cd /var/www/html/build
             robo configure --db-name=drupal --db-user=drupal --db-pass=drupal --db-host=127.0.0.1
             robo install
-#           robo test --profile ci
-#      - deploy:
-#          command: |
-#            BRANCH_PATTERN='^[-0-9a-z]{1,11}$'
-#            if [[ ${CIRCLE_BRANCH} =~  $BRANCH_PATTERN ]]; then
-#              export PATH="./vendor/bin:../vendor/bin:/root/.composer/vendor/bin:$PATH"
-#              terminus auth:login --machine-token=$PANTHEON_TOKEN
-#              robo pantheon:deploy --y
-#            fi
