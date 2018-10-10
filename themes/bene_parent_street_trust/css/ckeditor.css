@@ -1,0 +1,185 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  /* Fix the character spacing for headings */ }
+
+h1 {
+  font-size: 3rem;
+  line-height: 3.875rem;
+  font-weight: 800; }
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.375rem;
+  font-weight: 400; }
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  font-weight: 600; }
+
+h4 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 700; }
+
+p,
+p.standard {
+  color: #000; /* in case css variables are not supported */
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  line-height: 1.9375rem;
+  font-weight: 400; }
+
+a {
+  -webkit-transition: color 0.3s linear, background-color 0.3s linear;
+  -moz-transition: color 0.3s linear, background-color 0.3s linear;
+  transition: color 0.3s linear, background-color 0.3s linear;
+  color: #129FB5; /* in case css variables are not supported */
+  color: var(--color-theme-primary);
+  cursor: pointer;
+  text-decoration: none; }
+  a:hover, a:active, a.nice-select.open {
+    color: #44d1e7; /* in case css variables are not supported */
+    color: var(--color-theme-primary-bright-lighten20);
+  }
+
+table a,
+li a,
+p a {
+  color: #129FB5; /* in case css variables are not supported */
+  color: var(--color-theme-primary); }
+  table a:hover, table a:active, table a.nice-select.open,
+  li a:hover,
+  li a:active,
+  li a.nice-select.open,
+  p a:hover,
+  p a:active,
+  p a.nice-select.open {
+    color: #44d1e7; /* in case css variables are not supported */
+    color: var(--color-theme-primary-bright-lighten20);
+  }
+
+a.button {
+  -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+  -moz-transition: background-color 0.3s linear, color 0.3s linear;
+  transition: background-color 0.3s linear, color 0.3s linear;
+  background-color: #000; /* in case css variables are not supported */
+  background-color: var(--color-background-darkest);
+  border-radius: 0.1875rem;
+  color: #FFF; /* in case css variables are not supported */
+  color: var(--color-text-inverse);
+  font-weight: 800;
+  display: inline-block;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  line-height: 1;
+  padding: 1.25rem 1.875rem;
+  position: relative;
+  text-transform: uppercase; }
+  a.button:hover {
+    background-color: #000; /* in case css variables are not supported */
+    background-color: var(--color-background-darkest);
+  }
+
+/* List bullets in content. */
+.text-formatted ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 0; }
+  .text-formatted ul li {
+    padding-bottom: 0.875rem;
+    padding-left: 2rem;
+    text-indent: -1.25rem;
+    color: #000; /* in case css variables are not supported */
+    color: var(--color-text-primary);
+  }
+    .text-formatted ul li:before {
+      color: #000; /* in case css variables are not supported */
+      color: var(--color-text-primary);
+      content: "•";
+      font-size: 1rem;
+      line-height: 1;
+      padding-right: 0.875rem;
+      position: relative; }
+
+ol {
+  padding-left: 1.625rem; }
+  ol li {
+    padding-bottom: 0.875rem;
+    padding-left: 0.375rem;
+    line-height: 1.4;
+    font-size: 1rem;
+    color: #000; /* in case css variables are not supported */
+    color: var(--color-text-primary);
+  }
+
+table, table.tablesaw {
+  border: 1px solid #D8D8D8; /* in case css variables are not supported */
+  border: 1px solid var(--color-text-light);
+  margin: 1.5rem 0;
+  table-layout: auto; }
+  table th, table tr, table td, table tr:first-child th, table.tablesaw th, table.tablesaw tr, table.tablesaw td, table.tablesaw tr:first-child th {
+    border: none;
+    color: #7C7C7C; /* in case css variables are not supported */
+    color: var(--color-text-medium-dark);
+    font-size: 0.875rem;
+    font-weight: 400;
+    padding: 1.125rem 2.625rem;
+    text-align: left; }
+    table th strong, table tr strong, table td strong, table tr:first-child th strong, table.tablesaw th strong, table.tablesaw tr strong, table.tablesaw td strong, table.tablesaw tr:first-child th strong {
+      font-weight: 600; }
+  table th, table tr:first-child th, table.tablesaw th, table.tablesaw tr:first-child th {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #7C7C7C; /* in case css variables are not supported */
+    color: var(--color-text-medium-dark);
+    font-size: 0.875rem;
+    margin: 0; }
+  table tr, table.tablesaw tr {
+    background-color: #FFF; /* in case css variables are not supported */
+    background-color: var(--color-background-default);
+  }
+  table th, table tr:nth-of-type(2n), table.tablesaw th, table.tablesaw tr:nth-of-type(2n) {
+    background-color: #D8D8D8; /* in case css variables are not supported */
+    background-color: var(--color-background-lightest);
+  }
+
+ul.menu {
+  list-style: none outside;
+  margin: 0;
+  padding: 0;
+  text-align: left; }
+  ul.menu .menu-item {
+    padding: 0; }
+
+fieldset {
+  border: none;
+  padding: 0; }
+  fieldset legend {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #5C5B5B; /* in case css variables are not supported */
+    color: var(--color-text-accent);
+  }
