@@ -206,5 +206,17 @@
   }
 }
 
+.block-bene-sub-navigation-block {
+  background-image: var(--interior-menu-background-gradient);
+  padding: 1.5rem 2%;
+  text-align: center;
+
+  ul.menu{
+    text-align: center;
+  }
+
+  ////// ADD CHILD STUFF HERE
+}
+
 // Extra Large Desktop: min-width: 1240px.
 @include mq(xl) {  }
