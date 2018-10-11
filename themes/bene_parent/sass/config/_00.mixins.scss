@@ -1,7 +1,7 @@
 
 // Used for settings CSS variables
 // usage: @include vars(color, primary-color);
-@mixin vars($property, $var, $arg-before: "") {
+@mixin vars($property, $var, $arg-before: null) {
   #{$property}: $arg-before #{map-get($vars, $var)};
   #{$property}: $arg-before var(--#{$var});
 }
