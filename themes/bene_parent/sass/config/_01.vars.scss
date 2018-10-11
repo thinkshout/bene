@@ -11,16 +11,16 @@ $vars: (
         color-text-hover-link-over-color-primary-background: #50CFE3,
         color-text-menu-over-color-primary-background: #5C5B5B,
         color-text-hover-menu-over-color-primary-background: #50CFE3,
-  //      color-text-menu-disabled-over-color-primary-background: #D8D8D8,
+        color-text-menu-disabled-over-color-primary-background: #D8D8D8,
         color-text-secondary-menu-over-color-primary-background: #50CFE3,
         color-text-hover-secondary-menu-over-color-primary-background: #129FB5,
   //      color-text-disabled-secondary-menu-over-color-primary-background: #D8D8D8,
 
-  background-color-secondary: #FFFFFF, // (3-up background, newsletter signup background, block quote background, photo credit paragraph background)
+  background-color-secondary: #50CFE3, // (3-up background, newsletter signup background, block quote background, photo credit paragraph background)
   // Text and foreground colors that go with the color above:
-  //      color-text-title-over-color-secondary-background: #129FB5,
+        color-text-title-over-color-secondary-background: #FFFFFF,
   //      color-text-subtitle-over-color-secondary-background: #D8D8D8,
-  //      color-text-over-color-secondary-background: #000000,
+        color-text-over-color-secondary-background: #000000,
   //      color-text-link-over-color-secondary-background: #129FB5,
   //      color-text-hover-link-over-color-secondary-background: lighten(#129FB5, 20%),
   //
@@ -78,18 +78,7 @@ $vars: (
   //      social-media-icon-border-radius: 0px,
   //      social-media-icon-size: rem(36),
 
-  /**
-     * Fonts
-     * Open+Sans:300,300i,400,600,700,800
-     *
-     * light: 300
-     * light italic: 300 + style: italic
-     * regular:      400
-     * semi-bold:    600
-     * bold:         700
-     * extrabold:    800
-     *
-     **/
+  // Primary font is used for menus
         primary-font-family:  "'Open Sans', sans-serif",
         primary-font-light:   '300',
         primary-font-regular: '400',
@@ -109,30 +98,31 @@ $vars: (
         primary-line-height-accent: rem(38),
         primary-line-height-small: rem(30),
         primary-line-height-base: rem(20),
+        primary-line-height-footnote: rem(16),
 
-  //      secondary-font-family: "'Open Sans', sans-serif",
-  //      secondary-font-light:  '300',
-  //      secondary-font-regular:'400',
-  //      secondary-font-medium: '600',
-  //      secondary-font-bold:   '700',
-  //      secondary-font-black:  '800',
+        title-font-family: "'Open Sans', sans-serif",
+  //      title-font-light:  '300',
+  //      title-font-regular:'400',
+  //      title-font-medium: '600',
+  //      title-font-bold:   '700',
+  //      title-font-black:  '800',
   //
-  //      secondary-font-size-large: rem(61),
-  //      secondary-font-size-medium: rem(50),
-  //      secondary-font-size-accent: rem(30),
-  //      secondary-font-size-small: rem(25),
-  //      secondary-font-size-base: rem(16),
+  //      title-font-size-large: rem(61),
+        title-font-size-medium: rem(50),
+        title-font-size-accent: rem(30),
+  //      title-font-size-small: rem(25),
+  //      title-font-size-base: rem(16),
   //
-  //      secondary-line-height-large: rem(72),
-  //      secondary-line-height-medium: rem(62),
-  //      secondary-line-height-accent: rem(38),
-  //      secondary-line-height-small: rem(30),
-  //      secondary-line-height-base: rem(20),
+  //      title-line-height-large: rem(72),
+  //      title-line-height-medium: rem(62),
+  //      title-line-height-accent: rem(38),
+  //      title-line-height-small: rem(30),
+  //      title-line-height-base: rem(20),
   //
   // Other:
   //      logo-size: rem(17),
-  //      input-height: rem(3),
-  //      input-height-small: rem(2),
+  //      input-height: 50px,
+  //      input-height-small: 36px,
         preferred-alignment: left,
         hero-alignment: center,
 
