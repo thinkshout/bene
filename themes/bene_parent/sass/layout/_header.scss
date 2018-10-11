@@ -1,22 +1,6 @@
 // Default Styles (Mobile First!)
 .site-header {
-  display: flex;
-  min-height: 101px;
-  .logo-wrapper {
-    align-items: center;
-    display: flex;
-  }
-  .desktop-nav,
-  .mobile-nav .menu {
-    display: none;
-  }
-  .mobile-nav {
-    align-items: center;
-    align-items: center;
-    display: flex;
-    flex: 1 1 auto;
-    justify-content: flex-end;
-  }
+  @extend %site-layout-header;
 }
 
 

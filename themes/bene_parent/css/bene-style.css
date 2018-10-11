@@ -37,7 +37,8 @@ html {
   --primary-line-height-accent: 2.375rem;
   --primary-line-height-small: 1.875rem;
   --primary-line-height-base: 1.25rem;
-  --preferred-alignment: left; }
+  --preferred-alignment: left;
+  --hero-alignment: center; }
 
 /**
  * First-level variables. Do not use these except to define
@@ -499,6 +500,21 @@ fieldset {
     color:  #50CFE3;
     color: var(--color-text-title-over-color-primary-background); }
 
+.site-header {
+  display: flex;
+  min-height: 101px; }
+  .site-header .logo-wrapper {
+    align-items: center;
+    display: flex; }
+  .site-header .desktop-nav,
+  .site-header .mobile-nav .menu {
+    display: none; }
+  .site-header .mobile-nav {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-end; }
+
 .inner {
   display: flex;
   flex: 1;
@@ -759,22 +775,6 @@ fieldset {
     flex-wrap: nowrap;
     flex: 0 1 40%;
     justify-content: flex-end; } }
-.site-header {
-  display: flex;
-  min-height: 101px; }
-  .site-header .logo-wrapper {
-    align-items: center;
-    display: flex; }
-  .site-header .desktop-nav,
-  .site-header .mobile-nav .menu {
-    display: none; }
-  .site-header .mobile-nav {
-    align-items: center;
-    align-items: center;
-    display: flex;
-    flex: 1 1 auto;
-    justify-content: flex-end; }
-
 @media (min-width: 769px) {
   .site-header {
     min-height: 8.3125rem; }
