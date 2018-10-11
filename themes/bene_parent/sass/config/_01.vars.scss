@@ -9,11 +9,11 @@ $vars: (
         color-text-over-color-primary-background: #000000,
         color-text-link-over-color-primary-background: #129FB5,
         color-text-hover-link-over-color-primary-background: #50CFE3,
-  //      color-text-menu-over-color-primary-background: #5C5B5B,
-  //      color-text-hover-menu-over-color-primary-background: #50CFE3,
+        color-text-menu-over-color-primary-background: #5C5B5B,
+        color-text-hover-menu-over-color-primary-background: #50CFE3,
   //      color-text-menu-disabled-over-color-primary-background: #D8D8D8,
-  //      color-text-secondary-menu-over-color-primary-background: #129FB5,
-  //      color-text-hover-secondary-menu-over-color-primary-background: #50CFE3,
+        color-text-secondary-menu-over-color-primary-background: #50CFE3,
+        color-text-hover-secondary-menu-over-color-primary-background: #129FB5,
   //      color-text-disabled-secondary-menu-over-color-primary-background: #D8D8D8,
   //
   background-color-secondary: #50CFE3, // (3-up background, newsletter signup background, block quote background, photo credit paragraph background)
@@ -57,11 +57,11 @@ $vars: (
   //      color-text-hover-link-over-color-photo-overlay-background: lighten(#129FB5, 20%),
   //
   // Button Colors:
-  //      button-primary-color-background: #129FB5,
-  //      button-primary-hover-color-background: #FFFFFF,
-  //      button-primary-text-and-outline-color: #FFFFFF,
-  //      button-primary-hover-text-and-outline-color: #129FB5,
-  //
+        button-primary-color-background: #129FB5,
+        button-primary-hover-color-background: #50CFE3,
+        button-primary-text-and-outline-color: #FFFFFF,
+        button-primary-hover-text-and-outline-color: #FFFFFF,
+
   //      button-secondary-color-background: #50CFE3,
   //      button-secondary-color-hover-background: #FFFFFF,
   //      button-secondary-text-and-outline-color: #FFFFFF,
@@ -91,7 +91,7 @@ $vars: (
      *
      **/
         primary-font-family:  "'Open Sans', sans-serif",
-  //      primary-font-light:   '300',
+        primary-font-light:   '300',
         primary-font-regular: '400',
         primary-font-medium:  '600',
         primary-font-bold:    '700',
