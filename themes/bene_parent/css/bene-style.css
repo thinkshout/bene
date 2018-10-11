@@ -500,6 +500,44 @@ fieldset {
     color:  #50CFE3;
     color: var(--color-text-title-over-color-primary-background); }
 
+.region-footer .bene-contact-links .fieldset-wrapper {
+  display: flex;
+  flex-direction: column; }
+
+.block-bene-footer-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2.625rem;
+  margin-top: 1.5rem;
+  padding: 0 2%;
+  position: relative; }
+  .block-bene-footer-block .menu {
+    flex: 0 1 35%; }
+  .block-bene-footer-block .contact-links {
+    flex: 0 1 65%; }
+  .block-bene-footer-block .additional-footer {
+    flex: 0 1 100%; }
+  .block-bene-footer-block div.social-links {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    justify-content: center;
+    margin-top: 1.5rem; }
+    .block-bene-footer-block div.social-links span {
+      min-width: 25%;
+      text-align: center; }
+      .block-bene-footer-block div.social-links span a {
+        margin-left: 0; }
+  .block-bene-footer-block .copyright {
+    bottom: -2rem;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center; }
+
 .site-header {
   display: flex;
   min-height: 101px; }
@@ -711,44 +749,6 @@ fieldset {
         .page-node-type-listing-page .views-element-container .view-bene-events .view-content {
           flex: 1 1 73%;
           margin-left: 2%; } }
-
-.region-footer .bene-contact-links .fieldset-wrapper {
-  display: flex;
-  flex-direction: column; }
-
-.block-bene-footer-block {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 2.625rem;
-  margin-top: 1.5rem;
-  padding: 0 2%;
-  position: relative; }
-  .block-bene-footer-block .menu {
-    flex: 0 1 35%; }
-  .block-bene-footer-block .contact-links {
-    flex: 0 1 65%; }
-  .block-bene-footer-block .additional-footer {
-    flex: 0 1 100%; }
-  .block-bene-footer-block div.social-links {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1 1 auto;
-    justify-content: center;
-    margin-top: 1.5rem; }
-    .block-bene-footer-block div.social-links span {
-      min-width: 25%;
-      text-align: center; }
-      .block-bene-footer-block div.social-links span a {
-        margin-left: 0; }
-  .block-bene-footer-block .copyright {
-    bottom: -2rem;
-    left: 0;
-    position: absolute;
-    right: 0;
-    text-align: center; }
 
 @media (min-width: 769px) {
   .block-bene-footer-block .menu {

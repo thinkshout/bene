@@ -1,54 +1,10 @@
 // Default Styles (Mobile First!)
 .region-footer .bene-contact-links .fieldset-wrapper {
-  display: flex;
-  flex-direction: column;
+  @extend %region-footer-layout;
 }
 
 .block-bene-footer-block {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: rem(42);
-  margin-top: rem(24);
-  padding: 0 2%;
-  position: relative;
-
-  .menu {
-    flex: 0 1 35%;
-  }
-
-  .contact-links {
-    flex: 0 1 65%;
-  }
-
-  .additional-footer {
-    flex: 0 1 100%;
-  }
-
-  div.social-links {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1 1 auto;
-    justify-content: center;
-    margin-top: rem(24);
-    span {
-      min-width: 25%;
-      text-align: center;
-      a {
-        margin-left: 0;
-      }
-    }
-  }
-
-  .copyright {
-    bottom: rem(-32);
-    left: 0;
-    position: absolute;
-    right: 0;
-    text-align: center;
-  }
+  @extend %footer-block-layout;
 }
 
 // Specific ranges - use sparingly.
