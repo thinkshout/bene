@@ -1,8 +1,8 @@
 .paragraph--type--media {
-  font-size: rem(14);
+  @include vars(font-size, primary-font-size-footnote);
   font-style: italic;
   margin: rem(24) 0;
-  text-align: center;
+  @include vars(text-align, hero-alignment);
   width: 100%;
   img {
     max-width: 100%;
@@ -14,7 +14,7 @@
     margin: rem(16) 0;
   }
   figcaption {
-    font-size: rem(14);
+    @include vars(font-size, primary-font-size-footnote);
     font-style: italic;
   }
   .embedded-entity.align-left,
@@ -40,7 +40,7 @@
   blockquote {
     margin: rem(32) auto;
     max-width: 80%;
-    text-align: center;
+    @include vars(text-align, hero-alignment);
     p {
       color: bbv(font-color-primary); // in case css variables are not supported
       color: var(--general-font-primary-color);
@@ -87,7 +87,7 @@
   min-height: 25vw;
   padding: rem(24) rem(24) rem(36) rem(24);
   position: relative;
-  text-align: center;
+  @include vars(text-align, hero-alignment);
   width: 100vw;
   max-width: 100%;
   &:before {

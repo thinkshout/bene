@@ -47,7 +47,7 @@ body.user-logged-in .region.region-content {
     padding: 0.25em 0;
     position: relative;
     right: 6px;
-    text-align: left;
+    @include vars(text-align, preferred-alignment);
     top: -1px;
     white-space: nowrap;
     li {
@@ -135,7 +135,7 @@ body.user-logged-in .region.region-content {
       width: rem(30);
       @include mq(desktop) {
         height: rem(38);
-        line-height: rem(38);
+        @include vars(line-height, primary-line-height-accent);
       }
       span {
         @include transform(rotate(180deg));

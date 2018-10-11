@@ -32,7 +32,7 @@
   h2, p, a {
     margin: 0 auto;
     max-width: 94%;
-    text-align: center;
+    @include vars(text-align, hero-alignment);
   }
   label {
     color: bbv(font-color-tertiary); // in case css variables are not supported

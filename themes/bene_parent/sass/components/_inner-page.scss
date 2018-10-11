@@ -18,7 +18,7 @@
     margin-top: 0;
 
     @include mq(mobile) {
-      font-size: rem(32);
+      @include vars(font-size, primary-font-size-accent);
     }
   }
 
@@ -48,7 +48,7 @@
     line-height: normal;
 
     @include mq(mobile) {
-      font-size: rem(20);
+      @include vars(font-size, primary-font-size-small);
     }
 
     @include mq(desktop) {

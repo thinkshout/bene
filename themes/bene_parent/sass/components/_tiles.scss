@@ -6,7 +6,7 @@
     font-weight: 400;
     line-height: rem(36);
     margin: rem(18) auto rem(0);
-    text-align: center;
+    @include vars(text-align, hero-alignment);
 
     @include mq(desktop) {
       margin: rem(36) auto rem(0);
@@ -27,7 +27,7 @@
       display: flex;
       flex: 1 1 auto;
       margin-bottom: rem(24);
-      text-align: center;
+      @include vars(text-align, hero-alignment);
 
       @include mq(phablet) {
         flex: 0 1 calc(50% - 1rem);
@@ -66,9 +66,9 @@
         }
       }
       .field--name-field-title {
-        font-size: rem(20);
+        @include vars(font-size, primary-font-size-small);
         font-weight: 600;
-        line-height: rem(30);
+        @include vars(line-height, primary-line-height-small);
         margin-top: rem(28);
       }
 
@@ -82,7 +82,7 @@
 
       .field--name-field-link a {
         display: inline-block;
-        font-size: rem(14);
+        @include vars(font-size, primary-font-size-footnote);
         font-weight: 600;
         margin-top: rem(12);
       }

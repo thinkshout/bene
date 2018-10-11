@@ -1,7 +1,6 @@
 .block-hero {
   position: relative;
-  background-color: bbv(background-color-tertiary); // in case css variables are not supported
-  background-color: var(--general-tertiary-background-color);
+  @include vars(background-color, background-color-secondary);
 
   h1 {
     font-size: rem(50);
@@ -12,8 +11,8 @@
 
     @include mq(mobile) {
       flex: 0 1 100%;
-      text-align: left;
-      font-size: rem(32);
+      @include vars(text-align, preferred-alignment);
+      @include vars(font-size, primary-font-size-accent);
     }
 
     @include mq(tablet) {

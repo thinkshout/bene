@@ -13,7 +13,7 @@
       margin-top: rem(12);
       @include mq(desktop) {
         font-size: rem(22);
-        line-height: rem(38);
+        @include vars(line-height, primary-line-height-accent);
       }
     }
   }

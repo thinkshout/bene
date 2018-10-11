@@ -144,7 +144,7 @@ $ns-arrow_color: $ns-gray !default;
     outline: none;
     padding-left: $ns-dropdown_padding;
     padding-right: $ns-dropdown_padding + 11;
-    text-align: left;
+    @include vars(text-align, preferred-alignment);
     transition: all 0.2s;
     width: 100%;
     &:hover, &.focus, &.selected.focus {

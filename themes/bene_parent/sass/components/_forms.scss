@@ -8,7 +8,7 @@ input[type="search"], textarea {
   box-sizing: border-box;
   color: bbv(color-primary-first);
   color: var(--form-input-font-color);
-  font-size: rem(16);
+  @include vars(font-size, primary-font-size-base);
   font-weight: 600;
   height: rem(50);
   padding: rem(18) rem(50) rem(18) rem(22);
@@ -61,7 +61,7 @@ input[type="search"], textarea {
       color: transparent;
       content: "✓";
       display: inline-block;
-      font-size: rem(32);
+      @include vars(font-size, primary-font-size-accent);
       height: rem(24);
       left: 0;
       line-height: 1;
@@ -109,7 +109,7 @@ textarea {
   box-sizing: border-box;
   color: bbv(color-primary-first);
   color: var(--form-input-textarea-color);
-  font-size: rem(16);
+  @include vars(font-size, primary-font-size-base);
   font-weight: 600;
   height: rem(50);
   padding: rem(18) rem(50) rem(18) rem(22);
@@ -136,7 +136,7 @@ textarea {
 }
 .user-login-form {
   .form-item {
-    text-align: left;
+    @include vars(text-align, preferred-alignment);
   }
   .description {
     display: none;

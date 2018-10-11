@@ -10,7 +10,7 @@
     a {
       color: bbv(color-text-primary);
       color: var(--footer-menu-link-color);
-      font-size: rem(14);
+      @include vars(font-size, primary-font-size-footnote);
       font-weight: 600;
       &:hover, &:focus, &.is-active {
         color: bbv(color-primary-first); // in case css variables are not supported
@@ -19,7 +19,7 @@
     }
 
     .menu-item {
-      line-height: rem(30);
+      @include vars(line-height, primary-line-height-small);
 
       a {
         @include font-style('bold'); // font-menu-primary
@@ -37,7 +37,7 @@
   .contact-links .additional-contact p,
   .contact-links .additional-footer p {
     @include font-style('regular');
-    font-size: rem(14);
+    @include vars(font-size, primary-font-size-footnote);
     line-height: rem(25);
   }
 
@@ -57,7 +57,7 @@
 
   .additional-footer {
     p {
-      font-size: rem(14);
+      @include vars(font-size, primary-font-size-footnote);
       margin: 0 rem(5) 0;
     }
   }
