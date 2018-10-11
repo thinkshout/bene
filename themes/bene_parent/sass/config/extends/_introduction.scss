@@ -1,0 +1,18 @@
+%intro-block {
+  @include vars(background-color, background-color-inset);
+
+  h1, h2, h3, h4, h5, a{
+    @include vars(font-family, title-font-family);
+    @include vars(font-size, title-font-size-medium);
+    @include vars(line-height, title-line-height-medium);
+    margin: 50px 0;
+    @include vars(color, color-text-title-over-color-inset-background);
+  }
+
+  span, p {
+    padding: 0 100px;
+    @include vars(font-family, sentence-font-family);
+    @include vars(color, color-text-over-color-inset-background);
+  }
+
+}

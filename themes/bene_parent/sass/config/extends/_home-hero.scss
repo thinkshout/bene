@@ -20,28 +20,28 @@
   }
 
   .field--name-bene-lead {
-    @include vars(font-size, primary-font-size-small);
+    @include vars(font-size, title-font-size-small);
     margin-bottom: 0.5rem;
     position: relative;
     z-index: 1;
 
     @include mq(mobile) {
-      @include vars(font-size, primary-font-size-base);
-      @include vars(line-height, primary-line-height-base);
+      @include vars(font-size, title-font-size-base);
+      @include vars(line-height, title-line-height-base);
       padding-top: 7rem;
     }
   }
 
   .field--name-bene-title {
-    @include vars(font-size, primary-font-size-medium);
+    @include vars(font-size, title-font-size-medium);
     margin: 0 auto 2rem;
     max-width: rem(900);
     position: relative;
     z-index: 1;
-    @include vars(line-height, primary-line-height-medium);
+    @include vars(line-height, title-line-height-medium);
 
     @include mq(mobile) {
-      @include vars(font-size, primary-font-size-small); // was rem(24)
+      @include vars(font-size, title-font-size-small); // was rem(24)
     }
   }
 
@@ -54,7 +54,7 @@
       @include vars(color, button-secondary-text-and-outline-color);
       @include vars(background-color, button-secondary-color-background);
       padding: 1rem 2rem;
-      @include vars(font-size, primary-font-size-footnote);
+      @include vars(font-size, title-font-size-footnote);
       @include font-style('bold');
       text-transform: uppercase;
 

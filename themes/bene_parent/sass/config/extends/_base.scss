@@ -14,33 +14,33 @@
 }
 
 %h1 {
-  @include vars(font-size, primary-font-size-medium);
-  @include vars(line-height, primary-line-height-medium);
-  @include vars(font-weight, primary-font-black);
+  @include vars(font-size, title-font-size-medium);
+  @include vars(line-height, title-line-height-medium);
+  @include vars(font-weight, title-font-black);
 }
 %h2 {
-  @include vars(font-size, primary-font-size-accent);
-  @include vars(line-height, primary-line-height-accent);
-  @include vars(font-weight, primary-font-regular);
+  @include vars(font-size, title-font-size-accent);
+  @include vars(line-height, title-line-height-accent);
+  @include vars(font-weight, title-font-regular);
 }
 %h3 {
-  @include vars(font-size, primary-font-size-small);
-  @include vars(line-height, primary-line-height-small);
-  @include vars(font-weight, primary-font-medium);
+  @include vars(font-size, title-font-size-small);
+  @include vars(line-height, title-line-height-small);
+  @include vars(font-weight, title-font-medium);
 }
 %h4 {
-  @include vars(font-size, primary-font-size-base);
-  @include vars(line-height, primary-line-height-base);
-  @include vars(font-weight, primary-font-bold);
+  @include vars(font-size, title-font-size-base);
+  @include vars(line-height, title-line-height-base);
+  @include vars(font-weight, title-font-bold);
   letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
 %p {
   @include vars(color, color-text-over-color-primary-background);
-  @include vars(font-size, primary-font-size-base);
-  @include vars(line-height, primary-line-height-small);
-  @include vars(font-weight, primary-font-regular);
+  @include vars(font-size, sentence-font-size-base);
+  @include vars(line-height, sentence-line-height-base);
+  @include vars(font-weight, sentence-font-regular);
 }
 
 %a {
@@ -143,7 +143,7 @@
   border: none;
   padding: 0;
   legend {
-    @include vars(font-size, primary-line-height-small);
+    @include vars(font-size, primary-font-size-accent);
     @include vars(font-weight, primary-font-bold);
     @include vars(color, color-text-title-over-color-primary-background);
   }

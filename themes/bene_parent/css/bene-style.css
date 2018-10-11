@@ -28,7 +28,9 @@ html {
   --color-text-over-color-secondary-background: #000000;
   --background-color-tertiary: #D8D8D8;
   --background-color-quaternary: #129FB5;
-  --background-color-inset: #FFFFFF;
+  --background-color-inset: #129FB5;
+  --color-text-title-over-color-inset-background: #50CFE3;
+  --color-text-over-color-inset-background: #000000;
   --background-color-photo-overlay: rgba(68, 68, 68, 0.11);
   --button-primary-color-background: #129FB5;
   --button-primary-hover-color-background: #50CFE3;
@@ -45,19 +47,30 @@ html {
   --primary-font-medium: 600;
   --primary-font-bold: 700;
   --primary-font-black: 800;
-  --primary-font-size-medium: 3rem;
   --primary-font-size-accent: 2rem;
   --primary-font-size-small: 1.25rem;
   --primary-font-size-base: 1rem;
   --primary-font-size-footnote: 0.875rem;
-  --primary-line-height-medium: 3.875rem;
   --primary-line-height-accent: 2.375rem;
   --primary-line-height-small: 1.875rem;
   --primary-line-height-base: 1.25rem;
   --primary-line-height-footnote: 1rem;
   --title-font-family: 'Open Sans', sans-serif;
+  --title-font-regular: 400;
+  --title-font-medium: 600;
+  --title-font-bold: 700;
+  --title-font-black: 800;
   --title-font-size-medium: 3.125rem;
   --title-font-size-accent: 1.875rem;
+  --title-font-size-small: 1.5625rem;
+  --title-font-size-base: 1rem;
+  --title-line-height-medium: 3.875rem;
+  --title-line-height-accent: 2.375rem;
+  --title-line-height-small: 1.875rem;
+  --title-line-height-base: 1.25rem;
+  --sentence-font-family: 'Open Sans', sans-serif;
+  --sentence-font-regular: 400;
+  --sentence-line-height-base: 1.875rem;
   --preferred-alignment: left;
   --hero-alignment: center; }
 
@@ -347,36 +360,36 @@ h6 {
   /* Fix the character spacing for headings */ }
 
 h1 {
-  font-size:  3rem;
-  font-size: var(--primary-font-size-medium );
+  font-size:  3.125rem;
+  font-size: var(--title-font-size-medium );
   line-height:  3.875rem;
-  line-height: var(--primary-line-height-medium );
+  line-height: var(--title-line-height-medium );
   font-weight:  800;
-  font-weight: var(--primary-font-black ); }
+  font-weight: var(--title-font-black ); }
 
 h2 {
-  font-size:  2rem;
-  font-size: var(--primary-font-size-accent );
+  font-size:  1.875rem;
+  font-size: var(--title-font-size-accent );
   line-height:  2.375rem;
-  line-height: var(--primary-line-height-accent );
+  line-height: var(--title-line-height-accent );
   font-weight:  400;
-  font-weight: var(--primary-font-regular ); }
+  font-weight: var(--title-font-regular ); }
 
 h3 {
-  font-size:  1.25rem;
-  font-size: var(--primary-font-size-small );
+  font-size:  1.5625rem;
+  font-size: var(--title-font-size-small );
   line-height:  1.875rem;
-  line-height: var(--primary-line-height-small );
+  line-height: var(--title-line-height-small );
   font-weight:  600;
-  font-weight: var(--primary-font-medium ); }
+  font-weight: var(--title-font-medium ); }
 
 h4 {
   font-size:  1rem;
-  font-size: var(--primary-font-size-base );
+  font-size: var(--title-font-size-base );
   line-height:  1.25rem;
-  line-height: var(--primary-line-height-base );
+  line-height: var(--title-line-height-base );
   font-weight:  700;
-  font-weight: var(--primary-font-bold );
+  font-weight: var(--title-font-bold );
   letter-spacing: 1.2px;
   text-transform: uppercase; }
 
@@ -384,12 +397,12 @@ p,
 p.standard {
   color:  #000000;
   color: var(--color-text-over-color-primary-background );
-  font-size:  1rem;
-  font-size: var(--primary-font-size-base );
+  font-size:  ;
+  font-size: var(--sentence-font-size-base );
   line-height:  1.875rem;
-  line-height: var(--primary-line-height-small );
+  line-height: var(--sentence-line-height-base );
   font-weight:  400;
-  font-weight: var(--primary-font-regular ); }
+  font-weight: var(--sentence-font-regular ); }
 
 a {
   -webkit-transition: color 0.3s linear, background-color 0.3s linear;
@@ -515,8 +528,8 @@ fieldset {
   border: none;
   padding: 0; }
   fieldset legend {
-    font-size:  1.875rem;
-    font-size: var(--primary-line-height-small );
+    font-size:  2rem;
+    font-size: var(--primary-font-size-accent );
     font-weight:  700;
     font-weight: var(--primary-font-bold );
     color:  #50CFE3;
@@ -557,33 +570,33 @@ fieldset {
   .field--name-bene-intro h2 {
     color:  #50CFE3;
     color: var(--color-text-title-over-color-primary-background );
-    font-size:  2rem;
-    font-size: var(--primary-font-size-accent );
+    font-size:  1.875rem;
+    font-size: var(--title-font-size-accent );
     font-style: italic;
     font-weight:  600;
-    font-weight: var(--primary-font-medium );
+    font-weight: var(--title-font-medium );
     margin-top: 2rem; }
   .field--name-bene-intro h3 {
-    font-size:  1.25rem;
-    font-size: var(--primary-font-size-small );
+    font-size:  1.5625rem;
+    font-size: var(--title-font-size-small );
     font-weight:  400;
-    font-weight: var(--primary-font-regular );
+    font-weight: var(--title-font-regular );
     margin-bottom: 0;
     margin-top: 1.125rem; }
   .field--name-bene-intro p {
-    font-size:  1rem;
-    font-size: var(--primary-font-size-base );
-    font-weight:  300;
-    font-weight: var(--primary-font-light );
-    line-height:  1.25rem;
-    line-height: var(--primary-line-height-base );
+    font-size:  ;
+    font-size: var(--sentence-font-size-base );
+    font-weight:  ;
+    font-weight: var(--sentence-font-light );
+    line-height:  1.875rem;
+    line-height: var(--sentence-line-height-base );
     margin-top: 0.75rem; }
     @media (min-width: 769px) {
       .field--name-bene-intro p {
-        font-size:  1.25rem;
-        font-size: var(--primary-font-size-small );
-        line-height:  1.875rem;
-        line-height: var(--primary-line-height-small ); } }
+        font-size:  ;
+        font-size: var(--sentence-font-size-small );
+        line-height:  ;
+        line-height: var(--sentence-line-height-small ); } }
 
 .region-footer .bene-contact-links .fieldset-wrapper {
   display: flex;
@@ -659,31 +672,31 @@ fieldset {
     .block-bene-home-page-feature-block {
       min-height: 37.6875rem; } }
   .block-bene-home-page-feature-block .field--name-bene-lead {
-    font-size:  1.25rem;
-    font-size: var(--primary-font-size-small );
+    font-size:  1.5625rem;
+    font-size: var(--title-font-size-small );
     margin-bottom: 0.5rem;
     position: relative;
     z-index: 1; }
     @media (max-width: 414px) {
       .block-bene-home-page-feature-block .field--name-bene-lead {
         font-size:  1rem;
-        font-size: var(--primary-font-size-base );
+        font-size: var(--title-font-size-base );
         line-height:  1.25rem;
-        line-height: var(--primary-line-height-base );
+        line-height: var(--title-line-height-base );
         padding-top: 7rem; } }
   .block-bene-home-page-feature-block .field--name-bene-title {
-    font-size:  3rem;
-    font-size: var(--primary-font-size-medium );
+    font-size:  3.125rem;
+    font-size: var(--title-font-size-medium );
     margin: 0 auto 2rem;
     max-width: 56.25rem;
     position: relative;
     z-index: 1;
     line-height:  3.875rem;
-    line-height: var(--primary-line-height-medium ); }
+    line-height: var(--title-line-height-medium ); }
     @media (max-width: 414px) {
       .block-bene-home-page-feature-block .field--name-bene-title {
-        font-size:  1.25rem;
-        font-size: var(--primary-font-size-small ); } }
+        font-size:  1.5625rem;
+        font-size: var(--title-font-size-small ); } }
   .block-bene-home-page-feature-block .field--name-bene-link {
     position: relative;
     z-index: 1; }
@@ -695,8 +708,8 @@ fieldset {
       background-color:  #50CFE3;
       background-color: var(--button-secondary-color-background );
       padding: 1rem 2rem;
-      font-size:  0.875rem;
-      font-size: var(--primary-font-size-footnote );
+      font-size:  ;
+      font-size: var(--title-font-size-footnote );
       font-family:  'Open Sans', sans-serif;
       font-family: var(--primary-font-family );
       font-weight:  700;
@@ -708,6 +721,26 @@ fieldset {
         color: var(--button-secondary-hover-text-and-outline-color );
         background-color:  #FFFFFF;
         background-color: var(--button-secondary-color-hover-background ); }
+
+#main-content .field--name-bene-intro {
+  background-color:  #129FB5;
+  background-color: var(--background-color-inset ); }
+  #main-content .field--name-bene-intro h1, #main-content .field--name-bene-intro h2, #main-content .field--name-bene-intro h3, #main-content .field--name-bene-intro h4, #main-content .field--name-bene-intro h5, #main-content .field--name-bene-intro a {
+    font-family:  'Open Sans', sans-serif;
+    font-family: var(--title-font-family );
+    font-size:  3.125rem;
+    font-size: var(--title-font-size-medium );
+    line-height:  3.875rem;
+    line-height: var(--title-line-height-medium );
+    margin: 50px 0;
+    color:  #50CFE3;
+    color: var(--color-text-title-over-color-inset-background ); }
+  #main-content .field--name-bene-intro span, #main-content .field--name-bene-intro p {
+    padding: 0 100px;
+    font-family:  'Open Sans', sans-serif;
+    font-family: var(--sentence-font-family );
+    color:  #000000;
+    color: var(--color-text-over-color-inset-background ); }
 
 .block-system-branding-block {
   font-size:  1rem;
@@ -2283,19 +2316,6 @@ input[type='submit'] {
         font-size: var(--primary-font-size-footnote );
         font-weight: 600;
         margin-top: 0.75rem; }
-
-.page-node-type-page .block-system-main-block .field--name-bene-intro h1, .page-node-type-page .block-system-main-block .field--name-bene-intro h2, .page-node-type-page .block-system-main-block .field--name-bene-intro h3, .page-node-type-page .block-system-main-block .field--name-bene-intro h4, .page-node-type-page .block-system-main-block .field--name-bene-intro h5 {
-  font-family: "'Open Sans', sans-serif";
-  font-family: var(--general-font-family-secondary);
-  margin: 50px 0; }
-.page-node-type-page .block-system-main-block .field--name-bene-intro span, .page-node-type-page .block-system-main-block .field--name-bene-intro p {
-  padding: 0 100px;
-  color: #979797;
-  color: var(--rich-paragraph-font-secondary-color); }
-
-.page-node-type-page .block-system-main-block .field--name-bene-intro h1, .page-node-type-page .block-system-main-block .field--name-bene-intro h2, .page-node-type-page .block-system-main-block .field--name-bene-intro h3, .page-node-type-page .block-system-main-block .field--name-bene-intro h4, .page-node-type-page .block-system-main-block .field--name-bene-intro h5, .page-node-type-page .block-system-main-block .field--name-bene-intro a {
-  color: #FFF;
-  color: var(--general-font-secondary-color); }
 
 .region-content .block-views {
   clear: both; }
