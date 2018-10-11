@@ -1,0 +1,70 @@
+%block-bene-home-page-feature-block {
+  @include vars(color, color-text-title-over-color-primary-background);
+  color: var(--hero-font-color);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  padding: 10rem 1rem;
+  @include vars(background-color, background-color-primary);
+
+  @include mq(mobile) {
+    background-size: 100%;
+    background-position: center top;
+    max-height: rem(539);
+  }
+
+  @include mq(desktop) {
+    min-height: rem(603);
+  }
+
+  .field--name-bene-lead {
+    @include vars(font-size, primary-font-size-small);
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+
+    @include mq(mobile) {
+      @include vars(font-size, primary-font-size-base);
+      @include vars(line-height, primary-line-height-base);
+      padding-top: 7rem;
+    }
+  }
+
+  .field--name-bene-title {
+    @include vars(font-size, primary-font-size-medium);
+    margin: 0 auto 2rem;
+    max-width: rem(900);
+    position: relative;
+    z-index: 1;
+    @include vars(line-height, primary-line-height-medium);
+
+    @include mq(mobile) {
+      @include vars(font-size, primary-font-size-small); // was rem(24)
+    }
+  }
+
+  .field--name-bene-link {
+    position: relative;
+    z-index: 1;
+    a {
+      // @include vars(border, button-secondary-text-and-outline-color, rem(2) solid);
+      @include vars(border-radius, preferred-border-radius);
+      @include vars(color, button-secondary-text-and-outline-color);
+      @include vars(background-color, button-secondary-color-background);
+      padding: 1rem 2rem;
+      @include vars(font-size, primary-font-size-footnote);
+      @include font-style('bold');
+      text-transform: uppercase;
+
+      &:hover {
+        @include vars(color, button-secondary-hover-text-and-outline-color);
+        @include vars(background-color, button-secondary-color-hover-background);
+      }
+    }
+
+
+  }
+
+}

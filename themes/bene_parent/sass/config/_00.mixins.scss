@@ -11,26 +11,26 @@
   @if $style == 'italic' { // Italic Light
     @include vars(font-family, primary-font-family);
     font-style: italic;
-    font-weight: 300;
+    @include vars(font-weight, primary-font-light);
   } @else if $style == 'regular' {
     @include vars(font-family, primary-font-family);
-    font-weight: 400;
+    @include vars(font-weight, primary-font-regular);
     font-style: normal;
   } @else if $style == 'semibold' {
     @include vars(font-family, primary-font-family);
-    font-weight: 600;
+    @include vars(font-weight, primary-font-medium);
     font-style: normal;
   } @else if $style == 'bold' {
     @include vars(font-family, primary-font-family);
-    font-weight: 700;
+    @include vars(font-weight, primary-font-bold);
     font-style: normal;
   } @else if $style == 'black' {
     @include vars(font-family, primary-font-family);
-    font-weight: 900;
+    @include vars(font-weight, primary-font-black);
     font-style: normal;
   } @else if $style == 'light' { // Light is the default font
     @include vars(font-family, primary-font-family);
-    font-weight: 300;
+    @include vars(font-weight, primary-font-light);
     font-style: normal;
   }
 }
@@ -93,7 +93,7 @@
 /* Buttons */
 @mixin button {
   @include transition(background-color 0.3s linear,color 0.3s linear);
-  border-radius: rem(3);
+  @include vars(border-radius, preferred-border-radius);
   @include vars(font-weight, primary-font-black);
   display: inline-block;
   @include vars(font-size, primary-font-size-base);

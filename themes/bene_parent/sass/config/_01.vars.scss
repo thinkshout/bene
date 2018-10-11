@@ -15,12 +15,12 @@ $vars: (
         color-text-secondary-menu-over-color-primary-background: #50CFE3,
         color-text-hover-secondary-menu-over-color-primary-background: #129FB5,
   //      color-text-disabled-secondary-menu-over-color-primary-background: #D8D8D8,
-  //
-  background-color-secondary: #50CFE3, // (3-up background, newsletter signup background, block quote background, photo credit paragraph background)
+
+  background-color-secondary: #FFFFFF, // (3-up background, newsletter signup background, block quote background, photo credit paragraph background)
   // Text and foreground colors that go with the color above:
-  //      color-text-title-over-color-secondary-background: #FFFFFF,
+  //      color-text-title-over-color-secondary-background: #129FB5,
   //      color-text-subtitle-over-color-secondary-background: #D8D8D8,
-  //      color-text-over-color-secondary-background: #FFFFFF,
+  //      color-text-over-color-secondary-background: #000000,
   //      color-text-link-over-color-secondary-background: #129FB5,
   //      color-text-hover-link-over-color-secondary-background: lighten(#129FB5, 20%),
   //
@@ -62,11 +62,11 @@ $vars: (
         button-primary-text-and-outline-color: #FFFFFF,
         button-primary-hover-text-and-outline-color: #FFFFFF,
 
-  //      button-secondary-color-background: #50CFE3,
-  //      button-secondary-color-hover-background: #FFFFFF,
-  //      button-secondary-text-and-outline-color: #FFFFFF,
-  //      button-secondary-hover-text-and-outline-color: #50CFE3,
-  //
+        button-secondary-color-background: #50CFE3,
+        button-secondary-color-hover-background: #FFFFFF,
+        button-secondary-text-and-outline-color: #FFFFFF,
+        button-secondary-hover-text-and-outline-color: #50CFE3,
+
   //      button-tertiary-color-background: transparent,
   //      button-tertiary-color-hover-background: #50CFE3,
   //      button-tertiary-text-and-outline-color: #FFFFFF,
@@ -74,7 +74,7 @@ $vars: (
   //
   // Button Characteristics:
   //      button-height: rem(4),
-  //      preferred-border-radius: 0px,
+        preferred-border-radius: rem(3),
   //      social-media-icon-border-radius: 0px,
   //      social-media-icon-size: rem(36),
 

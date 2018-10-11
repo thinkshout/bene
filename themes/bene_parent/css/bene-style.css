@@ -22,7 +22,7 @@ html {
   --color-text-hover-menu-over-color-primary-background: #50CFE3;
   --color-text-secondary-menu-over-color-primary-background: #50CFE3;
   --color-text-hover-secondary-menu-over-color-primary-background: #129FB5;
-  --background-color-secondary: #50CFE3;
+  --background-color-secondary: #FFFFFF;
   --background-color-tertiary: #D8D8D8;
   --background-color-quaternary: #129FB5;
   --background-color-inset: #FFFFFF;
@@ -31,6 +31,11 @@ html {
   --button-primary-hover-color-background: #50CFE3;
   --button-primary-text-and-outline-color: #FFFFFF;
   --button-primary-hover-text-and-outline-color: #FFFFFF;
+  --button-secondary-color-background: #50CFE3;
+  --button-secondary-color-hover-background: #FFFFFF;
+  --button-secondary-text-and-outline-color: #FFFFFF;
+  --button-secondary-hover-text-and-outline-color: #50CFE3;
+  --preferred-border-radius: 0.1875rem;
   --primary-font-family: 'Open Sans', sans-serif;
   --primary-font-light: 300;
   --primary-font-regular: 400;
@@ -410,7 +415,8 @@ a.button {
   -webkit-transition: background-color 0.3s linear, color 0.3s linear;
   -moz-transition: background-color 0.3s linear, color 0.3s linear;
   transition: background-color 0.3s linear, color 0.3s linear;
-  border-radius: 0.1875rem;
+  border-radius:  0.1875rem;
+  border-radius: var(--preferred-border-radius);
   font-weight:  800;
   font-weight: var(--primary-font-black);
   display: inline-block;
@@ -509,6 +515,40 @@ fieldset {
     color:  #50CFE3;
     color: var(--color-text-title-over-color-primary-background); }
 
+.field--name-bene-intro {
+  margin-bottom: 1.5rem;
+  margin-top: 1rem; }
+  .field--name-bene-intro h2 {
+    color:  #50CFE3;
+    color: var(--color-text-title-over-color-primary-background);
+    font-size:  2rem;
+    font-size: var(--primary-font-size-accent);
+    font-style: italic;
+    font-weight:  600;
+    font-weight: var(--primary-font-medium);
+    margin-top: 2rem; }
+  .field--name-bene-intro h3 {
+    font-size:  1.25rem;
+    font-size: var(--primary-font-size-small);
+    font-weight:  400;
+    font-weight: var(--primary-font-regular);
+    margin-bottom: 0;
+    margin-top: 1.125rem; }
+  .field--name-bene-intro p {
+    font-size:  1rem;
+    font-size: var(--primary-font-size-base);
+    font-weight:  300;
+    font-weight: var(--primary-font-light);
+    line-height:  1.25rem;
+    line-height: var(--primary-line-height-base);
+    margin-top: 0.75rem; }
+    @media (min-width: 769px) {
+      .field--name-bene-intro p {
+        font-size:  1.25rem;
+        font-size: var(--primary-font-size-small);
+        line-height:  1.875rem;
+        line-height: var(--primary-line-height-small); } }
+
 .region-footer .bene-contact-links .fieldset-wrapper {
   display: flex;
   flex-direction: column; }
@@ -561,6 +601,77 @@ fieldset {
     display: flex;
     flex: 1 1 auto;
     justify-content: flex-end; }
+
+.block-bene-home-page-feature-block {
+  color:  #50CFE3;
+  color: var(--color-text-title-over-color-primary-background);
+  color: var(--hero-font-color);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  padding: 10rem 1rem;
+  background-color:  #FFFFFF;
+  background-color: var(--background-color-primary); }
+  @media (max-width: 414px) {
+    .block-bene-home-page-feature-block {
+      background-size: 100%;
+      background-position: center top;
+      max-height: 33.6875rem; } }
+  @media (min-width: 769px) {
+    .block-bene-home-page-feature-block {
+      min-height: 37.6875rem; } }
+  .block-bene-home-page-feature-block .field--name-bene-lead {
+    font-size:  1.25rem;
+    font-size: var(--primary-font-size-small);
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1; }
+    @media (max-width: 414px) {
+      .block-bene-home-page-feature-block .field--name-bene-lead {
+        font-size:  1rem;
+        font-size: var(--primary-font-size-base);
+        line-height:  1.25rem;
+        line-height: var(--primary-line-height-base);
+        padding-top: 7rem; } }
+  .block-bene-home-page-feature-block .field--name-bene-title {
+    font-size:  3rem;
+    font-size: var(--primary-font-size-medium);
+    margin: 0 auto 2rem;
+    max-width: 56.25rem;
+    position: relative;
+    z-index: 1;
+    line-height:  3.875rem;
+    line-height: var(--primary-line-height-medium); }
+    @media (max-width: 414px) {
+      .block-bene-home-page-feature-block .field--name-bene-title {
+        font-size:  1.25rem;
+        font-size: var(--primary-font-size-small); } }
+  .block-bene-home-page-feature-block .field--name-bene-link {
+    position: relative;
+    z-index: 1; }
+    .block-bene-home-page-feature-block .field--name-bene-link a {
+      border-radius:  0.1875rem;
+      border-radius: var(--preferred-border-radius);
+      color:  #FFFFFF;
+      color: var(--button-secondary-text-and-outline-color);
+      background-color:  #50CFE3;
+      background-color: var(--button-secondary-color-background);
+      padding: 1rem 2rem;
+      font-size:  0.875rem;
+      font-size: var(--primary-font-size-footnote);
+      font-family:  'Open Sans', sans-serif;
+      font-family: var(--primary-font-family);
+      font-weight:  700;
+      font-weight: var(--primary-font-bold);
+      font-style: normal;
+      text-transform: uppercase; }
+      .block-bene-home-page-feature-block .field--name-bene-link a:hover {
+        color:  #50CFE3;
+        color: var(--button-secondary-hover-text-and-outline-color);
+        background-color:  #FFFFFF;
+        background-color: var(--button-secondary-color-hover-background); }
 
 .block-system-branding-block {
   font-size:  1rem;
@@ -1108,8 +1219,8 @@ body.user-logged-in .region.region-content {
     margin-top: 1.5rem; } }
 .block-hero {
   position: relative;
-  background-color: #129FB5;
-  background-color: var(--general-tertiary-background-color); }
+  background-color:  #FFFFFF;
+  background-color: var(--background-color-secondary); }
   .block-hero h1 {
     font-size: 3.125rem;
     padding: 0 1rem;
@@ -1153,31 +1264,6 @@ body.user-logged-in .region.region-content {
     font-size: 1.375rem;
     margin-bottom: 2rem;
     margin-top: 1.5rem; } }
-.field--name-bene-intro {
-  margin-bottom: 1.5rem;
-  margin-top: 1rem; }
-  .field--name-bene-intro h2 {
-    color: #000;
-    color: var(--general-font-primary-color);
-    font-size: 2rem;
-    font-style: italic;
-    font-weight: 600;
-    margin-top: 2rem; }
-  .field--name-bene-intro h3 {
-    font-size: 1.25rem;
-    font-weight: 400;
-    margin-bottom: 0;
-    margin-top: 1.125rem; }
-  .field--name-bene-intro p {
-    font-size: 1.125rem;
-    font-weight: 300;
-    line-height: 2rem;
-    margin-top: 0.75rem; }
-    @media (min-width: 769px) {
-      .field--name-bene-intro p {
-        font-size: 1.375rem;
-        line-height: 2.375rem; } }
-
 .block-bene-footer-block {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -1195,7 +1281,8 @@ body.user-logged-in .region.region-content {
     .block-bene-footer-block .menu .menu-item a {
       font-family:  'Open Sans', sans-serif;
       font-family: var(--primary-font-family);
-      font-weight: 700;
+      font-weight:  700;
+      font-weight: var(--primary-font-bold);
       font-style: normal;
       fontsize: 1rem; }
       .block-bene-footer-block .menu .menu-item a:hover, .block-bene-footer-block .menu .menu-item a:focus, .block-bene-footer-block .menu .menu-item a.is-active {
@@ -1206,7 +1293,8 @@ body.user-logged-in .region.region-content {
   .block-bene-footer-block .contact-links .additional-footer p {
     font-family:  'Open Sans', sans-serif;
     font-family: var(--primary-font-family);
-    font-weight: 400;
+    font-weight:  400;
+    font-weight: var(--primary-font-regular);
     font-style: normal;
     font-size: 0.875rem;
     line-height: 1.5625rem; }
@@ -1417,7 +1505,8 @@ input[type='submit'] {
   -webkit-transition: background-color 0.3s linear, color 0.3s linear;
   -moz-transition: background-color 0.3s linear, color 0.3s linear;
   transition: background-color 0.3s linear, color 0.3s linear;
-  border-radius: 0.1875rem;
+  border-radius:  0.1875rem;
+  border-radius: var(--preferred-border-radius);
   font-weight:  800;
   font-weight: var(--primary-font-black);
   display: inline-block;
@@ -1494,67 +1583,6 @@ input[type='submit'] {
     @media (min-width: 769px) {
       .block-hero.no-bgimage {
         height: 7.5rem; } }
-
-.block-bene-home-page-feature-block {
-  color: #FFF;
-  color: var(--hero-font-color);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  text-align: center;
-  padding: 10rem 1rem;
-  background-color: #FFF;
-  background-color: var(--hero-block-background-color); }
-  @media (max-width: 414px) {
-    .block-bene-home-page-feature-block {
-      background-size: 100%;
-      background-position: center top;
-      max-height: 33.6875rem; } }
-  @media (min-width: 769px) {
-    .block-bene-home-page-feature-block {
-      min-height: 37.6875rem; } }
-  .block-bene-home-page-feature-block .field--name-bene-lead {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    position: relative;
-    z-index: 1; }
-    @media (max-width: 414px) {
-      .block-bene-home-page-feature-block .field--name-bene-lead {
-        font-size: 1rem;
-        line-height: 1.25rem;
-        padding-top: 7rem; } }
-  .block-bene-home-page-feature-block .field--name-bene-title {
-    font-size: 3rem;
-    margin: 0 auto 2rem;
-    max-width: 56.25rem;
-    position: relative;
-    z-index: 1;
-    line-height: 1.9375rem; }
-    @media (max-width: 414px) {
-      .block-bene-home-page-feature-block .field--name-bene-title {
-        font-size: 1.5rem; } }
-  .block-bene-home-page-feature-block .field--name-bene-link {
-    position: relative;
-    z-index: 1; }
-    .block-bene-home-page-feature-block .field--name-bene-link a {
-      border: 0.125rem solid #FFF;
-      border: 0.125rem solid var(--hero-button-border-color);
-      border-radius: 0;
-      color: #FFF;
-      color: var(--hero-button-font-color);
-      padding: 1rem 2rem;
-      font-size: 0.875rem;
-      font-family:  'Open Sans', sans-serif;
-      font-family: var(--primary-font-family);
-      font-weight: 700;
-      font-style: normal;
-      text-transform: uppercase; }
-      .block-bene-home-page-feature-block .field--name-bene-link a:hover {
-        color: #FFF;
-        color: var(--hero-button-font-hover-color);
-        background-color: #FFF;
-        background-color: var(--hero-button-background-hover-color); }
 
 .page-node-type-page .block-system-main-block .field--name-bene-intro {
   float: none;
@@ -1689,7 +1717,8 @@ input[type='submit'] {
     -webkit-transition: background-color 0.3s linear, color 0.3s linear;
     -moz-transition: background-color 0.3s linear, color 0.3s linear;
     transition: background-color 0.3s linear, color 0.3s linear;
-    border-radius: 0.1875rem;
+    border-radius:  0.1875rem;
+    border-radius: var(--preferred-border-radius);
     font-weight:  800;
     font-weight: var(--primary-font-black);
     display: inline-block;
@@ -1745,7 +1774,8 @@ input[type='submit'] {
   border-bottom: none;
   font-family:  'Open Sans', sans-serif;
   font-family: var(--primary-font-family);
-  font-weight: 400;
+  font-weight:  400;
+  font-weight: var(--primary-font-regular);
   font-style: normal;
   font-size: 1.5625rem;
   font-size: var(--general-font-size-small);
@@ -1757,7 +1787,8 @@ input[type='submit'] {
   .mobile-nav .menu a menu--main a {
     font-family:  'Open Sans', sans-serif;
     font-family: var(--primary-font-family);
-    font-weight: 900;
+    font-weight:  800;
+    font-weight: var(--primary-font-black);
     font-style: normal;
     font-size: 1.5625rem;
     font-size: var(--general-font-size-small); }
@@ -2076,7 +2107,8 @@ input[type='submit'] {
       -webkit-transition: background-color 0.3s linear, color 0.3s linear;
       -moz-transition: background-color 0.3s linear, color 0.3s linear;
       transition: background-color 0.3s linear, color 0.3s linear;
-      border-radius: 0.1875rem;
+      border-radius:  0.1875rem;
+      border-radius: var(--preferred-border-radius);
       font-weight:  800;
       font-weight: var(--primary-font-black);
       display: inline-block;
