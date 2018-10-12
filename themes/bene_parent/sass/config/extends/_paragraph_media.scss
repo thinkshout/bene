@@ -4,8 +4,9 @@
   margin: rem(24) 0;
   @include vars(text-align, hero-alignment);
   width: 100%;
-  img {
-    max-width: 100%;
-  }
 }
+%paragraph--type--media-img {
+  max-width: 100%;
+}
+
 

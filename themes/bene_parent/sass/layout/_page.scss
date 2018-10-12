@@ -32,7 +32,33 @@
 .page-node-type-listing-page,
 .page-node-type-event,
 .page-node-type-news {
-  @extend %page-node-type;
+  .region-content {
+    @extend %page-node-type-region-content;
+  }
+  .block-system-main-block .field--name-bene-intro,
+  .field--name-bene-content .paragraph--type--rich-text,
+  .block-system-main-block .field--name-bene-event-date-range,
+  .block-system-main-block .field--name-bene-event-location {
+    @extend %page-node-type-region-padding;
+  }
+  .paragraph--type--media .media-instagram,
+  .paragraph--type--media .media-tweet,
+  .paragraph--type--media .media-video {
+    @extend %page-node-type-region-social-media;
+  }
+
+  .paragraph--type--media .media-instagram > div,
+  .paragraph--type--media .media-tweet > div {
+    @extend %page-node-type-region-align;
+  }
+  .field--name-bene-content .paragraph--type--media,
+    //.field--name-bene-content .paragraph--type--feature-full-width,
+  .field--name-bene-content .paragraph--type--tiles {
+    @extend %page-node-type-region-clear;
+  }
+  .paragraph--type--tiles {
+    @extend %page-node-type-region-tiles;
+  }
 }
 
 .page-node-type-listing-page {
