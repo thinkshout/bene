@@ -5,7 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  text-align: center;
+  @include vars(text-align, hero-alignment);
   padding: 10rem 1rem;
   @include vars(background-color, background-color-primary);
 

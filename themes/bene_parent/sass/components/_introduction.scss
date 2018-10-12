@@ -9,4 +9,14 @@
   span, p {
     @extend %intro-block-text;
   }
+
+  h2 {
+    @extend %field--name-bene-intro-h2;
+  }
+  h3 {
+    @extend %field--name-bene-intro-h3;
+  }
+  p {
+    @extend %field--name-bene-intro-p;
+  }
 }

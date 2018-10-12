@@ -18,9 +18,34 @@
 
 %field--name-bene-intro {
   float: none;
-  margin-bottom: 2rem;
   margin-right: auto;
   margin-left: auto;
   width: 100%;
   max-width: none;
+  margin-bottom: rem(24);
+  margin-top: rem(16);
 }
+%field--name-bene-intro-h2 {
+  @include vars(color, color-text-title-over-color-primary-background);
+  @include vars(font-size, title-font-size-accent);
+  font-style: italic;
+  @include vars(font-weight, title-font-medium);
+  margin-top: rem(32);
+}
+%field--name-bene-intro-h3 {
+  @include vars(font-size, title-font-size-small);
+  @include vars(font-weight, title-font-regular);
+  margin-bottom: 0;
+  margin-top: rem(18);
+}
+%field--name-bene-intro-p {
+  @include vars(font-size, sentence-font-size-base); // was rem(18)
+  @include vars(font-weight, sentence-font-light);
+  @include vars(line-height, sentence-line-height-base);
+  margin-top: rem(12);
+  @include mq(desktop) {
+    @include vars(font-size, sentence-font-size-small);
+    @include vars(line-height, sentence-line-height-small); // was rem(38)
+  }
+}
+

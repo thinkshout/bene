@@ -5,6 +5,33 @@
 
 .block-bene-footer-block {
   @extend %footer-block-layout;
+
+  .menu {
+    @extend %footer-block-layout-menu;
+  }
+
+  .contact-links {
+    @extend %footer-block-layout-contact-links;
+  }
+
+  .additional-footer {
+    @extend %footer-block-layout-additional-footer;
+  }
+
+  div.social-links {
+    @extend %footer-block-layout-social-links;
+
+    span {
+      @extend %footer-block-layout-social-links-span;
+      a {
+        @extend %footer-block-layout-social-links-span-a;
+      }
+    }
+  }
+
+  .copyright {
+    @extend %footer-block-layout-copyright;
+  }
 }
 
 // Specific ranges - use sparingly.

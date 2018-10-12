@@ -1,6 +1,16 @@
 // Default Styles (Mobile First!)
 .site-header {
   @extend %site-layout-header;
+  .logo-wrapper {
+    @extend %site-layout-header-logo-wrapper;
+  }
+  .desktop-nav,
+  .mobile-nav .menu {
+    @extend %site-layout-header-nav-menu;
+  }
+  .mobile-nav {
+    @extend %site-layout-header-mobile-nav;
+  }
 }
 
 

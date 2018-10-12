@@ -137,60 +137,6 @@
 
 
 
-  //%block-system-branding-block-desktop {
-  //  min-width: rem(233);
-  //  a {
-  //    display: inline-block;
-  //    width: 100%;
-  //    img {
-  //      width: 99%;
-  //    }
-  //  }
-  //}
-  //.desktop-nav .menu--utility .menu-item {
-  //  a {
-  //    color: bbv(font-color-link); // in case css variables are not supported
-  //    color: var(--general-link-color);
-  //    font-size: rem(14);
-  //    &:hover, &:focus, &.is-active {
-  //      color: bbv(font-color-hover-link); // in case css variables are not supported
-  //      color: var(--general-link-hover-color);
-  //    }
-  //  }
-  //  &:last-child a {
-  //    @include button;
-  //    color: bbv(font-color-accent);
-  //    color: var(--general-font-accent-color);
-  //    background-color: bbv(background-color-tertiary);
-  //    background-color: var(--general-tertiary-background-color);
-  //    &:hover {
-  //      background-color: bbv(background-color-secondary);
-  //      background-color: var(--general-secondary-background-color);
-  //    }
-  //    font-size: rem(12);
-  //    font-weight: 700;
-  //    letter-spacing: 0;
-  //    padding: rem(10) rem(15);
-  //    top: 6px;
-  //  }
-  //}
-  //.desktop-nav .menu--main .menu-item {
-  //  a {
-  //    color: bbv(font-color-tertiary); // in case css variables are not supported
-  //    color: var(--general-font-tertiary-color);
-  //    font-weight: 700;
-  //    letter-spacing: rem(0.5);
-  //    text-transform: uppercase;
-  //    &:hover, &:focus, &.is-active {
-  //      color: bbv(font-color-hover-link); // in case css variables are not supported
-  //      color: var(--general-link-hover-color);
-  //    }
-  //    &.is-active {
-  //      cursor: default;
-  //    }
-  //  }
-  //}
-
 
 %block-bene-sub-navigation-block {
   @include vars(background-image, background-color-photo-overlay);
