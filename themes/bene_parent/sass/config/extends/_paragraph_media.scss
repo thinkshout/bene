@@ -1,0 +1,11 @@
+%paragraph--type--media {
+  @include vars(font-size, primary-font-size-footnote);
+  font-style: italic;
+  margin: rem(24) 0;
+  @include vars(text-align, hero-alignment);
+  width: 100%;
+  img {
+    max-width: 100%;
+  }
+}
+

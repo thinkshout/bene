@@ -50,12 +50,16 @@ $vars: (
   //
   background-color-photo-overlay: rgba(#444, .11),
   // Text and foreground colors that go with the color above:
-  //      color-text-title-over-color-photo-overlay-background: #FFFFFF,
+        color-text-title-over-color-photo-overlay-background: #FFFFFF,
   //      color-text-subtitle-over-color-photo-overlay-background: #FFFFFF,
-  //      color-text-over-color-photo-overlay-background: #FFFFFF,
+        color-text-over-color-photo-overlay-background: #FFFFFF,
   //      color-text-link-over-color-photo-overlay-background: #129FB5,
   //      color-text-hover-link-over-color-photo-overlay-background: lighten(#129FB5, 20%),
-  //
+        photo-overlay-linear-gradient: linear-gradient(-180deg, rgba(#129FB5, 1), rgba(#000000, 1S)),
+        //photo-overlay-gradient-direction: -180deg,
+        //photo-overlay-gradient-start-color: rgba(#129FB5, 1), // 0.00 = transparent
+        //photo-overlay-gradient-end-color: rgba(#50CFE3, 1), //  1 = opaque
+
   // Button Colors:
         button-primary-color-background: #129FB5,
         button-primary-hover-color-background: #50CFE3,
@@ -67,10 +71,10 @@ $vars: (
         button-secondary-text-and-outline-color: #FFFFFF,
         button-secondary-hover-text-and-outline-color: #50CFE3,
 
-  //      button-tertiary-color-background: transparent,
-  //      button-tertiary-color-hover-background: #50CFE3,
-  //      button-tertiary-text-and-outline-color: #FFFFFF,
-  //      button-tertiary-hover-text-and-outline-color: #FFFFFF,
+        button-tertiary-color-background: #50CFE3,
+        button-tertiary-color-hover-background: #129FB5,
+        button-tertiary-text-and-outline-color: #FFFFFF,
+        button-tertiary-hover-text-and-outline-color: #FFFFFF,
   //
   // Button Characteristics:
   //      button-height: rem(4),
@@ -121,19 +125,19 @@ $vars: (
         sentence-font-family:  "'Open Sans', sans-serif",
   //      sentence-font-light:   '300',
         sentence-font-regular: '400',
-  //      sentence-font-medium:  '600',
+        sentence-font-medium:  '600',
   //      sentence-font-bold:    '700',
   //      sentence-font-black:   '800',
   //      sentence-font-size-large: rem(61),
   //      sentence-font-size-medium: rem(48),
   //      sentence-font-size-accent: rem(32),
-  //      sentence-font-size-small: rem(20),
+        sentence-font-size-small: rem(26),
   //      sentence-font-size-base: rem(16),
   //      sentence-font-size-footnote: rem(14),
   //      sentence-line-height-large: rem(72),
   //      sentence-line-height-medium: rem(62),
   //      sentence-line-height-accent: rem(38),
-  //      sentence-line-height-small: rem(30),
+        sentence-line-height-small: rem(39),
         sentence-line-height-base: rem(30),
   //      sentence-line-height-footnote: rem(16),
 
