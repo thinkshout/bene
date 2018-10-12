@@ -1,7 +1,7 @@
 // Style the dropdown
 %nice-select {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  @include vars(background-color, background-color-secondary);
+  @include vars(background-color, background-color-primary);
   @include vars(border-radius, preferred-border-radius);
   border: none;
   box-sizing: border-box;
@@ -25,7 +25,7 @@
   width: 100%;
 }
 %nice-select-current {
-  @include vars(color, color-text-over-color-secondary-background);
+  @include vars(color, color-text-over-color-primary-background);
 }
 
 %nice-select-arrow {
@@ -135,7 +135,7 @@
   width: 100%;
 }
 %nice-select-option-hover {
-  @include vars(background-color, background-color-tertiary);
+  @include vars(background-color, background-color-primary);
 }
 %nice-select-option-selected {
   @include vars(font-weight, primary-font-bold);

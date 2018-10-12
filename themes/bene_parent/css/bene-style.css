@@ -945,8 +945,8 @@ fieldset legend {
 
 .nice-select {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  background-color:  #50CFE3;
-  background-color: var(--background-color-secondary );
+  background-color:  #FFFFFF;
+  background-color: var(--background-color-primary );
   border-radius:  0.1875rem;
   border-radius: var(--preferred-border-radius );
   border: none;
@@ -977,7 +977,7 @@ fieldset legend {
 
 .nice-select .current {
   color:  #000000;
-  color: var(--color-text-over-color-secondary-background ); }
+  color: var(--color-text-over-color-primary-background ); }
 
 .nice-select:after {
   -webkit-transform: rotate(90deg);
@@ -1091,8 +1091,8 @@ fieldset legend {
   width: 100%; }
 
 .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
-  background-color:  #D8D8D8;
-  background-color: var(--background-color-tertiary ); }
+  background-color:  #FFFFFF;
+  background-color: var(--background-color-primary ); }
 
 .nice-select .option.selected {
   font-weight:  700;
@@ -1512,6 +1512,106 @@ fieldset legend {
 
 .paragraph--type--rich-text img {
   max-width: 99%; }
+
+.paragraph--type--tiles {
+  background-color:  #50CFE3;
+  background-color: var(--background-color-secondary ); }
+
+.paragraph--type--tiles > .field--name-field-title {
+  font-size:  3.125rem;
+  font-size: var(--title-font-size-medium );
+  font-weight:  700;
+  font-weight: var(--title-font-bold );
+  line-height:  3.875rem;
+  line-height: var(--title-line-height-medium );
+  color:  #FFFFFF;
+  color: var(--color-text-title-over-color-secondary-background );
+  margin: 1.125rem auto 0rem;
+  text-align:  center;
+  text-align: var(--hero-alignment ); }
+  @media (min-width: 769px) {
+    .paragraph--type--tiles > .field--name-field-title {
+      margin: 2.25rem auto 0rem; } }
+
+.paragraph--type--tiles .field--name-field-tiles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem 1rem; }
+  @media (min-width: 1240px) {
+    .paragraph--type--tiles .field--name-field-tiles {
+      margin: 1.5rem auto; } }
+
+.paragraph--type--tiles .field--name-field-tiles > .field__item {
+  display: flex;
+  flex: 1 1 auto;
+  margin-bottom: 1.5rem;
+  text-align:  center;
+  text-align: var(--hero-alignment ); }
+  @media (min-width: 415px) and (max-width: 768px) {
+    .paragraph--type--tiles .field--name-field-tiles > .field__item {
+      flex: 0 1 calc(50% - 1rem);
+      min-width: 23.75rem; } }
+  @media (min-width: 769px) {
+    .paragraph--type--tiles .field--name-field-tiles > .field__item {
+      flex: 0 1 calc(33% - 1rem);
+      margin-bottom: 2.25rem;
+      min-width: 18.75rem; }
+      .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-image,
+      .paragraph--type--tiles .field--name-field-tiles > .field__item .bg-header {
+        background-color:  #129FB5;
+        background-color: var(--background-color-inset );
+        height: 18.36vw;
+        width: 30.6vw; } }
+  @media (min-width: 1240px) {
+    .paragraph--type--tiles .field--name-field-tiles > .field__item {
+      margin-bottom: 3rem;
+      max-width: 23.75rem; } }
+
+.paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-image,
+.paragraph--type--tiles .field--name-field-tiles > .field__item .bg-header {
+  background-color:  #129FB5;
+  background-color: var(--background-color-inset );
+  font-size: 0;
+  max-height: 14.25rem;
+  max-width: 23.75rem; }
+  .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-image img,
+  .paragraph--type--tiles .field--name-field-tiles > .field__item .bg-header img {
+    max-width: 100%; }
+
+.paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-title {
+  color:  #50CFE3;
+  color: var(--color-text-title-over-color-inset-background );
+  font-size:  1.5625rem;
+  font-size: var(--title-font-size-small );
+  font-weight:  600;
+  font-weight: var(--title-font-medium );
+  line-height:  1.875rem;
+  line-height: var(--title-line-height-small );
+  margin-top: 1.75rem; }
+
+.paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-text p {
+  color:  #000000;
+  color: var(--color-text-over-color-inset-background );
+  font-family:  'Open Sans', sans-serif;
+  font-family: var(--sentence-font-family );
+  font-size:  ;
+  font-size: var(--sentence-font-size-base );
+  font-weight:  600;
+  font-weight: var(--sentence-font-medium );
+  line-height:  1.875rem;
+  line-height: var(--sentence-line-height-base );
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem; }
+
+.paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-link a {
+  display: inline-block;
+  font-size:  0.875rem;
+  font-size: var(--primary-font-size-footnote );
+  font-weight:  600;
+  font-weight: var(--sentence-font-medium );
+  margin-top: 0.75rem; }
 
 @media (min-width: 769px) {
   .block-bene-footer-block .menu {
@@ -2310,84 +2410,6 @@ input[type='submit'] {
   z-index: 10; }
 .paragraph--type--feature-full-width .field--type-link {
   z-index: 10; }
-
-.paragraph--type--tiles {
-  background-color: #50CFE3;
-  background-color: var(--tile-background-color); }
-  .paragraph--type--tiles > .field--name-field-title {
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 2.25rem;
-    margin: 1.125rem auto 0rem;
-    text-align:  center;
-    text-align: var(--hero-alignment ); }
-    @media (min-width: 769px) {
-      .paragraph--type--tiles > .field--name-field-title {
-        margin: 2.25rem auto 0rem; } }
-  .paragraph--type--tiles .field--name-field-tiles {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 1rem 1rem; }
-    @media (min-width: 1240px) {
-      .paragraph--type--tiles .field--name-field-tiles {
-        margin: 1.5rem auto; } }
-    .paragraph--type--tiles .field--name-field-tiles > .field__item {
-      display: flex;
-      flex: 1 1 auto;
-      margin-bottom: 1.5rem;
-      text-align:  center;
-      text-align: var(--hero-alignment ); }
-      @media (min-width: 415px) and (max-width: 768px) {
-        .paragraph--type--tiles .field--name-field-tiles > .field__item {
-          flex: 0 1 calc(50% - 1rem);
-          min-width: 23.75rem; } }
-      @media (min-width: 769px) {
-        .paragraph--type--tiles .field--name-field-tiles > .field__item {
-          flex: 0 1 calc(33% - 1rem);
-          margin-bottom: 2.25rem;
-          min-width: 18.75rem; } }
-      @media (min-width: 1240px) {
-        .paragraph--type--tiles .field--name-field-tiles > .field__item {
-          margin-bottom: 3rem;
-          max-width: 23.75rem; } }
-      .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-image,
-      .paragraph--type--tiles .field--name-field-tiles > .field__item .bg-header {
-        background-color: #50CFE3;
-        background-color: var(--general-secondary-background-color);
-        font-size: 0;
-        max-height: 14.25rem;
-        max-width: 23.75rem; }
-        .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-image img,
-        .paragraph--type--tiles .field--name-field-tiles > .field__item .bg-header img {
-          max-width: 100%; }
-      @media (min-width: 769px) {
-        .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-image,
-        .paragraph--type--tiles .field--name-field-tiles > .field__item .bg-header {
-          background-color: #50CFE3;
-          background-color: var(--general-secondary-background-color);
-          height: 18.36vw;
-          width: 30.6vw; } }
-      .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-title {
-        font-size:  1.25rem;
-        font-size: var(--primary-font-size-small );
-        font-weight: 600;
-        line-height:  1.875rem;
-        line-height: var(--primary-line-height-small );
-        margin-top: 1.75rem; }
-      .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-text p {
-        color: #129FB5;
-        color: var(--tile-paragraph-color);
-        line-height: 1.5rem;
-        margin-bottom: 0.75rem;
-        margin-top: 0.75rem; }
-      .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-link a {
-        display: inline-block;
-        font-size:  0.875rem;
-        font-size: var(--primary-font-size-footnote );
-        font-weight: 600;
-        margin-top: 0.75rem; }
 
 .region-content .block-views {
   clear: both; }

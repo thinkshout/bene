@@ -1,0 +1,98 @@
+%paragraph--type--tiles {
+  @include vars(background-color, background-color-secondary);
+}
+%paragraph--type--tiles-field--name-field-title {
+  @include vars(font-size, title-font-size-medium);
+  @include vars(font-weight, title-font-bold);
+  @include vars(line-height, title-line-height-medium);
+  @include vars(color, color-text-title-over-color-secondary-background);
+  margin: rem(18) auto rem(0);
+  @include vars(text-align, hero-alignment);
+
+  @include mq(desktop) {
+    margin: rem(36) auto rem(0);
+  }
+}
+%paragraph--type--tiles-field--name-field-tiles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: rem(16) rem(16);
+
+  @include mq(xl) {
+    margin: rem(24) auto;
+  }
+}
+
+
+%paragraph--type--tiles-field__item {
+  display: flex;
+  flex: 1 1 auto;
+  margin-bottom: rem(24);
+  @include vars(text-align, hero-alignment);
+  //@include vars(background-color, background-color-inset);
+
+  @include mq(phablet) {
+    flex: 0 1 calc(50% - 1rem);
+    min-width: rem(380);
+  }
+
+  @include mq(desktop) {
+    flex: 0 1 calc(33% - 1rem);
+    margin-bottom: rem(36);
+    min-width: rem(300);
+
+    .field--name-field-image,
+    .bg-header {
+      @include vars(background-color, background-color-inset);
+      height: 18.36vw;
+      width: 30.6vw;
+    }
+  }
+
+  @include mq(xl) {
+    margin-bottom: rem(48);
+    max-width: rem(380);
+  }
+}
+
+
+
+%paragraph--type--tiles-field__item-field--name-field-image {
+  @include vars(background-color, background-color-inset);
+  font-size: 0;
+  max-height: rem(228);
+  max-width: rem(380);
+  img {
+    max-width: 100%;
+  }
+}
+
+%paragraph--type--tiles-field__item-field--name-field-title {
+  @include vars(color, color-text-title-over-color-inset-background);
+  @include vars(font-size, title-font-size-small);
+  @include vars(font-weight, title-font-medium);
+  @include vars(line-height, title-line-height-small);
+  margin-top: rem(28);
+}
+
+%paragraph--type--tiles-field__item-field--name-field-text-p {
+  @include vars(color, color-text-over-color-inset-background);
+  @include vars(font-family, sentence-font-family);
+  @include vars(font-size, sentence-font-size-base);
+  @include vars(font-weight, sentence-font-medium);
+  @include vars(line-height, sentence-line-height-base);
+  margin-bottom: rem(12);
+  margin-top: rem(12);
+}
+
+%paragraph--type--tiles-field__item-field--name-field-link-a {
+  display: inline-block;
+  @include vars(font-size, primary-font-size-footnote);
+  @include vars(font-weight, sentence-font-medium);
+  margin-top: rem(12);
+}
+
+
+
