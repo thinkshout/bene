@@ -5,15 +5,69 @@
 }
 .mobile-menu-toggle {
   @extend %mobile-menu-toggle;
+  div {
+    @extend %mobile-menu-toggle-div;
+    span {
+      @extend %mobile-menu-toggle-div-span;
+      &:before,
+      &:after {
+        @extend %mobile-menu-toggle-div-span-before-and-after;
+      }
+      &:after {
+        @extend %mobile-menu-toggle-div-span-after;
+      }
+    }
+    &:hover span {
+      @extend %mobile-menu-toggle-div-hover;
+      &:before,
+      &:after {
+        @extend %mobile-menu-toggle-div-hover-before-and-after;
+      }
+    }
+  }
+  &.active {
+    div span {
+      @extend %mobile-menu-toggle-active-div-span;
+      &:before,
+      &:after {
+        @extend %mobile-menu-toggle-active-div-span-before-and-after;
+      }
+      &:after {
+        @extend %mobile-menu-toggle-active-div-span-after;
+      }
+    }
+  }
 }
 .menu-item--collapsed {
   @extend %menu-item--collapsed;
 }
 .mobile-nav {
-  @extend %mobile-nav-menu;
+  .region-primary-nav {
+    @extend %mobile-nav-menu-region-primary-nav;
+  }
+  .menu a {
+    @extend %mobile-nav-menu-region-primary-nav-menu-link;
+    &:after {
+      @extend %mobile-nav-menu-region-primary-nav-menu-link-after;
+    }
+    &.is-active {
+      @extend %mobile-nav-menu-region-primary-nav-menu-link-after-is-active;
+    }
+  }
 }
 .mobile-nav .menu--utility .menu li {
-  @extend %menu-item;
+  a {
+    @extend %menu-item-link;
+    &:after {
+      @extend %menu-item-link-after;
+    }
+  }
+  &:last-child a {
+    @extend %menu-item-last-child-link;
+    &.is-active {
+      @extend %menu-item-last-child-link-is-active;
+    }
+  }
 }
 
 // Specific ranges - use sparingly.

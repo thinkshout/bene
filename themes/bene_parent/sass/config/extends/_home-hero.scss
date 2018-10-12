@@ -18,53 +18,52 @@
   @include mq(desktop) {
     min-height: rem(603);
   }
-
-  .field--name-bene-lead {
-    @include vars(font-size, title-font-size-small);
-    margin-bottom: 0.5rem;
-    position: relative;
-    z-index: 1;
-
-    @include mq(mobile) {
-      @include vars(font-size, title-font-size-base);
-      @include vars(line-height, title-line-height-base);
-      padding-top: 7rem;
-    }
-  }
-
-  .field--name-bene-title {
-    @include vars(font-size, title-font-size-medium);
-    margin: 0 auto 2rem;
-    max-width: rem(900);
-    position: relative;
-    z-index: 1;
-    @include vars(line-height, title-line-height-medium);
-
-    @include mq(mobile) {
-      @include vars(font-size, title-font-size-small); // was rem(24)
-    }
-  }
-
-  .field--name-bene-link {
-    position: relative;
-    z-index: 1;
-    a {
-      // @include vars(border, button-secondary-text-and-outline-color, rem(2) solid);
-      @include vars(border-radius, preferred-border-radius);
-      @include vars(color, button-secondary-text-and-outline-color);
-      @include vars(background-color, button-secondary-color-background);
-      padding: 1rem 2rem;
-      @include vars(font-size, title-font-size-footnote);
-      @include font-style('bold');
-      text-transform: uppercase;
-
-      &:hover {
-        @include vars(color, button-secondary-hover-text-and-outline-color);
-        @include vars(background-color, button-secondary-color-hover-background);
-      }
-    }
-
-
-  }
-
 }
+
+%block-bene-home-page-feature-block-field--name-bene-lead {
+  @include vars(font-size, title-font-size-small);
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+
+  @include mq(mobile) {
+    @include vars(font-size, title-font-size-base);
+    @include vars(line-height, title-line-height-base);
+    padding-top: 7rem;
+  }
+}
+
+%block-bene-home-page-feature-block-field--name-bene-title {
+  @include vars(font-size, title-font-size-medium);
+  margin: 0 auto 2rem;
+  max-width: rem(900);
+  position: relative;
+  z-index: 1;
+  @include vars(line-height, title-line-height-medium);
+
+  @include mq(mobile) {
+    @include vars(font-size, title-font-size-small); // was rem(24)
+  }
+}
+
+%block-bene-home-page-feature-block-field--name-bene-button {
+  position: relative;
+  z-index: 1;
+}
+%block-bene-home-page-feature-block-field--name-bene-button-link {
+  // @include vars(border, button-secondary-text-and-outline-color, rem(2) solid);
+  @include vars(border-radius, preferred-border-radius);
+  @include vars(color, button-secondary-text-and-outline-color);
+  @include vars(background-color, button-secondary-color-background);
+  padding: 1rem 2rem;
+  @include vars(font-size, title-font-size-footnote);
+  @include font-style('bold');
+  text-transform: uppercase;
+}
+%block-bene-home-page-feature-block-field--name-bene-button-link-hover {
+  @include vars(color, button-secondary-hover-text-and-outline-color);
+  @include vars(background-color, button-secondary-color-hover-background);
+}
+
+
+
