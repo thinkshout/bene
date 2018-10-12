@@ -48,19 +48,18 @@
   @include vars(color, color-text-link-over-color-primary-background);
   cursor: pointer;
   text-decoration: none;
-  &:hover,
-  &:active {
-    @include vars(color, color-text-hover-link-over-color-primary-background);
-  }
+}
+%a-hover-active {
+  @include vars(color, color-text-hover-link-over-color-primary-background);
 }
 
 // tables will look similar to the menu in color - text will be blue in bene parent, for example
 %table-basics {
   @include vars(color, color-text-link-over-color-primary-background);
-  &:hover,
-  &:active {
-    @include vars(color, color-text-hover-link-over-color-primary-background);
-  }
+}
+
+%table-basics-hover-active {
+  @include vars(color, color-text-hover-link-over-color-primary-background);
 }
 
 %button {
@@ -72,61 +71,62 @@
   list-style: none;
   padding: 0;
   margin: 0 0 0 0;
-  li {
-    padding-bottom: rem(14);
-    padding-left: rem(32);
-    text-indent: rem(-20);
-    @include vars(color, color-text-over-color-primary-background);
-    &:before {
-      @include vars(color, color-text-over-color-primary-background);
-      content: "•";
-      @include vars(font-size, primary-font-size-base);
-      line-height: 1;
-      padding-right: rem(14);
-      position: relative;
-    }
-  }
+}
+%ul-li {
+  padding-bottom: rem(14);
+  padding-left: rem(32);
+  text-indent: rem(-20);
+  @include vars(color, color-text-over-color-primary-background);
+}
+%ul-li-bullet {
+  @include vars(color, color-text-over-color-primary-background);
+  content: "•";
+  @include vars(font-size, primary-font-size-base);
+  line-height: 1;
+  padding-right: rem(14);
+  position: relative;
 }
 
 %ol {
   padding-left: rem(26);
-  li {
-    padding-bottom: rem(14);
-    padding-left: rem(6);
-    line-height: 1.4;
-    @include vars(font-size, primary-font-size-base);
-    @include vars(color, color-text-over-color-primary-background);
-  }
 }
+%ol-li {
+  padding-bottom: rem(14);
+  padding-left: rem(6);
+  line-height: 1.4;
+  @include vars(font-size, primary-font-size-base);
+  @include vars(color, color-text-over-color-primary-background);
+}
+
 
 %table {
   @include vars(border, 1px solid, color-text-link-over-color-primary-background);
   margin: rem(24) 0;
   table-layout: auto;
-  th, tr, td, tr:first-child th {
-    border: none;
-    @include vars(color, color-text-link-over-color-primary-background);
-    @include vars(font-size, primary-font-size-footnote);
-    @include vars(font-weight, primary-font-regular);
-    padding: rem(18) rem(42);
-    @include vars(text-align, preferred-alignment);
-    strong {
-      @include vars(font-weight, primary-font-medium);
-    }
+}
+%table-cell {
+  border: none;
+  @include vars(color, color-text-link-over-color-primary-background);
+  @include vars(font-size, primary-font-size-footnote);
+  @include vars(font-weight, primary-font-regular);
+  padding: rem(18) rem(42);
+  @include vars(text-align, preferred-alignment);
+  %table-cell-strong {
+    @include vars(font-weight, primary-font-medium);
   }
-  th, tr:first-child th {
-    @include vars(font-weight, primary-font-bold);
-    text-transform: uppercase;
-    @include vars(color, color-text-hover-link-over-color-primary-background);
-    @include vars(font-size, primary-font-size-footnote);
-    margin: 0;
-  }
-  tr {
-    @include vars(background-color, background-color-primary);
-  }
-  th,tr:nth-of-type(2n) {
-    @include vars(background-color, background-color-tertiary);
-  }
+}
+%table-header {
+  @include vars(font-weight, primary-font-bold);
+  text-transform: uppercase;
+  @include vars(color, color-text-hover-link-over-color-primary-background);
+  @include vars(font-size, primary-font-size-footnote);
+  margin: 0;
+}
+%table-tr {
+  @include vars(background-color, background-color-primary);
+}
+%table-tr-shaded {
+  @include vars(background-color, background-color-tertiary);
 }
 
 %menu-basics {
@@ -134,18 +134,19 @@
   margin: 0;
   padding: 0;
   @include vars(text-align, preferred-alignment);
-  .menu-item {
-    padding: 0;
-  }
+}
+%menu-item-basics {
+  padding: 0;
 }
 
 %fieldset {
   border: none;
   padding: 0;
-  legend {
-    @include vars(font-size, primary-font-size-accent);
-    @include vars(font-weight, primary-font-bold);
-    @include vars(color, color-text-title-over-color-primary-background);
-  }
 }
+%fieldset-legend {
+  @include vars(font-size, primary-font-size-accent);
+  @include vars(font-weight, primary-font-bold);
+  @include vars(color, color-text-title-over-color-primary-background);
+}
+
 

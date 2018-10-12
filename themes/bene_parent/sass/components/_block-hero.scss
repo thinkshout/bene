@@ -1,3 +1,7 @@
 .block-hero {
   @extend %block-hero;
+
+  h1 {
+    @extend %block-hero-h1;
+  }
 }

@@ -422,24 +422,26 @@ a {
   color: var(--color-text-link-over-color-primary-background );
   cursor: pointer;
   text-decoration: none; }
-  a:hover, a:active, a.nice-select.open {
-    color:  #50CFE3;
-    color: var(--color-text-hover-link-over-color-primary-background ); }
+
+a:hover, a:active, a.nice-select.open {
+  color:  #50CFE3;
+  color: var(--color-text-hover-link-over-color-primary-background ); }
 
 table a,
 li a,
 p a {
   color:  #129FB5;
   color: var(--color-text-link-over-color-primary-background ); }
-  table a:hover,
-  li a:hover,
-  p a:hover, table a:active, table a.nice-select.open,
-  li a:active,
-  li a.nice-select.open,
-  p a:active,
-  p a.nice-select.open {
-    color:  #50CFE3;
-    color: var(--color-text-hover-link-over-color-primary-background ); }
+
+table a:hover, table a:active, table a.nice-select.open,
+li a:hover,
+li a:active,
+li a.nice-select.open,
+p a:hover,
+p a:active,
+p a.nice-select.open {
+  color:  #50CFE3;
+  color: var(--color-text-hover-link-over-color-primary-background ); }
 
 a.button {
   -webkit-transition: background-color 0.3s linear, color 0.3s linear;
@@ -463,67 +465,74 @@ a.button {
   list-style: none;
   padding: 0;
   margin: 0 0 0 0; }
-  .text-formatted ul li {
-    padding-bottom: 0.875rem;
-    padding-left: 2rem;
-    text-indent: -1.25rem;
-    color:  #000000;
-    color: var(--color-text-over-color-primary-background ); }
-    .text-formatted ul li:before {
-      color:  #000000;
-      color: var(--color-text-over-color-primary-background );
-      content: "•";
-      font-size:  1rem;
-      font-size: var(--primary-font-size-base );
-      line-height: 1;
-      padding-right: 0.875rem;
-      position: relative; }
+
+.text-formatted ul li {
+  padding-bottom: 0.875rem;
+  padding-left: 2rem;
+  text-indent: -1.25rem;
+  color:  #000000;
+  color: var(--color-text-over-color-primary-background ); }
+
+.text-formatted ul li:before {
+  color:  #000000;
+  color: var(--color-text-over-color-primary-background );
+  content: "•";
+  font-size:  1rem;
+  font-size: var(--primary-font-size-base );
+  line-height: 1;
+  padding-right: 0.875rem;
+  position: relative; }
 
 ol {
   padding-left: 1.625rem; }
-  ol li {
-    padding-bottom: 0.875rem;
-    padding-left: 0.375rem;
-    line-height: 1.4;
-    font-size:  1rem;
-    font-size: var(--primary-font-size-base );
-    color:  #000000;
-    color: var(--color-text-over-color-primary-background ); }
+
+ol li {
+  padding-bottom: 0.875rem;
+  padding-left: 0.375rem;
+  line-height: 1.4;
+  font-size:  1rem;
+  font-size: var(--primary-font-size-base );
+  color:  #000000;
+  color: var(--color-text-over-color-primary-background ); }
 
 table, table.tablesaw {
   border: color-text-link-over-color-primary-background ;
   border: color-text-link-over-color-primary-background var(--1px solid );
   margin: 1.5rem 0;
   table-layout: auto; }
-  table th, table.tablesaw th, table tr, table.tablesaw tr, table td, table.tablesaw td, table tr:first-child th {
-    border: none;
-    color:  #129FB5;
-    color: var(--color-text-link-over-color-primary-background );
-    font-size:  0.875rem;
-    font-size: var(--primary-font-size-footnote );
-    font-weight:  400;
-    font-weight: var(--primary-font-regular );
-    padding: 1.125rem 2.625rem;
-    text-align:  left;
-    text-align: var(--preferred-alignment ); }
-    table th strong, table.tablesaw th strong, table tr strong, table.tablesaw tr strong, table td strong, table.tablesaw td strong, table tr:first-child th strong {
-      font-weight:  600;
-      font-weight: var(--primary-font-medium ); }
-  table th, table.tablesaw th, table tr:first-child th {
-    font-weight:  700;
-    font-weight: var(--primary-font-bold );
-    text-transform: uppercase;
-    color:  #50CFE3;
-    color: var(--color-text-hover-link-over-color-primary-background );
-    font-size:  0.875rem;
-    font-size: var(--primary-font-size-footnote );
-    margin: 0; }
-  table tr, table.tablesaw tr {
-    background-color:  #FFFFFF;
-    background-color: var(--background-color-primary ); }
-  table th, table.tablesaw th, table tr:nth-of-type(2n) {
-    background-color:  #D8D8D8;
-    background-color: var(--background-color-tertiary ); }
+
+table th, table tr, table td, table tr:first-child th, table.tablesaw th, table.tablesaw tr, table.tablesaw td, table.tablesaw tr:first-child th {
+  border: none;
+  color:  #129FB5;
+  color: var(--color-text-link-over-color-primary-background );
+  font-size:  0.875rem;
+  font-size: var(--primary-font-size-footnote );
+  font-weight:  400;
+  font-weight: var(--primary-font-regular );
+  padding: 1.125rem 2.625rem;
+  text-align:  left;
+  text-align: var(--preferred-alignment ); }
+  table th strong, table tr strong, table td strong, table tr:first-child th strong, table.tablesaw th strong, table.tablesaw tr strong, table.tablesaw td strong, table.tablesaw tr:first-child th strong {
+    font-weight:  600;
+    font-weight: var(--primary-font-medium ); }
+
+table th, table tr:first-child th, table.tablesaw th, table.tablesaw tr:first-child th {
+  font-weight:  700;
+  font-weight: var(--primary-font-bold );
+  text-transform: uppercase;
+  color:  #50CFE3;
+  color: var(--color-text-hover-link-over-color-primary-background );
+  font-size:  0.875rem;
+  font-size: var(--primary-font-size-footnote );
+  margin: 0; }
+
+table tr, table.tablesaw tr {
+  background-color:  #FFFFFF;
+  background-color: var(--background-color-primary ); }
+
+table th, table tr:nth-of-type(2n), table.tablesaw th, table.tablesaw tr:nth-of-type(2n) {
+  background-color:  #D8D8D8;
+  background-color: var(--background-color-tertiary ); }
 
 ul.menu {
   list-style: none outside;
@@ -531,48 +540,51 @@ ul.menu {
   padding: 0;
   text-align:  left;
   text-align: var(--preferred-alignment ); }
-  ul.menu .menu-item {
-    padding: 0; }
+
+ul.menu .menu-item {
+  padding: 0; }
 
 fieldset {
   border: none;
   padding: 0; }
-  fieldset legend {
-    font-size:  2rem;
-    font-size: var(--primary-font-size-accent );
-    font-weight:  700;
-    font-weight: var(--primary-font-bold );
-    color:  #50CFE3;
-    color: var(--color-text-title-over-color-primary-background ); }
+
+fieldset legend {
+  font-size:  2rem;
+  font-size: var(--primary-font-size-accent );
+  font-weight:  700;
+  font-weight: var(--primary-font-bold );
+  color:  #50CFE3;
+  color: var(--color-text-title-over-color-primary-background ); }
 
 .block-hero {
   position: relative;
   background-color:  #50CFE3;
   background-color: var(--background-color-secondary ); }
-  .block-hero h1 {
-    font-size:  3.125rem;
-    font-size: var(--title-font-size-medium );
-    padding: 0 1rem;
-    text-shadow: none;
-    text-transform: none;
-    z-index: 1; }
-    @media (max-width: 414px) {
-      .block-hero h1 {
-        flex: 0 1 100%;
-        text-align:  left;
-        text-align: var(--preferred-alignment );
-        font-size:  1.875rem;
-        font-size: var(--title-font-size-accent ); } }
-    @media (min-width: 769px) and (max-width: 1239px) {
-      .block-hero h1 {
-        flex: inherit;
-        font-size:  3.125rem;
-        font-size: var(--title-font-size-medium ); } }
-    @media (min-width: 769px) {
-      .block-hero h1 {
-        flex: inherit;
-        font-size:  3.125rem;
-        font-size: var(--title-font-size-medium ); } }
+
+.block-hero h1 {
+  font-size:  3.125rem;
+  font-size: var(--title-font-size-medium );
+  padding: 0 1rem;
+  text-shadow: none;
+  text-transform: none;
+  z-index: 1; }
+  @media (max-width: 414px) {
+    .block-hero h1 {
+      flex: 0 1 100%;
+      text-align:  left;
+      text-align: var(--preferred-alignment );
+      font-size:  1.875rem;
+      font-size: var(--title-font-size-accent ); } }
+  @media (min-width: 769px) and (max-width: 1239px) {
+    .block-hero h1 {
+      flex: inherit;
+      font-size:  3.125rem;
+      font-size: var(--title-font-size-medium ); } }
+  @media (min-width: 769px) {
+    .block-hero h1 {
+      flex: inherit;
+      font-size:  3.125rem;
+      font-size: var(--title-font-size-medium ); } }
 
 .region-footer .bene-contact-links .fieldset-wrapper {
   display: flex;
