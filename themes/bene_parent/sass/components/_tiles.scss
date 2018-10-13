@@ -1,32 +1,94 @@
+
 .paragraph--type--tiles {
   @extend %paragraph--type--tiles;
 
   &> .field--name-field-title {
     @extend %paragraph--type--tiles-field--name-field-title;
   }
+
   .field--name-field-tiles {
     @extend %paragraph--type--tiles-field--name-field-tiles;
 
     &> .field__item {
-      @extend %paragraph--type--tiles-field__item;
+      @extend %paragraph--type--tiles-field--name-field-tiles-field__item;
+
 
       .field--name-field-image,
       .bg-header {
-        @extend %paragraph--type--tiles-field__item-field--name-field-image;
+        @extend %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-image;
+
+          img {
+            @extend %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-image-img;
+          }
+      }
+
+      .field--name-field-lead {
+        @extend %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-lead;
+      }
+
+      .tile-text {
+        @extend %paragraph--type--tiles-field--name-field-tiles-field__item-tile-text;
+
+        .text-wrapper {
+          @extend %paragraph--type--tiles-field--name-field-tiles-field__item-tile-text-text-wrapper;
+        }
       }
 
       .field--name-field-title {
-        @extend %paragraph--type--tiles-field__item-field--name-field-title;
+        @extend %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-title;
       }
 
       .field--name-field-text p {
-        @extend %paragraph--type--tiles-field__item-field--name-field-text-p;
+        &:after{
+          @extend %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-text-p-after;
+        }
+      }
+
+      .field--name-field-text p {
+        @extend %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-text-p;
       }
 
       .field--name-field-link a {
-        @extend %paragraph--type--tiles-field__item-field--name-field-link-a;
+        @extend %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-link-a;
+
+        &:hover {
+          @extend %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-link-a-hover;
+        }
       }
     }
   }
 }
 
+
+// The old way:
+//.paragraph--type--tiles {
+//  @extend %paragraph--type--tiles;
+//
+//  &> .field--name-field-title {
+//    @extend %paragraph--type--tiles-field--name-field-title;
+//  }
+//  .field--name-field-tiles {
+//    @extend %paragraph--type--tiles-field--name-field-tiles;
+//
+//    &> .field__item {
+//      @extend %paragraph--type--tiles-field__item;
+//
+//      .field--name-field-image,
+//      .bg-header {
+//        @extend %paragraph--type--tiles-field__item-field--name-field-image;
+//      }
+//
+//      .field--name-field-title {
+//        @extend %paragraph--type--tiles-field__item-field--name-field-title;
+//      }
+//
+//      .field--name-field-text p {
+//        @extend %paragraph--type--tiles-field__item-field--name-field-text-p;
+//      }
+//
+//      .field--name-field-link a {
+//        @extend %paragraph--type--tiles-field__item-field--name-field-link-a;
+//      }
+//    }
+//  }
+//}

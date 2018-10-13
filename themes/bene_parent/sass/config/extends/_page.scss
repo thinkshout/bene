@@ -54,9 +54,6 @@
   justify-content: center;
 }
 
-%page-node-type-region-clear {
-  clear: both;
-}
 %page-node-type-region-tiles {
   @include outer-container;
   max-width: rem(1440);
