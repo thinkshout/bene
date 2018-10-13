@@ -41,6 +41,7 @@
 }
 
 %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-image {
+  @include vars(background, background-color-inset);
   position: relative;
   z-index: 100;
   height: auto;
@@ -69,10 +70,10 @@
 
 %paragraph--type--tiles-field--name-field-tiles-field__item-tile-text {
   padding: 0 20px;
-}
-
-%paragraph--type--tiles-field--name-field-tiles-field__item-tile-text-text-wrapper {
-  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
 }
 
 %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-title {
@@ -88,24 +89,19 @@
   content: '...';
 }
 
-
 %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-text-p {
   @include vars(text-align, hero-alignment);
-  font-size: 16px;
+  @include vars(font-size, sentence-font-size-base);
   line-height: 22px;
 }
 
 %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-link-a {
-  margin: 35px 0;
-  width: 200px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: auto;
+  margin-bottom: 35px;
 }
 
 %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-link-a-hover {
-  @include vars(background, color-text-hover-link-over-color-inset-background);
+  @include vars(color, color-text-hover-link-over-color-inset-background);
 }
 
 

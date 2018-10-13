@@ -12,7 +12,6 @@
     &> .field__item {
       @extend %paragraph--type--tiles-field--name-field-tiles-field__item;
 
-
       .field--name-field-image,
       .bg-header {
         @extend %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-image;
@@ -28,10 +27,6 @@
 
       .tile-text {
         @extend %paragraph--type--tiles-field--name-field-tiles-field__item-tile-text;
-
-        .text-wrapper {
-          @extend %paragraph--type--tiles-field--name-field-tiles-field__item-tile-text-text-wrapper;
-        }
       }
 
       .field--name-field-title {

@@ -28,8 +28,8 @@ html {
   --color-text-over-color-secondary-background: #000000;
   --background-color-tertiary: #D8D8D8;
   --background-color-quaternary: #129FB5;
-  --background-color-inset: #129FB5;
-  --color-text-title-over-color-inset-background: #50CFE3;
+  --background-color-inset: #FFFFFF;
+  --color-text-title-over-color-inset-background: #129FB5;
   --color-text-over-color-inset-background: #000000;
   --color-text-link-over-color-inset-background: #FFFFFF;
   --color-text-hover-link-over-color-inset-background: #50CFE3;
@@ -81,6 +81,7 @@ html {
   --sentence-font-regular: 400;
   --sentence-font-medium: 600;
   --sentence-font-size-small: 1.625rem;
+  --sentence-font-size-base: 1rem;
   --sentence-line-height-small: 2.4375rem;
   --sentence-line-height-base: 1.875rem;
   --preferred-alignment: left;
@@ -409,7 +410,7 @@ p,
 p.standard {
   color:  #000000;
   color: var(--color-text-over-color-primary-background );
-  font-size:  ;
+  font-size:  1rem;
   font-size: var(--sentence-font-size-base );
   line-height:  1.875rem;
   line-height: var(--sentence-line-height-base );
@@ -731,7 +732,7 @@ fieldset legend {
   background-color: var(--button-secondary-color-hover-background ); }
 
 #main-content .field--name-bene-intro {
-  background-color:  #129FB5;
+  background-color:  #FFFFFF;
   background-color: var(--background-color-inset ); }
 
 #main-content .field--name-bene-intro h1, #main-content .field--name-bene-intro h2, #main-content .field--name-bene-intro h3, #main-content .field--name-bene-intro h4, #main-content .field--name-bene-intro h5, #main-content .field--name-bene-intro a {
@@ -742,7 +743,7 @@ fieldset legend {
   line-height:  3.875rem;
   line-height: var(--title-line-height-medium );
   margin: 50px 0;
-  color:  #50CFE3;
+  color:  #129FB5;
   color: var(--color-text-title-over-color-inset-background ); }
 
 #main-content .field--name-bene-intro span, #main-content .field--name-bene-intro p {
@@ -780,7 +781,7 @@ fieldset legend {
   margin-top: 1.125rem; }
 
 #main-content .field--name-bene-intro p {
-  font-size:  ;
+  font-size:  1rem;
   font-size: var(--sentence-font-size-base );
   font-weight:  ;
   font-weight: var(--sentence-font-light );
@@ -1363,7 +1364,7 @@ fieldset legend {
   color: var(--color-text-over-color-photo-overlay-background );
   margin: 2rem auto;
   max-width: 100%;
-  font-size:  ;
+  font-size:  1rem;
   font-size: var(--sentence-font-size-base );
   line-height:  1.875rem;
   line-height: var(--sentence-line-height-base );
@@ -1545,13 +1546,15 @@ fieldset legend {
 .paragraph--type--tiles .field--name-field-tiles > .field__item {
   text-align:  center;
   text-align: var(--hero-alignment );
-  background-color:  #129FB5;
+  background-color:  #FFFFFF;
   background-color: var(--background-color-inset );
   font-family:  'Open Sans', sans-serif;
   font-family: var(--sentence-font-family ); }
 
 .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-image,
 .paragraph--type--tiles .field--name-field-tiles > .field__item .bg-header {
+  background:  #FFFFFF;
+  background: var(--background-color-inset );
   position: relative;
   z-index: 100;
   height: auto;
@@ -1565,13 +1568,14 @@ fieldset legend {
   display: none; }
 
 .paragraph--type--tiles .field--name-field-tiles > .field__item .tile-text {
-  padding: 0 20px; }
-
-.paragraph--type--tiles .field--name-field-tiles > .field__item .tile-text .text-wrapper {
-  min-height: 250px; }
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start; }
 
 .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-title {
-  color:  #50CFE3;
+  color:  #129FB5;
   color: var(--color-text-title-over-color-inset-background );
   text-align:  center;
   text-align: var(--hero-alignment );
@@ -1586,20 +1590,17 @@ fieldset legend {
 .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-text p {
   text-align:  center;
   text-align: var(--hero-alignment );
-  font-size: 16px;
+  font-size:  1rem;
+  font-size: var(--sentence-font-size-base );
   line-height: 22px; }
 
 .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-link a {
-  margin: 35px 0;
-  width: 200px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center; }
+  margin-top: auto;
+  margin-bottom: 35px; }
 
 .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-link a:hover {
-  background:  #50CFE3;
-  background: var(--color-text-hover-link-over-color-inset-background ); }
+  color:  #50CFE3;
+  color: var(--color-text-hover-link-over-color-inset-background ); }
 
 @media (min-width: 769px) {
   .block-bene-footer-block .menu {

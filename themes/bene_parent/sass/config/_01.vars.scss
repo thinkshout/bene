@@ -40,9 +40,9 @@ $vars: (
   //      color-text-link-over-color-quaternary-background: #129FB5,
   //      color-text-hover-link-over-color-quaternary-background: #50CFE3,
   //
-  background-color-inset: #129FB5, // (3-up under photo, intro block)
+  background-color-inset: #FFFFFF, // (3-up under photo, intro block)
   // Text and foreground colors that go with the color above:
-        color-text-title-over-color-inset-background: #50CFE3,
+        color-text-title-over-color-inset-background: #129FB5,
   //      color-text-subtitle-over-color-inset-background: #5C5B5B,
         color-text-over-color-inset-background: #000000,
         color-text-link-over-color-inset-background: #FFFFFF,
@@ -55,7 +55,7 @@ $vars: (
         color-text-over-color-photo-overlay-background: #FFFFFF,
   //      color-text-link-over-color-photo-overlay-background: #129FB5,
   //      color-text-hover-link-over-color-photo-overlay-background: lighten(#129FB5, 20%),
-        photo-overlay-linear-gradient: linear-gradient(-180deg, rgba(#129FB5, 1), rgba(#000000, 1S)),
+        photo-overlay-linear-gradient: linear-gradient(-180deg, rgba(#129FB5, 1), rgba(#000000, 1)),
         //photo-overlay-gradient-direction: -180deg,
         //photo-overlay-gradient-start-color: rgba(#129FB5, 1), // 0.00 = transparent
         //photo-overlay-gradient-end-color: rgba(#50CFE3, 1), //  1 = opaque
@@ -132,7 +132,7 @@ $vars: (
   //      sentence-font-size-medium: rem(48),
   //      sentence-font-size-accent: rem(32),
         sentence-font-size-small: rem(26),
-  //      sentence-font-size-base: rem(16),
+        sentence-font-size-base: rem(16),
   //      sentence-font-size-footnote: rem(14),
   //      sentence-line-height-large: rem(72),
   //      sentence-line-height-medium: rem(62),
