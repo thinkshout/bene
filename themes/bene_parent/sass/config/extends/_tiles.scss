@@ -53,7 +53,9 @@
 }
 
 %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-lead {
-  display: none;
+  @include vars(text-align, preferred-alignment);
+  @include vars(font-size, sentence-font-size-footnote);
+  @include vars(line-height, sentence-line-height-footnote);
 }
 
 %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-image-hover-after {
@@ -93,10 +95,11 @@
   @include vars(text-align, hero-alignment);
   @include vars(font-size, sentence-font-size-base);
   line-height: 22px;
+  margin-bottom: 0.5rem;
 }
 
 %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-link-a {
-  margin-top: auto;
+  margin-top: 50px;
   margin-bottom: 35px;
 }
 

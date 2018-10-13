@@ -82,8 +82,10 @@ html {
   --sentence-font-medium: 600;
   --sentence-font-size-small: 1.625rem;
   --sentence-font-size-base: 1rem;
+  --sentence-font-size-footnote: 0.75rem;
   --sentence-line-height-small: 2.4375rem;
   --sentence-line-height-base: 1.875rem;
+  --sentence-line-height-footnote: 0.875rem;
   --preferred-alignment: left;
   --hero-alignment: center; }
 
@@ -1565,7 +1567,12 @@ fieldset legend {
   width: 100%; }
 
 .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-lead {
-  display: none; }
+  text-align:  left;
+  text-align: var(--preferred-alignment );
+  font-size:  0.75rem;
+  font-size: var(--sentence-font-size-footnote );
+  line-height:  0.875rem;
+  line-height: var(--sentence-line-height-footnote ); }
 
 .paragraph--type--tiles .field--name-field-tiles > .field__item .tile-text {
   padding: 0 20px;
@@ -1592,10 +1599,11 @@ fieldset legend {
   text-align: var(--hero-alignment );
   font-size:  1rem;
   font-size: var(--sentence-font-size-base );
-  line-height: 22px; }
+  line-height: 22px;
+  margin-bottom: 0.5rem; }
 
 .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-link a {
-  margin-top: auto;
+  margin-top: 50px;
   margin-bottom: 35px; }
 
 .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-link a:hover {
