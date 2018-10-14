@@ -24,6 +24,10 @@
   grid-gap: 30px;
   justify-content: center;
 
+  @include mq(xl) {
+    margin: rem(24) auto;
+  }
+
   @include mq(desktop) {
     .field--name-field-image,
     .bg-header {
@@ -38,18 +42,54 @@
   @include vars(text-align, hero-alignment);
   @include vars(background-color, background-color-inset);
   @include vars(font-family, sentence-font-family);
+  display: grid;
+  grid-template-rows: auto;
+  justify-items: stretch;
+
+  @include mq(xl) {
+    margin-bottom: rem(48);
+    max-width: rem(380);
+  }
+
+  @include mq(desktop) {
+    .field--name-field-image,
+    .bg-header {
+      @include vars(background-color, background-color-secondary);
+      height: 18.36vw;
+      width: 30.6vw;
+    }
+  }
+}
+
+%paragraph--type--tiles-field--name-field-tiles-field__item-paragraph--type--tile {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+}
+
+%paragraph--type--tiles-field--name-field-tiles-field__item-paragraph--type--tile-a {
+  align-self: start;
+  max-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+}
+%paragraph--type--tiles-field--name-field-tiles-field__item-paragraph--type--tile-a-div {
+  height: 100%;
+}
+%paragraph--type--tiles-field--name-field-tiles-field__item-tile-text {
+  align-self: end;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  height: 100%;
 }
 
 %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-image {
   @include vars(background, background-color-inset);
-  position: relative;
-  z-index: 100;
-  height: auto;
   width: 100%;
 }
 
 %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-image-img {
   width: 100%;
+  max-width: 100%;
 }
 
 %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-lead {
@@ -70,163 +110,37 @@
   z-index: 1;
 }
 
-%paragraph--type--tiles-field--name-field-tiles-field__item-tile-text {
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: flex-start;
-}
-
 %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-title {
   @include vars(color, color-text-title-over-color-inset-background);
   @include vars(text-align, hero-alignment);
-  font-size: 1.4rem;
-  line-height: 27px;
-  margin-top: 0.75rem;
-}
-
-%paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-text-p-after {
-  display: inline;
-  content: '...';
+  @include vars(font-family, title-font-family);
+  @include vars(font-size, title-font-size-small);
+  @include vars(font-weight, title-font-medium);
+  @include vars(line-height, title-line-height-small);
+  margin-top: rem(28);
 }
 
 %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-text-p {
   @include vars(text-align, hero-alignment);
   @include vars(font-size, sentence-font-size-base);
-  line-height: 22px;
-  margin-bottom: 0.5rem;
+  @include vars(color, color-text-over-color-inset-background);
+  @include vars(line-height, sentence-line-height-base);
+  margin-bottom: rem(12);
+  margin-top: rem(12);
+}
+
+%paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-link {
+  margin-top: auto;
+  margin-bottom: rem(38);
 }
 
 %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-link-a {
-  margin-top: 50px;
-  margin-bottom: 35px;
+  @include vars(font-size, sentence-font-size-base);
+  @include vars(font-weight, sentence-font-bold);
+  @include vars(color, color-text-link-over-color-inset-background);
+  margin-top: auto;
 }
 
 %paragraph--type--tiles-field--name-field-tiles-field__item-field--name-field-link-a-hover {
   @include vars(color, color-text-hover-link-over-color-inset-background);
 }
-
-
-// The old way:
-//%paragraph--type--tiles {
-//  @include vars(background-color, background-color-secondary);
-//  padding-top: 2.5rem;
-//}
-//
-//%paragraph--type--tiles-field--name-field-title {
-//  @include vars(font-size, title-font-size-medium);
-//  @include vars(font-family, title-font-family);
-//  @include vars(font-weight, title-font-bold);
-//  @include vars(line-height, title-line-height-medium);
-//  @include vars(color, color-text-title-over-color-secondary-background);
-//  margin: rem(18) auto rem(0);
-//  @include vars(text-align, hero-alignment);
-//  padding-bottom: 20px;
-//
-//  @include mq(desktop) {
-//    margin: rem(36) auto rem(0);
-//  }
-//}
-//
-//%paragraph--type--tiles-field--name-field-tiles {
-//  display: flex;
-//  flex-direction: row;
-//  flex-wrap: wrap;
-//  justify-content: space-around;
-//  padding: rem(16) rem(16);
-//
-//  @include mq(xl) {
-//    margin: rem(24) auto;
-//  }
-//
-//
-//  max-width: rem(1300);
-//  margin: 0 auto;
-//  padding: 1.5rem;
-//  display: grid;
-//  grid-template-columns: repeat(auto-fit, rem(330));
-//  grid-gap: 30px;
-//  justify-content: center;
-//
-//  @include mq(desktop) {
-//    .field--name-field-image,
-//    .bg-header {
-//      @include vars(background-color, background-color-secondary);
-//      height: 18.36vw;
-//      width: 100%;
-//    }
-//  }
-//}
-//
-//
-//%paragraph--type--tiles-field__item {
-//  display: flex;
-//  flex: 1 1 auto;
-//  margin-bottom: rem(24);
-//  @include vars(text-align, hero-alignment);
-//  @include vars(background-color, background-color-inset);
-//
-//  @include mq(phablet) {
-//    flex: 0 1 calc(50% - 1rem);
-//    min-width: rem(380);
-//  }
-//
-//  @include mq(desktop) {
-//    flex: 0 1 calc(33% - 1rem);
-//    margin-bottom: rem(36);
-//    min-width: rem(300);
-//
-//    .field--name-field-image,
-//    .bg-header {
-//      @include vars(background-color, background-color-inset);
-//      height: 18.36vw;
-//      width: 30.6vw;
-//    }
-//  }
-//
-//  @include mq(xl) {
-//    margin-bottom: rem(48);
-//    max-width: rem(380);
-//  }
-//}
-//
-//
-//
-//%paragraph--type--tiles-field__item-field--name-field-image {
-//  @include vars(background-color, background-color-inset);
-//  font-size: 0;
-//  max-height: rem(228);
-//  max-width: rem(380);
-//  img {
-//    max-width: 100%;
-//  }
-//}
-//
-//%paragraph--type--tiles-field__item-field--name-field-title {
-//  @include vars(color, color-text-title-over-color-inset-background);
-//  @include vars(font-size, title-font-size-small);
-//  @include vars(font-weight, title-font-medium);
-//  @include vars(line-height, title-line-height-small);
-//  margin-top: rem(28);
-//}
-//
-//%paragraph--type--tiles-field__item-field--name-field-text-p {
-//  @include vars(color, color-text-over-color-inset-background);
-//  @include vars(font-family, sentence-font-family);
-//  @include vars(font-size, sentence-font-size-base);
-//  @include vars(font-weight, sentence-font-medium);
-//  @include vars(line-height, sentence-line-height-base);
-//  margin-bottom: rem(12);
-//  margin-top: rem(12);
-//}
-//
-//%paragraph--type--tiles-field__item-field--name-field-link-a {
-//  display: inline-block;
-//  @include vars(font-size, primary-font-size-footnote);
-//  @include vars(font-weight, primary-font-medium);
-//  @include vars(color, color-text-link-over-color-inset-background);
-//  @include vars(font-family, primary-font-family);
-//  @include vars(line-height, primary-line-height-footnote);
-//  margin-top: rem(12);
-//}

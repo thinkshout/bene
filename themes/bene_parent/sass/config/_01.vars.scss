@@ -45,8 +45,8 @@ $vars: (
         color-text-title-over-color-inset-background: #129FB5,
   //      color-text-subtitle-over-color-inset-background: #5C5B5B,
         color-text-over-color-inset-background: #000000,
-        color-text-link-over-color-inset-background: #FFFFFF,
-        color-text-hover-link-over-color-inset-background: #50CFE3,
+        color-text-link-over-color-inset-background: #50CFE3,
+        color-text-hover-link-over-color-inset-background: #129FB5,
   //
   background-color-photo-overlay: rgba(#444, .11),
   // Text and foreground colors that go with the color above:
@@ -126,7 +126,7 @@ $vars: (
   //      sentence-font-light:   '300',
         sentence-font-regular: '400',
         sentence-font-medium:  '600',
-  //      sentence-font-bold:    '700',
+        sentence-font-bold:    '700',
   //      sentence-font-black:   '800',
   //      sentence-font-size-large: rem(61),
   //      sentence-font-size-medium: rem(48),
