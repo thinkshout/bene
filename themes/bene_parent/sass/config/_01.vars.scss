@@ -4,6 +4,7 @@
 $vars: (
   background-color-primary: #FFFFFF, // used for (header, footer)
   // Text and foreground colors that go with the above background color:
+        background-color-primary-shaded: darken(#50CFE3, 20%), // for tables
         color-text-title-over-color-primary-background: #50CFE3,
   //      color-text-subtitle-over-color-primary-background: #5C5B5B,
         color-text-over-color-primary-background: #000000,
@@ -16,21 +17,21 @@ $vars: (
         color-text-hover-secondary-menu-over-color-primary-background: #129FB5,
   //      color-text-disabled-secondary-menu-over-color-primary-background: #D8D8D8,
 
-  background-color-secondary: #50CFE3, // (3-up background, newsletter signup background, block quote background, photo credit paragraph background)
+  background-color-secondary: #50CFE3, // (3-up background, block quote background)
   // Text and foreground colors that go with the color above:
         color-text-title-over-color-secondary-background: #FFFFFF,
   //      color-text-subtitle-over-color-secondary-background: #D8D8D8,
         color-text-over-color-secondary-background: #000000,
   //      color-text-link-over-color-secondary-background: #129FB5,
   //      color-text-hover-link-over-color-secondary-background: lighten(#129FB5, 20%),
-  //
-  background-color-tertiary: #D8D8D8, // (info block background)
+
+  background-color-tertiary: linear-gradient(-180deg, rgba(#50CFE3, 1), rgba(#000000, 1)), // (newsletter signup background)
   // Text and foreground colors that go with the color above:
   //      color-text-title-over-color-tertiary-background: #50CFE3,
   //      color-text-subtitle-over-color-tertiary-background: #5C5B5B,
-  //      color-text-over-color-tertiary-background: #000000,
-  //      color-text-link-over-color-tertiary-background: #129FB5,
-  //      color-text-hover-link-over-color-tertiary-background: #50CFE3,
+        color-text-over-color-tertiary-background: #FFFFFF,
+        color-text-link-over-color-tertiary-background: #FFFFFF,
+        color-text-hover-link-over-color-tertiary-background: #lighten(#129FB5, 20%),
   //
   background-color-quaternary: #129FB5, // (Feature (no photo) background)
   // Text and foreground colors that go with the color above:
@@ -40,7 +41,7 @@ $vars: (
   //      color-text-link-over-color-quaternary-background: #129FB5,
   //      color-text-hover-link-over-color-quaternary-background: #50CFE3,
   //
-  background-color-inset: #FFFFFF, // (3-up under photo, intro block)
+  background-color-inset: #FFFFFF, // (3-up under photo, intro block, photo credit paragraph background)
   // Text and foreground colors that go with the color above:
         color-text-title-over-color-inset-background: #129FB5,
   //      color-text-subtitle-over-color-inset-background: #5C5B5B,

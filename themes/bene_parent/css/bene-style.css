@@ -14,6 +14,7 @@ html {
 /* Buttons */
 :root {
   --background-color-primary: #FFFFFF;
+  --background-color-primary-shaded: #1c9db1;
   --color-text-title-over-color-primary-background: #50CFE3;
   --color-text-over-color-primary-background: #000000;
   --color-text-link-over-color-primary-background: #129FB5;
@@ -26,7 +27,10 @@ html {
   --background-color-secondary: #50CFE3;
   --color-text-title-over-color-secondary-background: #FFFFFF;
   --color-text-over-color-secondary-background: #000000;
-  --background-color-tertiary: #D8D8D8;
+  --background-color-tertiary: linear-gradient(-180deg, #50cfe3, black);
+  --color-text-over-color-tertiary-background: #FFFFFF;
+  --color-text-link-over-color-tertiary-background: #FFFFFF;
+  --color-text-hover-link-over-color-tertiary-background: #lighten #129FB5, 20%;
   --background-color-quaternary: #129FB5;
   --background-color-inset: #FFFFFF;
   --color-text-title-over-color-inset-background: #129FB5;
@@ -537,8 +541,8 @@ table tr, table.tablesaw tr {
   background-color: var(--background-color-primary ); }
 
 table th, table tr:nth-of-type(2n), table.tablesaw th, table.tablesaw tr:nth-of-type(2n) {
-  background-color:  #D8D8D8;
-  background-color: var(--background-color-tertiary ); }
+  background-color:  #1c9db1;
+  background-color: var(--background-color-primary-shaded ); }
 
 ul.menu {
   list-style: none outside;
@@ -1065,6 +1069,89 @@ fieldset legend {
   .block-bene-sub-navigation-block ul.menu {
     text-align:  center;
     text-align: var(--hero-alignment ); }
+
+.external-newsletter {
+  align-items: center;
+  background-image: linear-gradient(#50cfe3, black);
+  background-image: var(--background-color-tertiary);
+  color:  #FFFFFF;
+  color: var(--color-text-over-color-tertiary-background );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.75rem; }
+
+.external-newsletter .mailchimp-signup-subscribe-form,
+.external-newsletter .mailchimp-newsletter-mergefields {
+  display: flex;
+  justify-content: center; }
+
+.external-newsletter .mailchimp-newsletter-mergefields {
+  width: 75%; }
+
+.external-newsletter .form-actions input {
+  height: 3.125rem;
+  padding: 1rem 1.875rem;
+  margin-top: .9rem; }
+
+.external-newsletter .form-item {
+  flex-grow: 1;
+  width: 30%;
+  margin: 0 10px; }
+
+.external-newsletter h2, .external-newsletter p, .external-newsletter a {
+  margin: 0 auto;
+  max-width: 94%;
+  text-align:  center;
+  text-align: var(--hero-alignment ); }
+
+.external-newsletter label {
+  color:  #FFFFFF;
+  color: var(--color-text-over-color-tertiary-background ); }
+
+.external-newsletter h2, .external-newsletter p, .external-newsletter a {
+  color:  #FFFFFF;
+  color: var(--color-text-over-color-tertiary-background );
+  margin: 0.375rem 0;
+  font-family:  'Open Sans', sans-serif;
+  font-family: var(--sentence-font-family ); }
+
+.external-newsletter a {
+  color:  #FFFFFF;
+  color: var(--color-text-link-over-color-tertiary-background ); }
+
+.external-newsletter a:after {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  content: ' →';
+  display: inline-block;
+  left: 0.25rem;
+  position: relative; }
+
+.external-newsletter a:hover:after {
+  left: 0.5rem; }
+
+.external-newsletter a.button {
+  background-color:  #129FB5;
+  background-color: var(--button-primary-color-background );
+  color:  #FFFFFF;
+  color: var(--button-primary-text-and-outline-color );
+  font-size:  0.75rem;
+  font-size: var(--sentence-font-size-footnote );
+  font-weight:  600;
+  font-weight: var(--sentence-font-medium );
+  padding: 0.9375rem 1.25rem;
+  text-transform: none; }
+
+.external-newsletter a.button:after {
+  content: none; }
+
+.external-newsletter a.button:hover {
+  background-color:  #50CFE3;
+  background-color: var(--button-primary-hover-color-background );
+  color:  #FFFFFF;
+  color: var(--button-primary-hover-text-and-outline-color ); }
 
 .nice-select {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -2407,70 +2494,6 @@ input[type='submit'] {
     font-size: var(--general-font-size-small); }
   .mobile-nav .menu a .menu--utility li:last-of-type {
     padding: 1rem; }
-
-.external-newsletter {
-  align-items: center;
-  background-image: linear-gradient(#7C7C7C, #000);
-  background-image: var(--newsletter-gradient-color);
-  color: #5C5B5B;
-  color: var(--newsletter-font-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0.75rem; }
-  .external-newsletter .mailchimp-signup-subscribe-form,
-  .external-newsletter .mailchimp-newsletter-mergefields {
-    display: flex;
-    justify-content: center; }
-  .external-newsletter .mailchimp-newsletter-mergefields {
-    width: 75%; }
-  .external-newsletter .form-actions input {
-    height: 3.125rem;
-    padding: 1rem 1.875rem;
-    margin-top: .9rem; }
-  .external-newsletter .form-item {
-    flex-grow: 1;
-    width: 30%;
-    margin: 0 10px; }
-  .external-newsletter h2, .external-newsletter p, .external-newsletter a {
-    margin: 0 auto;
-    max-width: 94%;
-    text-align:  center;
-    text-align: var(--hero-alignment ); }
-  .external-newsletter label {
-    color: #5C5B5B;
-    color: var(--newsletter-font-color); }
-  .external-newsletter p {
-    color: #5C5B5B;
-    color: var(--newsletter-font-color);
-    margin: 0.375rem 0;
-    font-family: "'Open Sans', sans-serif";
-    font-family: var(--general-font-family-secondary); }
-  .external-newsletter a {
-    color: #5C5B5B;
-    color: var(--newsletter-link-color); }
-    .external-newsletter a:after {
-      -webkit-transition: all 0.3s linear;
-      -moz-transition: all 0.3s linear;
-      transition: all 0.3s linear;
-      content: ' →';
-      display: inline-block;
-      left: 0.25rem;
-      position: relative; }
-    .external-newsletter a:hover:after {
-      left: 0.5rem; }
-  .external-newsletter a.button {
-    background-color: #129FB5;
-    background-color: var(--newsletter-button-color);
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.9375rem 1.25rem;
-    text-transform: none; }
-    .external-newsletter a.button:after {
-      content: none; }
-    .external-newsletter a.button:hover {
-      background-color: #129FB5;
-      background-color: var(--newsletter-button-hover-color); }
 
 .paragraph--type--feature-full-width .field--name-field-text {
   z-index: 10; }

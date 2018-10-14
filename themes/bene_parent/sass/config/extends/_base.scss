@@ -126,7 +126,7 @@
   @include vars(background-color, background-color-primary);
 }
 %table-tr-shaded {
-  @include vars(background-color, background-color-tertiary);
+  @include vars(background-color, background-color-primary-shaded);
 }
 
 %menu-basics {
