@@ -53,6 +53,7 @@ html {
   --button-tertiary-color-hover-background: #129FB5;
   --button-tertiary-text-and-outline-color: #FFFFFF;
   --button-tertiary-hover-text-and-outline-color: #FFFFFF;
+  --button-height: 0.25rem;
   --preferred-border-radius: 0.1875rem;
   --primary-font-family: 'Open Sans', sans-serif;
   --primary-font-light: 300;
@@ -785,6 +786,207 @@ fieldset legend {
   text-align:  center;
   text-align: var(--hero-alignment ); }
 
+input[type="search"], textarea {
+  -webkit-appearance: none;
+  background-color:  #FFFFFF;
+  background-color: var(--background-color-inset );
+  border-radius: 0;
+  border: none;
+  box-sizing: border-box;
+  color:  #000000;
+  color: var(--color-text-over-color-inset-background );
+  font-size:  1rem;
+  font-size: var(--primary-font-size-base );
+  font-weight:  600;
+  font-weight: var(--primary-font-medium );
+  height: 3.125rem;
+  padding: 1.125rem 3.125rem 1.125rem 1.375rem;
+  width: 100%; }
+  input[type="search"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color:  #000000;
+    color: var(--color-text-over-color-inset-background ); }
+  input[type="search"]::-moz-placeholder, textarea::-moz-placeholder {
+    color:  #000000;
+    color: var(--color-text-over-color-inset-background ); }
+  input[type="search"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color:  #000000;
+    color: var(--color-text-over-color-inset-background ); }
+  input[type="search"]:-moz-placeholder, textarea:-moz-placeholder {
+    color:  #50CFE3;
+    color: var(--color-text-link-over-color-inset-background ); }
+  input[type="search"]:focus, textarea:focus {
+    outline: 1px solid #50CFE3;
+    outline: 1px solid var(--color-text-link-over-color-inset-background ); }
+
+.js-facets-checkbox-links input,
+.js-form-type-checkbox input {
+  display: none; }
+
+.js-facets-checkbox-links label,
+.js-form-type-checkbox label {
+  color:  #000000;
+  color: var(--color-text-over-color-inset-background );
+  display: inline-block;
+  font-size:  1rem;
+  font-size: var(--primary-font-size-base );
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+  padding-left: 2.375rem;
+  text-indent: -2.375rem;
+  width: 100%; }
+
+.js-facets-checkbox-links label:hover,
+.js-form-type-checkbox label:hover {
+  cursor: pointer; }
+
+.js-facets-checkbox-links label::before,
+.js-form-type-checkbox label::before {
+  -webkit-transition: color 0.3s linear, background-color 0.3s linear;
+  -moz-transition: color 0.3s linear, background-color 0.3s linear;
+  transition: color 0.3s linear, background-color 0.3s linear;
+  border-radius: 0.0625rem;
+  border: 1px solid #000000;
+  border: 1px solid var(--color-text-over-color-inset-background );
+  color: transparent;
+  content: "✓";
+  display: inline-block;
+  font-size:  2rem;
+  font-size: var(--primary-font-size-accent );
+  height: 1.5rem;
+  left: 0;
+  line-height: 1;
+  margin-right: 2%;
+  padding-left: 3px;
+  position: relative;
+  text-indent: 0rem;
+  top: 0.0625rem;
+  width: 1.625rem; }
+
+.js-facets-checkbox-links label:hover::before,
+.js-form-type-checkbox label:hover::before {
+  cursor: pointer; }
+
+.js-facets-checkbox-links input[type="checkbox"]:checked + label::before,
+.js-form-type-checkbox input[type="checkbox"]:checked + label::before {
+  color:  #000000;
+  color: var(--color-text-over-color-inset-background );
+  text-shadow: 1px 1px 1px rgba(240, 240, 240, 0.5); }
+
+label {
+  color:  #000000;
+  color: var(--color-text-over-color-inset-background );
+  font-weight:  600;
+  font-weight: var(--primary-font-medium );
+  margin-bottom: 1.5rem; }
+
+input:focus {
+  outline-color:  ;
+  outline-color: var(--colr ); }
+
+input[type='text'],
+input[type='search'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+textarea {
+  -webkit-appearance: none;
+  background-color:  ;
+  background-color: var(--bgc );
+  border-radius:  0.1875rem;
+  border-radius: var(--preferred-border-radius );
+  border: 1px solid ;
+  border: 1px solid var(--bdr );
+  border: 1px solid var(--form-input-textarea-border-color);
+  box-sizing: border-box;
+  color:  ;
+  color: var(--colr );
+  color: var(--form-input-textarea-color);
+  font-size:  1rem;
+  font-size: var(--primary-font-size-base );
+  font-weight:  600;
+  font-weight: var(--primary-font-medium );
+  height: 3.125rem;
+  padding: 1.125rem 3.125rem 1.125rem 1.375rem;
+  width: 100%; }
+  input[type='text']::-webkit-input-placeholder,
+  input[type='search']::-webkit-input-placeholder,
+  input[type='email']::-webkit-input-placeholder,
+  input[type='password']::-webkit-input-placeholder,
+  input[type='tel']::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color:  #000000;
+    color: var(--color-text-over-color-inset-background ); }
+  input[type='text']::-moz-placeholder,
+  input[type='search']::-moz-placeholder,
+  input[type='email']::-moz-placeholder,
+  input[type='password']::-moz-placeholder,
+  input[type='tel']::-moz-placeholder,
+  textarea::-moz-placeholder {
+    color:  #000000;
+    color: var(--color-text-over-color-inset-background ); }
+  input[type='text']:-ms-input-placeholder,
+  input[type='search']:-ms-input-placeholder,
+  input[type='email']:-ms-input-placeholder,
+  input[type='password']:-ms-input-placeholder,
+  input[type='tel']:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+    color:  #000000;
+    color: var(--color-text-over-color-inset-background ); }
+  input[type='text']:-moz-placeholder,
+  input[type='search']:-moz-placeholder,
+  input[type='email']:-moz-placeholder,
+  input[type='password']:-moz-placeholder,
+  input[type='tel']:-moz-placeholder,
+  textarea:-moz-placeholder {
+    color:  #000000;
+    color: var(--color-text-over-color-inset-background ); }
+  input[type='text']:focus,
+  input[type='search']:focus,
+  input[type='email']:focus,
+  input[type='password']:focus,
+  input[type='tel']:focus,
+  textarea:focus {
+    outline: none; }
+
+.user-login-form .form-item, .external-newsletter .form-item {
+  text-align:  left;
+  text-align: var(--preferred-alignment ); }
+
+.user-login-form .description {
+  display: none; }
+
+input[type='submit'] {
+  -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+  -moz-transition: background-color 0.3s linear, color 0.3s linear;
+  transition: background-color 0.3s linear, color 0.3s linear;
+  border-radius:  0.1875rem;
+  border-radius: var(--preferred-border-radius );
+  font-weight:  800;
+  font-weight: var(--primary-font-black );
+  display: inline-block;
+  font-size:  1rem;
+  font-size: var(--primary-font-size-base );
+  letter-spacing: 0.1rem;
+  line-height: 1;
+  padding: 1.25rem 1.875rem;
+  position: relative;
+  text-transform: uppercase;
+  background-color:  #129FB5;
+  background-color: var(--button-primary-color-background );
+  color:  #FFFFFF;
+  color: var(--button-primary-text-and-outline-color );
+  border: none; }
+
+input[type='submit']:hover {
+  background-color:  #50CFE3;
+  background-color: var(--button-primary-hover-color-background );
+  color:  #FFFFFF;
+  color: var(--button-primary-hover-text-and-outline-color ); }
+
+.region-content form {
+  width: 95%;
+  padding: 1rem; }
+
 .site-header {
   display: flex;
   min-height: 101px; }
@@ -1182,7 +1384,7 @@ fieldset legend {
   padding: 1rem 1.875rem;
   margin-top: .9rem; }
 
-.external-newsletter .form-item {
+.user-login-form .form-item, .external-newsletter .form-item {
   flex-grow: 1;
   width: 30%;
   margin: 0 10px; }
@@ -2170,189 +2372,6 @@ body.user-logged-in .region.region-content {
     line-height: var(--primary-line-height-small );
     margin-bottom: 2rem;
     margin-top: 1.5rem; } }
-input[type="search"], textarea {
-  -webkit-appearance: none;
-  background-color: #50CFE3;
-  background-color: var(--form-input-background-color);
-  border-radius: 0;
-  border: none;
-  box-sizing: border-box;
-  color: #50CFE3;
-  color: var(--form-input-font-color);
-  font-size:  1rem;
-  font-size: var(--primary-font-size-base );
-  font-weight: 600;
-  height: 3.125rem;
-  padding: 1.125rem 3.125rem 1.125rem 1.375rem;
-  width: 100%; }
-  input[type="search"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-    color: #50CFE3;
-    color: var(--form-input-placeholder-color); }
-  input[type="search"]::-moz-placeholder, textarea::-moz-placeholder {
-    color: #50CFE3;
-    color: var(--form-input-placeholder-color); }
-  input[type="search"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
-    color: #50CFE3;
-    color: var(--form-input-placeholder-color); }
-  input[type="search"]:-moz-placeholder, textarea:-moz-placeholder {
-    color: #50CFE3;
-    color: var(--form-input-placeholder-color); }
-  input[type="search"]:focus, textarea:focus {
-    outline: 1px solid #50CFE3;
-    outline: 1px solid var(--form-input-outline-color); }
-
-.js-facets-checkbox-links input,
-.js-form-type-checkbox input {
-  display: none; }
-.js-facets-checkbox-links label,
-.js-form-type-checkbox label {
-  color: #50CFE3;
-  color: var(--form-label-color);
-  display: inline-block;
-  font-size: 1.125rem;
-  margin-bottom: 0.5rem;
-  margin-left: 0;
-  padding-left: 2.375rem;
-  text-indent: -2.375rem;
-  width: 100%; }
-  .js-facets-checkbox-links label:hover,
-  .js-form-type-checkbox label:hover {
-    cursor: pointer; }
-  .js-facets-checkbox-links label::before,
-  .js-form-type-checkbox label::before {
-    -webkit-transition: color 0.3s linear, background-color 0.3s linear;
-    -moz-transition: color 0.3s linear, background-color 0.3s linear;
-    transition: color 0.3s linear, background-color 0.3s linear;
-    border-radius: 0.0625rem;
-    border: 1px solid #50CFE3;
-    border: 1px solid var(--form-label-before-color);
-    color: transparent;
-    content: "✓";
-    display: inline-block;
-    font-size:  2rem;
-    font-size: var(--primary-font-size-accent );
-    height: 1.5rem;
-    left: 0;
-    line-height: 1;
-    margin-right: 2%;
-    padding-left: 3px;
-    position: relative;
-    text-indent: 0rem;
-    top: 0.0625rem;
-    width: 1.625rem; }
-    .js-facets-checkbox-links label::before:hover,
-    .js-form-type-checkbox label::before:hover {
-      cursor: pointer; }
-.js-facets-checkbox-links input[type="checkbox"]:checked + label::before,
-.js-form-type-checkbox input[type="checkbox"]:checked + label::before {
-  color: #50CFE3;
-  color: var(--form-input-checkbox-color);
-  text-shadow: 1px 1px 1px rgba(240, 240, 240, 0.5); }
-
-label {
-  color: #50CFE3;
-  color: var(--form-label-color);
-  font-weight: 600;
-  margin-bottom: 1.5rem; }
-
-input:focus {
-  outline-color: #50CFE3;
-  outline-color: var(--form-input-outline-color); }
-
-input[type='text'],
-input[type='search'],
-input[type='email'],
-input[type='password'],
-input[type='tel'],
-textarea {
-  -webkit-appearance: none;
-  border-radius: 0.1875rem;
-  border: 1px solid #50CFE3;
-  border: 1px solid var(--form-input-textarea-border-color);
-  box-sizing: border-box;
-  color: #50CFE3;
-  color: var(--form-input-textarea-color);
-  font-size:  1rem;
-  font-size: var(--primary-font-size-base );
-  font-weight: 600;
-  height: 3.125rem;
-  padding: 1.125rem 3.125rem 1.125rem 1.375rem;
-  width: 100%; }
-  input[type='text']::-webkit-input-placeholder,
-  input[type='search']::-webkit-input-placeholder,
-  input[type='email']::-webkit-input-placeholder,
-  input[type='password']::-webkit-input-placeholder,
-  input[type='tel']::-webkit-input-placeholder,
-  textarea::-webkit-input-placeholder {
-    color: #50CFE3;
-    color: var(--form-input-textarea-placeholder-color); }
-  input[type='text']::-moz-placeholder,
-  input[type='search']::-moz-placeholder,
-  input[type='email']::-moz-placeholder,
-  input[type='password']::-moz-placeholder,
-  input[type='tel']::-moz-placeholder,
-  textarea::-moz-placeholder {
-    color: #50CFE3;
-    color: var(--form-input-textarea-placeholder-color); }
-  input[type='text']:-ms-input-placeholder,
-  input[type='search']:-ms-input-placeholder,
-  input[type='email']:-ms-input-placeholder,
-  input[type='password']:-ms-input-placeholder,
-  input[type='tel']:-ms-input-placeholder,
-  textarea:-ms-input-placeholder {
-    color: #50CFE3;
-    color: var(--form-input-textarea-placeholder-color); }
-  input[type='text']:-moz-placeholder,
-  input[type='search']:-moz-placeholder,
-  input[type='email']:-moz-placeholder,
-  input[type='password']:-moz-placeholder,
-  input[type='tel']:-moz-placeholder,
-  textarea:-moz-placeholder {
-    color: #50CFE3;
-    color: var(--form-input-textarea-placeholder-color); }
-  input[type='text']:focus,
-  input[type='search']:focus,
-  input[type='email']:focus,
-  input[type='password']:focus,
-  input[type='tel']:focus,
-  textarea:focus {
-    outline: none; }
-
-.user-login-form .form-item {
-  text-align:  left;
-  text-align: var(--preferred-alignment ); }
-.user-login-form .description {
-  display: none; }
-
-input[type='submit'] {
-  -webkit-transition: background-color 0.3s linear, color 0.3s linear;
-  -moz-transition: background-color 0.3s linear, color 0.3s linear;
-  transition: background-color 0.3s linear, color 0.3s linear;
-  border-radius:  0.1875rem;
-  border-radius: var(--preferred-border-radius );
-  font-weight:  800;
-  font-weight: var(--primary-font-black );
-  display: inline-block;
-  font-size:  1rem;
-  font-size: var(--primary-font-size-base );
-  letter-spacing: 0.1rem;
-  line-height: 1;
-  padding: 1.25rem 1.875rem;
-  position: relative;
-  text-transform: uppercase;
-  background-color: #129FB5;
-  background-color: var(--form-button-background-color);
-  color: #50CFE3;
-  color: var(--form-button-color);
-  border: none; }
-  input[type='submit']:hover {
-    background-color: #50CFE3;
-    background-color: var(--form-button-hover-background-color); }
-
-.region-content form {
-  width: 95%;
-  padding: 1rem; }
-
 @media (min-width: 769px) {
   .region-content form {
     float: left;

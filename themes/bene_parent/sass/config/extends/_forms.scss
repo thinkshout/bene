@@ -1,0 +1,139 @@
+// Default Styles (Mobile First!)
+%input-search-textarea {
+  -webkit-appearance: none;
+  @include vars(background-color, background-color-inset);
+  border-radius: 0;
+  border: none;
+  box-sizing: border-box;
+  @include vars(color, color-text-over-color-inset-background);
+  @include vars(font-size, primary-font-size-base);
+  @include vars(font-weight, primary-font-medium);
+  height: rem(50);
+  padding: rem(18) rem(50) rem(18) rem(22);
+  width: 100%;
+  &::-webkit-input-placeholder {
+    @include vars(color, color-text-over-color-inset-background);
+  }
+  &::-moz-placeholder {
+    @include vars(color, color-text-over-color-inset-background);
+  }
+  &:-ms-input-placeholder {
+    @include vars(color, color-text-over-color-inset-background);
+  }
+  &:-moz-placeholder {
+    @include vars(color, color-text-link-over-color-inset-background);
+  }
+  &:focus {
+    @include vars(outline, color-text-link-over-color-inset-background, 1px solid);
+  }
+}
+
+
+%js-form-type-checkbox-input {
+  display: none;
+}
+%js-form-type-checkbox-label {
+  @include vars(color, color-text-over-color-inset-background);
+  display: inline-block;
+  @include vars(font-size, primary-font-size-base);
+  margin-bottom: rem(8);
+  margin-left: 0;
+  padding-left: rem(38);
+  text-indent: rem(-38);
+  width: 100%;
+}
+%js-form-type-checkbox-label-hover {
+  cursor: pointer;
+}
+%js-form-type-checkbox-label-checkmark {
+  @include default-transition;
+  border-radius: rem(1);
+  @include vars(border, color-text-over-color-inset-background, 1px solid);
+  color: transparent;
+  content: "✓";
+  display: inline-block;
+  @include vars(font-size, primary-font-size-accent);
+  height: rem(24);
+  left: 0;
+  line-height: 1;
+  margin-right: 2%;
+  padding-left: 3px;
+  position: relative;
+  text-indent: rem(0);
+  top: rem(1);
+  width: rem(26);
+}
+%js-form-type-checkbox-label-checkmark-hover {
+  cursor: pointer;
+}
+
+%js-form-type-checkbox-input-checkbox-checked-label-before {
+  @include vars(color, color-text-over-color-inset-background);
+  text-shadow: 1px 1px 1px rgba(240, 240, 240, 0.5);
+}
+
+%form-label {
+  @include vars(color, color-text-over-color-inset-background);
+  @include vars(font-weight, primary-font-medium);
+  margin-bottom: rem(24);
+}
+
+%form-input-focus {
+  @include vars(outline-color, colr);
+}
+
+%form-input {
+  -webkit-appearance: none;
+  @include vars(background-color, bgc);
+  @include vars(border-radius, preferred-border-radius);
+  @include vars(border, bdr, 1px solid);
+  border: 1px solid var(--form-input-textarea-border-color);
+  box-sizing: border-box;
+  @include vars(color, colr);
+  color: var(--form-input-textarea-color);
+  @include vars(font-size, primary-font-size-base);
+  @include vars(font-weight, primary-font-medium);
+  height: rem(50);
+  padding: rem(18) rem(50) rem(18) rem(22);
+  width: 100%;
+  &::-webkit-input-placeholder {
+    @include vars(color, color-text-over-color-inset-background);
+  }
+  &::-moz-placeholder {
+    @include vars(color, color-text-over-color-inset-background);
+  }
+  &:-ms-input-placeholder {
+    @include vars(color, color-text-over-color-inset-background);
+  }
+  &:-moz-placeholder {
+    @include vars(color, color-text-over-color-inset-background);
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+%form-item {
+  @include vars(text-align, preferred-alignment);
+}
+%form-description {
+  display: none;
+}
+
+
+%form-input-submit {
+  @include button;
+  @include vars(background-color, button-primary-color-background);
+  @include vars(color, button-primary-text-and-outline-color);
+  border: none;
+}
+%form-input-submit-hover {
+  @include vars(background-color, button-primary-hover-color-background);
+  @include vars(color, button-primary-hover-text-and-outline-color);
+}
+
+%region-content-form {
+  width: 95%;
+  padding: 1rem;
+}
+
