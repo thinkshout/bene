@@ -1,0 +1,56 @@
+
+%paragraph--type--rich-text-figure {
+  margin: rem(16) 0;
+}
+%paragraph--type--rich-text-figcaption {
+  @include vars(font-size, primary-font-size-footnote);
+  font-style: italic;
+}
+%paragraph--type--rich-text-align-left {
+  margin-right: rem(32);
+}
+%paragraph--type--rich-text-align-right {
+  margin-left: rem(32);
+}
+
+%paragraph--type--rich-text-alignment {
+  margin-bottom: rem(12);
+}
+
+%paragraph--type--rich-text-p {
+  @include vars(color, color-text-over-color-primary-background);
+}
+
+%paragraph--type--rich-text-blockquote {
+  margin: rem(32) auto;
+  max-width: 80%;
+  @include vars(text-align, hero-alignment);
+}
+%paragraph--type--rich-text-blockquote-p {
+  @include vars(color, color-text-over-color-primary-background);
+  @include vars(font-size, sentence-font-size-small);
+  font-style: italic;
+  @include vars(font-weight, sentence-font-medium);
+  @include vars(line-height, sentence-line-height-small);
+  margin: 0;
+  &:before {
+    content: "“";
+  }
+  &:after {
+    content: "”";
+  }
+}
+
+%paragraph--type--rich-text-blockquote-after {
+    @include vars(background-color, background-color-secondary);
+    content: "";
+    display: inline-block;
+    height: rem(4);
+    position: relative;
+    width: 25%;
+  }
+
+%paragraph--type--rich-text-img {
+  max-width: 99%;
+}
+

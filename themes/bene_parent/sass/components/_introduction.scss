@@ -1,0 +1,22 @@
+#main-content .field--name-bene-intro {
+  @extend %intro-block;
+  @extend %field--name-bene-intro;
+
+  h1, h2, h3, h4, h5, a{
+    @extend %intro-block-header;
+  }
+
+  span, p {
+    @extend %intro-block-text;
+  }
+
+  h2 {
+    @extend %field--name-bene-intro-h2;
+  }
+  h3 {
+    @extend %field--name-bene-intro-h3;
+  }
+  p {
+    @extend %field--name-bene-intro-p;
+  }
+}

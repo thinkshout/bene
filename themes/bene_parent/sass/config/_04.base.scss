@@ -1,12 +1,6 @@
 /* BASE ELEMENT STYLES */
 body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-family: bbv(font-family-primary);
-  font-family: var(--base_style-font-family); // or main-font-family
-  font-size: rem(16);
-  font-style: normal;
-  font-weight: 400;
+  @extend %body;
 }
 
 h1,
@@ -15,159 +9,100 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
-  text-rendering: optimizeLegibility; /* Fix the character spacing for headings */
+  @extend %headings-common;
 }
 
 h1 {
-  font-size: rem(48);
-  line-height: rem(62);
-  font-weight: 800;
+  @extend %h1;
 }
 h2 {
-  font-size: rem(32);
-  line-height: rem(38);
-  font-weight: 400;
+  @extend %h2;
 }
 h3 {
-  font-size: rem(20);
-  line-height: rem(30);
-  font-weight: 600;
+  @extend %h3;
 }
 h4 {
-  font-size: rem(16);
-  line-height: rem(20);
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  font-weight: 700;
+  @extend %h4;
 }
 
 p,
 p.standard {
-  color: bbv(color-text-primary); // in case css variables are not supported
-  color: var(--base_style-paragraph-color);
-  font-size: rem(16);
-  line-height: rem(31);
-  font-weight: 400;
+  @extend %p;
 }
 
 a {
-  @include default-transition;
-  color: bbv(color-theme-primary); // in case css variables are not supported
-  color: var(--base_style-link-color);
-  cursor: pointer;
-  text-decoration: none;
+  @extend %a;
+
   &:hover,
   &:active {
-    color: bbv(color-theme-primary-lighten20); // in case css variables are not supported
-    color: var(--base_style-active-link-color);
+    @extend %a-hover-active;
   }
 }
 
 table a,
 li a,
 p a {
-  color: bbv(color-theme-primary); // in case css variables are not supported
-  color: var(--base_style-link-color);
+  @extend %table-basics;
   &:hover,
   &:active {
-    color: bbv(color-theme-primary-lighten20); // in case css variables are not supported
-    color: var(--base_style-active-link-color);
+    @extend %table-basics-hover-active;
   }
 }
 
 a.button {
-  @include button;
+  @extend %button;
 }
 
 /* List bullets in content. */
 .text-formatted ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 0 0;
+  @extend %ul;
+
   li {
-    padding-bottom: rem(14);
-    padding-left: rem(32);
-    text-indent: rem(-20);
-    color: bbv(color-text-primary); // in case css variables are not supported
-    color: var(--base_style-formatted-text-ul-li-color);
+    @extend %ul-li;
     &:before {
-      color: bbv(color-text-primary); // in case css variables are not supported
-      color: var(--base_style-formatted-text-ul-li-bullet-color);
-      content: "•";
-      font-size: rem(16);
-      line-height: 1;
-      padding-right: rem(14);
-      position: relative;
+      @extend %ul-li-bullet;
     }
   }
 }
 
 ol {
-    padding-left: rem(26);
-  li {
-    padding-bottom: rem(14);
-    padding-left: rem(6);
-    line-height: 1.4;
-    font-size: rem(16);
-    color: bbv(color-text-primary); // in case css variables are not supported
-    color: var(--base_style-formatted-text-ol-li-color);
+  @extend %ol;
+  li{
+    @extend %ol-li;
   }
 }
 
 table, table.tablesaw {
-  border: 1px solid bbv(color-text-light); // in case css variables are not supported
-  border: 1px solid var(--base_style-table-border-color);
-  margin: rem(24) 0;
-  table-layout: auto;
+  @extend %table;
+
   th, tr, td, tr:first-child th {
-    border: none;
-    color: bbv(color-text-medium-dark); // in case css variables are not supported
-    color: var(--base_style-table-text-color);
-    font-size: rem(14);
-    font-weight: 400;
-    padding: rem(18) rem(42);
-    text-align: left;
+    @extend %table-cell;
     strong {
-      font-weight: 600;
+      @extend %table-cell-strong;
     }
   }
   th, tr:first-child th {
-    font-weight: 700;
-    text-transform: uppercase;
-    color: bbv(color-text-medium-dark); // in case css variables are not supported
-    color: var(--base_style-table-headerrow-leftcolumn-text-color);
-    font-size: rem(14);
-    margin: 0;
+    @extend %table-header;
   }
   tr {
-    background-color: bbv(color-background-default); // in case css variables are not supported
-    background-color: var(--base_style-table-background-color);
+    @extend %table-tr;
   }
   th,tr:nth-of-type(2n) {
-    background-color: bbv(color-background-lightest); // in case css variables are not supported
-    background-color: var(--base_style-table-background-stripe-color);
+    @extend %table-tr-shaded;
   }
 }
 
 ul.menu {
-  list-style: none outside;
-  margin: 0;
-  padding: 0;
-  text-align: left;
+  @extend %menu-basics;
   .menu-item {
-    padding: 0;
+    @extend %menu-item-basics;
   }
 }
 
 fieldset {
-  border: none;
-  padding: 0;
+  @extend %fieldset;
   legend {
-    font-size: rem(30);
-    font-weight: 700;
-    color: bbv(color-text-secondary); // in case css variables are not supported
-    color: var(--base_style-fieldset-legend-color);
+    @extend %fieldset-legend;
   }
 }
 

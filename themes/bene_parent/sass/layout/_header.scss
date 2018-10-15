@@ -1,21 +1,29 @@
+
+.site-header {
+  @extend %general-page;
+}
+
+#site-wrapper > header
+{
+  @extend %branding;
+}
+
+.site-header {
+  @extend %site-header;
+}
+
 // Default Styles (Mobile First!)
 .site-header {
-  display: flex;
-  min-height: 101px;
+  @extend %site-layout-header;
   .logo-wrapper {
-    align-items: center;
-    display: flex;
+    @extend %site-layout-header-logo-wrapper;
   }
   .desktop-nav,
   .mobile-nav .menu {
-    display: none;
+    @extend %site-layout-header-nav-menu;
   }
   .mobile-nav {
-    align-items: center;
-    align-items: center;
-    display: flex;
-    flex: 1 1 auto;
-    justify-content: flex-end;
+    @extend %site-layout-header-mobile-nav;
   }
 }
 

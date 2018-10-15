@@ -1,0 +1,45 @@
+// Default Styles (Mobile First!)
+%page-node-type-listing-page {
+  @include vars(background-color, background-color-inset);
+}
+
+%field--name-bene-listing-view {
+  background-color: var(--listing-page-background-color);
+}
+
+%view-filters {
+  @include span-columns(3);
+}
+
+%view-content {
+  display: block;
+}
+
+%view-row {
+  clear: both;
+}
+
+%node--view-mode-search-result-image {
+  @include span-columns(3);
+}
+
+%node--view-mode-search-result-image-img {
+  height: auto;
+  width: 100%;
+}
+
+%node--view-mode-search-result-text {
+  @include span-columns(8);
+  @include shift(0.25);
+
+  @include mq(mobile) {
+    @include span-columns(12);
+    @include shift(0);
+  }
+}
+
+%node--view-mode-teaser-field--name-bene-intro {
+  padding: 0;
+  margin-left: 0;
+  width: 100%;
+}

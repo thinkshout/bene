@@ -1,193 +1,94 @@
 .paragraph--type--media {
-  font-size: rem(14);
-  font-style: italic;
-  margin: rem(24) 0;
-  text-align: center;
-  width: 100%;
+  @extend %paragraph--type--media;
   img {
-    max-width: 100%;
+    @extend %paragraph--type--media-img;
   }
 }
 
 .paragraph--type--rich-text {
   figure {
-    margin: rem(16) 0;
+    @extend %paragraph--type--rich-text-figure;
   }
   figcaption {
-    font-size: rem(14);
-    font-style: italic;
+    @extend %paragraph--type--rich-text-figcaption;
   }
   .embedded-entity.align-left,
   figure.align-left {
-    margin-right: rem(32);
+    @extend %paragraph--type--rich-text-align-left;
   }
   .embedded-entity.align-right,
   figure.align-right {
-    margin-left: rem(32);
+    @extend %paragraph--type--rich-text-align-right;
   }
 
   .embedded-entity.align-left,
   .embedded-entity.align-right {
-    margin-bottom: rem(12);
+    @extend %paragraph--type--rich-text-alignment;
   }
 
   p,
   ol li,
   ul li {
-    color: bbv(font-color-primary); // in case css variables are not supported
-    color: var(--general-font-primary-color);
+    @extend %paragraph--type--rich-text-p;
   }
+
   blockquote {
-    margin: rem(32) auto;
-    max-width: 80%;
-    text-align: center;
+    @extend %paragraph--type--rich-text-blockquote;
     p {
-      color: bbv(font-color-primary); // in case css variables are not supported
-      color: var(--general-font-primary-color);
-      font-size: rem(26);
-      font-style: italic;
-      font-weight: 600;
-      line-height: rem(39);
-      margin: 0;
-      &:before {
-        content: "“";
-      }
-      &:after {
-        content: "”";
-      }
+      @extend %paragraph--type--rich-text-blockquote-p;
     }
 
     &:after {
-      background-color: bbv(background-color-tertiary); // in case css variables are not supported
-      background-color: var(--general-tertiary-background-color);
-      content: "";
-      display: inline-block;
-      height: rem(4);
-      position: relative;
-      width: 25%;
+      @extend %paragraph--type--rich-text-blockquote-after;
     }
   }
   img {
-    max-width: 99%;
+    @extend %paragraph--type--rich-text-img;
   }
 }
 
+
 .paragraph--type--feature-full-width {
-  align-items: center;
-  background-color: bbv(background-color-tertiary); // in case css variables are not supported
-  background-color: var(--general-tertiary-background-color);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: bbv(font-color-primary); // in case css variables are not supported
-  color: var(--general-font-primary-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 25vw;
-  padding: rem(24) rem(24) rem(36) rem(24);
-  position: relative;
-  text-align: center;
-  width: 100vw;
-  max-width: 100%;
+  @extend %paragraph--type--feature-full-width;
+
   &:before {
-    background-color: rgba(0,0,0,0.4);
-    bottom: 0;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 2;
+    @extend %paragraph--type--feature-full-width-before;
   }
 
   .paragraph--type--feature-full-width::after {
-    background-image: none;
+    @extend %paragraph--type--feature-full-width-after;
   }
 
   .paragraph--type--feature-full-width.image:after {
-    background-color: bbv(color-primary-third);
-    background-color: var(--feature-background-color);
-    content: "";
-    height: 100%;
-    left: 0;
-    opacity: .45;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1;
+    @extend %paragraph--type--feature-full-width-image-after;
   }
 
   .field--name-field-title {
-    color: bbv(font-color-primary);
-    color: var(--general-font-primary-color);
-    font-family: bbv(font-family-primary);
-    font-family: var(--general-font-family-primary);
-    font-size: bbv(font-size-large);
-    font-size: var(--general-font-size-large);
-    font-weight: bbv(font-weight-bold);
-    font-weight: var(--general-font-weight-bold);
-    z-index: 10;
+    @extend %paragraph--type--feature-full-width-field--name-field-title;
   }
   .field--name-field-text {
     z-index: 10;
     p {
-      font-family: bbv(font-family-primary);
-      font-family: var(--general-font-family-primary);
-      color: bbv(font-color-primary);
-      color: var(--general-font-primary-color);
-      margin: rem(32) auto;
-      max-width: 100%;
-      @include mq(desktop) {
-        max-width: 65%;
-      }
+      @extend %paragraph--type--feature-full-width-field--name-field-text-p;
     }
   }
   .field--type-link {
     z-index: 10;
     a {
-      @include button;
-      color: bbv(font-color-link);
-      color: var(--general-link-color);
-      background-color: bbv(background-color-secondary);
-      background-color: var(--general-secondary-background-color);
-      &:hover {
-        background-color: bbv(background-color-tertiary);
-        background-color: var(--general-tertiary-background-color);
-      }
-      letter-spacing: 0;
-      text-transform: none;
+      @extend %paragraph--type--feature-full-width-field--type-link-a;
     }
   }
 
   // Gradient overlay
   &::after {
-    background-image: linear-gradient(bbv(--gradient-direction), bbv(--gradient-start-color), bbv(--gradient-end-color));
-    background-image: var(--feature_block-linear-gradient);
-    content: '';
-    display: block;
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    @extend %paragraph--type--feature-full-width-gradient-overlay;
   }
 }
 
 .feature-full-width-paragraph .paragraph--type--feature-full-width {
-  .field--name-field-title{
-    color: bbv(font-color-tertiary);
-    color: var(--rich-paragraph-font-color);
-  }
-  .field--name-field-text {
-    p {
-      color: bbv(font-color-tertiary);
-      color: var(--rich-paragraph-font-color);
-    }
-  }
+  @extend %feature-full-width;
 }
 
 .paragraph--type--feature-full-width.image{
-  min-height: 38.2vw;
+  @extend %feature-full-width-image;
 }

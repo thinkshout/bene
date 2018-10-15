@@ -1,0 +1,173 @@
+// Default Styles (Mobile First!)
+// uses of these can be found in components/_footer.scss
+%block-bene-footer-block {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  @include vars(background-color, background-color-primary);
+}
+
+%block-bene-footer-block-menu-link {
+  @include vars(color, color-text-menu-over-color-primary-background);
+  @include vars(font-size, primary-font-size-footnote);
+  @include vars(font-weight, primary-font-medium);
+}
+
+%block-bene-footer-block-menu-link-hover {
+  @include vars(color, color-text-hover-menu-over-color-primary-background);
+}
+
+%block-bene-footer-block-menu-menu-item {
+  @include vars(line-height, primary-line-height-small);
+}
+
+%block-bene-footer-block-menu-menu-item-a {
+  @include vars(color, color-text-menu-over-color-primary-background);
+  @include vars(font-family, primary-font-family);
+  @include vars(font-weight, primary-font-bold);
+  @include vars(fontsize, primary-font-size-base);
+}
+
+%block-bene-footer-block-menu-menu-item-a-hover {
+  @include vars(color, color-text-hover-menu-over-color-primary-background);
+}
+
+
+
+
+
+
+%block-bene-footer-block-contact-links {
+  @include vars(font-size, primary-font-size-footnote);
+}
+
+%block-bene-footer-block-contact-links-address {
+  @include vars(color, color-text-over-color-primary-background);
+  white-space: pre-line;
+}
+
+%block-bene-footer-block-contact-links-additional-contact {
+  display: block;
+}
+
+%block-bene-footer-block-contact-links-additional-contact-p {
+  @include vars(font-size, sentence-font-size-footnote);
+  @include vars(line-height, sentence-line-height-footnote);
+  margin: rem(5) 0;
+}
+
+
+
+%block-bene-footer-block-additional-footer-p {
+  @include vars(font-size, sentence-font-size-footnote);
+  @include vars(line-height, sentence-line-height-footnote);
+  margin: 0 rem(5) 0;
+}
+
+
+%block-bene-footer-block-social-links-a {
+  @include vars(background-color, background-color-secondary);
+  background-color: var(--footer-social-background-color);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 62% 62%;
+  @include vars(border, background-color-secondary, rem(1) solid);
+  border-radius: 50%;
+  display: inline-block;
+  height: rem(36);
+  margin-bottom: rem(10);
+  margin-left: rem(10);
+  padding: 1rem;
+  position: relative;
+  text-indent: -9999px;
+  width: rem(36);
+}
+
+%block-bene-footer-block-social-links-a-hover {
+  @include vars(background-color, color-text-hover-secondary-menu-over-color-primary-background);
+}
+
+%block-bene-footer-block-social-links {
+  .facebook { background-image:  url('../images/svgs/facebook-f.svg'); }
+  .google { background-image: url('../images/svgs/google-plus.svg'); }
+  .instagram { background-image: url('../images/svgs/instagram.svg'); }
+  .linkedin { background-image: url('../images/svgs/linkedin.svg'); }
+  .pinterest { background-image: url('../images/svgs/pinterest-p.svg'); }
+  .tumblr { background-image: url('../images/svgs/tumblr.svg'); }
+  .twitter { background-image: url('../images/svgs/twitter.svg'); }
+  .youtube { background-image: url('../images/svgs/youtube-play.svg'); }
+}
+
+%block-bene-footer-block-copyright {
+  @include vars(color, color-text-over-color-primary-background);
+  @include vars(font-family, sentence-font-family);
+  @include vars(font-weight, sentence-font-regular);
+  @include vars(font-size, sentence-font-size-footnote);
+  @include vars(line-height, sentence-line-height-footnote);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Default Styles (Mobile First!)
+// Uses of these can be found in layout/_footer.scss
+%region-footer-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+%footer-block-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: rem(42);
+  margin-top: rem(24);
+  padding: 0 2%;
+  position: relative;
+}
+
+%footer-block-layout-menu {
+  flex: 0 1 35%;
+}
+
+%footer-block-layout-contact-links {
+  flex: 0 1 65%;
+}
+
+%footer-block-layout-additional-footer {
+  flex: 0 1 100%;
+}
+
+%footer-block-layout-social-links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  justify-content: center;
+  margin-top: rem(24);
+}
+%footer-block-layout-social-links-span {
+  min-width: 25%;
+  @include vars(text-align, hero-alignment);
+}
+%footer-block-layout-social-links-span-a {
+  margin-left: 0;
+}
+
+%footer-block-layout-copyright {
+  bottom: rem(-32);
+  left: 0;
+  position: absolute;
+  right: 0;
+  @include vars(text-align, hero-alignment);
+}

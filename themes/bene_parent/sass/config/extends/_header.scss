@@ -1,0 +1,18 @@
+
+%site-layout-header {
+  display: flex;
+  min-height: 101px;
+}
+%site-layout-header-logo-wrapper {
+  align-items: center;
+  display: flex;
+}
+%site-layout-header-nav-menu {
+  display: none;
+}
+%site-layout-header-mobile-nav {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}

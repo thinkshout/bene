@@ -1,25 +1,18 @@
 // Default Styles (Mobile First!)
 .page-node-type-event {
+  @include vars(background, background-color-inset);
   .field--name-bene-content {
-    clear: both;
+    @extend %page-node-type-event-field--name-bene-content;
   }
   .field--name-bene-event-date-range {
-    margin-bottom: rem(32);
-    margin-top: rem(24);
+    @extend %page-node-type-event-field--name-bene-event-date-range;
+
     time {
-      font-size: rem(18);
-      font-weight: 300;
-      line-height: rem(32);
-      margin-top: rem(12);
-      @include mq(desktop) {
-        font-size: rem(22);
-        line-height: rem(38);
-      }
+      @extend %page-node-type-event-field--name-bene-event-date-range-time;
     }
   }
   .field--name-bene-event-location p.address {
-    line-height: 1.3;
-    margin-top: 0;
+    @extend %page-node-type-event-field--name-bene-event-address;
   }
 }
 
@@ -38,7 +31,8 @@
 @include mq(desktop) {
   .page-node-type-event {
     .block-system-main-block .field--name-bene-intro {
-      font-size: rem(22);
+      @include vars(font-size, primary-font-size-small);
+      @include vars(line-height, primary-line-height-small);
       margin-bottom: rem(32);
       margin-top: rem(24);
     }

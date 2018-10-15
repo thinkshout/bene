@@ -1,0 +1,6 @@
+{
+  "name": "drupal/bene_parent_street_trust",
+  "type": "drupal-theme",
+  "require": {
+  }
+}
