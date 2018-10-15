@@ -1,43 +1,35 @@
 .mobile-menu-toggle {
-  color: bbv(font-color-accent); // in case css variables are not supported
-  color: var(--general-font-accent-color);
+  @extend %mobile-menu-toggle;
 }
 
 .mobile-nav {
   .region-primary-nav {
-    background: bbv(background-color-tertiary); // in case css variables are not supported
-    background: var(--general-tertiary-background-color);
+    @extend %mobile-nav-region-primary-nav;
   }
 
   .menu {
-    text-align: bbv(preferred-alignment);
-    text-align: var(--general-preferred-alignment);
+    @extend %menu;
   }
 
   .menu a {
-    color: bbv(font-color-link);
-    color: var(--general-link-color);
-    border-bottom: none;
-    @include font-style('regular');
-    font-size: bbv(font-size-small);
-    font-size: var(--general-font-size-small);
-    padding: 0.5rem;
+    @extend %menu-link;
 
     &:after {
-      display: none;
+      @extend %menu-link-after;
     }
 
-    menu--main {
-      li:first-of-type { padding-top: 1rem; }
+    .menu--main {
+      @extend %menu-link-menu--main-li-first-of-type;
+
       a {
-        @include font-style('black');
-        font-size: bbv(font-size-small);
-        font-size: var(--general-font-size-small);
+        @extend %menu-link-menu--main-link;
       }
     }
 
     .menu--utility {
-      li:last-of-type { padding: 1rem; }
+      li:last-of-type {
+        @extend %menu-link-menu--utility-li-last-of-type;
+      }
     }
 
   }

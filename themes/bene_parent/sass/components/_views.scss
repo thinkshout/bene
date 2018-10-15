@@ -1,17 +1,13 @@
 // Default Styles (Mobile First!)
 .region-content .block-views {
-  clear: both;
+  @extend %region-content-block-views;
 
   .view-content > .views-row {
-    clear: both;
-    margin-bottom: rem(24);
+    @extend %region-content-block-views-view-content-views-row;
     .field--name-bene-header-media {
-      float: left;
-      margin-right: rem(24);
-      max-width: 30%;
+      @extend %region-content-block-views-view-content-views-row-field--name-bene-header-media;
       img {
-        height: auto;
-        max-width: 100%;
+        @extend %region-content-block-views-view-content-views-row-field--name-bene-header-media-img;
       }
     }
   }

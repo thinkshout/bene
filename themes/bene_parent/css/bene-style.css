@@ -1648,6 +1648,53 @@ input[type='submit']:hover {
     text-align:  center;
     text-align: var(--hero-alignment ); }
 
+.mobile-menu-toggle {
+  color:  #5C5B5B;
+  color: var(--color-text-menu-over-color-primary-background ); }
+
+.mobile-nav .region-primary-nav {
+  background:  #FFFFFF;
+  background: var(--background-color-primary ); }
+
+.mobile-nav .menu {
+  text-align:  left;
+  text-align: var(--preferred-alignment ); }
+
+.mobile-nav .menu a {
+  color:  #129FB5;
+  color: var(--color-text-link-over-color-primary-background );
+  border-bottom: none;
+  font-family:  'Open Sans', sans-serif;
+  font-family: var(--primary-font-family );
+  font-weight:  400;
+  font-weight: var(--primary-font-regular );
+  font-style: normal;
+  font-size:  1rem;
+  font-size: var(--primary-font-size-base );
+  line-height:  1.25rem;
+  line-height: var(--primary-line-height-base );
+  padding: 0.5rem; }
+
+.mobile-nav .menu a:after {
+  display: none; }
+
+.mobile-nav .menu a .menu--main {
+  padding-top: 1rem; }
+
+.mobile-nav .menu a .menu--main a {
+  font-family:  'Open Sans', sans-serif;
+  font-family: var(--primary-font-family );
+  font-weight:  800;
+  font-weight: var(--primary-font-black );
+  font-style: normal;
+  font-size:  1rem;
+  font-size: var(--primary-font-size-base );
+  line-height:  1.25rem;
+  line-height: var(--primary-line-height-base ); }
+
+.mobile-nav .menu a .menu--utility li:last-of-type {
+  padding: 1rem; }
+
 .external-newsletter {
   align-items: center;
   background-image: linear-gradient(#50cfe3, black);
@@ -2426,6 +2473,22 @@ input[type='submit']:hover {
   color:  #129FB5;
   color: var(--color-text-hover-link-over-color-inset-background ); }
 
+.region-content .block-views {
+  clear: both; }
+
+.region-content .block-views .view-content > .views-row {
+  clear: both;
+  margin-bottom: 1.5rem; }
+
+.region-content .block-views .view-content > .views-row .field--name-bene-header-media {
+  float: left;
+  margin-right: 1.5rem;
+  max-width: 30%; }
+
+.region-content .block-views .view-content > .views-row .field--name-bene-header-media img {
+  height: auto;
+  max-width: 100%; }
+
 @media (min-width: 769px) {
   .block-bene-footer-block .menu {
     flex: 0 1 20%; }
@@ -2581,59 +2644,9 @@ input[type='submit']:hover {
       color: var(--color-text-hover-menu-over-color-primary-background ); }
     .desktop-nav .menu--main .menu-item a.is-active {
       cursor: default; } }
-.mobile-menu-toggle {
-  color: #50CFE3;
-  color: var(--general-font-accent-color); }
-
-.mobile-nav .region-primary-nav {
-  background: #129FB5;
-  background: var(--general-tertiary-background-color); }
-.mobile-nav .menu {
-  text-align: left;
-  text-align: var(--general-preferred-alignment); }
-.mobile-nav .menu a {
-  color: #50CFE3;
-  color: var(--general-link-color);
-  border-bottom: none;
-  font-family:  'Open Sans', sans-serif;
-  font-family: var(--primary-font-family );
-  font-weight:  400;
-  font-weight: var(--primary-font-regular );
-  font-style: normal;
-  font-size: 1.5625rem;
-  font-size: var(--general-font-size-small);
-  padding: 0.5rem; }
-  .mobile-nav .menu a:after {
-    display: none; }
-  .mobile-nav .menu a menu--main li:first-of-type {
-    padding-top: 1rem; }
-  .mobile-nav .menu a menu--main a {
-    font-family:  'Open Sans', sans-serif;
-    font-family: var(--primary-font-family );
-    font-weight:  800;
-    font-weight: var(--primary-font-black );
-    font-style: normal;
-    font-size: 1.5625rem;
-    font-size: var(--general-font-size-small); }
-  .mobile-nav .menu a .menu--utility li:last-of-type {
-    padding: 1rem; }
-
 .paragraph--type--feature-full-width .field--name-field-text {
   z-index: 10; }
 .paragraph--type--feature-full-width .field--type-link {
   z-index: 10; }
-
-.region-content .block-views {
-  clear: both; }
-  .region-content .block-views .view-content > .views-row {
-    clear: both;
-    margin-bottom: 1.5rem; }
-    .region-content .block-views .view-content > .views-row .field--name-bene-header-media {
-      float: left;
-      margin-right: 1.5rem;
-      max-width: 30%; }
-      .region-content .block-views .view-content > .views-row .field--name-bene-header-media img {
-        height: auto;
-        max-width: 100%; }
 
 /*# sourceMappingURL=bene-style.css.map */

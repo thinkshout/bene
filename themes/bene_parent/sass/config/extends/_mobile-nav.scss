@@ -1,0 +1,38 @@
+%mobile-menu-toggle {
+  @include vars(color, color-text-menu-over-color-primary-background);
+}
+
+%mobile-nav-region-primary-nav {
+  @include vars(background, background-color-primary);
+}
+
+%menu {
+  @include vars(text-align, preferred-alignment);
+}
+
+%menu-link {
+  @include vars(color, color-text-link-over-color-primary-background);
+  border-bottom: none;
+  @include font-style('regular');
+  @include vars(font-size, primary-font-size-base);
+  @include vars(line-height, primary-line-height-base);
+  padding: 0.5rem;
+}
+
+%menu-link-after {
+  display: none;
+}
+
+%menu-link-menu--main-li-first-of-type {
+  padding-top: 1rem;
+}
+
+%menu-link-menu--main-link {
+  @include font-style('black');
+  @include vars(font-size, primary-font-size-base);
+  @include vars(line-height, primary-line-height-base);
+}
+
+%menu-link-menu--utility-li-last-of-type {
+  padding: 1rem;
+}
