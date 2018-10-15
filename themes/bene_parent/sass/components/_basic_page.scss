@@ -20,7 +20,7 @@
 @include mq(desktop) {
   .page-node-type-page {
     .block-system-main-block .field--name-bene-intro {
-      font-size: rem(22);
+      @include vars(font-size, primary-font-size-small);
       margin-bottom: rem(32);
       margin-top: rem(24);
     }

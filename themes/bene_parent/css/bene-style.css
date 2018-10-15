@@ -1255,6 +1255,71 @@ input[type='submit']:hover {
   background-color:  #FFFFFF;
   background-color: var(--button-secondary-color-hover-background ); }
 
+.page-node-type-page .block-system-main-block h2 {
+  color:  #50CFE3;
+  color: var(--color-text-title-over-color-primary-background );
+  font-style: normal;
+  font-weight:  400;
+  font-weight: var(--primary-font-regular );
+  font-size:  1.5625rem;
+  font-size: var(--title-font-size-small );
+  margin-top: 0; }
+  @media (max-width: 414px) {
+    .page-node-type-page .block-system-main-block h2 {
+      font-size:  2rem;
+      font-size: var(--primary-font-size-accent ); } }
+
+.page-node-type-page .block-system-main-block h3 {
+  color:  ;
+  color: var(--colr );
+  color: var(--general-font-secondary-color);
+  font-size:  1rem;
+  font-size: var(--title-font-size-base );
+  font-weight:  400;
+  font-weight: var(--title-font-regular );
+  line-height: normal;
+  margin-bottom: 0; }
+
+.page-node-type-page .block-system-main-block h3 a {
+  color:  #129FB5;
+  color: var(--color-text-link-over-color-primary-background ); }
+
+.page-node-type-page .block-system-main-block h3 a:hover {
+  color:  #50CFE3;
+  color: var(--color-text-hover-link-over-color-primary-background ); }
+
+.page-node-type-page .block-system-main-block p {
+  color:  #000000;
+  color: var(--color-text-over-color-primary-background );
+  font-size:  1rem;
+  font-size: var(--primary-font-size-base );
+  font-weight:  400;
+  font-weight: var(--primary-font-regular );
+  line-height:  1.25rem;
+  line-height: var(--primary-line-height-base ); }
+  @media (max-width: 414px) {
+    .page-node-type-page .block-system-main-block p {
+      font-size:  1.25rem;
+      font-size: var(--primary-font-size-small ); } }
+  @media (min-width: 769px) {
+    .page-node-type-page .block-system-main-block p {
+      font-size:  1.25rem;
+      font-size: var(--primary-font-size-small ); } }
+
+.page-node-type-page .block-system-main-block blockquote p {
+  background-color:  #50CFE3;
+  background-color: var(--background-color-secondary );
+  color:  #000000;
+  color: var(--color-text-over-color-secondary-background );
+  font-size:  1.25rem;
+  font-size: var(--primary-font-size-small );
+  font-weight:  400;
+  font-weight: var(--primary-font-regular );
+  line-height:  1.875rem;
+  line-height: var(--primary-line-height-small );
+  float: none;
+  font-style: normal; }
+
 #main-content .field--name-bene-intro {
   background-color:  #FFFFFF;
   background-color: var(--background-color-inset ); }
@@ -2371,7 +2436,8 @@ input[type='submit']:hover {
 
 @media (min-width: 769px) {
   .page-node-type-page .block-system-main-block .field--name-bene-intro {
-    font-size: 1.375rem;
+    font-size:  1.25rem;
+    font-size: var(--primary-font-size-small );
     margin-bottom: 2rem;
     margin-top: 1.5rem; } }
 .page-node-type-event {

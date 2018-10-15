@@ -1,71 +1,27 @@
-//.page-node-type-page .block-system-main-block {
+.page-node-type-page .block-system-main-block {
 
-  // this chunk moved into _introduction.
-  //  .field--name-bene-intro {
-  //    float: none;
-  //    margin-bottom: 2rem;
-  //    margin-right: auto;
-  //    margin-left: auto;
-  //    width: 100%;
-  //    max-width: none;
-  //
-  //  }
+  h2 {
+    @extend %page-node-type-page-block-system-main-block-h2;
+  }
 
-//
-//  h2 {
-//    color: bbv(font-color-primary); // in case css variables are not supported
-//    color: var(--general-font-primary-color);
-//    font-style: normal;
-//    font-weight: normal;
-//    font-size: medium;
-//    margin-top: 0;
-//
-//    @include mq(mobile) {
-//      @include vars(font-size, primary-font-size-accent);
-//    }
-//  }
-//
-//  h3 {
-//    color: bbv(font-color-secondary); // in case css variables are not supported
-//    color: var(--general-font-secondary-color);
-//    font-size: medium;
-//    font-weight: normal;
-//    line-height: normal;
-//    margin-bottom: 0;
-//
-//    a {
-//      color: bbv(font-color-link); // in case css variables are not supported
-//      color: var(--general-link-color);
-//    }
-//    a:hover {
-//      color: bbv(font-color-hover-link); // in case css variables are not supported
-//      color: var(--general-link-hover-color);
-//    }
-//  }
-//
-//  p {
-//    color: bbv(font-color-primary); // in case css variables are not supported
-//    color: var(--general-font-primary-color);
-//    font-size: rem(18);
-//    font-weight: normal;
-//    line-height: normal;
-//
-//    @include mq(mobile) {
-//      @include vars(font-size, primary-font-size-small);
-//    }
-//
-//    @include mq(desktop) {
-//      font-size: rem(24);
-//    }
-//  }
-//
-//  blockquote {
-//    p {
-//      color: bbv(font-color-tertiary); // in case css variables are not supported
-//      color: var(--general-font-tertiary-color);
-//      font-size: rem(24);
-//      float: none;
-//      font-style: normal;
-//    }
-//  }
-//}
+  h3 {
+    @extend %page-node-type-page-block-system-main-block-h3;
+
+    a {
+      @extend %page-node-type-page-block-system-main-block-h3-link;
+    }
+    a:hover {
+      @extend %page-node-type-page-block-system-main-block-h3-link-hover;
+    }
+  }
+
+  p {
+    @extend %page-node-type-page-block-system-main-block-p;
+  }
+
+  blockquote {
+    p {
+      @extend %page-node-type-page-block-system-main-block-blockquote-p;
+    }
+  }
+}
