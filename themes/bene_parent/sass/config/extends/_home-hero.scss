@@ -1,3 +1,7 @@
+.homepage-hero {
+  @extend %general-page;
+}
+
 %block-bene-home-page-feature-block {
   @include vars(color, color-text-title-over-color-primary-background);
   color: var(--hero-font-color);

@@ -1,3 +1,17 @@
+
+.site-header {
+  @extend %general-page;
+}
+
+#site-wrapper > header
+{
+  @extend %branding;
+}
+
+.site-header {
+  @extend %site-header;
+}
+
 // Default Styles (Mobile First!)
 .site-header {
   @extend %site-layout-header;

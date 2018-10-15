@@ -1,3 +1,12 @@
+
+.site-footer {
+  @extend %general-page;
+}
+
+.region-footer {
+  @extend %branding;
+}
+
 // Default Styles (Mobile First!)
 .region-footer .bene-contact-links .fieldset-wrapper {
   @extend %region-footer-layout;

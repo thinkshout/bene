@@ -10,22 +10,12 @@
 }
 
 #page,
-.site-header,
-.site-content,
-.site-footer,
-.homepage-hero {
+.site-content {
   @extend %general-page;
 }
 
-#site-wrapper > header,
-.site_branding,
-.region-content,
-.region-footer {
+.region-content {
   @extend %branding;
-}
-
-.site-header {
-  @extend %site-header;
 }
 
 .page-node-type-page,
@@ -57,6 +47,3 @@
   }
 }
 
-.page-node-type-listing-page {
-  @extend %page-node-type-listing-page;
-}

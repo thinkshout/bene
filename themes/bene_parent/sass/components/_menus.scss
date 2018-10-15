@@ -1,5 +1,9 @@
 // Default Styles (Mobile First!)
 
+.site_branding {
+  @extend %branding;
+}
+
 .block-system-branding-block {
   @extend %block-system-branding-block;
 }
