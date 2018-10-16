@@ -1,0 +1,12 @@
+
+$vars: (
+  background-color-primary: #2d3332,
+  // add all your variables here.
+);
+
+// Global CSS Variables - do not delete!
+:root {
+  @each $key, $value in $vars {
+    #{--$key}: #{$value};
+  }
+}
