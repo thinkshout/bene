@@ -30,7 +30,7 @@ html {
   --background-color-tertiary: linear-gradient(-180deg, #50cfe3, black);
   --color-text-over-color-tertiary-background: #FFFFFF;
   --color-text-link-over-color-tertiary-background: #FFFFFF;
-  --color-text-hover-link-over-color-tertiary-background: #lighten #129FB5, 20%;
+  --color-text-hover-link-over-color-tertiary-background: #41d5ec;
   --background-color-quaternary: #129FB5;
   --background-color-inset: #FFFFFF;
   --color-text-title-over-color-inset-background: #129FB5;

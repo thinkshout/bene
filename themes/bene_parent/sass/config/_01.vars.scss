@@ -24,7 +24,7 @@ $vars: (
   // Text and foreground colors that go with the color above:
         color-text-over-color-tertiary-background: #FFFFFF,
         color-text-link-over-color-tertiary-background: #FFFFFF,
-        color-text-hover-link-over-color-tertiary-background: #lighten(#129FB5, 20%),
+        color-text-hover-link-over-color-tertiary-background: lighten(#129FB5, 20%),
   //
   background-color-quaternary: #129FB5, // (Feature (no photo) background)
   // Text and foreground colors that go with the color above:
@@ -62,13 +62,13 @@ $vars: (
         button-tertiary-color-hover-background: #129FB5,
         button-tertiary-text-and-outline-color: #FFFFFF,
         button-tertiary-hover-text-and-outline-color: #FFFFFF,
-  //
+
   // Button Characteristics:
   //      button-height: rem(4),
         preferred-border-radius: rem(3),
 
   // Primary font is used for menus and tables
-        primary-font-family:  "'Open Sans', sans-serif",
+        primary-font-family:  "'Open Sans', sans-serif", // for testing use Comic Sans MS
         primary-font-light:   '300',
         primary-font-regular: '400',
         primary-font-medium:  '600',
