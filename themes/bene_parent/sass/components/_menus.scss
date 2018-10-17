@@ -105,20 +105,6 @@
         @include vars(color, color-text-hover-secondary-menu-over-color-primary-background);
       }
     }
-    &:last-child a {
-      @include button;
-      @include vars(color, button-primary-text-and-outline-color);
-      @include vars(background-color, button-primary-color-background);
-      &:hover {
-        @include vars(color, button-primary-hover-text-and-outline-color);
-        @include vars(background-color, button-primary-hover-color-background);
-      }
-      @include vars(font-size, primary-font-size-footnote); // was rem(12)
-      @include vars(font-weight, primary-font-bold);
-      letter-spacing: 0;
-      padding: rem(10) rem(15);
-      top: 6px;
-    }
   }
   .desktop-nav .menu--main .menu-item {
     a {
@@ -132,6 +118,20 @@
       &.is-active {
         cursor: default;
       }
+    }
+    &:last-child a {
+      @include button;
+      @include vars(color, button-primary-text-and-outline-color);
+      @include vars(background-color, button-primary-color-background);
+      &:hover {
+        @include vars(color, button-primary-hover-text-and-outline-color);
+        @include vars(background-color, button-primary-hover-color-background);
+      }
+      @include vars(font-size, primary-font-size-footnote); // was rem(12)
+      @include vars(font-weight, primary-font-bold);
+      letter-spacing: 0;
+      padding: rem(10) rem(15);
+      top: 6px;
     }
   }
 }
