@@ -38,6 +38,7 @@
 
 %block-bene-home-page-feature-block-field--name-bene-title {
   @include vars(font-size, title-font-size-medium);
+  @include vars(color, color-text-title-over-color-photo-overlay-background);
   margin: 0 auto 2rem;
   max-width: rem(900);
   position: relative;

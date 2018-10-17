@@ -914,6 +914,8 @@ input[type='submit']:hover {
 .block-bene-home-page-feature-block .field--name-bene-title {
   font-size:  3.125rem;
   font-size: var(--title-font-size-medium );
+  color:  #FFFFFF;
+  color: var(--color-text-title-over-color-photo-overlay-background );
   margin: 0 auto 2rem;
   max-width: 56.25rem;
   position: relative;
