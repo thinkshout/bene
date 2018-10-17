@@ -27,38 +27,19 @@ body.user-logged-in .region.region-content {
   .footer {
     @extend %footer;
   }
-  #block-bene-child-local-tasks {
-    @extend %block-bene-child-local-tasks;
 
-    ul.tabs {
-      @extend %block-bene-child-local-tasks-ul-tabs;
-    }
+  ul.tabs {
+    @extend %block-bene-child-local-tasks-ul-tabs;
     li {
-      @extend %block-bene-child-local-tasks-li;
-
-      a {
-        @extend %block-bene-child-local-tasks-li-a;
-
-        &:hover {
-          @extend %block-bene-child-local-tasks-li-a-hover;
-        }
-        &.is-active {
-          @extend %block-bene-child-local-tasks-li-a-active;
-        }
+      .is-active {
+        @include vars(background-color, button-primary-color-background);
+        @include vars(color, button-primary-text-and-outline-color);
       }
-    }
-    .show-hide {
-      @extend %block-bene-child-local-tasks-show-hide;
-
-      span {
-        @extend %block-bene-child-local-tasks-show-hide-span;
-      }
-    }
-    &.active {
-      right: 0;
-      .show-hide span {
-        @extend %block-bene-child-local-tasks-active-show-hide-span;
+      &:hover {
+        @include vars(background-color, button-primary-hover-color-background);
+        @include vars(color, button-primary-hover-text-and-outline-color);
       }
     }
   }
+
 }

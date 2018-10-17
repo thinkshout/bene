@@ -22,9 +22,7 @@
 .page-node-type-listing-page,
 .page-node-type-event,
 .page-node-type-news {
-  .region-content {
-    @extend %page-node-type-region-content;
-  }
+
   .block-system-main-block .field--name-bene-intro,
   .field--name-bene-content .paragraph--type--rich-text,
   .block-system-main-block .field--name-bene-event-date-range,

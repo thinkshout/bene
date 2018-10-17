@@ -99,8 +99,6 @@ html {
 /* END BASE ELEMENT STYLES */
 body.path-user .region.region-content,
 body.user-logged-in .region.region-content {
-  background-color:  #FFFFFF;
-  background-color: var(--background-color-primary );
   display: inline-block;
   width: 100%; }
 
@@ -176,100 +174,10 @@ body.user-logged-in .region.region-content {
 .user-logged-in .footer {
   padding-bottom: 3.125rem; }
 
-.user-logged-in #block-bene-child-local-tasks {
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  transition: all 0.4s linear;
+.user-logged-in ul.tabs {
   background-color:  #FFFFFF;
   background-color: var(--background-color-primary );
-  bottom: 0;
-  height: auto;
-  padding-right: 45px;
-  position: fixed;
-  right: -90%;
-  width: 90%;
-  z-index: 1000; }
-  @media (min-width: 769px) {
-    .user-logged-in #block-bene-child-local-tasks {
-      right: -55%;
-      width: 55%; } }
-
-.user-logged-in #block-bene-child-local-tasks ul.tabs {
   margin: 0; }
-
-.user-logged-in #block-bene-child-local-tasks li {
-  background-color:  #FFFFFF;
-  background-color: var(--background-color-primary ); }
-
-.user-logged-in #block-bene-child-local-tasks li a {
-  background-color:  #FFFFFF;
-  background-color: var(--background-color-primary );
-  border: none;
-  color:  #129FB5;
-  color: var(--color-text-link-over-color-primary-background );
-  display: inline-block;
-  font-size:  1rem;
-  font-size: var(--primary-font-size-base );
-  font-weight:  800;
-  font-weight: var(--primary-font-black );
-  padding: 0.3125rem 0.625rem 0.3125rem;
-  text-transform: uppercase; }
-  @media (min-width: 769px) {
-    .user-logged-in #block-bene-child-local-tasks li a {
-      font-size:  1rem;
-      font-size: var(--primary-font-size-base );
-      padding: 0.4375rem 1.25rem 0.4375rem; } }
-
-.user-logged-in #block-bene-child-local-tasks li a:hover {
-  background-color:  #50CFE3;
-  background-color: var(--color-text-hover-link-over-color-primary-background ); }
-
-.user-logged-in #block-bene-child-local-tasks li a.is-active {
-  background-color:  #50CFE3;
-  background-color: var(--color-text-hover-link-over-color-primary-background ); }
-
-.user-logged-in #block-bene-child-local-tasks .show-hide {
-  background-color:  #50CFE3;
-  background-color: var(--background-color-secondary );
-  cursor: pointer;
-  font-size:  2rem;
-  font-size: var(--primary-font-size-accent );
-  height: 1.875rem;
-  left: -1.875rem;
-  line-height:  2.375rem;
-  line-height: var(--primary-line-height-accent );
-  padding: 0 0.5rem 0 0.5625rem;
-  position: absolute;
-  width: 1.875rem; }
-  @media (min-width: 769px) {
-    .user-logged-in #block-bene-child-local-tasks .show-hide {
-      height: 2.375rem;
-      line-height:  2.375rem;
-      line-height: var(--primary-line-height-accent ); } }
-
-.user-logged-in #block-bene-child-local-tasks .show-hide span {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  transition: all 0.5s linear;
-  background: transparent url("../images/svgs/line-arrow.svg") no-repeat center center/cover !important;
-  display: inline-block;
-  height: 0.9375rem;
-  width: 0.75rem; }
-  @media (min-width: 769px) {
-    .user-logged-in #block-bene-child-local-tasks .show-hide span {
-      height: 1.5625rem; } }
-
-.user-logged-in #block-bene-child-local-tasks.active .show-hide span {
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg); }
 
 body {
   -moz-osx-font-smoothing: grayscale;
@@ -521,8 +429,7 @@ fieldset legend {
   font-size: var(--primary-font-size-base );
   font-weight:  300;
   font-weight: var(--primary-font-light );
-  line-height: 2rem;
-  margin-top: 0.75rem; }
+  line-height: 2rem; }
   @media (min-width: 769px) {
     .page-node-type-event .field--name-bene-event-date-range time {
       font-size:  2rem;
@@ -660,9 +567,10 @@ fieldset legend {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 2.625rem;
-  margin-top: 1.5rem;
-  padding: 0 2%;
+  padding-bottom: 2.625rem;
+  padding-top: 1.5rem;
+  padding-left: 0;
+  padding-right: 0;
   position: relative; }
 
 .block-bene-footer-block .menu {
@@ -695,6 +603,7 @@ fieldset legend {
   left: 0;
   position: absolute;
   right: 0;
+  padding-bottom: 2.625rem;
   text-align:  center;
   text-align: var(--hero-alignment ); }
 
@@ -1000,8 +909,7 @@ input[type='submit']:hover {
       font-size:  1rem;
       font-size: var(--title-font-size-base );
       line-height:  1.25rem;
-      line-height: var(--title-line-height-base );
-      padding-top: 7rem; } }
+      line-height: var(--title-line-height-base ); } }
 
 .block-bene-home-page-feature-block .field--name-bene-title {
   font-size:  3.125rem;
@@ -1137,8 +1045,8 @@ input[type='submit']:hover {
   margin-left: auto;
   width: 100%;
   max-width: none;
-  margin-bottom: 1.5rem;
-  margin-top: 1rem; }
+  padding-bottom: 1.5rem;
+  padding-top: 1rem; }
 
 #main-content .field--name-bene-intro h2 {
   color:  #50CFE3;
@@ -1712,18 +1620,6 @@ input[type='submit']:hover {
   background-color:  #FFFFFF;
   background-color: var(--background-color-primary ); }
 
-.page-node-type-page .region-content,
-.page-node-type-listing-page .region-content,
-.page-node-type-event .region-content,
-.page-node-type-news .region-content {
-  margin-bottom: 2rem; }
-  @media (min-width: 769px) {
-    .page-node-type-page .region-content,
-    .page-node-type-listing-page .region-content,
-    .page-node-type-event .region-content,
-    .page-node-type-news .region-content {
-      margin-bottom: 3rem; } }
-
 .page-node-type-page .block-system-main-block .field--name-bene-intro,
 .page-node-type-page .field--name-bene-content .paragraph--type--rich-text,
 .page-node-type-page .block-system-main-block .field--name-bene-event-date-range,
@@ -1810,7 +1706,6 @@ input[type='submit']:hover {
     .page-node-type-news .paragraph--type--media .media-tweet,
     .page-node-type-news .paragraph--type--media .media-video {
       margin-left: 17.05961%;
-      margin-top: 3rem;
       max-width: 65.88078%; } }
 
 .page-node-type-page .paragraph--type--media .media-instagram > div,
@@ -2099,7 +1994,7 @@ input[type='submit']:hover {
   justify-content: center; }
   @media (min-width: 1240px) {
     .paragraph--type--tiles .field--name-field-tiles {
-      margin: 1.5rem auto; } }
+      margin: 1.5rem 0; } }
   @media (min-width: 769px) {
     .paragraph--type--tiles .field--name-field-tiles .field--name-field-image,
     .paragraph--type--tiles .field--name-field-tiles .bg-header {
@@ -2120,7 +2015,6 @@ input[type='submit']:hover {
   justify-items: stretch; }
   @media (min-width: 1240px) {
     .paragraph--type--tiles .field--name-field-tiles > .field__item {
-      margin-bottom: 3rem;
       max-width: 23.75rem; } }
   @media (min-width: 769px) {
     .paragraph--type--tiles .field--name-field-tiles > .field__item .field--name-field-image,
@@ -2280,8 +2174,16 @@ input[type='submit']:hover {
 @media (min-width: 1240px) {
   .site-header .desktop-nav .menu .menu-item {
     margin-left: 2.25rem; } }
-.user-logged-in #block-bene-child-local-tasks.active {
-  right: 0; }
+.user-logged-in ul.tabs li .is-active {
+  background-color:  #129FB5;
+  background-color: var(--button-primary-color-background );
+  color:  #FFFFFF;
+  color: var(--button-primary-text-and-outline-color ); }
+.user-logged-in ul.tabs li:hover {
+  background-color:  #50CFE3;
+  background-color: var(--button-primary-hover-color-background );
+  color:  #FFFFFF;
+  color: var(--button-primary-hover-text-and-outline-color ); }
 
 .page-node-type-page .field--name-bene-content {
   clear: both; }
@@ -2289,9 +2191,7 @@ input[type='submit']:hover {
 @media (min-width: 769px) {
   .page-node-type-page .block-system-main-block .field--name-bene-intro {
     font-size:  1.25rem;
-    font-size: var(--primary-font-size-small );
-    margin-bottom: 2rem;
-    margin-top: 1.5rem; } }
+    font-size: var(--primary-font-size-small ); } }
 .page-node-type-event {
   background:  #FFFFFF;
   background: var(--background-color-inset ); }

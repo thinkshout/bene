@@ -13,7 +13,6 @@
   @include vars(font-size, primary-font-size-base);
   @include vars(font-weight, primary-font-light);
   line-height: rem(32);
-  margin-top: rem(12);
   @include mq(desktop) {
     @include vars(font-size, primary-font-size-accent);
     @include vars(line-height, primary-line-height-accent);

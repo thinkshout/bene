@@ -33,7 +33,6 @@
   @include mq(mobile) {
     @include vars(font-size, title-font-size-base);
     @include vars(line-height, title-line-height-base);
-    padding-top: 7rem;
   }
 }
 

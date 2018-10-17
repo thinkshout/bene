@@ -130,9 +130,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: rem(42);
-  margin-top: rem(24);
-  padding: 0 2%;
+  padding-bottom: rem(42);
+  padding-top: rem(24);
+  padding-left: 0;
+  padding-right: 0;
   position: relative;
 }
 
@@ -169,5 +170,6 @@
   left: 0;
   position: absolute;
   right: 0;
+  padding-bottom: rem(42);
   @include vars(text-align, hero-alignment);
 }

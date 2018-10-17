@@ -22,8 +22,8 @@
   margin-left: auto;
   width: 100%;
   max-width: none;
-  margin-bottom: rem(24);
-  margin-top: rem(16);
+  padding-bottom: rem(24);
+  padding-top: rem(16);
 }
 %field--name-bene-intro-h2 {
   @include vars(color, color-text-title-over-color-primary-background);

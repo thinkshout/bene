@@ -25,7 +25,7 @@
   justify-content: center;
 
   @include mq(xl) {
-    margin: rem(24) auto;
+    margin: rem(24) 0;
   }
 
   @include mq(desktop) {
@@ -47,7 +47,6 @@
   justify-items: stretch;
 
   @include mq(xl) {
-    margin-bottom: rem(48);
     max-width: rem(380);
   }
 

@@ -1,6 +1,5 @@
 // Admin adjustments
 %body-region-content {
-  @include vars(background-color, background-color-primary);
   display: inline-block;
   width: 100%;
 }
@@ -90,70 +89,6 @@
 }
 
 %block-bene-child-local-tasks-ul-tabs {
+  @include vars(background-color, background-color-primary);
   margin: 0;
 }
-
-%block-bene-child-local-tasks-li {
-  @include vars(background-color, background-color-primary);
-}
-
-%block-bene-child-local-tasks-li-a {
-  @include vars(background-color, background-color-primary);
-  border: none;
-  @include vars(color, color-text-link-over-color-primary-background);
-  display: inline-block;
-  @include vars(font-size, primary-font-size-base);
-  @include vars(font-weight, primary-font-black);
-  padding: rem(5) rem(10) rem(5);
-  text-transform: uppercase;
-  @include mq(desktop) {
-    @include vars(font-size, primary-font-size-base);
-    padding: rem(7) rem(20) rem(7);
-  }
-}
-
-%block-bene-child-local-tasks-li-a-hover {
-  @include vars(background-color, color-text-hover-link-over-color-primary-background);
-}
-
-%block-bene-child-local-tasks-li-a-active {
-  @include vars(background-color, color-text-hover-link-over-color-primary-background);
-}
-
-%block-bene-child-local-tasks-show-hide {
-  @include vars(background-color, background-color-secondary);
-  cursor: pointer;
-  @include vars(font-size, primary-font-size-accent);
-  height: rem(30);
-  left: rem(-30);
-  @include vars(line-height, primary-line-height-accent);
-  padding: 0 rem(8) 0 rem(9);
-  position: absolute;
-  width: rem(30);
-  @include mq(desktop) {
-    height: rem(38);
-    @include vars(line-height, primary-line-height-accent);
-  }
-}
-
-%block-bene-child-local-tasks-show-hide-span {
-  @include transform(rotate(180deg));
-  @include transition(all 0.5s linear);
-  background: transparent url('../images/svgs/line-arrow.svg') no-repeat center center /cover !important;
-  display: inline-block;
-  height: rem(15);
-  width: rem(12);
-  @include mq(desktop) {
-    height: rem(25);
-  }
-}
-
-%block-bene-child-local-tasks-active {
-  right: 0;
-}
-
-%block-bene-child-local-tasks-active-show-hide-span {
-  @include transform(rotate(0deg));
-}
-
-
