@@ -27,10 +27,6 @@
 %page-node-type-region-padding {
   clear: both;
   padding: 0 2%;
-  @include mq(desktop) {
-    @include span-columns(8);
-    @include shift(2);
-  }
 }
 %page-node-type-region-social-media {
   clear: both;

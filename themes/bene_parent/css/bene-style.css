@@ -954,7 +954,7 @@ input[type='submit']:hover {
   background-color:  #FFFFFF;
   background-color: var(--button-secondary-color-hover-background ); }
 
-.page-node-type-page .block-system-main-block h2 {
+.page-node-type-page .block-system-main-block h2, .paragraph--type--rich-text .field--name-field-text h2 {
   color:  #50CFE3;
   color: var(--color-text-title-over-color-primary-background );
   font-style: normal;
@@ -966,11 +966,11 @@ input[type='submit']:hover {
   line-height: var(--title-line-height-medium );
   margin-top: 0; }
   @media (max-width: 414px) {
-    .page-node-type-page .block-system-main-block h2 {
+    .page-node-type-page .block-system-main-block h2, .paragraph--type--rich-text .field--name-field-text h2 {
       font-size:  2rem;
       font-size: var(--primary-font-size-accent ); } }
 
-.page-node-type-page .block-system-main-block h3 {
+.page-node-type-page .block-system-main-block h3, .paragraph--type--rich-text .field--name-field-text h3 {
   color:  #50CFE3;
   color: var(--color-text-title-over-color-primary-background );
   font-size:  3.125rem;
@@ -981,15 +981,17 @@ input[type='submit']:hover {
   line-height: var(--title-line-height-medium );
   margin-bottom: 0; }
 
-.page-node-type-page .block-system-main-block h3 a {
+.page-node-type-page .block-system-main-block h3 a, .paragraph--type--rich-text .field--name-field-text h3 a {
   color:  #129FB5;
   color: var(--color-text-link-over-color-primary-background ); }
 
-.page-node-type-page .block-system-main-block h3 a:hover {
+.page-node-type-page .block-system-main-block h3 a:hover, .paragraph--type--rich-text .field--name-field-text h3 a:hover {
   color:  #50CFE3;
   color: var(--color-text-hover-link-over-color-primary-background ); }
 
-.page-node-type-page .block-system-main-block p {
+.page-node-type-page .block-system-main-block p, .paragraph--type--rich-text .field--name-field-text p,
+.paragraph--type--rich-text .field--name-field-text ol li,
+.paragraph--type--rich-text .field--name-field-text ul li {
   color:  #000000;
   color: var(--color-text-over-color-primary-background );
   font-size:  1rem;
@@ -999,15 +1001,19 @@ input[type='submit']:hover {
   line-height:  1.25rem;
   line-height: var(--primary-line-height-base ); }
   @media (max-width: 414px) {
-    .page-node-type-page .block-system-main-block p {
+    .page-node-type-page .block-system-main-block p, .paragraph--type--rich-text .field--name-field-text p,
+    .paragraph--type--rich-text .field--name-field-text ol li,
+    .paragraph--type--rich-text .field--name-field-text ul li {
       font-size:  1.25rem;
       font-size: var(--primary-font-size-small ); } }
   @media (min-width: 769px) {
-    .page-node-type-page .block-system-main-block p {
+    .page-node-type-page .block-system-main-block p, .paragraph--type--rich-text .field--name-field-text p,
+    .paragraph--type--rich-text .field--name-field-text ol li,
+    .paragraph--type--rich-text .field--name-field-text ul li {
       font-size:  1.25rem;
       font-size: var(--primary-font-size-small ); } }
 
-.page-node-type-page .block-system-main-block blockquote p {
+.page-node-type-page .block-system-main-block blockquote p, .paragraph--type--rich-text .field--name-field-text blockquote p {
   background-color:  #50CFE3;
   background-color: var(--background-color-secondary );
   color:  #000000;
@@ -1642,45 +1648,6 @@ input[type='submit']:hover {
 .page-node-type-news .block-system-main-block .field--name-bene-event-location {
   clear: both;
   padding: 0 2%; }
-  @media (min-width: 769px) {
-    .page-node-type-page .block-system-main-block .field--name-bene-intro,
-    .page-node-type-page .field--name-bene-content .paragraph--type--rich-text,
-    .page-node-type-page .block-system-main-block .field--name-bene-event-date-range,
-    .page-node-type-page .block-system-main-block .field--name-bene-event-location,
-    .page-node-type-listing-page .block-system-main-block .field--name-bene-intro,
-    .page-node-type-listing-page .field--name-bene-content .paragraph--type--rich-text,
-    .page-node-type-listing-page .block-system-main-block .field--name-bene-event-date-range,
-    .page-node-type-listing-page .block-system-main-block .field--name-bene-event-location,
-    .page-node-type-event .block-system-main-block .field--name-bene-intro,
-    .page-node-type-event .field--name-bene-content .paragraph--type--rich-text,
-    .page-node-type-event .block-system-main-block .field--name-bene-event-date-range,
-    .page-node-type-event .block-system-main-block .field--name-bene-event-location,
-    .page-node-type-news .block-system-main-block .field--name-bene-intro,
-    .page-node-type-news .field--name-bene-content .paragraph--type--rich-text,
-    .page-node-type-news .block-system-main-block .field--name-bene-event-date-range,
-    .page-node-type-news .block-system-main-block .field--name-bene-event-location {
-      float: left;
-      display: block;
-      margin-right: 2.3576515979%;
-      width: 65.8807828007%;
-      margin-left: 17.0596085997%; }
-      .page-node-type-page .block-system-main-block .field--name-bene-intro:last-child,
-      .page-node-type-page .field--name-bene-content .paragraph--type--rich-text:last-child,
-      .page-node-type-page .block-system-main-block .field--name-bene-event-date-range:last-child,
-      .page-node-type-page .block-system-main-block .field--name-bene-event-location:last-child,
-      .page-node-type-listing-page .block-system-main-block .field--name-bene-intro:last-child,
-      .page-node-type-listing-page .field--name-bene-content .paragraph--type--rich-text:last-child,
-      .page-node-type-listing-page .block-system-main-block .field--name-bene-event-date-range:last-child,
-      .page-node-type-listing-page .block-system-main-block .field--name-bene-event-location:last-child,
-      .page-node-type-event .block-system-main-block .field--name-bene-intro:last-child,
-      .page-node-type-event .field--name-bene-content .paragraph--type--rich-text:last-child,
-      .page-node-type-event .block-system-main-block .field--name-bene-event-date-range:last-child,
-      .page-node-type-event .block-system-main-block .field--name-bene-event-location:last-child,
-      .page-node-type-news .block-system-main-block .field--name-bene-intro:last-child,
-      .page-node-type-news .field--name-bene-content .paragraph--type--rich-text:last-child,
-      .page-node-type-news .block-system-main-block .field--name-bene-event-date-range:last-child,
-      .page-node-type-news .block-system-main-block .field--name-bene-event-location:last-child {
-        margin-right: 0; } }
 
 .page-node-type-page .paragraph--type--media .media-instagram,
 .page-node-type-page .paragraph--type--media .media-tweet,
@@ -1907,39 +1874,39 @@ input[type='submit']:hover {
 .paragraph--type--media img {
   max-width: 100%; }
 
-.paragraph--type--rich-text figure {
+.paragraph--type--rich-text .field--name-field-text figure {
   margin: 1rem 0; }
 
-.paragraph--type--rich-text figcaption {
+.paragraph--type--rich-text .field--name-field-text figcaption {
   font-size:  0.875rem;
   font-size: var(--primary-font-size-footnote );
   font-style: italic; }
 
-.paragraph--type--rich-text .embedded-entity.align-left,
-.paragraph--type--rich-text figure.align-left {
+.paragraph--type--rich-text .field--name-field-text .embedded-entity.align-left,
+.paragraph--type--rich-text .field--name-field-text figure.align-left {
   margin-right: 2rem; }
 
-.paragraph--type--rich-text .embedded-entity.align-right,
-.paragraph--type--rich-text figure.align-right {
+.paragraph--type--rich-text .field--name-field-text .embedded-entity.align-right,
+.paragraph--type--rich-text .field--name-field-text figure.align-right {
   margin-left: 2rem; }
 
-.paragraph--type--rich-text .embedded-entity.align-left,
-.paragraph--type--rich-text .embedded-entity.align-right {
+.paragraph--type--rich-text .field--name-field-text .embedded-entity.align-left,
+.paragraph--type--rich-text .field--name-field-text .embedded-entity.align-right {
   margin-bottom: 0.75rem; }
 
-.paragraph--type--rich-text p,
-.paragraph--type--rich-text ol li,
-.paragraph--type--rich-text ul li {
+.paragraph--type--rich-text .field--name-field-text p,
+.paragraph--type--rich-text .field--name-field-text ol li,
+.paragraph--type--rich-text .field--name-field-text ul li {
   color:  #000000;
   color: var(--color-text-over-color-primary-background ); }
 
-.paragraph--type--rich-text blockquote {
+.paragraph--type--rich-text .field--name-field-text blockquote {
   margin: 2rem auto;
   max-width: 80%;
   text-align:  center;
   text-align: var(--hero-alignment ); }
 
-.paragraph--type--rich-text blockquote p {
+.paragraph--type--rich-text .field--name-field-text blockquote p {
   color:  #000000;
   color: var(--color-text-over-color-primary-background );
   font-size:  1.625rem;
@@ -1950,12 +1917,12 @@ input[type='submit']:hover {
   line-height:  2.4375rem;
   line-height: var(--sentence-line-height-small );
   margin: 0; }
-  .paragraph--type--rich-text blockquote p:before {
+  .paragraph--type--rich-text .field--name-field-text blockquote p:before {
     content: "“"; }
-  .paragraph--type--rich-text blockquote p:after {
+  .paragraph--type--rich-text .field--name-field-text blockquote p:after {
     content: "”"; }
 
-.paragraph--type--rich-text blockquote:after {
+.paragraph--type--rich-text .field--name-field-text blockquote:after {
   background-color:  #50CFE3;
   background-color: var(--background-color-secondary );
   content: "";
@@ -1964,7 +1931,7 @@ input[type='submit']:hover {
   position: relative;
   width: 25%; }
 
-.paragraph--type--rich-text img {
+.paragraph--type--rich-text .field--name-field-text img {
   max-width: 99%; }
 
 .paragraph--type--tiles {
@@ -2287,6 +2254,10 @@ input[type='submit']:hover {
       color: var(--button-primary-hover-text-and-outline-color );
       background-color:  #50CFE3;
       background-color: var(--button-primary-hover-color-background ); } }
+.paragraph--type--rich-text {
+  background-color:  #FFFFFF;
+  background-color: var(--background-color-inset ); }
+
 .paragraph--type--feature-full-width .field--name-field-text {
   z-index: 10; }
 .paragraph--type--feature-full-width .field--type-link {

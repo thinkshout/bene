@@ -6,44 +6,66 @@
 }
 
 .paragraph--type--rich-text {
-  figure {
-    @extend %paragraph--type--rich-text-figure;
-  }
-  figcaption {
-    @extend %paragraph--type--rich-text-figcaption;
-  }
-  .embedded-entity.align-left,
-  figure.align-left {
-    @extend %paragraph--type--rich-text-align-left;
-  }
-  .embedded-entity.align-right,
-  figure.align-right {
-    @extend %paragraph--type--rich-text-align-right;
-  }
+  @include vars(background-color, background-color-inset);
 
-  .embedded-entity.align-left,
-  .embedded-entity.align-right {
-    @extend %paragraph--type--rich-text-alignment;
-  }
+  .field--name-field-text {
 
-  p,
-  ol li,
-  ul li {
-    @extend %paragraph--type--rich-text-p;
-  }
-
-  blockquote {
-    @extend %paragraph--type--rich-text-blockquote;
-    p {
-      @extend %paragraph--type--rich-text-blockquote-p;
+    h2 {
+      @extend %page-node-type-page-block-system-main-block-h2;
     }
 
-    &:after {
-      @extend %paragraph--type--rich-text-blockquote-after;
+    h3 {
+      @extend %page-node-type-page-block-system-main-block-h3;
+
+      a {
+        @extend %page-node-type-page-block-system-main-block-h3-link;
+      }
+      a:hover {
+        @extend %page-node-type-page-block-system-main-block-h3-link-hover;
+      }
     }
-  }
-  img {
-    @extend %paragraph--type--rich-text-img;
+
+    figure {
+      @extend %paragraph--type--rich-text-figure;
+    }
+    figcaption {
+      @extend %paragraph--type--rich-text-figcaption;
+    }
+    .embedded-entity.align-left,
+    figure.align-left {
+      @extend %paragraph--type--rich-text-align-left;
+    }
+    .embedded-entity.align-right,
+    figure.align-right {
+      @extend %paragraph--type--rich-text-align-right;
+    }
+
+    .embedded-entity.align-left,
+    .embedded-entity.align-right {
+      @extend %paragraph--type--rich-text-alignment;
+    }
+
+    p,
+    ol li,
+    ul li {
+      @extend %paragraph--type--rich-text-p;
+      @extend %page-node-type-page-block-system-main-block-p;
+    }
+
+    blockquote {
+      @extend %paragraph--type--rich-text-blockquote;
+      p {
+        @extend %paragraph--type--rich-text-blockquote-p;
+        @extend %page-node-type-page-block-system-main-block-blockquote-p;
+      }
+
+      &:after {
+        @extend %paragraph--type--rich-text-blockquote-after;
+      }
+    }
+    img {
+      @extend %paragraph--type--rich-text-img;
+    }
   }
 }
 
@@ -89,6 +111,6 @@
   @extend %feature-full-width;
 }
 
-.paragraph--type--feature-full-width.image{
+.paragraph--type--feature-full-width.image {
   @extend %feature-full-width-image;
 }
