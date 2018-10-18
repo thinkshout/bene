@@ -958,10 +958,12 @@ input[type='submit']:hover {
   color:  #50CFE3;
   color: var(--color-text-title-over-color-primary-background );
   font-style: normal;
-  font-weight:  400;
-  font-weight: var(--primary-font-regular );
-  font-size:  1.5625rem;
-  font-size: var(--title-font-size-small );
+  font-weight:  600;
+  font-weight: var(--title-font-medium );
+  font-size:  3.125rem;
+  font-size: var(--title-font-size-medium );
+  line-height:  3.875rem;
+  line-height: var(--title-line-height-medium );
   margin-top: 0; }
   @media (max-width: 414px) {
     .page-node-type-page .block-system-main-block h2 {
@@ -969,14 +971,14 @@ input[type='submit']:hover {
       font-size: var(--primary-font-size-accent ); } }
 
 .page-node-type-page .block-system-main-block h3 {
-  color:  ;
-  color: var(--colr );
-  color: var(--general-font-secondary-color);
-  font-size:  1rem;
-  font-size: var(--title-font-size-base );
+  color:  #50CFE3;
+  color: var(--color-text-title-over-color-primary-background );
+  font-size:  3.125rem;
+  font-size: var(--title-font-size-medium );
   font-weight:  400;
   font-weight: var(--title-font-regular );
-  line-height: normal;
+  line-height:  3.875rem;
+  line-height: var(--title-line-height-medium );
   margin-bottom: 0; }
 
 .page-node-type-page .block-system-main-block h3 a {

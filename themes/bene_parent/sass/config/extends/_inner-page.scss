@@ -1,8 +1,9 @@
 %page-node-type-page-block-system-main-block-h2 {
   @include vars(color, color-text-title-over-color-primary-background);
   font-style: normal;
-  @include vars(font-weight, primary-font-regular);
-  @include vars(font-size, title-font-size-small);
+  @include vars(font-weight, title-font-medium);
+  @include vars(font-size, title-font-size-medium);
+  @include vars(line-height, title-line-height-medium);
   margin-top: 0;
 
   @include mq(mobile) {
@@ -11,11 +12,10 @@
 }
 
 %page-node-type-page-block-system-main-block-h3 {
-  @include vars(color, colr);
-  color: var(--general-font-secondary-color);
-  @include vars(font-size, title-font-size-base);
+  @include vars(color, color-text-title-over-color-primary-background);
+  @include vars(font-size, title-font-size-medium);
   @include vars(font-weight, title-font-regular);
-  line-height: normal;
+  @include vars(line-height, title-line-height-medium);
   margin-bottom: 0;
 }
 
