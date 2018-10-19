@@ -9,8 +9,7 @@
   @include vars(background-color, background-color-inset);
 
   .field--name-field-text {
-    display: inline-block;
-    width: 100%;
+    @extend %paragraph--type--rich-text-field--name-field-text;
 
     h2 {
       @extend %page-node-type-page-block-system-main-block-h2;

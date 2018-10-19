@@ -13,6 +13,11 @@
   margin-left: rem(32);
 }
 
+%paragraph--type--rich-text-field--name-field-text {
+  display: inline-block;
+  width: 100%;
+}
+
 %paragraph--type--rich-text-p {
   @include vars(color, color-text-over-color-inset-background);
 }
