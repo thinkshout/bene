@@ -18,7 +18,15 @@
 }
 
 %paragraph--type--rich-text-p {
-  @include vars(color, color-text-over-color-primary-background);
+  @include vars(color, color-text-over-color-inset-background);
+}
+
+%paragraph--type--rich-text-p-link {
+  @include vars(color, color-text-link-over-color-inset-background);
+}
+
+%paragraph--type--rich-text-p-link-hover {
+  @include vars(color, color-text-hover-link-over-color-inset-background);
 }
 
 %paragraph--type--rich-text-blockquote {

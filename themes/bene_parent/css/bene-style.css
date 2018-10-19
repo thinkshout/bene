@@ -955,8 +955,8 @@ input[type='submit']:hover {
   background-color: var(--button-secondary-color-hover-background ); }
 
 .page-node-type-page .block-system-main-block h2, .paragraph--type--rich-text .field--name-field-text h2 {
-  color:  #50CFE3;
-  color: var(--color-text-title-over-color-primary-background );
+  color:  #129FB5;
+  color: var(--color-text-title-over-color-inset-background );
   font-style: normal;
   font-weight:  600;
   font-weight: var(--title-font-medium );
@@ -971,8 +971,8 @@ input[type='submit']:hover {
       font-size: var(--primary-font-size-accent ); } }
 
 .page-node-type-page .block-system-main-block h3, .paragraph--type--rich-text .field--name-field-text h3 {
-  color:  #50CFE3;
-  color: var(--color-text-title-over-color-primary-background );
+  color:  #129FB5;
+  color: var(--color-text-title-over-color-inset-background );
   font-size:  3.125rem;
   font-size: var(--title-font-size-medium );
   font-weight:  400;
@@ -982,18 +982,18 @@ input[type='submit']:hover {
   margin-bottom: 0; }
 
 .page-node-type-page .block-system-main-block h3 a, .paragraph--type--rich-text .field--name-field-text h3 a {
-  color:  #129FB5;
-  color: var(--color-text-link-over-color-primary-background ); }
+  color:  #50CFE3;
+  color: var(--color-text-link-over-color-inset-background ); }
 
 .page-node-type-page .block-system-main-block h3 a:hover, .paragraph--type--rich-text .field--name-field-text h3 a:hover {
-  color:  #50CFE3;
-  color: var(--color-text-hover-link-over-color-primary-background ); }
+  color:  #129FB5;
+  color: var(--color-text-hover-link-over-color-inset-background ); }
 
 .page-node-type-page .block-system-main-block p, .paragraph--type--rich-text .field--name-field-text p,
 .paragraph--type--rich-text .field--name-field-text ol li,
 .paragraph--type--rich-text .field--name-field-text ul li {
   color:  #000000;
-  color: var(--color-text-over-color-primary-background );
+  color: var(--color-text-over-color-inset-background );
   font-size:  1rem;
   font-size: var(--primary-font-size-base );
   font-weight:  400;
@@ -1898,7 +1898,19 @@ input[type='submit']:hover {
 .paragraph--type--rich-text .field--name-field-text ol li,
 .paragraph--type--rich-text .field--name-field-text ul li {
   color:  #000000;
-  color: var(--color-text-over-color-primary-background ); }
+  color: var(--color-text-over-color-inset-background ); }
+
+.paragraph--type--rich-text .field--name-field-text p a,
+.paragraph--type--rich-text .field--name-field-text ol li a,
+.paragraph--type--rich-text .field--name-field-text ul li a {
+  color:  #50CFE3;
+  color: var(--color-text-link-over-color-inset-background ); }
+
+.paragraph--type--rich-text .field--name-field-text p a:hover,
+.paragraph--type--rich-text .field--name-field-text ol li a:hover,
+.paragraph--type--rich-text .field--name-field-text ul li a:hover {
+  color:  #129FB5;
+  color: var(--color-text-hover-link-over-color-inset-background ); }
 
 .paragraph--type--rich-text .field--name-field-text blockquote {
   margin: 2rem auto;

@@ -50,6 +50,13 @@
     ul li {
       @extend %paragraph--type--rich-text-p;
       @extend %page-node-type-page-block-system-main-block-p;
+
+      a {
+        @extend %paragraph--type--rich-text-p-link;
+      }
+      a:hover {
+        @extend %paragraph--type--rich-text-p-link-hover;
+      }
     }
 
     blockquote {
