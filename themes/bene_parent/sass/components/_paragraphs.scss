@@ -9,6 +9,8 @@
   @include vars(background-color, background-color-inset);
 
   .field--name-field-text {
+    display: inline-block;
+    width: 100%;
 
     h2 {
       @extend %page-node-type-page-block-system-main-block-h2;
@@ -38,11 +40,6 @@
     .embedded-entity.align-right,
     figure.align-right {
       @extend %paragraph--type--rich-text-align-right;
-    }
-
-    .embedded-entity.align-left,
-    .embedded-entity.align-right {
-      @extend %paragraph--type--rich-text-alignment;
     }
 
     p,

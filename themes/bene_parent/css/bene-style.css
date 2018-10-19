@@ -1890,10 +1890,6 @@ input[type='submit']:hover {
 .paragraph--type--rich-text .field--name-field-text figure.align-right {
   margin-left: 2rem; }
 
-.paragraph--type--rich-text .field--name-field-text .embedded-entity.align-left,
-.paragraph--type--rich-text .field--name-field-text .embedded-entity.align-right {
-  margin-bottom: 0.75rem; }
-
 .paragraph--type--rich-text .field--name-field-text p,
 .paragraph--type--rich-text .field--name-field-text ol li,
 .paragraph--type--rich-text .field--name-field-text ul li {
@@ -2269,6 +2265,9 @@ input[type='submit']:hover {
 .paragraph--type--rich-text {
   background-color:  #FFFFFF;
   background-color: var(--background-color-inset ); }
+  .paragraph--type--rich-text .field--name-field-text {
+    display: inline-block;
+    width: 100%; }
 
 .paragraph--type--feature-full-width .field--name-field-text {
   z-index: 10; }

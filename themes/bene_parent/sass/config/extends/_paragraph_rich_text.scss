@@ -13,10 +13,6 @@
   margin-left: rem(32);
 }
 
-%paragraph--type--rich-text-alignment {
-  margin-bottom: rem(12);
-}
-
 %paragraph--type--rich-text-p {
   @include vars(color, color-text-over-color-inset-background);
 }
