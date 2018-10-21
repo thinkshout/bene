@@ -1,5 +1,23 @@
 
 %site-layout-header {
+  @include column-width(1,5);
+
+  @include mq($ph) { @include column-width(1,13); }
+
+  @include mq($md) {
+    @include center-columns(10, $grid-columns-total);
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  @include mq($sl) {
+    @include center-columns(8, $grid-columns-total);
+  }
+
+  @include mq($xl) {
+    @include center-columns(8, $grid-columns-xxl);
+  }
+
   display: flex;
   min-height: 101px;
 }

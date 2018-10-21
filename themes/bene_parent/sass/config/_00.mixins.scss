@@ -7,6 +7,25 @@
 }
 
 
+// Grid Browser Compliance
+@mixin column-width($start, $end) {
+  grid-column: #{$start} / #{$end};
+  -ms-grid-column: #{$start} / #{$end};
+}
+
+// Centers a column on the page
+@mixin center-columns($centered-columns, $total-columns) {
+  @if($total-columns - $centered-columns == 0) {
+    @include column-width(1,$total-columns + 1);
+  } @else {
+    $position-left: ($total-columns - $centered-columns)/2 + 1;
+    $position-right: $position-left + $centered-columns;
+    @include column-width($position-left,$position-right);
+  }
+}
+
+
+
 @mixin font-style($style) {
   @if $style == 'italic' { // Italic Light
     @include vars(font-family, primary-font-family);
@@ -64,13 +83,13 @@
 }
 
 /* Undo clearfix. Apply to .clearfix:after */
-@mixin undo-clearfix {
-  content: "";
-  display: inline-block;
-  height: auto;
-  clear: none;
-  display: none;
-}
+//@mixin undo-clearfix {
+//  content: "";
+//  display: inline-block;
+//  height: auto;
+//  clear: none;
+//  display: none;
+//}
 
 /* Ensure parent has position: relative; */
 @mixin centerer {

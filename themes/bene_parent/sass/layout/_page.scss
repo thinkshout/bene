@@ -1,47 +1,150 @@
-// Default layout
-  $max-width: rem(1800) !global;
-
-.inner {
-  @extend %page-inner;
+body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $site-max-width;
+  position: relative;
 }
 
-#site-wrapper {
-  @extend %site-wrapper;
-}
+// 12-Column Grid Layout.
+.grid {
+  display: grid;
+  grid-column-gap: $grid-gutter-mobile;
+  grid-template-columns: repeat($grid-columns-mobile, 1fr);
+  -ms-grid-columns: repeat($grid-columns-mobile, [col-start] 1fr); // For IE
+  margin: 0 auto;
+  max-width: calc(100% - (#{$grid-gutter-mobile} * 2));
+  width: $grid-max-width;
 
-#page,
-.site-content {
-  @extend %general-page;
-}
-
-.region-content {
-  @extend %branding;
-}
-
-.page-node-type-page,
-.page-node-type-listing-page,
-.page-node-type-event,
-.page-node-type-news {
-
-  .block-system-main-block .field--name-bene-intro,
-  .field--name-bene-content .paragraph--type--rich-text,
-  .block-system-main-block .field--name-bene-event-date-range,
-  .block-system-main-block .field--name-bene-event-location {
-    @extend %page-node-type-region-padding;
-  }
-  .paragraph--type--media .media-instagram,
-  .paragraph--type--media .media-tweet,
-  .paragraph--type--media .media-video {
-    @extend %page-node-type-region-social-media;
+  @include mq($ph) {
+    grid-column-gap: $grid-gutter-ph;
+    grid-template-columns: repeat($grid-columns-total, 1fr);
+    -ms-grid-columns: repeat($grid-columns-total, [col-start] 1fr); // For IE
+    max-width: calc(100% - (#{$grid-gutter-mobile} * 2));
   }
 
-  .paragraph--type--media .media-instagram > div,
-  .paragraph--type--media .media-tweet > div {
-    @extend %page-node-type-region-align;
+  @include mq($md) {
+    grid-column-gap: $grid-gutter-md;
+    max-width: calc(100% - (#{$grid-gutter-md} * 2));
   }
 
-  .paragraph--type--tiles {
-    @extend %page-node-type-region-tiles;
+  @include mq($sl) {
+    max-width: calc(100% - (#{$grid-gutter-xl} * 2));
+  }
+
+  @include mq($xl) {
+    grid-column-gap: $grid-gutter-xl;
+    grid-template-columns: repeat($grid-columns-xxl, 1fr);
+    -ms-grid-columns: repeat($grid-columns-xxl, [col-start] 1fr); // For IE
+    width: $grid-max-width-xxl;
+  }
+
+  &.no-gap {
+    grid-column-gap: 0;
   }
 }
 
+// For themers to check their work against the 12-column grid guidelines.
+#grid-checker {
+  background: transparent;
+  display: grid;
+  grid-auto-rows: minmax(100%, auto);
+  left: 0;
+  height: 100%;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 11;
+
+  p {
+    background: #000;
+    margin: 0;
+    opacity: 0.1;
+    width: 100%;
+  }
+}
+
+// Sets the limitations of the full site container. Do not set if you want an
+// element to stretch the full width of the site.
+.container {
+  margin: 0 auto;
+  max-width: $grid-max-width + 72px;
+  overflow-x: hidden;
+
+  @include mq($xl) { max-width: $grid-max-width-xxl + 72px; }
+}
+
+// Creates side padding so content always stays within the grid and doesn't
+// touch the sides on mobile devices.
+.content-side-padding {
+  padding-left: $grid-gutter-mobile;
+  padding-right: $grid-gutter-mobile;
+
+  @include mq($ph) {
+    padding-left: $grid-gutter-ph;
+    padding-right: $grid-gutter-ph;
+  }
+
+  @include mq($md) {
+    padding-left: $grid-gutter-md * 2;
+    padding-right: $grid-gutter-md * 2;
+  }
+
+  @include mq($sl) {
+    padding-left: $grid-gutter-sl * 2;
+    padding-right: $grid-gutter-sl * 2;
+  }
+
+  @include mq($xl) {
+    padding-left: $grid-gutter-xl;
+    padding-right: $grid-gutter-xl;
+  }
+}
+
+//// Default layout
+//  $max-width: rem(1800) !global;
+//
+//.inner {
+//  @extend %page-inner;
+//}
+//
+//#site-wrapper {
+//  @extend %site-wrapper;
+//}
+//
+//#page,
+//.site-content {
+//  @extend %general-page;
+//}
+//
+//.region-content {
+//  @extend %branding;
+//}
+//
+//.page-node-type-page,
+//.page-node-type-listing-page,
+//.page-node-type-event,
+//.page-node-type-news {
+//
+//  .block-system-main-block .field--name-bene-intro,
+//  .field--name-bene-content .paragraph--type--rich-text,
+//  .block-system-main-block .field--name-bene-event-date-range,
+//  .block-system-main-block .field--name-bene-event-location {
+//    @extend %page-node-type-region-padding;
+//  }
+//  .paragraph--type--media .media-instagram,
+//  .paragraph--type--media .media-tweet,
+//  .paragraph--type--media .media-video {
+//    @extend %page-node-type-region-social-media;
+//  }
+//
+//  .paragraph--type--media .media-instagram > div,
+//  .paragraph--type--media .media-tweet > div {
+//    @extend %page-node-type-region-align;
+//  }
+//
+//  .paragraph--type--tiles {
+//    @extend %page-node-type-region-tiles;
+//  }
+//}
+//

@@ -559,6 +559,8 @@ fieldset legend {
   line-height: var(--sentence-line-height-footnote ); }
 
 .region-footer .bene-contact-links .fieldset-wrapper {
+  grid-column: 1 / 5;
+  -ms-grid-column: 1 / 5;
   display: flex;
   flex-direction: column; }
 
@@ -809,6 +811,8 @@ input[type='submit']:hover {
   padding: 1rem; }
 
 .site-header {
+  grid-column: 1 / 5;
+  -ms-grid-column: 1 / 5;
   display: flex;
   min-height: 101px; }
 
@@ -1601,26 +1605,15 @@ input[type='submit']:hover {
 .no-csspointerevents .open.nice-select .list {
   display: block; }
 
-.inner {
-  display: flex;
-  flex: 1;
-  margin: 0 auto;
-  max-width: 77.5rem; }
-
-#site-wrapper {
-  margin: 0 auto;
-  position: relative; }
-
-.homepage-hero, .site-footer, .site-header, #page,
-.site-content {
+.homepage-hero, .site-footer, .site-header {
   width: 100%; }
 
-.region-footer, #site-wrapper > header, .region-content, .site_branding {
+.region-footer, #site-wrapper > header, .site_branding {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%; }
-  .region-footer::after, #site-wrapper > header::after, .region-content::after, .site_branding::after {
+  .region-footer::after, #site-wrapper > header::after, .site_branding::after {
     clear: both;
     content: "";
     display: table; }
@@ -1629,83 +1622,6 @@ input[type='submit']:hover {
   padding: 0 2%;
   background-color:  #FFFFFF;
   background-color: var(--background-color-primary ); }
-
-.page-node-type-page .block-system-main-block .field--name-bene-intro,
-.page-node-type-page .field--name-bene-content .paragraph--type--rich-text,
-.page-node-type-page .block-system-main-block .field--name-bene-event-date-range,
-.page-node-type-page .block-system-main-block .field--name-bene-event-location,
-.page-node-type-listing-page .block-system-main-block .field--name-bene-intro,
-.page-node-type-listing-page .field--name-bene-content .paragraph--type--rich-text,
-.page-node-type-listing-page .block-system-main-block .field--name-bene-event-date-range,
-.page-node-type-listing-page .block-system-main-block .field--name-bene-event-location,
-.page-node-type-event .block-system-main-block .field--name-bene-intro,
-.page-node-type-event .field--name-bene-content .paragraph--type--rich-text,
-.page-node-type-event .block-system-main-block .field--name-bene-event-date-range,
-.page-node-type-event .block-system-main-block .field--name-bene-event-location,
-.page-node-type-news .block-system-main-block .field--name-bene-intro,
-.page-node-type-news .field--name-bene-content .paragraph--type--rich-text,
-.page-node-type-news .block-system-main-block .field--name-bene-event-date-range,
-.page-node-type-news .block-system-main-block .field--name-bene-event-location {
-  clear: both;
-  padding: 0 2%; }
-
-.page-node-type-page .paragraph--type--media .media-instagram,
-.page-node-type-page .paragraph--type--media .media-tweet,
-.page-node-type-page .paragraph--type--media .media-video,
-.page-node-type-listing-page .paragraph--type--media .media-instagram,
-.page-node-type-listing-page .paragraph--type--media .media-tweet,
-.page-node-type-listing-page .paragraph--type--media .media-video,
-.page-node-type-event .paragraph--type--media .media-instagram,
-.page-node-type-event .paragraph--type--media .media-tweet,
-.page-node-type-event .paragraph--type--media .media-video,
-.page-node-type-news .paragraph--type--media .media-instagram,
-.page-node-type-news .paragraph--type--media .media-tweet,
-.page-node-type-news .paragraph--type--media .media-video {
-  clear: both;
-  padding: 0 2%; }
-  @media (min-width: 769px) {
-    .page-node-type-page .paragraph--type--media .media-instagram,
-    .page-node-type-page .paragraph--type--media .media-tweet,
-    .page-node-type-page .paragraph--type--media .media-video,
-    .page-node-type-listing-page .paragraph--type--media .media-instagram,
-    .page-node-type-listing-page .paragraph--type--media .media-tweet,
-    .page-node-type-listing-page .paragraph--type--media .media-video,
-    .page-node-type-event .paragraph--type--media .media-instagram,
-    .page-node-type-event .paragraph--type--media .media-tweet,
-    .page-node-type-event .paragraph--type--media .media-video,
-    .page-node-type-news .paragraph--type--media .media-instagram,
-    .page-node-type-news .paragraph--type--media .media-tweet,
-    .page-node-type-news .paragraph--type--media .media-video {
-      margin-left: 17.05961%;
-      max-width: 65.88078%; } }
-
-.page-node-type-page .paragraph--type--media .media-instagram > div,
-.page-node-type-page .paragraph--type--media .media-tweet > div,
-.page-node-type-listing-page .paragraph--type--media .media-instagram > div,
-.page-node-type-listing-page .paragraph--type--media .media-tweet > div,
-.page-node-type-event .paragraph--type--media .media-instagram > div,
-.page-node-type-event .paragraph--type--media .media-tweet > div,
-.page-node-type-news .paragraph--type--media .media-instagram > div,
-.page-node-type-news .paragraph--type--media .media-tweet > div {
-  align-items: center;
-  display: flex;
-  justify-content: center; }
-
-.page-node-type-page .paragraph--type--tiles,
-.page-node-type-listing-page .paragraph--type--tiles,
-.page-node-type-event .paragraph--type--tiles,
-.page-node-type-news .paragraph--type--tiles {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 90rem; }
-  .page-node-type-page .paragraph--type--tiles::after,
-  .page-node-type-listing-page .paragraph--type--tiles::after,
-  .page-node-type-event .paragraph--type--tiles::after,
-  .page-node-type-news .paragraph--type--tiles::after {
-    clear: both;
-    content: "";
-    display: table; }
 
 .page-node-type-listing-page .views-element-container {
   clear: both;
@@ -1889,10 +1805,6 @@ input[type='submit']:hover {
 .paragraph--type--rich-text .field--name-field-text .embedded-entity.align-right,
 .paragraph--type--rich-text .field--name-field-text figure.align-right {
   margin-left: 2rem; }
-
-.paragraph--type--rich-text .field--name-field-text {
-  display: inline-block;
-  width: 100%; }
 
 .paragraph--type--rich-text .field--name-field-text p,
 .paragraph--type--rich-text .field--name-field-text ol li,
@@ -2157,6 +2069,49 @@ input[type='submit']:hover {
 @media (min-width: 1240px) {
   .site-header .desktop-nav .menu .menu-item {
     margin-left: 2.25rem; } }
+body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 3000px;
+  position: relative; }
+
+.grid {
+  display: grid;
+  grid-column-gap: 14px;
+  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: repeat(4, [col-start] 1fr);
+  margin: 0 auto;
+  max-width: calc(100% - (14px * 2));
+  width: 1260px; }
+  .grid.no-gap {
+    grid-column-gap: 0; }
+
+#grid-checker {
+  background: transparent;
+  display: grid;
+  grid-auto-rows: minmax(100%, auto);
+  left: 0;
+  height: 100%;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 11; }
+  #grid-checker p {
+    background: #000;
+    margin: 0;
+    opacity: 0.1;
+    width: 100%; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1332px;
+  overflow-x: hidden; }
+
+.content-side-padding {
+  padding-left: 14px;
+  padding-right: 14px; }
+
 .user-logged-in ul.tabs li .is-active {
   background-color:  #129FB5;
   background-color: var(--button-primary-color-background );

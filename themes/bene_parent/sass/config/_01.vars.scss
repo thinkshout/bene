@@ -132,3 +132,70 @@ $vars: (
     #{--$key}: #{$value};
   }
 }
+
+
+
+//
+// Layout
+//
+
+// Breakpoints
+
+// Small screen / phone
+$sm: 0;
+// Phablet / in between mobile and tablet
+$ph: 401px;
+// Medium screen / tablet
+$md: 769px;
+// Semi-large / in between tablet and desktop
+$sl: 992px;
+// Large screen / desktop
+$lg: 1100px;
+// Extra large screen / wide desktop
+$xl: 1442px;
+// Double Extra large screens / wide monitor
+$xxl: 1900px;
+
+// When to show/hide the desktop menu
+$desktop-menu-bp: $sl;
+
+// Grid settings
+$grid-max-width: 1260px; // Where the content begins and ends for desktops. This works out to be a 1260px wide grid.
+$grid-max-width-xxl: 1680px; // Where the content begins and ends for xxl screens. This works out to be a 1680px wide grid.
+$site-max-width: 3000px; // Where the site begins and ends regardless of larger screens.
+
+//Use as base padding and margin sizes that relate back to the grid
+$grid-gutter-mobile: 14px;
+$grid-gutter-mobile-double: $grid-gutter-mobile * 2;
+$grid-gutter-ph: 14px;
+$grid-gutter-md: 36px;
+$grid-gutter: 20px;
+$grid-gutter-sl: 20px;
+$grid-gutter-lg: $grid-gutter;
+$grid-gutter-xl: 36px;
+$grid-gutter-double: $grid-gutter * 2;
+
+$grid-columns-mobile: 4;
+$grid-columns-total: 12;
+$grid-columns-xxl: 16;
+
+//
+// Misc.
+//
+
+// Transitions
+$transition-defaults: 0.2s linear;
+
+//Padding values
+$padding-vertical-xs: 20px;
+$padding-vertical-sm: 50px;
+$padding-vertical-md: 60px;
+$padding-vertical-sl: 75px;
+$padding-vertical-lg: 75px;
+$padding-vertical-xl: 100px;
+
+$padding-horizontal-sm: 14rem;
+$padding-horizontal-md: 20rem;
+$padding-horizontal-sl: 35.5rem;
+$padding-horizontal-lg: 80rem;
+$padding-horizontal-xl: 0;
