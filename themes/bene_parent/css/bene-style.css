@@ -2112,6 +2112,10 @@ body {
   padding-left: 14px;
   padding-right: 14px; }
 
+.inner {
+  display: flex;
+  width: 100%; }
+
 .user-logged-in ul.tabs li .is-active {
   background-color:  #129FB5;
   background-color: var(--button-primary-color-background );

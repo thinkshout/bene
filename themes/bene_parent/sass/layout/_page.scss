@@ -101,6 +101,10 @@ body {
   }
 }
 
+.inner {
+  display: flex;
+  width: 100%;
+}
 //// Default layout
 //  $max-width: rem(1800) !global;
 //
