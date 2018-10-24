@@ -7,7 +7,6 @@ html {
 
 /* Turns off the element-invisible effect. */
 /* Makes an element visually hidden by default, but visible when focused. */
-/* Undo clearfix. Apply to .clearfix:after */
 /* Ensure parent has position: relative; */
 /* Default transition */
 /* All transition */
@@ -883,7 +882,6 @@ input[type='submit']:hover {
 .block-bene-home-page-feature-block {
   color:  #50CFE3;
   color: var(--color-text-title-over-color-primary-background );
-  color: var(--hero-font-color);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -957,6 +955,17 @@ input[type='submit']:hover {
   color: var(--button-secondary-hover-text-and-outline-color );
   background-color:  #FFFFFF;
   background-color: var(--button-secondary-color-hover-background ); }
+
+.block-bene-home-page-feature-block::after {
+  background: linear-gradient(-180deg, black, black);
+  content: '';
+  display: block;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 .page-node-type-page .block-system-main-block h2, .paragraph--type--rich-text .field--name-field-text h2 {
   color:  #129FB5;
@@ -1605,6 +1614,13 @@ input[type='submit']:hover {
 .no-csspointerevents .open.nice-select .list {
   display: block; }
 
+.inner {
+  display: flex;
+  flex: 1;
+  margin: 0 auto;
+  max-width: 77.5rem;
+  width: 100%; }
+
 .homepage-hero, .site-footer, .site-header {
   width: 100%; }
 
@@ -1663,32 +1679,6 @@ input[type='submit']:hover {
   text-align: var(--hero-alignment );
   width: 100vw;
   max-width: 100%; }
-
-.paragraph--type--feature-full-width:before {
-  background-color:  rgba(68, 68, 68, 0.11);
-  background-color: var(--background-color-photo-overlay );
-  bottom: 0;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 2; }
-
-.paragraph--type--feature-full-width .paragraph--type--feature-full-width::after {
-  background-image: none; }
-
-.paragraph--type--feature-full-width .paragraph--type--feature-full-width.image:after {
-  background-color:  #129FB5;
-  background-color: var(--background-color-quaternary );
-  content: "";
-  height: 100%;
-  left: 0;
-  opacity: .45;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1; }
 
 .paragraph--type--feature-full-width .field--name-field-title {
   color:  #FFFFFF;
@@ -1758,7 +1748,8 @@ input[type='submit']:hover {
     background-color: var(--button-tertiary-color-hover-background ); }
 
 .paragraph--type--feature-full-width::after {
-  background-image: var(--photo-overlay-linear-gradient);
+  background:  linear-gradient(-180deg, #129fb5, black);
+  background: var(--photo-overlay-linear-gradient );
   content: '';
   display: block;
   opacity: 0.5;
@@ -2111,10 +2102,6 @@ body {
 .content-side-padding {
   padding-left: 14px;
   padding-right: 14px; }
-
-.inner {
-  display: flex;
-  width: 100%; }
 
 .user-logged-in ul.tabs li .is-active {
   background-color:  #129FB5;

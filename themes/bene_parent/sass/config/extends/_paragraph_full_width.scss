@@ -17,33 +17,6 @@
   max-width: 100%;
 }
 
-%paragraph--type--feature-full-width-before {
-  @include vars(background-color, background-color-photo-overlay);
-  bottom: 0;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 2;
-}
-
-%paragraph--type--feature-full-width-after {
-  background-image: none;
-}
-
-%paragraph--type--feature-full-width-image-after {
-  @include vars(background-color, background-color-quaternary);
-  content: "";
-  height: 100%;
-  left: 0;
-  opacity: .45;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
 %paragraph--type--feature-full-width-field--name-field-title {
   @include vars(color, color-text-title-over-color-photo-overlay-background);
   @include vars(font-family, title-font-family);
@@ -92,7 +65,7 @@
   // Gradient overlay
 %paragraph--type--feature-full-width-gradient-overlay {
   // todo: make gradient mixin; look into the work done for street trust (can it be brought into bene parent?)
-  background-image: var(--photo-overlay-linear-gradient);
+  @include vars(background, photo-overlay-linear-gradient);
   content: '';
   display: block;
   opacity: 0.5;

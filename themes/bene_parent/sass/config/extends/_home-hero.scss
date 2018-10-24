@@ -4,7 +4,6 @@
 
 %block-bene-home-page-feature-block {
   @include vars(color, color-text-title-over-color-primary-background);
-  color: var(--hero-font-color);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -68,6 +67,16 @@
   @include vars(color, button-secondary-hover-text-and-outline-color);
   @include vars(background-color, button-secondary-color-hover-background);
 }
-
+%block-bene-home-page-feature-block-after {
+  background: linear-gradient(-180deg, rgba(#000000, 1), rgba(#000000, 1));
+  content: '';
+  display: block;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 

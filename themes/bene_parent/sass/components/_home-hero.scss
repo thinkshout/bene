@@ -19,4 +19,9 @@
       }
     }
   }
+
+  // Gradient overlay
+  &::after {
+    @extend %block-bene-home-page-feature-block-after;
+  }
 }

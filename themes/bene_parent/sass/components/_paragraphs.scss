@@ -75,18 +75,6 @@
 .paragraph--type--feature-full-width {
   @extend %paragraph--type--feature-full-width;
 
-  &:before {
-    @extend %paragraph--type--feature-full-width-before;
-  }
-
-  .paragraph--type--feature-full-width::after {
-    @extend %paragraph--type--feature-full-width-after;
-  }
-
-  .paragraph--type--feature-full-width.image:after {
-    @extend %paragraph--type--feature-full-width-image-after;
-  }
-
   .field--name-field-title {
     @extend %paragraph--type--feature-full-width-field--name-field-title;
   }

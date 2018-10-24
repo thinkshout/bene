@@ -24,8 +24,6 @@
   }
 }
 
-
-
 @mixin font-style($style) {
   @if $style == 'italic' { // Italic Light
     @include vars(font-family, primary-font-family);
@@ -82,15 +80,6 @@
   }
 }
 
-/* Undo clearfix. Apply to .clearfix:after */
-//@mixin undo-clearfix {
-//  content: "";
-//  display: inline-block;
-//  height: auto;
-//  clear: none;
-//  display: none;
-//}
-
 /* Ensure parent has position: relative; */
 @mixin centerer {
   position: absolute;
@@ -121,42 +110,4 @@
   padding: rem(20) rem(30);
   position: relative;
   text-transform: uppercase;
-}
-
-@mixin thick_gradient($direction: to bottom, $color: white) {
-  background-image: linear-gradient($direction,
-    rgba($color, 1.0) 0%,
-    rgba($color, 0.95) 10%,
-    rgba($color, 0.9) 30%,
-    rgba($color, 0.7) 60%,
-    rgba($color, 0.3) 70%,
-    rgba($color, 0.0) 90%
-  );
-  content: "";
-  display: inline-block;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-@mixin thin_gradient($direction: to bottom, $color: white) {
-  background-image: linear-gradient($direction,
-    rgba($color, 1.0) 0%,
-    rgba($color, 1.0) 5%,
-    rgba($color, 0.7) 30%,
-    rgba($color, 0.5) 50%,
-    rgba($color, 0.4) 60%,
-    rgba($color, 0.1) 75%,
-    rgba($color, 0.0) 95%,
-    rgba($color, 0.0) 100%
-  );
-  content: "";
-  display: inline-block;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
 }

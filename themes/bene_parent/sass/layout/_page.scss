@@ -101,16 +101,13 @@ body {
   }
 }
 
-.inner {
-  display: flex;
-  width: 100%;
-}
+
 //// Default layout
 //  $max-width: rem(1800) !global;
 //
-//.inner {
-//  @extend %page-inner;
-//}
+.inner {
+  @extend %page-inner;
+}
 //
 //#site-wrapper {
 //  @extend %site-wrapper;
