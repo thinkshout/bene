@@ -68,7 +68,7 @@
   @include vars(background-color, button-secondary-color-hover-background);
 }
 %block-bene-home-page-feature-block-after {
-  background: linear-gradient(-180deg, rgba(#000000, 1), rgba(#000000, 1));
+  @include vars(background, hero-overlay-gradient);
   content: '';
   display: block;
   opacity: 0.5;

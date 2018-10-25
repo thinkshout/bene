@@ -62,10 +62,10 @@
 }
 
 
-  // Gradient overlay
+// Gradient overlay
 %paragraph--type--feature-full-width-gradient-overlay {
   // todo: make gradient mixin; look into the work done for street trust (can it be brought into bene parent?)
-  @include vars(background, photo-overlay-linear-gradient);
+  @include vars(background, photo-overlay-color-gradient);
   content: '';
   display: block;
   opacity: 0.5;

@@ -39,7 +39,8 @@ html {
   --background-color-photo-overlay: rgba(68, 68, 68, 0.11);
   --color-text-title-over-color-photo-overlay-background: #FFFFFF;
   --color-text-over-color-photo-overlay-background: #FFFFFF;
-  --photo-overlay-linear-gradient: linear-gradient(-180deg, #129fb5, black);
+  --photo-overlay-color-gradient: linear-gradient(-180deg, #129fb5, black);
+  --hero-overlay-gradient: linear-gradient(-180deg, black, black);
   --button-primary-color-background: #129FB5;
   --button-primary-hover-color-background: #50CFE3;
   --button-primary-text-and-outline-color: #FFFFFF;
@@ -415,6 +416,18 @@ fieldset legend {
       flex: inherit;
       font-size:  3.125rem;
       font-size: var(--title-font-size-medium ); } }
+
+.block-hero::after {
+  background:  linear-gradient(-180deg, black, black);
+  background: var(--hero-overlay-gradient );
+  content: '';
+  display: block;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
 
 .page-node-type-event .field--name-bene-content {
   clear: both; }
@@ -957,7 +970,8 @@ input[type='submit']:hover {
   background-color: var(--button-secondary-color-hover-background ); }
 
 .block-bene-home-page-feature-block::after {
-  background: linear-gradient(-180deg, black, black);
+  background:  linear-gradient(-180deg, black, black);
+  background: var(--hero-overlay-gradient );
   content: '';
   display: block;
   opacity: 0.5;
@@ -1749,7 +1763,7 @@ input[type='submit']:hover {
 
 .paragraph--type--feature-full-width::after {
   background:  linear-gradient(-180deg, #129fb5, black);
-  background: var(--photo-overlay-linear-gradient );
+  background: var(--photo-overlay-color-gradient );
   content: '';
   display: block;
   opacity: 0.5;

@@ -4,4 +4,8 @@
   h1 {
     @extend %block-hero-h1;
   }
+
+  &::after {
+    @extend %block-hero-gradient-overlay;
+  }
 }

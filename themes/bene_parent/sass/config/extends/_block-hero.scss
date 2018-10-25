@@ -24,5 +24,18 @@
     flex: inherit;
     @include vars(font-size, title-font-size-medium);
   }
-
 }
+
+// Gradient overlay
+%block-hero-gradient-overlay {
+  @include vars(background, hero-overlay-gradient);
+  content: '';
+  display: block;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+

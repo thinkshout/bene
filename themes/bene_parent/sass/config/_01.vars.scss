@@ -45,7 +45,8 @@ $vars: (
   // Text and foreground colors that go with the color above:
         color-text-title-over-color-photo-overlay-background: #FFFFFF,
         color-text-over-color-photo-overlay-background: #FFFFFF,
-        photo-overlay-linear-gradient: linear-gradient(-180deg, rgba(#129FB5, 1), rgba(#000000, 1)),
+        photo-overlay-color-gradient: linear-gradient(-180deg, rgba(#129FB5, 1), rgba(#000000, 1)),
+        hero-overlay-gradient: linear-gradient(-180deg, rgba(#000000, 1), rgba(#000000, 1)),
 
   // Button Colors:
         button-primary-color-background: #129FB5,
