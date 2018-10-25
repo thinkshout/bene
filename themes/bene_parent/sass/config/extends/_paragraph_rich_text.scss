@@ -1,3 +1,8 @@
+%paragraph--type--rich-text {
+  @include vars(background-color, background-color-inset);
+  display: inline-block;
+  width: 100%
+}
 
 %paragraph--type--rich-text-figure {
   margin: rem(16) 0;

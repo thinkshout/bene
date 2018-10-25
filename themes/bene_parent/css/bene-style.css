@@ -1795,6 +1795,12 @@ input[type='submit']:hover {
 .paragraph--type--media img {
   max-width: 100%; }
 
+.paragraph--type--rich-text {
+  background-color:  #FFFFFF;
+  background-color: var(--background-color-inset );
+  display: inline-block;
+  width: 100%; }
+
 .paragraph--type--rich-text .field--name-field-text figure {
   margin: 1rem 0; }
 
@@ -2226,10 +2232,6 @@ body {
       color: var(--button-primary-hover-text-and-outline-color );
       background-color:  #50CFE3;
       background-color: var(--button-primary-hover-color-background ); } }
-.paragraph--type--rich-text {
-  background-color:  #FFFFFF;
-  background-color: var(--background-color-inset ); }
-
 .paragraph--type--feature-full-width .field--name-field-text {
   z-index: 10; }
 .paragraph--type--feature-full-width .field--type-link {

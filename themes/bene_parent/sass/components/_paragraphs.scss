@@ -6,7 +6,7 @@
 }
 
 .paragraph--type--rich-text {
-  @include vars(background-color, background-color-inset);
+  @extend %paragraph--type--rich-text;
 
   .field--name-field-text {
 
