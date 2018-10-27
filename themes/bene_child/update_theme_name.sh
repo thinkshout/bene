@@ -1,5 +1,7 @@
 #! /bin/bash
 
+# our own little yeoman
+#
 # This script works on a theme that was started by copying bene_child.
 # If the theme still has the name bene_child sprinkled throughout, this does the
 # job of changing those instances of 'bene_child' to the new theme name. For
@@ -18,6 +20,7 @@
   if [[ $# -eq 0 ]] ; then
     echo 'A new theme name is required. Call like this:'
     echo './update_theme_name.sh my_new_theme_name'
+    echo 'replacing my_new_theme_name with the name you want to use.'
     exit 0
   fi
 
@@ -64,3 +67,12 @@
   #fix the Rakefile so it starts the correct url
   sed -i .child "s/bene-child/${PROJECT_NAME}/g" $THEME_DEST/Rakefile
   rm Rakefile.child
+
+  # self modifying code
+  mv $THEME_DEST/update_theme_name.sh $THEME_DEST/update_theme_name.child
+  sed "s/bene-child/${THEME_NAME}/g" update_theme_name.child | \
+  sed "s/bene_child/${THEME_NAME}/g" | \
+  sed "s/Bene Child/${THEME_NAME}/g" | \
+  sed "s/Bene_child/${THEME_NAME}/g" >$THEME_DEST/update_theme_name.sh
+  chmod a+x $THEME_DEST/update_theme_name.sh
+  rm $THEME_DEST/update_theme_name.child
