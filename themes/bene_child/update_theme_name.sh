@@ -15,6 +15,12 @@
 #
 
   THEME_NAME=$1
+  if [[ $# -eq 0 ]] ; then
+    echo 'A new theme name is required. Call like this:'
+    echo './update_theme_name.sh my_new_theme_name'
+    exit 0
+  fi
+
   echo Theme name is $THEME_NAME
   # assumes the currently running script is inside the bene_child directory that will be re-named
   THEME_DEST="$( cd "$(dirname "$0")" ; cd ..; pwd -P )"/$THEME_NAME
@@ -54,3 +60,7 @@
   sed "s:can be found in a project called \"new-project-name\" here\: /new-project-name/web/profiles/contrib/bene/themes/bene_child:can be found in a project called \"${PROJECT_NAME}\" here\: ${THEME_DEST}:g" | \
   sed "s/new-project-name/${THEME_NAME}/g" >$THEME_DEST/README.md
   rm $THEME_DEST/README.md.child
+
+  #fix the Rakefile so it starts the correct url
+  sed -i .child "s/bene-child/${PROJECT_NAME}/g" $THEME_DEST/Rakefile
+  rm Rakefile.child
