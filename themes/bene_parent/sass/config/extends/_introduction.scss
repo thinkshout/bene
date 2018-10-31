@@ -33,6 +33,14 @@
   margin-top: rem(32);
 }
 %field--name-bene-intro-h3 {
+  @include vars(color, color-text-title-over-color-primary-background);
+  @include vars(font-size, title-font-size-small);
+  @include vars(font-weight, title-font-regular);
+  margin-bottom: 0;
+  margin-top: rem(18);
+}
+%field--name-bene-intro-h4 {
+  @include vars(color, color-text-title-over-color-primary-background);
   @include vars(font-size, title-font-size-small);
   @include vars(font-weight, title-font-regular);
   margin-bottom: 0;

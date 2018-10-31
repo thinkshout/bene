@@ -1096,6 +1096,18 @@ input[type='submit']:hover {
   margin-top: 2rem; }
 
 #main-content .field--name-bene-intro h3 {
+  color:  #50CFE3;
+  color: var(--color-text-title-over-color-primary-background );
+  font-size:  1.5625rem;
+  font-size: var(--title-font-size-small );
+  font-weight:  400;
+  font-weight: var(--title-font-regular );
+  margin-bottom: 0;
+  margin-top: 1.125rem; }
+
+#main-content .field--name-bene-intro h4 {
+  color:  #50CFE3;
+  color: var(--color-text-title-over-color-primary-background );
   font-size:  1.5625rem;
   font-size: var(--title-font-size-small );
   font-weight:  400;
