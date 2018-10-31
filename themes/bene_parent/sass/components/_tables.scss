@@ -1,0 +1,11 @@
+table{
+  @extend %table;
+}
+
+thead th{
+  @extend %table-header;
+}
+
+tbody td {
+  @extend %table-body;
+}

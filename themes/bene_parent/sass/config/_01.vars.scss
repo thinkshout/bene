@@ -35,8 +35,85 @@ $vars: (
   }
 }
 
+// // // BASE STYLING \\ \\ \\
+
+%body {
+  box-sizing: border-box;
+  @include vars(font-style, font-style-normal);
+  @include vars(font-family, font-family-primary);
+}
+
+%h1-h6{
+  @include vars(color, color-primary-d);
+  margin: rem(16) 0;
+}
+
+%h1{
+  font-size: rem(32);
+  line-height: rem(40);
+}
+
+%h2 {
+  font-size: rem(26);
+  line-height: rem(32);
+}
+
+%h3 {
+  font-size: rem(20);
+  line-height: rem(26);
+}
+
+%h4 {
+  font-size: rem(16);
+  line-height: rem(22);
+}
+
+%link{
+  @include vars(color, color-primary-b);
+  cursor: pointer;
+}
+
+%link-hover{
+  @include vars(color, color-primary-a);
+}
+
+%text {
+  font-size: rem(16);
+  line-height: rem(32);
+  @include vars(font-family, font-family-primary);
+  @include vars(color, color-primary-d);
+}
+
+%lists{
+  font-size: rem(16);
+  line-height: rem(32);
+  @include vars(font-family, font-family-primary);
+  @include vars(color, color-primary-d);
+}
+
+%table{
+  border: solid 1px;
+  @include vars(border-color, color-primary-b);
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding: 1em;
+}
+
+%table-header {
+  @include vars(background-color, color-primary-b);
+  @include vars(color, color-primary-c);
+  padding: 10px;
+}
+
+%table-body{
+  @include vars(border-color, color-primary-b);
+  border: solid 1px;
+  padding: 10px;
+}
+
+
 
 %footer-background{
-  @include vars(background-color, color-primary-a);
+  @include vars(background-color, color-primary-b);
 }
 

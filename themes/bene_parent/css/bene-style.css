@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 html {
   box-sizing: border-box; }
 
@@ -25,11 +26,422 @@ html {
   --button-padding: 2rem;
   --input-height: 100px; }
 
-.region-footer {
-  background-color:  #50CFE3;
-  background-color: var(--color-primary-a ); }
+body {
+  box-sizing: border-box;
+  font-style:  normal;
+  font-style: var(--font-style-normal );
+  font-family:  'Open Sans', sans-serif;
+  font-family: var(--font-family-primary ); }
 
-/* No files to import found in config/extends/* */
-/* No files to import found in layout/* */
+h1, h2, h3, h4, h5, h6 {
+  color:  #000000;
+  color: var(--color-primary-d );
+  margin: 1rem 0; }
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.5rem; }
+
+h2 {
+  font-size: 1.625rem;
+  line-height: 2rem; }
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.625rem; }
+
+h4 {
+  font-size: 1rem;
+  line-height: 1.375rem; }
+
+a {
+  color:  #129FB5;
+  color: var(--color-primary-b );
+  cursor: pointer; }
+
+a:hover, a:active {
+  color:  #50CFE3;
+  color: var(--color-primary-a ); }
+
+p, p.standard, blockquote {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-family:  'Open Sans', sans-serif;
+  font-family: var(--font-family-primary );
+  color:  #000000;
+  color: var(--color-primary-d ); }
+
+ul li, ol li {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-family:  'Open Sans', sans-serif;
+  font-family: var(--font-family-primary );
+  color:  #000000;
+  color: var(--color-primary-d ); }
+
+table {
+  border: solid 1px;
+  border-color:  #129FB5;
+  border-color: var(--color-primary-b );
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding: 1em; }
+
+thead th {
+  background-color:  #129FB5;
+  background-color: var(--color-primary-b );
+  color:  #ffffff;
+  color: var(--color-primary-c );
+  padding: 10px; }
+
+tbody td {
+  border-color:  #129FB5;
+  border-color: var(--color-primary-b );
+  border: solid 1px;
+  padding: 10px; }
+
+.region-footer {
+  background-color:  #129FB5;
+  background-color: var(--color-primary-b ); }
+
+/* Turns off the element-invisible effect. */
+/* Makes an element visually hidden by default, but visible when focused. */
+/* Undo clearfix. Apply to .clearfix:after */
+/* Ensure parent has position: relative; */
+/* Default transition */
+/* All transition */
+/* Buttons */
+/* BASE ELEMENT STYLES */
+a.button {
+  -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+  -moz-transition: background-color 0.3s linear, color 0.3s linear;
+  transition: background-color 0.3s linear, color 0.3s linear;
+  border-radius: 0.1875rem;
+  font-weight: 800;
+  display: inline-block;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  line-height: 1;
+  padding: 1.25rem 1.875rem;
+  position: relative;
+  text-transform: uppercase; }
+
+.js-form-item-select-list, .js-form-item-select-list-multi {
+  display: none; }
+
+.region-footer .bene-contact-links .fieldset-wrapper {
+  display: flex;
+  flex-direction: column; }
+
+.block-bene-footer-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2.625rem;
+  margin-top: 1.5rem;
+  padding: 0 2%;
+  position: relative; }
+  .block-bene-footer-block .menu {
+    flex: 0 1 35%; }
+  .block-bene-footer-block .contact-links {
+    flex: 0 1 65%; }
+  .block-bene-footer-block .additional-footer {
+    flex: 0 1 100%; }
+  .block-bene-footer-block div.social-links {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    justify-content: center;
+    margin-top: 1.5rem; }
+    .block-bene-footer-block div.social-links span {
+      min-width: 25%;
+      text-align: center; }
+      .block-bene-footer-block div.social-links span a {
+        margin-left: 0; }
+  .block-bene-footer-block .copyright {
+    bottom: -2rem;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center; }
+
+@media (min-width: 769px) {
+  .block-bene-footer-block .menu {
+    flex: 0 1 20%; }
+  .block-bene-footer-block .contact-links {
+    flex: 0 1 20%; }
+  .block-bene-footer-block .additional-footer {
+    flex: 0 1 20%; }
+  .block-bene-footer-block div.social-links {
+    align-items: baseline;
+    flex: 0 1 30%;
+    margin-top: 0rem; }
+    .block-bene-footer-block div.social-links span {
+      min-width: 0; }
+      .block-bene-footer-block div.social-links span a {
+        margin-left: 0.625rem; }
+  .block-bene-footer-block .copyright {
+    bottom: 0;
+    position: absolute;
+    right: 2%;
+    text-align: right; } }
+@media (min-width: 1240px) {
+  .block-bene-footer-block div.social-links {
+    flex-wrap: nowrap;
+    flex: 0 1 40%;
+    justify-content: flex-end; } }
+.site-header {
+  display: flex;
+  min-height: 101px; }
+  .site-header .logo-wrapper {
+    align-items: center;
+    display: flex; }
+  .site-header .desktop-nav,
+  .site-header .mobile-nav .menu {
+    display: none; }
+  .site-header .mobile-nav {
+    align-items: center;
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-end; }
+
+@media (min-width: 769px) {
+  .site-header {
+    min-height: 8.3125rem; }
+    .site-header .mobile-nav {
+      display: none; }
+    .site-header .desktop-nav {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      padding-bottom: 2.0625rem; }
+      .site-header .desktop-nav .region-primary-nav {
+        display: flex;
+        flex-direction: column;
+        height: 100%; }
+        .site-header .desktop-nav .region-primary-nav nav {
+          flex: 1 1 50%; }
+      .site-header .desktop-nav .menu {
+        align-items: flex-end;
+        display: flex;
+        height: 100%;
+        justify-content: flex-end; }
+        .site-header .desktop-nav .menu .menu-item {
+          margin-left: 1.375rem; } }
+@media (min-width: 1240px) {
+  .site-header .desktop-nav .menu .menu-item {
+    margin-left: 2.25rem; } }
+.inner {
+  display: flex;
+  flex: 1;
+  margin: 0 auto;
+  max-width: 77.5rem; }
+
+#site-wrapper {
+  margin: 0 auto;
+  position: relative; }
+
+#page,
+.site-header,
+.site-content,
+.site-footer,
+.homepage-hero {
+  width: 100%; }
+
+#site-wrapper > header,
+.site_branding,
+.region-content,
+.region-footer {
+  max-width: 112.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%; }
+  #site-wrapper > header::after,
+  .site_branding::after,
+  .region-content::after,
+  .region-footer::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.site-header {
+  padding: 0 2%;
+  background-color: bbv(background-color-primary);
+  background-color: var(--header-background-color); }
+
+.page-node-type-page .region-content,
+.page-node-type-listing-page .region-content,
+.page-node-type-event .region-content,
+.page-node-type-news .region-content {
+  margin-bottom: 2rem; }
+  @media (min-width: 769px) {
+    .page-node-type-page .region-content,
+    .page-node-type-listing-page .region-content,
+    .page-node-type-event .region-content,
+    .page-node-type-news .region-content {
+      margin-bottom: 3rem; } }
+.page-node-type-page .block-system-main-block .field--name-bene-intro,
+.page-node-type-page .field--name-bene-content .paragraph--type--rich-text,
+.page-node-type-page .block-system-main-block .field--name-bene-event-date-range,
+.page-node-type-page .block-system-main-block .field--name-bene-event-location,
+.page-node-type-listing-page .block-system-main-block .field--name-bene-intro,
+.page-node-type-listing-page .field--name-bene-content .paragraph--type--rich-text,
+.page-node-type-listing-page .block-system-main-block .field--name-bene-event-date-range,
+.page-node-type-listing-page .block-system-main-block .field--name-bene-event-location,
+.page-node-type-event .block-system-main-block .field--name-bene-intro,
+.page-node-type-event .field--name-bene-content .paragraph--type--rich-text,
+.page-node-type-event .block-system-main-block .field--name-bene-event-date-range,
+.page-node-type-event .block-system-main-block .field--name-bene-event-location,
+.page-node-type-news .block-system-main-block .field--name-bene-intro,
+.page-node-type-news .field--name-bene-content .paragraph--type--rich-text,
+.page-node-type-news .block-system-main-block .field--name-bene-event-date-range,
+.page-node-type-news .block-system-main-block .field--name-bene-event-location {
+  clear: both;
+  padding: 0 2%; }
+  @media (min-width: 769px) {
+    .page-node-type-page .block-system-main-block .field--name-bene-intro,
+    .page-node-type-page .field--name-bene-content .paragraph--type--rich-text,
+    .page-node-type-page .block-system-main-block .field--name-bene-event-date-range,
+    .page-node-type-page .block-system-main-block .field--name-bene-event-location,
+    .page-node-type-listing-page .block-system-main-block .field--name-bene-intro,
+    .page-node-type-listing-page .field--name-bene-content .paragraph--type--rich-text,
+    .page-node-type-listing-page .block-system-main-block .field--name-bene-event-date-range,
+    .page-node-type-listing-page .block-system-main-block .field--name-bene-event-location,
+    .page-node-type-event .block-system-main-block .field--name-bene-intro,
+    .page-node-type-event .field--name-bene-content .paragraph--type--rich-text,
+    .page-node-type-event .block-system-main-block .field--name-bene-event-date-range,
+    .page-node-type-event .block-system-main-block .field--name-bene-event-location,
+    .page-node-type-news .block-system-main-block .field--name-bene-intro,
+    .page-node-type-news .field--name-bene-content .paragraph--type--rich-text,
+    .page-node-type-news .block-system-main-block .field--name-bene-event-date-range,
+    .page-node-type-news .block-system-main-block .field--name-bene-event-location {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 65.8807828007%;
+      margin-left: 17.0596085997%; }
+      .page-node-type-page .block-system-main-block .field--name-bene-intro:last-child,
+      .page-node-type-page .field--name-bene-content .paragraph--type--rich-text:last-child,
+      .page-node-type-page .block-system-main-block .field--name-bene-event-date-range:last-child,
+      .page-node-type-page .block-system-main-block .field--name-bene-event-location:last-child,
+      .page-node-type-listing-page .block-system-main-block .field--name-bene-intro:last-child,
+      .page-node-type-listing-page .field--name-bene-content .paragraph--type--rich-text:last-child,
+      .page-node-type-listing-page .block-system-main-block .field--name-bene-event-date-range:last-child,
+      .page-node-type-listing-page .block-system-main-block .field--name-bene-event-location:last-child,
+      .page-node-type-event .block-system-main-block .field--name-bene-intro:last-child,
+      .page-node-type-event .field--name-bene-content .paragraph--type--rich-text:last-child,
+      .page-node-type-event .block-system-main-block .field--name-bene-event-date-range:last-child,
+      .page-node-type-event .block-system-main-block .field--name-bene-event-location:last-child,
+      .page-node-type-news .block-system-main-block .field--name-bene-intro:last-child,
+      .page-node-type-news .field--name-bene-content .paragraph--type--rich-text:last-child,
+      .page-node-type-news .block-system-main-block .field--name-bene-event-date-range:last-child,
+      .page-node-type-news .block-system-main-block .field--name-bene-event-location:last-child {
+        margin-right: 0; } }
+.page-node-type-page .paragraph--type--media .media-instagram,
+.page-node-type-page .paragraph--type--media .media-tweet,
+.page-node-type-page .paragraph--type--media .media-video,
+.page-node-type-listing-page .paragraph--type--media .media-instagram,
+.page-node-type-listing-page .paragraph--type--media .media-tweet,
+.page-node-type-listing-page .paragraph--type--media .media-video,
+.page-node-type-event .paragraph--type--media .media-instagram,
+.page-node-type-event .paragraph--type--media .media-tweet,
+.page-node-type-event .paragraph--type--media .media-video,
+.page-node-type-news .paragraph--type--media .media-instagram,
+.page-node-type-news .paragraph--type--media .media-tweet,
+.page-node-type-news .paragraph--type--media .media-video {
+  clear: both;
+  padding: 0 2%; }
+  @media (min-width: 769px) {
+    .page-node-type-page .paragraph--type--media .media-instagram,
+    .page-node-type-page .paragraph--type--media .media-tweet,
+    .page-node-type-page .paragraph--type--media .media-video,
+    .page-node-type-listing-page .paragraph--type--media .media-instagram,
+    .page-node-type-listing-page .paragraph--type--media .media-tweet,
+    .page-node-type-listing-page .paragraph--type--media .media-video,
+    .page-node-type-event .paragraph--type--media .media-instagram,
+    .page-node-type-event .paragraph--type--media .media-tweet,
+    .page-node-type-event .paragraph--type--media .media-video,
+    .page-node-type-news .paragraph--type--media .media-instagram,
+    .page-node-type-news .paragraph--type--media .media-tweet,
+    .page-node-type-news .paragraph--type--media .media-video {
+      margin-left: 17.05961%;
+      margin-top: 3rem;
+      max-width: 65.88078%; } }
+.page-node-type-page .paragraph--type--media .media-instagram > div,
+.page-node-type-page .paragraph--type--media .media-tweet > div,
+.page-node-type-listing-page .paragraph--type--media .media-instagram > div,
+.page-node-type-listing-page .paragraph--type--media .media-tweet > div,
+.page-node-type-event .paragraph--type--media .media-instagram > div,
+.page-node-type-event .paragraph--type--media .media-tweet > div,
+.page-node-type-news .paragraph--type--media .media-instagram > div,
+.page-node-type-news .paragraph--type--media .media-tweet > div {
+  align-items: center;
+  display: flex;
+  justify-content: center; }
+.page-node-type-page .field--name-bene-content .paragraph--type--media,
+.page-node-type-page .field--name-bene-content .paragraph--type--feature-full-width,
+.page-node-type-page .field--name-bene-content .paragraph--type--tiles,
+.page-node-type-listing-page .field--name-bene-content .paragraph--type--media,
+.page-node-type-listing-page .field--name-bene-content .paragraph--type--feature-full-width,
+.page-node-type-listing-page .field--name-bene-content .paragraph--type--tiles,
+.page-node-type-event .field--name-bene-content .paragraph--type--media,
+.page-node-type-event .field--name-bene-content .paragraph--type--feature-full-width,
+.page-node-type-event .field--name-bene-content .paragraph--type--tiles,
+.page-node-type-news .field--name-bene-content .paragraph--type--media,
+.page-node-type-news .field--name-bene-content .paragraph--type--feature-full-width,
+.page-node-type-news .field--name-bene-content .paragraph--type--tiles {
+  clear: both; }
+.page-node-type-page .paragraph--type--tiles,
+.page-node-type-listing-page .paragraph--type--tiles,
+.page-node-type-event .paragraph--type--tiles,
+.page-node-type-news .paragraph--type--tiles {
+  max-width: 112.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90rem; }
+  .page-node-type-page .paragraph--type--tiles::after,
+  .page-node-type-listing-page .paragraph--type--tiles::after,
+  .page-node-type-event .paragraph--type--tiles::after,
+  .page-node-type-news .paragraph--type--tiles::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.page-node-type-listing-page .views-element-container {
+  clear: both;
+  padding: 0 2%; }
+  @media (min-width: 769px) {
+    .page-node-type-listing-page .views-element-container {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 82.9403914003%;
+      margin-left: 8.5298042998%; }
+      .page-node-type-listing-page .views-element-container:last-child {
+        margin-right: 0; }
+      .page-node-type-listing-page .views-element-container .view-bene-events {
+        display: flex;
+        flex-direction: row; }
+        .page-node-type-listing-page .views-element-container .view-bene-events .view-filters {
+          flex: 1 1 25%; }
+        .page-node-type-listing-page .views-element-container .view-bene-events .view-content {
+          flex: 1 1 73%;
+          margin-left: 2%; } }
+
+label {
+  font-weight: 400;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  display: block; }
+
+input {
+  background-color: #f3f3f3;
+  border-radius: 0;
+  border: none;
+  padding: 1rem; }
 
 /*# sourceMappingURL=bene-style.css.map */
