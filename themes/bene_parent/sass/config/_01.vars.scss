@@ -1,13 +1,15 @@
 $vars: (
   //Colors
-  color-primary-a: #50CFE3,
-  color-primary-b: #129FB5,
-  color-primary-c: #ffffff,
-  color-primary-d: #000000,
-  color-secondary-a: #7C7C7C,
-  color-secondary-b: #979797,
-  color-secondary-c: #D8D8D8,
-  color-secondary-d: #ECECEC,
+  color-primary-a: #248BCB, //light blue
+  color-primary-b: #1E5375, //dark blue
+  color-primary-c: #ffffff, //white
+  color-primary-d: #000000, //black
+  color-primary-e: #2d3332, //dark grey
+  color-secondary-a: #E26436, //light orange
+  color-secondary-b: #C63E02,  //dark orange
+  color-secondary-c: #F2AF3F, //light yellow
+  color-secondary-d: #DB830E, //dark yellow
+  color-secondary-e: #5FBA47, //green
 
   //Fonts
   font-family-primary: "'Open Sans', sans-serif",
@@ -35,7 +37,9 @@ $vars: (
   }
 }
 
-// // // BASE STYLING \\ \\ \\
+/* ==============================
+            BASE STYLING
+   ============================== */
 
 %body {
   box-sizing: border-box;
@@ -69,17 +73,17 @@ $vars: (
 }
 
 %link{
-  @include vars(color, color-primary-b);
+  @include vars(color, color-secondary-c);
   cursor: pointer;
 }
 
 %link-hover{
-  @include vars(color, color-primary-a);
+  @include vars(color, color-secondary-d);
 }
 
 %button{
   @include vars(color, color-primary-c);
-  @include vars(background-color, color-primary-a);
+  @include vars(background-color, color-secondary-c);
   border-radius: 100px;
   font-size: 16px;
   letter-spacing: 0;
@@ -92,7 +96,7 @@ $vars: (
 }
 
 %button-hover{
-  @include vars(background-color, color-primary-b);
+  @include vars(background-color, color-secondary-d);
   @include vars(color, color-primary-c);
 }
 
@@ -112,27 +116,223 @@ $vars: (
 
 %table{
   border: solid 1px;
-  @include vars(border-color, color-primary-b);
+  @include vars(border-color, color-secondary-c);
   border-collapse: collapse;
   border-spacing: 0;
   padding: 1em;
 }
 
 %table-header {
-  @include vars(background-color, color-primary-b);
+  @include vars(background-color, color-secondary-c);
   @include vars(color, color-primary-c);
   padding: 10px;
 }
 
 %table-body{
-  @include vars(border-color, color-primary-b);
+  @include vars(border-color, color-secondary-c);
   border: solid 1px;
   padding: 10px;
 }
 
+/* ==============================
+            Site Header
+   ============================== */
 
+%site-header{
+  @include vars(background-color, color-primary-e);
+  padding: 20px 10px;
+  display: flex;
+  min-height: 100px;
+  position: relative;
+}
+
+%header-inner-div{
+  display: flex;
+  flex: 1;
+  margin: 0 auto;
+}
+
+%site-logo{
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+%mobile-menu{
+  display: none;
+}
+
+%mobile-nav{
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}
+
+%menu-link{
+  list-style: none;
+  text-decoration: none;
+  @include vars(color, color-primary-c);
+  text-transform: uppercase;
+}
+
+%menu-link-hover{
+  list-style: none;
+  text-decoration: none;
+  @include vars(color, color-secondary-c);
+  text-transform: uppercase;
+}
+
+%join-menu{
+  display: none;
+  &:last-child{
+    display: inline-block;
+    @include vars(background-color, color-secondary-c);
+    border-radius: 100px;
+    width: 100px;
+    text-align: center;
+  }
+}
+
+%menu-toggle{
+  display: inline-block;
+  float: right;
+  height: 50px;
+  width: 80px;
+}
+
+%menu-toggle-div{
+  height: 100%;
+  position: relative;
+  top: -12px;
+  width: 100%;
+  z-index: 9999;
+}
+
+%menu-toggle-span{
+  @include vars(background-color, color-primary-c);
+  display: block;
+  height: 6px;
+  left: 25%;
+  position: absolute;
+  top: 50%;
+  transition: background-color 0.3s;
+  width: 43.76%;
+  z-index: 9999;
+  cursor: pointer;
+
+  &:before, &:after{
+    @include vars(background, color-primary-c);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    transform: translateY(-150%);
+    transition: transform 0.3s, background-color 0.3s;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  &:after{
+    transform: translateY(150%);
+  }
+}
+
+%menu-toggle-active{
+  background-color: transparent;
+  &:before, &:after{
+    @include vars(background, color-primary-c);
+    transform: rotate(45deg) translateY(0);
+    transition: transform 0.3s;
+  }
+  &:after{
+    transform: rotate(-45deg) translateY(0);
+  }
+}
+
+%primary-nav-region{
+  @include vars(background-color, color-primary-e);
+  display: flex;
+  flex-direction: column-reverse;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 6.3125rem;
+  z-index: 20;
+}
+
+@include mq(desktop) {
+  %site-header{
+    min-height: rem(133);
+  }
+
+  %mobile-nav{
+    display: none;
+  }
+
+  %site-logo{
+    width: auto;
+  }
+
+  %desktop-nav{
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+  %primary-nav-region{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: static;
+  }
+
+  %primary-nav{
+    flex: none;
+    margin-right: 0.5em;
+  }
+
+  %nav-menu{
+    align-items: flex-end;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+  }
+
+  %menu-item{
+    margin-left: rem(22);
+  }
+
+  %main-menu-button{
+    &:last-child a{
+      @include vars(background-color, color-secondary-c);
+      border-radius: 100px;
+      width: 100px;
+      text-align: center;
+      padding: 0.5rem 1.5rem;
+    }
+  }
+
+  %join-button{
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+/* ==============================
+            Site Footer
+   ============================== */
 
 %footer-background{
-  @include vars(background-color, color-primary-b);
+  @include vars(background-color, color-primary-e);
+  display: none;
 }
 
