@@ -12,13 +12,17 @@ p, p.standard {@extend %text}
 
 a {
   @extend %link;
-  &:hover, &:active { @extend %link-hover;}
+  &:hover, &:active, &:focus { @extend %link-hover;}
 }
 
 
-a.button {
-  @include button;
+.button {
+  @extend %button;
+  &:hover, &:active, &:focus{
+    @extend %button-hover;
+  }
 }
+
 
 ul {
   li {
@@ -33,5 +37,31 @@ ol {
 }
 
 blockquote{@extend %text;}
+
+label{
+  font-weight: 400;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+input{
+  background-color: #f3f3f3;
+  border-radius: 0;
+  border: none;
+  padding: 1rem;
+}
+
+table{
+  @extend %table;
+}
+
+thead th{
+  @extend %table-header;
+}
+
+tbody td {
+  @extend %table-body;
+}
 
 

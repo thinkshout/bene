@@ -59,9 +59,30 @@ a {
   color: var(--color-primary-b );
   cursor: pointer; }
 
-a:hover, a:active {
+a:hover, a:active, a:focus {
   color:  #50CFE3;
   color: var(--color-primary-a ); }
+
+.button {
+  color:  #ffffff;
+  color: var(--color-primary-c );
+  background-color:  #50CFE3;
+  background-color: var(--color-primary-a );
+  border-radius: 100px;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 2rem;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 35px;
+  text-transform: uppercase; }
+
+.button:hover, .button:active, .button:focus {
+  background-color:  #129FB5;
+  background-color: var(--color-primary-b );
+  color:  #ffffff;
+  color: var(--color-primary-c ); }
 
 p, p.standard, blockquote {
   font-size: 1rem;
@@ -112,19 +133,17 @@ tbody td {
 /* All transition */
 /* Buttons */
 /* BASE ELEMENT STYLES */
-a.button {
-  -webkit-transition: background-color 0.3s linear, color 0.3s linear;
-  -moz-transition: background-color 0.3s linear, color 0.3s linear;
-  transition: background-color 0.3s linear, color 0.3s linear;
-  border-radius: 0.1875rem;
-  font-weight: 800;
-  display: inline-block;
-  font-size: 1rem;
-  letter-spacing: 0.1rem;
-  line-height: 1;
-  padding: 1.25rem 1.875rem;
-  position: relative;
-  text-transform: uppercase; }
+label {
+  font-weight: 400;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  display: block; }
+
+input {
+  background-color: #f3f3f3;
+  border-radius: 0;
+  border: none;
+  padding: 1rem; }
 
 .js-form-item-select-list, .js-form-item-select-list-multi {
   display: none; }
@@ -431,17 +450,5 @@ a.button {
         .page-node-type-listing-page .views-element-container .view-bene-events .view-content {
           flex: 1 1 73%;
           margin-left: 2%; } }
-
-label {
-  font-weight: 400;
-  font-size: 0.875rem;
-  margin-bottom: 0.5rem;
-  display: block; }
-
-input {
-  background-color: #f3f3f3;
-  border-radius: 0;
-  border: none;
-  padding: 1rem; }
 
 /*# sourceMappingURL=bene-style.css.map */

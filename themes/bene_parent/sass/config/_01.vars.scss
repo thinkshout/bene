@@ -77,6 +77,25 @@ $vars: (
   @include vars(color, color-primary-a);
 }
 
+%button{
+  @include vars(color, color-primary-c);
+  @include vars(background-color, color-primary-a);
+  border-radius: 100px;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: rem(32);
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 35px;
+  text-transform: uppercase;
+}
+
+%button-hover{
+  @include vars(background-color, color-primary-b);
+  @include vars(color, color-primary-c);
+}
+
 %text {
   font-size: rem(16);
   line-height: rem(32);
