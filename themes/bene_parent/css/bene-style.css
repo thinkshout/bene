@@ -68,7 +68,7 @@ a:hover, a:active, a:focus, .field--name-field-tiles .text-wrapper a .field--nam
   color:  #DB830E;
   color: var(--color-secondary-d ); }
 
-.button, .field--name-field-tiles .button-wrapper a {
+.block-bene-home-page-feature-block .field--name-bene-link a, .button, .field--name-field-tiles .button-wrapper a {
   color:  #ffffff;
   color: var(--color-primary-c );
   background-color:  #F2AF3F;
@@ -83,7 +83,7 @@ a:hover, a:active, a:focus, .field--name-field-tiles .text-wrapper a .field--nam
   padding: 12px 35px;
   text-transform: uppercase; }
 
-.button:hover, .button:active, .button:focus, .field--name-field-tiles .button-wrapper a:hover, .field--name-field-tiles .button-wrapper a:active, .field--name-field-tiles .button-wrapper a:focus {
+.block-bene-home-page-feature-block .field--name-bene-link a:hover, .block-bene-home-page-feature-block .field--name-bene-link a:focus, .block-bene-home-page-feature-block .field--name-bene-link a:active, .button:hover, .button:active, .button:focus, .field--name-field-tiles .button-wrapper a:hover, .field--name-field-tiles .button-wrapper a:active, .field--name-field-tiles .button-wrapper a:focus {
   background-color:  #DB830E;
   background-color: var(--color-secondary-d );
   color:  #ffffff;
@@ -290,6 +290,74 @@ tbody td {
 /* ==============================
         Home Page Feature
    ============================== */
+.block-bene-home-page-feature-block {
+  background-color:  #2d3332;
+  background-color: var(--color-primary-e );
+  color:  #ffffff;
+  color: var(--color-primary-c );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  padding: 8rem 1rem;
+  position: relative; }
+  .block-bene-home-page-feature-block:after {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 79%);
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: .45;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+
+@media (max-width: 414px) {
+  .block-bene-home-page-feature-block {
+    background-size: cover;
+    background-position: center top;
+    max-height: 33.6875rem; } }
+@media (min-width: 769px) {
+  .block-bene-home-page-feature-block {
+    min-height: 31.25rem; } }
+.block-bene-home-page-feature-block .field--name-bene-lead {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1; }
+
+@media (max-width: 414px) {
+  .block-bene-home-page-feature-block .field--name-bene-lead {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    padding-top: 7rem; } }
+.block-bene-home-page-feature-block .field--name-bene-title {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 70px;
+  padding-top: 50px;
+  z-index: 2;
+  margin: 0 auto 50px auto;
+  max-width: 56.25rem;
+  position: relative; }
+
+@media (max-width: 414px) {
+  .block-bene-home-page-feature-block .field--name-bene-title {
+    font-size: 40px;
+    line-height: 45px; } }
+@media (min-width: 415px) and (max-width: 768px) {
+  .block-bene-home-page-feature-block .field--name-bene-title {
+    font-size: 40px;
+    line-height: 45px; } }
+.block-bene-home-page-feature-block .field--name-bene-link {
+  position: relative;
+  z-index: 1; }
+
+.block-bene-home-page-feature-block .field--name-bene-link a {
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem 2rem; }
+
 /* ==============================
                Tiles
    ============================== */
