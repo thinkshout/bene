@@ -53,23 +53,51 @@ $vars: (
 }
 
 %h1{
-  font-size: rem(32);
-  line-height: rem(40);
+  font-size: 75px;
+  line-height: 65px;
 }
 
 %h2 {
-  font-size: rem(26);
-  line-height: rem(32);
+  font-size: 65px;
+  line-height: 75px;
 }
 
 %h3 {
-  font-size: rem(20);
-  line-height: rem(26);
+  font-size: 58px;
+  line-height: 68px;
 }
 
 %h4 {
-  font-size: rem(16);
-  line-height: rem(22);
+  font-size: 45px;
+  line-height: 55px;
+}
+
+%h5{
+  font-size: 35px;
+  line-height: 45px;
+}
+
+@include mq(mobile){
+  %h1{
+    font-size: 55px;
+    line-height: 45px;
+  }
+  %h2 {
+    font-size: 45px;
+    line-height: 55px;
+  }
+  %h3 {
+    font-size: 38px;
+    line-height: 48px;
+  }
+  %h4 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  %h5 {
+    font-size: 28px;
+    line-height: 38px;
+  }
 }
 
 %link{
@@ -415,16 +443,6 @@ $vars: (
   }
 }
 
-
-@include mq(mobile){
-
-}
-
-
-@include mq(desktop){
-
-}
-
 /* ==============================
                Tiles
    ============================== */
@@ -485,8 +503,29 @@ $vars: (
 }
 
 /* ==============================
-          Events Page
+         Rich Text - Intro
    ============================== */
+
+%rch-txt-intro{
+  @include vars(color, color-primary-d);
+  padding: 25px 0;
+}
+
+%rch-txt-intro-heading{
+  margin: 30px 0;
+}
+
+%rch-txt-intro-link{
+  @include vars(color, color-primary-d);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+%rch-txt-intro-text{
+  @include vars(color, color-primary-a);
+  padding: 0 100px;
+  margin-bottom: 35px;
+}
 
 
 

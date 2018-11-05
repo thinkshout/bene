@@ -44,21 +44,45 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1rem 0; }
 
 h1 {
-  font-size: 2rem;
-  line-height: 2.5rem; }
+  font-size: 75px;
+  line-height: 65px; }
 
 h2 {
-  font-size: 1.625rem;
-  line-height: 2rem; }
+  font-size: 65px;
+  line-height: 75px; }
 
 h3 {
-  font-size: 1.25rem;
-  line-height: 1.625rem; }
+  font-size: 58px;
+  line-height: 68px; }
 
 h4 {
-  font-size: 1rem;
-  line-height: 1.375rem; }
+  font-size: 45px;
+  line-height: 55px; }
 
+h5 {
+  font-size: 35px;
+  line-height: 45px; }
+
+@media (max-width: 414px) {
+  h1 {
+    font-size: 55px;
+    line-height: 45px; }
+
+  h2 {
+    font-size: 45px;
+    line-height: 55px; }
+
+  h3 {
+    font-size: 38px;
+    line-height: 48px; }
+
+  h4 {
+    font-size: 30px;
+    line-height: 40px; }
+
+  h5 {
+    font-size: 28px;
+    line-height: 38px; } }
 a {
   color:  #F2AF3F;
   color: var(--color-secondary-c );
@@ -68,7 +92,7 @@ a:hover, a:active, a:focus, .field--name-field-tiles .text-wrapper a .field--nam
   color:  #DB830E;
   color: var(--color-secondary-d ); }
 
-.block-bene-home-page-feature-block .field--name-bene-link a, .button, .field--name-field-tiles .button-wrapper a {
+.block-bene-home-page-feature-block .field--name-bene-link a, .button, .page-node-type-page .field--name-bene-intro a.button, .field--name-field-tiles .button-wrapper a {
   color:  #ffffff;
   color: var(--color-primary-c );
   background-color:  #F2AF3F;
@@ -83,7 +107,7 @@ a:hover, a:active, a:focus, .field--name-field-tiles .text-wrapper a .field--nam
   padding: 12px 35px;
   text-transform: uppercase; }
 
-.block-bene-home-page-feature-block .field--name-bene-link a:hover, .block-bene-home-page-feature-block .field--name-bene-link a:focus, .block-bene-home-page-feature-block .field--name-bene-link a:active, .button:hover, .button:active, .button:focus, .field--name-field-tiles .button-wrapper a:hover, .field--name-field-tiles .button-wrapper a:active, .field--name-field-tiles .button-wrapper a:focus {
+.block-bene-home-page-feature-block .field--name-bene-link a:hover, .block-bene-home-page-feature-block .field--name-bene-link a:focus, .block-bene-home-page-feature-block .field--name-bene-link a:active, .button:hover, .button:active, .button:focus, .page-node-type-page .field--name-bene-intro a.button:focus, .page-node-type-page .field--name-bene-intro a.button:hover, .page-node-type-page .field--name-bene-intro a.button:active, .field--name-field-tiles .button-wrapper a:hover, .field--name-field-tiles .button-wrapper a:active, .field--name-field-tiles .button-wrapper a:focus {
   background-color:  #DB830E;
   background-color: var(--color-secondary-d );
   color:  #ffffff;
@@ -412,8 +436,28 @@ tbody td {
   max-width: 100%; }
 
 /* ==============================
-          Events Page
+         Rich Text - Intro
    ============================== */
+.page-node-type-page .field--name-bene-intro {
+  color:  #000000;
+  color: var(--color-primary-d );
+  padding: 25px 0; }
+
+.page-node-type-page .field--name-bene-intro h1, .page-node-type-page .field--name-bene-intro h2, .page-node-type-page .field--name-bene-intro h3, .page-node-type-page .field--name-bene-intro h4, .page-node-type-page .field--name-bene-intro h5, .page-node-type-page .field--name-bene-intro h6 {
+  margin: 30px 0; }
+
+.page-node-type-page .field--name-bene-intro a {
+  color:  #000000;
+  color: var(--color-primary-d );
+  text-decoration: none;
+  font-weight: bold; }
+
+.page-node-type-page .field--name-bene-intro p {
+  color:  #248BCB;
+  color: var(--color-primary-a );
+  padding: 0 100px;
+  margin-bottom: 35px; }
+
 /* ==============================
             Updates Page
    ============================== */
