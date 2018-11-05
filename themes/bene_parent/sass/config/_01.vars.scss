@@ -1,33 +1,33 @@
 $vars: (
   //Colors
-  color-primary-a: #248BCB, //light blue
-  color-primary-b: #1E5375, //dark blue
-  color-primary-c: #ffffff, //white
-  color-primary-d: #000000, //black
-  color-primary-e: #2d3332, //dark grey
-  color-secondary-a: #E26436, //light orange
-  color-secondary-b: #C63E02,  //dark orange
-  color-secondary-c: #F2AF3F, //light yellow
-  color-secondary-d: #DB830E, //dark yellow
-  color-secondary-e: #5FBA47, //green
+        color-primary-a: #248BCB, //light blue
+        color-primary-b: #1E5375, //dark blue
+        color-primary-c: #ffffff, //white
+        color-primary-d: #000000, //black
+        color-primary-e: #2d3332, //dark grey
+        color-secondary-a: #E26436, //light orange
+        color-secondary-b: #C63E02,  //dark orange
+        color-secondary-c: #F2AF3F, //light yellow
+        color-secondary-d: #DB830E, //dark yellow
+        color-secondary-e: #5FBA47, //green
 
   //Fonts
-  font-family-primary: "'Open Sans', sans-serif",
-  font-family-secondary: '',
-  font-weight-regular: 400,
-  font-weight-medium: 600,
-  font-weight-bold: 700,
-  font-weight-black: 800,
-  font-style-italic: italic,
-  font-style-normal: normal,
+        font-family-primary: "'Open Sans', sans-serif",
+        font-family-secondary: '',
+        font-weight-regular: 400,
+        font-weight-medium: 600,
+        font-weight-bold: 700,
+        font-weight-black: 800,
+        font-style-italic: italic,
+        font-style-normal: normal,
 
   //Logo & Icons
-  logo-height: 100px,
-  social-media-icon-height: 100px,
+        logo-height: 100px,
+        social-media-icon-height: 100px,
 
   //Buttons & Inputs
-  button-padding: 2rem,
-  input-height: 100px
+        button-padding: 2rem,
+        input-height: 100px
 );
 
 
@@ -299,6 +299,7 @@ $vars: (
     display: flex;
     height: 100%;
     justify-content: flex-end;
+    margin: 5px 0;
   }
 
   %menu-item{
@@ -320,10 +321,87 @@ $vars: (
   }
 }
 
+/* ==============================
+        Home Page Feature
+   ============================== */
+
+
+/* ==============================
+               Tiles
+   ============================== */
+
+%tiles-background{
+  @include vars(background-color, color-primary-e);
+}
+
+%tiles-main-title{
+  @include vars(color, color-primary-c);
+  font-weight: bold;
+  font-size: rem(42);
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+%tiles-container{
+  max-width: 81.25rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20.625rem);
+  grid-gap: 30px;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+%individual-tiles{
+  @include vars(background-color, color-primary-c);
+  border-bottom-right-radius: 100px;
+  text-align: left;
+}
+
+%tile-text{
+  padding: 0 20px;
+}
+
+%tile-inner-title{
+  @include vars(color, color-primary-d);
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+%text-wrapper{
+  min-height: 220px;
+  margin-bottom: 20px;
+}
+
+%tiles-img-container{
+  position: relative;
+  z-index: 100;
+  height: auto;
+}
+
+%tiles-img{
+  max-width: 100%;
+}
+
+/* ==============================
+          Events Page
+   ============================== */
 
 
 
 
+/* ==============================
+            Updates Page
+   ============================== */
+
+
+
+
+/* ==============================
+        Newsletter
+   ============================== */
 
 
 

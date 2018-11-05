@@ -2,3 +2,9 @@
 .js-form-item-select-list, .js-form-item-select-list-multi{
   display: none;
 }
+
+//Overriding the simple style guide's max-width setting to make the site container as wide as the browser screen
+
+.simple-styleguide--site-styles{
+  max-width: 100%;
+}

@@ -64,11 +64,11 @@ a {
   color: var(--color-secondary-c );
   cursor: pointer; }
 
-a:hover, a:active, a:focus {
+a:hover, a:active, a:focus, .field--name-field-tiles .text-wrapper a .field--name-field-title:hover {
   color:  #DB830E;
   color: var(--color-secondary-d ); }
 
-.button {
+.button, .field--name-field-tiles .button-wrapper a {
   color:  #ffffff;
   color: var(--color-primary-c );
   background-color:  #F2AF3F;
@@ -83,13 +83,13 @@ a:hover, a:active, a:focus {
   padding: 12px 35px;
   text-transform: uppercase; }
 
-.button:hover, .button:active, .button:focus {
+.button:hover, .button:active, .button:focus, .field--name-field-tiles .button-wrapper a:hover, .field--name-field-tiles .button-wrapper a:active, .field--name-field-tiles .button-wrapper a:focus {
   background-color:  #DB830E;
   background-color: var(--color-secondary-d );
   color:  #ffffff;
   color: var(--color-primary-c ); }
 
-p, p.standard, blockquote {
+p, p.standard, blockquote, .field--name-field-tiles .field__item .paragraph {
   font-size: 1rem;
   line-height: 2rem;
   font-family:  'Open Sans', sans-serif;
@@ -271,7 +271,8 @@ tbody td {
     align-items: flex-end;
     display: flex;
     height: 100%;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    margin: 5px 0; }
 
   .site-header .menu-item {
     margin-left: 1.375rem; }
@@ -286,6 +287,71 @@ tbody td {
 
   .site-header #joinButton {
     display: none; } }
+/* ==============================
+        Home Page Feature
+   ============================== */
+/* ==============================
+               Tiles
+   ============================== */
+.paragraph--type--tiles {
+  background-color:  #2d3332;
+  background-color: var(--color-primary-e ); }
+
+.paragraph--type--tiles .field--name-field-title {
+  color:  #ffffff;
+  color: var(--color-primary-c );
+  font-weight: bold;
+  font-size: 2.625rem;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase; }
+
+.field--name-field-tiles {
+  max-width: 81.25rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20.625rem);
+  grid-gap: 30px;
+  justify-content: center;
+  padding: 40px 0; }
+
+.field--name-field-tiles .field__item {
+  background-color:  #ffffff;
+  background-color: var(--color-primary-c );
+  border-bottom-right-radius: 100px;
+  text-align: left; }
+
+.field--name-field-tiles .tile-text {
+  padding: 0 20px; }
+
+.field--name-field-tiles .text-wrapper a .field--name-field-title {
+  color:  #000000;
+  color: var(--color-primary-d );
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 2rem; }
+
+.field--name-field-tiles .text-wrapper {
+  min-height: 220px;
+  margin-bottom: 20px; }
+
+.field--name-field-tiles .field__item .field--name-field-image {
+  position: relative;
+  z-index: 100;
+  height: auto; }
+
+.field--name-field-tiles .field__item img {
+  max-width: 100%; }
+
+/* ==============================
+          Events Page
+   ============================== */
+/* ==============================
+            Updates Page
+   ============================== */
+/* ==============================
+        Newsletter
+   ============================== */
 /* ==============================
             Site Footer
    ============================== */
@@ -309,6 +375,9 @@ input {
 
 .js-form-item-select-list, .js-form-item-select-list-multi {
   display: none; }
+
+.simple-styleguide--site-styles {
+  max-width: 100%; }
 
 .region-footer .bene-contact-links .fieldset-wrapper {
   display: flex;
@@ -375,5 +444,12 @@ input {
     justify-content: flex-end; } }
 .site-header .mobile-nav .menu {
   text-align: center; }
+
+.field--name-field-tiles .field__item .paragraph {
+  overflow: hidden; }
+.field--name-field-tiles .button-wrapper {
+  margin-bottom: 30px; }
+.field--name-field-tiles .text-wrapper a {
+  text-decoration: none; }
 
 /*# sourceMappingURL=bene-style.css.map */

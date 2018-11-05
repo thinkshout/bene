@@ -1,0 +1,56 @@
+.paragraph--type--tiles{
+  @extend %tiles-background;
+
+  .field--name-field-title{
+    @extend %tiles-main-title;
+  }
+}
+
+.field--name-field-tiles{
+  @extend %tiles-container;
+
+  .field__item{
+    @extend %individual-tiles;
+    .paragraph{
+      overflow: hidden;
+      @extend %text;
+    }
+
+    .field--name-field-image{
+      @extend %tiles-img-container;
+    }
+
+    img{
+      @extend %tiles-img;
+    }
+  }
+
+  .tile-text{
+    @extend %tile-text;
+  }
+
+  .button-wrapper {
+    margin-bottom: 30px;
+    a {
+      @extend %button;
+      &:hover, &:active, &:focus {
+        @extend %button-hover;
+      }
+    }
+  }
+
+  .text-wrapper{
+    @extend %text-wrapper;
+
+    a{
+      text-decoration: none;
+      .field--name-field-title{
+        @extend %tile-inner-title;
+        &:hover{
+          @extend %link-hover;
+        }
+      }
+    }
+  }
+}
+
