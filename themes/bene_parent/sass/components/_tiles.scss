@@ -1,9 +1,7 @@
 .paragraph--type--tiles{
   @extend %tiles-background;
 
-  .field--name-field-title{
-    @extend %tiles-main-title;
-  }
+  .field--name-field-title{@extend %tiles-main-title;}
 }
 
 .field--name-field-tiles{
@@ -16,26 +14,18 @@
       @extend %text;
     }
 
-    .field--name-field-image{
-      @extend %tiles-img-container;
-    }
+    .field--name-field-image{@extend %tiles-img-container;}
 
-    img{
-      @extend %tiles-img;
-    }
+    img{@extend %tiles-img;}
   }
 
-  .tile-text{
-    @extend %tile-text;
-  }
+  .tile-text{@extend %tile-text;}
 
   .button-wrapper {
     margin-bottom: 30px;
     a {
       @extend %button;
-      &:hover, &:active, &:focus {
-        @extend %button-hover;
-      }
+      &:hover, &:active, &:focus {@extend %button-hover;}
     }
   }
 
@@ -46,9 +36,7 @@
       text-decoration: none;
       .field--name-field-title{
         @extend %tile-inner-title;
-        &:hover{
-          @extend %link-hover;
-        }
+        &:hover{@extend %link-hover;}
       }
     }
   }

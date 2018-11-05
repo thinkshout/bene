@@ -1,19 +1,13 @@
 .page-node-type-page .field--name-bene-intro{
   @extend %rch-txt-intro;
-   h1, h2, h3, h4, h5, h6{
-     @extend %rch-txt-intro-heading;
-   }
+   h1, h2, h3, h4, h5, h6{@extend %rch-txt-intro-heading;}
 
   a{@extend %rch-txt-intro-link;}
 
-  p{
-    @extend %rch-txt-intro-text;
-  }
+  p{@extend %rch-txt-intro-text;}
 
   a.button{
     @extend %button;
-    &:focus, &:hover, &:active{
-      @extend %button-hover;
-    }
+    &:focus, &:hover, &:active{@extend %button-hover;}
   }
 }
