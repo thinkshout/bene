@@ -23,7 +23,7 @@ $vars: (
 
   //Logo & Icons
         logo-height: 100px,
-        social-media-icon-height: 100px,
+        social-media-icon-height: 2.25rem,
 
   //Buttons & Inputs
         button-padding: 2rem,
@@ -547,8 +547,180 @@ $vars: (
             Site Footer
    ============================== */
 
+%region-footer{
+  margin: 0 auto;
+  max-width: 100%;
+}
+
 %footer-background{
   @include vars(background-color, color-primary-e);
-  display: none;
 }
+
+%footer-container{
+  padding: 2rem 5%;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-between;
+}
+
+%footer-menu{
+  margin: 0;
+}
+
+    @include mq(desktop){
+      %footer-menu{
+        flex: 0 1 20%;
+      }
+    }
+
+%footer-menu-item{
+  line-height: 1.8rem;
+  padding: 0;
+}
+
+%footer-email-link{
+  @extend %link;
+  @extend %link-hover;
+}
+
+%footer-menu-link{
+  @extend %link-hover;
+  @include vars(color, color-primary-c);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+%footer-contact-links{
+  @include vars(color, color-primary-c);
+  line-height: 1.8rem;
+  font-size: 12px;
+  padding-left: 10%;
+  flex: 0 1 65%;
+}
+
+    @include mq(desktop){
+      %footer-contact-links{
+        flex: 0 1 20%;
+      }
+    }
+
+%footer-address{
+  white-space: pre-line;
+}
+
+%footer-spans-display-block{
+  display: block;
+}
+
+%footer-social-links{
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+    @include mq(desktop){
+      %footer-social-links{
+        flex: 0 1 30%;
+        align-items: baseline;
+        margin-top: 0;
+      }
+    }
+
+    @include mq(mobile){
+      %footer-social-links{
+        margin: 50px 15%;
+      }
+    }
+
+%footer-social-links-spans{
+  min-width: 25%;
+  text-align: center;
+  display: inline-block;
+}
+
+    @include mq(desktop){
+      %footer-social-links-spans{
+        min-width: 0;
+      }
+    }
+
+    @include mq(phablet){
+      %footer-social-links-spans{
+        min-width: 10%;
+      }
+    }
+
+%footer-social-links-a{
+  margin-left: 0;
+  border-radius: 0%;
+  @include vars(background-color, color-primary-c);
+  @include vars(height, social-media-icon-height);
+  @include vars(width, social-media-icon-height);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 62% 62%;
+  border: 0.0625rem solid;
+  @include vars(border-color, color-primary-c);
+  padding: 1rem;
+  position: relative;
+  font-size: 0;
+}
+
+    @include mq(desktop){
+      %footer-social-links-a{
+        margin-left: 0.625rem;
+      }
+    }
+
+    @include mq(phablet){
+      %footer-social-links-a{
+        margin-left: 10px;
+      }
+    }
+
+%footer-social-links-fb{
+  background-image: url(../images/svgs/facebook-f.svg);
+}
+%footer-social-links-instagram{
+  background-image: url(../images/svgs/instagram.svg);
+}
+%footer-social-links-linkedin{
+  background-image: url(../images/svgs/linkedin.svg);
+}
+%footer-social-links-twitter{
+  background-image: url(../images/svgs/twitter.svg);
+}
+
+%footer-copyright{
+  @include vars(color, color-primary-c);
+  width: 100%;
+  text-align: center;
+  margin: 0 10%;
+  line-height: 1.8rem;
+  font-size: 12px;
+}
+
+    @include mq(tablet){
+      %footer-copyright{
+        position: absolute;
+        bottom: 6rem;
+        right: -5%;
+        text-align: right;
+      }
+    }
+
+    @include mq(phablet){
+      %footer-copyright{
+        margin-top: 20px;
+        bottom: 6rem;
+      }
+    }
+
 

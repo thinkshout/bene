@@ -1,3 +1,51 @@
 .region-footer{
+
+}
+
+.block-bene-footer-block{
   @extend %footer-background;
+  @extend %footer-container;
+
+  .menu{
+    @extend %footer-menu;
+  }
+
+  .menu-item{
+    @extend %footer-menu-item;
+    &:first-child a{
+      @extend %footer-email-link;
+    }
+  }
+
+  .menu-item a{
+    @extend %footer-menu-link;
+  }
+
+  .contact-links{
+    @extend %footer-contact-links;
+    .address{@extend %footer-address}
+    .phone a, .email a, .additional-contact a{
+      @extend %footer-spans-display-block;
+      @extend %footer-menu-link;
+    }
+  }
+
+  .social-links{
+    @extend %footer-social-links;
+
+    span{
+      @extend %footer-social-links-spans;
+    }
+
+    a{
+      @extend %footer-social-links-a;
+    }
+
+    .facebook{@extend %footer-social-links-fb;}
+    .instagram{@extend %footer-social-links-instagram;}
+    .linkedin{@extend %footer-social-links-linkedin;}
+    .twitter{@extend %footer-social-links-twitter;}
+  }
+
+  .copyright{@extend %footer-copyright};
 }
