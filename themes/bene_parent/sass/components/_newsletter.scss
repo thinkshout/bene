@@ -1,0 +1,9 @@
+.block-bene-newsletter-signup-block{
+  .external-newsletter{
+    @extend %newsletter;
+  }
+
+  p{@extend %newsletter-p;}
+
+  a{@extend %newsletter-a;}
+}

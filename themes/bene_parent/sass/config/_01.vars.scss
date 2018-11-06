@@ -541,6 +541,44 @@ $vars: (
         Newsletter
    ============================== */
 
+%newsletter{
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 1rem;
+  align-items: center;
+  background-image: linear-gradient(#F2AF3F, #E26436);
+  justify-content: center;
+}
+
+%newsletter-p{
+  @include vars(color, color-primary-c);
+  margin: 30px 0;
+  font-size: 22px;
+  font-weight: 800;
+  text-align: left;
+  display: none;
+}
+
+%newsletter-a{
+  background-color: transparent;
+  text-align: left;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: rem(15) rem(20);
+
+  &:after{
+    content: '>';
+    margin-left: 0.5rem;
+    @include vars(color, color-primary-a);
+    background-color: transparent;
+    transition: all 0.3s linear;
+    display: inline-block;
+    left: 0.25rem;
+    position: relative; 
+  }
+}
 
 
 /* ==============================
