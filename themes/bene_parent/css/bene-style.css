@@ -92,7 +92,7 @@ h5 {
   color:  #DB830E;
   color: var(--color-secondary-d ); }
 
-.block-bene-home-page-feature-block .field--name-bene-link a, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a, .button, .page-node-type-page .field--name-bene-intro a.button, .field--name-field-tiles .button-wrapper a {
+.block-bene-home-page-feature-block .field--name-bene-link a, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a, .button, .page-node-type-page .field--name-bene-intro a.button, .page-node-type-page .paragraph--type--rich-text a.button, .field--name-field-tiles .button-wrapper a {
   color:  #ffffff;
   color: var(--color-primary-c );
   background-color:  #F2AF3F;
@@ -107,7 +107,7 @@ h5 {
   padding: 12px 35px;
   text-transform: uppercase; }
 
-.block-bene-home-page-feature-block .field--name-bene-link a:hover, .block-bene-home-page-feature-block .field--name-bene-link a:focus, .block-bene-home-page-feature-block .field--name-bene-link a:active, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link:hover, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:hover, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link:focus, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:focus, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link:active, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:active, .button:hover, .button:active, .button:focus, .page-node-type-page .field--name-bene-intro a.button:focus, .page-node-type-page .field--name-bene-intro a.button:hover, .page-node-type-page .field--name-bene-intro a.button:active, .field--name-field-tiles .button-wrapper a:hover, .field--name-field-tiles .button-wrapper a:active, .field--name-field-tiles .button-wrapper a:focus {
+.block-bene-home-page-feature-block .field--name-bene-link a:hover, .block-bene-home-page-feature-block .field--name-bene-link a:focus, .block-bene-home-page-feature-block .field--name-bene-link a:active, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link:hover, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:hover, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link:focus, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:focus, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link:active, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:active, .button:hover, .button:active, .button:focus, .page-node-type-page .field--name-bene-intro a.button:focus, .page-node-type-page .field--name-bene-intro a.button:hover, .page-node-type-page .field--name-bene-intro a.button:active, .page-node-type-page .paragraph--type--rich-text a.button:focus, .page-node-type-page .paragraph--type--rich-text a.button:hover, .page-node-type-page .paragraph--type--rich-text a.button:active, .field--name-field-tiles .button-wrapper a:hover, .field--name-field-tiles .button-wrapper a:active, .field--name-field-tiles .button-wrapper a:focus {
   background-color:  #DB830E;
   background-color: var(--color-secondary-d );
   color:  #ffffff;
@@ -438,25 +438,30 @@ tbody td {
 /* ==============================
          Rich Text - Intro
    ============================== */
-.page-node-type-page .field--name-bene-intro {
+.page-node-type-page .field--name-bene-intro, .page-node-type-page .paragraph--type--rich-text {
   color:  #000000;
   color: var(--color-primary-d );
   padding: 25px 0; }
 
-.page-node-type-page .field--name-bene-intro h1, .page-node-type-page .field--name-bene-intro h2, .page-node-type-page .field--name-bene-intro h3, .page-node-type-page .field--name-bene-intro h4, .page-node-type-page .field--name-bene-intro h5, .page-node-type-page .field--name-bene-intro h6 {
-  margin: 30px 0; }
+.page-node-type-page .field--name-bene-intro h1, .page-node-type-page .field--name-bene-intro h2, .page-node-type-page .field--name-bene-intro h3, .page-node-type-page .field--name-bene-intro h4, .page-node-type-page .field--name-bene-intro h5, .page-node-type-page .field--name-bene-intro h6, .page-node-type-page .paragraph--type--rich-text h1, .page-node-type-page .paragraph--type--rich-text h2, .page-node-type-page .paragraph--type--rich-text h3, .page-node-type-page .paragraph--type--rich-text h4, .page-node-type-page .paragraph--type--rich-text h5, .page-node-type-page .paragraph--type--rich-text h6 {
+  margin: 30px 0;
+  text-transform: uppercase; }
 
-.page-node-type-page .field--name-bene-intro a {
+.page-node-type-page .field--name-bene-intro a, .page-node-type-page .paragraph--type--rich-text a {
   color:  #000000;
   color: var(--color-primary-d );
   text-decoration: none;
   font-weight: bold; }
 
-.page-node-type-page .field--name-bene-intro p {
+.page-node-type-page .field--name-bene-intro p, .page-node-type-page .paragraph--type--rich-text p {
   color:  #248BCB;
   color: var(--color-primary-a );
   padding: 0 100px;
   margin-bottom: 35px; }
+
+.page-node-type-page .paragraph--type--rich-text p {
+  color:  #000000;
+  color: var(--color-primary-d ); }
 
 /* ==============================
     Full Width Feature Paragraph

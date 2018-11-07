@@ -11,3 +11,20 @@
     &:focus, &:hover, &:active{@extend %button-hover;}
   }
 }
+
+.page-node-type-page .paragraph--type--rich-text{
+  @extend %rch-txt-intro;
+  h1, h2, h3, h4, h5, h6{@extend %rch-txt-intro-heading;}
+
+  a{@extend %rch-txt-intro-link;}
+
+  p{
+    @extend %rch-txt-intro-text;
+    @extend %rch-txt-wysiwyg-text;
+  }
+
+  a.button{
+    @extend %button;
+    &:focus, &:hover, &:active{@extend %button-hover;}
+  }
+}
