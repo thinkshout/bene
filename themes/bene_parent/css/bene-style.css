@@ -88,7 +88,7 @@ h5 {
   color: var(--color-secondary-c );
   cursor: pointer; }
 
-.block-bene-footer-block .menu-item:first-child a, .block-bene-footer-block .menu-item a, .block-bene-footer-block .contact-links .phone a, .block-bene-footer-block .contact-links .email a, .block-bene-footer-block .contact-links .additional-contact a, a:hover, a:active, a:focus, .field--name-field-tiles .text-wrapper a .field--name-field-title:hover {
+.block-bene-sub-navigation-block .menu-item:focus, .block-bene-sub-navigation-block .menu-item a:focus, .block-bene-sub-navigation-block .menu-item:active, .block-bene-sub-navigation-block .menu-item a:active, .block-bene-sub-navigation-block .menu-item:hover, .block-bene-sub-navigation-block .menu-item a:hover, .block-bene-sub-navigation-block > ul.menu > li.menu-item > a:focus, .block-bene-sub-navigation-block > ul.menu > li.menu-item > a:active, .block-bene-sub-navigation-block > ul.menu > li.menu-item > a:hover, .block-bene-footer-block .menu-item:first-child a, .block-bene-footer-block .menu-item a, .block-bene-footer-block .contact-links .phone a, .block-bene-footer-block .contact-links .email a, .block-bene-footer-block .contact-links .additional-contact a, a:hover, a:active, a:focus, .field--name-field-tiles .text-wrapper a .field--name-field-title:hover {
   color:  #DB830E;
   color: var(--color-secondary-d ); }
 
@@ -312,6 +312,83 @@ tbody td {
   .site-header #joinButton {
     display: none; } }
 /* ==============================
+          Sub Navigation
+   ============================== */
+.block-page-title-block.no-bgimage {
+  background-image: linear-gradient(#248BCB, #1E5375);
+  padding: 100px 0;
+  height: 6.25rem; }
+
+.block-page-title-block.bgimage {
+  height: 24vw; }
+  .block-page-title-block.bgimage:after {
+    background-color:  #248BCB;
+    background-color: var(--color-primary-a );
+    content: '';
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .6;
+    position: absolute;
+    width: 100%;
+    z-index: 0; }
+
+.block-page-title-block.block-hero {
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  position: relative; }
+
+.block-page-title-block.block-hero h1, .block-page-title-block.block-hero h2 {
+  color:  #ffffff;
+  color: var(--color-primary-c );
+  flex: 0 1 auto;
+  font-size: 2rem;
+  margin-top: 0;
+  text-align: center;
+  text-transform: uppercase; }
+
+@media (min-width: 769px) {
+  .block-page-title-block.block-hero h1, .block-page-title-block.block-hero h2 {
+    font-size: 3.75rem; } }
+.block-bene-sub-navigation-block {
+  background-image: linear-gradient(#248BCB, #1E5375);
+  padding: 3rem 2%;
+  text-align: center; }
+
+.block-bene-sub-navigation-block .menu {
+  text-align: center;
+  list-style: none outside;
+  margin: 0;
+  padding: 0; }
+
+.block-bene-sub-navigation-block .menu-item {
+  list-style: none;
+  padding: 0; }
+
+.block-bene-sub-navigation-block .menu-item, .block-bene-sub-navigation-block .menu-item a {
+  color:  #ffffff;
+  color: var(--color-primary-c );
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase; }
+
+.block-bene-sub-navigation-block .menu-item .menu-item {
+  margin: 0 1rem; }
+
+.block-bene-sub-navigation-block > ul.menu > li.menu-item > a {
+  margin-bottom: 10px;
+  opacity: 0.7; }
+  .block-bene-sub-navigation-block > ul.menu > li.menu-item > a:focus, .block-bene-sub-navigation-block > ul.menu > li.menu-item > a:active, .block-bene-sub-navigation-block > ul.menu > li.menu-item > a:hover {
+    color:  #ffffff;
+    color: var(--color-primary-c ); }
+
+/* ==============================
         Home Page Feature
    ============================== */
 .block-bene-home-page-feature-block {
@@ -410,13 +487,15 @@ tbody td {
 .field--name-field-tiles .field__item {
   background-color:  #ffffff;
   background-color: var(--color-primary-c );
+  color:  #000000;
+  color: var(--color-primary-d );
   border-bottom-right-radius: 100px;
   text-align: left; }
 
 .field--name-field-tiles .tile-text {
   padding: 0 20px; }
 
-.field--name-field-tiles .text-wrapper a .field--name-field-title {
+.field--name-field-tiles .field__item .field--name-field-title, .field--name-field-tiles .text-wrapper a .field--name-field-title {
   color:  #000000;
   color: var(--color-primary-d );
   margin: 0;
@@ -457,8 +536,16 @@ tbody td {
   color:  #248BCB;
   color: var(--color-primary-a );
   padding: 0 100px;
-  margin-bottom: 35px; }
+  margin-bottom: 35px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 24px; }
 
+@media (min-width: 769px) {
+  .page-node-type-page .field--name-bene-intro p, .page-node-type-page .paragraph--type--rich-text p {
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 34px; } }
 .page-node-type-page .paragraph--type--rich-text p {
   color:  #000000;
   color: var(--color-primary-d ); }

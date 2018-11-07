@@ -9,6 +9,11 @@
 
   .field__item{
     @extend %individual-tiles;
+
+    .field--name-field-title{
+      @extend %tile-inner-title;
+    }
+
     .paragraph{
       overflow: hidden;
       @extend %text;
