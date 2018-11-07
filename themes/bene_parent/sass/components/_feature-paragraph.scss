@@ -1,0 +1,26 @@
+.feature-full-width-paragraph .paragraph--type--feature-full-width.no-image{
+  @extend %full-width-pargph-no-img;
+}
+
+.feature-full-width-paragraph .paragraph--type--feature-full-width{
+  @extend %full-width-pargph;
+
+  .field--name-field-title{
+    @extend %full-width-pargph-z-index;
+    @extend %full-width-pargph-title;
+  }
+
+  .field--name-field-text {
+    @extend %full-width-pargph-z-index;
+    p {
+      @extend %full-width-pargph-z-index;
+      @extend %full-width-pargph-text;
+    }
+  }
+
+  .field--type-link{
+    @extend %full-width-pargph-z-index;
+    @extend %full-width-pargph-link;
+    a{@extend %full-width-pargph-link;}
+  }
+}

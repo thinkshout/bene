@@ -92,7 +92,7 @@ h5 {
   color:  #DB830E;
   color: var(--color-secondary-d ); }
 
-.block-bene-home-page-feature-block .field--name-bene-link a, .button, .page-node-type-page .field--name-bene-intro a.button, .field--name-field-tiles .button-wrapper a {
+.block-bene-home-page-feature-block .field--name-bene-link a, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a, .button, .page-node-type-page .field--name-bene-intro a.button, .field--name-field-tiles .button-wrapper a {
   color:  #ffffff;
   color: var(--color-primary-c );
   background-color:  #F2AF3F;
@@ -107,7 +107,7 @@ h5 {
   padding: 12px 35px;
   text-transform: uppercase; }
 
-.block-bene-home-page-feature-block .field--name-bene-link a:hover, .block-bene-home-page-feature-block .field--name-bene-link a:focus, .block-bene-home-page-feature-block .field--name-bene-link a:active, .button:hover, .button:active, .button:focus, .page-node-type-page .field--name-bene-intro a.button:focus, .page-node-type-page .field--name-bene-intro a.button:hover, .page-node-type-page .field--name-bene-intro a.button:active, .field--name-field-tiles .button-wrapper a:hover, .field--name-field-tiles .button-wrapper a:active, .field--name-field-tiles .button-wrapper a:focus {
+.block-bene-home-page-feature-block .field--name-bene-link a:hover, .block-bene-home-page-feature-block .field--name-bene-link a:focus, .block-bene-home-page-feature-block .field--name-bene-link a:active, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link:hover, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:hover, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link:focus, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:focus, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link:active, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:active, .button:hover, .button:active, .button:focus, .page-node-type-page .field--name-bene-intro a.button:focus, .page-node-type-page .field--name-bene-intro a.button:hover, .page-node-type-page .field--name-bene-intro a.button:active, .field--name-field-tiles .button-wrapper a:hover, .field--name-field-tiles .button-wrapper a:active, .field--name-field-tiles .button-wrapper a:focus {
   background-color:  #DB830E;
   background-color: var(--color-secondary-d );
   color:  #ffffff;
@@ -457,6 +457,63 @@ tbody td {
   color: var(--color-primary-a );
   padding: 0 100px;
   margin-bottom: 35px; }
+
+/* ==============================
+    Full Width Feature Paragraph
+   ============================== */
+.feature-full-width-paragraph .paragraph--type--feature-full-width {
+  align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 38.2vw;
+  padding: 1.5rem 1.5rem 2.25rem 1.5rem;
+  position: relative;
+  text-align: center;
+  width: 100vw;
+  max-width: 100%;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  overflow: hidden; }
+  .feature-full-width-paragraph .paragraph--type--feature-full-width:before {
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: .45;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(#5FBA47, #1E5375);
+    bottom: 0;
+    right: 0;
+    z-index: 2; }
+
+.feature-full-width-paragraph .paragraph--type--feature-full-width.no-image:before {
+  opacity: 1; }
+
+.feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-title, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-text, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-text p, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link {
+  z-index: 10; }
+
+.feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-title {
+  color:  #ffffff;
+  color: var(--color-primary-c );
+  font-size: 30px;
+  margin-top: 10px;
+  font-weight: bold; }
+
+.feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-text p {
+  color:  #ffffff;
+  color: var(--color-primary-c );
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: normal; }
+
+.feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a {
+  margin-top: 10px;
+  font-weight: bold; }
 
 /* ==============================
             Updates Page

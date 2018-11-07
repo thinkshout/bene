@@ -527,7 +527,76 @@ $vars: (
   margin-bottom: 35px;
 }
 
+/* ==============================
+    Full Width Feature Paragraph
+   ============================== */
 
+%full-width-pargph{
+  align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //min-height: 25vw;
+  min-height: 38.2vw;
+  padding: 1.5rem 1.5rem 2.25rem 1.5rem;
+  position: relative;
+  text-align: center;
+  width: 100vw;
+  max-width: 100%;
+  padding-top: 70px;
+  padding-bottom: 70px; //change?
+  overflow: hidden;
+
+  &:before{
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: .45;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(#5FBA47, #1E5375);
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+  }
+}
+
+%full-width-pargph-no-img{
+  &:before{
+    opacity: 1;
+  }
+}
+
+%full-width-pargph-z-index{
+  z-index: 10;
+}
+
+%full-width-pargph-title{
+  @include vars(color, color-primary-c);
+  font-size: 30px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+%full-width-pargph-text{
+  @include vars(color, color-primary-c);
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+%full-width-pargph-link{
+  @extend %button;
+  margin-top: 10px;
+  font-weight: bold;
+  &:hover, &:focus, &:active{
+    @extend %button-hover;
+  }
+}
 
 
 /* ==============================
@@ -576,7 +645,7 @@ $vars: (
     transition: all 0.3s linear;
     display: inline-block;
     left: 0.25rem;
-    position: relative; 
+    position: relative;
   }
 }
 
