@@ -579,8 +579,15 @@ $vars: (
   @include vars(color, color-primary-c);
   font-size: 30px;
   margin-top: 10px;
+  margin-bottom: 10px;
   font-weight: bold;
 }
+
+    @include mq(desktop){
+      %full-width-pargph-title{
+        font-size: 40px;
+      }
+    }
 
 %full-width-pargph-text{
   @include vars(color, color-primary-c);
@@ -588,6 +595,15 @@ $vars: (
   line-height: 24px;
   font-weight: normal;
 }
+
+    @include mq(desktop){
+      %full-width-pargph-text{
+        font-size: 22px;
+        line-height: 34px;
+        max-width: 65%;
+        margin: 10px auto;
+      }
+    }
 
 %full-width-pargph-link{
   @extend %button;

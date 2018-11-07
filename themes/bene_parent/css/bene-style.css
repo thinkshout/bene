@@ -502,8 +502,12 @@ tbody td {
   color: var(--color-primary-c );
   font-size: 30px;
   margin-top: 10px;
+  margin-bottom: 10px;
   font-weight: bold; }
 
+@media (min-width: 769px) {
+  .feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-title {
+    font-size: 40px; } }
 .feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-text p {
   color:  #ffffff;
   color: var(--color-primary-c );
@@ -511,6 +515,12 @@ tbody td {
   line-height: 24px;
   font-weight: normal; }
 
+@media (min-width: 769px) {
+  .feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-text p {
+    font-size: 22px;
+    line-height: 34px;
+    max-width: 65%;
+    margin: 10px auto; } }
 .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a {
   margin-top: 10px;
   font-weight: bold; }
