@@ -356,7 +356,8 @@ tbody td {
   font-size: 2rem;
   margin-top: 0;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  z-index: 20; }
 
 @media (min-width: 769px) {
   .block-page-title-block.block-hero h1, .block-page-title-block.block-hero h2 {
@@ -542,7 +543,6 @@ tbody td {
 .page-node-type-page .field--name-bene-intro p, .page-node-type-page .paragraph--type--rich-text p {
   color:  #248BCB;
   color: var(--color-primary-a );
-  padding: 0 100px;
   margin-bottom: 35px;
   font-size: 15px;
   font-weight: normal;
@@ -782,54 +782,73 @@ tbody td {
 /* ==============================
            Inline Embeds
    ============================== */
-.field--name-bene-content .paragraph--type--rich-text .figure.caption, .field--name-bene-content .paragraph--type--rich-text article.caption {
-  display: block;
-  margin-top: 40px; }
-
-.field--name-bene-content .paragraph--type--rich-text figure.embedded-entity.video {
-  width: 100%; }
-
-.field--name-bene-content .paragraph--type--rich-text figure.embedded-entity.video .video-embed-field-responsive-video {
-  margin-bottom: -25%; }
-
-.field--name-bene-content .paragraph--type--rich-text figure.embedded-entity.video .video-embed-field-responsive-video iframe {
-  height: 50%; }
-
-.field--name-bene-content .paragraph--type--rich-text figure.embedded-entity.image .image-caption,
-.field--name-bene-content .paragraph--type--rich-text article.embedded-entity.image .image-caption {
-  font-size: 16px;
-  font-style: italic;
-  margin-bottom: 25px;
-  margin-right: 10px;
-  padding: 20px 0;
-  display: inline-block; }
-
 @media (max-width: 414px) {
-  .field--name-bene-content .paragraph--type--rich-text .embedded-entity.align-left, .field--name-bene-content .paragraph--type--rich-text .embedded-entity.align-right,
-  .field--name-bene-content .paragraph--type--rich-text figure.align-left, .field--name-bene-content .paragraph--type--rich-text figure.align-right {
-    width: 100%; } }
+  .embedded-entity img {
+    margin: 5px; } }
+@media (min-width: 769px) and (max-width: 1239px) {
+  article.embedded-entity .media--type-video.media--view-mode-embedded-half {
+    width: 50%;
+    margin: 0 auto; }
+
+  .embedded-entity.align-left article.media--type-image {
+    float: left; }
+
+  .embedded-entity .image-caption, .embedded-entity.align-left .image-caption {
+    float: left; }
+
+  .embedded-entity.align-right article.media--type-image {
+    float: right; }
+
+  .embedded-entity .media--type-image.media--view-mode-embedded-half {
+    width: 50vw; }
+    .embedded-entity .media--type-image.media--view-mode-embedded-half picture img {
+      width: 100%; } }
 @media (min-width: 769px) {
-  .field--name-bene-content .paragraph--type--rich-text figure.embedded-entity.embedded-half {
-    width: 50%; } }
-.field--name-bene-content .paragraph--type--rich-text figure.embedded-entity.image .media--view-mode-embedded-half .field--type-image img, .field--name-bene-content .paragraph--type--rich-text figure.embedded-entity.image.align-center picture, .field--name-bene-content .paragraph--type--rich-text article.embedded-entity.image.align-center picture {
-  width: 100%; }
+  article.embedded-entity .media--type-video.media--view-mode-embedded-half {
+    width: 50%;
+    margin: 0 auto; }
 
-.field--name-bene-content .paragraph--type--rich-text figure.embedded-entity.image.align-right {
-  text-align: right;
-  float: right; }
+  .embedded-entity.align-left article.media--type-image {
+    float: left; }
 
-.field--name-bene-content .paragraph--type--rich-text figure.embedded-entity.image.align-center, .field--name-bene-content .paragraph--type--rich-text article.embedded-entity.image.align-center {
-  width: 100%;
-  text-align: center;
+  .embedded-entity .image-caption, .embedded-entity.align-left .image-caption {
+    float: left; }
+
+  .embedded-entity.align-right article.media--type-image {
+    float: right; }
+
+  .embedded-entity .media--type-image.media--view-mode-embedded-half {
+    width: 50vw; }
+    .embedded-entity .media--type-image.media--view-mode-embedded-half picture img {
+      width: 100%; } }
+.embedded-entity {
+  display: inline-block;
   clear: both; }
 
-.field--name-bene-content .paragraph--type--rich-text figure.instagram, .field--name-bene-content .paragraph--type--rich-text figure.tweet, .field--name-bene-content .paragraph--type--rich-text article.instagram, .field--name-bene-content .paragraph--type--rich-text article.tweet {
-  display: block;
+.embedded-entity .image-caption, .embedded-entity.align-left .image-caption {
+  font-size: 16px;
+  font-style: italic; }
+
+.embedded-entity img {
+  margin: 5px; }
+
+.embedded-entity.align-center article.media--type-image {
+  margin: 0 auto;
+  text-align: center; }
+
+.embedded-entity.align-right .image-caption {
+  text-align: left; }
+
+/* ==============================
+            Events Page
+   ============================== */
+.block-system-main-block article.node--view-mode-full .field--name-bene-event-date-range {
+  margin-top: 20px; }
+
+.block-system-main-block article.node--view-mode-full .field__label {
   float: none;
-  clear: both; }
-
-.paragraph--type--rich-text img {
-  max-width: 100%; }
+  clear: both;
+  margin-top: 10px; }
 
 /* ==============================
             Updates Page
@@ -862,6 +881,114 @@ tbody td {
     width: 65.8807828007%;
     margin-left: 2.132451075%; }
     .view-bene-news .view-content:last-child {
+      margin-right: 0; } }
+.field--name-bene-intro {
+  margin-bottom: 1.5rem;
+  margin-top: 1rem; }
+
+.field--name-bene-intro h2 {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 2rem; }
+
+.field--name-bene-intro h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 1.125rem; }
+
+.field--name-bene-intro p {
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 2rem;
+  margin-top: 0.75rem; }
+
+@media (min-width: 769px) {
+  .field--name-bene-intro p {
+    font-size: 1.375rem;
+    line-height: 2.375rem; } }
+/* ==============================
+        General Page Settings
+   ============================== */
+.page-node-type-listing-page .views-element-container {
+  clear: both;
+  padding: 0 2%;
+  width: 80%; }
+
+@media (min-width: 769px) {
+  .page-node-type-listing-page .views-element-container {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 82.9403914003%;
+    margin-left: 8.5298042998%; }
+    .page-node-type-listing-page .views-element-container:last-child {
+      margin-right: 0; }
+
+  .page-node-type-listing-page .views-element-container .view-bene-events {
+    display: flex;
+    flex-direction: row; }
+
+  .page-node-type-listing-page .views-element-container .view-bene-events .view-filters {
+    flex: 1 1 25%; }
+
+  .page-node-type-listing-page .views-element-container .view-bene-events .view-content {
+    flex: 1 1 73%;
+    margin-left: 2%;
+    margin-left: 8.5298042998%; }
+
+  .page-node-type-listing-page .views-element-container .view-bene-events .view-content h2 {
+    margin-bottom: 10px; } }
+.node--type-news .node__content {
+  clear: both;
+  padding: 2%; }
+
+.inner {
+  display: flex;
+  flex: 1;
+  margin: 0 auto;
+  max-width: 95%; }
+
+#site-wrapper {
+  margin: 0 auto;
+  position: relative; }
+
+.page-node-type-page .field--name-bene-content .paragraph--type--rich-text,
+.page-node-type-page .block-system-main-block .field--name-bene-event-location,
+.page-node-type-listing-page .field--name-bene-content .paragraph--type--rich-text,
+.page-node-type-listing-page .block-system-main-block .field--name-bene-event-location,
+.page-node-type-event .field--name-bene-content .paragraph--type--rich-text,
+.page-node-type-event .block-system-main-block .field--name-bene-event-location,
+.page-node-type-news .field--name-bene-content .paragraph--type--rich-text,
+.page-node-type-news .block-system-main-block .field--name-bene-event-location {
+  clear: both;
+  padding: 0 2%; }
+
+@media (min-width: 769px) {
+  .page-node-type-page .field--name-bene-content .paragraph--type--rich-text,
+  .page-node-type-page .block-system-main-block .field--name-bene-event-location,
+  .page-node-type-listing-page .field--name-bene-content .paragraph--type--rich-text,
+  .page-node-type-listing-page .block-system-main-block .field--name-bene-event-location,
+  .page-node-type-event .field--name-bene-content .paragraph--type--rich-text,
+  .page-node-type-event .block-system-main-block .field--name-bene-event-location,
+  .page-node-type-news .field--name-bene-content .paragraph--type--rich-text,
+  .page-node-type-news .block-system-main-block .field--name-bene-event-location {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 100%;
+    margin-left: 1.70596086%;
+    margin-left: 0;
+    margin-right: 0; }
+    .page-node-type-page .field--name-bene-content .paragraph--type--rich-text:last-child,
+    .page-node-type-page .block-system-main-block .field--name-bene-event-location:last-child,
+    .page-node-type-listing-page .field--name-bene-content .paragraph--type--rich-text:last-child,
+    .page-node-type-listing-page .block-system-main-block .field--name-bene-event-location:last-child,
+    .page-node-type-event .field--name-bene-content .paragraph--type--rich-text:last-child,
+    .page-node-type-event .block-system-main-block .field--name-bene-event-location:last-child,
+    .page-node-type-news .field--name-bene-content .paragraph--type--rich-text:last-child,
+    .page-node-type-news .block-system-main-block .field--name-bene-event-location:last-child {
       margin-right: 0; } }
 /* ==============================
         Newsletter
@@ -1061,32 +1188,26 @@ tbody td {
   padding-left: 0;
   padding-right: 0; }
 
-.field--name-bene-content .paragraph--type--rich-text figure.embedded-entity.video .image-caption, .field--name-bene-content .paragraph--type--rich-text .field--name-uid, .field--name-bene-content .paragraph--type--rich-text .field--name-created, .field--name-bene-content .paragraph--type--rich-text .field--name-name, .field--name-bene-content .paragraph--type--rich-text figure.instagram .image-caption, .field--name-bene-content .paragraph--type--rich-text figure.tweet .image-caption, .field--name-bene-content .paragraph--type--rich-text article.instagram .image-caption, .field--name-bene-content .paragraph--type--rich-text article.tweet .image-caption, .page-node-type-listing-page .field--name-bene-event-location,
+.page-node-type-listing-page .views-element-container .view-bene-events .view-content .field--name-bene-event-location, article.embedded-entity .media--type-video .field--name-name,
+article.embedded-entity .media--type-video .field--name-created,
+article.embedded-entity .media--type-video .field--name-uid, .page-node-type-listing-page .field--name-bene-event-location,
 .page-node-type-listing-page .field--name-bene-date {
   display: none; }
 
-.field--name-bene-content .paragraph--type--rich-text .embedded-entity.align-center img,
-.field--name-bene-content .paragraph--type--rich-text figure.align-center img, .field--name-bene-content .paragraph--type--rich-text .embedded-entity.align-left img, .field--name-bene-content .paragraph--type--rich-text .embedded-entity.align-right img,
-.field--name-bene-content .paragraph--type--rich-text figure.align-left img, .field--name-bene-content .paragraph--type--rich-text figure.align-right img, .page-node-type-listing-page .view-content, .page-node-type-listing-page .field--name-bene-event-location .field__item .organization, .page-node-type-listing-page .field--name-bene-event-location .field__item .address-line1 {
+article.embedded-entity, .embedded-entity.caption-article, .embedded-entity.align-center, .embedded-entity.align-left, .embedded-entity.align-right, .block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item .organization, .block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item .address-line1, .page-node-type-listing-page .view-content, .page-node-type-listing-page .field--name-bene-event-location .field__item .organization, .page-node-type-listing-page .field--name-bene-event-location .field__item .address-line1 {
   display: block; }
 
-.page-node-type-listing-page .field--name-bene-event-location .field__item div {
+.page-node-type-listing-page .views-element-container .view-bene-events .view-content .field__item p, .page-node-type-listing-page .views-element-container .view-bene-events .view-content .field__item div, .block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item div, .page-node-type-listing-page .field--name-bene-event-location .field__item div {
   display: inline; }
 
-.field--name-bene-content .paragraph--type--rich-text figure.embedded-entity.image.align-right .field--type-image, .field--name-bene-content .paragraph--type--rich-text figure.embedded-entity.image.align-center .field--type-image, .field--name-bene-content .paragraph--type--rich-text article.embedded-entity.image.align-center .field--type-image, .field--name-bene-content .paragraph--type--rich-text figure.embedded-entity.image.align-center picture, .field--name-bene-content .paragraph--type--rich-text article.embedded-entity.image.align-center picture {
-  display: inline-block; }
-
-.field--name-bene-content .paragraph--type--rich-text figure.instagram .field--name-embed-code iframe, .field--name-bene-content .paragraph--type--rich-text figure.instagram .field--name-embed-code twitterwidget, .field--name-bene-content .paragraph--type--rich-text figure.tweet .field--name-embed-code iframe, .field--name-bene-content .paragraph--type--rich-text figure.tweet .field--name-embed-code twitterwidget, .field--name-bene-content .paragraph--type--rich-text article.instagram .field--name-embed-code iframe, .field--name-bene-content .paragraph--type--rich-text article.instagram .field--name-embed-code twitterwidget, .field--name-bene-content .paragraph--type--rich-text article.tweet .field--name-embed-code iframe, .field--name-bene-content .paragraph--type--rich-text article.tweet .field--name-embed-code twitterwidget {
-  display: inline-block !important; }
-
-.field--name-bene-content .paragraph--type--rich-text figure.embedded-entity.image.align-left {
-  float: left; }
-
-.page-node-type-listing-page .field--name-bene-event-location .field__label {
+.embedded-entity.align-left, .embedded-entity.align-right, .page-node-type-listing-page .field--name-bene-event-location .field__label {
   float: none; }
 
-.field--name-bene-content .paragraph--type--rich-text figure.instagram .field--name-embed-code, .field--name-bene-content .paragraph--type--rich-text figure.tweet .field--name-embed-code, .field--name-bene-content .paragraph--type--rich-text article.instagram .field--name-embed-code, .field--name-bene-content .paragraph--type--rich-text article.tweet .field--name-embed-code {
+.embedded-entity.align-center .image-caption, .site-header .mobile-nav .menu {
   text-align: center; }
+
+.field--name-field-tiles .field__item .paragraph {
+  overflow: hidden; }
 
 /* BASE ELEMENT STYLES */
 label {
@@ -1107,75 +1228,6 @@ input {
 .simple-styleguide--site-styles {
   max-width: 100%; }
 
-.page-node-type-listing-page .views-element-container {
-  clear: both;
-  padding: 0 2%;
-  width: 80%; }
-  @media (min-width: 769px) {
-    .page-node-type-listing-page .views-element-container {
-      float: left;
-      display: block;
-      margin-right: 2.3576515979%;
-      width: 82.9403914003%;
-      margin-left: 8.5298042998%; }
-      .page-node-type-listing-page .views-element-container:last-child {
-        margin-right: 0; }
-      .page-node-type-listing-page .views-element-container .view-bene-events {
-        display: flex;
-        flex-direction: row; }
-        .page-node-type-listing-page .views-element-container .view-bene-events .view-filters {
-          float: left;
-          display: block;
-          margin-right: 2.3576515979%;
-          width: 100%; }
-          .page-node-type-listing-page .views-element-container .view-bene-events .view-filters:last-child {
-            margin-right: 0; }
-        .page-node-type-listing-page .views-element-container .view-bene-events .view-content {
-          flex: 1 1 73%;
-          margin-left: 2%;
-          margin-left: 8.5298042998%; }
-          .page-node-type-listing-page .views-element-container .view-bene-events .view-content h2 {
-            margin-bottom: 10px; }
-          .page-node-type-listing-page .views-element-container .view-bene-events .view-content .field--name-bene-event-location {
-            display: none; }
-          .page-node-type-listing-page .views-element-container .view-bene-events .view-content .field__item p, .page-node-type-listing-page .views-element-container .view-bene-events .view-content .field__item div {
-            display: inline; } }
-
-.page-node-type-listing-page .views-element-container {
-  clear: both;
-  padding: 0 2%; }
-  @media (min-width: 769px) {
-    .page-node-type-listing-page .views-element-container {
-      float: left;
-      display: block;
-      margin-right: 2.3576515979%;
-      width: 82.9403914003%;
-      margin-left: 8.5298042998%; }
-      .page-node-type-listing-page .views-element-container:last-child {
-        margin-right: 0; }
-      .page-node-type-listing-page .views-element-container .view-bene-events {
-        display: flex;
-        flex-direction: row; }
-        .page-node-type-listing-page .views-element-container .view-bene-events .view-filters {
-          flex: 1 1 25%; }
-        .page-node-type-listing-page .views-element-container .view-bene-events .view-content {
-          flex: 1 1 73%;
-          margin-left: 2%; } }
-
-.node--type-news .node__content {
-  clear: both;
-  padding: 2%; }
-
-.inner {
-  display: flex;
-  flex: 1;
-  margin: 0 auto;
-  max-width: 95%; }
-
-#site-wrapper {
-  margin: 0 auto;
-  position: relative; }
-
 #page,
 .site-content,
 .site-footer,
@@ -1187,170 +1239,6 @@ input {
 .page-node-type-event .region-content,
 .page-node-type-news .region-content {
   margin-bottom: 0; }
-.page-node-type-page .block-system-main-block .field--name-bene-intro,
-.page-node-type-page .field--name-bene-content .paragraph--type--rich-text,
-.page-node-type-page .block-system-main-block .field--name-bene-event-location,
-.page-node-type-listing-page .block-system-main-block .field--name-bene-intro,
-.page-node-type-listing-page .field--name-bene-content .paragraph--type--rich-text,
-.page-node-type-listing-page .block-system-main-block .field--name-bene-event-location,
-.page-node-type-event .block-system-main-block .field--name-bene-intro,
-.page-node-type-event .field--name-bene-content .paragraph--type--rich-text,
-.page-node-type-event .block-system-main-block .field--name-bene-event-location,
-.page-node-type-news .block-system-main-block .field--name-bene-intro,
-.page-node-type-news .field--name-bene-content .paragraph--type--rich-text,
-.page-node-type-news .block-system-main-block .field--name-bene-event-location {
-  clear: both;
-  padding: 0 2%; }
-  @media (min-width: 769px) {
-    .page-node-type-page .block-system-main-block .field--name-bene-intro,
-    .page-node-type-page .field--name-bene-content .paragraph--type--rich-text,
-    .page-node-type-page .block-system-main-block .field--name-bene-event-location,
-    .page-node-type-listing-page .block-system-main-block .field--name-bene-intro,
-    .page-node-type-listing-page .field--name-bene-content .paragraph--type--rich-text,
-    .page-node-type-listing-page .block-system-main-block .field--name-bene-event-location,
-    .page-node-type-event .block-system-main-block .field--name-bene-intro,
-    .page-node-type-event .field--name-bene-content .paragraph--type--rich-text,
-    .page-node-type-event .block-system-main-block .field--name-bene-event-location,
-    .page-node-type-news .block-system-main-block .field--name-bene-intro,
-    .page-node-type-news .field--name-bene-content .paragraph--type--rich-text,
-    .page-node-type-news .block-system-main-block .field--name-bene-event-location {
-      float: left;
-      display: block;
-      margin-right: 2.3576515979%;
-      width: 100%;
-      margin-left: 1.70596086%;
-      margin-left: 0;
-      margin-right: 0; }
-      .page-node-type-page .block-system-main-block .field--name-bene-intro:last-child,
-      .page-node-type-page .field--name-bene-content .paragraph--type--rich-text:last-child,
-      .page-node-type-page .block-system-main-block .field--name-bene-event-location:last-child,
-      .page-node-type-listing-page .block-system-main-block .field--name-bene-intro:last-child,
-      .page-node-type-listing-page .field--name-bene-content .paragraph--type--rich-text:last-child,
-      .page-node-type-listing-page .block-system-main-block .field--name-bene-event-location:last-child,
-      .page-node-type-event .block-system-main-block .field--name-bene-intro:last-child,
-      .page-node-type-event .field--name-bene-content .paragraph--type--rich-text:last-child,
-      .page-node-type-event .block-system-main-block .field--name-bene-event-location:last-child,
-      .page-node-type-news .block-system-main-block .field--name-bene-intro:last-child,
-      .page-node-type-news .field--name-bene-content .paragraph--type--rich-text:last-child,
-      .page-node-type-news .block-system-main-block .field--name-bene-event-location:last-child {
-        margin-right: 0; } }
-.page-node-type-page .paragraph--type--media .media-instagram,
-.page-node-type-page .paragraph--type--media .media-tweet,
-.page-node-type-page .paragraph--type--media .media-video,
-.page-node-type-listing-page .paragraph--type--media .media-instagram,
-.page-node-type-listing-page .paragraph--type--media .media-tweet,
-.page-node-type-listing-page .paragraph--type--media .media-video,
-.page-node-type-event .paragraph--type--media .media-instagram,
-.page-node-type-event .paragraph--type--media .media-tweet,
-.page-node-type-event .paragraph--type--media .media-video,
-.page-node-type-news .paragraph--type--media .media-instagram,
-.page-node-type-news .paragraph--type--media .media-tweet,
-.page-node-type-news .paragraph--type--media .media-video {
-  clear: both;
-  padding: 0 2%; }
-  @media (min-width: 769px) {
-    .page-node-type-page .paragraph--type--media .media-instagram,
-    .page-node-type-page .paragraph--type--media .media-tweet,
-    .page-node-type-page .paragraph--type--media .media-video,
-    .page-node-type-listing-page .paragraph--type--media .media-instagram,
-    .page-node-type-listing-page .paragraph--type--media .media-tweet,
-    .page-node-type-listing-page .paragraph--type--media .media-video,
-    .page-node-type-event .paragraph--type--media .media-instagram,
-    .page-node-type-event .paragraph--type--media .media-tweet,
-    .page-node-type-event .paragraph--type--media .media-video,
-    .page-node-type-news .paragraph--type--media .media-instagram,
-    .page-node-type-news .paragraph--type--media .media-tweet,
-    .page-node-type-news .paragraph--type--media .media-video {
-      margin-left: 17.05961%;
-      margin-top: 3rem;
-      max-width: 65.88078%; } }
-.page-node-type-page .paragraph--type--media .media-instagram > div,
-.page-node-type-page .paragraph--type--media .media-tweet > div,
-.page-node-type-listing-page .paragraph--type--media .media-instagram > div,
-.page-node-type-listing-page .paragraph--type--media .media-tweet > div,
-.page-node-type-event .paragraph--type--media .media-instagram > div,
-.page-node-type-event .paragraph--type--media .media-tweet > div,
-.page-node-type-news .paragraph--type--media .media-instagram > div,
-.page-node-type-news .paragraph--type--media .media-tweet > div {
-  align-items: center;
-  display: flex;
-  justify-content: center; }
-.page-node-type-page .field--name-bene-content .paragraph--type--media,
-.page-node-type-page .field--name-bene-content .paragraph--type--feature-full-width,
-.page-node-type-page .field--name-bene-content .paragraph--type--tiles,
-.page-node-type-listing-page .field--name-bene-content .paragraph--type--media,
-.page-node-type-listing-page .field--name-bene-content .paragraph--type--feature-full-width,
-.page-node-type-listing-page .field--name-bene-content .paragraph--type--tiles,
-.page-node-type-event .field--name-bene-content .paragraph--type--media,
-.page-node-type-event .field--name-bene-content .paragraph--type--feature-full-width,
-.page-node-type-event .field--name-bene-content .paragraph--type--tiles,
-.page-node-type-news .field--name-bene-content .paragraph--type--media,
-.page-node-type-news .field--name-bene-content .paragraph--type--feature-full-width,
-.page-node-type-news .field--name-bene-content .paragraph--type--tiles {
-  clear: both; }
-.page-node-type-page .paragraph--type--tiles,
-.page-node-type-listing-page .paragraph--type--tiles,
-.page-node-type-event .paragraph--type--tiles,
-.page-node-type-news .paragraph--type--tiles {
-  max-width: 112.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%; }
-  .page-node-type-page .paragraph--type--tiles::after,
-  .page-node-type-listing-page .paragraph--type--tiles::after,
-  .page-node-type-event .paragraph--type--tiles::after,
-  .page-node-type-news .paragraph--type--tiles::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-.page-node-type-listing-page .views-element-container {
-  clear: both;
-  padding: 0 2%;
-  width: 80%; }
-  @media (min-width: 769px) {
-    .page-node-type-listing-page .views-element-container {
-      float: left;
-      display: block;
-      margin-right: 2.3576515979%;
-      width: 82.9403914003%;
-      margin-left: 8.5298042998%; }
-      .page-node-type-listing-page .views-element-container:last-child {
-        margin-right: 0; }
-      .page-node-type-listing-page .views-element-container .view-bene-events {
-        display: flex;
-        flex-direction: row; }
-        .page-node-type-listing-page .views-element-container .view-bene-events .view-filters {
-          float: left;
-          display: block;
-          margin-right: 2.3576515979%;
-          width: 100%; }
-          .page-node-type-listing-page .views-element-container .view-bene-events .view-filters:last-child {
-            margin-right: 0; }
-        .page-node-type-listing-page .views-element-container .view-bene-events .view-content {
-          flex: 1 1 73%;
-          margin-left: 2%;
-          margin-left: 8.5298042998%; }
-          .page-node-type-listing-page .views-element-container .view-bene-events .view-content h2 {
-            margin-bottom: 10px; }
-          .page-node-type-listing-page .views-element-container .view-bene-events .view-content .field--name-bene-event-location {
-            display: none; }
-          .page-node-type-listing-page .views-element-container .view-bene-events .view-content .field__item p, .page-node-type-listing-page .views-element-container .view-bene-events .view-content .field__item div {
-            display: inline; } }
-
-.block-system-main-block article.node--view-mode-full .field--name-bene-event-date-range {
-  margin-top: 20px; }
-.block-system-main-block article.node--view-mode-full .field__label {
-  float: none;
-  clear: both;
-  margin-top: 10px; }
-.block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item div {
-  display: inline; }
-.block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item .organization, .block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item .address-line1 {
-  display: block; }
-
-.site-header .mobile-nav .menu {
-  text-align: center; }
 
 .page-node-type-listing-page .views-element-container {
   width: 90%; }
@@ -1363,36 +1251,7 @@ input {
   .page-node-type-listing-page .field--name-bene-date {
     display: none; } }
 
-.field--name-field-tiles .field__item .paragraph {
-  overflow: hidden; }
 .field--name-field-tiles .button-wrapper {
   margin-bottom: 30px; }
-.field--name-field-tiles .text-wrapper a {
-  text-decoration: none; }
-
-.field--name-bene-intro {
-  margin-bottom: 1.5rem;
-  margin-top: 1rem; }
-  .field--name-bene-intro h2 {
-    color: bbv(font-color-primary);
-    color: var(--general-font-primary-color);
-    font-size: 2rem;
-    font-style: italic;
-    font-weight: 600;
-    margin-top: 2rem; }
-  .field--name-bene-intro h3 {
-    font-size: 1.25rem;
-    font-weight: 400;
-    margin-bottom: 0;
-    margin-top: 1.125rem; }
-  .field--name-bene-intro p {
-    font-size: 1.125rem;
-    font-weight: 300;
-    line-height: 2rem;
-    margin-top: 0.75rem; }
-    @media (min-width: 769px) {
-      .field--name-bene-intro p {
-        font-size: 1.375rem;
-        line-height: 2.375rem; } }
 
 /*# sourceMappingURL=bene-style.css.map */

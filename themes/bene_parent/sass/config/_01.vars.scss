@@ -397,6 +397,7 @@ $vars: (
   margin-top: 0;
   text-align: center;
   text-transform: uppercase;
+  z-index: 20;
 }
 
     @include mq(desktop){
@@ -624,7 +625,6 @@ $vars: (
 
 %rch-txt-intro-text{
   @include vars(color, color-primary-a);
-  padding: 0 100px;
   margin-bottom: 35px;
   font-size: 15px;
   font-weight: normal;
@@ -896,70 +896,95 @@ $vars: (
            Inline Embeds
    ============================== */
 
-%r-txt-caption{
-  display: block;
-  margin-top: 40px;
+@include mq(mobile){
+  %embed-img{
+    margin: 5px;
+  }
 }
 
-%embedded-video{
-  width: 100%;
+@include mq(tablet){
+  %embed-video-half{
+    width: 50%;
+    margin: 0 auto;
+  }
+  %embed-img-left{
+    float: left;
+  }
+  %embed-img-caption{
+    float: left;
+  }
+  %embed-img-right{
+    float: right;
+  }
+  %embed-img-half{
+    width: 50vw;
+    picture img{
+      width: 100%;
+    }
+  }
 }
 
-%embedded-video-responsive-vid{
-  margin-bottom: -25%;
+@include mq(desktop){
+  %embed-video-half{
+    width: 50%;
+    margin: 0 auto;
+  }
+  %embed-img-left{
+    float: left;
+  }
+  %embed-img-caption{
+    float: left;
+  }
+  %embed-img-right{
+    float: right;
+  }
+  %embed-img-half{
+    width: 50vw;
+    picture img{
+      width: 100%;
+    }
+  }
 }
 
-%embedded-video-iframe{
-  height: 50%;
+%embed-imgs-default{
+  display: inline-block;
+  clear: both;
 }
 
-%embedded-img-caption{
+%embed-img-caption{
   font-size: 16px;
   font-style: italic;
-  margin-bottom: 25px;
-  margin-right: 10px;
-  padding: 20px 0;
-  display: inline-block;
 }
 
-@include mq(mobile) {
-  %embedded-img-align-left-right{
-    width: 100%;
-  }
+%embed-img{
+  margin: 5px;
 }
 
-@include mq(desktop) {
-  %embedded-img-embed-half{
-    width: 50%;
-  }
-}
-
-%embedded-img-full-width{
-  width: 100%;
-}
-
-%embedded-img-align-right{
-  text-align: right;
-  float: right;
-}
-
-%embedded-img-align-center{
-  width: 100%;
+%embed-img-center{
+  margin: 0 auto;
   text-align: center;
-  clear: both;
 }
 
-%embedded-social-media{
-  display: block;
+%embed-img-right-caption{
+  text-align: left;
+}
+
+
+
+
+/* ==============================
+            Events Page
+   ============================== */
+
+%events-pg-date{
+  margin-top: 20px;
+}
+
+%events-pg-location{
   float: none;
   clear: both;
+  margin-top: 10px;
 }
-
-%rich-text-img{
-  max-width: 100%;
-}
-
-
 
 /* ==============================
             Updates Page
@@ -996,11 +1021,114 @@ $vars: (
   }
 }
 
+%updates-pg-intro{
+  margin-bottom: rem(24);
+  margin-top: rem(16);
+}
+
+%updates-pg-intro-h2{
+  font-size: rem(32);
+  font-style: italic;
+  font-weight: 600;
+  margin-top: rem(32);
+}
+
+%updates-pg-intro-h3{
+  font-size: rem(20);
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: rem(18);
+}
+
+%updates-pg-intro-p{
+  font-size: rem(18);
+  font-weight: 300;
+  line-height: rem(32);
+  margin-top: rem(12);
+}
+
+@include mq(desktop){
+  %updates-pg-intro-p{
+    font-size: rem(22);
+    line-height: rem(38);
+  }
+}
+
+
+/* ==============================
+        General Page Settings
+   ============================== */
+
+%views-element-container{
+  clear: both;
+  padding: 0 2%;
+  width: 80%;
+}
+
+@include mq(desktop) {
+  %views-element-container{
+    @include span-columns(10);
+    @include shift(1);
+  }
+
+  %view-bene-events{
+    display: flex;
+    flex-direction: row;
+  }
+
+  %view-filters{
+    //@include span-columns(12);
+    flex: 1 1 25%;
+  }
+
+  %view-content{
+    flex: 1 1 73%;
+    margin-left: 2%;
+    @include shift(1);
+  }
+
+  %view-content-h2 {
+    margin-bottom: 10px;
+  }
+}
+
+%node__content{
+  clear: both;
+  padding: 2%;
+}
+
+%inner{
+  display: flex;
+  flex: 1;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+%site-wrapper{
+  margin: 0 auto;
+  position: relative;
+}
+
+//need better name
+%clear-float-add-padding{
+  clear: both;
+  padding: 0 2%;
+}
+
+@include mq(desktop){
+  %clear-float-add-padding{
+    @include span-columns(12);
+    @include shift(0.2);
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
 
 /* ==============================
         Newsletter
    ============================== */
+
 
 %newsletter{
   display: flex;
@@ -1292,4 +1420,8 @@ $vars: (
 
 %text-align-center{
   text-align: center;
+}
+
+%over-flow-hidden{
+  overflow: hidden;
 }

@@ -1,34 +1,26 @@
 .page-node-type-listing-page {
   .views-element-container {
-    clear: both;
-    padding: 0 2%;
-    width: 80%;
-    @include mq(desktop) {
-      @include span-columns(10);
-      @include shift(1);
-      .view-bene-events {
-        display: flex;
-        flex-direction: row;
-        .view-filters {
-          @include span-columns(12);
+    @extend %views-element-container;
+    .view-bene-events {
+      @extend %view-bene-events;
+
+      .view-filters {
+        @extend %view-filters;
+      }
+      .view-content {
+        @extend %view-content;
+
+        h2{
+          @extend %view-content-h2;
         }
-        .view-content {
-          flex: 1 1 73%;
-          margin-left: 2%;
-          @include shift(1);
 
-          h2{
-            margin-bottom: 10px;
-          }
+        .field--name-bene-event-location{
+          @extend %display-none;
+        }
 
-          .field--name-bene-event-location{
-            display: none;
-          }
-
-          .field__item{
-            p, div{
-              display: inline;
-            }
+        .field__item{
+          p, div{
+            @extend  %display-inline;
           }
         }
       }
@@ -36,46 +28,17 @@
   }
 }
 
-.page-node-type-listing-page {
-  .views-element-container {
-    clear: both;
-    padding: 0 2%;
-    @include mq(desktop) {
-      @include span-columns(10);
-      @include shift(1);
-      .view-bene-events {
-        display: flex;
-        flex-direction: row;
-        .view-filters {
-          flex: 1 1 25%;
-        }
-        .view-content {
-          flex: 1 1 73%;
-          margin-left: 2%;
-        }
-      }
-    }
-  }
-}
 
 .node--type-news .node__content{
-  clear: both;
-  padding: 2%;
+  @extend %node__content;
 }
 
-// Default layout
-$max-width: rem(1800) !global;
-
 .inner {
-  display: flex;
-  flex: 1;
-  margin: 0 auto;
-  max-width: 95%;
+  @extend %inner;
 }
 
 #site-wrapper {
-  margin: 0 auto;
-  position: relative;
+  @extend %site-wrapper;
 }
 
 #page,
@@ -94,82 +57,8 @@ $max-width: rem(1800) !global;
     margin-bottom: 0;
   }
 
-  .block-system-main-block .field--name-bene-intro,
   .field--name-bene-content .paragraph--type--rich-text,
   .block-system-main-block .field--name-bene-event-location {
-    clear: both;
-    padding: 0 2%;
-    @include mq(desktop) {
-      @include span-columns(12);
-      @include shift(0.2);
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
-  .paragraph--type--media .media-instagram,
-  .paragraph--type--media .media-tweet,
-  .paragraph--type--media .media-video {
-    clear: both;
-    padding: 0 2%;
-    @include mq(desktop) {
-      margin-left: 17.05961%;
-      margin-top: rem(48);
-      max-width: 65.88078%;
-    }
-  }
-
-  .paragraph--type--media .media-instagram > div,
-  .paragraph--type--media .media-tweet > div {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
-
-  .field--name-bene-content .paragraph--type--media,
-  .field--name-bene-content .paragraph--type--feature-full-width,
-  .field--name-bene-content .paragraph--type--tiles {
-    clear: both;
-  }
-  .paragraph--type--tiles {
-    @include outer-container;
-    max-width: 100%;
-  }
-}
-
-.page-node-type-listing-page {
-  .views-element-container {
-    clear: both;
-    padding: 0 2%;
-    width: 80%;
-    @include mq(desktop) {
-      @include span-columns(10);
-      @include shift(1);
-      .view-bene-events {
-        display: flex;
-        flex-direction: row;
-        .view-filters {
-          @include span-columns(12);
-        }
-        .view-content {
-          flex: 1 1 73%;
-          margin-left: 2%;
-          @include shift(1);
-
-          h2{
-            margin-bottom: 10px;
-          }
-
-          .field--name-bene-event-location{
-            display: none;
-          }
-
-          .field__item{
-            p, div{
-              display: inline;
-            }
-          }
-        }
-      }
-    }
+    @extend %clear-float-add-padding;
   }
 }

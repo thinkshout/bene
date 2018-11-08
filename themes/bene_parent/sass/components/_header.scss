@@ -8,7 +8,7 @@
   .desktop-nav, .mobile-nav .menu{@extend %mobile-menu;}
 
   .mobile-nav{@extend  %mobile-nav;
-    .menu{text-align: center;}
+    .menu{@extend %text-align-center;}
   }
 
   .desktop-nav{@extend %desktop-nav;}
