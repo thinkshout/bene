@@ -1,0 +1,21 @@
+.block-system-main-block article.node--view-mode-full{
+  .field--name-bene-event-date-range{
+    margin-top: 20px;
+  }
+
+  .field__label{
+    float: none;
+    clear: both;
+    margin-top: 10px;
+  }
+
+  .field--name-bene-event-location {
+    .field__item div{
+      display: inline;
+    }
+    .field__item .organization, .field__item .address-line1{
+      display: block;
+    }
+  }
+
+}

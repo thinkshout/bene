@@ -103,6 +103,7 @@ $vars: (
 %link{
   @include vars(color, color-secondary-c);
   cursor: pointer;
+  text-decoration: none;
 }
 
 %link-hover{
@@ -287,7 +288,7 @@ $vars: (
   text-align: center;
   width: 100%;
   top: 6.3125rem;
-  z-index: 20;
+  z-index: 200;
 }
 
 @include mq(desktop) {
@@ -386,6 +387,7 @@ $vars: (
   justify-content: center;
   width: 100vw;
   position: relative;
+  z-index: 20;
 }
 
 %title-block-heading{
@@ -960,6 +962,43 @@ $vars: (
 
 
 /* ==============================
+            Updates Page
+   ============================== */
+
+%updates-pg-h2{
+  font-size: 2rem;
+  line-height: 2.375rem;
+  font-weight: 400;
+  margin-top: 50px;
+}
+
+%updates-pg-a{
+  @include vars(color, color-primary-a);
+  text-decoration: none;
+}
+
+%updates-pg-node-content{
+  margin-top: 20px;
+}
+
+@include mq(mobile){
+  %updates-pg-content{
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+}
+@include mq(desktop){
+  %updates-pg-content{
+    @include span-columns(8);
+    @include shift(0.25);
+  }
+}
+
+
+
+/* ==============================
         Newsletter
    ============================== */
 
@@ -970,6 +1009,7 @@ $vars: (
   align-items: center;
   background-image: linear-gradient(#F2AF3F, #E26436);
   justify-content: center;
+  clear: both;
 }
 
 %newsletter-p{
@@ -1018,6 +1058,8 @@ $vars: (
 %region-footer{
   margin: 0 auto;
   max-width: 100%;
+  float: none;
+  clear: both;
 }
 
 %footer-background{
@@ -1214,7 +1256,10 @@ $vars: (
 }
 
 %padding-0{
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 %display-none{

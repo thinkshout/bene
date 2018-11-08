@@ -56,6 +56,10 @@
     }
   }
 
+  .node__content .text-wrapper .field--name-bene-intro{
+    @extend  %padding-0;
+  }
+
   .text-wrapper{
     @extend  %listing-pg-txt-wrapper;
 
@@ -111,7 +115,7 @@
 }
 
 .node--type-listing-page .field--name-bene-intro,
-.field--name-bene-content .paragraph--type--rich-text,
+.node--type-listing-page .paragraph--type--rich-text,
 .block-system-main-block .field--name-bene-event-date-range,
 .block-system-main-block .field--name-bene-event-location {
   @extend %listing-pg-intro-and-event-details;
