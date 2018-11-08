@@ -1,0 +1,99 @@
+.field--name-bene-content .paragraph--type--rich-text{
+  .figure.caption, article.caption{
+    @extend %r-txt-caption;
+  }
+
+  figure.embedded-entity.video{
+    @extend %embedded-video;
+
+    .image-caption{ @extend %display-none;}
+
+    .video-embed-field-responsive-video{
+      @extend %embedded-video-responsive-vid;
+      iframe {@extend %embedded-video-iframe;}
+    }
+  }
+
+  .field--name-uid, .field--name-created, .field--name-name{@extend %display-none;}
+
+  //photo caption
+  figure.embedded-entity.image .image-caption,
+  article.embedded-entity.image .image-caption {
+    @extend %embedded-img-caption;
+  }
+
+  //align-center image
+  .embedded-entity.align-center,
+  figure.align-center {
+    img {
+      @extend %display-block;
+    }
+  }
+
+  //align-left/right image
+  .embedded-entity.align-left, .embedded-entity.align-right,
+  figure.align-left, figure.align-right {
+    @extend %embedded-img-align-left-right;
+    img {
+      @extend %display-block;
+    }
+  }
+
+  figure.embedded-entity.embedded-half {
+    @extend %embedded-img-embed-half;
+  }
+
+  figure.embedded-entity.image{
+    .media--view-mode-embedded-half{
+      .field--type-image{
+        img{
+          @extend %embedded-img-full-width;
+        }
+      }
+    }
+  }
+
+  figure.embedded-entity.image.align-left{
+    @extend %float-left;
+  }
+
+  figure.embedded-entity.image.align-right{
+    @extend %embedded-img-align-right;
+
+    .field--type-image{
+      @extend %display-inline-block;
+    }
+  }
+
+  figure.embedded-entity.image.align-center, article.embedded-entity.image.align-center{
+    @extend %embedded-img-align-center;
+
+    .field--type-image{
+      @extend %display-inline-block;
+    }
+    picture{
+      @extend %embedded-img-full-width;
+      @extend %display-inline-block;
+    }
+  }
+
+  figure.instagram, figure.tweet, article.instagram, article.tweet{
+    @extend %embedded-social-media;
+
+    .field--name-embed-code{
+      @extend %text-align-center;
+
+      iframe, twitterwidget{
+        @extend %display-inline-block-important;
+      }
+    }
+
+    .image-caption{
+      @extend %display-none;
+    }
+  }
+}
+
+.paragraph--type--rich-text img{
+  @extend %rich-text-img;
+}

@@ -337,10 +337,14 @@ $vars: (
   %main-menu-button{
     &:last-child a{
       @include vars(background-color, color-secondary-c);
+      @include vars(color, color-primary-c);
       border-radius: 100px;
       width: 100px;
       text-align: center;
       padding: 0.5rem 1.5rem;
+      &:focus, &:active, &:hover{
+        @include vars(background-color, color-secondary-d);
+      }
     }
   }
 
@@ -716,6 +720,10 @@ $vars: (
       }
     }
 
+%full-width-pargph-link-div{
+  margin-top: 15px;
+}
+
 %full-width-pargph-link{
   @extend %button;
   margin-top: 10px;
@@ -727,9 +735,227 @@ $vars: (
 
 
 /* ==============================
-            Updates Page
+           Listing Page
+   ============================== */
+%listing-pg-container{
+  width: 100%;
+  padding: 0 1%;
+}
+
+%listing-pg-form-container{
+  @include span-columns(12);
+}
+
+    @include mq(tablet){
+      %listing-pg-form-container{
+        @include span-columns(12);
+        @include shift(-0.75);
+      }
+    }
+    @include mq(desktop){
+      %listing-pg-form-container{
+        @include span-columns(4);
+        @include shift(-0.5);
+      }
+    }
+
+%lising-pg-form{
+  width: 98%;
+  padding: 1rem;
+}
+
+    @include mq(tablet){
+      %lising-pg-form{
+        width: 100%;
+        margin-left: 10%;
+      }
+    }
+
+%listing-pg-label{
+  font-weight: 400;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+%listing-pg-input{
+  border-radius: 0;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+}
+
+    @include mq(tablet){
+      %listing-pg-input{
+        width: 90%;
+      }
+    }
+
+%listing-pg-date-input{
+  width: 100%;
+}
+
+    @include mq(tablet){
+      %listing-pg-date-input{
+        width: 90%;
+      }
+    }
+
+%listing-pg-form-submit{
+  padding: 5px 60px;
+}
+
+%listing-pg-article{
+  font-size: 1.25rem;
+  line-height: 2.375rem;
+}
+
+%listing-pg-image{
+  display: block;
+  float: none;
+  width: 100%;
+  margin-top: 50px;
+}
+
+  @include mq(desktop){
+    %listing-pg-image{
+      display: inline-block;
+      @include span-columns(3);
+      margin-top: 0;
+    }
+  }
+
+
+@include mq(desktop){
+  %listing-pg-node-content{
+    margin-top: 50px;
+    display: flex;
+  }
+}
+
+%listing-pg-img{
+  width: 100%;
+  height: auto;
+}
+
+@include mq(desktop){
+  %listing-pg-txt-wrapper{
+    display: inline-block;
+    @include span-columns(8);
+  }
+}
+
+%listing-pg-h2{
+  font-size: rem(32);
+  line-height: rem(38);
+  font-weight: 400;
+}
+
+%listing-pg-a{
+  @include vars(color, color-primary-a);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+%listing-pg-event-details{
+  padding-left: 0;
+  margin-left: 0;
+}
+
+//needs better name
+%listing-pg-intro-and-event-details{
+  clear: both;
+  padding: 0 2%;
+}
+
+    @include mq(desktop){
+      %listing-pg-intro-and-event-details{
+        @include span-columns(12);
+        @include shift(0.2);
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+%listing-pg-font-settings{
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 2rem;
+}
+
+%listing-pg-container-wrapper{
+  margin: 0 0 5%;
+  padding: 0 5%;
+}
+
+
+
+/* ==============================
+           Inline Embeds
    ============================== */
 
+%r-txt-caption{
+  display: block;
+  margin-top: 40px;
+}
+
+%embedded-video{
+  width: 100%;
+}
+
+%embedded-video-responsive-vid{
+  margin-bottom: -25%;
+}
+
+%embedded-video-iframe{
+  height: 50%;
+}
+
+%embedded-img-caption{
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 25px;
+  margin-right: 10px;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+@include mq(mobile) {
+  %embedded-img-align-left-right{
+    width: 100%;
+  }
+}
+
+@include mq(desktop) {
+  %embedded-img-embed-half{
+    width: 50%;
+  }
+}
+
+%embedded-img-full-width{
+  width: 100%;
+}
+
+%embedded-img-align-right{
+  text-align: right;
+  float: right;
+}
+
+%embedded-img-align-center{
+  width: 100%;
+  text-align: center;
+  clear: both;
+}
+
+%embedded-social-media{
+  display: block;
+  float: none;
+  clear: both;
+}
+
+%rich-text-img{
+  max-width: 100%;
+}
 
 
 
@@ -763,6 +989,9 @@ $vars: (
   font-size: 1.25rem;
   font-weight: 600;
   padding: rem(15) rem(20);
+  &:hover, &:focus, &:active{
+    background-color: transparent;
+  }
 
   &:after{
     content: '>';
@@ -772,6 +1001,11 @@ $vars: (
     transition: all 0.3s linear;
     display: inline-block;
     left: 0.25rem;
+    position: relative;
+  }
+
+  &:hover::after{
+    left: 0.5rem;
     position: relative;
   }
 }
@@ -805,11 +1039,11 @@ $vars: (
   margin: 0;
 }
 
-    @include mq(desktop){
-      %footer-menu{
-        flex: 0 1 20%;
-      }
-    }
+@include mq(desktop){
+  %footer-menu{
+    flex: 0 1 20%;
+  }
+}
 
 %footer-menu-item{
   line-height: 1.8rem;
@@ -818,14 +1052,18 @@ $vars: (
 
 %footer-email-link{
   @extend %link;
-  @extend %link-hover;
+  &:hover, &:focus, &:active{
+    @extend %link-hover;
+  }
 }
 
 %footer-menu-link{
-  @extend %link-hover;
   @include vars(color, color-primary-c);
   font-size: 12px;
   text-decoration: none;
+  &:hover, &:focus, &:active{
+    @extend %link-hover;
+  }
 }
 
 %footer-contact-links{
@@ -836,11 +1074,11 @@ $vars: (
   flex: 0 1 65%;
 }
 
-    @include mq(desktop){
-      %footer-contact-links{
-        flex: 0 1 20%;
-      }
-    }
+@include mq(desktop){
+  %footer-contact-links{
+    flex: 0 1 20%;
+  }
+}
 
 %footer-address{
   white-space: pre-line;
@@ -859,19 +1097,19 @@ $vars: (
   margin-top: 1.5rem;
 }
 
-    @include mq(desktop){
-      %footer-social-links{
-        flex: 0 1 30%;
-        align-items: baseline;
-        margin-top: 0;
-      }
-    }
+@include mq(desktop){
+  %footer-social-links{
+    flex: 0 1 30%;
+    align-items: baseline;
+    margin-top: 0;
+  }
+}
 
-    @include mq(mobile){
-      %footer-social-links{
-        margin: 50px 15%;
-      }
-    }
+@include mq(mobile){
+  %footer-social-links{
+    margin: 50px 15%;
+  }
+}
 
 %footer-social-links-spans{
   min-width: 25%;
@@ -879,17 +1117,17 @@ $vars: (
   display: inline-block;
 }
 
-    @include mq(desktop){
-      %footer-social-links-spans{
-        min-width: 0;
-      }
-    }
+@include mq(desktop){
+  %footer-social-links-spans{
+    min-width: 0;
+  }
+}
 
-    @include mq(phablet){
-      %footer-social-links-spans{
-        min-width: 10%;
-      }
-    }
+@include mq(phablet){
+  %footer-social-links-spans{
+    min-width: 10%;
+  }
+}
 
 %footer-social-links-a{
   margin-left: 0;
@@ -905,19 +1143,23 @@ $vars: (
   padding: 1rem;
   position: relative;
   font-size: 0;
+  &:hover, &:focus, &:active{
+    @include vars(background-color, color-secondary-d);
+    @include vars(border-color, color-secondary-d);
+  }
 }
 
-    @include mq(desktop){
-      %footer-social-links-a{
-        margin-left: 0.625rem;
-      }
-    }
+@include mq(desktop){
+  %footer-social-links-a{
+    margin-left: 0.625rem;
+  }
+}
 
-    @include mq(phablet){
-      %footer-social-links-a{
-        margin-left: 10px;
-      }
-    }
+@include mq(phablet){
+  %footer-social-links-a{
+    margin-left: 10px;
+  }
+}
 
 %footer-social-links-fb{
   background-image: url(../images/svgs/facebook-f.svg);
@@ -941,20 +1183,68 @@ $vars: (
   font-size: 12px;
 }
 
-    @include mq(tablet){
-      %footer-copyright{
-        position: absolute;
-        bottom: 6rem;
-        right: -5%;
-        text-align: right;
-      }
-    }
+@include mq(tablet){
+  %footer-copyright{
+    position: absolute;
+    bottom: 6rem;
+    right: -5%;
+    text-align: right;
+  }
+}
 
-    @include mq(phablet){
-      %footer-copyright{
-        margin-top: 20px;
-        bottom: 6rem;
-      }
-    }
+@include mq(phablet){
+  %footer-copyright{
+    margin-top: 20px;
+    bottom: 6rem;
+  }
+}
 
 
+
+/* ==============================
+      Tools & Repetitive Things
+   ============================== */
+
+%width-100{
+  width: 100%;
+}
+
+%margin-0{
+  margin: 0;
+}
+
+%padding-0{
+  padding: 0;
+}
+
+%display-none{
+  display: none;
+}
+
+%display-block{
+  display: block;
+}
+
+%display-inline{
+  display: inline;
+}
+
+%display-inline-block{
+  display: inline-block;
+}
+
+%display-inline-block-important{
+  display: inline-block !important;
+}
+
+%float-left{
+  float: left;
+}
+
+%float-none{
+  float: none;
+}
+
+%text-align-center{
+  text-align: center;
+}

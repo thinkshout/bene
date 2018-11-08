@@ -20,7 +20,7 @@
 
   .field--type-link{
     @extend %full-width-pargph-z-index;
-    @extend %full-width-pargph-link;
+    @extend %full-width-pargph-link-div;
     a{@extend %full-width-pargph-link;}
   }
 }
