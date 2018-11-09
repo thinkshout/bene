@@ -7,6 +7,10 @@
 
   .desktop-nav, .mobile-nav .menu{@extend %mobile-menu;}
 
+  .desktop-nav .menu--utility .menu-item a{
+    @extend %menu-utility;
+  }
+
   .mobile-nav{@extend  %mobile-nav;
     .menu{@extend %text-align-center;}
   }

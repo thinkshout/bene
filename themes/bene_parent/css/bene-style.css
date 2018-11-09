@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import "https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700";
+@import "https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900";
 html {
   box-sizing: border-box; }
 
@@ -16,7 +17,8 @@ html {
   --color-secondary-c: #F2AF3F;
   --color-secondary-d: #DB830E;
   --color-secondary-e: #5FBA47;
-  --font-family-primary: 'Open Sans', sans-serif;
+  --font-family-primary: 'Work Sans', sans-serif;
+  --font-family-secondary: 'Oswald', sans-serif;
   --font-weight-regular: 400;
   --font-weight-medium: 600;
   --font-weight-bold: 700;
@@ -35,13 +37,15 @@ body {
   box-sizing: border-box;
   font-style:  normal;
   font-style: var(--font-style-normal );
-  font-family:  'Open Sans', sans-serif;
+  font-family:  'Work Sans', sans-serif;
   font-family: var(--font-family-primary ); }
 
 h1, h2, h3, h4, h5, h6 {
   color:  #000000;
   color: var(--color-primary-d );
-  margin: 1rem 0; }
+  margin: 1rem 0;
+  font-family:  'Oswald', sans-serif;
+  font-family: var(--font-family-secondary ); }
 
 h1 {
   font-size: 75px;
@@ -98,6 +102,8 @@ h5 {
   color: var(--color-primary-c );
   background-color:  #F2AF3F;
   background-color: var(--color-secondary-c );
+  font-family:  'Oswald', sans-serif;
+  font-family: var(--font-family-secondary );
   border-radius: 100px;
   font-size: 16px;
   letter-spacing: 0;
@@ -117,7 +123,7 @@ h5 {
 p, p.standard, blockquote, .field--name-field-tiles .field__item .paragraph {
   font-size: 1rem;
   line-height: 2rem;
-  font-family:  'Open Sans', sans-serif;
+  font-family:  'Work Sans', sans-serif;
   font-family: var(--font-family-primary );
   color:  #000000;
   color: var(--color-primary-d ); }
@@ -125,7 +131,7 @@ p, p.standard, blockquote, .field--name-field-tiles .field__item .paragraph {
 ul li, ol li {
   font-size: 1rem;
   line-height: 2rem;
-  font-family:  'Open Sans', sans-serif;
+  font-family:  'Work Sans', sans-serif;
   font-family: var(--font-family-primary );
   color:  #000000;
   color: var(--color-primary-d ); }
@@ -184,9 +190,15 @@ tbody td {
 .site-header .menu li, .site-header .menu a {
   list-style: none;
   text-decoration: none;
+  font-size: 18px;
   color:  #ffffff;
   color: var(--color-primary-c );
+  font-family:  'Oswald', sans-serif;
+  font-family: var(--font-family-secondary );
   text-transform: uppercase; }
+
+.site-header .desktop-nav .menu--utility .menu-item a {
+  font-size: 14px; }
 
 .site-header .menu li:hover, .site-header .menu a:hover {
   list-style: none;
@@ -447,7 +459,9 @@ tbody td {
   z-index: 2;
   margin: 0 auto 50px auto;
   max-width: 56.25rem;
-  position: relative; }
+  position: relative;
+  font-family:  'Oswald', sans-serif;
+  font-family: var(--font-family-secondary ); }
 
 @media (max-width: 414px) {
   .block-bene-home-page-feature-block .field--name-bene-title {
@@ -607,7 +621,9 @@ tbody td {
   font-size: 30px;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-weight: bold; }
+  font-weight: bold;
+  font-family:  'Oswald', sans-serif;
+  font-family: var(--font-family-secondary ); }
 
 @media (min-width: 769px) {
   .feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-title {

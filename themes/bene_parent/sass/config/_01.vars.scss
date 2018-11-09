@@ -12,8 +12,8 @@ $vars: (
         color-secondary-e: #5FBA47, //green
 
   //Fonts
-        font-family-primary: "'Open Sans', sans-serif",
-        font-family-secondary: '',
+        font-family-primary: "'Work Sans', sans-serif",
+        font-family-secondary: "'Oswald', sans-serif",
         font-weight-regular: 400,
         font-weight-medium: 600,
         font-weight-bold: 700,
@@ -50,6 +50,7 @@ $vars: (
 %h1-h6{
   @include vars(color, color-primary-d);
   margin: rem(16) 0;
+  @include vars(font-family, font-family-secondary);
 }
 
 %h1{
@@ -113,6 +114,7 @@ $vars: (
 %button{
   @include vars(color, color-primary-c);
   @include vars(background-color, color-secondary-c);
+  @include vars(font-family, font-family-secondary);
   border-radius: 100px;
   font-size: 16px;
   letter-spacing: 0;
@@ -201,8 +203,14 @@ $vars: (
 %menu-link{
   list-style: none;
   text-decoration: none;
+  font-size: 18px;
   @include vars(color, color-primary-c);
+  @include vars(font-family, font-family-secondary);
   text-transform: uppercase;
+}
+
+%menu-utility{
+  font-size: 14px;
 }
 
 %menu-link-hover{
@@ -511,6 +519,7 @@ $vars: (
   margin: 0 auto 50px auto;
   max-width: rem(900);
   position: relative;
+  @include vars(font-family, font-family-secondary);
 }
 
     @include mq(mobile) {
@@ -703,6 +712,7 @@ $vars: (
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: bold;
+  @include vars(font-family, font-family-secondary);
 }
 
     @include mq(desktop){
