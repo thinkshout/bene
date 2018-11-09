@@ -1,15 +1,15 @@
 $vars: (
   //Colors
-        color-primary-a: #248BCB, //light blue
+        color-primary-a: #50CFE3, //light blue
         color-primary-b: #1E5375, //dark blue
         color-primary-c: #ffffff, //white
         color-primary-d: #000000, //black
-        color-primary-e: #2d3332, //dark grey
-        color-secondary-a: #E26436, //light orange
-        color-secondary-b: #C63E02,  //dark orange
-        color-secondary-c: #F2AF3F, //light yellow
-        color-secondary-d: #DB830E, //dark yellow
-        color-secondary-e: #5FBA47, //green
+        color-primary-e: #129FB5, //dark grey
+        color-secondary-a: '', //light orange
+        color-secondary-b: '',  //dark orange
+        color-secondary-c: '', //light yellow
+        color-secondary-d: '', //dark yellow
+        color-secondary-e: '', //green
 
   //Fonts
         font-family-primary: "'Work Sans', sans-serif",
@@ -102,18 +102,18 @@ $vars: (
 }
 
 %link{
-  @include vars(color, color-secondary-c);
+  @include vars(color, color-primary-a);
   cursor: pointer;
   text-decoration: none;
 }
 
 %link-hover{
-  @include vars(color, color-secondary-d);
+  @include vars(color, color-primary-b);
 }
 
 %button{
   @include vars(color, color-primary-c);
-  @include vars(background-color, color-secondary-c);
+  @include vars(background-color, color-primary-a);
   @include vars(font-family, font-family-secondary);
   border-radius: 100px;
   font-size: 16px;
@@ -127,7 +127,7 @@ $vars: (
 }
 
 %button-hover{
-  @include vars(background-color, color-secondary-d);
+  @include vars(background-color, color-primary-b);
   @include vars(color, color-primary-c);
 }
 
@@ -154,7 +154,7 @@ $vars: (
 }
 
 %table-header {
-  @include vars(background-color, color-secondary-c);
+  @include vars(background-color, color-primary-e);
   @include vars(color, color-primary-c);
   padding: 10px;
 }
@@ -170,7 +170,7 @@ $vars: (
    ============================== */
 
 %site-header{
-  @include vars(background-color, color-primary-e);
+  @include vars(background-color, color-primary-c);
   padding: 20px 10px;
   display: flex;
   min-height: 100px;
@@ -204,7 +204,7 @@ $vars: (
   list-style: none;
   text-decoration: none;
   font-size: 18px;
-  @include vars(color, color-primary-c);
+  @include vars(color, color-primary-d);
   @include vars(font-family, font-family-secondary);
   text-transform: uppercase;
 }
@@ -288,7 +288,7 @@ $vars: (
 }
 
 %primary-nav-region{
-  @include vars(background-color, color-primary-e);
+  @include vars(background-color, color-primary-c);
   display: flex;
   flex-direction: column-reverse;
   left: 0;
@@ -345,14 +345,14 @@ $vars: (
 
   %main-menu-button{
     &:last-child a{
-      @include vars(background-color, color-secondary-c);
+      @include vars(background-color, color-primary-a);
       @include vars(color, color-primary-c);
       border-radius: 100px;
       width: 100px;
       text-align: center;
       padding: 0.5rem 1.5rem;
       &:focus, &:active, &:hover{
-        @include vars(background-color, color-secondary-d);
+        @include vars(background-color, color-primary-b);
       }
     }
   }
@@ -453,13 +453,15 @@ $vars: (
   opacity: 0.7;
   &:focus, &:active, &:hover{
     @extend %link-hover;
-    @include vars(color, color-primary-c);
+    @include vars(color, color-primary-b);
   }
 }
 
 /* ==============================
         Home Page Feature
    ============================== */
+
+
 %hmpg-feature{
   @include vars(background-color, color-primary-e);
   @include vars(color, color-primary-c);
@@ -701,7 +703,6 @@ $vars: (
   }
 }
 
-
 %full-width-pargph-z-index{
   z-index: 10;
 }
@@ -754,6 +755,8 @@ $vars: (
 /* ==============================
            Listing Page
    ============================== */
+
+
 %listing-pg-container{
   width: 100%;
   padding: 0 1%;
@@ -842,7 +845,6 @@ $vars: (
     }
   }
 
-
 @include mq(desktop){
   %listing-pg-node-content{
     margin-top: 50px;
@@ -904,8 +906,6 @@ $vars: (
   margin: 0 0 5%;
   padding: 0 5%;
 }
-
-
 
 /* ==============================
            Inline Embeds
@@ -988,8 +988,6 @@ $vars: (
 %embed-img-right-caption{
   text-align: left;
 }
-
-
 
 
 /* ==============================
@@ -1079,7 +1077,6 @@ $vars: (
   padding: 2%;
 }
 
-
 /* ==============================
         General Page Settings
    ============================== */
@@ -1160,7 +1157,7 @@ $vars: (
   flex-direction: row;
   padding: 2rem 1rem;
   align-items: center;
-  background-image: linear-gradient(#F2AF3F, #E26436);
+  background-image: linear-gradient(#50CFE3, #129FB5);
   justify-content: center;
   clear: both;
 }
@@ -1189,7 +1186,7 @@ $vars: (
   &:after{
     content: '>';
     margin-left: 0.5rem;
-    @include vars(color, color-primary-a);
+    @include vars(color, color-primary-d);
     background-color: transparent;
     transition: all 0.3s linear;
     display: inline-block;
@@ -1216,7 +1213,7 @@ $vars: (
 }
 
 %footer-background{
-  @include vars(background-color, color-primary-e);
+  @include vars(background-color, color-primary-c);
 }
 
 %footer-container{
@@ -1253,7 +1250,7 @@ $vars: (
 }
 
 %footer-menu-link{
-  @include vars(color, color-primary-c);
+  @include vars(color, color-primary-a);
   font-size: 12px;
   text-decoration: none;
   &:hover, &:focus, &:active{
@@ -1262,7 +1259,7 @@ $vars: (
 }
 
 %footer-contact-links{
-  @include vars(color, color-primary-c);
+  @include vars(color, color-primary-a);
   line-height: 1.8rem;
   font-size: 12px;
   padding-left: 10%;
@@ -1327,20 +1324,20 @@ $vars: (
 %footer-social-links-a{
   margin-left: 0;
   border-radius: 0%;
-  @include vars(background-color, color-primary-c);
+  @include vars(background-color, color-primary-a);
   @include vars(height, social-media-icon-height);
   @include vars(width, social-media-icon-height);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 62% 62%;
   border: 0.0625rem solid;
-  @include vars(border-color, color-primary-c);
+  @include vars(border-color, color-primary-a);
   padding: 1rem;
   position: relative;
   font-size: 0;
   &:hover, &:focus, &:active{
-    @include vars(background-color, color-secondary-d);
-    @include vars(border-color, color-secondary-d);
+    @include vars(background-color, color-primary-b);
+    @include vars(border-color, color-primary-b);
   }
 }
 
@@ -1393,8 +1390,6 @@ $vars: (
     bottom: 6rem;
   }
 }
-
-
 
 /* ==============================
       Tools & Repetitive Things
