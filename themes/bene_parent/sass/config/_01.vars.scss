@@ -102,18 +102,18 @@ $vars: (
 }
 
 %link{
-  @include vars(color, color-primary-a);
+  @include vars(color, color-secondary-c);
   cursor: pointer;
   text-decoration: none;
 }
 
 %link-hover{
-  @include vars(color, color-primary-b);
+  @include vars(color, color-secondary-d);
 }
 
 %button{
   @include vars(color, color-primary-c);
-  @include vars(background-color, color-primary-a);
+  @include vars(background-color, color-secondary-c);
   @include vars(font-family, font-family-secondary);
   border-radius: 100px;
   font-size: 16px;
@@ -127,7 +127,7 @@ $vars: (
 }
 
 %button-hover{
-  @include vars(background-color, color-primary-b);
+  @include vars(background-color, color-secondary-d);
   @include vars(color, color-primary-c);
 }
 
@@ -154,7 +154,7 @@ $vars: (
 }
 
 %table-header {
-  @include vars(background-color, color-primary-e);
+  @include vars(background-color, color-secondary-c);
   @include vars(color, color-primary-c);
   padding: 10px;
 }
@@ -170,7 +170,7 @@ $vars: (
    ============================== */
 
 %site-header{
-  @include vars(background-color, color-primary-c);
+  @include vars(background-color, color-primary-e);
   padding: 20px 10px;
   display: flex;
   min-height: 100px;
@@ -204,7 +204,7 @@ $vars: (
   list-style: none;
   text-decoration: none;
   font-size: 18px;
-  @include vars(color, color-primary-d);
+  @include vars(color, color-primary-c);
   @include vars(font-family, font-family-secondary);
   text-transform: uppercase;
 }
@@ -288,7 +288,7 @@ $vars: (
 }
 
 %primary-nav-region{
-  @include vars(background-color, color-primary-c);
+  @include vars(background-color, color-primary-e);
   display: flex;
   flex-direction: column-reverse;
   left: 0;
@@ -345,14 +345,14 @@ $vars: (
 
   %main-menu-button{
     &:last-child a{
-      @include vars(background-color, color-primary-a);
+      @include vars(background-color, color-secondary-c);
       @include vars(color, color-primary-c);
       border-radius: 100px;
       width: 100px;
       text-align: center;
       padding: 0.5rem 1.5rem;
       &:focus, &:active, &:hover{
-        @include vars(background-color, color-primary-b);
+        @include vars(background-color, color-secondary-d);
       }
     }
   }
@@ -408,11 +408,11 @@ $vars: (
   z-index: 20;
 }
 
-    @include mq(desktop){
-      %title-block-heading{
-        font-size: 3.75rem;
-      }
-    }
+@include mq(desktop){
+  %title-block-heading{
+    font-size: 3.75rem;
+  }
+}
 
 %sub-nav-block{
   background-image: linear-gradient(#248BCB, #1E5375);
@@ -453,15 +453,13 @@ $vars: (
   opacity: 0.7;
   &:focus, &:active, &:hover{
     @extend %link-hover;
-    @include vars(color, color-primary-b);
+    @include vars(color, color-primary-c);
   }
 }
 
 /* ==============================
         Home Page Feature
    ============================== */
-
-
 %hmpg-feature{
   @include vars(background-color, color-primary-e);
   @include vars(color, color-primary-c);
@@ -483,19 +481,19 @@ $vars: (
   }
 }
 
-    @include mq(mobile) {
-      %hmpg-feature{
-        background-size: cover;
-        background-position: center top;
-        max-height: rem(539);
-      }
-    }
+@include mq(mobile) {
+  %hmpg-feature{
+    background-size: cover;
+    background-position: center top;
+    max-height: rem(539);
+  }
+}
 
-    @include mq(desktop) {
-      %hmpg-feature{
-        min-height: rem(500);
-      }
-    }
+@include mq(desktop) {
+  %hmpg-feature{
+    min-height: rem(500);
+  }
+}
 
 %hmpg-feature-lead{
   font-size: rem(20);
@@ -504,13 +502,13 @@ $vars: (
   z-index: 1;
 }
 
-    @include mq(mobile) {
-      %hmpg-feature-lead{
-        font-size: rem(16);
-        line-height: rem(20);
-        padding-top: 7rem;
-      }
-    }
+@include mq(mobile) {
+  %hmpg-feature-lead{
+    font-size: rem(16);
+    line-height: rem(20);
+    padding-top: 7rem;
+  }
+}
 
 %hmpg-feature-title{
   font-size: 50px;
@@ -524,19 +522,19 @@ $vars: (
   @include vars(font-family, font-family-secondary);
 }
 
-    @include mq(mobile) {
-      %hmpg-feature-title{
-        font-size: 40px;
-        line-height: 45px;
-      }
-    }
+@include mq(mobile) {
+  %hmpg-feature-title{
+    font-size: 40px;
+    line-height: 45px;
+  }
+}
 
-    @include mq(phablet) {
-      %hmpg-feature-title{
-        font-size: 40px;
-        line-height: 45px;
-      }
-    }
+@include mq(phablet) {
+  %hmpg-feature-title{
+    font-size: 40px;
+    line-height: 45px;
+  }
+}
 
 %hmpg-feature-btn-wrapper{
   position: relative;
@@ -643,13 +641,13 @@ $vars: (
   line-height: 24px;
 }
 
-    @include mq(desktop){
-      %rch-txt-intro-text{
-        font-size: 22px;
-        font-weight: normal;
-        line-height: 34px;
-      }
-    }
+@include mq(desktop){
+  %rch-txt-intro-text{
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 34px;
+  }
+}
 
 %rch-txt-wysiwyg-text{
   @include vars(color, color-primary-d);
@@ -703,6 +701,7 @@ $vars: (
   }
 }
 
+
 %full-width-pargph-z-index{
   z-index: 10;
 }
@@ -716,11 +715,11 @@ $vars: (
   @include vars(font-family, font-family-secondary);
 }
 
-    @include mq(desktop){
-      %full-width-pargph-title{
-        font-size: 40px;
-      }
-    }
+@include mq(desktop){
+  %full-width-pargph-title{
+    font-size: 40px;
+  }
+}
 
 %full-width-pargph-text{
   @include vars(color, color-primary-c);
@@ -729,14 +728,14 @@ $vars: (
   font-weight: normal;
 }
 
-    @include mq(desktop){
-      %full-width-pargph-text{
-        font-size: 22px;
-        line-height: 34px;
-        max-width: 65%;
-        margin: 10px auto;
-      }
-    }
+@include mq(desktop){
+  %full-width-pargph-text{
+    font-size: 22px;
+    line-height: 34px;
+    max-width: 65%;
+    margin: 10px auto;
+  }
+}
 
 %full-width-pargph-link-div{
   margin-top: 15px;
@@ -755,8 +754,6 @@ $vars: (
 /* ==============================
            Listing Page
    ============================== */
-
-
 %listing-pg-container{
   width: 100%;
   padding: 0 1%;
@@ -766,30 +763,30 @@ $vars: (
   @include span-columns(12);
 }
 
-    @include mq(tablet){
-      %listing-pg-form-container{
-        @include span-columns(12);
-        @include shift(-0.75);
-      }
-    }
-    @include mq(desktop){
-      %listing-pg-form-container{
-        @include span-columns(4);
-        @include shift(-0.5);
-      }
-    }
+@include mq(tablet){
+  %listing-pg-form-container{
+    @include span-columns(12);
+    @include shift(-0.75);
+  }
+}
+@include mq(desktop){
+  %listing-pg-form-container{
+    @include span-columns(4);
+    @include shift(-0.5);
+  }
+}
 
 %lising-pg-form{
   width: 98%;
   padding: 1rem;
 }
 
-    @include mq(tablet){
-      %lising-pg-form{
-        width: 100%;
-        margin-left: 10%;
-      }
-    }
+@include mq(tablet){
+  %lising-pg-form{
+    width: 100%;
+    margin-left: 10%;
+  }
+}
 
 %listing-pg-label{
   font-weight: 400;
@@ -805,21 +802,21 @@ $vars: (
   width: 100%;
 }
 
-    @include mq(tablet){
-      %listing-pg-input{
-        width: 90%;
-      }
-    }
+@include mq(tablet){
+  %listing-pg-input{
+    width: 90%;
+  }
+}
 
 %listing-pg-date-input{
   width: 100%;
 }
 
-    @include mq(tablet){
-      %listing-pg-date-input{
-        width: 90%;
-      }
-    }
+@include mq(tablet){
+  %listing-pg-date-input{
+    width: 90%;
+  }
+}
 
 %listing-pg-form-submit{
   padding: 5px 60px;
@@ -837,13 +834,14 @@ $vars: (
   margin-top: 50px;
 }
 
-  @include mq(desktop){
-    %listing-pg-image{
-      display: inline-block;
-      @include span-columns(3);
-      margin-top: 0;
-    }
+@include mq(desktop){
+  %listing-pg-image{
+    display: inline-block;
+    @include span-columns(3);
+    margin-top: 0;
   }
+}
+
 
 @include mq(desktop){
   %listing-pg-node-content{
@@ -887,14 +885,14 @@ $vars: (
   padding: 0 2%;
 }
 
-    @include mq(desktop){
-      %listing-pg-intro-and-event-details{
-        @include span-columns(12);
-        @include shift(0.2);
-        margin-left: 0;
-        margin-right: 0;
-      }
-    }
+@include mq(desktop){
+  %listing-pg-intro-and-event-details{
+    @include span-columns(12);
+    @include shift(0.2);
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 
 %listing-pg-font-settings{
   font-size: 1rem;
@@ -906,6 +904,8 @@ $vars: (
   margin: 0 0 5%;
   padding: 0 5%;
 }
+
+
 
 /* ==============================
            Inline Embeds
@@ -1013,6 +1013,7 @@ $vars: (
   display: inline-block !important;
 }
 
+
 /* ==============================
             Events Page
    ============================== */
@@ -1100,6 +1101,7 @@ $vars: (
   padding: 2%;
 }
 
+
 /* ==============================
         General Page Settings
    ============================== */
@@ -1180,7 +1182,7 @@ $vars: (
   flex-direction: row;
   padding: 2rem 1rem;
   align-items: center;
-  background-image: linear-gradient(#50CFE3, #129FB5);
+  background-image: linear-gradient(#F2AF3F, #E26436);
   justify-content: center;
   clear: both;
 }
@@ -1209,7 +1211,7 @@ $vars: (
   &:after{
     content: '>';
     margin-left: 0.5rem;
-    @include vars(color, color-primary-d);
+    @include vars(color, color-primary-a);
     background-color: transparent;
     transition: all 0.3s linear;
     display: inline-block;
@@ -1236,7 +1238,7 @@ $vars: (
 }
 
 %footer-background{
-  @include vars(background-color, color-primary-c);
+  @include vars(background-color, color-primary-e);
 }
 
 %footer-container{
@@ -1273,7 +1275,7 @@ $vars: (
 }
 
 %footer-menu-link{
-  @include vars(color, color-primary-a);
+  @include vars(color, color-primary-c);
   font-size: 12px;
   text-decoration: none;
   &:hover, &:focus, &:active{
@@ -1282,7 +1284,7 @@ $vars: (
 }
 
 %footer-contact-links{
-  @include vars(color, color-primary-a);
+  @include vars(color, color-primary-c);
   line-height: 1.8rem;
   font-size: 12px;
   padding-left: 10%;
@@ -1347,20 +1349,20 @@ $vars: (
 %footer-social-links-a{
   margin-left: 0;
   border-radius: 0%;
-  @include vars(background-color, color-primary-a);
+  @include vars(background-color, color-primary-c);
   @include vars(height, social-media-icon-height);
   @include vars(width, social-media-icon-height);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 62% 62%;
   border: 0.0625rem solid;
-  @include vars(border-color, color-primary-a);
+  @include vars(border-color, color-primary-c);
   padding: 1rem;
   position: relative;
   font-size: 0;
   &:hover, &:focus, &:active{
-    @include vars(background-color, color-primary-b);
-    @include vars(border-color, color-primary-b);
+    @include vars(background-color, color-secondary-d);
+    @include vars(border-color, color-secondary-d);
   }
 }
 
@@ -1413,6 +1415,8 @@ $vars: (
     bottom: 6rem;
   }
 }
+
+
 
 /* ==============================
       Tools & Repetitive Things
