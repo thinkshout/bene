@@ -75,23 +75,15 @@ article.embedded-entity{
 //Social Media
 
 .embedded-entity.instagram{
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  float: none;
-  clear: both;
+  @extend %embed-instagram;
   iframe{
-    display: inline-block !important;
+    @extend %embed-instagram-iframe;
   }
 }
 
 .embedded-entity.tweet{
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  float: none;
-  clear: both;
+  @extend %embed-tweet;
   .twitter-tweet{
-    display: inline-block !important;
+    @extend %embed-twitter-tweet;
   }
 }

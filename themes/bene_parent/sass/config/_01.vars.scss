@@ -989,6 +989,29 @@ $vars: (
   text-align: left;
 }
 
+%embed-instagram{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  float: none;
+  clear: both;
+}
+
+%embed-instagram-iframe{
+  display: inline-block !important;
+}
+
+%embed-tweet{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  float: none;
+  clear: both;
+}
+
+%embed-twitter-tweet{
+  display: inline-block !important;
+}
 
 /* ==============================
             Events Page
