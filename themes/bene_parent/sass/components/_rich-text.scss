@@ -28,3 +28,7 @@
     &:focus, &:hover, &:active{@extend %button-hover;}
   }
 }
+
+.page-node-type-page .field--name-bene-content .paragraph--type--rich-text, .page-node-type-page .block-system-main-block .field--name-bene-event-location, .page-node-type-listing-page .field--name-bene-content .paragraph--type--rich-text, .page-node-type-listing-page .block-system-main-block .field--name-bene-event-location, .page-node-type-event .field--name-bene-content .paragraph--type--rich-text, .page-node-type-event .block-system-main-block .field--name-bene-event-location, .page-node-type-news .field--name-bene-content .paragraph--type--rich-text, .page-node-type-news .block-system-main-block .field--name-bene-event-location{
+  @extend %rch-text-background-color;
+}

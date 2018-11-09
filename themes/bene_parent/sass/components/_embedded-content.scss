@@ -44,7 +44,7 @@ article.embedded-entity{
 //Images align-left
 .embedded-entity.align-left{
   @extend %display-block;
-  @extend %float-none;
+  @extend %embed-float-none;
   article.media--type-image{
     @extend %embed-img-left;
   }
@@ -56,7 +56,7 @@ article.embedded-entity{
 //Images align-right
 .embedded-entity.align-right{
   @extend %display-block;
-  @extend %float-none;
+  @extend %embed-float-none;
   article.media--type-image{
     @extend %embed-img-right;
   }
@@ -72,3 +72,26 @@ article.embedded-entity{
   }
 }
 
+//Social Media
+
+.embedded-entity.instagram{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  float: none;
+  clear: both;
+  iframe{
+    display: inline-block !important;
+  }
+}
+
+.embedded-entity.tweet{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  float: none;
+  clear: both;
+  .twitter-tweet{
+    display: inline-block !important;
+  }
+}

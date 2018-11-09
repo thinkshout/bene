@@ -615,6 +615,7 @@ $vars: (
 %rch-txt-intro-heading{
   margin: 30px 0;
   text-transform: uppercase;
+  padding: 0 2%;
 }
 
 %rch-txt-intro-link{
@@ -641,6 +642,10 @@ $vars: (
 
 %rch-txt-wysiwyg-text{
   @include vars(color, color-primary-d);
+}
+
+%rch-text-background-color{
+  @include vars(background-color, color-primary-c);
 }
 
 /* ==============================
@@ -900,6 +905,9 @@ $vars: (
   %embed-img{
     margin: 5px;
   }
+  %embed-float-none{
+    float: none;
+  }
 }
 
 @include mq(tablet){
@@ -912,6 +920,7 @@ $vars: (
   }
   %embed-img-caption{
     float: left;
+    clear: both;
   }
   %embed-img-right{
     float: right;
@@ -934,6 +943,7 @@ $vars: (
   }
   %embed-img-caption{
     float: left;
+    clear: both;
   }
   %embed-img-right{
     float: right;
@@ -1051,7 +1061,12 @@ $vars: (
   %updates-pg-intro-p{
     font-size: rem(22);
     line-height: rem(38);
+    padding: 0 2%;
   }
+}
+
+%updates-pg-bene-date-time{
+  padding: 2%;
 }
 
 

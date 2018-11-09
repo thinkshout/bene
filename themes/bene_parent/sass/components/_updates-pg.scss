@@ -29,8 +29,14 @@
     @extend %updates-pg-node-content;
   }
 
+
+
   .field--name-bene-intro p,
   .field--name-bene-intro{
     @extend %listing-pg-font-settings;
   }
+}
+
+.field--name-bene-date time{
+  @extend %updates-pg-bene-date-time;
 }
