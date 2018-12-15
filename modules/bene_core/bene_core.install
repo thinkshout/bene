@@ -53,3 +53,12 @@ function bene_core_update_8501() {
   $config_storage = \Drupal::service('config.storage');
   $config_storage->write('embed.button.media_browser', $source->read('embed.button.media_browser'));
 }
+
+/**
+ * Give Bene Features configuration access to staff admin users.
+ */
+function bene_core_update_8502() {
+  $staff_admin = Role::load('staff_admin');
+  $staff_admin->grantPermission('configure bene features');
+  $staff_admin->trustData()->save();
+}
