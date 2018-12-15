@@ -1,0 +1,5 @@
+bene_promo_redirect.configure:
+  title: Promotional Redirect
+  parent: bene.feature.config
+  route_name: bene_promo_redirect.configure
+  description: 'Temporarily redirect one or more pages to a specific page or site.'
