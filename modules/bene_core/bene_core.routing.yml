@@ -1,0 +1,8 @@
+# Bene Features configuration page
+bene.feature.config:
+  path: '/admin/config/bene_features'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Bene Features'
+  requirements:
+    _permission: 'configure bene features'
