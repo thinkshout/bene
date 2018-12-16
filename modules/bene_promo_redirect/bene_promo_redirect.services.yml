@@ -1,5 +1,0 @@
-services:
-  redirect_promo.event_subscriber:
-    class: '\Drupal\bene_promo_redirect\EventSubscriber\RedirectPromo'
-    tags:
-    - { name: 'event_subscriber' }
