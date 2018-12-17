@@ -38,9 +38,9 @@ class PromoRedirectSettings extends ConfigFormBase {
 
     $settings = $this->config('bene_promo_redirect.settings')->get();
     $form['dest'] = [
-      '#title' => "Redirect Destination",
+      '#title' => 'Redirect Destination',
       '#type' => 'textfield',
-      '#default_value' => isset($settings['dest']) ? $settings['dest'] : "",
+      '#default_value' => isset($settings['dest']) ? $settings['dest'] : '',
       '#description' => t('The URL to send visitors to. Start with "http" if external.'),
       // @todo validation
     ];
