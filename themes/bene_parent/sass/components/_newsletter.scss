@@ -1,48 +1,77 @@
 // Default Styles (Mobile First!)
 .external-newsletter {
-  @extend %external-newsletter;
-
+  align-items: center;
+  background-image: linear-gradient(bbv(color-secondary-second), bbv(color-secondary-first));
+  background-image: var(--newsletter-gradient-color);
+  color: bbv(font-color-tertiary);
+  color: var(--newsletter-font-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: rem(12);
   .mailchimp-signup-subscribe-form,
   .mailchimp-newsletter-mergefields {
-    @extend %mailchimp-form;
+    display: flex;
+    justify-content: center;
   }
   .mailchimp-newsletter-mergefields {
-    @extend %mailchimp-newsletter-mergefields;
+    width: 75%
   }
   .form-actions {
     input {
-      @extend %form-actions-input;
+      height: 3.125rem;
+      padding: 1rem 1.875rem;
+      margin-top: .9rem;
     }
   }
   .form-item {
-    @extend %form-item;
+    flex-grow: 1;
+    width: 30%;
+    margin: 0 10px;
   }
   h2, p, a {
-    @extend %form-item-p;
+    margin: 0 auto;
+    max-width: 94%;
+    text-align: center;
   }
   label {
-    @extend %form-item-label;
+    color: bbv(font-color-tertiary); // in case css variables are not supported
+    color: var(--newsletter-font-color);
   }
   p {
-    @extend %form-item-p;
+    color: bbv(font-color-tertiary); // in case css variables are not supported
+    color: var(--newsletter-font-color);
+    margin: rem(6) 0;
+    font-family: bbv(font-family-secondary);
+    font-family: var(--general-font-family-secondary);
   }
   a {
-    @extend %form-item-link;
-
+    color: bbv(color-primary-third);
+    color: var(--newsletter-link-color);
     &:after {
-      @extend %form-item-link-arrow;
+      @include all-transition;
+      content: ' →';
+      display: inline-block;
+      left: rem(4);
+      position: relative;
     }
     &:hover:after {
-      @extend %form-item-link-hover-arrow;
+      left: rem(8);
     }
   }
   a.button {
-    @extend %form-item-link-button;
+    background-color: bbv(background-color-tertiary); // in case css variables are not supported
+    background-color: var(--newsletter-button-color);
+    font-size: rem(12);
+    font-weight: 600;
+    padding: rem(15) rem(20);
+    text-transform: none;
     &:after {
-      @extend %form-item-link-button-after;
+      content: none;
     }
     &:hover {
-      @extend %form-item-link-button-hover;
+      background-color: bbv(color-primary-second);
+      background-color: var(--newsletter-button-hover-color);
     }
   }
 }

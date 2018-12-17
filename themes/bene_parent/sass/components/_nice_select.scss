@@ -1,74 +1,174 @@
+// Default variables
+$ns-font_size: 14px !default;
+$ns-font_size_small: 12px !default;
+
+$ns-input_border_radius: 0px !default;
+$ns-input_height: 50px !default;
+$ns-input_height_small: 36px !default;
+$ns-dropdown_padding: 18px !default;
+
+$ns-gray_dark: #444 !default;
+$ns-gray: #999 !default;
+$ns-gray_light: #e8e8e8 !default;
+$ns-gray_lighter: #f6f6f6 !default;
+$ns-primary_light: $ns-gray !default;
+$ns-arrow_color: $ns-gray !default;
+
 // Style the dropdown
 .nice-select {
-    @extend %nice-select;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: bbv(background-color-secondary); // in case css variables are not supported
+  background-color: var(--general-secondary-background-color);
+  border-radius: $ns-input_border_radius;
+  border: none;
+  box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-family: inherit;
+  font-size: $ns-font_size;
+  font-weight: 700;
+  height: $ns-input_height;
+  line-height: $ns-input_height - 2;
+  outline: none;
+  padding-left: $ns-dropdown_padding;
+  padding-right: $ns-dropdown_padding + 12;
+  position: relative;
+  text-align: left !important;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  white-space: nowrap;
+  width: 100%;
+  .current {
+    color: bbv(font-color-accent); // in case css variables are not supported
+    color: var(--general-font-accent-color);
+  }
 
-    .current {
-      @extend %nice-select-current;
-    }
+  // Arrow
+  &:after {
+    @include transform(rotate(90deg));
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    background: transparent url(../images/svgs/arrow.svg) no-repeat center center/cover;
+    content: "";
+    height: rem(14);
+    display: inline-block;
+    position: absolute;
+    right: rem(32);
+    top: 50%;
+    width: rem(16);
+    margin-top: rem(-6);
+    z-index: 2;
+  }
 
-    // Arrow
+  &.open {
+    @extend :active;
     &:after {
-      @extend %nice-select-arrow;
+      transform: rotate(-90deg);
     }
-
-    &.open {
-      @extend %nice-select-open;
-
-      &:after {
-        @extend %nice-select-open-after;
-      }
-      .list {
-        @extend %nice-select-open-list;
-      }
-    }
-    &.disabled {
-      @extend %nice-select-disabled;
-      &:after {
-        @extend %nice-select-disabled-after;
-      }
-    }
-
-    // Modifiers
-    &.wide {
-      @extend %nice-select-wide;
-    }
-    &.right {
-      @extend %nice-select-right;
-    }
-    &.small {
-      @extend %nice-select-small;
-      &:after {
-        @extend %nice-select-small-after;
-      }
-      .option {
-        @extend %nice-select-small-option;
-      }
-    }
-
-    // List and options
     .list {
-      @extend %nice-select-list;
-      &:hover .option:not(:hover) {
-        @extend %nice-select-list-hover;
-      }
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1) translateY(0);
+    }
+  }
+  &.disabled {
+    border-color: lighten($ns-gray_light, 2%);
+    color: bbv(font-color-secondary);
+    color: var(--general-font-secondary-color);
+    pointer-events: none;
+    &:after {
+      border-color: lighten($ns-arrow_color, 20%);
+    }
+  }
+
+  // Modifiers
+  &.wide {
+    width: 100%;
+    .list {
+      left: 0 !important;
+      right: 0 !important;
+    }
+  }
+  &.right {
+    float: right;
+    .list {
+      left: auto;
+      right: 0;
+    }
+  }
+  &.small {
+    font-size: $ns-font_size_small;
+    height: $ns-input_height_small;
+    line-height: $ns-input_height_small - 2;
+    &:after {
+      height: 4px;
+      width: 4px;
     }
     .option {
-      @extend %nice-select-option;
-      &:hover, &.focus, &.selected.focus {
-        @extend %nice-select-option-hover;
-      }
-      &.selected {
-        @extend %nice-select-option-selected;
-      }
-      &.disabled {
-        @extend %nice-select-option-disabled;
-      }
+      line-height: $ns-input_height_small - 2;
+      min-height: $ns-input_height_small - 2;
     }
+  }
 
-
+  // List and options
+  .list {
+    background-color: #fff;
+    border-radius: $ns-input_border_radius;
+    box-shadow: 0 0 0 1px rgba($ns-gray_dark, .11);
+    box-sizing: border-box;
+    margin-top: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%; left: 0;
+    transform-origin: 50% 0;
+    transform: scale(.75) translateY(- $ns-input_height / 2);
+    transition: all .2s cubic-bezier(0.5, 0, 0, 1.25), opacity .15s ease-out;
+    width: 100%;
+    z-index: 9;
+    &:hover .option:not(:hover) {
+      background-color: transparent !important;
+    }
+  }
+  .option {
+    cursor: pointer;
+    font-weight: 400;
+    line-height: $ns-input_height - 2;
+    list-style: none;
+    min-height: $ns-input_height - 2;
+    outline: none;
+    padding-left: $ns-dropdown_padding;
+    padding-right: $ns-dropdown_padding + 11;
+    text-align: left;
+    transition: all 0.2s;
+    width: 100%;
+    &:hover, &.focus, &.selected.focus {
+      background-color: $ns-gray_lighter;
+    }
+    &.selected {
+      font-weight: bold;
+    }
+    &.disabled {
+      background-color: transparent;
+      color: $ns-gray;
+      cursor: default;
+    }
+  }
 }
 
 // Use display instead of opacity for IE <= 10
 .no-csspointerevents .nice-select {
-  @extend %no-csspointerevents-nice-select;
+  .list {
+    display: none;
+  }
+  &.open {
+    .list {
+      display: block;
+    }
+  }
 }

@@ -1,24 +1,32 @@
 // Default Styles (Mobile First!)
 .block-bene-footer-block {
-  @extend %block-bene-footer-block;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: bbv(background-color-primary);
+  background-color: var(--footer-block-background-color);
+
 
   .menu {
     a {
-      @extend %block-bene-footer-block-menu-link;
-
+      color: bbv(color-text-primary);
+      color: var(--footer-menu-link-color);
+      font-size: rem(14);
+      font-weight: 600;
       &:hover, &:focus, &.is-active {
-        @extend %block-bene-footer-block-menu-link-hover;
+        color: bbv(color-primary-first); // in case css variables are not supported
+        color: var(--footer-menu-link-hover-color);
       }
     }
 
     .menu-item {
-      @extend %block-bene-footer-block-menu-menu-item;
+      line-height: rem(30);
 
       a {
-        @extend %block-bene-footer-block-menu-menu-item-a;
-
+        @include font-style('bold'); // font-menu-primary
+        fontsize: rem(16);
         &:hover, &:focus, &.is-active {
-          @extend %block-bene-footer-block-menu-menu-item-a-hover;
+          color: bbv(color-text-primary); // in case css variables are not supported
+          color: var(--footer-menu-link-color);
         }
       }
     }
@@ -28,41 +36,69 @@
   .contact-links,
   .contact-links .additional-contact p,
   .contact-links .additional-footer p {
-    @extend %block-bene-footer-block-copyright;
+    @include font-style('regular');
+    font-size: rem(14);
+    line-height: rem(25);
   }
 
   .contact-links {
-    @extend %block-bene-footer-block-contact-links;
+    font-size: rem(13);
     .address {
-      @extend %block-bene-footer-block-contact-links-address;
+      white-space: pre-line;
     }
     .phone, .email, .additional-contact {
-      @extend %block-bene-footer-block-contact-links-additional-contact;
+      display: block;
       p {
-        @extend %block-bene-footer-block-contact-links-additional-contact-p;
+        font-size: rem(12);
+        margin: rem(5) 0;
       }
     }
   }
 
   .additional-footer {
     p {
-      @extend %block-bene-footer-block-additional-footer-p;
+      font-size: rem(14);
+      margin: 0 rem(5) 0;
     }
   }
 
   .social-links {
     a {
-      @extend %block-bene-footer-block-social-links-a;
-
+      background-color: bbv(background-color-secondary);
+      background-color: var(--footer-social-background-color);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 62% 62%;
+      border: rem(1) solid bbv(background-color-secondary);
+      border: rem(1) solid var(--footer-social-border-color);
+      border-radius: 50%;
+      display: inline-block;
+      height: bbv(social-media-icon-size); // in case css variables are not supported
+      height: var(--footer-social-icon-size);
+      margin-bottom: rem(10);
+      margin-left: rem(10);
+      padding: 1rem;
+      position: relative;
+      text-indent: -9999px;
+      width: bbv(social-media-icon-size); // in case css variables are not supported
+      width: var(--footer-social-icon-size);
       &:hover, &:focus, &:active {
-        @extend %block-bene-footer-block-social-links-a-hover;
+        background-color: bbv(background-color-tertiary);
+        background-color: var(--footer-social-hover-background-color);
       }
     }
-    @extend %block-bene-footer-block-social-links;
+    .facebook { background-image:  url('../images/svgs/facebook-f.svg'); }
+    .google { background-image: url('../images/svgs/google-plus.svg'); }
+    .instagram { background-image: url('../images/svgs/instagram.svg'); }
+    .linkedin { background-image: url('../images/svgs/linkedin.svg'); }
+    .pinterest { background-image: url('../images/svgs/pinterest-p.svg'); }
+    .tumblr { background-image: url('../images/svgs/tumblr.svg'); }
+    .twitter { background-image: url('../images/svgs/twitter.svg'); }
+    .youtube { background-image: url('../images/svgs/youtube-play.svg'); }
   }
 
   .copyright {
-    @extend %block-bene-footer-block-copyright;
+    font-size: rem(12);
   }
 }
 

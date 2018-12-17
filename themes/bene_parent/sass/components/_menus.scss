@@ -1,75 +1,139 @@
 // Default Styles (Mobile First!)
 
-.site_branding {
-  @extend %branding;
-}
-
 .block-system-branding-block {
-  @extend %block-system-branding-block;
+  font-size: rem(18);
+  font-style: italic;
+  font-weight: 300;
+  text-align-last: center;
 }
 .mobile-menu-toggle {
-  @extend %mobile-menu-toggle;
+  display: inline-block;
+  float: right;
+  height: 50px;
+  width: 80px;
   div {
-    @extend %mobile-menu-toggle-div;
+    height: 100%;
+    position: relative;
+    top: -6px;
+    width: 100%;
+    z-index: 9999;
     span {
-      @extend %mobile-menu-toggle-div-span;
+      background-color: bbv(background-color-primary); // in case css variables are not supported
+      background-color: var(--general-primary-background-color);
+      display: block;
+      height: 6px;
+      left: 25%;
+      position: absolute;
+      top: 50%;
+      transition: background-color 0.3s;
+      width: 43.76%;
+      z-index: 9999;
       &:before,
       &:after {
-        @extend %mobile-menu-toggle-div-span-before-and-after;
+        background: bbv(background-color-secondary); // in case css variables are not supported
+        background: var(--general-secondary-background-color);
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        transform: translateY(-150%);
+        transition: transform 0.3s, background-color 0.3s;
+        width: 100%;
+        z-index: 9999;
       }
       &:after {
-        @extend %mobile-menu-toggle-div-span-after;
+        transform: translateY(150%);
       }
     }
     &:hover span {
-      @extend %mobile-menu-toggle-div-hover;
+      background: bbv(background-color-tertiary); // in case css variables are not supported
+      background: var(--general-tertiary-background-color);
       &:before,
       &:after {
-        @extend %mobile-menu-toggle-div-hover-before-and-after;
+        background: bbv(background-color-tertiary); // in case css variables are not supported
+        background: var(--general-tertiary-background-color);
       }
     }
   }
   &.active {
     div span {
-      @extend %mobile-menu-toggle-active-div-span;
+      background-color: transparent;
       &:before,
       &:after {
-        @extend %mobile-menu-toggle-active-div-span-before-and-after;
+        background: bbv(background-color-tertiary); // in case css variables are not supported
+        background: var(--general-tertiary-background-color);
+        transform: rotate(45deg) translateY(0);
+        transition: transform 0.3s;
       }
       &:after {
-        @extend %mobile-menu-toggle-active-div-span-after;
+        transform: rotate(-45deg) translateY(0) ;
       }
     }
   }
 }
 .menu-item--collapsed {
-  @extend %menu-item--collapsed;
+  list-style-image: none;
+  list-style-type: none;
 }
 .mobile-nav {
   .region-primary-nav {
-    @extend %mobile-nav-menu-region-primary-nav;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: bbv(background-color-primary); // in case css variables are not supported
+    background-color: var(--general-primary-background-color);
+    left: 0;
+    position: absolute;
+    top: rem(101);
+    width: 100%;
+    z-index: 20;
   }
   .menu a {
-    @extend %mobile-nav-menu-region-primary-nav-menu-link;
+    border-bottom: 1px solid bbv(font-color-accent); // in case css variables are not supported
+    border-bottom: 1px solid var(--general-font-accent-color);
+    color: bbv(font-color-link); // in case css variables are not supported
+    color: var(--general-link-color);
+    display: inline-block;
+    font-size: rem(18);
+    font-weight: 600;
+    padding: rem(25) rem(33);
+    position: relative;
+    text-transform: uppercase;
+    width: 100%;
     &:after {
-      @extend %mobile-nav-menu-region-primary-nav-menu-link-after;
+      @include all-transition;
+      background: transparent url('../images/svgs/line-arrow.svg') no-repeat center center /cover;
+      content: "";
+      display: inline-block;
+      height: rem(19);
+      position: absolute;
+      right: rem(33);
+      top: rem(25);
+      width: rem(9);
     }
     &.is-active {
-      @extend %mobile-nav-menu-region-primary-nav-menu-link-after-is-active;
+      color: bbv(font-color-hover-link); // in case css variables are not supported
+      color: var(--general-link-hover-color);
     }
   }
 }
 .mobile-nav .menu--utility .menu li {
   a {
-    @extend %menu-item-link;
+    font-size: rem(15);
+    font-weight: 400;
+    padding: rem(15) rem(33);
     &:after {
-      @extend %menu-item-link-after;
+      top: rem(15);
     }
   }
   &:last-child a {
-    @extend %menu-item-last-child-link;
+    background-color: bbv(background-color-secondary); // in case css variables are not supported
+    background-color: var(--general-secondary-background-color);
+    color: bbv(font-color-primary); // in case css variables are not supported
+    color: var(--general-font-primary-color);
+    font-weight: 600;
     &.is-active {
-      @extend %menu-item-last-child-link-is-active;
+      color: bbv(font-color-accent); // in case css variables are not supported
+      color: var(--general-font-accent-color);
     }
   }
 }
@@ -99,22 +163,26 @@
   }
   .desktop-nav .menu--utility .menu-item {
     a {
-      @include vars(color, color-text-secondary-menu-over-color-primary-background);
-      @include vars(font-size, primary-font-size-footnote);
+      color: bbv(font-color-link); // in case css variables are not supported
+      color: var(--general-link-color);
+      font-size: rem(14);
       &:hover, &:focus, &.is-active {
-        @include vars(color, color-text-hover-secondary-menu-over-color-primary-background);
+        color: bbv(font-color-hover-link); // in case css variables are not supported
+        color: var(--general-link-hover-color);
       }
     }
     &:last-child a {
       @include button;
-      @include vars(color, button-primary-text-and-outline-color);
-      @include vars(background-color, button-primary-color-background);
+      color: bbv(font-color-accent);
+      color: var(--general-font-accent-color);
+      background-color: bbv(background-color-tertiary);
+      background-color: var(--general-tertiary-background-color);
       &:hover {
-        @include vars(color, button-primary-hover-text-and-outline-color);
-        @include vars(background-color, button-primary-hover-color-background);
+        background-color: bbv(background-color-secondary);
+        background-color: var(--general-secondary-background-color);
       }
-      @include vars(font-size, primary-font-size-footnote); // was rem(12)
-      @include vars(font-weight, primary-font-bold);
+      font-size: rem(12);
+      font-weight: 700;
       letter-spacing: 0;
       padding: rem(10) rem(15);
       top: 6px;
@@ -122,12 +190,14 @@
   }
   .desktop-nav .menu--main .menu-item {
     a {
-      @include vars(color, color-text-menu-over-color-primary-background);
-      @include vars(font-weight, primary-font-bold);
+      color: bbv(font-color-tertiary); // in case css variables are not supported
+      color: var(--general-font-tertiary-color);
+      font-weight: 700;
       letter-spacing: rem(0.5);
       text-transform: uppercase;
       &:hover, &:focus, &.is-active {
-        @include vars(color, color-text-hover-menu-over-color-primary-background);
+        color: bbv(font-color-hover-link); // in case css variables are not supported
+        color: var(--general-link-hover-color);
       }
       &.is-active {
         cursor: default;
@@ -137,7 +207,15 @@
 }
 
 .block-bene-sub-navigation-block {
-  @extend %block-bene-sub-navigation-block;
+  background-image: var(--interior-menu-background-gradient);
+  padding: 1.5rem 2%;
+  text-align: center;
+
+  ul.menu{
+    text-align: center;
+  }
+
+  ////// ADD CHILD STUFF HERE
 }
 
 // Extra Large Desktop: min-width: 1240px.

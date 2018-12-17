@@ -1,38 +1,98 @@
 // Default Styles (Mobile First!)
 input[type="search"], textarea {
-  @extend %input-search-textarea;
+  -webkit-appearance: none;
+  background-color: bbv(color-primary-first);
+  background-color: var(--form-input-background-color);
+  border-radius: 0;
+  border: none;
+  box-sizing: border-box;
+  color: bbv(color-primary-first);
+  color: var(--form-input-font-color);
+  font-size: rem(16);
+  font-weight: 600;
+  height: rem(50);
+  padding: rem(18) rem(50) rem(18) rem(22);
+  width: 100%;
+  &::-webkit-input-placeholder {
+    color: bbv(color-primary-first);
+    color: var(--form-input-placeholder-color);
+  }
+  &::-moz-placeholder {
+    color: bbv(color-primary-first);
+    color: var(--form-input-placeholder-color);
+  }
+  &:-ms-input-placeholder {
+    color: bbv(color-primary-first);
+    color: var(--form-input-placeholder-color);
+  }
+  &:-moz-placeholder {
+    color: bbv(color-primary-first);
+    color: var(--form-input-placeholder-color);
+  }
+  &:focus {
+    outline: 1px solid bbv(color-primary-first);
+    outline: 1px solid var(--form-input-outline-color);
+  }
 }
 
 .js-facets-checkbox-links,
 .js-form-type-checkbox {
   input {
-    @extend %js-form-type-checkbox-input;
+    display: none;
   }
   label {
-    @extend %js-form-type-checkbox-label;
-
+    color: bbv(color-primary-first);
+    color: var(--form-label-color);
+    display: inline-block;
+    font-size: rem(18);
+    margin-bottom: rem(8);
+    margin-left: 0;
+    padding-left: rem(38);
+    text-indent: rem(-38);
+    width: 100%;
     &:hover {
-      @extend %js-form-type-checkbox-label-hover;
+      cursor: pointer;
     }
     &::before {
-      @extend %js-form-type-checkbox-label-checkmark;
-
+      @include default-transition;
+      border-radius: rem(1);
+      border: 1px solid bbv(color-primary-first);
+      border: 1px solid var(--form-label-before-color);
+      color: transparent;
+      content: "✓";
+      display: inline-block;
+      font-size: rem(32);
+      height: rem(24);
+      left: 0;
+      line-height: 1;
+      margin-right: 2%;
+      padding-left: 3px;
+      position: relative;
+      text-indent: rem(0);
+      top: rem(1);
+      width: rem(26);
       &:hover {
-        @extend %js-form-type-checkbox-label-checkmark-hover;
+        cursor: pointer;
       }
     }
   }
   input[type="checkbox"]:checked + label::before {
-    @extend %js-form-type-checkbox-input-checkbox-checked-label-before;
+    color: bbv(color-primary-first);
+    color: var(--form-input-checkbox-color);
+    text-shadow: 1px 1px 1px rgba(240, 240, 240, 0.5);
   }
 }
 
 label {
-  @extend %form-label;
+  color: bbv(color-primary-first);
+  color: var(--form-label-color);
+  font-weight: 600;
+  margin-bottom: rem(24);
 }
 
 input:focus {
-  @extend %form-input-focus;
+  outline-color: bbv(color-primary-first);
+  outline-color: var(--form-input-outline-color);
 }
 
 input[type='text'],
@@ -41,26 +101,64 @@ input[type='email'],
 input[type='password'],
 input[type='tel'],
 textarea {
-  @extend %form-input;
+  -webkit-appearance: none;
+  background-color: bbv(bene-main-white);
+  border-radius: rem(3);
+  border: 1px solid bbv(color-primary-first);
+  border: 1px solid var(--form-input-textarea-border-color);
+  box-sizing: border-box;
+  color: bbv(color-primary-first);
+  color: var(--form-input-textarea-color);
+  font-size: rem(16);
+  font-weight: 600;
+  height: rem(50);
+  padding: rem(18) rem(50) rem(18) rem(22);
+  width: 100%;
+  &::-webkit-input-placeholder {
+    color: bbv(color-primary-first);
+    color: var(--form-input-textarea-placeholder-color);
+  }
+  &::-moz-placeholder {
+    color: bbv(color-primary-first);
+    color: var(--form-input-textarea-placeholder-color);
+  }
+  &:-ms-input-placeholder {
+    color: bbv(color-primary-first);
+    color: var(--form-input-textarea-placeholder-color);
+  }
+  &:-moz-placeholder {
+    color: bbv(color-primary-first);
+    color: var(--form-input-textarea-placeholder-color);
+  }
+  &:focus {
+    outline: none;
+  }
 }
 .user-login-form {
   .form-item {
-    @extend %form-item;
+    text-align: left;
   }
   .description {
-    @extend %form-description;
+    display: none;
   }
 }
 
 input[type='submit'] {
-  @extend %form-input-submit;
+  @include button;
+  background-color: bbv(color-primary-second);
+  background-color: var(--form-button-background-color);
+  color: bbv(color-primary-first);
+  color: var(--form-button-color);
   &:hover {
-    @extend %form-input-submit-hover;
+    background-color: bbv(color-primary-first);
+    background-color: var(--form-button-hover-background-color);
   }
+  border: none;
 }
 
 .region-content form {
-  @extend %region-content-form;
+  width: 95%;
+  padding: 1rem;
 }
 
 // Specific ranges - use sparingly.

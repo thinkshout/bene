@@ -1,45 +1,53 @@
-
-.site-footer {
-  @extend %general-page;
-}
-
-.region-footer {
-  @extend %branding;
-}
-
 // Default Styles (Mobile First!)
 .region-footer .bene-contact-links .fieldset-wrapper {
-  @extend %region-footer-layout;
+  display: flex;
+  flex-direction: column;
 }
 
 .block-bene-footer-block {
-  @extend %footer-block-layout;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: rem(42);
+  margin-top: rem(24);
+  padding: 0 2%;
+  position: relative;
 
   .menu {
-    @extend %footer-block-layout-menu;
+    flex: 0 1 35%;
   }
 
   .contact-links {
-    @extend %footer-block-layout-contact-links;
+    flex: 0 1 65%;
   }
 
   .additional-footer {
-    @extend %footer-block-layout-additional-footer;
+    flex: 0 1 100%;
   }
 
   div.social-links {
-    @extend %footer-block-layout-social-links;
-
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    justify-content: center;
+    margin-top: rem(24);
     span {
-      @extend %footer-block-layout-social-links-span;
+      min-width: 25%;
+      text-align: center;
       a {
-        @extend %footer-block-layout-social-links-span-a;
+        margin-left: 0;
       }
     }
   }
 
   .copyright {
-    @extend %footer-block-layout-copyright;
+    bottom: rem(-32);
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
   }
 }
 

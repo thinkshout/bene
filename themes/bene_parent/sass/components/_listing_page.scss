@@ -1,40 +1,50 @@
 // Default Styles (Mobile First!)
 .page-node-type-listing-page {
-  @extend %page-node-type-listing-page;
+
 }
 
 .field--name-bene-listing-view {
-  @extend %field--name-bene-listing-view;
+  background-color: bbv(background-color-secondary);
+  background-color: var(--listing-page-background-color);
 
   .view-filters {
-    @extend %view-filters;
+    @include span-columns(3);
   }
 }
 
 .view-content {
-  @extend %view-content;
+  display: block;
 }
 
 .view-row {
-  @extend %view-row;
+  clear: both;
 }
 
 .node--view-mode-teaser .image,
 .node--view-mode-search-result .image {
-  @extend %node--view-mode-search-result-image;
+  @include span-columns(3);
 
   img {
-    @extend %node--view-mode-search-result-image-img;
+    height: auto;
+    width: 100%;
   }
 }
 
 .node--view-mode-teaser .text,
 .node--view-mode-search-result .text {
-  @extend %node--view-mode-search-result-text;
+  @include span-columns(8);
+  @include shift(0.25);
+
+  @include mq(mobile) {
+    @include span-columns(12);
+    @include shift(0);
+  }
 }
 
 .node--view-mode-teaser .field--name-bene-intro {
-  @extend %node--view-mode-teaser-field--name-bene-intro;
+  padding: 0;
+  margin-left: 0;
+  width: 100%;
 }
 
 // Specific ranges - use sparingly.
@@ -52,7 +62,7 @@
 @include mq(desktop) {
   .page-node-type-listing-page {
     .block-system-main-block .field--name-bene-intro {
-      @include vars(font-size, primary-font-size-small);
+      font-size: rem(22);
       margin-bottom: rem(32);
       margin-top: rem(24);
     }
