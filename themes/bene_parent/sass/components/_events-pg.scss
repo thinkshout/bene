@@ -1,0 +1,19 @@
+.block-system-main-block article.node--view-mode-full{
+  .field--name-bene-event-date-range{
+    @extend %events-pg-date;
+  }
+
+  .field__label{
+    @extend %events-pg-location;
+  }
+
+  .field--name-bene-event-location {
+    .field__item div{
+      @extend %display-inline;
+    }
+    .field__item .organization, .field__item .address-line1{
+      @extend %display-block;
+    }
+  }
+
+}

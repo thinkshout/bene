@@ -1,0 +1,42 @@
+.field--name-bene-intro {
+  @extend %updates-pg-intro;
+  h2 {
+    @extend %updates-pg-intro-h2;
+  }
+  h3 {
+    @extend %updates-pg-intro-h3;
+  }
+  p {
+    @extend %updates-pg-intro-p;
+  }
+}
+
+.node--type-news{
+  h2{
+    @extend %updates-pg-h2;
+
+    a{
+      @extend  %updates-pg-a;
+    }
+  }
+}
+
+
+.view-bene-news .view-content {
+  @extend %updates-pg-content;
+
+  .node__content{
+    @extend %updates-pg-node-content;
+  }
+
+
+
+  .field--name-bene-intro p,
+  .field--name-bene-intro{
+    @extend %listing-pg-font-settings;
+  }
+}
+
+.field--name-bene-date time{
+  @extend %updates-pg-bene-date-time;
+}

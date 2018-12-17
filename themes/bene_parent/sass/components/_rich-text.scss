@@ -1,0 +1,34 @@
+.page-node-type-page .field--name-bene-intro{
+  @extend %rch-txt-intro;
+   h1, h2, h3, h4, h5, h6{@extend %rch-txt-intro-heading;}
+
+  a{@extend %rch-txt-intro-link;}
+
+  p{@extend %rch-txt-intro-text;}
+
+  a.button{
+    @extend %button;
+    &:focus, &:hover, &:active{@extend %button-hover;}
+  }
+}
+
+.page-node-type-page .paragraph--type--rich-text{
+  @extend %rch-txt-intro;
+  h1, h2, h3, h4, h5, h6{@extend %rch-txt-intro-heading;}
+
+  a{@extend %rch-txt-intro-link;}
+
+  p{
+    @extend %rch-txt-intro-text;
+    @extend %rch-txt-wysiwyg-text;
+  }
+
+  a.button{
+    @extend %button;
+    &:focus, &:hover, &:active{@extend %button-hover;}
+  }
+}
+
+.page-node-type-page .field--name-bene-content .paragraph--type--rich-text, .page-node-type-page .block-system-main-block .field--name-bene-event-location, .page-node-type-listing-page .field--name-bene-content .paragraph--type--rich-text, .page-node-type-listing-page .block-system-main-block .field--name-bene-event-location, .page-node-type-event .field--name-bene-content .paragraph--type--rich-text, .page-node-type-event .block-system-main-block .field--name-bene-event-location, .page-node-type-news .field--name-bene-content .paragraph--type--rich-text, .page-node-type-news .block-system-main-block .field--name-bene-event-location{
+  @extend %rch-text-background-color;
+}
