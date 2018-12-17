@@ -59,6 +59,8 @@ function bene_core_update_8501() {
  */
 function bene_core_update_8502() {
   $staff_admin = Role::load('staff_admin');
-  $staff_admin->grantPermission('configure bene features');
-  $staff_admin->trustData()->save();
+  if ($staff_admin) {
+    $staff_admin->grantPermission('configure bene features');
+    $staff_admin->trustData()->save();
+  }
 }
