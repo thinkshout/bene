@@ -44,6 +44,7 @@ function bene_promo_redirect_page_attachments(array &$page) {
               'destination' => $config->get('dest'),
               'destinationDomain' => $destination_parts['host'],
             ];
+            $page['#cache']['tags'][] = 'config:bene_promo_redirect.settings';
           }
         }
       }
