@@ -1187,6 +1187,10 @@ $vars: (
   clear: both;
 }
 
+%newsletter-h2{
+  font-size: 22px;
+}
+
 %newsletter-p{
   @include vars(color, color-primary-c);
   margin: 30px 0;

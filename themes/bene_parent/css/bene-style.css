@@ -1047,6 +1047,9 @@ tbody td {
   justify-content: center;
   clear: both; }
 
+.block-bene-newsletter-signup-block h2 {
+  font-size: 22px; }
+
 .block-bene-newsletter-signup-block p {
   color:  #ffffff;
   color: var(--color-primary-c );
