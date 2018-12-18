@@ -1,12 +1,12 @@
 //-- VENDOR
 @import 'lib/bourbon/bourbon';
 @import 'lib/neat/neat';
+@import 'https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700';
+@import 'https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900';
+
+@import '../../../profiles/bene/themes/bene_parent/sass/config/*';
+@import '../../../profiles/bene/themes/bene_parent/sass/components/*';
+
 
 //-- CONFIG
 @import 'config/*';
-
-//-- LAYOUT
-@import 'layout/*';
-
-//-- COMPONENTS
-@import 'components/*';
