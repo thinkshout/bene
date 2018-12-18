@@ -3,7 +3,8 @@ if (document.referrer === "") {
   validReferrer = true;
 }
 else {
-  let ref = new URL(document.referrer);
+  let ref = document.createElement('a');
+  ref.href = document.referrer;
   if (ref.hostname !== drupalSettings.benePromoRedirect.destinationDomain && ref.hostname !== window.location.hostname) {
     validReferrer = true;
   }
