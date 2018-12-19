@@ -1241,6 +1241,43 @@ $vars: (
   clear: both;
 }
 
+%footer-region-background{
+   @include vars(background-color, color-primary-e)
+ }
+
+%footer-region-grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+%footer-newsletter-row{
+  flex-basis: 100%;
+}
+%footer-menu-column{
+  flex-basis: 100%;
+}
+%footer-copyright-row{
+  flex-basis: 100%;
+}
+
+
+%footer-menu-header{
+  text-align: center;
+}
+
+%footer-menu-links{
+  color: #000;
+}
+
+@include mq(desktop){
+  %footer-menu-column{
+    flex-basis: 30%;
+  }
+}
+
+
 %footer-background{
   @include vars(background-color, color-primary-e);
 }
