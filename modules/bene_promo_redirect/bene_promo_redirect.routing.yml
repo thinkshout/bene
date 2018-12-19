@@ -1,0 +1,8 @@
+# Bene Features configuration page
+bene_promo_redirect.configure:
+  path: '/admin/config/bene_features/bene_promo_redirect'
+  defaults:
+    _form: '\Drupal\bene_promo_redirect\Form\PromoRedirectSettings'
+    _title: 'Promotional Redirect'
+  requirements:
+    _permission: 'configure bene features'
