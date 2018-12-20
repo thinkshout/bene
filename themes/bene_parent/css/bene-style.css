@@ -1073,6 +1073,9 @@ tbody td {
   justify-content: center;
   clear: both; }
 
+.block-bene-newsletter-signup-block h2 {
+  font-size: 22px; }
+
 .block-bene-newsletter-signup-block p {
   color:  #ffffff;
   color: var(--color-primary-c );
@@ -1109,6 +1112,34 @@ tbody td {
 /* ==============================
             Site Footer
    ============================== */
+.region-footer {
+  background-color:  #129FB5;
+  background-color: var(--color-primary-e ); }
+
+.region-footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.block-bene-newsletter-signup-block {
+  flex-basis: 100%; }
+
+.region-footer .block-menu.navigation {
+  flex-basis: 100%; }
+
+.block-bene-footer-block {
+  flex-basis: 100%; }
+
+.region-footer .block-menu.navigation h2 {
+  text-align: center; }
+
+.region-footer .block-menu.navigation .menu-item a {
+  color: #000; }
+
+@media (min-width: 769px) {
+  .region-footer .block-menu.navigation {
+    flex-basis: 30%; } }
 .block-bene-footer-block {
   background-color:  #129FB5;
   background-color: var(--color-primary-e ); }
@@ -1274,7 +1305,7 @@ article.embedded-entity, .embedded-entity.caption-article, .embedded-entity.alig
 .page-node-type-listing-page .field--name-bene-event-location .field__label {
   float: none; }
 
-.embedded-entity.align-center .image-caption, .site-header .mobile-nav .menu {
+.embedded-entity.align-center .image-caption, .region-footer .block-menu.navigation h2, .region-footer .block-menu.navigation .menu, .site-header .mobile-nav .menu {
   text-align: center; }
 
 .field--name-field-tiles .field__item .paragraph {

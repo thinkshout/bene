@@ -1211,6 +1211,10 @@ $vars: (
   clear: both;
 }
 
+%newsletter-h2{
+  font-size: 22px;
+}
+
 %newsletter-p{
   @include vars(color, color-primary-c);
   margin: 30px 0;
@@ -1260,6 +1264,43 @@ $vars: (
   float: none;
   clear: both;
 }
+
+%footer-region-background{
+   @include vars(background-color, color-primary-e)
+ }
+
+%footer-region-grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+%footer-newsletter-row{
+  flex-basis: 100%;
+}
+%footer-menu-column{
+  flex-basis: 100%;
+}
+%footer-copyright-row{
+  flex-basis: 100%;
+}
+
+
+%footer-menu-header{
+  text-align: center;
+}
+
+%footer-menu-links{
+  color: #000;
+}
+
+@include mq(desktop){
+  %footer-menu-column{
+    flex-basis: 30%;
+  }
+}
+
 
 %footer-background{
   @include vars(background-color, color-primary-e);
