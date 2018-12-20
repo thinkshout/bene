@@ -131,6 +131,26 @@ $vars: (
   @include vars(color, color-primary-c);
 }
 
+%button-secondary{
+  @include vars(color, color-primary-c);
+  @include vars(background-color, color-secondary-c);
+  @include vars(font-family, font-family-secondary);
+  border-radius: 100px;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: rem(32);
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 35px;
+  text-transform: uppercase;
+}
+
+%button-secondary-hover{
+  @include vars(background-color, color-secondary-d);
+  @include vars(color, color-primary-c);
+}
+
 %text {
   font-size: rem(16);
   line-height: rem(32);
@@ -600,6 +620,10 @@ $vars: (
 %text-wrapper{
   min-height: 220px;
   margin-bottom: 20px;
+}
+
+%text-wrapper-text{
+  @include vars(font-family, font-family-primary);
 }
 
 %tiles-img-container{
