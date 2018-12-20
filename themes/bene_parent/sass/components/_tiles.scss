@@ -29,8 +29,8 @@
   .button-wrapper {
     margin-bottom: 30px;
     a {
-      @extend %button-secondary;
-      &:hover, &:active, &:focus {@extend %button-secondary-hover;}
+      @extend %button;
+      &:hover, &:active, &:focus {@extend %button-hover;}
     }
   }
 
@@ -42,9 +42,6 @@
         @extend %tile-inner-title;
         &:hover{@extend %link-hover;}
       }
-    }
-    p{
-      @extend %text-wrapper-text;
     }
   }
 }
