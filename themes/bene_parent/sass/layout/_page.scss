@@ -1,8 +1,40 @@
-// Default layout
-  $max-width: rem(1800) !global;
+.page-node-type-listing-page {
+  .views-element-container {
+    @extend %views-element-container;
+    .view-bene-events {
+      @extend %view-bene-events;
+
+      .view-filters {
+        @extend %view-filters;
+      }
+      .view-content {
+        @extend %view-content;
+
+        h2{
+          @extend %view-content-h2;
+        }
+
+        .field--name-bene-event-location{
+          @extend %display-none;
+        }
+
+        .field__item{
+          p, div{
+            @extend  %display-inline;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.node--type-news .node__content{
+  @extend %node__content;
+}
 
 .inner {
-  @extend %page-inner;
+  @extend %inner;
 }
 
 #site-wrapper {
@@ -10,40 +42,23 @@
 }
 
 #page,
-.site-content {
-  @extend %general-page;
+.site-content,
+.site-footer,
+.homepage-hero {
+  @include fill-parent();
 }
 
-.region-content {
-  @extend %branding;
-}
 
 .page-node-type-page,
 .page-node-type-listing-page,
 .page-node-type-event,
 .page-node-type-news {
   .region-content {
-    @extend %page-node-type-region-content;
+    margin-bottom: 0;
   }
-  .block-system-main-block .field--name-bene-intro,
+
   .field--name-bene-content .paragraph--type--rich-text,
-  .block-system-main-block .field--name-bene-event-date-range,
   .block-system-main-block .field--name-bene-event-location {
-    @extend %page-node-type-region-padding;
-  }
-  .paragraph--type--media .media-instagram,
-  .paragraph--type--media .media-tweet,
-  .paragraph--type--media .media-video {
-    @extend %page-node-type-region-social-media;
-  }
-
-  .paragraph--type--media .media-instagram > div,
-  .paragraph--type--media .media-tweet > div {
-    @extend %page-node-type-region-align;
-  }
-
-  .paragraph--type--tiles {
-    @extend %page-node-type-region-tiles;
+    @extend %clear-float-add-padding;
   }
 }
-

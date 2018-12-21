@@ -1,570 +1,1474 @@
-
-// Variables used when setting up a new theme and releasing a new feature
-// never before seen by a child theme!
 $vars: (
-  background-color-primary: #FFFFFF, // used for (header, footer)
-  // Text and foreground colors that go with the above background color:
-        background-color-primary-shaded: darken(#50CFE3, 20%), // for tables
-        color-text-title-over-color-primary-background: #50CFE3,
-  //      color-text-subtitle-over-color-primary-background: #5C5B5B,
-        color-text-over-color-primary-background: #000000,
-        color-text-link-over-color-primary-background: #129FB5,
-        color-text-hover-link-over-color-primary-background: #50CFE3,
-        color-text-menu-over-color-primary-background: #5C5B5B,
-        color-text-hover-menu-over-color-primary-background: #50CFE3,
-        color-text-menu-disabled-over-color-primary-background: #D8D8D8,
-        color-text-secondary-menu-over-color-primary-background: #50CFE3,
-        color-text-hover-secondary-menu-over-color-primary-background: #129FB5,
-  //      color-text-disabled-secondary-menu-over-color-primary-background: #D8D8D8,
+  //Colors
+        color-primary-a: #50CFE3, //light blue
+        color-primary-b: #1E5375, //dark blue
+        color-primary-c: #ffffff, //white
+        color-primary-d: #000000, //black
+        color-primary-e: #129FB5, //dark grey
+        color-secondary-a: '', //light orange
+        color-secondary-b: '',  //dark orange
+        color-secondary-c: '', //light yellow
+        color-secondary-d: '', //dark yellow
+        color-secondary-e: '', //green
 
-  background-color-secondary: #50CFE3, // (3-up background, block quote background)
-  // Text and foreground colors that go with the color above:
-        color-text-title-over-color-secondary-background: #FFFFFF,
-  //      color-text-subtitle-over-color-secondary-background: #D8D8D8,
-        color-text-over-color-secondary-background: #000000,
-  //      color-text-link-over-color-secondary-background: #129FB5,
-  //      color-text-hover-link-over-color-secondary-background: lighten(#129FB5, 20%),
+  //Fonts
+        font-family-primary: "'Work Sans', sans-serif",
+        font-family-secondary: "'Oswald', sans-serif",
+        font-weight-regular: 400,
+        font-weight-medium: 600,
+        font-weight-bold: 700,
+        font-weight-black: 800,
+        font-style-italic: italic,
+        font-style-normal: normal,
 
-  background-color-tertiary: linear-gradient(-180deg, rgba(#50CFE3, 1), rgba(#000000, 1)), // (newsletter signup background)
-  // Text and foreground colors that go with the color above:
-  //      color-text-title-over-color-tertiary-background: #50CFE3,
-  //      color-text-subtitle-over-color-tertiary-background: #5C5B5B,
-        color-text-over-color-tertiary-background: #FFFFFF,
-        color-text-link-over-color-tertiary-background: #FFFFFF,
-        color-text-hover-link-over-color-tertiary-background: #lighten(#129FB5, 20%),
-  //
-  background-color-quaternary: #129FB5, // (Feature (no photo) background)
-  // Text and foreground colors that go with the color above:
-  //      color-text-title-over-color-quaternary-background: #50CFE3,
-  //      color-text-subtitle-over-color-quaternary-background: #5C5B5B,
-  //      color-text-over-color-quaternary-background: #000000,
-  //      color-text-link-over-color-quaternary-background: #129FB5,
-  //      color-text-hover-link-over-color-quaternary-background: #50CFE3,
-  //
-  background-color-inset: #FFFFFF, // (3-up under photo, intro block, listing view, photo credit background)
-  // Text and foreground colors that go with the color above:
-        color-text-title-over-color-inset-background: #129FB5,
-  //      color-text-subtitle-over-color-inset-background: #5C5B5B,
-        color-text-over-color-inset-background: #000000,
-        color-text-link-over-color-inset-background: #50CFE3,
-        color-text-hover-link-over-color-inset-background: #129FB5,
-  //
-  background-color-photo-overlay: rgba(#444, .11),
-  // Text and foreground colors that go with the color above:
-        color-text-title-over-color-photo-overlay-background: #FFFFFF,
-  //      color-text-subtitle-over-color-photo-overlay-background: #FFFFFF,
-        color-text-over-color-photo-overlay-background: #FFFFFF,
-  //      color-text-link-over-color-photo-overlay-background: #129FB5,
-  //      color-text-hover-link-over-color-photo-overlay-background: lighten(#129FB5, 20%),
-        photo-overlay-linear-gradient: linear-gradient(-180deg, rgba(#129FB5, 1), rgba(#000000, 1)),
-        //photo-overlay-gradient-direction: -180deg,
-        //photo-overlay-gradient-start-color: rgba(#129FB5, 1), // 0.00 = transparent
-        //photo-overlay-gradient-end-color: rgba(#50CFE3, 1), //  1 = opaque
+  //Logo & Icons
+        logo-height: 100px,
+        social-media-icon-height: 2.25rem,
 
-  // Button Colors:
-        button-primary-color-background: #129FB5,
-        button-primary-hover-color-background: #50CFE3,
-        button-primary-text-and-outline-color: #FFFFFF,
-        button-primary-hover-text-and-outline-color: #FFFFFF,
-
-        button-secondary-color-background: #50CFE3,
-        button-secondary-color-hover-background: #FFFFFF,
-        button-secondary-text-and-outline-color: #FFFFFF,
-        button-secondary-hover-text-and-outline-color: #50CFE3,
-
-        button-tertiary-color-background: #50CFE3,
-        button-tertiary-color-hover-background: #129FB5,
-        button-tertiary-text-and-outline-color: #FFFFFF,
-        button-tertiary-hover-text-and-outline-color: #FFFFFF,
-  //
-  // Button Characteristics:
-  //      button-height: rem(4),
-        preferred-border-radius: rem(3),
-        //social-media-icon-border-radius: 50%,
-        //social-media-icon-size: rem(36),
-
-  // Primary font is used for menus and tables
-        primary-font-family:  "'Open Sans', sans-serif",
-        primary-font-light:   '300',
-        primary-font-regular: '400',
-        primary-font-medium:  '600',
-        primary-font-bold:    '700',
-        primary-font-black:   '800',
-  //      primary-font-size-large: rem(61),
-  //      primary-font-size-medium: rem(48),
-        primary-font-size-accent: rem(32),
-        primary-font-size-small: rem(20),
-        primary-font-size-base: rem(16),
-        primary-font-size-footnote: rem(14),
-  //      primary-line-height-large: rem(72),
-  //      primary-line-height-medium: rem(62),
-        primary-line-height-accent: rem(38),
-        primary-line-height-small: rem(30),
-        primary-line-height-base: rem(20),
-        primary-line-height-footnote: rem(16),
-
-  // Title font is used for titles and subtitles
-        title-font-family: "'Open Sans', sans-serif",
-  //      title-font-light:  '300',
-        title-font-regular:'400',
-        title-font-medium: '600',
-        title-font-bold:   '700',
-        title-font-black:  '800',
-  //      title-font-size-large: rem(61),
-        title-font-size-medium: rem(50),
-        title-font-size-accent: rem(30),
-        title-font-size-small: rem(25),
-        title-font-size-base: rem(16),
-  //      title-line-height-large: rem(72),
-        title-line-height-medium: rem(62),
-        title-line-height-accent: rem(38),
-        title-line-height-small: rem(30),
-        title-line-height-base: rem(20),
-
-
-  // sentence font is used for regular text
-        sentence-font-family:  "'Open Sans', sans-serif",
-  //      sentence-font-light:   '300',
-        sentence-font-regular: '400',
-        sentence-font-medium:  '600',
-        sentence-font-bold:    '700',
-  //      sentence-font-black:   '800',
-  //      sentence-font-size-large: rem(61),
-  //      sentence-font-size-medium: rem(48),
-  //      sentence-font-size-accent: rem(32),
-        sentence-font-size-small: rem(26),
-        sentence-font-size-base: rem(16),
-        sentence-font-size-footnote: rem(12),
-  //      sentence-line-height-large: rem(72),
-  //      sentence-line-height-medium: rem(62),
-  //      sentence-line-height-accent: rem(38),
-        sentence-line-height-small: rem(39),
-        sentence-line-height-base: rem(30),
-        sentence-line-height-footnote: rem(14),
-
-  // Other:
-  //      logo-size: rem(17),
-  //      input-height: 50px,
-  //      input-height-small: 36px,
-        preferred-alignment: left,
-        hero-alignment: center,
-
+  //Buttons & Inputs
+        button-padding: 2rem,
+        input-height: 100px
 );
 
-// Global CSS Variables
 
-// the each loop places each item in $vars here so they are defined
-// in root scope. Output of this loop will be (just a brief sampling):
-// ...
-//  --background-color-primary: #FFFFFF;
-//  --background-color-secondary: #50CFE3;
-//  --background-color-tertiary: #D8D8D8;
-//  --background-color-quaternary: #129FB5;
-
-:root {
+:root{
   @each $key, $value in $vars {
     #{--$key}: #{$value};
   }
 }
 
+/* ==============================
+            BASE STYLING
+   ============================== */
 
-
-
-
-
-// ----------Everything below here will be going away:------------
-
-/**
- * First-level variables. Do not use these except to define
- * buildup css variables in the next section.
- *
- * Notice that the variable names are specific to the color
- * they refer to... that means these can be thrown out and a
- * whole new set of variables brought in for a new theme.
- **/
-$bene-a-level-variables: (
-  bene-main-white: #FFF,
-  bene-light-grey: #D8D8D8,
-  bene-placeholder-grey: #979797,
-  bene-medium-grey: #7C7C7C,
-  bene-dark-grey: #5C5B5B,
-  bene-main-black: #000,
-  bene-bright-blue: #50CFE3,
-  bene-main-blue: #129FB5,
-  bene-sans-font: "'Open Sans', sans-serif",
-);
-
-// bav = bene a-level variable
-// access the above variables with this function
-@function bav($var-name) {
-  @return map-get($bene-a-level-variables, #{$var-name});
+%body {
+  box-sizing: border-box;
+  @include vars(font-style, font-style-normal);
+  @include vars(font-family, font-family-primary);
 }
 
-$bene-buildup-variables: (
-  color-primary-first: bav(bene-bright-blue),
-  color-primary-second: bav(bene-main-blue),
-  color-primary-third: bav(bene-dark-grey),
-  color-primary-fourth: bav(bene-main-white),
-
-  color-secondary-first: bav(bene-main-black),
-  color-secondary-second: bav(bene-medium-grey),
-  color-secondary-third: bav(bene-placeholder-grey),
-  color-secondary-fourth: bav(bene-light-grey),
-
-  background-color-primary: bav(bene-main-white),
-  background-color-secondary: bav(bene-bright-blue),
-  background-color-tertiary: bav(bene-main-blue),
-  background-color-hover: bav(bene-light-grey),
-
-  button-size-large: rem(56),
-  button-size-medium: rem(30),
-  button-size-small: rem(27),
-
-  font-family-primary: bav(bene-sans-font),
-  font-family-secondary: bav(bene-sans-font),
-
-  font-size-large: rem(61),
-  font-size-medium: rem(50),
-  font-size-small: rem(25),
-  font-size-accent: rem(30),
-
-  font-color-primary: bav(bene-main-black),
-  font-color-secondary: bav(bene-main-white),
-  font-color-tertiary: bav(bene-dark-grey),
-  font-color-accent: bav(bene-bright-blue),
-  font-color-link: bav(bene-bright-blue),
-  font-color-hover-link: bav(bene-main-blue),
-
-  font-weight-bold: bold,
-  font-weight-normal: normal,
-  font-weight-light: 100,
-
-  gradient-direction: -180deg,
-  gradient-start-color: rgba(bav(bene-main-blue), 1), // 0.00 = transparent
-  gradient-end-color: rgba(bav(bene-bright-blue), 1), //  1 = opaque
-
-  logo-size: rem(170),
-  preferred-alignment: left,
-  social-media-icon-size: rem(36),
-);
-
-// bbv = bene buildup variable
-// access the above variables with this function
-@function bbv($var-name) {
-  @return map-get($bene-buildup-variables, #{$var-name});
+%h1-h6{
+  @include vars(color, color-primary-d);
+  margin: rem(16) 0;
+  @include vars(font-family, font-family-secondary);
 }
 
+%h1{
+  font-size: 75px;
+  line-height: 65px;
+}
 
-:root {
-  // place each item in bene-buildup-variables here so they are defined in root scope
-  // output of this loop will be:
-  // ...
-  // --color-primary-first: #129FB5;
-  // --color-primary-first: #094e58;
-  // --color-primary-first-lighten20: #41d5ec;
-  // --background-color-secondary: #50CFE3;
-  // --background-color-secondary-darken20: #1c9db1;
-  // ...
-  @each $name, $color-num in $bene-buildup-variables {
-    --#{$name}: #{$color-num};
+%h2 {
+  font-size: 65px;
+  line-height: 75px;
+}
+
+%h3 {
+  font-size: 58px;
+  line-height: 68px;
+}
+
+%h4 {
+  font-size: 45px;
+  line-height: 55px;
+}
+
+%h5{
+  font-size: 35px;
+  line-height: 45px;
+}
+
+@include mq(mobile){
+  %h1{
+    font-size: 55px;
+    line-height: 45px;
+  }
+  %h2 {
+    font-size: 45px;
+    line-height: 55px;
+  }
+  %h3 {
+    font-size: 38px;
+    line-height: 48px;
+  }
+  %h4 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  %h5 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+%link{
+  @include vars(color, color-secondary-c);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+%link-hover{
+  @include vars(color, color-secondary-d);
+}
+
+%button{
+  @include vars(color, color-primary-c);
+  @include vars(background-color, color-secondary-c);
+  @include vars(font-family, font-family-secondary);
+  border-radius: 100px;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: rem(32);
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 35px;
+  text-transform: uppercase;
+}
+
+%button-hover{
+  @include vars(background-color, color-secondary-d);
+  @include vars(color, color-primary-c);
+}
+
+%text {
+  font-size: rem(16);
+  line-height: rem(32);
+  @include vars(font-family, font-family-primary);
+  @include vars(color, color-primary-d);
+}
+
+%lists{
+  font-size: rem(16);
+  line-height: rem(32);
+  @include vars(font-family, font-family-primary);
+  @include vars(color, color-primary-d);
+}
+
+%table{
+  border: solid 1px;
+  @include vars(border-color, color-secondary-c);
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding: 1em;
+}
+
+%table-header {
+  @include vars(background-color, color-secondary-c);
+  @include vars(color, color-primary-c);
+  padding: 10px;
+}
+
+%table-body{
+  @include vars(border-color, color-secondary-c);
+  border: solid 1px;
+  padding: 10px;
+}
+
+/* ==============================
+            Site Header
+   ============================== */
+
+%site-header{
+  @include vars(background-color, color-primary-e);
+  padding: 20px 10px;
+  display: flex;
+  min-height: 100px;
+  position: relative;
+}
+
+%header-inner-div{
+  display: flex;
+  flex: 1;
+  margin: 0 auto;
+}
+
+%site-logo{
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+%mobile-menu{
+  display: none;
+}
+
+%mobile-nav{
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}
+
+%menu-link{
+  list-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  @include vars(color, color-primary-c);
+  @include vars(font-family, font-family-secondary);
+  text-transform: uppercase;
+}
+
+%menu-utility{
+  font-size: 14px;
+}
+
+%menu-link-hover{
+  list-style: none;
+  text-decoration: none;
+  @include vars(color, color-secondary-c);
+  text-transform: uppercase;
+}
+
+%join-menu{
+  display: none;
+  &:last-child{
+    display: inline-block;
+    @include vars(background-color, color-secondary-c);
+    border-radius: 100px;
+    width: 100px;
+    text-align: center;
+  }
+}
+
+%menu-toggle{
+  display: inline-block;
+  float: right;
+  height: 50px;
+  width: 80px;
+}
+
+%menu-toggle-div{
+  height: 100%;
+  position: relative;
+  top: -12px;
+  width: 100%;
+  z-index: 9999;
+}
+
+%menu-toggle-span{
+  @include vars(background-color, color-primary-c);
+  display: block;
+  height: 6px;
+  left: 25%;
+  position: absolute;
+  top: 50%;
+  transition: background-color 0.3s;
+  width: 43.76%;
+  z-index: 9999;
+  cursor: pointer;
+
+  &:before, &:after{
+    @include vars(background, color-primary-c);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    transform: translateY(-150%);
+    transition: transform 0.3s, background-color 0.3s;
+    width: 100%;
+    z-index: 9999;
   }
 
-  /**
-   * These are the css variables that should be used throughout the scss code.
-   * They should also refer to the buildup variables above as much as possible.
-   **/
+  &:after{
+    transform: translateY(150%);
+  }
+}
+
+%menu-toggle-active{
+  background-color: transparent;
+  &:before, &:after{
+    @include vars(background, color-primary-c);
+    transform: rotate(45deg) translateY(0);
+    transition: transform 0.3s;
+  }
+  &:after{
+    transform: rotate(-45deg) translateY(0);
+  }
+}
+
+%primary-nav-region{
+  @include vars(background-color, color-primary-e);
+  display: flex;
+  flex-direction: column-reverse;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 6.3125rem;
+  z-index: 200;
+}
+
+@include mq(desktop) {
+  %site-header{
+    min-height: rem(133);
+  }
+
+  %mobile-nav{
+    display: none;
+  }
+
+  %site-logo{
+    width: auto;
+  }
+
+  %desktop-nav{
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+  %primary-nav-region{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: static;
+  }
+
+  %primary-nav{
+    flex: none;
+    margin-right: 0.5em;
+  }
+
+  %nav-menu{
+    align-items: flex-end;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    margin: 5px 0;
+  }
+
+  %menu-item{
+    margin-left: rem(22);
+  }
+
+  %main-menu-button{
+    &:last-child a{
+      @include vars(background-color, color-secondary-c);
+      @include vars(color, color-primary-c);
+      border-radius: 100px;
+      width: 100px;
+      text-align: center;
+      padding: 0.5rem 1.5rem;
+      &:focus, &:active, &:hover{
+        @include vars(background-color, color-secondary-d);
+      }
+    }
+  }
+
+  %join-button{
+    display: none;
+  }
+}
+
+/* ==============================
+          Sub Navigation
+   ============================== */
+
+%title-block{
+  background-image: linear-gradient(#248BCB, #1E5375);
+  padding: 100px 0;
+  height: 6.25rem;
+}
+
+%title-block-bgimage{
+  height: 24vw;
+  &:after{
+    @include vars(background-color, color-primary-a);
+    content: '';
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .6;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+%title-block-hero{
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+  z-index: 20;
+}
+
+%title-block-heading{
+  @include vars(color, color-primary-c);
+  flex: 0 1 auto;
+  font-size: 2rem;
+  margin-top: 0;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 20;
+}
+
+@include mq(desktop){
+  %title-block-heading{
+    font-size: 3.75rem;
+  }
+}
+
+%sub-nav-block{
+  background-image: linear-gradient(#248BCB, #1E5375);
+  padding: 3rem 2%;
+  text-align: center;
+}
+
+%sub-nav-menu{
+  text-align: center;
+  list-style: none outside;
+  margin: 0;
+  padding: 0;
+}
+
+%sub-nav-menu-item{
+  list-style: none;
+  padding: 0;
+}
+
+%sub-nav-links{
+  @include vars(color, color-primary-c);
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  &:focus, &:active, &:hover{
+    @extend %link-hover;
+  }
+}
+
+%sub-nav-menu-links{
+  margin: 0 1rem;
+}
+
+%sub-nav-link-title{
+  margin-bottom: 10px;
+  opacity: 0.7;
+  &:focus, &:active, &:hover{
+    @extend %link-hover;
+    @include vars(color, color-primary-c);
+  }
+}
+
+/* ==============================
+        Home Page Feature
+   ============================== */
+%hmpg-feature{
+  @include vars(background-color, color-primary-e);
+  @include vars(color, color-primary-c);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  padding: 8rem 1rem;
+  position: relative;
+  &:after {
+    background-image: linear-gradient(180deg,rgba(0,0,0,0) 0%,#000000 79%);
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: .45;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+@include mq(mobile) {
+  %hmpg-feature{
+    background-size: cover;
+    background-position: center top;
+    max-height: rem(539);
+  }
+}
+
+@include mq(desktop) {
+  %hmpg-feature{
+    min-height: rem(500);
+  }
+}
+
+%hmpg-feature-lead{
+  font-size: rem(20);
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+@include mq(mobile) {
+  %hmpg-feature-lead{
+    font-size: rem(16);
+    line-height: rem(20);
+    padding-top: 7rem;
+  }
+}
+
+%hmpg-feature-title{
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 70px;
+  padding-top: 50px;
+  z-index: 2;
+  margin: 0 auto 50px auto;
+  max-width: rem(900);
+  position: relative;
+  @include vars(font-family, font-family-secondary);
+}
+
+@include mq(mobile) {
+  %hmpg-feature-title{
+    font-size: 40px;
+    line-height: 45px;
+  }
+}
+
+@include mq(phablet) {
+  %hmpg-feature-title{
+    font-size: 40px;
+    line-height: 45px;
+  }
+}
+
+%hmpg-feature-btn-wrapper{
+  position: relative;
+  z-index: 1;
+}
+
+%hmpg-feature-btn{
+  @extend %button;
+  font-size: rem(14);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  &:hover, &:focus, &:active{
+    @extend %button-hover;
+  }
+}
+
+/* ==============================
+               Tiles
+   ============================== */
+
+%tiles-background{
+  @include vars(background-color, color-primary-e);
+}
+
+%tiles-main-title{
+  @include vars(color, color-primary-c);
+  font-weight: bold;
+  font-size: rem(42);
+  padding: 20px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+%tiles-container{
+  max-width: 81.25rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20.625rem);
+  grid-gap: 30px;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+%individual-tiles{
+  @include vars(background-color, color-primary-c);
+  @include vars(color, color-primary-d);
+  border-bottom-right-radius: 100px;
+  text-align: left;
+}
+
+%tile-text{
+  padding: 0 20px;
+}
+
+%tile-inner-title{
+  @include vars(color, color-primary-d);
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+%text-wrapper{
+  min-height: 220px;
+  margin-bottom: 20px;
+}
+
+%tiles-img-container{
+  position: relative;
+  z-index: 100;
+  height: auto;
+}
+
+%tiles-img{
+  max-width: 100%;
+}
+
+/* ==============================
+         Rich Text - Intro
+   ============================== */
+
+%rch-txt-intro{
+  @include vars(color, color-primary-d);
+  padding: 25px 0;
+}
+
+%rch-txt-intro-heading{
+  margin: 30px 0;
+  text-transform: uppercase;
+  padding: 0 2%;
+}
+
+%rch-txt-intro-link{
+  @include vars(color, color-primary-d);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+%rch-txt-intro-text{
+  @include vars(color, color-primary-a);
+  margin-bottom: 35px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+@include mq(desktop){
+  %rch-txt-intro-text{
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 34px;
+  }
+}
+
+%rch-txt-wysiwyg-text{
+  @include vars(color, color-primary-d);
+}
+
+%rch-text-background-color{
+  @include vars(background-color, color-primary-c);
+}
+
+/* ==============================
+    Full Width Feature Paragraph
+   ============================== */
+
+%full-width-pargph{
+  align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //min-height: 25vw;
+  min-height: 38.2vw;
+  padding: 1.5rem 1.5rem 2.25rem 1.5rem;
+  position: relative;
+  text-align: center;
+  width: 100vw;
+  max-width: 100%;
+  padding-top: 70px;
+  padding-bottom: 70px; //change?
+  overflow: hidden;
+
+  &:before{
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: .45;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(#5FBA47, #1E5375);
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+  }
+}
+
+%full-width-pargph-no-img{
+  &:before{
+    opacity: 1;
+  }
+}
+
+
+%full-width-pargph-z-index{
+  z-index: 10;
+}
+
+%full-width-pargph-title{
+  @include vars(color, color-primary-c);
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  @include vars(font-family, font-family-secondary);
+}
+
+@include mq(desktop){
+  %full-width-pargph-title{
+    font-size: 40px;
+  }
+}
+
+%full-width-pargph-text{
+  @include vars(color, color-primary-c);
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+@include mq(desktop){
+  %full-width-pargph-text{
+    font-size: 22px;
+    line-height: 34px;
+    max-width: 65%;
+    margin: 10px auto;
+  }
+}
+
+%full-width-pargph-link-div{
+  margin-top: 15px;
+}
+
+%full-width-pargph-link{
+  @extend %button;
+  margin-top: 10px;
+  font-weight: bold;
+  &:hover, &:focus, &:active{
+    @extend %button-hover;
+  }
+}
+
+
+/* ==============================
+           Listing Page
+   ============================== */
+%listing-pg-container{
+  width: 100%;
+  padding: 0 1%;
+}
+
+%listing-pg-form-container{
+  @include span-columns(12);
+}
+
+@include mq(tablet){
+  %listing-pg-form-container{
+    @include span-columns(12);
+    @include shift(-0.75);
+  }
+}
+@include mq(desktop){
+  %listing-pg-form-container{
+    @include span-columns(4);
+    @include shift(-0.5);
+  }
+}
+
+%lising-pg-form{
+  width: 98%;
+  padding: 1rem;
+}
+
+@include mq(tablet){
+  %lising-pg-form{
+    width: 100%;
+    margin-left: 10%;
+  }
+}
+
+%listing-pg-label{
+  font-weight: 400;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+%listing-pg-input{
+  border-radius: 0;
+  border: none;
+  padding: 1rem;
+  width: 100%;
+}
+
+@include mq(tablet){
+  %listing-pg-input{
+    width: 90%;
+  }
+}
+
+%listing-pg-date-input{
+  width: 100%;
+}
+
+@include mq(tablet){
+  %listing-pg-date-input{
+    width: 90%;
+  }
+}
+
+%listing-pg-form-submit{
+  padding: 5px 60px;
+}
+
+%listing-pg-article{
+  font-size: 1.25rem;
+  line-height: 2.375rem;
+}
+
+%listing-pg-image{
+  display: block;
+  float: none;
+  width: 100%;
+  margin-top: 50px;
+}
+
+@include mq(desktop){
+  %listing-pg-image{
+    display: inline-block;
+    @include span-columns(3);
+    margin-top: 0;
+  }
+}
+
+
+@include mq(desktop){
+  %listing-pg-node-content{
+    margin-top: 50px;
+    display: flex;
+  }
+}
+
+%listing-pg-img{
+  width: 100%;
+  height: auto;
+}
+
+@include mq(desktop){
+  %listing-pg-txt-wrapper{
+    display: inline-block;
+    @include span-columns(8);
+  }
+}
+
+%listing-pg-h2{
+  font-size: rem(32);
+  line-height: rem(38);
+  font-weight: 400;
+}
+
+%listing-pg-a{
+  @include vars(color, color-primary-a);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+%listing-pg-event-details{
+  padding-left: 0;
+  margin-left: 0;
+}
+
+//needs better name
+%listing-pg-intro-and-event-details{
+  clear: both;
+  padding: 0 2%;
+}
+
+@include mq(desktop){
+  %listing-pg-intro-and-event-details{
+    @include span-columns(12);
+    @include shift(0.2);
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+%listing-pg-font-settings{
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 2rem;
+}
+
+%listing-pg-container-wrapper{
+  margin: 0 0 5%;
+  padding: 0 5%;
+}
 
 
 
-  // Colors --------------------------------------------------------------------------- Colors //
+/* ==============================
+           Inline Embeds
+   ============================== */
 
-    // General
-    --general-primary-background-color: var(--background-color-primary); //dark grey
-    --general-secondary-background-color: var(--background-color-secondary); //white
-    --general-tertiary-background-color: var(--background-color-tertiary); //light blue
-    --general-font-primary-color: var(--font-color-primary); //light blue
-    --general-font-secondary-color: var(--font-color-secondary); //main black
-    --general-font-tertiary-color: var(--font-color-tertiary); //white
-    --general-font-accent-color: var(--font-color-accent); //light yellow
-    --general-link-color: var(--font-color-link); //light yellow
-    --general-link-hover-color: var(--font-color-hover-link); //dark yellow
+@include mq(mobile){
+  %embed-img{
+    margin: 5px;
+  }
+  %embed-float-none{
+    float: none;
+  }
+}
 
+@include mq(tablet){
+  %embed-video-half{
+    width: 50%;
+    margin: 0 auto;
+  }
+  %embed-img-left{
+    float: left;
+  }
+  %embed-img-caption{
+    float: left;
+    clear: both;
+  }
+  %embed-img-right{
+    float: right;
+  }
+  %embed-img-half{
+    width: 50vw;
+    picture img{
+      width: 100%;
+    }
+  }
+}
 
-    //Old General Variables - possibly change or remove
+@include mq(desktop){
+  %embed-video-half{
+    width: 50%;
+    margin: 0 auto;
+  }
+  %embed-img-left{
+    float: left;
+  }
+  %embed-img-caption{
+    float: left;
+    clear: both;
+  }
+  %embed-img-right{
+    float: right;
+  }
+  %embed-img-half{
+    width: 50vw;
+    picture img{
+      width: 100%;
+    }
+  }
+}
 
-      --general-formatted-text-ul-li-color: var(--font-color-secondary);
-      --general-formatted-text-ul-li-bullet-color: var(--font-color-secondary);
-      --general-formatted-text-ol-li-color: var(--font-color-secondary);
-      --general-table-border-color: var(--font-color-secondary);
-      --general-table-text-color: var(--font-color-secondary);
-      --general-table-headerrow-leftcolumn-text-color: var(--font-color-secondary);
-      --general-table-background-color: var(--background-color-primary);
-      --general-table-background-stripe-color: var(--background-color-primary);
-      --general-fieldset-legend-color: var(--font-color-secondary);
+%embed-imgs-default{
+  display: inline-block;
+  clear: both;
+}
 
+%embed-img-caption{
+  font-size: 16px;
+  font-style: italic;
+}
 
-  // Header
-      --header-background-color: var(--background-color-primary); //dark grey
-      --header-primary-main-font-color: var(--font-color-secondary);
-      --header-primary-utility-font-color: var(--font-color-secondary);
-      --header-primary-button-background-color: var(--font-color-link); //yellow
-      --header-primary-button-background-hover-color: var(--font-color-secondary);
-      --header-primary-button-font-color: var(--font-color-secondary);
-      --header-primary-button-font-hover-color: var(--font-color-secondary);
-      --header-primary-font-hover-color: var(--font-color-secondary);
+%embed-img{
+  margin: 5px;
+}
 
-  // Secondary Navigation
-      --secondary-nav-background-color: var(--background-color-primary);
-      --secondary-nav-font-color: var(--font-color-secondary);
-      --secondary-nav-font-hover-color: var(--font-color-secondary);
-      --secondary-nav-active-font-color: var(--font-color-secondary);
-      --secondary-nav-button-background-color: var(--background-color-primary);
-      --secondary-nav-button-background-hover-color: var(--background-color-secondary);
-      --secondary-nav-button-font-color: var(--font-color-secondary);
-      --secondary-nav-button-font-hover-color: var(--font-color-secondary);
+%embed-img-center{
+  margin: 0 auto;
+  text-align: center;
+}
 
+%embed-img-right-caption{
+  text-align: left;
+}
 
-  // Hero
-      --hero-font-color: var(--font-color-secondary);
-      --hero-button-background-color: var(--font-color-secondary);
-      --hero-button-background-hover-color: var(--font-color-secondary);
-      --hero-button-border-color: var(--font-color-secondary);
-      --hero-button-font-color: var(--font-color-secondary);
-      --hero-button-font-hover-color: var(--font-color-secondary);
-      --hero-block-background-color: var(--background-color-primary);
+%embed-instagram{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  float: none;
+  clear: both;
+}
 
+%embed-instagram-iframe{
+  display: inline-block !important;
+}
 
-  // Paragraph - Feature
-      --feature-background-color: var(--font-color-secondary);
-      --feature-font-color: var(--font-color-secondary);
-      --feature-button-background-color: var(--font-color-secondary);
-      --feature-button-background-hover-color: var(--font-color-secondary);
-      --feature-button-font-color: var(--font-color-secondary);
-      --feature-button-font-hover-color: var(--font-color-secondary);
-      --feature_block-linear-gradient: linear-gradient(var(--gradient-direction), var(--gradient-start-color), var(--gradient-end-color));
+%embed-tweet{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  float: none;
+  clear: both;
+}
 
-  // Paragraph - Rich Text
-      --rich-header-font-color: var(--font-color-secondary);
-      --rich-paragraph-font-color: var(--font-color-secondary);
-      --rich-link-font-color: var(--font-color-secondary);
-      --rich-link-font-hover-color: var(--font-color-secondary);
-
-  // Paragraph - Tiles
-      --tile-background-color: var(--color-primary-first);
-      --tile-section-background-color: var(--color-primary-first);
-      --tile-header-font-color: var(--color-primary-first);
-      --tile-sub-header-font-color: var(--color-primary-first);
-      --tile-paragraph-color: var(--color-primary-second);
-      --tile-button-color: var(--color-primary-second);
-      --tile-button-hover-color: var(--color-primary-second);
-      --tile-button-text-color: var(--color-primary-second);
-      --tile-button-text-hover-color: var(--color-primary-second);
-      --tile-sub-button-color: var(--color-primary-second);
-      --tile-sub-button-hover-color: var(--color-primary-second);
-      --tile-sub-button-text-color: var(--color-primary-second);
-      --tile-sub-button-text-hover-color: var(--color-primary-second);
-
-  // Newsletter
-      --newsletter-background-color: var(--color-primary-first);
-      --newsletter-font-color: var(--font-color-tertiary);
-      --newsletter-font-hover-color: var(--font-color-tertiary);
-      --newsletter-button-color: var(--color-primary-second);
-      --newsletter-button-hover-color: var(--color-primary-second);
-      --newsletter-button-text-color: var(--color-primary-second);
-      --newsletter-button-text-hover-color: var(--color-primary-second);
-
-  // Forms
-      --form-background-color: var(--color-primary-first);
-      --form-input-background-color: var(--color-primary-first);
-      --form-input-font-color: var(--color-primary-first);
-      --form-input-checkbox-color: var(--color-primary-first);
-      --form-input-placeholder-color: var(--color-primary-first);
-      --form-input-outline-color: var(--color-primary-first);
-      --form-label-color: var(--color-primary-first);
-      --form-label-before-color: var(--color-primary-first);
-      --form-label-required-symbol-color: var(--color-primary-first);
-      --form-input-textarea-border-color: var(--color-primary-first);
-      --form-input-textarea-color: var(--color-primary-first);
-      --form-input-textarea-placeholder-color: var(--color-primary-first);
-      --form-button-color: var(--color-primary-first);
-      --form-button-hover-color: var(--color-primary-second);
-      --form-button-background-color: var(--color-primary-second);
-      --form-button-hover-background-color: var(--color-primary-first);
-      --form-button-text-color: var(--color-primary-second);
-      --form-button-text-hover-color: var(--color-primary-second);
-
-  //Footer
-      --footer-block-background-color: var(--background-color-primary);
-      --footer-social-background-color: var(--background-color-secondary);
-      --footer-social-hover-background-color: var(--background-color-hover);
-      --footer-social-border-color: var(--background-color-secondary);
-      --footer-social-hover-border-color: var(--background-color-hover);
-      --footer-menu-link-color: var(--font-color-link);
-      --footer-menu-link-hover-color: var(--font-color-hover-link);
-      --footer-font-color: var(--font-color-tertiary);
-      --footer-font-hover-color: var(--font-color-tertiary);
-      --footer-social-icon-size: var(--social-media-icon-size);
+%embed-twitter-tweet{
+  display: inline-block !important;
+}
 
 
-  // Font  --------------------------------------------------------------------------- Font //
+/* ==============================
+            Events Page
+   ============================== */
 
-    // General
-      --general-font-family-primary: var(--font-family-primary);
-      --general-font-family-secondary: var(--font-family-secondary);
-      --general-preferred-alignment: var(--preferred-alignment);
+%events-pg-date{
+  margin-top: 20px;
+}
 
-      --general-font-size-small: var(--font-size-small);
-      --general-font-size-medium: var(--font-size-medium);
-      --general-font-size-large: var(--font-size-large);
-      --general-font-size-accent: var(--font-size-accent);
+%events-pg-location{
+  float: none;
+  clear: both;
+  margin-top: 10px;
+}
 
-      --general-font-weight-bold: var(--font-weight-bold);
-      --general-font-weight-normal: var(--font-weight-normal);
-      --general-font-weight-light: var(--font-weight-light);
+/* ==============================
+            Updates Page
+   ============================== */
 
+%updates-pg-h2{
+  font-size: 2rem;
+  line-height: 2.375rem;
+  font-weight: 400;
+  margin-top: 50px;
+}
 
-   //base_style -- these apply to everything unless overridden here or in bene_parent.
-  --base_style-font-family: var(--font-family-primary);
-  --base_style-font-family-secondary: var(--font-family-secondary);
-  --base_style-paragraph-color: var(--font-color-secondary);
-  --base_style-link-color: var(--font-color-link);
-  --base_style-active-link-color: var(--font-color-link);
-  --base_style-formatted-text-ul-li-color: var(--font-color-secondary);
-  --base_style-formatted-text-ul-li-bullet-color: var(--font-color-secondary);
-  --base_style-formatted-text-ol-li-color: var(--font-color-secondary);
-  --base_style-table-border-color: var(--font-color-secondary);
-  --base_style-table-text-color: var(--font-color-secondary);
-  --base_style-table-headerrow-leftcolumn-text-color: var(--font-color-secondary);
-  --base_style-table-background-color: var(--background-color-primary);
-  --base_style-table-background-stripe-color: var(--background-color-primary);
-  --base_style-fieldset-legend-color: var(--font-color-secondary);
+%updates-pg-a{
+  @include vars(color, color-primary-a);
+  text-decoration: none;
+}
 
-  // _admin.scss:
-  --base_style-body-background-color: var(--background-color-primary);
-  --base_style-contextual-links-background-color: var(--background-color-primary);
-  --base_style-contextual-links-list-item-background-color: var(--background-color-primary);
-  --base_style-contextual-links-list-item-link-background-color: var(--background-color-primary);
-  --base_style-block-local-tasks-background-color: var(--background-color-primary);
-  --base_style-block-local-tasks-list-item-background-color: var(--background-color-primary);
-  --base_style-block-local-tasks-link-background-color: var(--color-primary-first);
-  --base_style-block-local-tasks-link-color: var(--font-color-tertiary);
-  --base_style-block-local-tasks-link-hover-color: var(--color-primary-first);
-  --base_style-block-local-tasks-link-active-color: var(--color-secondary-first);
-  --base_style-block-local-tasks-show-hide-background-color: var(--background-color-primary);
+%updates-pg-node-content{
+  margin-top: 20px;
+}
 
+@include mq(mobile){
+  %updates-pg-content{
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+}
+@include mq(desktop){
+  %updates-pg-content{
+    @include span-columns(8);
+    @include shift(0.25);
+  }
+}
 
-  //_tiles.scss
-  --base_style-field-image-header: var(--color-primary-first);
-  --base_style-desktop-field-image-header: var(--color-primary-first);
-  --base_style-field-image-text: var(--font-color-primary);
+%updates-pg-intro{
+  margin-bottom: rem(24);
+  margin-top: rem(16);
+}
 
-  //_nice_select.scss
-  --drop_down-background-color: var(--background-color-primary);
-  --drop_down-active-text-color: var(--font-color-tertiary);
-  --drop_down-disabled-text-color: var(--font-color-tertiary);
+%updates-pg-intro-h2{
+  font-size: rem(32);
+  font-style: italic;
+  font-weight: 600;
+  margin-top: rem(32);
+}
 
+%updates-pg-intro-h3{
+  font-size: rem(20);
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: rem(18);
+}
 
-  // rich_text (_paragraphs.scss)
-  --rich_text-background-paragraph-and-list-color: var(--font-color-primary);
-  --rich_text-background-blockquote-paragraph-color: var(--color-secondary-first);
-  --rich_text-background-blockquote-horizontal-line-color: var(--color-secondary-first);
+%updates-pg-intro-p{
+  font-size: rem(18);
+  font-weight: 300;
+  line-height: rem(32);
+  margin-top: rem(12);
+}
 
-  //_newsletter.scss
-  --newsletter-background-color: var(--color-primary-first);
-  --newsletter-main-color: var(--font-color-tertiary);
-  --newsletter-label-color: var(--font-color-tertiary);
-  --newsletter-paragraph-color: var(--font-color-tertiary);
-  --newsletter-link-color: var(--color-text-primary);
-  --newsletter-link-button-color: var(--background-color-primary);
-  --newsletter-link-button-hover-color: var(--color-secondary-first-lighten20);
+@include mq(desktop){
+  %updates-pg-intro-p{
+    font-size: rem(22);
+    line-height: rem(38);
+    padding: 0 2%;
+  }
+}
 
-  //_menus.scss
-  --menu-closed-background-color: var(--color-secondary-first);
-  --menu-open-background-color: var(--color-secondary-first);
-  --menu-hover-background-color: var(--color-primary-first);
-  --menu-after-hover-background-color: var(--color-primary-first);
-  --menu-active-background-color: var(--color-secondary-first);
-  --menu-mobile-background-color: var(--background-color-primary);
-  --menu-mobile-link-color: var(--color-secondary-first);
-  --menu-mobile-active-link-color: var(--font-color-tertiary);
-  --menu-mobile-list-background-color: var(--color-primary-first);
-  --menu-mobile-list-color: var(--color-text-primary);
-  --menu-mobile-list-active-color: var(--font-color-tertiary);
-  --menu-desktop-link-color: var(--color-text-medium-dark);
-  --menu-desktop-active-link-color: var(--color-primary-first);
-  --menu-desktop-last-active-link-color: var(--font-color-tertiary);
-  --menu-desktop-last-active-link-background-color: var(--color-secondary-first);
-  --menu-desktop-last-active-link-hover-background-color: var(--color-primary-second);
-  --menu-desktop-main-link-color: var(--color-text-primary);
-  --menu-desktop-main-active-link-color: var(--color-primary-first);
-
-  //_inner-page.scss
-  --inner_page-header-two-color: var(--color-text-primary);
-  --inner_page-header-three-color: var(--color-text-primary);
-  --inner_page-link-color: var(--color-secondary-first);
-  --inner_page-link-hover-color: var(--color-primary-second);
-  --inner_page-paragraph-color: var(--color-text-primary);
-  --inner_page-blockquote-paragraph-color: var(--color-text-accent);
-
-  //_home_hero.scss
-  --home_hero-bene-home-page-feature-block-color: var(--font-color-tertiary);
-  --home_hero-bene-home-page-feature-block-background-color: var(--color-secondary-first);
-  --home_hero-bene-link-border-color: var(--font-color-tertiary);
-  --home_hero-bene-link-color: var(--font-color-tertiary);
-  --home_hero-bene-link-hover-color: var(--font-color-tertiary);
-  --home_hero-bene-link-hover-background-color: var(color-background-lightest);
-
-  //_hero.scss
-  --block_hero-bene-background-color: var(--color-secondary-first);
-  --block_hero-bene-header-color: var(--font-color-tertiary);
+%updates-pg-bene-date-time{
+  padding: 2%;
+}
 
 
-  // bene_home_page_feature_block
+/* ==============================
+        General Page Settings
+   ============================== */
 
-  // bene_sub_navigation_block
-  // bene_listing_page_plugin_display_block
+%views-element-container{
+  clear: both;
+  padding: 0 2%;
+  width: 80%;
+}
 
-  // bene_mobile_nav
-  --bene_mobile_nav-color: var(--font-color-tertiary);
-  --bene_mobile_nav-menu-link-color: var(--font-color-tertiary);
-  --bene_mobile_nav-background: var(--color-primary-first);
-  --bene_mobile_nav-menu-text-align: var(--preferred-alignment);
-  --bene_mobile_nav-font-face: var(--font-family-primary);
-  --bene_mobile_nav-font-size: var(--font-size-primary);
+@include mq(desktop) {
+  %views-element-container{
+    @include span-columns(10);
+    @include shift(1);
+  }
 
-  // bene_home_page_feature_block
-  --bene_home_page_feature_block-background-color: var(--color-primary-first);
-  --bene_home_page_feature_block-linear-gradient-direction: var(--gradient-direction);
-  --bene_home_page_feature_block-linear-gradient-color1: var(--gradient-start-color);
-  --bene_home_page_feature_block-linear-gradient-color2: var(--gradient-end-color);
-  --bene_home_page_feature_block-header-color: var(--font-color-tertiary);
-  --bene_home_page_feature_block-header-font-family: var(--font-family-primary);
-  --bene_home_page_feature_block-header-font-size: var(--font-size-header);
-  --bene_home_page_feature_block-header-font-weight: var(--font-weight-extra-heavy);
-  --bene_home_page_feature_block-description-color: var(--font-color-tertiary);
-  --bene_home_page_feature_block-description-font-family: var(--font-family-primary);
-  --bene_home_page_feature_block-linear-gradient: linear-gradient(var(--gradient-direction), var(--gradient-start-color), var(--gradient-end-color));
-  --bene_home_page_feature_block-link-button-color: var(--font-color-tertiary);
-  --bene_home_page_feature_block-link-button-background-color: var(--color-secondary-first);
-  --bene_home_page_feature_block-link-button-hover-background-color: var(--color-primary-second);
+  %view-bene-events{
+    display: flex;
+    flex-direction: row;
+  }
 
-  // bene_newsletter_signup_block
+  %view-filters{
+    //@include span-columns(12);
+    flex: 1 1 25%;
+  }
 
-  // bene_footer_block
-  --bene_footer_block-social-icon-size: var(--social-media-icon-size);
-  --bene_footer_block-social-background-color: var(--background-color-secondary);
-  --bene_footer_block-social-hover-background-color: var(--background-color-secondary-darken20);
-  --bene_footer_block-social-border-color: var(--background-color-secondary);
-  --bene_footer_block-social-hover-border-color: var(--background-color-secondary-darken20);
-  --bene_footer_block-menu-link-color: var(--color-text-primary);
-  --bene_footer_block-menu-link-hover-color: var(--color-primary-first);
-  --bene_footer_block-menu-item-link-hover-color: var(--color-primary-first);
+  %view-content{
+    flex: 1 1 73%;
+    margin-left: 2%;
+    @include shift(1);
+  }
+
+  %view-content-h2 {
+    margin-bottom: 10px;
+  }
+}
+
+%node__content{
+  clear: both;
+  padding: 2%;
+}
+
+%inner{
+  display: flex;
+  flex: 1;
+  margin: 0 auto;
+  max-width: 95%;
+}
+
+%site-wrapper{
+  margin: 0 auto;
+  position: relative;
+}
+
+//need better name
+%clear-float-add-padding{
+  clear: both;
+  padding: 0 2%;
+}
+
+@include mq(desktop){
+  %clear-float-add-padding{
+    @include span-columns(12);
+    @include shift(0.2);
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+
+/* ==============================
+        Newsletter
+   ============================== */
+
+
+%newsletter{
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 1rem;
+  align-items: center;
+  background-image: linear-gradient(#F2AF3F, #E26436);
+  justify-content: center;
+  clear: both;
+}
+
+%newsletter-p{
+  @include vars(color, color-primary-c);
+  margin: 30px 0;
+  font-size: 22px;
+  font-weight: 800;
+  text-align: left;
+  display: none;
+}
+
+%newsletter-a{
+  background-color: transparent;
+  text-align: left;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: rem(15) rem(20);
+  &:hover, &:focus, &:active{
+    background-color: transparent;
+  }
+
+  &:after{
+    content: '>';
+    margin-left: 0.5rem;
+    @include vars(color, color-primary-a);
+    background-color: transparent;
+    transition: all 0.3s linear;
+    display: inline-block;
+    left: 0.25rem;
+    position: relative;
+  }
+
+  &:hover::after{
+    left: 0.5rem;
+    position: relative;
+  }
+}
+
+
+/* ==============================
+            Site Footer
+   ============================== */
+
+%region-footer{
+  margin: 0 auto;
+  max-width: 100%;
+  float: none;
+  clear: both;
+}
+
+%footer-background{
+  @include vars(background-color, color-primary-e);
+}
+
+%footer-container{
+  padding: 2rem 5%;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-between;
+}
+
+%footer-menu{
+  margin: 0;
+}
+
+@include mq(desktop){
+  %footer-menu{
+    flex: 0 1 20%;
+  }
+}
+
+%footer-menu-item{
+  line-height: 1.8rem;
+  padding: 0;
+}
+
+%footer-email-link{
+  @extend %link;
+  &:hover, &:focus, &:active{
+    @extend %link-hover;
+  }
+}
+
+%footer-menu-link{
+  @include vars(color, color-primary-c);
+  font-size: 12px;
+  text-decoration: none;
+  &:hover, &:focus, &:active{
+    @extend %link-hover;
+  }
+}
+
+%footer-contact-links{
+  @include vars(color, color-primary-c);
+  line-height: 1.8rem;
+  font-size: 12px;
+  padding-left: 10%;
+  flex: 0 1 65%;
+}
+
+@include mq(desktop){
+  %footer-contact-links{
+    flex: 0 1 20%;
+  }
+}
+
+%footer-address{
+  white-space: pre-line;
+}
+
+%footer-spans-display-block{
+  display: block;
+}
+
+%footer-social-links{
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+@include mq(desktop){
+  %footer-social-links{
+    flex: 0 1 30%;
+    align-items: baseline;
+    margin-top: 0;
+  }
+}
+
+@include mq(mobile){
+  %footer-social-links{
+    margin: 50px 15%;
+  }
+}
+
+%footer-social-links-spans{
+  min-width: 25%;
+  text-align: center;
+  display: inline-block;
+}
+
+@include mq(desktop){
+  %footer-social-links-spans{
+    min-width: 0;
+  }
+}
+
+@include mq(phablet){
+  %footer-social-links-spans{
+    min-width: 10%;
+  }
+}
+
+%footer-social-links-a{
+  margin-left: 0;
+  border-radius: 0%;
+  @include vars(background-color, color-primary-c);
+  @include vars(height, social-media-icon-height);
+  @include vars(width, social-media-icon-height);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 62% 62%;
+  border: 0.0625rem solid;
+  @include vars(border-color, color-primary-c);
+  padding: 1rem;
+  position: relative;
+  font-size: 0;
+  &:hover, &:focus, &:active{
+    @include vars(background-color, color-secondary-d);
+    @include vars(border-color, color-secondary-d);
+  }
+}
+
+@include mq(desktop){
+  %footer-social-links-a{
+    margin-left: 0.625rem;
+  }
+}
+
+@include mq(phablet){
+  %footer-social-links-a{
+    margin-left: 10px;
+  }
+}
+
+%footer-social-links-fb{
+  background-image: url(../images/svgs/facebook-f.svg);
+}
+%footer-social-links-instagram{
+  background-image: url(../images/svgs/instagram.svg);
+}
+%footer-social-links-linkedin{
+  background-image: url(../images/svgs/linkedin.svg);
+}
+%footer-social-links-twitter{
+  background-image: url(../images/svgs/twitter.svg);
+}
+
+%footer-copyright{
+  @include vars(color, color-primary-c);
+  width: 100%;
+  text-align: center;
+  margin: 0 10%;
+  line-height: 1.8rem;
+  font-size: 12px;
+}
+
+@include mq(tablet){
+  %footer-copyright{
+    position: absolute;
+    bottom: 6rem;
+    right: -5%;
+    text-align: right;
+  }
+}
+
+@include mq(phablet){
+  %footer-copyright{
+    margin-top: 20px;
+    bottom: 6rem;
+  }
+}
 
 
 
-  // background colors
+/* ==============================
+      Tools & Repetitive Things
+   ============================== */
 
-  //header
-  //footer
+%width-100{
+  width: 100%;
+}
 
+%margin-0{
+  margin: 0;
+}
+
+%padding-0{
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+%display-none{
+  display: none;
+}
+
+%display-block{
+  display: block;
+}
+
+%display-inline{
+  display: inline;
+}
+
+%display-inline-block{
+  display: inline-block;
+}
+
+%display-inline-block-important{
+  display: inline-block !important;
+}
+
+%float-left{
+  float: left;
+}
+
+%float-none{
+  float: none;
+}
+
+%text-align-center{
+  text-align: center;
+}
+
+%over-flow-hidden{
+  overflow: hidden;
 }

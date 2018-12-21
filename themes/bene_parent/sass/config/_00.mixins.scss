@@ -1,4 +1,3 @@
-
 // Used for settings CSS variables
 // usage: @include vars(color, primary-color);
 @mixin vars($property, $var, $arg-before: null, $arg-after: null) {
@@ -6,138 +5,45 @@
   #{$property}: $arg-before var(--#{$var} $arg-after);
 }
 
-
-@mixin font-style($style) {
-  @if $style == 'italic' { // Italic Light
-    @include vars(font-family, primary-font-family);
-    font-style: italic;
-    @include vars(font-weight, primary-font-light);
-  } @else if $style == 'regular' {
-    @include vars(font-family, primary-font-family);
-    @include vars(font-weight, primary-font-regular);
-    font-style: normal;
-  } @else if $style == 'semibold' {
-    @include vars(font-family, primary-font-family);
-    @include vars(font-weight, primary-font-medium);
-    font-style: normal;
-  } @else if $style == 'bold' {
-    @include vars(font-family, primary-font-family);
-    @include vars(font-weight, primary-font-bold);
-    font-style: normal;
-  } @else if $style == 'black' {
-    @include vars(font-family, primary-font-family);
-    @include vars(font-weight, primary-font-black);
-    font-style: normal;
-  } @else if $style == 'light' { // Light is the default font
-    @include vars(font-family, primary-font-family);
-    @include vars(font-weight, primary-font-light);
-    font-style: normal;
+// Media queries
+@mixin mq($query) {
+  @media (min-width: rem($query)) {
+    @content;
   }
 }
 
-// Makes an element visually hidden, but accessible.
-// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-@mixin element-invisible {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
+//Pixels to Rem
+$baseFontSizeInPixels : 16;
+@function rem($pixels, $context: $baseFontSizeInPixels) {
+  @if (unitless($pixels)) { $pixels: $pixels * 1px; }
+  @if (unitless($context)) { $context: $context * 1px; }
+  @return $pixels / $context * 1rem;
 }
 
-/* Turns off the element-invisible effect. */
-@mixin element-invisible-off {
-  position: static !important;
-  clip: auto;
-  height: auto;
-  width: auto;
-  overflow: auto;
-}
-
-/* Makes an element visually hidden by default, but visible when focused. */
-@mixin element-focusable {
-  @include element-invisible;
-  &:active,
-  &:focus {
-    @include element-invisible-off;
+// Media Queries
+@mixin mq($screen) {
+  // Small
+  @if $screen == mobile {
+    @media (max-width: 414px) { @content; }
   }
-}
 
-/* Undo clearfix. Apply to .clearfix:after */
-@mixin undo-clearfix {
-  content: "";
-  display: inline-block;
-  height: auto;
-  clear: none;
-  display: none;
-}
+  // Medium
+  @if $screen == phablet {
+    @media (min-width: 415px) and (max-width: 768px) { @content; }
+  }
 
-/* Ensure parent has position: relative; */
-@mixin centerer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+  // Large
+  @if $screen == tablet {
+    @media (min-width: 769px) and (max-width: 1239px) { @content; }
+  }
 
-/* Default transition */
-@mixin default-transition {
-  @include transition(color 0.3s linear, background-color 0.3s linear);
-}
+  // Desktops
+  @if $screen == desktop {
+    @media (min-width: 769px) { @content; }
+  }
 
-/* All transition */
-@mixin all-transition {
-  @include transition(all 0.3s linear);
-}
-
-/* Buttons */
-@mixin button {
-  @include transition(background-color 0.3s linear,color 0.3s linear);
-  @include vars(border-radius, preferred-border-radius);
-  @include vars(font-weight, primary-font-black);
-  display: inline-block;
-  @include vars(font-size, primary-font-size-base);
-  letter-spacing: 0.1rem;
-  line-height: 1;
-  padding: rem(20) rem(30);
-  position: relative;
-  text-transform: uppercase;
-}
-
-@mixin thick_gradient($direction: to bottom, $color: white) {
-  background-image: linear-gradient($direction,
-    rgba($color, 1.0) 0%,
-    rgba($color, 0.95) 10%,
-    rgba($color, 0.9) 30%,
-    rgba($color, 0.7) 60%,
-    rgba($color, 0.3) 70%,
-    rgba($color, 0.0) 90%
-  );
-  content: "";
-  display: inline-block;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-@mixin thin_gradient($direction: to bottom, $color: white) {
-  background-image: linear-gradient($direction,
-    rgba($color, 1.0) 0%,
-    rgba($color, 1.0) 5%,
-    rgba($color, 0.7) 30%,
-    rgba($color, 0.5) 50%,
-    rgba($color, 0.4) 60%,
-    rgba($color, 0.1) 75%,
-    rgba($color, 0.0) 95%,
-    rgba($color, 0.0) 100%
-  );
-  content: "";
-  display: inline-block;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100%;
+  // Extra Large
+  @if $screen == xl {
+    @media (min-width: 1240px) { @content; }
+  }
 }

@@ -44,6 +44,7 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     'paragraph-' ~ paragraph.id(),
+    'paragraph-type-' ~ paragraph.bundle(),
   ]
 %}
 {% block paragraph %}

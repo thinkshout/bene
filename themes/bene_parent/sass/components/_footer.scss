@@ -1,86 +1,51 @@
-// Default Styles (Mobile First!)
-.block-bene-footer-block {
-  @extend %block-bene-footer-block;
-
-  .menu {
-    a {
-      @extend %block-bene-footer-block-menu-link;
-
-      &:hover, &:focus, &.is-active {
-        @extend %block-bene-footer-block-menu-link-hover;
-      }
-    }
-
-    .menu-item {
-      @extend %block-bene-footer-block-menu-menu-item;
-
-      a {
-        @extend %block-bene-footer-block-menu-menu-item-a;
-
-        &:hover, &:focus, &.is-active {
-          @extend %block-bene-footer-block-menu-menu-item-a-hover;
-        }
-      }
-    }
-  }
-
-  .copyright,
-  .contact-links,
-  .contact-links .additional-contact p,
-  .contact-links .additional-footer p {
-    @extend %block-bene-footer-block-copyright;
-  }
-
-  .contact-links {
-    @extend %block-bene-footer-block-contact-links;
-    .address {
-      @extend %block-bene-footer-block-contact-links-address;
-    }
-    .phone, .email, .additional-contact {
-      @extend %block-bene-footer-block-contact-links-additional-contact;
-      p {
-        @extend %block-bene-footer-block-contact-links-additional-contact-p;
-      }
-    }
-  }
-
-  .additional-footer {
-    p {
-      @extend %block-bene-footer-block-additional-footer-p;
-    }
-  }
-
-  .social-links {
-    a {
-      @extend %block-bene-footer-block-social-links-a;
-
-      &:hover, &:focus, &:active {
-        @extend %block-bene-footer-block-social-links-a-hover;
-      }
-    }
-    @extend %block-bene-footer-block-social-links;
-  }
-
-  .copyright {
-    @extend %block-bene-footer-block-copyright;
-  }
-}
-
-// Specific ranges - use sparingly.
-// Mobile - things specifically under 400px.
-@include mq(mobile) {  }
-
-// Phablet - things between 401px and 768px.
-@include mq(phablet) {  }
-
-// Tablet - things between 769px and 1239px.
-@include mq(tablet) {  }
-
-
-// Desktops - 769px or more. (This is the most common Media Query)
-@include mq(desktop) {
+.region-footer{
 
 }
 
-// Extra Large Desktop: min-width: 1240px.
-@include mq(xl) {  }
+.block-bene-footer-block{
+  @extend %footer-background;
+  @extend %footer-container;
+
+  .menu{
+    @extend %footer-menu;
+  }
+
+  .menu-item{
+    @extend %footer-menu-item;
+    &:first-child a{
+      @extend %footer-email-link;
+    }
+  }
+
+  .menu-item a{
+    @extend %footer-menu-link;
+  }
+
+  .contact-links{
+    @extend %footer-contact-links;
+    .address{@extend %footer-address}
+    .phone a, .email a, .additional-contact a{
+      @extend %footer-spans-display-block;
+      @extend %footer-menu-link;
+    }
+  }
+
+  .social-links{
+    @extend %footer-social-links;
+
+    span{
+      @extend %footer-social-links-spans;
+    }
+
+    a{
+      @extend %footer-social-links-a;
+    }
+
+    .facebook{@extend %footer-social-links-fb;}
+    .instagram{@extend %footer-social-links-instagram;}
+    .linkedin{@extend %footer-social-links-linkedin;}
+    .twitter{@extend %footer-social-links-twitter;}
+  }
+
+  .copyright{@extend %footer-copyright};
+}

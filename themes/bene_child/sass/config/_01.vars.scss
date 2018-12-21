@@ -1,0 +1,129 @@
+
+// Variables used when setting up a new theme and releasing a new feature
+// never before seen by a child theme!
+$vars: (
+        background-color-primary: #FFFFFF, // used for (header, footer)
+  // Text and foreground colors that go with the above background color:
+        background-color-primary-shaded: darken(#50CFE3, 20%), // for tables
+        color-text-title-over-color-primary-background: #50CFE3,
+        color-text-over-color-primary-background: #000000,
+        color-text-link-over-color-primary-background: #129FB5,
+        color-text-hover-link-over-color-primary-background: #50CFE3,
+        color-text-menu-over-color-primary-background: #5C5B5B,
+        color-text-hover-menu-over-color-primary-background: #50CFE3,
+        color-text-menu-disabled-over-color-primary-background: #D8D8D8,
+        color-text-secondary-menu-over-color-primary-background: #50CFE3,
+        color-text-hover-secondary-menu-over-color-primary-background: #129FB5,
+
+        background-color-secondary: #50CFE3, // (3-up background, block quote background)
+  // Text and foreground colors that go with the color above:
+        color-text-title-over-color-secondary-background: #FFFFFF,
+        color-text-over-color-secondary-background: #000000,
+
+        background-color-tertiary: linear-gradient(-180deg, rgba(#50CFE3, 1), rgba(#000000, 1)), // (newsletter signup background)
+  // Text and foreground colors that go with the color above:
+        color-text-over-color-tertiary-background: #FFFFFF,
+        color-text-link-over-color-tertiary-background: #FFFFFF,
+        color-text-hover-link-over-color-tertiary-background: lighten(#129FB5, 20%),
+
+        background-color-quaternary: #129FB5, // (Feature (no photo) background)
+
+        background-color-inset: #FFFFFF, // (3-up under photo, intro block, listing view, photo credit background)
+  // Text and foreground colors that go with the color above:
+        color-text-title-over-color-inset-background: #129FB5,
+        color-text-over-color-inset-background: #000000,
+        color-text-link-over-color-inset-background: #50CFE3,
+        color-text-hover-link-over-color-inset-background: #129FB5,
+
+        background-color-photo-overlay: rgba(#444, .11),
+  // Text and foreground colors that go with the color above:
+        color-text-title-over-color-photo-overlay-background: #FFFFFF,
+        color-text-over-color-photo-overlay-background: #FFFFFF,
+        photo-overlay-color-gradient: linear-gradient(-180deg, rgba(#129FB5, 1), rgba(#000000, 1)),
+        hero-overlay-gradient: linear-gradient(-180deg, rgba(#000000, 1), rgba(#000000, 1)),
+
+  // Button Colors:
+        button-primary-color-background: #129FB5,
+        button-primary-hover-color-background: #50CFE3,
+        button-primary-text-and-outline-color: #FFFFFF,
+        button-primary-hover-text-and-outline-color: #FFFFFF,
+
+        button-secondary-color-background: #50CFE3,
+        button-secondary-color-hover-background: #FFFFFF,
+        button-secondary-text-and-outline-color: #FFFFFF,
+        button-secondary-hover-text-and-outline-color: #50CFE3,
+
+        button-tertiary-color-background: #50CFE3,
+        button-tertiary-color-hover-background: #129FB5,
+        button-tertiary-text-and-outline-color: #FFFFFF,
+        button-tertiary-hover-text-and-outline-color: #FFFFFF,
+
+  // Button Characteristics:
+  //      button-height: rem(4),
+        preferred-border-radius: rem(3),
+
+  // Primary font is used for menus and tables
+        primary-font-family:  "'Open Sans', sans-serif", // for testing use Comic Sans MS
+        primary-font-light:   '300',
+        primary-font-regular: '400',
+        primary-font-medium:  '600',
+        primary-font-bold:    '700',
+        primary-font-black:   '800',
+        primary-font-size-accent: rem(32),
+        primary-font-size-small: rem(20),
+        primary-font-size-base: rem(16),
+        primary-font-size-footnote: rem(14),
+        primary-line-height-accent: rem(38),
+        primary-line-height-small: rem(30),
+        primary-line-height-base: rem(20),
+        primary-line-height-footnote: rem(16),
+
+  // Title font is used for titles and subtitles
+        title-font-family: "'Open Sans', sans-serif",
+        title-font-regular:'400',
+        title-font-medium: '600',
+        title-font-bold:   '700',
+        title-font-black:  '800',
+        title-font-size-medium: rem(50),
+        title-font-size-accent: rem(30),
+        title-font-size-small: rem(25),
+        title-font-size-base: rem(16),
+        title-line-height-medium: rem(62),
+        title-line-height-accent: rem(38),
+        title-line-height-small: rem(30),
+        title-line-height-base: rem(20),
+
+
+  // sentence font is used for regular text
+        sentence-font-family:  "'Open Sans', sans-serif",
+        sentence-font-regular: '400',
+        sentence-font-medium:  '600',
+        sentence-font-bold:    '700',
+        sentence-font-size-small: rem(26),
+        sentence-font-size-base: rem(16),
+        sentence-font-size-footnote: rem(12),
+        sentence-line-height-small: rem(39),
+        sentence-line-height-base: rem(30),
+        sentence-line-height-footnote: rem(14),
+
+  // Other:
+        preferred-alignment: left,
+        hero-alignment: center,
+
+);
+
+// Global CSS Variables
+
+// the each loop places each item in $vars here so they are defined
+// in root scope. Output of this loop will be (just a brief sampling):
+// ...
+//  --background-color-primary: #FFFFFF;
+//  --background-color-secondary: #50CFE3;
+//  --background-color-tertiary: #D8D8D8;
+//  --background-color-quaternary: #129FB5;
+
+:root {
+  @each $key, $value in $vars {
+    #{--$key}: #{$value};
+  }
+}
