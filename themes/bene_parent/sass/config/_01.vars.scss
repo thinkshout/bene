@@ -440,6 +440,10 @@ $vars: (
   text-align: center;
 }
 
+%sub-nav-block-h2{
+  display: block;
+}
+
 %sub-nav-menu{
   text-align: center;
   list-style: none outside;
@@ -465,6 +469,10 @@ $vars: (
 }
 
 %sub-nav-menu-links{
+  margin: 0 1rem;
+}
+
+%sub-nav-menu-links-active{
   margin: 0 1rem;
 }
 

@@ -397,6 +397,9 @@ tbody td {
   padding: 3rem 2%;
   text-align: center; }
 
+.block-bene-sub-navigation-block h2 {
+  display: block; }
+
 .block-bene-sub-navigation-block .menu {
   text-align: center;
   list-style: none outside;
@@ -417,6 +420,9 @@ tbody td {
   text-transform: uppercase; }
 
 .block-bene-sub-navigation-block .menu-item .menu-item {
+  margin: 0 1rem; }
+
+.block-bene-sub-navigation-block .menu-item .menu-item.menu-item--active-trail {
   margin: 0 1rem; }
 
 .block-bene-sub-navigation-block > ul.menu > li.menu-item > a {

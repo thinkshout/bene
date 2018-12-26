@@ -17,6 +17,8 @@
 .block-bene-sub-navigation-block{
   @extend %sub-nav-block;
 
+  h2{@extend %sub-nav-block-h2;}
+
   .menu{
     @extend %sub-nav-menu;
   }
@@ -28,6 +30,8 @@
     a{@extend %sub-nav-links;}
 
     .menu-item{@extend %sub-nav-menu-links;}
+
+    .menu-item.menu-item--active-trail{@extend %sub-nav-menu-links-active;}
   }
 }
 
