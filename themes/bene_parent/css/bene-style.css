@@ -725,11 +725,14 @@ tbody td {
 @media (min-width: 769px) and (max-width: 1239px) {
   .page-node-type-listing-page .js-form-item input {
     width: 90%; } }
-.page-node-type-listing-page .form-type-date, .page-node-type-listing-page .js-form-submit, .page-node-type-listing-page .field--name-bene-header-media {
+.page-node-type-listing-page .form-type-date, .page-node-type-listing-page .js-form-submit {
+  width: 100%; }
+
+.page-node-type-listing-page .field--name-bene-header-media {
   width: 100%; }
 
 @media (min-width: 769px) and (max-width: 1239px) {
-  .page-node-type-listing-page .form-type-date, .page-node-type-listing-page .js-form-submit, .page-node-type-listing-page .field--name-bene-header-media {
+  .page-node-type-listing-page .form-type-date, .page-node-type-listing-page .js-form-submit {
     width: 90%; } }
 .page-node-type-listing-page article.node--type-event {
   font-size: 1.25rem;

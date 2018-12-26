@@ -836,6 +836,10 @@ $vars: (
   width: 100%;
 }
 
+%listing-pg-image-div{
+  width: 100%;
+}
+
 @include mq(tablet){
   %listing-pg-date-input{
     width: 90%;
