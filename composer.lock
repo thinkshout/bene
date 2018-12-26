@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "13f5d67fb78347fac88a28db3cb55e43",
+    "content-hash": "fbca4ae71442be24f6210684ba33b40d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5711,6 +5711,27 @@
             "time": "2018-08-10T07:34:36+00:00"
         },
         {
+            "name": "thinkshout/bene_features",
+            "version": "1.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thinkshout/bene_features.git",
+                "reference": "b09ddad7cab66998d90afe769357bf1ae4611fdd"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "ThinkShout",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Provides admin UI and infrastructure to support features built for the Bene Distribution for Non-profits.",
+            "time": "2018-12-22T08:44:35+00:00"
+        },
+        {
             "name": "thinkshout/bene_media",
             "version": "dev-8.x-2.x-bene",
             "source": {
@@ -5762,6 +5783,21 @@
             ],
             "description": "Media related functionality and configuration for the Bene Distribution.",
             "time": "2018-10-03T15:45:03+00:00"
+        },
+        {
+            "name": "thinkshout/bene_promo_redirect",
+            "version": "dev-bene_features",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thinkshout/bene_promo_redirect.git",
+                "reference": "e7525c8d06e76040cca41b42cf96b8cb8e6c1e23"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Temporarily redirect one or more pages to a specific page or site until the user has visited the target.",
+            "time": "2018-12-22T08:00:49+00:00"
         },
         {
             "name": "thinkshout/mailchimp-api-php",
@@ -8515,6 +8551,7 @@
         "drupal/migrate_google_sheets": 10,
         "drupal/picture_background_formatter": 20,
         "thinkshout/bene_media": 20,
+        "thinkshout/bene_promo_redirect": 20,
         "drupal/drupal-driver": 20,
         "drupal/drupal-extension": 20
     },
