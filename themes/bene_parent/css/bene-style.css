@@ -1113,6 +1113,12 @@ tbody td {
             Site Footer
    ============================== */
 .region-footer {
+  margin: 0 auto;
+  max-width: 100%;
+  float: none;
+  clear: both; }
+
+.region-footer {
   background-color:  #129FB5;
   background-color: var(--color-primary-e ); }
 
