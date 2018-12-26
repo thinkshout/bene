@@ -576,6 +576,9 @@ tbody td {
   text-transform: uppercase;
   padding: 0 2%; }
 
+.page-node-type-page .field--name-bene-intro h4 {
+  position: relative; }
+
 .page-node-type-page .field--name-bene-intro a, .page-node-type-page .paragraph--type--rich-text a {
   color:  #000000;
   color: var(--color-primary-d );

@@ -659,6 +659,10 @@ $vars: (
   padding: 0 2%;
 }
 
+%rch-txt-intro-heading-divider{
+  position: relative;
+}
+
 %rch-txt-intro-link{
   @include vars(color, color-primary-d);
   text-decoration: none;

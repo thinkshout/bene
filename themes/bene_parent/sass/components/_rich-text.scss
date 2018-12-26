@@ -1,6 +1,7 @@
 .page-node-type-page .field--name-bene-intro{
   @extend %rch-txt-intro;
    h1, h2, h3, h4, h5, h6{@extend %rch-txt-intro-heading;}
+  h4{@extend %rch-txt-intro-heading-divider;}
 
   a{@extend %rch-txt-intro-link;}
 
