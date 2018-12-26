@@ -991,6 +991,10 @@ $vars: (
   }
 }
 
+%text-align-caption-center{
+  text-align: center;
+}
+
 @include mq(desktop){
   %embed-video-half{
     width: 50%;

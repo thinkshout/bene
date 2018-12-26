@@ -869,6 +869,9 @@ tbody td {
     width: 50vw; }
     .embedded-entity .media--type-image.media--view-mode-embedded-half picture img {
       width: 100%; } }
+.embedded-entity.align-center .image-caption {
+  text-align: center; }
+
 @media (min-width: 769px) {
   article.embedded-entity .media--type-video.media--view-mode-embedded-half {
     width: 50%;
