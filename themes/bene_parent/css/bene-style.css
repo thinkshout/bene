@@ -576,6 +576,14 @@ tbody td {
   text-transform: uppercase;
   padding: 0 2%; }
 
+.page-node-type-page .field--name-bene-intro h1, .page-node-type-page .field--name-bene-intro h2, .page-node-type-page .field--name-bene-intro h3, .page-node-type-page .field--name-bene-intro h4, .page-node-type-page .field--name-bene-intro h5, .page-node-type-page .field--name-bene-intro h6 {
+  color:  #000000;
+  color: var(--color-primary-d ); }
+
+.page-node-type-page .paragraph--type--rich-text h1, .page-node-type-page .paragraph--type--rich-text h2, .page-node-type-page .paragraph--type--rich-text h3, .page-node-type-page .paragraph--type--rich-text h4, .page-node-type-page .paragraph--type--rich-text h5, .page-node-type-page .paragraph--type--rich-text h6 {
+  color:  #000000;
+  color: var(--color-primary-d ); }
+
 .page-node-type-page .field--name-bene-intro h4 {
   position: relative; }
 
