@@ -1,0 +1,135 @@
+.page-node-type-listing-page{
+  .views-element-container{
+    width: 90%; //this doesn't work when it's in the extend...why?
+    @extend %listing-pg-container;
+  }
+
+  .view-filters{
+    @extend %listing-pg-form-container;
+  }
+
+  .region-content form{
+    @extend %lising-pg-form;
+  }
+
+  .js-form-item {
+    @extend %width-100;
+
+    label{
+      @extend %listing-pg-label;
+    }
+
+    input{
+      @extend %listing-pg-input;
+    }
+  }
+
+  .form-type-date{
+    @extend  %listing-pg-date-input;
+  }
+
+  .js-form-submit{
+    @extend  %listing-pg-date-input;
+  }
+
+  .view-content{
+    @extend  %display-block;
+  }
+
+  article.node--type-event{
+    @extend  %listing-pg-article;
+  }
+
+  .views-row .image{
+    @extend  %listing-pg-image;
+  }
+
+  .views-row .node__content{
+    @extend  %listing-pg-node-content;
+  }
+
+  .field--name-bene-header-media{
+    @extend  %listing-pg-date-input;
+
+    img{
+      @extend  %listing-pg-img;
+    }
+  }
+
+  .node__content .text-wrapper .field--name-bene-intro{
+    @extend  %padding-0;
+  }
+
+  .text-wrapper{
+    @extend  %listing-pg-txt-wrapper;
+
+    h2{
+      @extend  %margin-0;
+    }
+
+    .field{
+      @extend  %padding-0;
+    }
+  }
+
+  .text-wrapper h2{
+    @extend  %listing-pg-h2;
+    a{
+      @extend  %listing-pg-a;
+    }
+  }
+
+  .field--name-bene-event-location,
+  .field--name-bene-date{
+    @extend  %display-none;
+    @include mq(tablet){
+      display: none;
+    }
+    @include mq(desktop){
+      display: none;
+    }
+  }
+
+  .field--name-bene-intro,
+  .field--name-bene-event-date-range {
+    @extend  %listing-pg-event-details;
+  }
+
+  .field--name-bene-event-location{
+
+    .field__label{
+      @extend %float-none;
+    }
+
+    .field__item{
+      div{
+        @extend %display-inline;
+      }
+
+      .organization, .address-line1 {
+        @extend %display-block;
+      }
+    }
+  }
+
+}
+
+.node--type-listing-page .field--name-bene-intro,
+.node--type-listing-page .paragraph--type--rich-text,
+.block-system-main-block .field--name-bene-event-date-range,
+.block-system-main-block .field--name-bene-event-location {
+  @extend %listing-pg-intro-and-event-details;
+}
+
+.block-system-main-block article.node--type-event .node__content {
+  .field--name-bene-event-date-range,
+  .field--name-bene-event-location,
+  .field--name-bene-intro,
+  .field--name-bene-content {
+    @extend %listing-pg-font-settings;
+  }
+}
+
+.page-node-type-listing-page .views-element-container{
+  @extend %listing-pg-container-wrapper;
+}

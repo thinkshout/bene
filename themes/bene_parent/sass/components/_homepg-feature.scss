@@ -1,0 +1,12 @@
+.block-bene-home-page-feature-block{
+  @extend %hmpg-feature;
+  .field--name-bene-lead{@extend %hmpg-feature-lead;}
+
+  .field--name-bene-title{@extend %hmpg-feature-title;}
+
+  .field--name-bene-link{
+    @extend %hmpg-feature-btn-wrapper;
+
+    a{@extend %hmpg-feature-btn;}
+  }
+}

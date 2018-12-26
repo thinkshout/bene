@@ -8,7 +8,8 @@ modules/*
 modules/bene_media
 core
 
-benefit.css.map
+# Ignore CSS map files
+*.css.map
 
 # Don't ignore bene modules/features
 # This doesn't work for new files. Force add them using git add -f

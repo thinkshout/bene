@@ -1,0 +1,36 @@
+.block-page-title-block.no-bgimage{
+  @extend %title-block;
+}
+
+.block-page-title-block.bgimage{
+  @extend %title-block-bgimage;
+}
+
+.block-page-title-block.block-hero{
+  @extend %title-block-hero;
+
+  h1, h2{
+    @extend %title-block-heading;
+  }
+}
+
+.block-bene-sub-navigation-block{
+  @extend %sub-nav-block;
+
+  .menu{
+    @extend %sub-nav-menu;
+  }
+
+  .menu-item{
+    @extend %sub-nav-menu-item;
+    @extend %sub-nav-links;
+
+    a{@extend %sub-nav-links;}
+
+    .menu-item{@extend %sub-nav-menu-links;}
+  }
+}
+
+.block-bene-sub-navigation-block > ul.menu > li.menu-item > a {
+  @extend %sub-nav-link-title;
+}

@@ -1,0 +1,89 @@
+//Videos
+article.embedded-entity{
+  @extend %display-block;
+  .media--type-video{
+    .field--name-name,
+    .field--name-created,
+    .field--name-uid{
+      @extend %display-none;
+    }
+  }
+  .media--type-video.media--view-mode-embedded-half{
+    @extend %embed-video-half;
+  }
+}
+
+//Images default
+.embedded-entity{
+  @extend %embed-imgs-default;
+
+  .image-caption{
+    @extend %embed-img-caption;
+  }
+  img{
+    @extend %embed-img;
+  }
+}
+
+//Captioned Images Default
+.embedded-entity.caption-article{
+ @extend %display-block;
+}
+
+//Images align-center
+.embedded-entity.align-center{
+  @extend %display-block;
+  article.media--type-image{
+    @extend %embed-img-center;
+  }
+  .image-caption{
+    @extend %text-align-center;
+  }
+}
+
+//Images align-left
+.embedded-entity.align-left{
+  @extend %display-block;
+  @extend %embed-float-none;
+  article.media--type-image{
+    @extend %embed-img-left;
+  }
+  .image-caption{
+    @extend %embed-img-caption;
+  }
+}
+
+//Images align-right
+.embedded-entity.align-right{
+  @extend %display-block;
+  @extend %embed-float-none;
+  article.media--type-image{
+    @extend %embed-img-right;
+  }
+  .image-caption{
+    @extend %embed-img-right-caption;
+  }
+}
+
+//Half embed default
+.embedded-entity{
+  .media--type-image.media--view-mode-embedded-half{
+    @extend %embed-img-half;
+  }
+}
+
+//Social Media
+
+.embedded-entity.instagram{
+  @extend %embed-instagram;
+  iframe{
+    @extend %embed-instagram-iframe;
+  }
+}
+
+.embedded-entity.tweet{
+  @extend %embed-tweet;
+  .twitter-tweet{
+    @extend %embed-twitter-tweet;
+  }
+}
