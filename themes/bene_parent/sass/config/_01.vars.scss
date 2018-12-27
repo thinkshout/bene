@@ -1465,6 +1465,11 @@ $vars: (
   float: none;
 }
 
+%clear-float{
+  float: none;
+  clear: both;
+}
+
 %text-align-center{
   text-align: center;
 }

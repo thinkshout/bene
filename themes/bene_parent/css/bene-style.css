@@ -1248,6 +1248,13 @@ article.embedded-entity, .embedded-entity.caption-article, .embedded-entity.alig
 .page-node-type-listing-page .field--name-bene-event-location .field__label {
   float: none; }
 
+.page-node-type-page .field__item,
+.page-node-type-listing-page .field__item,
+.page-node-type-event .field__item,
+.page-node-type-news .field__item {
+  float: none;
+  clear: both; }
+
 .embedded-entity.align-center .image-caption, .site-header .mobile-nav .menu {
   text-align: center; }
 
