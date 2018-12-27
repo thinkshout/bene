@@ -146,6 +146,14 @@ p, p.standard, blockquote, .field--name-field-tiles .field__item .paragraph {
   color:  #000000;
   color: var(--color-primary-d ); }
 
+blockquote {
+  color:  #000000;
+  color: var(--color-primary-d ); }
+
+blockquote p {
+  color:  #000000;
+  color: var(--color-primary-d ); }
+
 ul li, ol li {
   font-size: 1rem;
   line-height: 2rem;

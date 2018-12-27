@@ -158,6 +158,13 @@ $vars: (
   @include vars(color, color-primary-d);
 }
 
+%blockquote{
+  @include vars(color, color-primary-d);
+}
+%blockquote-p{
+  @include vars(color, color-primary-d);
+}
+
 %lists{
   font-size: rem(16);
   line-height: rem(32);
