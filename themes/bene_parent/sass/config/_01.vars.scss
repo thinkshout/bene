@@ -247,6 +247,10 @@ $vars: (
   text-transform: uppercase;
 }
 
+%menu-item-hover{
+  @include vars(color, color-secondary-c);
+}
+
 %join-menu{
   display: none;
   &:last-child{

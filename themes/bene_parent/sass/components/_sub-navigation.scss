@@ -38,3 +38,7 @@
 .block-bene-sub-navigation-block > ul.menu > li.menu-item > a {
   @extend %sub-nav-link-title;
 }
+
+.menu--main .menu .menu-item--active-trail{
+  @extend %sub-nav-menu-links-active;
+}

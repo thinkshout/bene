@@ -233,6 +233,10 @@ tbody td {
   color: var(--color-secondary-c );
   text-transform: uppercase; }
 
+.site-header .menu a:hover {
+  color:  ;
+  color: var(--color-secondary-c ); }
+
 .site-header #joinButton .menu-item {
   display: none; }
   .site-header #joinButton .menu-item:last-child {
@@ -430,7 +434,7 @@ tbody td {
 .block-bene-sub-navigation-block .menu-item .menu-item {
   margin: 0 1rem; }
 
-.block-bene-sub-navigation-block .menu-item .menu-item.menu-item--active-trail {
+.block-bene-sub-navigation-block .menu-item .menu-item.menu-item--active-trail, .menu--main .menu .menu-item--active-trail {
   margin: 0 1rem; }
 
 .block-bene-sub-navigation-block > ul.menu > li.menu-item > a {
