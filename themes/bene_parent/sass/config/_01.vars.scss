@@ -131,10 +131,37 @@ $vars: (
   @include vars(color, color-primary-c);
 }
 
+%button-secondary{
+  @include vars(color, color-primary-c);
+  @include vars(background-color, color-secondary-c);
+  @include vars(font-family, font-family-secondary);
+  border-radius: 100px;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: rem(32);
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 35px;
+  text-transform: uppercase;
+}
+
+%button-secondary-hover{
+  @include vars(background-color, color-secondary-d);
+  @include vars(color, color-primary-c);
+}
+
 %text {
   font-size: rem(16);
   line-height: rem(32);
   @include vars(font-family, font-family-primary);
+  @include vars(color, color-primary-d);
+}
+
+%blockquote{
+  @include vars(color, color-primary-d);
+}
+%blockquote-p{
   @include vars(color, color-primary-d);
 }
 
@@ -218,6 +245,10 @@ $vars: (
   text-decoration: none;
   @include vars(color, color-secondary-c);
   text-transform: uppercase;
+}
+
+%menu-item-hover{
+  @include vars(color, color-secondary-c);
 }
 
 %join-menu{
@@ -420,6 +451,10 @@ $vars: (
   text-align: center;
 }
 
+%sub-nav-block-h2{
+  display: block;
+}
+
 %sub-nav-menu{
   text-align: center;
   list-style: none outside;
@@ -445,6 +480,10 @@ $vars: (
 }
 
 %sub-nav-menu-links{
+  margin: 0 1rem;
+}
+
+%sub-nav-menu-links-active{
   margin: 0 1rem;
 }
 
@@ -602,6 +641,10 @@ $vars: (
   margin-bottom: 20px;
 }
 
+%text-wrapper-text{
+  font-size: 16px;
+}
+
 %tiles-img-container{
   position: relative;
   z-index: 100;
@@ -625,6 +668,18 @@ $vars: (
   margin: 30px 0;
   text-transform: uppercase;
   padding: 0 2%;
+}
+
+%rch-txt-intro-heading-color{
+  @include vars(color, color-primary-d);
+}
+
+%rch-txt-heading-color{
+  @include vars(color, color-primary-d);
+}
+
+%rch-txt-intro-heading-divider{
+  position: relative;
 }
 
 %rch-txt-intro-link{
@@ -812,6 +867,10 @@ $vars: (
   width: 100%;
 }
 
+%listing-pg-image-div{
+  width: 100%;
+}
+
 @include mq(tablet){
   %listing-pg-date-input{
     width: 90%;
@@ -941,6 +1000,10 @@ $vars: (
       width: 100%;
     }
   }
+}
+
+%text-align-caption-center{
+  text-align: center;
 }
 
 @include mq(desktop){
@@ -1187,6 +1250,10 @@ $vars: (
   clear: both;
 }
 
+%newsletter-h2{
+  font-size: 22px;
+}
+
 %newsletter-p{
   @include vars(color, color-primary-c);
   margin: 30px 0;
@@ -1236,6 +1303,43 @@ $vars: (
   float: none;
   clear: both;
 }
+
+%footer-region-background{
+   @include vars(background-color, color-primary-e)
+ }
+
+%footer-region-grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+%footer-newsletter-row{
+  flex-basis: 100%;
+}
+%footer-menu-column{
+  flex-basis: 100%;
+}
+%footer-copyright-row{
+  flex-basis: 100%;
+}
+
+
+%footer-menu-header{
+  text-align: center;
+}
+
+%footer-menu-links{
+  color: #000;
+}
+
+@include mq(desktop){
+  %footer-menu-column{
+    flex-basis: 30%;
+  }
+}
+
 
 %footer-background{
   @include vars(background-color, color-primary-e);

@@ -32,6 +32,10 @@
     &:hover{@extend %menu-link-hover;}
   }
 
+  .menu a{
+    &:hover{@extend %menu-item-hover;}
+  }
+
   .menu--main .menu-item{
     @extend %main-menu-button;
   }
