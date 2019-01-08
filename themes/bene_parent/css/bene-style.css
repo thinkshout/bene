@@ -92,7 +92,7 @@ h5 {
   color:  ;
   color: var(--color-secondary-d ); }
 
-.block-bene-home-page-feature-block .field--name-bene-link a, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a, .button, .page-node-type-page .field--name-bene-intro a.button, .page-node-type-page .paragraph--type--rich-text a.button, .field--name-field-tiles .button-wrapper a {
+.block-bene-home-page-feature-block .field--name-bene-link a, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a, .button, .page-node-type-page .field--name-bene-intro a.button, .page-node-type-page .paragraph--type--rich-text a.button, .field--name-field-tiles .tile-button a {
   color:  #ffffff;
   color: var(--color-primary-c );
   background-color:  ;
@@ -109,7 +109,7 @@ h5 {
   padding: 12px 35px;
   text-transform: uppercase; }
 
-.block-bene-home-page-feature-block .field--name-bene-link a:hover, .block-bene-home-page-feature-block .field--name-bene-link a:focus, .block-bene-home-page-feature-block .field--name-bene-link a:active, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:hover, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:focus, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:active, .button:hover, .button:active, .button:focus, .page-node-type-page .field--name-bene-intro a.button:focus, .page-node-type-page .field--name-bene-intro a.button:hover, .page-node-type-page .field--name-bene-intro a.button:active, .page-node-type-page .paragraph--type--rich-text a.button:focus, .page-node-type-page .paragraph--type--rich-text a.button:hover, .page-node-type-page .paragraph--type--rich-text a.button:active, .field--name-field-tiles .button-wrapper a:hover, .field--name-field-tiles .button-wrapper a:active, .field--name-field-tiles .button-wrapper a:focus {
+.block-bene-home-page-feature-block .field--name-bene-link a:hover, .block-bene-home-page-feature-block .field--name-bene-link a:focus, .block-bene-home-page-feature-block .field--name-bene-link a:active, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:hover, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:focus, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:active, .button:hover, .button:active, .button:focus, .page-node-type-page .field--name-bene-intro a.button:focus, .page-node-type-page .field--name-bene-intro a.button:hover, .page-node-type-page .field--name-bene-intro a.button:active, .page-node-type-page .paragraph--type--rich-text a.button:focus, .page-node-type-page .paragraph--type--rich-text a.button:hover, .page-node-type-page .paragraph--type--rich-text a.button:active, .field--name-field-tiles .tile-button a:hover, .field--name-field-tiles .tile-button a:active, .field--name-field-tiles .tile-button a:focus {
   background-color:  ;
   background-color: var(--color-secondary-d );
   color:  #ffffff;
@@ -483,6 +483,12 @@ tbody td {
   background-color:  #129FB5;
   background-color: var(--color-primary-e ); }
 
+.field--name-field-tiles .paragraph--type--tile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between; }
+
 .paragraph--type--tiles .field--name-field-title {
   color:  #ffffff;
   color: var(--color-primary-c );
@@ -510,7 +516,8 @@ tbody td {
   text-align: left; }
 
 .field--name-field-tiles .tile-text {
-  padding: 0 20px; }
+  padding: 0 20px;
+  margin-bottom: auto; }
 
 .field--name-field-tiles .field__item .field--name-field-title, .field--name-field-tiles .text-wrapper a .field--name-field-title {
   color:  #000000;
@@ -1261,6 +1268,9 @@ article.embedded-entity, .embedded-entity.caption-article, .embedded-entity.alig
 .field--name-field-tiles .field__item .paragraph {
   overflow: hidden; }
 
+.contextual-region {
+  position: static; }
+
 /* BASE ELEMENT STYLES */
 label {
   font-weight: 400;
@@ -1303,7 +1313,8 @@ input {
   .page-node-type-listing-page .field--name-bene-date {
     display: none; } }
 
-.field--name-field-tiles .button-wrapper {
+.field--name-field-tiles .tile-button {
+  padding: 0 20px;
   margin-bottom: 30px; }
 
 /*# sourceMappingURL=bene-style.css.map */

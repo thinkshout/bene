@@ -39,10 +39,10 @@
  */
 #}
 {% set classes = [
-'paragraph',
-'paragraph--type--' ~ paragraph.bundle|clean_class,
-view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-'paragraph-' ~ paragraph.id(),
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    'paragraph-' ~ paragraph.id(),
 ] %}
 {% if content.field_link %}
     {% set href = content.field_link.0['#url'] %}
@@ -58,17 +58,21 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
                 </a>
             {% endif %}
             <div class="tile-text">
-                {{ content.field_lead }}
-                {% if href %}
-                <a href="{{ href }}">
-                {% endif %}
-                {{ content.field_title }}
-                {% if href %}
-                </a>
-                {% endif %}
-                {{ content.field_text }}
+                <div class="text-wrapper">
+                    {{ content.field_lead }}
+                    {% if href %}
+                    <a href="{{ href }}">
+                        {% endif %}
+                        {{ content.field_title }}
+                        {% if href %}
+                    </a>
+                    {% endif %}
+                    {{ content.field_text }}
+                </div>
+            </div>
+            <div class="tile-button">
                 {% if content.field_link.0['#title']|render != content.field_link.0['#url']|render %}
-                {{ content.field_link }}
+                    {{ content.field_link }}
                 {% endif %}
             </div>
         {% endblock %}

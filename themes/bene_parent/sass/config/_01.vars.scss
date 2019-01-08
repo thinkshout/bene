@@ -560,6 +560,13 @@ $vars: (
   @include vars(background-color, color-primary-e);
 }
 
+%tiles-wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
 %tiles-main-title{
   @include vars(color, color-primary-c);
   font-weight: bold;
@@ -588,6 +595,7 @@ $vars: (
 
 %tile-text{
   padding: 0 20px;
+  margin-bottom: auto;
 }
 
 %tile-inner-title{
