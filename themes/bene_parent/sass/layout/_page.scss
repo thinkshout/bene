@@ -65,3 +65,7 @@
     @extend %clear-float;
   }
 }
+
+.contextual-region{
+  @extend %position-static;
+}
