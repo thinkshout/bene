@@ -794,9 +794,11 @@ tbody td {
 .block-system-main-block article.node--type-event .node__content .field--name-bene-intro,
 .block-system-main-block article.node--type-event .node__content .field--name-bene-content, .view-bene-news .view-content .field--name-bene-intro p,
 .view-bene-news .view-content .field--name-bene-intro {
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 2rem; }
+  font-size: 1.375rem;
+  line-height: 2.375rem;
+  font-weight: 300;
+  font-family:  'Work Sans', sans-serif;
+  font-family: var(--font-family-primary ); }
 
 .page-node-type-listing-page .views-element-container {
   margin: 0 0 5%;
