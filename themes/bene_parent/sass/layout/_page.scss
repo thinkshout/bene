@@ -20,7 +20,7 @@
 
         .field__item{
           p, div{
-            @extend  %display-inline;
+            @extend  %display-inline-block;
           }
         }
       }

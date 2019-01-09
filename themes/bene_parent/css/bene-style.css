@@ -1249,8 +1249,11 @@ article.embedded-entity .media--type-video .field--name-uid, .page-node-type-lis
 article.embedded-entity, .embedded-entity.caption-article, .embedded-entity.align-center, .embedded-entity.align-left, .embedded-entity.align-right, .block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item .organization, .block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item .address-line1, .page-node-type-listing-page .view-content, .page-node-type-listing-page .field--name-bene-event-location .field__item .organization, .page-node-type-listing-page .field--name-bene-event-location .field__item .address-line1 {
   display: block; }
 
-.page-node-type-listing-page .views-element-container .view-bene-events .view-content .field__item p, .page-node-type-listing-page .views-element-container .view-bene-events .view-content .field__item div, .block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item div, .page-node-type-listing-page .field--name-bene-event-location .field__item div {
+.block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item div, .page-node-type-listing-page .field--name-bene-event-location .field__item div {
   display: inline; }
+
+.page-node-type-listing-page .views-element-container .view-bene-events .view-content .field__item p, .page-node-type-listing-page .views-element-container .view-bene-events .view-content .field__item div {
+  display: inline-block; }
 
 .page-node-type-listing-page .field--name-bene-event-location .field__label {
   float: none; }
