@@ -128,6 +128,13 @@
   .field--name-bene-content {
     @extend %listing-pg-font-settings;
   }
+
+  .field--name-bene-intro{
+    @extend %text;
+    @extend %updates-pg-intro-padding;
+    @extend %updates-pg-intro-p;
+  }
+
 }
 
 .page-node-type-listing-page .views-element-container{

@@ -1090,6 +1090,10 @@ $vars: (
   margin-top: rem(18);
 }
 
+%updates-pg-intro-padding{
+  padding: 0 2%;
+}
+
 %updates-pg-intro-p{
   font-size: rem(18);
   font-weight: 300;
@@ -1101,7 +1105,6 @@ $vars: (
   %updates-pg-intro-p{
     font-size: rem(22);
     line-height: rem(38);
-    padding: 0 2%;
   }
 }
 
