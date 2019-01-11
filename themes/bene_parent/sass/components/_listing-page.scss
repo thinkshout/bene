@@ -129,9 +129,13 @@
     @extend %listing-pg-font-settings;
   }
 
+  .field--name-bene-content p{
+    @extend %listing-pg-paragraph;
+  }
+
   .field--name-bene-intro{
     @extend %text;
-    @extend %updates-pg-intro-padding;
+    @extend %listing-pg-intro-padding;
     @extend %updates-pg-intro-p;
   }
 

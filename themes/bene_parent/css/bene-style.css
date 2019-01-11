@@ -800,6 +800,10 @@ tbody td {
   font-family:  'Work Sans', sans-serif;
   font-family: var(--font-family-primary ); }
 
+.block-system-main-block article.node--type-event .node__content .field--name-bene-content p, .block-system-main-block article.node--type-news .node__content .field--name-bene-content p {
+  font-family:  'Work Sans', sans-serif;
+  font-family: var(--font-family-primary ); }
+
 .page-node-type-listing-page .views-element-container {
   margin: 0 0 5%;
   padding: 0 5%; }
@@ -961,6 +965,12 @@ tbody td {
   .block-system-main-block article.node--type-event .node__content .field--name-bene-intro, .field--name-bene-intro p {
     font-size: 1.375rem;
     line-height: 2.375rem; } }
+.block-system-main-block article.node--type-news .node__content .field--name-bene-intro p {
+  margin-top: 0.75rem; }
+
+.block-system-main-block article.node--type-news.node--view-mode-search-result .node__content .field--name-bene-intro p {
+  margin-top: 0.75rem; }
+
 .field--name-bene-date time {
   padding: 2%; }
 

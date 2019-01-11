@@ -909,6 +909,10 @@ $vars: (
   @include vars(font-family, font-family-primary);
 }
 
+%listing-pg-paragraph{
+  @include vars(font-family, font-family-primary);
+}
+
 %listing-pg-container-wrapper{
   margin: 0 0 5%;
   padding: 0 5%;
@@ -1091,7 +1095,7 @@ $vars: (
   margin-top: rem(18);
 }
 
-%updates-pg-intro-padding{
+%listing-pg-intro-padding{
   padding: 0 2%;
 }
 
@@ -1107,6 +1111,14 @@ $vars: (
     font-size: rem(22);
     line-height: rem(38);
   }
+}
+
+%updates-pg-intro-padding{
+  margin-top: rem(12);
+}
+
+%updates-listing-intro-padding{
+  margin-top: rem(12);
 }
 
 %updates-pg-bene-date-time{
