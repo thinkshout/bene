@@ -1,0 +1,15 @@
+.paragraph--type--media{
+  @extend %media-paragraph;
+
+  .field--name-field-caption{
+    @extend %media-paragraph-caption;
+  }
+
+  img{
+    @extend %media-paragraph-img;
+  }
+
+  video{
+    @extend %media-paragraph-video;
+  }
+}
