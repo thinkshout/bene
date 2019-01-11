@@ -1222,6 +1222,9 @@ tbody td {
 .block-bene-footer-block .menu {
   margin: 0; }
 
+.region-footer .block-menu.navigation .menu {
+  margin: 0; }
+
 @media (min-width: 769px) {
   .block-bene-footer-block .menu {
     flex: 0 1 20%; } }
