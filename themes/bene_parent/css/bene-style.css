@@ -1349,7 +1349,7 @@ tbody td {
 .page-node-type-listing-page .js-form-item {
   width: 100%; }
 
-.page-node-type-listing-page .text-wrapper h2 {
+.site-header .mobile-nav .menu, .page-node-type-listing-page .text-wrapper h2 {
   margin: 0; }
 
 .page-node-type-listing-page .node__content .text-wrapper .field--name-bene-intro, .page-node-type-listing-page .text-wrapper .field {
