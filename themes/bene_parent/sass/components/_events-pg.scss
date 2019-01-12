@@ -17,3 +17,34 @@
   }
 
 }
+
+article.node--type-listing-page .view-bene-events{
+  .field--name-bene-header-media {
+    @extend %events-pg-image-div;
+  }
+  .views-row .image{
+    @extend  %event-pg-image;
+  }
+
+  .node--type-event{
+
+    .field--name-bene-event-date-range{
+      @extend  %events-pg-date;
+    }
+
+    .field--name-bene-intro{
+      @extend  %events-pg-intro;
+    }
+
+  }
+}
+
+.page-node-type-listing-page .views-element-container .view-bene-events .view-content .text-wrapper{
+  h2{
+    @extend %events-pg-h2;
+
+    a{
+      @extend  %events-pg-a;
+    }
+  }
+}

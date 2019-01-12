@@ -968,13 +968,41 @@ tbody td {
 /* ==============================
             Events Page
    ============================== */
-.block-system-main-block article.node--view-mode-full .field--name-bene-event-date-range {
+.block-system-main-block article.node--view-mode-full .field--name-bene-event-date-range, article.node--type-listing-page .view-bene-events .node--type-event .field--name-bene-event-date-range {
   margin-top: 20px; }
 
 .block-system-main-block article.node--view-mode-full .field__label {
   float: none;
   clear: both;
   margin-top: 10px; }
+
+article.node--type-listing-page .view-bene-events .field--name-bene-header-media {
+  width: 40%; }
+
+article.node--type-listing-page .view-bene-events .views-row .image {
+  display: block; }
+
+@media (min-width: 769px) {
+  article.node--type-listing-page .view-bene-events .views-row .image {
+    display: inline-block; } }
+.page-node-type-listing-page .views-element-container .view-bene-events .view-content .text-wrapper h2 {
+  font-size: 2rem;
+  line-height: 2.375rem;
+  font-weight: 400;
+  margin-top: 50px; }
+
+.page-node-type-listing-page .views-element-container .view-bene-events .view-content .text-wrapper h2 a {
+  color:  #50CFE3;
+  color: var(--color-primary-a );
+  text-decoration: none; }
+
+.block-system-main-block article.node--view-mode-full .field--name-bene-event-date-range, article.node--type-listing-page .view-bene-events .node--type-event .field--name-bene-event-date-range {
+  color:  #50CFE3;
+  color: var(--color-primary-a ); }
+
+article.node--type-listing-page .view-bene-events .node--type-event .field--name-bene-intro {
+  color:  #50CFE3;
+  color: var(--color-primary-a ); }
 
 /* ==============================
             Updates Page

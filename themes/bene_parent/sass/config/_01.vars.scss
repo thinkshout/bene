@@ -1117,6 +1117,40 @@ $vars: (
   margin-top: 10px;
 }
 
+%events-pg-image-div{
+  width: 40%;
+}
+
+%event-pg-image{
+  display: block;
+}
+
+@include mq(desktop){
+  %event-pg-image{
+    display: inline-block;
+  }
+}
+
+%events-pg-h2{
+  font-size: 2rem;
+  line-height: 2.375rem;
+  font-weight: 400;
+  margin-top: 50px;
+}
+
+%events-pg-a{
+  @include vars(color, color-primary-a);
+  text-decoration: none;
+}
+
+%events-pg-date{
+  @include vars(color, color-primary-a);
+}
+
+%events-pg-intro{
+  @include vars(color, color-primary-a);
+}
+
 /* ==============================
             Updates Page
    ============================== */
