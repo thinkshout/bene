@@ -31,6 +31,8 @@
     a {
       @extend %button-secondary;
       &:hover, &:active, &:focus {@extend %button-secondary-hover;}
+      @extend %button;
+      &:hover, &:active, &:focus {@extend %button-hover;}
     }
   }
 
@@ -46,4 +48,3 @@
     p{@extend %text-wrapper-text}
   }
 }
-

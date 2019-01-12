@@ -61,4 +61,7 @@
   .block-system-main-block .field--name-bene-event-location {
     @extend %clear-float-add-padding;
   }
+  .field__item{
+    @extend %clear-float;
+  }
 }
