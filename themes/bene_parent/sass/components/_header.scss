@@ -12,7 +12,7 @@
   }
 
   .mobile-nav{@extend  %mobile-nav;
-    .menu{@extend %text-align-center;}
+    .menu{@extend %text-align-center; @extend %margin-0}
   }
 
   .desktop-nav{@extend %desktop-nav;}

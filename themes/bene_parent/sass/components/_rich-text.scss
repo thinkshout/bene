@@ -25,8 +25,20 @@
 
   a{@extend %rch-txt-intro-link;}
 
-  p{
+  p, span{
     @extend %rch-txt-intro-text;
+    @extend %rch-txt-wysiwyg-text;
+  }
+
+  ul, ol{
+    @extend %rch-txt-wysiwyg-text;
+  }
+
+  figure{
+    @extend %rch-txt-wysiwyg-text;
+  }
+
+  .embedded-entity{
     @extend %rch-txt-wysiwyg-text;
   }
 

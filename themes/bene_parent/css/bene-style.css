@@ -605,7 +605,7 @@ tbody td {
   text-decoration: none;
   font-weight: bold; }
 
-.page-node-type-page .field--name-bene-intro p, .page-node-type-page .paragraph--type--rich-text p {
+.page-node-type-page .field--name-bene-intro p, .page-node-type-page .paragraph--type--rich-text p, .page-node-type-page .paragraph--type--rich-text span {
   color:  #50CFE3;
   color: var(--color-primary-a );
   margin-bottom: 35px;
@@ -614,11 +614,11 @@ tbody td {
   line-height: 24px; }
 
 @media (min-width: 769px) {
-  .page-node-type-page .field--name-bene-intro p, .page-node-type-page .paragraph--type--rich-text p {
+  .page-node-type-page .field--name-bene-intro p, .page-node-type-page .paragraph--type--rich-text p, .page-node-type-page .paragraph--type--rich-text span {
     font-size: 22px;
     font-weight: normal;
     line-height: 34px; } }
-.page-node-type-page .paragraph--type--rich-text p {
+.page-node-type-page .paragraph--type--rich-text p, .page-node-type-page .paragraph--type--rich-text span, .page-node-type-page .paragraph--type--rich-text ul, .page-node-type-page .paragraph--type--rich-text ol, .page-node-type-page .paragraph--type--rich-text figure, .page-node-type-page .paragraph--type--rich-text .embedded-entity {
   color:  #000000;
   color: var(--color-primary-d ); }
 
@@ -942,15 +942,67 @@ tbody td {
   display: inline-block !important; }
 
 /* ==============================
+            Media Paragraph
+   ============================== */
+.paragraph--type--media {
+  padding: 0 15%;
+  margin-bottom: 25px; }
+
+.paragraph--type--media img {
+  width: 100%; }
+
+.paragraph--type--media video {
+  width: 100%; }
+
+.paragraph--type--media .field--name-field-caption {
+  color:  #50CFE3;
+  color: var(--color-primary-a );
+  font-family:  'Work Sans', sans-serif;
+  font-family: var(--font-family-primary );
+  font-size: 16px;
+  line-height: 34px;
+  padding-top: 10px;
+  font-style: italic;
+  font-weight: 300; }
+
+/* ==============================
             Events Page
    ============================== */
-.block-system-main-block article.node--view-mode-full .field--name-bene-event-date-range {
+.block-system-main-block article.node--view-mode-full .field--name-bene-event-date-range, article.node--type-listing-page .view-bene-events .node--type-event .field--name-bene-event-date-range {
   margin-top: 20px; }
 
 .block-system-main-block article.node--view-mode-full .field__label {
   float: none;
   clear: both;
   margin-top: 10px; }
+
+article.node--type-listing-page .view-bene-events .field--name-bene-header-media {
+  width: 40%; }
+
+article.node--type-listing-page .view-bene-events .views-row .image {
+  display: block; }
+
+@media (min-width: 769px) {
+  article.node--type-listing-page .view-bene-events .views-row .image {
+    display: inline-block; } }
+.page-node-type-listing-page .views-element-container .view-bene-events .view-content .text-wrapper h2 {
+  font-size: 2rem;
+  line-height: 2.375rem;
+  font-weight: 400;
+  margin-top: 50px; }
+
+.page-node-type-listing-page .views-element-container .view-bene-events .view-content .text-wrapper h2 a {
+  color:  #50CFE3;
+  color: var(--color-primary-a );
+  text-decoration: none; }
+
+.block-system-main-block article.node--view-mode-full .field--name-bene-event-date-range, article.node--type-listing-page .view-bene-events .node--type-event .field--name-bene-event-date-range {
+  color:  #50CFE3;
+  color: var(--color-primary-a ); }
+
+article.node--type-listing-page .view-bene-events .node--type-event .field--name-bene-intro {
+  color:  #50CFE3;
+  color: var(--color-primary-a ); }
 
 /* ==============================
             Updates Page
@@ -1969,6 +2021,9 @@ tbody td {
 .block-bene-footer-block .menu {
   margin: 0; }
 
+.region-footer .block-menu.navigation .menu {
+  margin: 0; }
+
 @media (min-width: 769px) {
   .block-bene-footer-block .menu {
     flex: 0 1 20%; } }
@@ -2093,7 +2148,7 @@ tbody td {
 .page-node-type-listing-page .js-form-item {
   width: 100%; }
 
-.page-node-type-listing-page .text-wrapper h2 {
+.site-header .mobile-nav .menu, .page-node-type-listing-page .text-wrapper h2 {
   margin: 0; }
 
 .page-node-type-listing-page .node__content .text-wrapper .field--name-bene-intro, .page-node-type-listing-page .text-wrapper .field {
