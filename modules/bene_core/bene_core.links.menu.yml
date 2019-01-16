@@ -9,10 +9,3 @@ entity.block_content.add:
   parent: entity.block.collection
   description: 'Add a new block.'
   route_name: block_content.add_page
-
-bene.feature.config:
-  title: Bene Features
-  parent: system.admin_config
-  description: 'Enable, disable, and configure Bene Features.'
-  route_name: bene.feature.config
-  weight: -20
