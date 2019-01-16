@@ -7,6 +7,10 @@
 .field--name-field-tiles{
   @extend %tiles-container;
 
+  .paragraph--type--tile{
+    @extend %tiles-wrapper;
+  }
+
   .field__item{
     @extend %individual-tiles;
 
@@ -26,7 +30,8 @@
 
   .tile-text{@extend %tile-text;}
 
-  .button-wrapper {
+  .tile-button {
+    padding: 0 20px;
     margin-bottom: 30px;
     a {
       @extend %button;

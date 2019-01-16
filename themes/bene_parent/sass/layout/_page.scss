@@ -20,7 +20,7 @@
 
         .field__item{
           p, div{
-            @extend  %display-inline;
+            @extend  %display-inline-block;
           }
         }
       }
@@ -64,4 +64,8 @@
   .field__item{
     @extend %clear-float;
   }
+}
+
+.contextual-region{
+  @extend %position-static;
 }
