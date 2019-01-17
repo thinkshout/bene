@@ -144,6 +144,12 @@ $vars: (
     Full Width Feature Paragraph
    ============================== */
 
+%full-width-pargph{
+  &:before{
+    background: linear-gradient(#00D2E6, #000000);
+  }
+}
+
 /* ==============================
            Listing Page
    ============================== */

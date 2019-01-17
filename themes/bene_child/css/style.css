@@ -1462,6 +1462,9 @@ h5 {
 /* ==============================
     Full Width Feature Paragraph
    ============================== */
+.feature-full-width-paragraph .paragraph--type--feature-full-width:before {
+  background: linear-gradient(#00D2E6, #000000); }
+
 /* ==============================
            Listing Page
    ============================== */
