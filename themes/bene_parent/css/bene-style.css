@@ -1288,6 +1288,9 @@ article.embedded-entity, .embedded-entity.caption-article, .embedded-entity.alig
 .contextual-region {
   position: static; }
 
+.contextual-region.block-bene-home-page-feature-block {
+  position: relative; }
+
 /* BASE ELEMENT STYLES */
 label {
   font-weight: 400;
