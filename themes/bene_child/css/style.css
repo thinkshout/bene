@@ -1343,6 +1343,7 @@ input {
   --color-primary-c: #ffffff;
   --color-primary-d: #000000;
   --color-primary-e: #129FB5;
+  --color-secondary-a: #F5F5F5;
   --font-family-primary: 'Work Sans', sans-serif;
   --font-family-secondary: 'Oswald', sans-serif;
   --font-weight-regular: 400;
@@ -1386,7 +1387,16 @@ h5 {
 
 .block-bene-home-page-feature-block .field--name-bene-link a, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a, .button, .page-node-type-page .field--name-bene-intro a.button, .page-node-type-page .paragraph--type--rich-text a.button, .field--name-field-tiles .tile-button a {
   font-weight: 400;
-  letter-spacing: 1.2px; }
+  letter-spacing: 1.2px;
+  border-radius: 0;
+  color:  #ffffff;
+  color: var(--color-primary-c );
+  background-color:  #00D2E6;
+  background-color: var(--color-primary-a ); }
+
+.block-bene-home-page-feature-block .field--name-bene-link a:hover, .block-bene-home-page-feature-block .field--name-bene-link a:focus, .block-bene-home-page-feature-block .field--name-bene-link a:active, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:hover, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:focus, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:active, .button:hover, .button:active, .button:focus, .page-node-type-page .field--name-bene-intro a.button:focus, .page-node-type-page .field--name-bene-intro a.button:hover, .page-node-type-page .field--name-bene-intro a.button:active, .page-node-type-page .paragraph--type--rich-text a.button:focus, .page-node-type-page .paragraph--type--rich-text a.button:hover, .page-node-type-page .paragraph--type--rich-text a.button:active, .field--name-field-tiles .tile-button a:hover, .field--name-field-tiles .tile-button a:active, .field--name-field-tiles .tile-button a:focus {
+  background-color:  #00A1B8;
+  background-color: var(--color-primary-b ); }
 
 /* ==============================
             Site Header
@@ -1457,6 +1467,18 @@ h5 {
 /* ==============================
         Newsletter
    ============================== */
+.block-bene-newsletter-signup-block .external-newsletter {
+  background-image: none;
+  background-color:  #F5F5F5;
+  background-color: var(--color-secondary-a ); }
+
+.block-bene-newsletter-signup-block a {
+  color:  #00D2E6;
+  color: var(--color-primary-a ); }
+  .block-bene-newsletter-signup-block a:hover {
+    color:  #00A1B8;
+    color: var(--color-primary-b ); }
+
 /* ==============================
             Site Footer
    ============================== */

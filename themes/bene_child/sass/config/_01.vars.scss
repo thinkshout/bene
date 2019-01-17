@@ -5,7 +5,7 @@ $vars: (
         color-primary-c: #ffffff, //white
         color-primary-d: #000000, //black
         color-primary-e: #129FB5, //dark grey
-        color-secondary-a: '',
+        color-secondary-a: '#F5F5F5',
         color-secondary-b: '',
         color-secondary-c: '',
         color-secondary-d: '',
@@ -74,6 +74,13 @@ $vars: (
 %button{
   font-weight: 400;
   letter-spacing: 1.2px;
+  border-radius: 0;
+  @include vars(color, color-primary-c);
+  @include vars(background-color, color-primary-a);
+}
+
+%button-hover{
+  @include vars(background-color, color-primary-b);
 }
 
 /* ==============================
@@ -163,7 +170,17 @@ $vars: (
 /* ==============================
         Newsletter
    ============================== */
+%newsletter{
+  background-image: none;
+  @include vars(background-color, color-secondary-a);
+}
 
+%newsletter-a{
+  @include vars(color, color-primary-a);
+  &:hover{
+    @include vars(color, color-primary-b);
+  }
+}
 
 /* ==============================
             Site Footer
