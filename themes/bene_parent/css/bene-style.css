@@ -1220,6 +1220,18 @@ tbody td {
 .block-bene-footer-block .social-links .twitter {
   background-image: url(../images/svgs/twitter.svg); }
 
+.block-bene-footer-block .social-links .google {
+  background-image: url(../images/svgs/google-plus.svg); }
+
+.block-bene-footer-block .social-links .pinterest {
+  background-image: url(../images/svgs/pinterest-p.svg); }
+
+.block-bene-footer-block .social-links .tumblr {
+  background-image: url(../images/svgs/tumblr.svg); }
+
+.block-bene-footer-block .social-links .youtube {
+  background-image: url(../images/svgs/youtube-play.svg); }
+
 .block-bene-footer-block .copyright {
   color:  #ffffff;
   color: var(--color-primary-c );
