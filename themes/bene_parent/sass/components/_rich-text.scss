@@ -1,6 +1,10 @@
 .page-node-type-page .field--name-bene-intro{
   @extend %rch-txt-intro;
-   h1, h2, h3, h4, h5, h6{@extend %rch-txt-intro-heading;}
+  h1, h2, h3, h4, h5, h6{
+    @extend %rch-txt-intro-heading;
+    @extend %rch-txt-intro-heading-color;
+  }
+  h4{@extend %rch-txt-intro-heading-divider;}
 
   a{@extend %rch-txt-intro-link;}
 
@@ -14,12 +18,27 @@
 
 .page-node-type-page .paragraph--type--rich-text{
   @extend %rch-txt-intro;
-  h1, h2, h3, h4, h5, h6{@extend %rch-txt-intro-heading;}
+  h1, h2, h3, h4, h5, h6{
+    @extend %rch-txt-intro-heading;
+    @extend %rch-txt-heading-color;
+  }
 
   a{@extend %rch-txt-intro-link;}
 
-  p{
+  p, span{
     @extend %rch-txt-intro-text;
+    @extend %rch-txt-wysiwyg-text;
+  }
+
+  ul, ol{
+    @extend %rch-txt-wysiwyg-text;
+  }
+
+  figure{
+    @extend %rch-txt-wysiwyg-text;
+  }
+
+  .embedded-entity{
     @extend %rch-txt-wysiwyg-text;
   }
 

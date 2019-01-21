@@ -1,0 +1,49 @@
+// Used for settings CSS variables
+// usage: @include vars(color, primary-color);
+@mixin vars($property, $var, $arg-before: null, $arg-after: null) {
+  #{$property}: $arg-before #{map-get($vars, $var) $arg-after};
+  #{$property}: $arg-before var(--#{$var} $arg-after);
+}
+
+// Media queries
+@mixin mq($query) {
+  @media (min-width: rem($query)) {
+    @content;
+  }
+}
+
+//Pixels to Rem
+$baseFontSizeInPixels : 16;
+@function rem($pixels, $context: $baseFontSizeInPixels) {
+  @if (unitless($pixels)) { $pixels: $pixels * 1px; }
+  @if (unitless($context)) { $context: $context * 1px; }
+  @return $pixels / $context * 1rem;
+}
+
+// Media Queries
+@mixin mq($screen) {
+  // Small
+  @if $screen == mobile {
+    @media (max-width: 414px) { @content; }
+  }
+
+  // Medium
+  @if $screen == phablet {
+    @media (min-width: 415px) and (max-width: 768px) { @content; }
+  }
+
+  // Large
+  @if $screen == tablet {
+    @media (min-width: 769px) and (max-width: 1239px) { @content; }
+  }
+
+  // Desktops
+  @if $screen == desktop {
+    @media (min-width: 769px) { @content; }
+  }
+
+  // Extra Large
+  @if $screen == xl {
+    @media (min-width: 1240px) { @content; }
+  }
+}

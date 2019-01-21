@@ -39,7 +39,14 @@ ol {
   }
 }
 
-blockquote{@extend %text;}
+blockquote{
+  @extend %text;
+  @extend %blockquote;
+}
+
+blockquote p{
+  @extend %blockquote-p;
+}
 
 label{
   font-weight: 400;

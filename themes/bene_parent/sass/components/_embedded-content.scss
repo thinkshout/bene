@@ -38,6 +38,7 @@ article.embedded-entity{
   }
   .image-caption{
     @extend %text-align-center;
+    @extend %text-align-caption-center;
   }
 }
 

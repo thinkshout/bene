@@ -12,7 +12,7 @@
   }
 
   .mobile-nav{@extend  %mobile-nav;
-    .menu{@extend %text-align-center;}
+    .menu{@extend %text-align-center; @extend %margin-0}
   }
 
   .desktop-nav{@extend %desktop-nav;}
@@ -30,6 +30,10 @@
 
   .menu li, .menu a{
     &:hover{@extend %menu-link-hover;}
+  }
+
+  .menu a{
+    &:hover{@extend %menu-item-hover;}
   }
 
   .menu--main .menu-item{
