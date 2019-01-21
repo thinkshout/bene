@@ -1450,11 +1450,11 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
   line-height: 24px; }
 
 @media (min-width: 769px) {
-  .page-node-type-page .field--name-bene-intro p, .page-node-type-page .paragraph--type--rich-text p {
+  .page-node-type-page .field--name-bene-intro p, .page-node-type-page .paragraph--type--rich-text p, .page-node-type-page .paragraph--type--rich-text span {
     font-size: 22px;
     font-weight: normal;
     line-height: 34px; } }
-.page-node-type-page .paragraph--type--rich-text p {
+.page-node-type-page .paragraph--type--rich-text p, .page-node-type-page .paragraph--type--rich-text span, .page-node-type-page .paragraph--type--rich-text ul, .page-node-type-page .paragraph--type--rich-text ol, .page-node-type-page .paragraph--type--rich-text figure, .page-node-type-page .paragraph--type--rich-text .embedded-entity {
   color:  #000000;
   color: var(--color-primary-d ); }
 
