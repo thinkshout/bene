@@ -35,6 +35,7 @@ function bene_parent_page_attachments_alter(array &$page) {
  * Implements hook_preprocess_page() for page.html.twig.
  */
 function bene_parent_preprocess_page(array &$variables) {
+  $variables['theme'] = \Drupal::service('theme.manager')->getActiveTheme()->getName();
 }
 
 /**
