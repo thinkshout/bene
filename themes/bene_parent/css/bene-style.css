@@ -92,7 +92,7 @@ h5 {
   color:  ;
   color: var(--color-secondary-d ); }
 
-.block-bene-home-page-feature-block .field--name-bene-link a, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a, .button, .page-node-type-page .field--name-bene-intro a.button, .page-node-type-page .paragraph--type--rich-text a.button, .field--name-field-tiles .button-wrapper a {
+.block-bene-home-page-feature-block .field--name-bene-link a, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a, .button, .page-node-type-page .field--name-bene-intro a.button, .page-node-type-page .paragraph--type--rich-text a.button, .field--name-field-tiles .tile-button a {
   color:  #ffffff;
   color: var(--color-primary-c );
   background-color:  ;
@@ -109,7 +109,7 @@ h5 {
   padding: 12px 35px;
   text-transform: uppercase; }
 
-.block-bene-home-page-feature-block .field--name-bene-link a:hover, .block-bene-home-page-feature-block .field--name-bene-link a:focus, .block-bene-home-page-feature-block .field--name-bene-link a:active, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:hover, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:focus, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:active, .button:hover, .button:active, .button:focus, .page-node-type-page .field--name-bene-intro a.button:focus, .page-node-type-page .field--name-bene-intro a.button:hover, .page-node-type-page .field--name-bene-intro a.button:active, .page-node-type-page .paragraph--type--rich-text a.button:focus, .page-node-type-page .paragraph--type--rich-text a.button:hover, .page-node-type-page .paragraph--type--rich-text a.button:active, .field--name-field-tiles .button-wrapper a:hover, .field--name-field-tiles .button-wrapper a:active, .field--name-field-tiles .button-wrapper a:focus {
+.block-bene-home-page-feature-block .field--name-bene-link a:hover, .block-bene-home-page-feature-block .field--name-bene-link a:focus, .block-bene-home-page-feature-block .field--name-bene-link a:active, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:hover, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:focus, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:active, .button:hover, .button:active, .button:focus, .page-node-type-page .field--name-bene-intro a.button:focus, .page-node-type-page .field--name-bene-intro a.button:hover, .page-node-type-page .field--name-bene-intro a.button:active, .page-node-type-page .paragraph--type--rich-text a.button:focus, .page-node-type-page .paragraph--type--rich-text a.button:hover, .page-node-type-page .paragraph--type--rich-text a.button:active, .field--name-field-tiles .tile-button a:hover, .field--name-field-tiles .tile-button a:active, .field--name-field-tiles .tile-button a:focus {
   background-color:  ;
   background-color: var(--color-secondary-d );
   color:  #ffffff;
@@ -138,7 +138,7 @@ h5 {
   color:  #ffffff;
   color: var(--color-primary-c ); }
 
-p, p.standard, blockquote, .field--name-field-tiles .field__item .paragraph {
+p, p.standard, blockquote, .block-system-main-block article.node--type-event .node__content .field--name-bene-intro, .field--name-field-tiles .field__item .paragraph {
   font-size: 1rem;
   line-height: 2rem;
   font-family:  'Work Sans', sans-serif;
@@ -1367,6 +1367,12 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
   background-color:  #129FB5;
   background-color: var(--color-primary-e ); }
 
+.field--name-field-tiles .paragraph--type--tile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between; }
+
 .paragraph--type--tiles .field--name-field-title {
   color:  #ffffff;
   color: var(--color-primary-c );
@@ -1394,7 +1400,8 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
   text-align: left; }
 
 .field--name-field-tiles .tile-text {
-  padding: 0 20px; }
+  padding: 0 20px;
+  margin-bottom: auto; }
 
 .field--name-field-tiles .field__item .field--name-field-title, .field--name-field-tiles .text-wrapper a .field--name-field-title {
   color:  #000000;
@@ -1671,9 +1678,15 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
 .block-system-main-block article.node--type-event .node__content .field--name-bene-intro,
 .block-system-main-block article.node--type-event .node__content .field--name-bene-content, .view-bene-news .view-content .field--name-bene-intro p,
 .view-bene-news .view-content .field--name-bene-intro {
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 2rem; }
+  font-size: 1.375rem;
+  line-height: 2.375rem;
+  font-weight: 300;
+  font-family:  'Work Sans', sans-serif;
+  font-family: var(--font-family-primary ); }
+
+.block-system-main-block article.node--type-event .node__content .field--name-bene-content p, .block-system-main-block article.node--type-news .node__content .field--name-bene-content p {
+  font-family:  'Work Sans', sans-serif;
+  font-family: var(--font-family-primary ); }
 
 .page-node-type-listing-page .views-element-container {
   margin: 0 0 5%;
@@ -1823,17 +1836,25 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
   margin-bottom: 0;
   margin-top: 1.125rem; }
 
-.field--name-bene-intro p {
+.block-system-main-block article.node--type-event .node__content .field--name-bene-intro {
+  padding: 0 2%; }
+
+.block-system-main-block article.node--type-event .node__content .field--name-bene-intro, .field--name-bene-intro p {
   font-size: 1.125rem;
   font-weight: 300;
   line-height: 2rem;
   margin-top: 0.75rem; }
 
 @media (min-width: 769px) {
-  .field--name-bene-intro p {
+  .block-system-main-block article.node--type-event .node__content .field--name-bene-intro, .field--name-bene-intro p {
     font-size: 1.375rem;
-    line-height: 2.375rem;
-    padding: 0 2%; } }
+    line-height: 2.375rem; } }
+.block-system-main-block article.node--type-news .node__content .field--name-bene-intro p {
+  margin-top: 0.75rem; }
+
+.block-system-main-block article.node--type-news.node--view-mode-search-result .node__content .field--name-bene-intro p {
+  margin-top: 0.75rem; }
+
 .field--name-bene-date time {
   padding: 2%; }
 
@@ -2166,8 +2187,11 @@ article.embedded-entity .media--type-video .field--name-uid, .page-node-type-lis
 article.embedded-entity, .embedded-entity.caption-article, .embedded-entity.align-center, .embedded-entity.align-left, .embedded-entity.align-right, .block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item .organization, .block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item .address-line1, .page-node-type-listing-page .view-content, .page-node-type-listing-page .field--name-bene-event-location .field__item .organization, .page-node-type-listing-page .field--name-bene-event-location .field__item .address-line1 {
   display: block; }
 
-.page-node-type-listing-page .views-element-container .view-bene-events .view-content .field__item p, .page-node-type-listing-page .views-element-container .view-bene-events .view-content .field__item div, .block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item div, .page-node-type-listing-page .field--name-bene-event-location .field__item div {
+.block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item div, .page-node-type-listing-page .field--name-bene-event-location .field__item div {
   display: inline; }
+
+.page-node-type-listing-page .views-element-container .view-bene-events .view-content .field__item p, .page-node-type-listing-page .views-element-container .view-bene-events .view-content .field__item div {
+  display: inline-block; }
 
 .page-node-type-listing-page .field--name-bene-event-location .field__label {
   float: none; }
@@ -2184,6 +2208,9 @@ article.embedded-entity, .embedded-entity.caption-article, .embedded-entity.alig
 
 .field--name-field-tiles .field__item .paragraph {
   overflow: hidden; }
+
+.contextual-region {
+  position: static; }
 
 /* BASE ELEMENT STYLES */
 label {
@@ -2227,7 +2254,8 @@ input {
   .page-node-type-listing-page .field--name-bene-date {
     display: none; } }
 
-.field--name-field-tiles .button-wrapper {
+.field--name-field-tiles .tile-button {
+  padding: 0 20px;
   margin-bottom: 30px; }
 
 /*# sourceMappingURL=bene-style.css.map */
