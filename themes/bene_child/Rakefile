@@ -8,10 +8,10 @@ task :install do
   system 'npm install jquery --save-dev'
 end
 
-# Change basetheme.dev to your site path
+# Change bene-child.dev to your site path
 desc 'Running Browsersync'
 task :browsersync do
-  system 'browser-sync start --proxy "web.jefe.localhost" --files "css/*.css" --no-inject-changes'
+  system 'browser-sync start --proxy "https://bene-child.dev/" --files "css/*.css" --no-inject-changes'
 end
 
 desc 'Watch sass'

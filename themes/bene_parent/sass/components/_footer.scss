@@ -8,6 +8,7 @@
     h2{@extend %footer-menu-header;}
     h2, .menu{@extend %text-align-center;}
     .menu-item a{@extend %footer-menu-links;}
+    .menu {@extend %footer-menu-ul}
   }
 
 }

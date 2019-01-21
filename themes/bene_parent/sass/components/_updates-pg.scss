@@ -40,3 +40,18 @@
 .field--name-bene-date time{
   @extend %updates-pg-bene-date-time;
 }
+
+.block-system-main-block article.node--type-news .node__content {
+  .field--name-bene-intro {
+    p {@extend %updates-pg-intro-padding;}
+  }
+  .field--name-bene-content p {
+    @extend %listing-pg-paragraph;
+  }
+}
+
+.block-system-main-block article.node--type-news.node--view-mode-search-result .node__content {
+  .field--name-bene-intro {
+    p {@extend %updates-listing-intro-padding;}
+  }
+}
