@@ -8,6 +8,7 @@ html {
 
 /* No files to import found in ../../../profiles/bene/themes/bene_parent/sass/config/* */
 /* No files to import found in ../../../profiles/bene/themes/bene_parent/sass/components/* */
+/* No files to import found in ../../../profiles/bene/themes/bene_parent/sass/layout/* */
 :root {
   --color-primary-a: #248BCB;
   --color-primary-b: #1E5375;
@@ -58,6 +59,9 @@ html {
    ============================== */
 /* ==============================
            Inline Embeds
+   ============================== */
+/* ==============================
+            Media Paragraph
    ============================== */
 /* ==============================
             Events Page

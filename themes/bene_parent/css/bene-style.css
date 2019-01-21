@@ -115,7 +115,7 @@ h5 {
   color:  #ffffff;
   color: var(--color-primary-c ); }
 
-.field--name-field-tiles .button-wrapper a {
+.field--name-field-tiles .tile-button a {
   color:  #ffffff;
   color: var(--color-primary-c );
   background-color:  ;
@@ -132,7 +132,7 @@ h5 {
   padding: 12px 35px;
   text-transform: uppercase; }
 
-.field--name-field-tiles .button-wrapper a:hover, .field--name-field-tiles .button-wrapper a:active, .field--name-field-tiles .button-wrapper a:focus {
+.field--name-field-tiles .tile-button a:hover, .field--name-field-tiles .tile-button a:active, .field--name-field-tiles .tile-button a:focus {
   background-color:  ;
   background-color: var(--color-secondary-d );
   color:  #ffffff;
@@ -1052,14 +1052,14 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
   margin-bottom: 0;
   margin-top: 1.125rem; }
 
-.field--name-bene-intro p {
+.block-system-main-block article.node--type-event .node__content .field--name-bene-intro, .field--name-bene-intro p {
   font-size: 1.125rem;
   font-weight: 300;
   line-height: 2rem;
   margin-top: 0.75rem; }
 
 @media (min-width: 769px) {
-  .field--name-bene-intro p {
+  .block-system-main-block article.node--type-event .node__content .field--name-bene-intro, .field--name-bene-intro p {
     font-size: 1.375rem;
     line-height: 2.375rem;
     padding: 0 2%; } }
@@ -1441,7 +1441,7 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
   text-decoration: none;
   font-weight: bold; }
 
-.page-node-type-page .field--name-bene-intro p, .page-node-type-page .paragraph--type--rich-text p {
+.page-node-type-page .field--name-bene-intro p, .page-node-type-page .paragraph--type--rich-text p, .page-node-type-page .paragraph--type--rich-text span {
   color:  #50CFE3;
   color: var(--color-primary-a );
   margin-bottom: 35px;
@@ -1780,7 +1780,7 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
 /* ==============================
             Events Page
    ============================== */
-.block-system-main-block article.node--view-mode-full .field--name-bene-event-date-range {
+.block-system-main-block article.node--view-mode-full .field--name-bene-event-date-range, article.node--type-listing-page .view-bene-events .node--type-event .field--name-bene-event-date-range {
   margin-top: 20px; }
 
 .block-system-main-block article.node--view-mode-full .field__label {
