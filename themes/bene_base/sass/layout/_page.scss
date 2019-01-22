@@ -1,5 +1,5 @@
 // Default layout
-  $max-width: rem(1240) !global;
+  $max-width: rem(1800) !global;
 
   .inner {
     display: flex;
@@ -56,7 +56,7 @@
     }
     .paragraph--type--media .media-instagram,
     .paragraph--type--media .media-tweet,
-    .paragraph--type--media .media--type-video {
+    .paragraph--type--media .media-video {
       clear: both;
       padding: 0 2%;
       @include mq(desktop) {

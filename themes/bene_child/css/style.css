@@ -1,9 +1,85 @@
+@import "https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700";
+@import "https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900";
 html {
   box-sizing: border-box; }
 
 *, *::after, *::before {
   box-sizing: inherit; }
 
-/* No files to import found in components/* */
+/* No files to import found in ../../../profiles/bene/themes/bene_parent/sass/config/* */
+/* No files to import found in ../../../profiles/bene/themes/bene_parent/sass/components/* */
+/* No files to import found in ../../../profiles/bene/themes/bene_parent/sass/layout/* */
+:root {
+  --color-primary-a: #248BCB;
+  --color-primary-b: #1E5375;
+  --color-primary-c: #ffffff;
+  --color-primary-d: #000000;
+  --color-primary-e: #2d3332;
+  --color-secondary-a: #E26436;
+  --color-secondary-b: #C63E02;
+  --color-secondary-c: #F2AF3F;
+  --color-secondary-d: #DB830E;
+  --color-secondary-e: #5FBA47;
+  --font-family-primary: 'Work Sans', sans-serif;
+  --font-family-secondary: 'Oswald', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 800;
+  --font-style-italic: italic;
+  --font-style-normal: normal;
+  --logo-height: 100px;
+  --social-media-icon-height: 2.25rem;
+  --button-padding: 2rem;
+  --input-height: 100px; }
+
+/* ==============================
+            BASE STYLING
+   ============================== */
+/* ==============================
+            Site Header
+   ============================== */
+/* ==============================
+          Sub Navigation
+   ============================== */
+/* ==============================
+        Home Page Feature
+   ============================== */
+/* ==============================
+               Tiles
+   ============================== */
+/* ==============================
+         Rich Text - Intro
+   ============================== */
+/* ==============================
+    Full Width Feature Paragraph
+   ============================== */
+/* ==============================
+           Listing Page
+   ============================== */
+/* ==============================
+           Inline Embeds
+   ============================== */
+/* ==============================
+            Media Paragraph
+   ============================== */
+/* ==============================
+            Events Page
+   ============================== */
+/* ==============================
+            Updates Page
+   ============================== */
+/* ==============================
+        General Page Settings
+   ============================== */
+/* ==============================
+        Newsletter
+   ============================== */
+/* ==============================
+            Site Footer
+   ============================== */
+/* ==============================
+      Tools & Repetitive Things
+   ============================== */
 
 /*# sourceMappingURL=style.css.map */

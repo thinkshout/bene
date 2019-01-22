@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fbca4ae71442be24f6210684ba33b40d",
+    "content-hash": "a0d388c1f0c4952b52f19756ea2a14f1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1329,16 +1329,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.5.7",
+            "version": "8.5.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "d8bdf376c0549e9bfc33030157b498df4b9bec87"
+                "reference": "596f97e4d55dae28e00605d9825529bd8b8ad382"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/d8bdf376c0549e9bfc33030157b498df4b9bec87",
-                "reference": "d8bdf376c0549e9bfc33030157b498df4b9bec87",
+                "url": "https://api.github.com/repos/drupal/core/zipball/596f97e4d55dae28e00605d9825529bd8b8ad382",
+                "reference": "596f97e4d55dae28e00605d9825529bd8b8ad382",
                 "shasum": ""
             },
             "require": {
@@ -1382,6 +1382,7 @@
                 "symfony/validator": "~3.4.0",
                 "symfony/yaml": "~3.4.5",
                 "twig/twig": "^1.35.0",
+                "typo3/phar-stream-wrapper": "^2.0.1",
                 "zendframework/zend-diactoros": "^1.1",
                 "zendframework/zend-feed": "^2.4"
             },
@@ -1567,7 +1568,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2018-09-05T22:26:39+00:00"
+            "time": "2019-01-16T23:30:07+00:00"
         },
         {
             "name": "drupal/crop",
@@ -2052,8 +2053,16 @@
                     "homepage": "https://www.drupal.org/user/3260690"
                 },
                 {
+                    "name": "Wim Leers",
+                    "homepage": "https://www.drupal.org/user/99777"
+                },
+                {
                     "name": "cs_shadow",
                     "homepage": "https://www.drupal.org/user/2828287"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
                 },
                 {
                     "name": "slashrsm",
@@ -5790,14 +5799,14 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thinkshout/bene_promo_redirect.git",
-                "reference": "e7525c8d06e76040cca41b42cf96b8cb8e6c1e23"
+                "reference": "6bcc016e635c2ba5b643556cdf3d0d4f370f4b26"
             },
             "type": "drupal-module",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "Temporarily redirect one or more pages to a specific page or site until the user has visited the target.",
-            "time": "2018-12-22T08:00:49+00:00"
+            "time": "2018-12-28T21:15:44+00:00"
         },
         {
             "name": "thinkshout/mailchimp-api-php",
@@ -5901,6 +5910,46 @@
                 "templating"
             ],
             "time": "2018-07-13T07:12:17+00:00"
+        },
+        {
+            "name": "typo3/phar-stream-wrapper",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3/phar-stream-wrapper.git",
+                "reference": "0469d9fefa0146ea4299d3b11cfbb76faa7045bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3/phar-stream-wrapper/zipball/0469d9fefa0146ea4299d3b11cfbb76faa7045bf",
+                "reference": "0469d9fefa0146ea4299d3b11cfbb76faa7045bf",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3|^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.36"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\PharStreamWrapper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Interceptors for PHP's native phar:// stream handling",
+            "homepage": "https://typo3.org/",
+            "keywords": [
+                "phar",
+                "php",
+                "security",
+                "stream-wrapper"
+            ],
+            "time": "2018-10-18T08:46:28+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",

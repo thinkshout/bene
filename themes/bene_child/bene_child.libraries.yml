@@ -4,4 +4,4 @@ bene_child:
     theme:
       css/style.css: {}
   js:
-    js/main-dist.js: {}
+    js/main.js: {}

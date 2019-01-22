@@ -1,10 +1,22 @@
 .region-footer{
+  @extend %region-footer;
+  @extend %footer-region-background;
+  @extend %footer-region-grid;
+
+  .block-menu.navigation{
+    @extend %footer-menu-column;
+    h2{@extend %footer-menu-header;}
+    h2, .menu{@extend %text-align-center;}
+    .menu-item a{@extend %footer-menu-links;}
+    .menu {@extend %footer-menu-ul}
+  }
 
 }
 
 .block-bene-footer-block{
   @extend %footer-background;
   @extend %footer-container;
+  @extend %footer-copyright-row;
 
   .menu{
     @extend %footer-menu;

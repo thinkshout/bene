@@ -49,7 +49,7 @@
   }
 
   .field--name-bene-header-media{
-    @extend  %listing-pg-date-input;
+    @extend  %listing-pg-image-div;
 
     img{
       @extend  %listing-pg-img;

@@ -1,17 +1,17 @@
 desc 'Install dependencies'
 task :install do
   system 'bundle install'
-  system 'npm install -g browser-sync'
+  system 'npm install -g browser-sync@2.23.5'
   system 'npm install -g browserify'
   system 'npm install -g watchify'
   system 'npm install -g uglify-js'
   system 'npm install jquery --save-dev'
 end
 
-# Change basetheme.dev to your site path
+# Change bene-child.dev to your site path
 desc 'Running Browsersync'
 task :browsersync do
-  system 'browser-sync start --proxy "https://web.bene-child.localhost/" --files "css/*.css" --no-inject-changes'
+  system 'browser-sync start --proxy "https://bene-child.dev/" --files "css/*.css" --no-inject-changes'
 end
 
 desc 'Watch sass'
@@ -27,7 +27,7 @@ end
 desc 'Serve'
 task :serve do
   threads = []
-  %w{browsersync sasswatch browserify}.each do |task|
+  %w{browsersync sasswatch}.each do |task|
     threads << Thread.new(task) do |devtask|
       Rake::Task[devtask].invoke
     end
