@@ -69,3 +69,6 @@
 .contextual-region{
   @extend %position-static;
 }
+.contextual-region.block-bene-home-page-feature-block{
+  @extend %position-relative;
+}

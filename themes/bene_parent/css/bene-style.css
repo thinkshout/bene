@@ -2144,6 +2144,18 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
 .block-bene-footer-block .social-links .twitter {
   background-image: url(../images/svgs/twitter.svg); }
 
+.block-bene-footer-block .social-links .google {
+  background-image: url(../images/svgs/google-plus.svg); }
+
+.block-bene-footer-block .social-links .pinterest {
+  background-image: url(../images/svgs/pinterest-p.svg); }
+
+.block-bene-footer-block .social-links .tumblr {
+  background-image: url(../images/svgs/tumblr.svg); }
+
+.block-bene-footer-block .social-links .youtube {
+  background-image: url(../images/svgs/youtube-play.svg); }
+
 .block-bene-footer-block .copyright {
   color:  #ffffff;
   color: var(--color-primary-c );
@@ -2211,6 +2223,9 @@ article.embedded-entity, .embedded-entity.caption-article, .embedded-entity.alig
 
 .contextual-region {
   position: static; }
+
+.contextual-region.block-bene-home-page-feature-block {
+  position: relative; }
 
 /* BASE ELEMENT STYLES */
 label {
