@@ -1191,6 +1191,10 @@ $vars: (
   margin-top: rem(16);
 }
 
+%updates-pg-summary{
+  display: block;
+}
+
 %updates-pg-intro-h2{
   font-size: rem(32);
   font-style: italic;

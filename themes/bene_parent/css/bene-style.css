@@ -1040,6 +1040,9 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
   margin-bottom: 1.5rem;
   margin-top: 1rem; }
 
+#block-otfo-bene-content article.node--type-listing-page {
+  display: block; }
+
 .field--name-bene-intro h2 {
   font-size: 2rem;
   font-style: italic;

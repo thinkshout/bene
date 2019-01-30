@@ -11,6 +11,10 @@
   }
 }
 
+#block-otfo-bene-content article.node--type-listing-page{
+  @extend %updates-pg-summary;
+}
+
 .node--type-news{
   h2{
     @extend %updates-pg-h2;
