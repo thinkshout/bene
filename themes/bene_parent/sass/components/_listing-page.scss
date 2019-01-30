@@ -22,6 +22,10 @@
     input{
       @extend %listing-pg-input;
     }
+
+    input[type=date]{
+      @extend %listing-pg-input-date;
+    }
   }
 
   .form-type-date{

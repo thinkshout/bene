@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Inner-pages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Event-listing" transform="translate(-377.000000, -868.000000)" fill-rule="nonzero" fill="#158496">
+            <g id="filters" transform="translate(98.000000, 613.000000)">
+                <g id="start-date-copy" transform="translate(1.000000, 236.000000)">
+                    <path d="M298,39 L294,39 L294,35 L298,35 L298,39 Z M292,29 L288,29 L288,33 L292,33 L292,29 Z M298,29 L294,29 L294,33 L298,33 L298,29 Z M286,35 L282,35 L282,39 L286,39 L286,35 Z M292,35 L288,35 L288,39 L292,39 L292,35 Z M286,29 L282,29 L282,33 L286,33 L286,29 Z M302,21 L302,43 L278,43 L278,21 L281,21 L281,22 C281,23.103 281.897,24 283,24 C284.103,24 285,23.103 285,22 L285,21 L295,21 L295,22 C295,23.103 295.897,24 297,24 C298.103,24 299,23.103 299,22 L299,21 L302,21 Z M300,27 L280,27 L280,41 L300,41 L300,27 Z M298,20 C298,19.448 297.553,19 297,19 C296.447,19 296,19.448 296,20 L296,22 C296,22.552 296.447,23 297,23 C297.553,23 298,22.552 298,22 L298,20 Z M284,22 C284,22.552 283.553,23 283,23 C282.447,23 282,22.552 282,22 L282,20 C282,19.448 282.447,19 283,19 C283.553,19 284,19.448 284,20 L284,22 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
