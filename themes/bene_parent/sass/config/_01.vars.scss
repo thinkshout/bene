@@ -603,6 +603,13 @@ $vars: (
   @include vars(background-color, color-primary-e);
 }
 
+%tiles-wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
 %tiles-main-title{
   @include vars(color, color-primary-c);
   font-weight: bold;
@@ -631,6 +638,7 @@ $vars: (
 
 %tile-text{
   padding: 0 20px;
+  margin-bottom: auto;
 }
 
 %tile-inner-title{
@@ -728,15 +736,12 @@ $vars: (
   display: flex;
   flex-direction: column;
   justify-content: center;
-  //min-height: 25vw;
   min-height: 38.2vw;
-  padding: 1.5rem 1.5rem 2.25rem 1.5rem;
+  padding: 70px 1.5rem 70px 1.5rem;
   position: relative;
   text-align: center;
   width: 100vw;
   max-width: 100%;
-  padding-top: 70px;
-  padding-bottom: 70px; //change?
   overflow: hidden;
 
   &:before{
@@ -947,7 +952,6 @@ $vars: (
   margin-left: 0;
 }
 
-//needs better name
 %listing-pg-intro-and-event-details{
   clear: both;
   padding: 0 2%;
@@ -963,9 +967,14 @@ $vars: (
 }
 
 %listing-pg-font-settings{
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 2rem;
+  font-size: 1.375rem;
+  line-height: 2.375rem;
+  font-weight: 300;
+  @include vars(font-family, font-family-primary);
+}
+
+%listing-pg-paragraph{
+  @include vars(font-family, font-family-primary);
 }
 
 %listing-pg-container-wrapper{
@@ -1218,6 +1227,10 @@ $vars: (
   margin-top: rem(18);
 }
 
+%listing-pg-intro-padding{
+  padding: 0 2%;
+}
+
 %updates-pg-intro-p{
   font-size: rem(18);
   font-weight: 300;
@@ -1231,6 +1244,14 @@ $vars: (
     line-height: rem(38);
     padding: 0 2%;
   }
+}
+
+%updates-pg-intro-padding{
+  margin-top: rem(12);
+}
+
+%updates-listing-intro-padding{
+  margin-top: rem(12);
 }
 
 %updates-pg-bene-date-time{
@@ -1403,770 +1424,6 @@ $vars: (
     display: none;
   }
 }
-
-/* ==============================
-          Sub Navigation
-   ============================== */
-
-%title-block{
-  background-image: linear-gradient(#248BCB, #1E5375);
-  padding: 100px 0;
-  height: 6.25rem;
-}
-
-%title-block-bgimage{
-  height: 24vw;
-  &:after{
-    @include vars(background-color, color-primary-a);
-    content: '';
-    height: 100%;
-    left: 0;
-    top: 0;
-    opacity: .6;
-    position: absolute;
-    width: 100%;
-    z-index: 0;
-  }
-}
-
-%title-block-hero{
-  align-items: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  position: relative;
-  z-index: 20;
-}
-
-%title-block-heading{
-  @include vars(color, color-primary-c);
-  flex: 0 1 auto;
-  font-size: 2rem;
-  margin-top: 0;
-  text-align: center;
-  text-transform: uppercase;
-  z-index: 20;
-}
-
-@include mq(desktop){
-  %title-block-heading{
-    font-size: 3.75rem;
-  }
-}
-
-%sub-nav-block{
-  background-image: linear-gradient(#248BCB, #1E5375);
-  padding: 3rem 2%;
-  text-align: center;
-}
-
-%sub-nav-menu{
-  text-align: center;
-  list-style: none outside;
-  margin: 0;
-  padding: 0;
-}
-
-%sub-nav-menu-item{
-  list-style: none;
-  padding: 0;
-}
-
-%sub-nav-links{
-  @include vars(color, color-primary-c);
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 600;
-  text-transform: uppercase;
-  &:focus, &:active, &:hover{
-    @extend %link-hover;
-  }
-}
-
-%sub-nav-menu-links{
-  margin: 0 1rem;
-}
-
-%sub-nav-link-title{
-  margin-bottom: 10px;
-  opacity: 0.7;
-  &:focus, &:active, &:hover{
-    @extend %link-hover;
-    @include vars(color, color-primary-c);
-  }
-}
-
-/* ==============================
-        Home Page Feature
-   ============================== */
-%hmpg-feature{
-  @include vars(background-color, color-primary-e);
-  @include vars(color, color-primary-c);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  text-align: center;
-  padding: 8rem 1rem;
-  position: relative;
-  &:after {
-    background-image: linear-gradient(180deg,rgba(0,0,0,0) 0%,#000000 79%);
-    content: "";
-    height: 100%;
-    left: 0;
-    opacity: .45;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-}
-
-@include mq(mobile) {
-  %hmpg-feature{
-    background-size: cover;
-    background-position: center top;
-    max-height: rem(539);
-  }
-}
-
-@include mq(desktop) {
-  %hmpg-feature{
-    min-height: rem(500);
-  }
-}
-
-%hmpg-feature-lead{
-  font-size: rem(20);
-  margin-bottom: 0.5rem;
-  position: relative;
-  z-index: 1;
-}
-
-@include mq(mobile) {
-  %hmpg-feature-lead{
-    font-size: rem(16);
-    line-height: rem(20);
-    padding-top: 7rem;
-  }
-}
-
-%hmpg-feature-title{
-  font-size: 50px;
-  font-weight: bold;
-  line-height: 70px;
-  padding-top: 50px;
-  z-index: 2;
-  margin: 0 auto 50px auto;
-  max-width: rem(900);
-  position: relative;
-  @include vars(font-family, font-family-secondary);
-}
-
-@include mq(mobile) {
-  %hmpg-feature-title{
-    font-size: 40px;
-    line-height: 45px;
-  }
-}
-
-@include mq(phablet) {
-  %hmpg-feature-title{
-    font-size: 40px;
-    line-height: 45px;
-  }
-}
-
-%hmpg-feature-btn-wrapper{
-  position: relative;
-  z-index: 1;
-}
-
-%hmpg-feature-btn{
-  @extend %button;
-  font-size: rem(14);
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 1rem 2rem;
-  &:hover, &:focus, &:active{
-    @extend %button-hover;
-  }
-}
-
-/* ==============================
-               Tiles
-   ============================== */
-
-%tiles-background{
-  @include vars(background-color, color-primary-e);
-}
-
-%tiles-wrapper{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
-}
-
-%tiles-main-title{
-  @include vars(color, color-primary-c);
-  font-weight: bold;
-  font-size: rem(42);
-  padding: 20px 0;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-%tiles-container{
-  max-width: 81.25rem;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 20.625rem);
-  grid-gap: 30px;
-  justify-content: center;
-  padding: 40px 0;
-}
-
-%individual-tiles{
-  @include vars(background-color, color-primary-c);
-  @include vars(color, color-primary-d);
-  border-bottom-right-radius: 100px;
-  text-align: left;
-}
-
-%tile-text{
-  padding: 0 20px;
-  margin-bottom: auto;
-}
-
-%tile-inner-title{
-  @include vars(color, color-primary-d);
-  margin: 0;
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-%text-wrapper{
-  min-height: 220px;
-  margin-bottom: 20px;
-}
-
-%tiles-img-container{
-  position: relative;
-  z-index: 100;
-  height: auto;
-}
-
-%tiles-img{
-  max-width: 100%;
-}
-
-/* ==============================
-         Rich Text - Intro
-   ============================== */
-
-%rch-txt-intro{
-  @include vars(color, color-primary-d);
-  padding: 25px 0;
-}
-
-%rch-txt-intro-heading{
-  margin: 30px 0;
-  text-transform: uppercase;
-  padding: 0 2%;
-}
-
-%rch-txt-intro-link{
-  @include vars(color, color-primary-d);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-%rch-txt-intro-text{
-  @include vars(color, color-primary-a);
-  margin-bottom: 35px;
-  font-size: 15px;
-  font-weight: normal;
-  line-height: 24px;
-}
-
-@include mq(desktop){
-  %rch-txt-intro-text{
-    font-size: 22px;
-    font-weight: normal;
-    line-height: 34px;
-  }
-}
-
-%rch-txt-wysiwyg-text{
-  @include vars(color, color-primary-d);
-}
-
-%rch-text-background-color{
-  @include vars(background-color, color-primary-c);
-}
-
-/* ==============================
-    Full Width Feature Paragraph
-   ============================== */
-
-%full-width-pargph{
-  align-items: center;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  //min-height: 25vw;
-  min-height: 38.2vw;
-  padding: 1.5rem 1.5rem 2.25rem 1.5rem;
-  position: relative;
-  text-align: center;
-  width: 100vw;
-  max-width: 100%;
-  padding-top: 70px;
-  padding-bottom: 70px; //change?
-  overflow: hidden;
-
-  &:before{
-    content: "";
-    height: 100%;
-    left: 0;
-    opacity: .45;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    background: linear-gradient(#5FBA47, #1E5375);
-    bottom: 0;
-    right: 0;
-    z-index: 2;
-  }
-}
-
-%full-width-pargph-no-img{
-  &:before{
-    opacity: 1;
-  }
-}
-
-
-%full-width-pargph-z-index{
-  z-index: 10;
-}
-
-%full-width-pargph-title{
-  @include vars(color, color-primary-c);
-  font-size: 30px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  @include vars(font-family, font-family-secondary);
-}
-
-@include mq(desktop){
-  %full-width-pargph-title{
-    font-size: 40px;
-  }
-}
-
-%full-width-pargph-text{
-  @include vars(color, color-primary-c);
-  font-size: 15px;
-  line-height: 24px;
-  font-weight: normal;
-}
-
-@include mq(desktop){
-  %full-width-pargph-text{
-    font-size: 22px;
-    line-height: 34px;
-    max-width: 65%;
-    margin: 10px auto;
-  }
-}
-
-%full-width-pargph-link-div{
-  margin-top: 15px;
-}
-
-%full-width-pargph-link{
-  @extend %button;
-  margin-top: 10px;
-  font-weight: bold;
-  &:hover, &:focus, &:active{
-    @extend %button-hover;
-  }
-}
-
-
-/* ==============================
-           Listing Page
-   ============================== */
-%listing-pg-container{
-  width: 100%;
-  padding: 0 1%;
-}
-
-%listing-pg-form-container{
-  @include span-columns(12);
-}
-
-@include mq(tablet){
-  %listing-pg-form-container{
-    @include span-columns(12);
-    @include shift(-0.75);
-  }
-}
-@include mq(desktop){
-  %listing-pg-form-container{
-    @include span-columns(4);
-    @include shift(-0.5);
-  }
-}
-
-%lising-pg-form{
-  width: 98%;
-  padding: 1rem;
-}
-
-@include mq(tablet){
-  %lising-pg-form{
-    width: 100%;
-    margin-left: 10%;
-  }
-}
-
-%listing-pg-label{
-  font-weight: 400;
-  font-size: 0.875rem;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-%listing-pg-input{
-  border-radius: 0;
-  border: none;
-  padding: 1rem;
-  width: 100%;
-}
-
-@include mq(tablet){
-  %listing-pg-input{
-    width: 90%;
-  }
-}
-
-%listing-pg-date-input{
-  width: 100%;
-}
-
-@include mq(tablet){
-  %listing-pg-date-input{
-    width: 90%;
-  }
-}
-
-%listing-pg-form-submit{
-  padding: 5px 60px;
-}
-
-%listing-pg-article{
-  font-size: 1.25rem;
-  line-height: 2.375rem;
-}
-
-%listing-pg-image{
-  display: block;
-  float: none;
-  width: 100%;
-  margin-top: 50px;
-}
-
-@include mq(desktop){
-  %listing-pg-image{
-    display: inline-block;
-    @include span-columns(3);
-    margin-top: 0;
-  }
-}
-
-
-@include mq(desktop){
-  %listing-pg-node-content{
-    margin-top: 50px;
-    display: flex;
-  }
-}
-
-%listing-pg-img{
-  width: 100%;
-  height: auto;
-}
-
-@include mq(desktop){
-  %listing-pg-txt-wrapper{
-    display: inline-block;
-    @include span-columns(8);
-  }
-}
-
-%listing-pg-h2{
-  font-size: rem(32);
-  line-height: rem(38);
-  font-weight: 400;
-}
-
-%listing-pg-a{
-  @include vars(color, color-primary-a);
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-%listing-pg-event-details{
-  padding-left: 0;
-  margin-left: 0;
-}
-
-//needs better name
-%listing-pg-intro-and-event-details{
-  clear: both;
-  padding: 0 2%;
-}
-
-@include mq(desktop){
-  %listing-pg-intro-and-event-details{
-    @include span-columns(12);
-    @include shift(0.2);
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-%listing-pg-font-settings{
-  font-size: 1.375rem;
-  line-height: 2.375rem;
-  font-weight: 300;
-  @include vars(font-family, font-family-primary);
-}
-
-%listing-pg-paragraph{
-  @include vars(font-family, font-family-primary);
-}
-
-%listing-pg-container-wrapper{
-  margin: 0 0 5%;
-  padding: 0 5%;
-}
-
-
-
-/* ==============================
-           Inline Embeds
-   ============================== */
-
-@include mq(mobile){
-  %embed-img{
-    margin: 5px;
-  }
-  %embed-float-none{
-    float: none;
-  }
-}
-
-@include mq(tablet){
-  %embed-video-half{
-    width: 50%;
-    margin: 0 auto;
-  }
-  %embed-img-left{
-    float: left;
-  }
-  %embed-img-caption{
-    float: left;
-    clear: both;
-  }
-  %embed-img-right{
-    float: right;
-  }
-  %embed-img-half{
-    width: 50vw;
-    picture img{
-      width: 100%;
-    }
-  }
-}
-
-@include mq(desktop){
-  %embed-video-half{
-    width: 50%;
-    margin: 0 auto;
-  }
-  %embed-img-left{
-    float: left;
-  }
-  %embed-img-caption{
-    float: left;
-    clear: both;
-  }
-  %embed-img-right{
-    float: right;
-  }
-  %embed-img-half{
-    width: 50vw;
-    picture img{
-      width: 100%;
-    }
-  }
-}
-
-%embed-imgs-default{
-  display: inline-block;
-  clear: both;
-}
-
-%embed-img-caption{
-  font-size: 16px;
-  font-style: italic;
-}
-
-%embed-img{
-  margin: 5px;
-}
-
-%embed-img-center{
-  margin: 0 auto;
-  text-align: center;
-}
-
-%embed-img-right-caption{
-  text-align: left;
-}
-
-%embed-instagram{
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  float: none;
-  clear: both;
-}
-
-%embed-instagram-iframe{
-  display: inline-block !important;
-}
-
-%embed-tweet{
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  float: none;
-  clear: both;
-}
-
-%embed-twitter-tweet{
-  display: inline-block !important;
-}
-
-
-/* ==============================
-            Events Page
-   ============================== */
-
-%events-pg-date{
-  margin-top: 20px;
-}
-
-%events-pg-location{
-  float: none;
-  clear: both;
-  margin-top: 10px;
-}
-
-/* ==============================
-            Updates Page
-   ============================== */
-
-%updates-pg-h2{
-  font-size: 2rem;
-  line-height: 2.375rem;
-  font-weight: 400;
-  margin-top: 50px;
-}
-
-%updates-pg-a{
-  @include vars(color, color-primary-a);
-  text-decoration: none;
-}
-
-%updates-pg-node-content{
-  margin-top: 20px;
-}
-
-@include mq(mobile){
-  %updates-pg-content{
-    float: none;
-    display: block;
-    width: 100%;
-    margin: 0;
-  }
-}
-@include mq(desktop){
-  %updates-pg-content{
-    @include span-columns(8);
-    @include shift(0.25);
-  }
-}
-
-%updates-pg-intro{
-  margin-bottom: rem(24);
-  margin-top: rem(16);
-}
-
-%updates-pg-intro-h2{
-  font-size: rem(32);
-  font-style: italic;
-  font-weight: 600;
-  margin-top: rem(32);
-}
-
-%updates-pg-intro-h3{
-  font-size: rem(20);
-  font-weight: 400;
-  margin-bottom: 0;
-  margin-top: rem(18);
-}
-
-%listing-pg-intro-padding{
-  padding: 0 2%;
-}
-
-%updates-pg-intro-p{
-  font-size: rem(18);
-  font-weight: 300;
-  line-height: rem(32);
-  margin-top: rem(12);
-}
-
-@include mq(desktop){
-  %updates-pg-intro-p{
-    font-size: rem(22);
-    line-height: rem(38);
-  }
-}
-
-%updates-pg-intro-padding{
-  margin-top: rem(12);
-}
-
-%updates-listing-intro-padding{
-  margin-top: rem(12);
-}
-
-%updates-pg-bene-date-time{
-  padding: 2%;
-}
-
 
 /* ==============================
         General Page Settings
