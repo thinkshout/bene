@@ -381,6 +381,9 @@ tbody td {
     width: 100%;
     z-index: 0; }
 
+.block-page-title-block.no-bgimage {
+  display: block; }
+
 .block-page-title-block.block-hero {
   align-items: center;
   background-repeat: no-repeat;
@@ -1232,9 +1235,6 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
     position: absolute;
     width: 100%;
     z-index: 0; }
-
-.block-page-title-block.no-bgimage {
-  display: block; }
 
 .block-page-title-block.block-hero {
   align-items: center;

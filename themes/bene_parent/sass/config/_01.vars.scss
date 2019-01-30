@@ -418,6 +418,10 @@ $vars: (
   }
 }
 
+%title-block-no-bgimage{
+  display: block;
+}
+
 %title-block-hero{
   align-items: center;
   background-repeat: no-repeat;
@@ -1418,10 +1422,6 @@ $vars: (
     width: 100%;
     z-index: 0;
   }
-}
-
-%title-block-no-bgimage{
-  display: block;
 }
 
 %title-block-hero{
