@@ -754,6 +754,10 @@ tbody td {
   padding: 1rem;
   width: 100%; }
 
+.page-node-type-listing-page .js-form-item input[type=date] {
+  background: #F3F3F3 url(../images/calendar.svg) 1rem center no-repeat;
+  padding-left: 3rem; }
+
 @media (min-width: 769px) and (max-width: 1239px) {
   .page-node-type-listing-page .js-form-item input {
     width: 90%; } }
@@ -1592,10 +1596,6 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
   border: none;
   padding: 1rem;
   width: 100%; }
-
-.page-node-type-listing-page .js-form-item input[type=date] {
-  background: #F3F3F3 url(../images/calendar.svg) 1rem center no-repeat;
-  padding-left: 3rem; }
 
 @media (min-width: 769px) and (max-width: 1239px) {
   .page-node-type-listing-page .js-form-item input {

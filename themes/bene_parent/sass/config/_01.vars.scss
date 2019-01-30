@@ -861,6 +861,11 @@ $vars: (
   width: 100%;
 }
 
+%listing-pg-input-date{
+  background: #F3F3F3 url(../images/calendar.svg) 1rem center no-repeat;
+  padding-left: 3rem;
+}
+
 @include mq(tablet){
   %listing-pg-input{
     width: 90%;
@@ -1845,11 +1850,6 @@ $vars: (
   border: none;
   padding: 1rem;
   width: 100%;
-}
-
-%listing-pg-input-date{
-  background: #F3F3F3 url(../images/calendar.svg) 1rem center no-repeat;
-  padding-left: 3rem;
 }
 
 @include mq(tablet){
