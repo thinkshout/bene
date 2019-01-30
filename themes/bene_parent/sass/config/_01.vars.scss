@@ -1416,6 +1416,10 @@ $vars: (
   }
 }
 
+%title-block-no-bgimage{
+  display: block;
+}
+
 %title-block-hero{
   align-items: center;
   background-repeat: no-repeat;

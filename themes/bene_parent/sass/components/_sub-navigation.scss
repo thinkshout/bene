@@ -6,6 +6,10 @@
   @extend %title-block-bgimage;
 }
 
+.block-page-title-block.no-bgimage{
+  @extend %title-block-no-bgimage;
+}
+
 .block-page-title-block.block-hero{
   @extend %title-block-hero;
 
