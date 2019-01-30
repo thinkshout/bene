@@ -30,14 +30,12 @@
 
   .tile-text{@extend %tile-text;}
 
-  .tile-button {
+  .button-wrapper {
     padding: 0 20px;
     margin-bottom: 30px;
     a {
       @extend %button-secondary;
       &:hover, &:active, &:focus {@extend %button-secondary-hover;}
-      @extend %button;
-      &:hover, &:active, &:focus {@extend %button-hover;}
     }
   }
 
