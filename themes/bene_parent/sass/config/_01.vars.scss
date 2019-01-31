@@ -818,6 +818,10 @@ $vars: (
   @include span-columns(12);
 }
 
+%listing-pg-content-container{
+  display: block;
+}
+
 @include mq(tablet){
   %listing-pg-form-container{
     @include span-columns(12);

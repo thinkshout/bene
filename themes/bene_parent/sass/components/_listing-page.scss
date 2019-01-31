@@ -33,6 +33,7 @@
   }
 
   .view-content{
+    @extend %listing-pg-content-container;
     @extend  %display-block;
   }
 

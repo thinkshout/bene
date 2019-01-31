@@ -713,6 +713,9 @@ tbody td {
   .page-node-type-listing-page .view-filters:last-child {
     margin-right: 0; }
 
+.page-node-type-listing-page .view-content {
+  display: block; }
+
 @media (min-width: 769px) and (max-width: 1239px) {
   .page-node-type-listing-page .view-filters {
     float: left;
