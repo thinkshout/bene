@@ -57,6 +57,10 @@
     .instagram{@extend %footer-social-links-instagram;}
     .linkedin{@extend %footer-social-links-linkedin;}
     .twitter{@extend %footer-social-links-twitter;}
+    .google{@extend %footer-social-links-google;}
+    .pinterest{@extend %footer-social-links-pinterest;}
+    .tumblr{@extend %footer-social-links-tumblr;}
+    .youtube{@extend %footer-social-links-youtube;}
   }
 
   .copyright{@extend %footer-copyright};

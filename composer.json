@@ -37,27 +37,27 @@
         "composer/installers": "^1.2",
         "oomphinc/composer-installers-extender": "^1.1",
         "cweagans/composer-patches": "~1.5",
-        "drupal/core": "8.5.10",
-        "drupal/admin_toolbar": "1.20",
+        "drupal/core": "8.6.7",
+        "drupal/admin_toolbar": "^1.20",
         "drupal/config_update": "^1.1",
-        "drupal/contact_storage": "1.0-beta9",
-        "drupal/ctools": "3.0",
+        "drupal/contact_storage": "^1.0-beta9",
+        "drupal/ctools": "^3.0",
         "drupal/entity": "^1.0",
         "drupal/entity_browser": "^1.3",
-        "drupal/entity_embed": "1.0.0-beta2",
-        "drupal/email_registration": "1.0-rc5",
+        "drupal/entity_embed": "^1.0.0-beta2",
+        "drupal/email_registration": "^1.0-rc5",
         "drupal/features": "^3.0",
         "drupal/focal_point": "^1.0",
-        "drupal/google_analytics": "2.2",
-        "drupal/inline_entity_form": "1.0-beta1",
-        "drupal/linkit": "4.3",
-        "drupal/metatag": "1.3",
-        "drupal/pathauto": "1.0",
-        "drupal/r4032login": "1.x-dev#391f10d",
-        "drupal/simple_sitemap": "2.10",
-        "drupal/token": "1.0",
+        "drupal/google_analytics": "^2.2",
+        "drupal/inline_entity_form": "^1.0-beta1",
+        "drupal/linkit": "^4.3",
+        "drupal/metatag": "^1.3",
+        "drupal/pathauto": "^1.0",
+        "drupal/r4032login": "^1.1",
+        "drupal/simple_sitemap": "^2.10",
+        "drupal/token": "^1.0",
         "drupal/video_embed_field": "^2.0",
-        "drupal/paragraphs": "^1.2",
+        "drupal/paragraphs": "^1.5",
         "drupal/migrate_google_sheets": "^1.0@beta",
         "drupal/migrate_tools": "^4.0.0-beta1",
         "drupal/redirect": "^1.0-alpha5",
@@ -99,13 +99,11 @@
                 "2484693 - Telephone field with 5 digits or less fatally breaks formatter":
                 "https://www.drupal.org/files/issues/2484693-54.patch",
                 "2880374 - Experimental modules should not have warnings after being installed":
-                "https://www.drupal.org/files/issues/2880374-remove-experimental-warnings-6.patch",
+                "https://www.drupal.org/files/issues/2018-06-05/2880374-21.patch",
                 "2869592 - Disabled update module shouldn't produce a status report warning":
                 "https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch",
                 "2885441 - EntityReferenceAutocompleteWidget should define its size setting as an integer":
-                "https://www.drupal.org/files/issues/2885441-2.patch",
-                "2786577 - Improve the Views integration for DateRange fields":
-                "https://www.drupal.org/files/issues/2786577-184-8-3-x-test-do-not-test.patch"
+                "https://www.drupal.org/files/issues/2885441-2.patch"
             },
             "drupal/address": {
                 "2912618 - Hardcoded linebreaks in default address formatter":

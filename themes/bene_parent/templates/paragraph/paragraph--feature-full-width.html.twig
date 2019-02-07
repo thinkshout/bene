@@ -40,17 +40,19 @@
 #}
 {%
   set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    'paragraph-' ~ paragraph.id(),
-    'paragraph-type-' ~ paragraph.bundle(),
-  ]
+  'paragraph',
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  'paragraph-' ~ paragraph.id(),
+  content.field_background_image|length < 3 ? 'no-image' :'image',
+]
 %}
 {% block paragraph %}
+<div class="feature-full-width-paragraph">
   <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      {{ content }}
-    {% endblock %}
+        {% block content %}
+          {{ content }}
+        {% endblock %}
   </div>
+</div>
 {% endblock paragraph %}

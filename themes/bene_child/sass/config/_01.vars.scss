@@ -1,15 +1,15 @@
 $vars: (
   //Colors
-        color-primary-a: #248BCB, //light blue
-        color-primary-b: #1E5375, //dark blue
+        color-primary-a: #00D2E6, //light blue
+        color-primary-b: #00A1B8, //dark blue
         color-primary-c: #ffffff, //white
         color-primary-d: #000000, //black
-        color-primary-e: #2d3332, //dark grey
-        color-secondary-a: #E26436, //light orange
-        color-secondary-b: #C63E02,  //dark orange
-        color-secondary-c: #F2AF3F, //light yellow
-        color-secondary-d: #DB830E, //dark yellow
-        color-secondary-e: #5FBA47, //green
+        color-primary-e: #129FB5, //dark grey
+        color-secondary-a: '#F5F5F5',
+        color-secondary-b: '',
+        color-secondary-c: '',
+        color-secondary-d: '',
+        color-secondary-e: '',
 
   //Fonts
         font-family-primary: "'Work Sans', sans-serif",
@@ -40,12 +40,76 @@ $vars: (
             BASE STYLING
    ============================== */
 
+%h1{
+  font-size: 65px;
+  line-height: 55px;
+  font-weight: 400;
+}
+
+%h2 {
+  font-size: 55px;
+  line-height: 65px;
+  font-weight: 400;
+}
+
+%h3 {
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 400;
+}
+
+%h4 {
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: 400;
+}
+
+%h5{
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: 400;
+}
+
+%button{
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  border-radius: 0;
+  @include vars(color, color-primary-c);
+  @include vars(background-color, color-primary-a);
+}
+
+%button-hover{
+  @include vars(background-color, color-primary-b);
+}
+
 /* ==============================
             Site Header
    ============================== */
 
 %site-header{
-  @include vars(background-color, color-primary-e);
+  @include vars(background-color, color-primary-c);
+}
+
+%primary-nav-region{
+  @include vars(background-color, color-primary-c);
+}
+
+%menu-link{
+  @include vars(color, color-primary-d);
+}
+
+%main-menu-button{
+  &:last-child a{
+    @include vars(background-color, color-primary-a);
+    @include vars(color, color-primary-c);
+    border-radius: 0;
+    width: 100px;
+    text-align: center;
+    padding: 0.5rem 1.5rem;
+    &:focus, &:active, &:hover{
+      @include vars(background-color, color-primary-b);
+    }
+  }
 }
 
 
@@ -53,17 +117,21 @@ $vars: (
           Sub Navigation
    ============================== */
 
-
 /* ==============================
         Home Page Feature
    ============================== */
 
-
 /* ==============================
                Tiles
    ============================== */
+
+%tiles-background{
+  @include vars(background-color, color-primary-c);
+}
+
 %individual-tiles{
-  border-bottom-right-radius: 100px;
+  border-bottom-right-radius: 0;
+  text-align: center;
 }
 
 /* ==============================
@@ -75,6 +143,11 @@ $vars: (
     Full Width Feature Paragraph
    ============================== */
 
+%full-width-pargph{
+  &:before{
+    background: linear-gradient(#00D2E6, #000000);
+  }
+}
 
 /* ==============================
            Listing Page
@@ -83,10 +156,6 @@ $vars: (
 
 /* ==============================
            Inline Embeds
-   ============================== */
-
-/* ==============================
-            Media Paragraph
    ============================== */
 
 
@@ -108,7 +177,17 @@ $vars: (
 /* ==============================
         Newsletter
    ============================== */
+%newsletter{
+  background-image: none;
+  @include vars(background-color, color-secondary-a);
+}
 
+%newsletter-a{
+  @include vars(color, color-primary-a);
+  &:hover{
+    @include vars(color, color-primary-b);
+  }
+}
 
 /* ==============================
             Site Footer
