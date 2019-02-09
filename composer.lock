@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf75d4d76b9474035980b7f9d89346d8",
+    "content-hash": "cf372f3c01153ea9b533125305016454",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5885,11 +5885,11 @@
         },
         {
             "name": "thinkshout/bene_promo_redirect",
-            "version": "1.0",
+            "version": "1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thinkshout/bene_promo_redirect.git",
-                "reference": "3d5e37db442f539752a2bc8526350a380a30c831"
+                "reference": "562aecc0599135e19de225c1191c6251f6441ed0"
             },
             "require": {
                 "thinkshout/bene_features": "^1.0@beta"
@@ -5905,7 +5905,7 @@
                 }
             ],
             "description": "Promotional Redirect feature built for the Bene Distribution.",
-            "time": "2019-02-09T01:33:37+00:00"
+            "time": "2019-02-09T02:24:22+00:00"
         },
         {
             "name": "thinkshout/mailchimp-api-php",
