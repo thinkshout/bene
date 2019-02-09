@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6180b4ab0587f0d63fb19ed817b59242",
+    "content-hash": "bf75d4d76b9474035980b7f9d89346d8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5885,18 +5885,27 @@
         },
         {
             "name": "thinkshout/bene_promo_redirect",
-            "version": "dev-bene_features",
+            "version": "1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thinkshout/bene_promo_redirect.git",
-                "reference": "6bcc016e635c2ba5b643556cdf3d0d4f370f4b26"
+                "reference": "3d5e37db442f539752a2bc8526350a380a30c831"
+            },
+            "require": {
+                "thinkshout/bene_features": "^1.0@beta"
             },
             "type": "drupal-module",
             "license": [
                 "GPL-2.0+"
             ],
-            "description": "Temporarily redirect one or more pages to a specific page or site until the user has visited the target.",
-            "time": "2018-12-28T21:15:44+00:00"
+            "authors": [
+                {
+                    "name": "ThinkShout",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Promotional Redirect feature built for the Bene Distribution.",
+            "time": "2019-02-09T01:33:37+00:00"
         },
         {
             "name": "thinkshout/mailchimp-api-php",
@@ -6998,12 +7007,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jhedstrom/drupalextension.git",
-                "reference": "3836ccb7fce9a16d26197ee7df13744f0a5799a8"
+                "reference": "2938b26dbcf6e9223a6a9917217d729ade9e91cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jhedstrom/drupalextension/zipball/3836ccb7fce9a16d26197ee7df13744f0a5799a8",
-                "reference": "3836ccb7fce9a16d26197ee7df13744f0a5799a8",
+                "url": "https://api.github.com/repos/jhedstrom/drupalextension/zipball/2938b26dbcf6e9223a6a9917217d729ade9e91cb",
+                "reference": "2938b26dbcf6e9223a6a9917217d729ade9e91cb",
                 "shasum": ""
             },
             "require": {
@@ -7061,7 +7070,7 @@
                 "test",
                 "web"
             ],
-            "time": "2018-12-19T17:24:54+00:00"
+            "time": "2019-02-06T10:51:41+00:00"
         },
         {
             "name": "fabpot/goutte",
@@ -8690,7 +8699,6 @@
         "drupal/migrate_google_sheets": 10,
         "drupal/picture_background_formatter": 20,
         "thinkshout/bene_media": 20,
-        "thinkshout/bene_promo_redirect": 20,
         "drupal/drupal-driver": 20,
         "drupal/drupal-extension": 20
     },
