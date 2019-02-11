@@ -5,7 +5,9 @@ namespace Drupal\bene_core\Plugin\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
-use Drupal\mailchimp_signup\Form\MailchimpSignupPageForm;
+use Drupal\bene_core\Plugin\BeneEmailSignupTypeManager;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 
 /**
  * Provides a 'NewsletterSignupBlock' block.
@@ -16,7 +18,49 @@ use Drupal\mailchimp_signup\Form\MailchimpSignupPageForm;
  *  category = @Translation("Bene")
  * )
  */
-class NewsletterSignupBlock extends BlockBase {
+class NewsletterSignupBlock extends BlockBase implements ContainerFactoryPluginInterface {
+  /**
+   * The BeneEmailSignupTypeManager plugin manager.
+   *
+   * We use this to get all of the BeneEmailSignupType plugins.
+   *
+   * @var \Drupal\bene_core\Plugin\BeneEmailSignupTypeManager
+   */
+  protected $beneEmailSignupManager;
+
+  /**
+   * Constructor.
+   *
+   * @param \Drupal\bene_core\Plugin\BeneEmailSignupTypeManager $bene_email_signup_manager
+   *   The Bene email signup type manager service. We're injecting this service
+   *   so that we can use it to access the Bene email signup type plugins.
+   * @param array $configuration
+   *   The plugin configuration, i.e. an array with configuration values keyed
+   *   by configuration option name. The special key 'context' may be used to
+   *   initialize the defined contexts by setting it to an array of context
+   *   values keyed by context names.
+   * @param string $plugin_id
+   *   The plugin_id for the plugin instance.
+   * @param mixed $plugin_definition
+   *   The plugin implementation definition.
+   */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, BeneEmailSignupTypeManager $bene_email_signup_manager) {
+    $this->beneEmailSignupManager = $bene_email_signup_manager;
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+  }
+
+  /**
+   * {@inheritdoc}
+   *
+   * Override the parent method so we can inject our BeneEmailSignupType
+   * plugin manager service into the controller. Dependency injection.
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    // Inject the plugin.manager.bene_email_signup_type service
+    // that represents our plugin manager as defined in the
+    // bene_core.services.yml file.
+    return new static($configuration, $plugin_id, $plugin_definition, $container->get('plugin.manager.bene_email_signup_type'));
+  }
 
   /**
    * {@inheritdoc}
@@ -43,9 +87,23 @@ class NewsletterSignupBlock extends BlockBase {
       '#options' => [
         'disabled' => $this->t('Disabled'),
         'external' => $this->t('External'),
-        'embedded' => $this->t('MailChimp Form'),
       ],
     ];
+
+    // Get the list of all the BeneEmailSignupType plugins defined on the system
+    // from plugin manager. Note that at this point, what we have is
+    // *definitions* of plugins, not the plugins themselves.
+    $bene_email_signup_type_definitions = $this->beneEmailSignupManager->getDefinitions();
+
+    // Output a list of the plugin definitions we now have, as radio buttons.
+    foreach ($bene_email_signup_type_definitions as $bene_email_signup_type_definition) {
+      // Here we use various properties from the plugin definition. These values
+      // are defined in the annotation at the top of the plugin class: see
+      // \Drupal\bene_core\Plugin\BeneEmailSignupType\BeneMailchimpPlugin.
+      $plugin_id = $bene_email_signup_type_definition['id'];
+      $form['style']['#options'][$plugin_id] = $this->t($bene_email_signup_type_definition['title']);
+    }
+
     $form['title'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Title'),
@@ -80,77 +138,21 @@ class NewsletterSignupBlock extends BlockBase {
       '#required' => TRUE,
     ];
 
-    $form['mailchimp_settings'] = [
-      '#type' => 'fieldset',
-      '#title' => $this->t('MailChimp settings'),
-      '#states' => [
-        'visible' => [
-          ':input[name="settings[style]"]' => ['value' => 'embedded'],
+    foreach ($bene_email_signup_type_definitions as $plugin_id => $bene_email_signup_type_definition) {
+      // We now have a plugin instance. From here on it can be treated just as
+      // any other object; have its properties examined, methods called, etc.
+      $form[$plugin_id] = [
+        '#type' => 'fieldset',
+        '#title' => $bene_email_signup_type_definition['title'],
+        '#states' => [
+          'visible' => [
+            ':input[name="settings[style]"]' => ['value' => $plugin_id],
+          ],
         ],
-      ],
-    ];
-
-    // Help the user turn on MailChimp.
-    $moduleHandler = \Drupal::service('module_handler');
-    if (!$moduleHandler->moduleExists('mailchimp') || !$moduleHandler->moduleExists('mailchimp_signup')) {
-      $form['mailchimp_settings']['help_text'] = [
-        '#type' => 'markup',
-        '#markup' => 'Please <a href="/admin/modules?destination=/admin/structure/block/manage/benenewslettersignup">enable and configure MailChimp and a MailChimp Signup block</a> to begin.',
-        '#prefix' => '<p>',
-        '#suffix' => '</p>',
       ];
-    }
-    else {
 
-      // Help the User set a key.
-      $mailchimp_config = \Drupal::config('mailchimp.settings');('mailchimp.settings');
-      $key = $mailchimp_config->get('api_key');
-
-      if (!$key) {
-        $form['mailchimp_settings']['help_text'] = [
-          '#type' => 'markup',
-          '#markup' => 'Please add a <a href="/admin/config/services/mailchimp?destination=/admin/structure/block/manage/benenewslettersignup">MailChimp API</a> key and create a signup block to begin.',
-          '#prefix' => '<p>',
-          '#suffix' => '</p>',
-        ];
-      }
-      else {
-
-        // Rely on help text to encourage the user to create a signup block.
-        $options = [];
-        $signup_blocks = mailchimp_signup_load_multiple();
-        $default_signup_block = '';
-
-        foreach ($signup_blocks as $signup_key => $signup) {
-          $options[$signup_key] = $signup->title;
-          if ($this->configuration['signup_block'] == $signup_key) {
-            $default_signup_block = $this->configuration['signup_block'];
-          }
-        }
-        if ($options) {
-          $form['mailchimp_settings']['signup_block'] = [
-            '#type'          => 'select',
-            '#options'       => $options,
-            '#title'         => $this->t('Signup Block'),
-            '#description'   => $this->t('Select a MailChimp signup block or <a href="/admin/config/services/mailchimp/signup?destination=/admin/structure/block/manage/benenewslettersignup">create a new signup block</a>.'),
-            '#default_value' => $default_signup_block,
-            '#required'      => FALSE,
-            '#states'        => [
-              'required' => [
-                ':input[name="settings[style]"]' => ['value' => 'embedded'],
-              ],
-            ],
-          ];
-        }
-        else {
-          $form['mailchimp_settings']['signup_block_warning'] = [
-            '#type' => 'markup',
-            '#markup' => $this->t('To use the MailChimp form style you will need to <a href="/admin/config/services/mailchimp/signup?destination=/admin/structure/block/manage/benenewslettersignup">create a new MailChimp signup block</a> and return to this page to select it.'),
-            '#prefix' => '<p>',
-            '#suffix' => '</p>',
-          ];
-        }
-      }
+      $plugin = $this->beneEmailSignupManager->createInstance($plugin_id);
+      $form[$plugin_id]['signup_block'] = $plugin->settingsForm($this->configuration);
     }
 
     return $form;
@@ -162,11 +164,18 @@ class NewsletterSignupBlock extends BlockBase {
   public function validateConfigurationForm(array &$form, FormStateInterface $form_state) {
     parent::validateConfigurationForm($form, $form_state);
 
-    $mailchimp_settings = $form_state->getValue('mailchimp_settings');
-    $has_value = $mailchimp_settings['signup_block'];
-
-    if ($form_state->getValue('style') == 'embedded' && !$has_value) {
-      $form_state->setErrorByName('mailchimp_settings', t('A valid MailChimp signup block is required, please create one or choose a different style.'));
+    // Get the list of all the BeneEmailSignupType plugins defined on the system
+    // from plugin manager. Note that at this point, what we have is
+    // *definitions* of plugins, not the plugins themselves.
+    $bene_email_signup_type_definitions = $this->beneEmailSignupManager->getDefinitions();
+    foreach ($bene_email_signup_type_definitions as $plugin_id => $bene_email_signup_type_definition) {
+      // We now have a plugin instance. From here on it can be treated just as
+      // any other object; have its properties examined, methods called, etc.
+      if ($form_state->getValue('style') == $plugin_id) {
+        $plugin = $this->beneEmailSignupManager->createInstance($plugin_id);
+        // TODO: should we pass the entire $form, or just $form[$plugin_id] ?
+        $plugin->validateSettingsForm($this->configuration, $form[$plugin_id], $form_state);
+      }
     }
   }
 
@@ -182,8 +191,17 @@ class NewsletterSignupBlock extends BlockBase {
     $this->configuration['external_link'] = $external_link_settings['external_link'];
     $this->configuration['external_link_label'] = $external_link_settings['external_link_label'];
 
-    $mailchimp_settings = $form_state->getValue('mailchimp_settings');
-    $this->configuration['signup_block'] = $mailchimp_settings['signup_block'];
+    // Get the list of all the BeneEmailSignupType plugins defined on the system
+    // from plugin manager. Note that at this point, what we have is
+    // *definitions* of plugins, not the plugins themselves.
+    $bene_email_signup_type_definitions = $this->beneEmailSignupManager->getDefinitions();
+    foreach ($bene_email_signup_type_definitions as $plugin_id => $bene_email_signup_type_definition) {
+      // We now have a plugin instance. From here on it can be treated just as
+      // any other object; have its properties examined, methods called, etc.
+      $plugin = $this->beneEmailSignupManager->createInstance($plugin_id);
+      $plugin->submitSettingsForm($this->configuration, $form, $form_state);
+    }
+
   }
 
   /**
@@ -243,29 +261,14 @@ class NewsletterSignupBlock extends BlockBase {
 
         break;
 
-      case 'embedded':
-
-        // Embedded a signup block.
-        $moduleHandler = \Drupal::service('module_handler');
-        if ($moduleHandler->moduleExists('mailchimp') && $moduleHandler->moduleExists('mailchimp_signup')) {
-
-          $signup_entity = $this->configuration['signup_block'];
-          $signup = mailchimp_signup_load($signup_entity);
-
-          if ($signup) {
-            $form = new MailchimpSignupPageForm();
-
-            $form_id = 'mailchimp_signup_subscribe_block_' . $signup->id . '_form';
-            $form->setFormID($form_id);
-            $form->setSignup($signup);
-
-            $build['signup']['form'] = \Drupal::formBuilder()->getForm($form);
-          }
-        }
-        break;
-
       default:
-        // No link.
+          // For a plugin example see \Drupal\bene_core\Plugin\BeneEmailSignupType\BeneMailchimpPlugin.
+          $bene_email_signup_type_definition = $this->beneEmailSignupManager->getDefinition($style, FALSE);
+          if (isset($bene_email_signup_type_definition)) {
+            $plugin = $this->beneEmailSignupManager->createInstance($style);
+            $build['signup']['form'] = $plugin->buildEndUserEmailSignup($this->configuration);
+          }
+          break;
     }
 
     return $build;
