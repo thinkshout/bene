@@ -104,14 +104,12 @@ class BeneMailchimpPlugin extends BeneEmailSignupTypeBase {
    *   by configuration option name. The special key 'context' may be used to
    *   initialize the defined contexts by setting it to an array of context
    *   values keyed by context names.
-   * @param array $form
-   *   The form to validate.
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The state of the form with current entries and selections.
    */
-  public function validateSettingsForm(array $configuration, array &$form, FormStateInterface $form_state) {
+  public function validateSettingsForm(array $configuration, FormStateInterface $form_state) {
     $mailchimp_settings = $form_state->getValue('mailchimp_for_bene');
-    $has_value = $mailchimp_settings['signup_block'];
+    $has_value = $mailchimp_settings['settings'];
     if (!$has_value) {
       $form_state->setErrorByName('mailchimp_for_bene', t('A valid MailChimp signup block is required, please create one or choose a different style.'));
     }
@@ -125,14 +123,12 @@ class BeneMailchimpPlugin extends BeneEmailSignupTypeBase {
    *   by configuration option name. The special key 'context' may be used to
    *   initialize the defined contexts by setting it to an array of context
    *   values keyed by context names.
-   * @param array $form
-   *   The form definition array for the full configuration form.
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The current state of the form.
    */
-  public function submitSettingsForm(array &$configuration, array $form, FormStateInterface $form_state) {
+  public function submitSettingsForm(array &$configuration, FormStateInterface $form_state) {
     $mailchimp_settings = $form_state->getValue('mailchimp_for_bene');
-    $configuration['signup_block'] = $mailchimp_settings['signup_block']['signup_block'];
+    $configuration['signup_block'] = $mailchimp_settings['settings']['signup_block'];
   }
 
   /**

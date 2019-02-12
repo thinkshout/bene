@@ -152,7 +152,7 @@ class NewsletterSignupBlock extends BlockBase implements ContainerFactoryPluginI
       ];
 
       $plugin = $this->beneEmailSignupManager->createInstance($plugin_id);
-      $form[$plugin_id]['signup_block'] = $plugin->settingsForm($this->configuration);
+      $form[$plugin_id]['settings'] = $plugin->settingsForm($this->configuration);
     }
 
     return $form;
@@ -164,18 +164,11 @@ class NewsletterSignupBlock extends BlockBase implements ContainerFactoryPluginI
   public function validateConfigurationForm(array &$form, FormStateInterface $form_state) {
     parent::validateConfigurationForm($form, $form_state);
 
-    // Get the list of all the BeneEmailSignupType plugins defined on the system
-    // from plugin manager. Note that at this point, what we have is
-    // *definitions* of plugins, not the plugins themselves.
-    $bene_email_signup_type_definitions = $this->beneEmailSignupManager->getDefinitions();
-    foreach ($bene_email_signup_type_definitions as $plugin_id => $bene_email_signup_type_definition) {
-      // We now have a plugin instance. From here on it can be treated just as
-      // any other object; have its properties examined, methods called, etc.
-      if ($form_state->getValue('style') == $plugin_id) {
-        $plugin = $this->beneEmailSignupManager->createInstance($plugin_id);
-        // TODO: should we pass the entire $form, or just $form[$plugin_id] ?
-        $plugin->validateSettingsForm($this->configuration, $form[$plugin_id], $form_state);
-      }
+    $style = $form_state->getValue('style');
+    $bene_email_signup_type_definition = $this->beneEmailSignupManager->getDefinition($style, FALSE);
+    if (isset($bene_email_signup_type_definition)) {
+      $plugin = $this->beneEmailSignupManager->createInstance($style);
+      $plugin->validateSettingsForm($this->configuration, $form_state);
     }
   }
 
@@ -191,17 +184,12 @@ class NewsletterSignupBlock extends BlockBase implements ContainerFactoryPluginI
     $this->configuration['external_link'] = $external_link_settings['external_link'];
     $this->configuration['external_link_label'] = $external_link_settings['external_link_label'];
 
-    // Get the list of all the BeneEmailSignupType plugins defined on the system
-    // from plugin manager. Note that at this point, what we have is
-    // *definitions* of plugins, not the plugins themselves.
-    $bene_email_signup_type_definitions = $this->beneEmailSignupManager->getDefinitions();
-    foreach ($bene_email_signup_type_definitions as $plugin_id => $bene_email_signup_type_definition) {
-      // We now have a plugin instance. From here on it can be treated just as
-      // any other object; have its properties examined, methods called, etc.
-      $plugin = $this->beneEmailSignupManager->createInstance($plugin_id);
-      $plugin->submitSettingsForm($this->configuration, $form, $form_state);
+    $style = $form_state->getValue('style');
+    $bene_email_signup_type_definition = $this->beneEmailSignupManager->getDefinition($style, FALSE);
+    if (isset($bene_email_signup_type_definition)) {
+      $plugin = $this->beneEmailSignupManager->createInstance($style);
+      $plugin->submitSettingsForm($this->configuration, $form_state);
     }
-
   }
 
   /**

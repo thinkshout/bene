@@ -64,12 +64,10 @@ abstract class BeneEmailSignupTypeBase extends PluginBase implements BeneEmailSi
    *   by configuration option name. The special key 'context' may be used to
    *   initialize the defined contexts by setting it to an array of context
    *   values keyed by context names.
-   * @param array $form
-   *   The form to validate.
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The state of the form with current entries and selections.
    */
-  public function validateSettingsForm(array $configuration, array &$form, FormStateInterface $form_state) {
+  public function validateSettingsForm(array $configuration, FormStateInterface $form_state) {
   }
 
   // Add common methods and abstract methods for your plugin type here.
