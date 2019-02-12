@@ -1,20 +1,15 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\bene_core\Annotation\BeneEmailSignupType.
- *
- * Defines a new annotation type BeneEmailSignupType for use in
- * defining a plugin type. Documents the various properties that
- * can be used in annotations for plugins of this type.
- */
-
 namespace Drupal\bene_core\Annotation;
 
 use Drupal\Component\Annotation\Plugin;
 
 /**
  * Defines a Bene email signup type item annotation object.
+ *
+ * Defines a new annotation type BeneEmailSignupType for use in
+ * defining a plugin type. Documents the various properties that
+ * can be used in annotations for plugins of this type.
  *
  * @see \Drupal\bene_core\Plugin\BeneEmailSignupTypeManager
  * @see plugin_api

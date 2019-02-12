@@ -101,7 +101,7 @@ class NewsletterSignupBlock extends BlockBase implements ContainerFactoryPluginI
       // are defined in the annotation at the top of the plugin class: see
       // \Drupal\bene_core\Plugin\BeneEmailSignupType\BeneMailchimpPlugin.
       $plugin_id = $bene_email_signup_type_definition['id'];
-      $form['style']['#options'][$plugin_id] = $this->t($bene_email_signup_type_definition['title']);
+      $form['style']['#options'][$plugin_id] = $bene_email_signup_type_definition['title'];
     }
 
     $form['title'] = [
@@ -262,13 +262,14 @@ class NewsletterSignupBlock extends BlockBase implements ContainerFactoryPluginI
         break;
 
       default:
-          // For a plugin example see \Drupal\bene_core\Plugin\BeneEmailSignupType\BeneMailchimpPlugin.
-          $bene_email_signup_type_definition = $this->beneEmailSignupManager->getDefinition($style, FALSE);
-          if (isset($bene_email_signup_type_definition)) {
-            $plugin = $this->beneEmailSignupManager->createInstance($style);
-            $build['signup']['form'] = $plugin->buildEndUserEmailSignup($this->configuration);
-          }
-          break;
+        // For a plugin example see
+        // \Drupal\bene_core\Plugin\BeneEmailSignupType\BeneMailchimpPlugin.
+        $bene_email_signup_type_definition = $this->beneEmailSignupManager->getDefinition($style, FALSE);
+        if (isset($bene_email_signup_type_definition)) {
+          $plugin = $this->beneEmailSignupManager->createInstance($style);
+          $build['signup']['form'] = $plugin->buildEndUserEmailSignup($this->configuration);
+        }
+        break;
     }
 
     return $build;

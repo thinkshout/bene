@@ -1,8 +1,12 @@
 <?php
 
+namespace Drupal\bene_core\Plugin;
+
+use Drupal\Component\Plugin\PluginInspectionInterface;
+use Drupal\Core\Form\FormStateInterface;
+
 /**
- * @file
- * Provides \Drupal\bene_core\BeneEmailSignupTypeInterface.
+ * Defines an interface for all Bene email signup type plugins.
  *
  * When defining a new plugin type you need to define an interface that all
  * plugins of the new type will implement. This ensures that consumers of the
@@ -16,15 +20,6 @@
  *
  * In our case we'll define methods for accessing the human readable description
  * of a BeneEmailSignupType. As well as a method for returning a config form.
- */
-
-namespace Drupal\bene_core\Plugin;
-
-use Drupal\Component\Plugin\PluginInspectionInterface;
-use Drupal\Core\Form\FormStateInterface;
-
-/**
- * Defines an interface for all Bene email signup type plugins.
  */
 interface BeneEmailSignupTypeInterface extends PluginInspectionInterface {
 
@@ -81,10 +76,11 @@ interface BeneEmailSignupTypeInterface extends PluginInspectionInterface {
    *   by configuration option name. The special key 'context' may be used to
    *   initialize the defined contexts by setting it to an array of context
    *   values keyed by context names.
-   * @param array $form
+   * @param $form
    *   The form definition array for the full configuration form.
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The current state of the form.
+   *
    * @return string
    *   Returns the id of the currently selected mailchimp signup block.
    */
@@ -98,6 +94,7 @@ interface BeneEmailSignupTypeInterface extends PluginInspectionInterface {
    *   by configuration option name. The special key 'context' may be used to
    *   initialize the defined contexts by setting it to an array of context
    *   values keyed by context names.
+   *
    * @return array
    *   A renderable array representing the content of the block.
    */

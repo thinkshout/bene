@@ -82,7 +82,8 @@ class BeneMailchimpPlugin extends BeneEmailSignupTypeBase {
               ],
             ],
           ];
-        } else {
+        }
+        else {
           $mailchimpSettingsForm['signup_block_warning'] = [
             '#type' => 'markup',
             '#markup' => 'To use the MailChimp form style you will need to <a href="/admin/config/services/mailchimp/signup?destination=/admin/structure/block/manage/benenewslettersignup">create a new MailChimp signup block</a> and return to this page to select it.',
@@ -124,12 +125,10 @@ class BeneMailchimpPlugin extends BeneEmailSignupTypeBase {
    *   by configuration option name. The special key 'context' may be used to
    *   initialize the defined contexts by setting it to an array of context
    *   values keyed by context names.
-   * @param array $form
+   * @param $form
    *   The form definition array for the full configuration form.
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The current state of the form.
-   * @return string
-   *   Returns the id of the currently selected mailchimp signup block.
    */
   public function submitSettingsForm(array &$configuration, $form, FormStateInterface $form_state) {
     $mailchimp_settings = $form_state->getValue('mailchimp_for_bene');
