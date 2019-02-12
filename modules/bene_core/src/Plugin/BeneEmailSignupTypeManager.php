@@ -18,6 +18,7 @@ use Drupal\Core\Extension\ModuleHandlerInterface;
  * anytime we need to work with BeneEmailSignupType plugins.
  */
 class BeneEmailSignupTypeManager extends DefaultPluginManager {
+  
   /**
    * Constructs a new BeneEmailSignupTypeManager object.
    *
