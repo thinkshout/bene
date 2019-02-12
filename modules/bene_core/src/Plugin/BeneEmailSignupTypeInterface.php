@@ -76,7 +76,7 @@ interface BeneEmailSignupTypeInterface extends PluginInspectionInterface {
    *   by configuration option name. The special key 'context' may be used to
    *   initialize the defined contexts by setting it to an array of context
    *   values keyed by context names.
-   * @param $form
+   * @param array $form
    *   The form definition array for the full configuration form.
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The current state of the form.
@@ -84,7 +84,7 @@ interface BeneEmailSignupTypeInterface extends PluginInspectionInterface {
    * @return string
    *   Returns the id of the currently selected mailchimp signup block.
    */
-  public function submitSettingsForm(array &$configuration, $form, FormStateInterface $form_state);
+  public function submitSettingsForm(array &$configuration, array $form, FormStateInterface $form_state);
 
   /**
    * Builds and returns the renderable array for this block plugin.

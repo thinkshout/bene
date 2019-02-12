@@ -29,6 +29,7 @@ class BeneEmailSignupTypeManager extends DefaultPluginManager {
    * @param \Drupal\Core\Extension\ModuleHandlerInterface $module_handler
    *   The module handler to invoke the alter hook with.
    */
+
   public function __construct(\Traversable $namespaces, CacheBackendInterface $cache_backend, ModuleHandlerInterface $module_handler) {
     // We replace the $subdir parameter with our own value.
     // This tells the plugin manager to look for BeneEmailSignupType plugins in

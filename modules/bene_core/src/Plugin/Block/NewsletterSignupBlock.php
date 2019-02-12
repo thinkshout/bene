@@ -31,9 +31,6 @@ class NewsletterSignupBlock extends BlockBase implements ContainerFactoryPluginI
   /**
    * Constructor.
    *
-   * @param \Drupal\bene_core\Plugin\BeneEmailSignupTypeManager $bene_email_signup_manager
-   *   The Bene email signup type manager service. We're injecting this service
-   *   so that we can use it to access the Bene email signup type plugins.
    * @param array $configuration
    *   The plugin configuration, i.e. an array with configuration values keyed
    *   by configuration option name. The special key 'context' may be used to
@@ -43,6 +40,9 @@ class NewsletterSignupBlock extends BlockBase implements ContainerFactoryPluginI
    *   The plugin_id for the plugin instance.
    * @param mixed $plugin_definition
    *   The plugin implementation definition.
+   * @param \Drupal\bene_core\Plugin\BeneEmailSignupTypeManager $bene_email_signup_manager
+   *   The Bene email signup type manager service. We're injecting this service
+   *   so that we can use it to access the Bene email signup type plugins.
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, BeneEmailSignupTypeManager $bene_email_signup_manager) {
     $this->beneEmailSignupManager = $bene_email_signup_manager;
