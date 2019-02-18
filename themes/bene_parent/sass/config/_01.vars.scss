@@ -1502,7 +1502,11 @@ $vars: (
 
 %newsletter{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  &.side-by-side {
+    flex-direction: row;
+    p { display: none; }
+  }
   padding: 2rem 1rem;
   align-items: center;
   background-image: linear-gradient(#F2AF3F, #E26436);
@@ -1520,7 +1524,8 @@ $vars: (
   font-size: 22px;
   font-weight: 800;
   text-align: left;
-  display: none;
+  display: block;
+  &.side-by-side { display: none; }
 }
 
 %newsletter-a{

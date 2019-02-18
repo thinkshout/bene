@@ -200,31 +200,33 @@ class NewsletterSignupBlock extends BlockBase implements ContainerFactoryPluginI
 
     $style = $this->configuration['style'];
 
+    $build['signup'] = [
+      '#type' => 'container',
+      '#weight' => 1,
+      '#attributes' => [
+        'class' => 'external-newsletter',
+      ],
+    ];
     if ($style == 'external' || $style == 'embedded') {
-      $build['signup'] = [
-        '#type' => 'container',
-        '#weight' => 1,
-        '#attributes' => [
-          'class' => 'external-newsletter',
-        ],
-      ];
-      if ($this->configuration['title']) {
-        $build['signup']['title'] = [
-          '#type' => 'markup',
-          '#markup' => $this->configuration['title'],
-          '#prefix' => '<h2>',
-          '#suffix' => '</h2>',
-        ];
-      }
-      if ($this->configuration['signup_text']) {
-        $build['signup']['signup_text'] = [
-          '#type' => 'markup',
-          '#markup' => $this->configuration['signup_text'],
-          '#prefix' => '<p>',
-          '#suffix' => '</p>',
-        ];
-      }
+      $build['signup']['#attributes']['class'] = 'external-newsletter side-by-side';
     }
+    if ($this->configuration['title']) {
+      $build['signup']['title'] = [
+        '#type' => 'markup',
+        '#markup' => $this->configuration['title'],
+        '#prefix' => '<h2>',
+        '#suffix' => '</h2>',
+      ];
+    }
+    if ($this->configuration['signup_text']) {
+      $build['signup']['signup_text'] = [
+        '#type' => 'markup',
+        '#markup' => $this->configuration['signup_text'],
+        '#prefix' => '<p>',
+        '#suffix' => '</p>',
+      ];
+    }
+
     switch ($style) {
       case 'external':
 
