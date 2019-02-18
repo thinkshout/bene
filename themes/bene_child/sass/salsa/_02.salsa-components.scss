@@ -1,0 +1,110 @@
+#salsaContainer #salsaWrapper #salsaForm{
+  *{
+    background-color: initial !important;
+    box-shadow: none !important;
+    border-color: initial !important;
+    color: initial !important;
+    font-family: initial !important;
+    outline-color: initial !important;
+    text-shadow: none !important;
+    @include bene(font-family, font-family-secondary);
+  }
+}
+
+#salsaContainer #salsaWrapper #salsaForm{
+  .sli-content-pane{
+    @extend %salsa-background;
+    @extend %salsa-wrapper-padding;
+    @extend %salsa-wrapper-font;
+
+    .sli-label{
+      @extend %salsa-label-font;
+    }
+
+    .sli-input{
+      @extend %salsa-input-font;
+    }
+
+    .sli-form ::-webkit-input-placeholder{
+      @extend %salsa-placeholder;
+    }
+
+    .sli-input[type="text"],
+    .sli-input[type="email"],
+    select.sli-input{
+      @extend %salsa-input-size;
+    }
+
+    .sli-input[type="text"],
+    .sli-input[type="email"],
+    select.sli-input{
+      @extend %salsa-input-border;
+    }
+
+    .sli-button{
+      @extend %salsa-button;
+      @extend %salsa-remove-shadow;
+    }
+
+    .sli-element.sli-button-element{
+      @extend %salsa-button-alignment;
+    }
+
+    .sli-button-element .sli-floating{
+      @extend %salsa-remove-shadow;
+    }
+
+    .sli-oneTimeAmountLabel,
+    .sli-recurringAmountLabel{
+      @extend %salsa-amount-select;
+    }
+
+    .sli-button.sli-postfix{
+      @extend %salsa-attached-button;
+    }
+
+    .sli-oneTimeAmountLabel.sli-customAmount,
+    .sli-recurringAmountLabel.sli-customAmount{
+      @extend %salsa-amount-right-border;
+    }
+
+    ul.sli-style-button input[type="radio"]:checked + .sli-amount-label{
+      @extend %salsa-amount-select-active;
+    }
+
+    .sli-form input,
+    .sli-form textarea,
+    .sli-form select,
+    .sli-custom-amount-label-selected{
+      @extend %salsa-remove-shadow;
+    }
+
+    .sli-widget h3{
+      @extend %salsa-h3;
+    }
+
+    select.sli-input[style]{
+      @extend %salsa-display-block;
+    }
+
+    .nice-select{
+      @extend %salsa-display-none;
+    }
+
+    .sli-tl-letter-msg{
+      @extend %salsa-example-text;
+    }
+
+    .sli-thermometer-glass,
+    .sli-thermometer-amount-label,
+    .sli-thermometer-bulb{
+      @extend %salsa-thermometer;
+    }
+
+    .sli-thermometer-amount-label:after{
+      @extend %salsa-thermometer-border;
+    }
+
+
+  }
+}
