@@ -207,8 +207,8 @@ class NewsletterSignupBlock extends BlockBase implements ContainerFactoryPluginI
         'class' => 'external-newsletter',
       ],
     ];
-    if ($style == 'external' || $style == 'embedded') {
-      $build['signup']['#attributes']['class'] = 'external-newsletter side-by-side';
+    if ($style !== 'external' && $style !== 'embedded') {
+      $build['signup']['#attributes']['class'] = 'external-newsletter stacked-elements';
     }
     if ($this->configuration['title']) {
       $build['signup']['title'] = [

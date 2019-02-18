@@ -1502,10 +1502,10 @@ $vars: (
 
 %newsletter{
   display: flex;
-  flex-direction: column;
-  &.side-by-side {
-    flex-direction: row;
-    p { display: none; }
+  flex-direction: row;
+  &.stacked-elements {
+    flex-direction: column;
+    & p { display: block; }
   }
   padding: 2rem 1rem;
   align-items: center;
@@ -1524,8 +1524,8 @@ $vars: (
   font-size: 22px;
   font-weight: 800;
   text-align: left;
-  display: block;
-  &.side-by-side { display: none; }
+  display: none;
+  &.stacked-elements { display: block; }
 }
 
 %newsletter-a{

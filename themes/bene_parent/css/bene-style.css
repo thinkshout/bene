@@ -1325,16 +1325,16 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
    ============================== */
 .block-bene-newsletter-signup-block .external-newsletter {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 2rem 1rem;
   align-items: center;
   background-image: linear-gradient(#F2AF3F, #E26436);
   justify-content: center;
   clear: both; }
-  .block-bene-newsletter-signup-block .side-by-side.external-newsletter {
-    flex-direction: row; }
-    .block-bene-newsletter-signup-block .side-by-side.external-newsletter p {
-      display: none; }
+  .block-bene-newsletter-signup-block .stacked-elements.external-newsletter {
+    flex-direction: column; }
+    .block-bene-newsletter-signup-block .stacked-elements.external-newsletter p {
+      display: block; }
 
 .block-bene-newsletter-signup-block h2 {
   font-size: 22px; }
@@ -1346,9 +1346,9 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
   font-size: 22px;
   font-weight: 800;
   text-align: left;
-  display: block; }
-  .block-bene-newsletter-signup-block p.side-by-side {
-    display: none; }
+  display: none; }
+  .block-bene-newsletter-signup-block p.stacked-elements {
+    display: block; }
 
 .block-bene-newsletter-signup-block a {
   background-color: transparent;
