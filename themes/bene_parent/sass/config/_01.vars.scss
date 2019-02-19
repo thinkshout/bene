@@ -1757,6 +1757,18 @@ $vars: (
 %footer-social-links-twitter{
   background-image: url(../images/svgs/twitter.svg);
 }
+%footer-social-links-google{
+  background-image: url(../images/svgs/google-plus.svg);
+}
+%footer-social-links-pinterest{
+  background-image: url(../images/svgs/pinterest-p.svg);
+}
+%footer-social-links-tumblr{
+  background-image: url(../images/svgs/tumblr.svg);
+}
+%footer-social-links-youtube{
+  background-image: url(../images/svgs/youtube-play.svg);
+}
 
 %footer-copyright{
   @include vars(color, color-primary-c);
@@ -1847,4 +1859,8 @@ $vars: (
 
 %position-static{
   position: static;
+}
+
+%position-relative{
+  position: relative;
 }
