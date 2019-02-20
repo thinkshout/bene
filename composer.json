@@ -19,22 +19,6 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        },
-        {
-           "type": "git",
-           "url": "https://github.com/thinkshout/bene_media.git"
-        },
-        {
-           "type": "git",
-           "url": "https://github.com/thinkshout/bene_features.git"
-        },
-        {
-           "type": "git",
-           "url": "https://github.com/thinkshout/bene_promo_redirect.git"
-        },
-        {
-           "type": "git",
-           "url": "https://github.com/thinkshout/bene_salsa.git"
         }
     ],
     "require": {
