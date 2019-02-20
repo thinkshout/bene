@@ -3,6 +3,7 @@
 vendor/
 .sass-cache/
 
+composer.lock
 node_modules
 modules/*
 modules/bene_media
