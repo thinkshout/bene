@@ -59,7 +59,7 @@
         "thinkshout/bene_media": "dev-8.x-2.x-bene",
         "thinkshout/bene_features": "1.0-beta3",
         "thinkshout/bene_promo_redirect": "^1.1",
-        "thinkshout/bene_salsa": "^1.0-beta4"
+        "thinkshout/bene_salsa": "^1.0-beta5"
     },
     "replace": {
         "bower-asset/jquery": "*",
