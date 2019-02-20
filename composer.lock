@@ -5920,11 +5920,11 @@
         },
         {
             "name": "thinkshout/bene_salsa",
-            "version": "1.0-beta1",
+            "version": "1.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thinkshout/bene_salsa.git",
-                "reference": "35d7ba33a2c3e76854b4de1e067a3d69cb5c2d28"
+                "reference": "9facc2c562ffaccd2527bf81c1fa10f42696e0df"
             },
             "require": {
                 "thinkshout/bene_features": "^1.0@beta"
@@ -5940,7 +5940,7 @@
                 }
             ],
             "description": "Salsa Engage feature built for the Bene Distribution.",
-            "time": "2019-02-19T23:56:22+00:00"
+            "time": "2019-02-20T01:21:27+00:00"
         },
         {
             "name": "thinkshout/mailchimp-api-php",
