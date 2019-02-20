@@ -1503,6 +1503,10 @@ $vars: (
 %newsletter{
   display: flex;
   flex-direction: row;
+  &.stacked-elements {
+    flex-direction: column;
+    & p { display: block; }
+  }
   padding: 2rem 1rem;
   align-items: center;
   background-image: linear-gradient(#F2AF3F, #E26436);
@@ -1521,6 +1525,7 @@ $vars: (
   font-weight: 800;
   text-align: left;
   display: none;
+  &.stacked-elements { display: block; }
 }
 
 %newsletter-a{

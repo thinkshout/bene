@@ -1331,6 +1331,10 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
   background-image: linear-gradient(#F2AF3F, #E26436);
   justify-content: center;
   clear: both; }
+  .block-bene-newsletter-signup-block .stacked-elements.external-newsletter {
+    flex-direction: column; }
+    .block-bene-newsletter-signup-block .stacked-elements.external-newsletter p {
+      display: block; }
 
 .block-bene-newsletter-signup-block h2 {
   font-size: 22px; }
@@ -1343,6 +1347,8 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
   font-weight: 800;
   text-align: left;
   display: none; }
+  .block-bene-newsletter-signup-block p.stacked-elements {
+    display: block; }
 
 .block-bene-newsletter-signup-block a {
   background-color: transparent;
