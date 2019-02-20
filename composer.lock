@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a72a35d248015eca15af50f6a5adafc",
+    "content-hash": "1b2e9b0cc6ad2fc4133adb33c3f81ba8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1959,7 +1959,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.6",
-                    "datestamp": "1536328684",
+                    "datestamp": "1550237884",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2218,10 +2218,6 @@
                 {
                     "name": "jmiccolis",
                     "homepage": "https://www.drupal.org/user/31731"
-                },
-                {
-                    "name": "joseph.olstad",
-                    "homepage": "https://www.drupal.org/user/1321830"
                 },
                 {
                     "name": "mpotter",
@@ -5156,7 +5152,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "BackEndTea@gmail.com"
+                    "email": "backendtea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -5826,11 +5822,11 @@
         },
         {
             "name": "thinkshout/bene_features",
-            "version": "1.0-beta2",
+            "version": "1.0-beta3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thinkshout/bene_features.git",
-                "reference": "b09ddad7cab66998d90afe769357bf1ae4611fdd"
+                "reference": "0d0bc15e8960e19c20b98c460574d59f372c8899"
             },
             "type": "drupal-module",
             "license": [
@@ -5843,7 +5839,7 @@
                 }
             ],
             "description": "Provides admin UI and infrastructure to support features built for the Bene Distribution for Non-profits.",
-            "time": "2018-12-22T08:44:35+00:00"
+            "time": "2019-02-06T02:49:16+00:00"
         },
         {
             "name": "thinkshout/bene_media",
@@ -5921,6 +5917,30 @@
             ],
             "description": "Promotional Redirect feature built for the Bene Distribution.",
             "time": "2019-02-09T02:24:22+00:00"
+        },
+        {
+            "name": "thinkshout/bene_salsa",
+            "version": "1.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thinkshout/bene_salsa.git",
+                "reference": "35d7ba33a2c3e76854b4de1e067a3d69cb5c2d28"
+            },
+            "require": {
+                "thinkshout/bene_features": "^1.0@beta"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "ThinkShout",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Salsa Engage feature built for the Bene Distribution.",
+            "time": "2019-02-19T23:56:22+00:00"
         },
         {
             "name": "thinkshout/mailchimp-api-php",
@@ -7953,6 +7973,7 @@
                 "mock",
                 "xunit"
             ],
+            "abandoned": true,
             "time": "2015-10-02T06:51:40+00:00"
         },
         {
