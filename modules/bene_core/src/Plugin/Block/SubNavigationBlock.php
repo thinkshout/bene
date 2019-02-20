@@ -121,37 +121,34 @@ class SubNavigationBlock extends BlockBase implements ContainerFactoryPluginInte
     // Get the deepest link to this page and use that for the subnav.
     // @todo Consider a better approach like excluding utility nav links or
     // sorting them by main menu then footer then utility nav.
-    $menu_link = end($menu_links);
-    $menu_name = $this->getMenuName();
-
-    $parameters = $this->menuTree->getCurrentRouteMenuTreeParameters($menu_name);
-    // Only show one level.
-    $parameters->setMaxDepth(1);
-    // We default to the current item as root.
-    $parameters->setRoot($menu_link->getPluginId());
-
-    // Store initial parameters since menuTree->load alters them.
-    $fallback_parameters = clone $parameters;
-
-    $tree = $this->menuTree->load($menu_name, $parameters);
-
-    // Check if the returned tree has children. If it doesn't get a new tree
-    // starting with the parent of the current item.
-    $tree_item = reset($tree);
-    if (!$tree_item->hasChildren && $menu_link->getParent()) {
-      $fallback_parameters->setRoot($menu_link->getParent());
-      $tree = $this->menuTree->load($menu_name, $fallback_parameters);
+    //    $menu_link = end($menu_links);
+    foreach ($menu_links as $menu_link) {
+      $parameters = $this->menuTree->getCurrentRouteMenuTreeParameters($menu_name);
+      // Only show one level.
+      $parameters->setMaxDepth(1);
+      // We default to the current item as root.
+      $parameters->setRoot($menu_link->getPluginId());
+      // Store initial parameters since menuTree->load alters them.
+      $fallback_parameters = clone $parameters;
+      $tree = $this->menuTree->load($menu_name, $parameters);
+      // Check if the returned tree has children. If it doesn't get a new tree
+      // starting with the parent of the current item.
       $tree_item = reset($tree);
-    }
-
-    // If we have at least one child item, render the menu.
-    if ($tree_item->hasChildren) {
-      $manipulators = [
-        ['callable' => 'menu.default_tree_manipulators:checkAccess'],
-        ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
-      ];
-      $tree = $this->menuTree->transform($tree, $manipulators);
-      $build = $this->menuTree->build($tree);
+      if (!$tree_item->hasChildren && $menu_link->getParent()) {
+        $fallback_parameters->setRoot($menu_link->getParent());
+        $tree = $this->menuTree->load($menu_name, $fallback_parameters);
+        $tree_item = reset($tree);
+      }
+      // If we have at least one child item, render the menu.
+      if ($tree_item->hasChildren) {
+        $manipulators = [
+          ['callable' => 'menu.default_tree_manipulators:checkAccess'],
+          ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
+        ];
+        $tree = $this->menuTree->transform($tree, $manipulators);
+        $build = $this->menuTree->build($tree);
+      }
+      break;
     }
 
     return $build;
