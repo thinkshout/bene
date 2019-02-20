@@ -18,6 +18,20 @@ a {
   &:hover, &:active, &:focus { @extend %link-hover;}
 }
 
+a.primary-button{
+  @extend %button;
+  &:hover, &:active, &:focus { @extend %button-hover;}
+}
+
+a.secondary-button{
+  @extend %button-secondary;
+  &:hover, &:active, &:focus { @extend %button-secondary-hover;}
+}
+
+a.tertiary-button{
+  @extend %button-tertiary;
+  &:hover, &:active, &:focus { @extend %button-tertiary-hover;}
+}
 
 .button {
   @extend %button;
