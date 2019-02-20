@@ -169,11 +169,11 @@ p, p.standard, blockquote, .block-system-main-block article.node--type-event .no
   color:  #000000;
   color: var(--color-primary-d ); }
 
-blockquote {
+blockquote, .block-system-main-block article.node--type-event .node__content .field--name-bene-content p blockquote, .page-node-type-page .paragraph--type--rich-text blockquote, .block-system-main-block article.node--type-news .node__content .field--name-bene-content p blockquote, .block-system-main-block article.node--type-news .node__content .field--name-bene-content blockquote {
   color:  #000000;
   color: var(--color-primary-d ); }
 
-blockquote p {
+blockquote p, .block-system-main-block article.node--type-event .node__content .field--name-bene-content p blockquote p, .page-node-type-page .paragraph--type--rich-text blockquote p, .block-system-main-block article.node--type-news .node__content .field--name-bene-content p blockquote p, .block-system-main-block article.node--type-news .node__content .field--name-bene-content blockquote p {
   color:  #000000;
   color: var(--color-primary-d ); }
 

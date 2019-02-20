@@ -135,6 +135,12 @@
 
   .field--name-bene-content p{
     @extend %listing-pg-paragraph;
+    blockquote{
+      @extend %blockquote;
+      p{
+        @extend %blockquote-p;
+      }
+    }
   }
 
   .field--name-bene-intro{

@@ -30,6 +30,13 @@
     @extend %rch-txt-wysiwyg-text;
   }
 
+  blockquote{
+    @extend %blockquote;
+    p{
+      @extend %blockquote-p;
+    }
+  }
+
   ul, ol{
     @extend %rch-txt-wysiwyg-text;
   }
