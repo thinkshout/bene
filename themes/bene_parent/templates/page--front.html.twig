@@ -1,0 +1,33 @@
+<div id="site-wrapper">
+    <header class="site-header">
+        <div class="inner">
+            <div class="logo-wrapper">
+                {{page.site_branding}}
+            </div>
+            <div class="desktop-nav" role="navigation">
+                {{page.secondary_nav}}
+                {{page.primary_nav}}
+            </div>
+            <div id="joinButton">
+                {{ page.primary_nav.active_theme_main_menu }}
+            </div>
+            <div class="mobile-nav" role="navigation">
+                <a class="mobile-menu-toggle">
+                    <div><span></span></div>
+                </a>
+                {{page.primary_nav}}
+                {{page.secondary_nav}}
+            </div>
+        </div>
+    </header>
+
+    {% if page.content %}
+        <div id="homepage">
+            <main id="main-content">{{page.content}}</main>
+        </div>
+    {% endif %}
+
+    {% if page.footer %}
+        {{page.footer}}
+    {% endif %}
+</div>

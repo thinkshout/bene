@@ -543,6 +543,9 @@ tbody td {
   text-transform: uppercase;
   padding: 1rem 2rem; }
 
+#homepage .node--type-page .field--name-bene-intro h4 a {
+  display: block; }
+
 /* ==============================
                Tiles
    ============================== */
