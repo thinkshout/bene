@@ -19,22 +19,6 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        },
-        {
-           "type": "git",
-           "url": "https://github.com/thinkshout/bene_media.git"
-        },
-        {
-           "type": "git",
-           "url": "https://github.com/thinkshout/bene_features.git"
-        },
-        {
-           "type": "git",
-           "url": "https://github.com/thinkshout/bene_promo_redirect.git"
-        },
-        {
-           "type": "git",
-           "url": "https://github.com/thinkshout/bene_salsa.git"
         }
     ],
     "require": {
@@ -73,9 +57,9 @@
         "drupal/viewsreference": "^2.0-alpha4",
         "drupal/mailchimp": "^1.6",
         "thinkshout/bene_media": "dev-8.x-2.x-bene",
-        "thinkshout/bene_features": "1.0-beta3",
+        "thinkshout/bene_features": "^1.0-beta4",
         "thinkshout/bene_promo_redirect": "^1.1",
-        "thinkshout/bene_salsa": "^1.0-beta1"
+        "thinkshout/bene_salsa": "^1.0-beta7"
     },
     "replace": {
         "bower-asset/jquery": "*",
