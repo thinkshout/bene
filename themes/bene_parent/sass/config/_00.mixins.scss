@@ -1,8 +1,19 @@
 // Used for settings CSS variables
-// usage: @include vars(color, primary-color);
+// usage:
+//   @include vars(background-color, color-primary-c);
+// usage with arg-after:
+//   @include vars(background, color-secondary-a, null, url(../images/calendar.svg) 1rem center no-repeat);
 @mixin vars($property, $var, $arg-before: null, $arg-after: null) {
   #{$property}: $arg-before #{map-get($vars, $var) $arg-after};
   #{$property}: $arg-before var(--#{$var} $arg-after);
+}
+
+// Used for settings CSS variables in a linear gradient
+// usage: @include gradient-vars(background, color-primary-e, color-primary-d);
+// usage: @include gradient-vars(background-image, color-primary-e, color-primary-d);
+@mixin gradient-vars($property, $begin, $end) {
+  #{$property}: linear-gradient( #{ map-get($vars, $begin), map-get($vars, $end) } );
+  #{$property}: linear-gradient( var(--#{$begin} ), var(--#{$end} ));
 }
 
 // Media queries

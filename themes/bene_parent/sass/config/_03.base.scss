@@ -56,7 +56,7 @@ label{
 }
 
 input{
-  background-color: #f3f3f3;
+  @include vars(background-color, color-secondary-a);
   border-radius: 0;
   border: none;
   padding: 1rem;
