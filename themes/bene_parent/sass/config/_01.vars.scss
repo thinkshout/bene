@@ -477,9 +477,10 @@ $vars: (
   font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
-  &:focus, &:active, &:hover{
-    @extend %link-hover;
-  }
+}
+
+%sub-nav-link-hover{
+  @include vars(color, color-primary-d);
 }
 
 %sub-nav-menu-links{
@@ -494,7 +495,6 @@ $vars: (
   margin-bottom: 10px;
   opacity: 0.7;
   &:focus, &:active, &:hover{
-    @extend %link-hover;
     @include vars(color, color-primary-c);
   }
 }
