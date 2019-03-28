@@ -93,7 +93,7 @@ h5 {
   cursor: pointer;
   text-decoration: none; }
 
-.block-bene-footer-block .menu-item a:hover, .block-bene-footer-block .contact-links .phone a:hover, .block-bene-footer-block .contact-links .email a:hover, .block-bene-footer-block .contact-links .additional-contact a:hover, .block-bene-footer-block .menu-item a:focus, .block-bene-footer-block .contact-links .phone a:focus, .block-bene-footer-block .contact-links .email a:focus, .block-bene-footer-block .contact-links .additional-contact a:focus, .block-bene-footer-block .menu-item a:active, .block-bene-footer-block .contact-links .phone a:active, .block-bene-footer-block .contact-links .email a:active, .block-bene-footer-block .contact-links .additional-contact a:active, a:hover, a:active, a:focus, .field--name-field-tiles .text-wrapper a .field--name-field-title:hover {
+.block-bene-sub-navigation-block .menu-item:focus, .block-bene-sub-navigation-block .menu-item a:focus, .block-bene-sub-navigation-block .menu-item:active, .block-bene-sub-navigation-block .menu-item a:active, .block-bene-sub-navigation-block .menu-item:hover, .block-bene-sub-navigation-block .menu-item a:hover, .block-bene-sub-navigation-block > ul.menu > li.menu-item > a:focus, .block-bene-sub-navigation-block > ul.menu > li.menu-item > a:active, .block-bene-sub-navigation-block > ul.menu > li.menu-item > a:hover, .block-bene-footer-block .menu-item a:hover, .block-bene-footer-block .contact-links .phone a:hover, .block-bene-footer-block .contact-links .email a:hover, .block-bene-footer-block .contact-links .additional-contact a:hover, .block-bene-footer-block .menu-item a:focus, .block-bene-footer-block .contact-links .phone a:focus, .block-bene-footer-block .contact-links .email a:focus, .block-bene-footer-block .contact-links .additional-contact a:focus, .block-bene-footer-block .menu-item a:active, .block-bene-footer-block .contact-links .phone a:active, .block-bene-footer-block .contact-links .email a:active, .block-bene-footer-block .contact-links .additional-contact a:active, a:hover, a:active, a:focus, .field--name-field-tiles .text-wrapper a .field--name-field-title:hover {
   color:  #000000;
   color: var(--color-primary-d ); }
 
@@ -430,7 +430,7 @@ tbody td {
   list-style: none;
   padding: 0; }
 
-.block-bene-sub-navigation-block .menu-item a {
+.block-bene-sub-navigation-block .menu-item, .block-bene-sub-navigation-block .menu-item a {
   color:  #ffffff;
   color: var(--color-primary-c );
   text-decoration: none;
@@ -438,10 +438,6 @@ tbody td {
   font-size: 20px;
   font-weight: 600;
   text-transform: uppercase; }
-
-.block-bene-sub-navigation-block .menu-item a:focus, .block-bene-sub-navigation-block .menu-item a:active, .block-bene-sub-navigation-block .menu-item a:hover {
-  color:  #000000;
-  color: var(--color-primary-d ); }
 
 .block-bene-sub-navigation-block .menu-item .menu-item {
   margin: 0 1rem; }

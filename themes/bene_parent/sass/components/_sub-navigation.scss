@@ -29,13 +29,9 @@
 
   .menu-item{
     @extend %sub-nav-menu-item;
+    @extend %sub-nav-links;
 
-    a{
-      @extend %sub-nav-links;
-      &:focus, &:active, &:hover{
-        @extend %sub-nav-link-hover;
-      }
-    }
+    a{@extend %sub-nav-links;}
 
     .menu-item{@extend %sub-nav-menu-links;}
 
