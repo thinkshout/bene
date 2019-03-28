@@ -43,7 +43,7 @@
         ]
       %}
       <li{{ item.attributes.addClass(classes) }}>
-        <a href="{{ item.url }}">{{ item.title|trans }}</a>
+        <a {{ attributes.addClass('title')  }} href="{{ item.url }}">{{ item.title|trans}}</a>
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
