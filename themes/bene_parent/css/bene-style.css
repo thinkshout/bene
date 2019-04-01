@@ -394,7 +394,7 @@ tbody td {
   background-size: cover;
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: auto;
   position: relative;
   z-index: 20; }
 
@@ -655,7 +655,6 @@ tbody td {
   padding: 70px 1.5rem 70px 1.5rem;
   position: relative;
   text-align: center;
-  width: 100vw;
   max-width: 100%;
   overflow: hidden; }
   .feature-full-width-paragraph .paragraph--type--feature-full-width:before {
