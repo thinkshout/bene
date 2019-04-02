@@ -646,6 +646,10 @@ $vars: (
   line-height: 2rem;
 }
 
+// This is the wrapper on the stuff above the button
+// If you want to push the button down so all the tiles
+// have aligned buttons, increase the min-height in your
+// child theme.
 %text-wrapper{
   min-height: 220px;
   margin-bottom: 20px;
