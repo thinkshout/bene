@@ -12,3 +12,8 @@
 
 //-- CONFIG
 @import 'config/*';
+
+// if you add a components directory with scss files in it,
+// (named starting with _ and ending with .scss),
+// be sure to add this line too:
+// @import 'components/*';
