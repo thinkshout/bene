@@ -73,11 +73,12 @@
 
   # fix up the README file so it reflects the new theme name and location
   mv $THEME_DEST/README.md $THEME_DEST/README.md.child
-  sed "s/Bene Child/${THEME_NAME}/g" $THEME_DEST/README.md.child | \
+  sed "s/Bene Child/${HUMAN_READABLE_THEME_NAME}/g" $THEME_DEST/README.md.child | \
   sed "s/Bene_child/${THEME_NAME}/g" | \
+  sed "s/bene_child/${THEME_NAME}/g" | \
   sed "s:/new-project-name/web/profiles/contrib/bene/themes/bene_child where new-project-name is your project.:${THEME_DEST}:g" | \
   sed "s:can be found in a project called \"new-project-name\" here\: /new-project-name/web/profiles/contrib/bene/themes/bene_child:can be found in a project called \"${PROJECT_NAME}\" here\: ${THEME_DEST}:g" | \
-  sed "s/new-project-name/${THEME_NAME}/g" >$THEME_DEST/README.md
+  sed "s/new-project-name/${PROJECT_NAME}/g" >$THEME_DEST/README.md
   rm $THEME_DEST/README.md.child
 
   #fix the Rakefile so it starts the correct url
@@ -88,7 +89,7 @@
   mv $THEME_DEST/update_theme_name.sh $THEME_DEST/update_theme_name.child
   sed "s/bene-child/${THEME_NAME}/g" update_theme_name.child | \
   sed "s/bene_child/${THEME_NAME}/g" | \
-  sed "s/Bene Child/${THEME_NAME}/g" | \
+  sed "s/Bene Child/${HUMAN_READABLE_THEME_NAME}/g" | \
   sed "s/Bene_child/${THEME_NAME}/g" >$THEME_DEST/update_theme_name.sh
   chmod a+x $THEME_DEST/update_theme_name.sh
   rm $THEME_DEST/update_theme_name.child

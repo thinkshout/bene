@@ -1,10 +1,10 @@
-# bene_child
+# Bene Child
 
-bene_child can be found in
+Bene Child can be found in
 /new-project-name/web/profiles/contrib/bene/themes/bene_child
 where new-project-name is your project.
 
-bene_child can be found in a project called "new-project-name" here:
+Bene Child can be found in a project called "new-project-name" here:
 /new-project-name/web/profiles/contrib/bene/themes/bene_child
 
 ## Setup
@@ -16,7 +16,7 @@ bene_child can be found in a project called "new-project-name" here:
 - Run `rake install` to install dependencies
 - Log in using `drush uli --no-browser`
 - Go to `https://localhost:3000/admin/appearance` and remove Bartik.
-- Set `bene_child` as the default theme.
+- Set `Bene Child` as the default theme.
 
 ## Compiling assets
 This project uses Browsersync, Sass and Browserify
