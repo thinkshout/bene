@@ -24,6 +24,7 @@
     exit 0
   fi
 
+  # assumes the currently running script is inside the bene_child directory that will be re-named
   echo Theme name is $THEME_NAME
   HUMAN_READABLE_THEME_NAME=$(echo $THEME_NAME | sed 's/_/ /g' | sed -En '
                                                                  y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/
@@ -41,7 +42,6 @@
                                                                  p
                                                                  ')
   echo Human readable theme name is: $HUMAN_READABLE_THEME_NAME
-  # assumes the currently running script is inside the bene_child directory that will be re-named
   THEME_DEST="$( cd "$(dirname "$0")" ; cd ..; pwd -P )"/$THEME_NAME
   CURRENT_DIR="$(pwd -P )"
   echo "Theme will be placed in $THEME_DEST"
@@ -57,7 +57,7 @@
   sed "s/bene_child_/${THEME_NAME}_/g" $THEME_DEST/bene_child.theme >$THEME_DEST/$THEME_NAME.theme
   rm $THEME_DEST/bene_child.theme
 
-  sed "s/name: Bene Child/name: ${THEME_NAME}/g" $THEME_DEST/bene_child.info.yml | sed "s/bene_child/${THEME_NAME}/g" >$THEME_DEST/$THEME_NAME.info.yml
+  sed "s/name: Bene Child/name: ${HUMAN_READABLE_THEME_NAME}/g" $THEME_DEST/bene_child.info.yml | sed "s/bene_child/${THEME_NAME}/g" >$THEME_DEST/$THEME_NAME.info.yml
   rm $THEME_DEST/bene_child.info.yml
 
   sed "s/bene_child/${THEME_NAME}/g" $THEME_DEST/bene_child.libraries.yml >$THEME_DEST/$THEME_NAME.libraries.yml
