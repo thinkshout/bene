@@ -25,6 +25,22 @@
   fi
 
   echo Theme name is $THEME_NAME
+  HUMAN_READABLE_THEME_NAME=$(echo $THEME_NAME | sed 's/_/ /g' | sed -En '
+                                                                 y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/
+                                                                 :loop
+                                                                 h
+                                                                 s/^(.*[^a-zA-Z0-9])?([a-z]).*$/\2/
+                                                                 t next
+                                                                 b end
+                                                                 :next
+                                                                 y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/
+                                                                 G
+                                                                 s/^(.+)\n(.*[^a-zA-Z0-9])?[a-z](.*)$/\2\1\3/
+                                                                 t loop
+                                                                 :end
+                                                                 p
+                                                                 ')
+  echo Human readable theme name is: $HUMAN_READABLE_THEME_NAME
   # assumes the currently running script is inside the bene_child directory that will be re-named
   THEME_DEST="$( cd "$(dirname "$0")" ; cd ..; pwd -P )"/$THEME_NAME
   CURRENT_DIR="$(pwd -P )"
