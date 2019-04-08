@@ -435,7 +435,7 @@ tbody td {
   text-transform: uppercase; }
 
 .block-bene-sub-navigation-block .menu-item .menu-item {
-  margin: 0 1rem; }
+  margin: 0 22px; }
 
 .block-bene-sub-navigation-block .menu-item .menu-item.menu-item--active-trail, .menu--main .menu .menu-item--active-trail {
   margin: 0 1rem; }
