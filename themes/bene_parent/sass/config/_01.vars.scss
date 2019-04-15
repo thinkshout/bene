@@ -54,50 +54,56 @@ $vars: (
 }
 
 %h1{
-  font-size: 75px;
-  line-height: 65px;
+  font-size: 48px;
+  line-height: 62px;
+  font-weight: bolder;
 }
 
 %h2 {
-  font-size: 65px;
-  line-height: 75px;
+  font-size: 32px;
+  line-height: 38px;
 }
 
 %h3 {
-  font-size: 58px;
-  line-height: 68px;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 %h4 {
-  font-size: 45px;
-  line-height: 55px;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 %h5{
-  font-size: 35px;
-  line-height: 45px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 @include mq(mobile){
   %h1{
-    font-size: 55px;
-    line-height: 45px;
+    font-size: 48px;
+    line-height: 62px;
+    font-weight: bolder;
   }
+
   %h2 {
-    font-size: 45px;
-    line-height: 55px;
-  }
-  %h3 {
-    font-size: 38px;
-    line-height: 48px;
-  }
-  %h4 {
-    font-size: 30px;
-    line-height: 40px;
-  }
-  %h5 {
-    font-size: 28px;
+    font-size: 32px;
     line-height: 38px;
+  }
+
+  %h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  %h4 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  %h5{
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -115,19 +121,22 @@ $vars: (
   @include vars(color, color-primary-c);
   @include vars(background-color, color-secondary-c);
   @include vars(font-family, font-family-secondary);
-  border-radius: 100px;
   font-size: 16px;
-  letter-spacing: 0;
   line-height: rem(32);
   margin: 0;
   text-align: center;
   text-decoration: none;
   padding: 12px 35px;
   text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  border-radius: 0;
+  @include vars(color, color-primary-c);
+  @include vars(background-color, color-primary-a);
 }
 
 %button-hover{
-  @include vars(background-color, color-secondary-d);
+  @include vars(background-color, color-primary-b);
   @include vars(color, color-primary-c);
 }
 
@@ -197,7 +206,7 @@ $vars: (
    ============================== */
 
 %site-header{
-  @include vars(background-color, color-primary-e);
+  @include vars(background-color, color-primary-c);
   padding: 20px 10px;
   display: flex;
   min-height: 100px;
@@ -231,7 +240,7 @@ $vars: (
   list-style: none;
   text-decoration: none;
   font-size: 18px;
-  @include vars(color, color-primary-c);
+  @include vars(color, color-primary-d);
   @include vars(font-family, font-family-secondary);
   text-transform: uppercase;
 }
@@ -319,7 +328,7 @@ $vars: (
 }
 
 %primary-nav-region{
-  @include vars(background-color, color-primary-e);
+  @include vars(background-color, color-primary-c);
   display: flex;
   flex-direction: column-reverse;
   left: 0;
@@ -376,14 +385,14 @@ $vars: (
 
   %main-menu-button{
     &:last-child a{
-      @include vars(background-color, color-secondary-c);
-      @include vars(color, color-primary-c);
-      border-radius: 100px;
-      width: 100px;
+      @include vars(background-color, color-primary-c);
+      @include vars(color, color-primary-d);
+      border-radius: 0;
+      width: auto;
       text-align: center;
-      padding: 0.5rem 1.5rem;
+      padding: 0;
       &:focus, &:active, &:hover{
-        @include vars(background-color, color-secondary-d);
+        @include vars(background-color, color-primary-c);
       }
     }
   }
@@ -614,7 +623,7 @@ $vars: (
    ============================== */
 
 %tiles-background{
-  @include vars(background-color, color-primary-e);
+  @include vars(background-color, color-primary-c);
 }
 
 %tiles-wrapper{
@@ -646,8 +655,8 @@ $vars: (
 %individual-tiles{
   @include vars(background-color, color-primary-c);
   @include vars(color, color-primary-d);
-  border-bottom-right-radius: 100px;
-  text-align: left;
+  border-bottom-right-radius: 0;
+  text-align: center;
 }
 
 %tile-text{
@@ -766,7 +775,7 @@ $vars: (
     position: absolute;
     top: 0;
     width: 100%;
-    background: linear-gradient(#5FBA47, #1E5375);
+    background: linear-gradient(#00D2E6, #000000);
     bottom: 0;
     right: 0;
     z-index: 2;
@@ -1315,171 +1324,6 @@ $vars: (
   padding: 2%;
 }
 
-%menu-toggle-div{
-  height: 100%;
-  position: relative;
-  top: -12px;
-  width: 100%;
-  z-index: 9999;
-}
-
-%menu-toggle-span{
-  @include vars(background-color, color-primary-c);
-  display: block;
-  height: 6px;
-  left: 25%;
-  position: absolute;
-  top: 50%;
-  transition: background-color 0.3s;
-  width: 43.76%;
-  z-index: 9999;
-  cursor: pointer;
-
-  &:before, &:after{
-    @include vars(background, color-primary-c);
-    content: '';
-    height: 100%;
-    left: 0;
-    position: absolute;
-    transform: translateY(-150%);
-    transition: transform 0.3s, background-color 0.3s;
-    width: 100%;
-    z-index: 9999;
-  }
-
-  &:after{
-    transform: translateY(150%);
-  }
-}
-
-%menu-toggle-active{
-  background-color: transparent;
-  &:before, &:after{
-    @include vars(background, color-primary-c);
-    transform: rotate(45deg) translateY(0);
-    transition: transform 0.3s;
-  }
-  &:after{
-    transform: rotate(-45deg) translateY(0);
-  }
-}
-
-%primary-nav-region{
-  @include vars(background-color, color-primary-e);
-  display: flex;
-  flex-direction: column-reverse;
-  left: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  top: 6.3125rem;
-  z-index: 200;
-}
-
-@include mq(desktop) {
-  %site-header{
-    min-height: rem(133);
-  }
-
-  %mobile-nav{
-    display: none;
-  }
-
-  %site-logo{
-    width: auto;
-  }
-
-  %desktop-nav{
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-  }
-
-  %primary-nav-region{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: static;
-  }
-
-  %primary-nav{
-    flex: none;
-    margin-right: 0.5em;
-  }
-
-  %nav-menu{
-    align-items: flex-end;
-    display: flex;
-    height: 100%;
-    justify-content: flex-end;
-    margin: 5px 0;
-  }
-
-  %menu-item{
-    margin-left: rem(22);
-  }
-
-  %main-menu-button{
-    &:last-child a{
-      @include vars(background-color, color-secondary-c);
-      @include vars(color, color-primary-c);
-      border-radius: 100px;
-      width: 100px;
-      text-align: center;
-      padding: 0.5rem 1.5rem;
-      &:focus, &:active, &:hover{
-        @include vars(background-color, color-secondary-d);
-      }
-    }
-  }
-
-  %join-button{
-    display: none;
-  }
-}
-
-/* ==============================
-        General Page Settings
-   ============================== */
-
-%views-element-container{
-  clear: both;
-  padding: 0 2%;
-  width: 80%;
-}
-
-@include mq(desktop) {
-  %views-element-container{
-    @include span-columns(10);
-    @include shift(1);
-  }
-
-  %view-bene-events{
-    display: flex;
-    flex-direction: row;
-  }
-
-  %view-filters{
-    //@include span-columns(12);
-    flex: 1 1 25%;
-  }
-
-  %view-content{
-    flex: 1 1 73%;
-    margin-left: 2%;
-    @include shift(1);
-  }
-
-  %view-content-h2 {
-    margin-bottom: 10px;
-  }
-}
-
-%node__content{
-  clear: both;
-  padding: 2%;
-}
 
 %inner{
   display: flex;
@@ -1515,6 +1359,7 @@ $vars: (
 
 
 %newsletter{
+  @include vars(background-color, color-secondary-a);
   display: flex;
   flex-direction: row;
   &.stacked-elements {
@@ -1523,7 +1368,7 @@ $vars: (
   }
   padding: 2rem 1rem;
   align-items: center;
-  background-image: linear-gradient(#F2AF3F, #E26436);
+  background-image: none;
   justify-content: center;
   clear: both;
 }
@@ -1543,6 +1388,7 @@ $vars: (
 }
 
 %newsletter-a{
+  @include vars(color, color-primary-a);
   background-color: transparent;
   text-align: left;
   margin: 0;
@@ -1552,6 +1398,7 @@ $vars: (
   padding: rem(15) rem(20);
   &:hover, &:focus, &:active{
     background-color: transparent;
+    @include vars(color, color-primary-b);
   }
 
   &:after{
