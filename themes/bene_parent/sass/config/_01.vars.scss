@@ -12,8 +12,8 @@ $vars: (
         color-secondary-e: '', //green
 
   //Fonts
-        font-family-primary: "'Work Sans', sans-serif",
-        font-family-secondary: "'Oswald', sans-serif",
+        font-family-primary: "'Open Sans', sans-serif",
+        font-family-secondary: "'Open Sans', sans-serif",
         font-weight-regular: 400,
         font-weight-medium: 600,
         font-weight-bold: 700,
@@ -245,7 +245,17 @@ $vars: (
   text-transform: uppercase;
 }
 
+%main-menu-links{
+  font-weight: 600;
+  font-size: 16px;
+}
+
 %menu-utility{
+  font-size: 14px;
+}
+
+%utlity-menu-links{
+  font-weight: normal;
   font-size: 14px;
 }
 
@@ -263,11 +273,11 @@ $vars: (
 %join-menu{
   display: none;
   &:last-child{
-    display: inline-block;
     @include vars(background-color, color-secondary-c);
     border-radius: 100px;
     width: 100px;
     text-align: center;
+    display: none;
   }
 }
 
@@ -287,7 +297,7 @@ $vars: (
 }
 
 %menu-toggle-span{
-  @include vars(background-color, color-primary-c);
+  @include vars(background-color, color-primary-b);
   display: block;
   height: 6px;
   left: 25%;
@@ -299,7 +309,7 @@ $vars: (
   cursor: pointer;
 
   &:before, &:after{
-    @include vars(background, color-primary-c);
+    @include vars(background, color-primary-b);
     content: '';
     height: 100%;
     left: 0;
@@ -318,7 +328,7 @@ $vars: (
 %menu-toggle-active{
   background-color: transparent;
   &:before, &:after{
-    @include vars(background, color-primary-c);
+    @include vars(background, color-primary-b);
     transform: rotate(45deg) translateY(0);
     transition: transform 0.3s;
   }
@@ -535,6 +545,9 @@ $vars: (
   text-align: center;
   padding: 8rem 1rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   &:after {
     background-image: linear-gradient(180deg,rgba(0,0,0,0) 0%,#000000 79%);
     content: "";
@@ -557,7 +570,7 @@ $vars: (
 
 @include mq(desktop) {
   %hmpg-feature{
-    min-height: rem(500);
+    min-height: rem(600);
   }
 }
 
@@ -566,6 +579,7 @@ $vars: (
   margin-bottom: 0.5rem;
   position: relative;
   z-index: 1;
+  text-transform: uppercase;
 }
 
 @include mq(mobile) {
@@ -577,15 +591,15 @@ $vars: (
 }
 
 %hmpg-feature-title{
-  font-size: 50px;
   font-weight: bold;
-  line-height: 70px;
-  padding-top: 50px;
   z-index: 2;
   margin: 0 auto 50px auto;
   max-width: rem(900);
   position: relative;
   @include vars(font-family, font-family-secondary);
+  padding-top: 0;
+  font-size: 48px;
+  line-height: 62px;
 }
 
 @include mq(mobile) {
@@ -609,10 +623,10 @@ $vars: (
 
 %hmpg-feature-btn{
   @extend %button;
-  font-size: rem(14);
-  font-weight: bold;
   text-transform: uppercase;
   padding: 1rem 2rem;
+  font-size: rem(16);
+  font-weight: bolder;
   &:hover, &:focus, &:active{
     @extend %button-hover;
   }

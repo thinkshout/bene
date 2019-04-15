@@ -1,5 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700";
-@import "https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i";
 html {
   box-sizing: border-box; }
 
@@ -12,8 +11,8 @@ html {
   --color-primary-c: #ffffff;
   --color-primary-d: #000000;
   --color-primary-e: #129FB5;
-  --font-family-primary: 'Work Sans', sans-serif;
-  --font-family-secondary: 'Oswald', sans-serif;
+  --font-family-primary: 'Open Sans', sans-serif;
+  --font-family-secondary: 'Open Sans', sans-serif;
   --font-weight-regular: 400;
   --font-weight-medium: 600;
   --font-weight-bold: 700;
@@ -32,14 +31,14 @@ body {
   box-sizing: border-box;
   font-style:  normal;
   font-style: var(--font-style-normal );
-  font-family:  'Work Sans', sans-serif;
+  font-family:  'Open Sans', sans-serif;
   font-family: var(--font-family-primary ); }
 
 h1, h2, h3, h4, h5, h6 {
   color:  #000000;
   color: var(--color-primary-d );
   margin: 1rem 0;
-  font-family:  'Oswald', sans-serif;
+  font-family:  'Open Sans', sans-serif;
   font-family: var(--font-family-secondary ); }
 
 h1 {
@@ -99,7 +98,7 @@ h5 {
   color: var(--color-primary-c );
   background-color:  ;
   background-color: var(--color-secondary-c );
-  font-family:  'Oswald', sans-serif;
+  font-family:  'Open Sans', sans-serif;
   font-family: var(--font-family-secondary );
   font-size: 16px;
   line-height: 2rem;
@@ -127,7 +126,7 @@ h5 {
   color: var(--color-primary-c );
   background-color:  ;
   background-color: var(--color-secondary-c );
-  font-family:  'Oswald', sans-serif;
+  font-family:  'Open Sans', sans-serif;
   font-family: var(--font-family-secondary );
   border-radius: 100px;
   font-size: 16px;
@@ -148,7 +147,7 @@ h5 {
 p, p.standard, blockquote, .block-system-main-block article.node--type-event .node__content .field--name-bene-intro, .field--name-field-tiles .field__item .paragraph {
   font-size: 1rem;
   line-height: 2rem;
-  font-family:  'Work Sans', sans-serif;
+  font-family:  'Open Sans', sans-serif;
   font-family: var(--font-family-primary );
   color:  #000000;
   color: var(--color-primary-d ); }
@@ -164,7 +163,7 @@ blockquote p {
 ul li, ol li {
   font-size: 1rem;
   line-height: 2rem;
-  font-family:  'Work Sans', sans-serif;
+  font-family:  'Open Sans', sans-serif;
   font-family: var(--font-family-primary );
   color:  #000000;
   color: var(--color-primary-d ); }
@@ -226,11 +225,19 @@ tbody td {
   font-size: 18px;
   color:  #000000;
   color: var(--color-primary-d );
-  font-family:  'Oswald', sans-serif;
+  font-family:  'Open Sans', sans-serif;
   font-family: var(--font-family-secondary );
   text-transform: uppercase; }
 
+.site-header .menu--main .menu-item a {
+  font-weight: 600;
+  font-size: 16px; }
+
 .site-header .desktop-nav .menu--utility .menu-item a {
+  font-size: 14px; }
+
+.site-header .menu--utility .menu-item a {
+  font-weight: normal;
   font-size: 14px; }
 
 .site-header .menu li:hover, .site-header .menu a:hover {
@@ -247,12 +254,12 @@ tbody td {
 .site-header #joinButton .menu-item {
   display: none; }
   .site-header #joinButton .menu-item:last-child {
-    display: inline-block;
     background-color:  ;
     background-color: var(--color-secondary-c );
     border-radius: 100px;
     width: 100px;
-    text-align: center; }
+    text-align: center;
+    display: none; }
 
 .site-header .mobile-menu-toggle, .site-header .mobile-menu-toggle.active {
   display: inline-block;
@@ -268,8 +275,8 @@ tbody td {
   z-index: 9999; }
 
 .site-header .mobile-menu-toggle span, .site-header .mobile-menu-toggle.active span {
-  background-color:  #ffffff;
-  background-color: var(--color-primary-c );
+  background-color:  #00A1B8;
+  background-color: var(--color-primary-b );
   display: block;
   height: 6px;
   left: 25%;
@@ -280,8 +287,8 @@ tbody td {
   z-index: 9999;
   cursor: pointer; }
   .site-header .mobile-menu-toggle span:before, .site-header .mobile-menu-toggle.active span:before, .site-header .mobile-menu-toggle span:after, .site-header .mobile-menu-toggle.active span:after {
-    background:  #ffffff;
-    background: var(--color-primary-c );
+    background:  #00A1B8;
+    background: var(--color-primary-b );
     content: '';
     height: 100%;
     left: 0;
@@ -296,8 +303,8 @@ tbody td {
 .site-header .mobile-menu-toggle.active span {
   background-color: transparent; }
   .site-header .mobile-menu-toggle.active span:before, .site-header .mobile-menu-toggle.active span:after {
-    background:  #ffffff;
-    background: var(--color-primary-c );
+    background:  #00A1B8;
+    background: var(--color-primary-b );
     transform: rotate(45deg) translateY(0);
     transition: transform 0.3s; }
   .site-header .mobile-menu-toggle.active span:after {
@@ -480,7 +487,10 @@ tbody td {
   background-position: center center;
   text-align: center;
   padding: 8rem 1rem;
-  position: relative; }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
   .block-bene-home-page-feature-block:after {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 79%);
     content: "";
@@ -498,12 +508,13 @@ tbody td {
     max-height: 33.6875rem; } }
 @media (min-width: 769px) {
   .block-bene-home-page-feature-block {
-    min-height: 31.25rem; } }
+    min-height: 37.5rem; } }
 .block-bene-home-page-feature-block .field--name-bene-lead {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  text-transform: uppercase; }
 
 @media (max-width: 414px) {
   .block-bene-home-page-feature-block .field--name-bene-lead {
@@ -511,16 +522,16 @@ tbody td {
     line-height: 1.25rem;
     padding-top: 7rem; } }
 .block-bene-home-page-feature-block .field--name-bene-title {
-  font-size: 50px;
   font-weight: bold;
-  line-height: 70px;
-  padding-top: 50px;
   z-index: 2;
   margin: 0 auto 50px auto;
   max-width: 56.25rem;
   position: relative;
-  font-family:  'Oswald', sans-serif;
-  font-family: var(--font-family-secondary ); }
+  font-family:  'Open Sans', sans-serif;
+  font-family: var(--font-family-secondary );
+  padding-top: 0;
+  font-size: 48px;
+  line-height: 62px; }
 
 @media (max-width: 414px) {
   .block-bene-home-page-feature-block .field--name-bene-title {
@@ -535,10 +546,10 @@ tbody td {
   z-index: 1; }
 
 .block-bene-home-page-feature-block .field--name-bene-link a {
-  font-size: 0.875rem;
-  font-weight: bold;
   text-transform: uppercase;
-  padding: 1rem 2rem; }
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bolder; }
 
 /* ==============================
                Tiles
@@ -700,7 +711,7 @@ tbody td {
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: bold;
-  font-family:  'Oswald', sans-serif;
+  font-family:  'Open Sans', sans-serif;
   font-family: var(--font-family-secondary ); }
 
 @media (min-width: 769px) {
@@ -880,11 +891,11 @@ tbody td {
   font-size: 1.375rem;
   line-height: 2.375rem;
   font-weight: 300;
-  font-family:  'Work Sans', sans-serif;
+  font-family:  'Open Sans', sans-serif;
   font-family: var(--font-family-primary ); }
 
 .block-system-main-block article.node--type-event .node__content .field--name-bene-content p, .block-system-main-block article.node--type-news .node__content .field--name-bene-content p {
-  font-family:  'Work Sans', sans-serif;
+  font-family:  'Open Sans', sans-serif;
   font-family: var(--font-family-primary ); }
 
 .page-node-type-listing-page .views-element-container {
@@ -995,7 +1006,7 @@ tbody td {
 .paragraph--type--media .field--name-field-caption {
   color:  #00D2E6;
   color: var(--color-primary-a );
-  font-family:  'Work Sans', sans-serif;
+  font-family:  'Open Sans', sans-serif;
   font-family: var(--font-family-primary );
   font-size: 16px;
   line-height: 34px;

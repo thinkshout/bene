@@ -38,9 +38,11 @@
 
   .menu--main .menu-item{
     @extend %main-menu-button;
+    a{@extend %main-menu-links}
   }
   .menu--utility .menu-item{
     @extend %utlity-menu-button;
+    a{@extend %utlity-menu-links}
   }
 
   #joinButton{@extend %join-button;
