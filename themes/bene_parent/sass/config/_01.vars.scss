@@ -1,7 +1,7 @@
 $vars: (
   //Colors
-        color-primary-a: #50CFE3, //light blue
-        color-primary-b: #1E5375, //dark blue
+        color-primary-a: #00D2E6, //light blue
+        color-primary-b: #00A1B8, //dark blue
         color-primary-c: #ffffff, //white
         color-primary-d: #000000, //black
         color-primary-e: #129FB5, //dark grey
@@ -384,6 +384,20 @@ $vars: (
       padding: 0.5rem 1.5rem;
       &:focus, &:active, &:hover{
         @include vars(background-color, color-secondary-d);
+      }
+    }
+  }
+
+  %utlity-menu-button{
+    &:last-child a{
+      @include vars(background-color, color-primary-a);
+      @include vars(color, color-primary-c);
+      border-radius: 0;
+      width: 100px;
+      text-align: center;
+      padding: 0.5rem 1.5rem;
+      &:focus, &:active, &:hover{
+        @include vars(background-color, color-primary-b);
       }
     }
   }

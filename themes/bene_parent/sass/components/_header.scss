@@ -39,6 +39,9 @@
   .menu--main .menu-item{
     @extend %main-menu-button;
   }
+  .menu--utility .menu-item{
+    @extend %utlity-menu-button;
+  }
 
   #joinButton{@extend %join-button;
     .menu-item{@extend %join-menu;}

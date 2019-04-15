@@ -7,8 +7,8 @@ html {
   box-sizing: inherit; }
 
 :root {
-  --color-primary-a: #50CFE3;
-  --color-primary-b: #1E5375;
+  --color-primary-a: #00D2E6;
+  --color-primary-b: #00A1B8;
   --color-primary-c: #ffffff;
   --color-primary-d: #000000;
   --color-primary-e: #129FB5;
@@ -357,6 +357,19 @@ tbody td {
       background-color:  ;
       background-color: var(--color-secondary-d ); }
 
+  .site-header .menu--utility .menu-item:last-child a {
+    background-color:  #00D2E6;
+    background-color: var(--color-primary-a );
+    color:  #ffffff;
+    color: var(--color-primary-c );
+    border-radius: 0;
+    width: 100px;
+    text-align: center;
+    padding: 0.5rem 1.5rem; }
+    .site-header .menu--utility .menu-item:last-child a:focus, .site-header .menu--utility .menu-item:last-child a:active, .site-header .menu--utility .menu-item:last-child a:hover {
+      background-color:  #00A1B8;
+      background-color: var(--color-primary-b ); }
+
   .site-header #joinButton {
     display: none; } }
 /* ==============================
@@ -370,7 +383,7 @@ tbody td {
 .block-page-title-block.bgimage {
   height: 24vw; }
   .block-page-title-block.bgimage:after {
-    background-color:  #50CFE3;
+    background-color:  #00D2E6;
     background-color: var(--color-primary-a );
     content: '';
     height: 100%;
@@ -616,7 +629,7 @@ tbody td {
   font-weight: bold; }
 
 .page-node-type-page .field--name-bene-intro p, .page-node-type-page .paragraph--type--rich-text p, .page-node-type-page .paragraph--type--rich-text span {
-  color:  #50CFE3;
+  color:  #00D2E6;
   color: var(--color-primary-a );
   margin-bottom: 35px;
   font-size: 15px;
@@ -818,7 +831,7 @@ tbody td {
   font-weight: 400; }
 
 .page-node-type-listing-page .text-wrapper h2 a {
-  color:  #50CFE3;
+  color:  #00D2E6;
   color: var(--color-primary-a );
   text-transform: uppercase;
   text-decoration: none; }
@@ -973,7 +986,7 @@ tbody td {
   width: 100%; }
 
 .paragraph--type--media .field--name-field-caption {
-  color:  #50CFE3;
+  color:  #00D2E6;
   color: var(--color-primary-a );
   font-family:  'Work Sans', sans-serif;
   font-family: var(--font-family-primary );
@@ -1010,16 +1023,16 @@ article.node--type-listing-page .view-bene-events .views-row .image {
   margin-top: 50px; }
 
 .page-node-type-listing-page .views-element-container .view-bene-events .view-content .text-wrapper h2 a {
-  color:  #50CFE3;
+  color:  #00D2E6;
   color: var(--color-primary-a );
   text-decoration: none; }
 
 .block-system-main-block article.node--view-mode-full .field--name-bene-event-date-range, article.node--type-listing-page .view-bene-events .node--type-event .field--name-bene-event-date-range {
-  color:  #50CFE3;
+  color:  #00D2E6;
   color: var(--color-primary-a ); }
 
 article.node--type-listing-page .view-bene-events .node--type-event .field--name-bene-intro {
-  color:  #50CFE3;
+  color:  #00D2E6;
   color: var(--color-primary-a ); }
 
 /* ==============================
@@ -1032,7 +1045,7 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
   margin-top: 50px; }
 
 .node--type-news h2 a {
-  color:  #50CFE3;
+  color:  #00D2E6;
   color: var(--color-primary-a );
   text-decoration: none; }
 
@@ -1363,7 +1376,7 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
   .block-bene-newsletter-signup-block a:after {
     content: '>';
     margin-left: 0.5rem;
-    color:  #50CFE3;
+    color:  #00D2E6;
     color: var(--color-primary-a );
     background-color: transparent;
     transition: all 0.3s linear;
