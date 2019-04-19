@@ -1,0 +1,11 @@
+// Used for settings CSS variables
+// usage: @include vars(color, primary-color);
+@mixin bene($property, $var, $arg-before: null, $arg-after: null) {
+  #{$property}: $arg-before #{map-get($vars, $var) $arg-after} !important;
+  #{$property}: $arg-before var(--#{$var} $arg-after) !important;
+}
+
+
+@mixin salsa($property, $value, $arg-before: null, $arg-after: null) {
+  #{$property}: $arg-before $value $arg-after !important;
+}

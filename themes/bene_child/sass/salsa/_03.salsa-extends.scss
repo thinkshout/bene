@@ -1,0 +1,131 @@
+//Extends
+%salsa-h3{
+  @include salsa(font-size, 18px);
+  @include salsa(line-height, 27px);
+  @include salsa(font-weight, bold);
+  @include salsa(margin, 5px 0);
+  @include bene(font-family, font-family-secondary);
+}
+
+%salsa-background{
+  @include bene(background-color, color-primary-c);
+}
+
+%salsa-wrapper-padding{
+  @include salsa(padding, 0 5%);
+  @include salsa(margin, 0);
+}
+
+@include mq(desktop){
+  %salsa-wrapper-padding{
+    @include salsa(padding, 0 15%);
+  }
+}
+
+%salsa-wrapper-font{
+  @include salsa(font-family, font-family-secondary);
+}
+
+%salsa-label-font{
+  @include salsa(font-size, 16px);
+  @include salsa(font-weight, bold);
+  @include salsa(margin, 15px 0 10px);
+}
+
+%salsa-input-font{
+  @include salsa(color, #000);
+}
+
+%salsa-input-size{
+  @include salsa(height, 50px);
+}
+
+%salsa-input-border{
+  @include salsa(border, 1px solid);
+  @include salsa(border-radius, 0);
+  @include bene(border-color, color-primary-a);
+  &:focus, &:hover, &:active{
+    @include salsa(border, 2px solid);
+  }
+}
+
+%salsa-placeholder{
+  @include salsa(color, transparent);
+}
+
+%salsa-button{
+  @include bene(font-family, font-family-secondary);
+  @include bene(color, color-primary-a);
+  @include bene(background-color, color-secondary-a);
+  @include bene(border-color, color-secondary-a);
+  @include salsa(text-transform, none);
+  @include salsa(border-radius, 0);
+  @include salsa(font-weight, bold);
+  @include salsa(font-size, 16px);
+  @include salsa(line-height, 24px);
+  @include salsa(text-align, center);
+  &:hover{
+    @include bene(background-color, #ffd875);
+  }
+}
+
+%salsa-attached-button{
+  @include salsa(height, 50px);
+}
+
+%salsa-button-alignment{
+  @include salsa(text-align, left);
+}
+
+%salsa-amount-select{
+  @include salsa(border, 1px solid #000);
+  @include salsa(height, 50px);
+  @include salsa(padding, 0 15px);
+  @include salsa(line-height, 50px);
+  @include salsa(font-size, 16px);
+}
+
+%salsa-amount-right-border{
+  @include salsa(border-right, none);
+}
+
+%salsa-amount-select-active{
+  @extend %salsa-button;
+  @include bene(background, color-secondary-a);
+  @include salsa(box-shadow, none);
+  @include salsa(height, 50px);
+  @include salsa(padding, 0 15px);
+  @include salsa(line-height, 50px);
+  @include salsa(font-weight, normal);
+}
+
+%salsa-example-text{
+  @include salsa(border, 2px solid);
+  @include bene(border-color, color-secondary-a);
+  @include bene(border-radius, 0);
+}
+
+%salsa-thermometer{
+  @include bene(background-color, color-secondary-a);
+}
+
+%salsa-thermometer-border{
+  @include bene(border-bottom-color, color-secondary-a);
+}
+
+%salsa-checkbox-wrapper{
+  @include salsa(display, flex);
+  @include salsa(align-items, center);
+}
+
+%salsa-remove-shadow{
+  @include salsa(box-shadow, none);
+}
+
+%salsa-display-block{
+  @include salsa(display, block);
+}
+
+%salsa-display-none{
+  @include salsa(display, none);
+}
