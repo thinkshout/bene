@@ -59,7 +59,7 @@ a {
   color: #129FB5; /* in case css variables are not supported */
   color: var(--color-theme-primary);
   cursor: pointer;
-  text-decoration: none; }
+}
   a:hover, a:active, a.nice-select.open {
     color: #44d1e7; /* in case css variables are not supported */
     color: var(--color-theme-primary-bright-lighten20);
