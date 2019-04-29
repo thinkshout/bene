@@ -46,3 +46,9 @@
 .menu--main .menu .menu-item--active-trail{
   @extend %sub-nav-menu-links-active;
 }
+.menu--utility .menu{
+  @extend %utility-menu-margin-bottom;
+}
+.menu--utility .menu .menu-item--active-trail{
+  @extend %utility-nav-menu-links-active;
+}

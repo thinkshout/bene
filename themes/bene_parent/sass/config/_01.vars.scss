@@ -491,6 +491,14 @@ $vars: (
   margin: 0 1rem;
 }
 
+%utility-nav-menu-links-active{
+  display: block;
+}
+
+%utility-menu-margin-bottom{
+  display: block;
+}
+
 %sub-nav-link-title{
   margin-bottom: 10px;
   opacity: 0.7;

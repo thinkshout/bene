@@ -440,6 +440,12 @@ tbody td {
 .block-bene-sub-navigation-block .menu-item .menu-item.menu-item--active-trail, .menu--main .menu .menu-item--active-trail {
   margin: 0 1rem; }
 
+.menu--utility .menu .menu-item--active-trail {
+  display: block; }
+
+.menu--utility .menu {
+  display: block; }
+
 .block-bene-sub-navigation-block > ul.menu > li.menu-item > a {
   margin-bottom: 10px;
   opacity: 0.7; }
