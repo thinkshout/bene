@@ -187,8 +187,6 @@ tbody td {
             Site Header
    ============================== */
 .site-header {
-  background-color:  #129FB5;
-  background-color: var(--color-primary-e );
   padding: 20px 10px;
   display: flex;
   min-height: 100px;

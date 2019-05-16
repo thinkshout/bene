@@ -197,7 +197,6 @@ $vars: (
    ============================== */
 
 %site-header{
-  @include vars(background-color, color-primary-e);
   padding: 20px 10px;
   display: flex;
   min-height: 100px;
