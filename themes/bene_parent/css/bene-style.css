@@ -403,7 +403,6 @@ tbody td {
   font-size: 2rem;
   margin-top: 0;
   text-align: center;
-  text-transform: uppercase;
   z-index: 20; }
 
 @media (min-width: 769px) {
