@@ -590,12 +590,12 @@ tbody td {
 /* ==============================
          Rich Text - Intro
    ============================== */
-.page-node-type-page .field--name-bene-intro, .page-node-type-page .paragraph--type--rich-text {
+.page-node-type-page .field--name-bene-intro {
   color:  #000000;
   color: var(--color-primary-d );
   padding: 25px 0; }
 
-.page-node-type-page .field--name-bene-intro h1, .page-node-type-page .field--name-bene-intro h2, .page-node-type-page .field--name-bene-intro h3, .page-node-type-page .field--name-bene-intro h4, .page-node-type-page .field--name-bene-intro h5, .page-node-type-page .field--name-bene-intro h6, .page-node-type-page .paragraph--type--rich-text h1, .page-node-type-page .paragraph--type--rich-text h2, .page-node-type-page .paragraph--type--rich-text h3, .page-node-type-page .paragraph--type--rich-text h4, .page-node-type-page .paragraph--type--rich-text h5, .page-node-type-page .paragraph--type--rich-text h6 {
+.page-node-type-page .field--name-bene-intro h1, .page-node-type-page .field--name-bene-intro h2, .page-node-type-page .field--name-bene-intro h3, .page-node-type-page .field--name-bene-intro h4, .page-node-type-page .field--name-bene-intro h5, .page-node-type-page .field--name-bene-intro h6 {
   margin: 30px 0;
   text-transform: uppercase;
   padding: 0 2%; }
@@ -604,20 +604,16 @@ tbody td {
   color:  #000000;
   color: var(--color-primary-d ); }
 
-.page-node-type-page .paragraph--type--rich-text h1, .page-node-type-page .paragraph--type--rich-text h2, .page-node-type-page .paragraph--type--rich-text h3, .page-node-type-page .paragraph--type--rich-text h4, .page-node-type-page .paragraph--type--rich-text h5, .page-node-type-page .paragraph--type--rich-text h6 {
-  color:  #000000;
-  color: var(--color-primary-d ); }
-
 .page-node-type-page .field--name-bene-intro h4 {
   position: relative; }
 
-.page-node-type-page .field--name-bene-intro a, .page-node-type-page .paragraph--type--rich-text a {
+.page-node-type-page .field--name-bene-intro a {
   color:  #000000;
   color: var(--color-primary-d );
   text-decoration: none;
   font-weight: bold; }
 
-.page-node-type-page .field--name-bene-intro p, .page-node-type-page .paragraph--type--rich-text p, .page-node-type-page .paragraph--type--rich-text span {
+.page-node-type-page .field--name-bene-intro p {
   color:  #50CFE3;
   color: var(--color-primary-a );
   margin-bottom: 35px;
@@ -626,17 +622,27 @@ tbody td {
   line-height: 24px; }
 
 @media (min-width: 769px) {
-  .page-node-type-page .field--name-bene-intro p, .page-node-type-page .paragraph--type--rich-text p, .page-node-type-page .paragraph--type--rich-text span {
+  .page-node-type-page .field--name-bene-intro p {
     font-size: 22px;
     font-weight: normal;
     line-height: 34px; } }
-.page-node-type-page .paragraph--type--rich-text p, .page-node-type-page .paragraph--type--rich-text span, .page-node-type-page .paragraph--type--rich-text ul, .page-node-type-page .paragraph--type--rich-text ol, .page-node-type-page .paragraph--type--rich-text figure, .page-node-type-page .paragraph--type--rich-text .embedded-entity {
+.page-node-type-page .paragraph--type--rich-text figure, .page-node-type-page .paragraph--type--rich-text .embedded-entity {
   color:  #000000;
   color: var(--color-primary-d ); }
 
 .page-node-type-page .field--name-bene-content .paragraph--type--rich-text, .page-node-type-page .block-system-main-block .field--name-bene-event-location, .page-node-type-listing-page .field--name-bene-content .paragraph--type--rich-text, .page-node-type-listing-page .block-system-main-block .field--name-bene-event-location, .page-node-type-event .field--name-bene-content .paragraph--type--rich-text, .page-node-type-event .block-system-main-block .field--name-bene-event-location, .page-node-type-news .field--name-bene-content .paragraph--type--rich-text, .page-node-type-news .block-system-main-block .field--name-bene-event-location {
   background-color:  #ffffff;
   background-color: var(--color-primary-c ); }
+
+/* ==============================
+         Rich Text - WYSIWYG
+   ============================== */
+.page-node-type-page .paragraph--type--rich-text p {
+  font-size: 1rem; }
+
+.page-node-type-page .paragraph--type--rich-text a {
+  color:  ;
+  color: var(--link ); }
 
 /* ==============================
     Full Width Feature Paragraph

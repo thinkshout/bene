@@ -17,22 +17,11 @@
 }
 
 .page-node-type-page .paragraph--type--rich-text{
-  @extend %rch-txt-intro;
-  h1, h2, h3, h4, h5, h6{
-    @extend %rch-txt-intro-heading;
-    @extend %rch-txt-heading-color;
-  }
-
-  a{@extend %rch-txt-intro-link;}
-
-  p, span{
-    @extend %rch-txt-intro-text;
-    @extend %rch-txt-wysiwyg-text;
-  }
-
-  ul, ol{
-    @extend %rch-txt-wysiwyg-text;
-  }
+  p { @extend %rich-text-p; }
+  a { @extend %rich-text-a; }
+  ul { @extend %rich-text-ul !optional; }
+  ol { @extend %rich-text-ol !optional; }
+  blockquote { @extend %rich-text-blockquote !optional; }
 
   figure{
     @extend %rch-txt-wysiwyg-text;

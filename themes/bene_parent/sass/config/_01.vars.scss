@@ -730,6 +730,30 @@ $vars: (
 }
 
 /* ==============================
+         Rich Text - WYSIWYG
+   ============================== */
+  %rich-text-p {
+    font-size: rem(16);
+  }
+  
+  %rich-text-a {
+    @include vars(color, link);
+  }
+  
+  %rich-text-ul {
+  }
+  
+  %rich-text-ol {
+  }
+  
+  %rich-text-pullquote {
+  }
+  
+  %rich-text-pullquote {
+  }
+
+
+/* ==============================
     Full Width Feature Paragraph
    ============================== */
 
