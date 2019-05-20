@@ -26,7 +26,8 @@ html {
   --logo-height: 100px;
   --social-media-icon-height: 2.25rem;
   --button-padding: 2rem;
-  --input-height: 100px; }
+  --input-height: 100px;
+  --container-max-width: 822px; }
 
 /* ==============================
             BASE STYLING
@@ -1596,6 +1597,11 @@ input {
 .page-node-type-event .region-content,
 .page-node-type-news .region-content {
   margin-bottom: 0; }
+
+.container {
+  max-width:  822px;
+  max-width: var(--container-max-width );
+  margin: 0 auto; }
 
 .block-bene-footer-block .social-links .facebook {
   background-image: url(../images/svgs/facebook-f.svg); }
