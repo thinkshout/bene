@@ -1,7 +1,5 @@
 .region-footer{
   @extend %region-footer;
-  @extend %footer-region-background;
-  @extend %footer-region-grid;
 
   .block-menu.navigation{
     @extend %footer-menu-column;
@@ -14,8 +12,7 @@
 }
 
 .block-bene-footer-block{
-  @extend %footer-background;
-  @extend %footer-container;
+  @extend %footer;
   @extend %footer-copyright-row;
 
   .menu{
@@ -30,37 +27,41 @@
   }
 
   .menu-item a{
-    @extend %footer-menu-link;
+    @extend %footer-menu-links;
   }
 
   .contact-links{
     @extend %footer-contact-links;
-    .address{@extend %footer-address}
-    .phone a, .email a, .additional-contact a{
-      @extend %footer-spans-display-block;
-      @extend %footer-menu-link;
-    }
   }
 
   .social-links{
     @extend %footer-social-links;
 
-    span{
-      @extend %footer-social-links-spans;
+    .facebook {
+      background-image: url(../images/svgs/facebook-f.svg);
     }
-
-    a{
-      @extend %footer-social-links-a;
+    .instagram{
+      background-image: url(../images/svgs/instagram.svg);
     }
-
-    .facebook{@extend %footer-social-links-fb;}
-    .instagram{@extend %footer-social-links-instagram;}
-    .linkedin{@extend %footer-social-links-linkedin;}
-    .twitter{@extend %footer-social-links-twitter;}
-    .google{@extend %footer-social-links-google;}
-    .pinterest{@extend %footer-social-links-pinterest;}
-    .tumblr{@extend %footer-social-links-tumblr;}
-    .youtube{@extend %footer-social-links-youtube;}
+    .linkedin{
+      background-image: url(../images/svgs/linkedin.svg);
+    }
+    .twitter{
+      background-image: url(../images/svgs/twitter.svg);
+    }
+    .google{
+      background-image: url(../images/svgs/google-plus.svg);
+    }
+    .pinterest{
+      background-image: url(../images/svgs/pinterest-p.svg);
+    }
+    .tumblr{
+      background-image: url(../images/svgs/tumblr.svg);
+    }
+    .youtube{
+      background-image: url(../images/svgs/youtube-play.svg);
+    }
+    
   }
 
   .copyright{@extend %footer-copyright};

@@ -105,13 +105,13 @@ $vars: (
 }
 
 %link{
-  @include vars(color, color-secondary-c);
+  @include vars(color, color-neutral-b);
   cursor: pointer;
   text-decoration: none;
 }
 
 %link-hover{
-  @include vars(color, color-secondary-d);
+  @include vars(color, color-neutral-a);
 }
 
 %button{
@@ -1521,7 +1521,7 @@ $vars: (
 }
 
 %newsletter-p{
-  @include vars(color, color-primary-c);
+  @include vars(color, color-neutral-b);
   margin: 30px 0;
   font-size: 22px;
   font-weight: 800;
@@ -1564,22 +1564,29 @@ $vars: (
             Site Footer
    ============================== */
 
-%region-footer{
+%region-footer {
   margin: 0 auto;
   max-width: 100%;
   float: none;
   clear: both;
-}
 
-%footer-region-background{
-   @include vars(background-color, color-primary-e)
- }
-
-%footer-region-grid{
+  // grid for footer
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+%footer {
+  @include vars(background-color, color-primary-e);
+  padding: 2rem 5%;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-between
 }
 
 %footer-newsletter-row{
@@ -1605,21 +1612,6 @@ $vars: (
   %footer-menu-column{
     flex-basis: 30%;
   }
-}
-
-%footer-background{
-  @include vars(background-color, color-primary-e);
-}
-
-%footer-container{
-  padding: 2rem 5%;
-  margin-top: 0;
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  position: relative;
-  justify-content: space-between;
 }
 
 %footer-menu{
@@ -1648,37 +1640,37 @@ $vars: (
   }
 }
 
-%footer-menu-link{
-  @include vars(color, color-primary-c);
-  font-size: 12px;
-  text-decoration: none;
-  &:hover, &:focus, &:active{
-    @extend %link-hover;
-  }
-}
-
 %footer-contact-links{
-  @include vars(color, color-primary-c);
   line-height: 1.8rem;
   font-size: 12px;
   padding-left: 10%;
-  flex: 0 1 65%;
-}
 
-@include mq(desktop){
-  %footer-contact-links{
+  @include mq(desktop){
     flex: 0 1 20%;
+  }
+
+  .address {
+    white-space: pre-line;
+  }
+
+  span {
+    @include vars(color, color-neutral-b);
+  }
+  
+  a {
+    @include vars(color, color-neutral-b);
+    display: block;
+    font-size: 12px;
+    text-decoration: none;
+
+    &:hover, &:focus, &:active{
+      @extend %link-hover;
+    }
   }
 }
 
-%footer-address{
-  white-space: pre-line;
-}
 
-%footer-spans-display-block{
-  display: block;
-}
-
+// Footer social media links
 %footer-social-links{
   align-items: center;
   display: flex;
@@ -1686,96 +1678,52 @@ $vars: (
   flex: 1 1 auto;
   justify-content: center;
   margin-top: 1.5rem;
-}
 
-@include mq(desktop){
-  %footer-social-links{
+  @include mq(desktop) {
     flex: 0 1 30%;
     align-items: baseline;
     margin-top: 0;
   }
-}
 
-@include mq(mobile){
-  %footer-social-links{
+  @include mq(mobile){
     margin: 50px 15%;
   }
-}
 
-%footer-social-links-spans{
-  min-width: 25%;
-  text-align: center;
-  display: inline-block;
-}
+  span {
+    min-width: 25%;
+    text-align: center;
+    display: inline-block;
 
-@include mq(desktop){
-  %footer-social-links-spans{
-    min-width: 0;
+    @include mq(desktop) {
+      min-width: 0;
+    }
+
+    @include mq(phablet){
+      min-width: 10%;
+    }
+  }
+
+  a {
+    margin-left: 0;
+    @include vars(height, social-media-icon-height);
+    @include vars(width, social-media-icon-height);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 62% 62%;
+    padding: 1rem;
+    position: relative;
+    font-size: 0;
+
+    @include mq(desktop){
+      margin-left: 0.625rem;
+    }
+
+    @include mq(phablet){
+      margin-left: 10px;
+    }
   }
 }
 
-@include mq(phablet){
-  %footer-social-links-spans{
-    min-width: 10%;
-  }
-}
-
-%footer-social-links-a{
-  margin-left: 0;
-  border-radius: 0%;
-  @include vars(background-color, color-primary-c);
-  @include vars(height, social-media-icon-height);
-  @include vars(width, social-media-icon-height);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 62% 62%;
-  border: 0.0625rem solid;
-  @include vars(border-color, color-primary-c);
-  padding: 1rem;
-  position: relative;
-  font-size: 0;
-  &:hover, &:focus, &:active{
-    @include vars(background-color, color-secondary-d);
-    @include vars(border-color, color-secondary-d);
-  }
-}
-
-@include mq(desktop){
-  %footer-social-links-a{
-    margin-left: 0.625rem;
-  }
-}
-
-@include mq(phablet){
-  %footer-social-links-a{
-    margin-left: 10px;
-  }
-}
-
-%footer-social-links-fb{
-  background-image: url(../images/svgs/facebook-f.svg);
-}
-%footer-social-links-instagram{
-  background-image: url(../images/svgs/instagram.svg);
-}
-%footer-social-links-linkedin{
-  background-image: url(../images/svgs/linkedin.svg);
-}
-%footer-social-links-twitter{
-  background-image: url(../images/svgs/twitter.svg);
-}
-%footer-social-links-google{
-  background-image: url(../images/svgs/google-plus.svg);
-}
-%footer-social-links-pinterest{
-  background-image: url(../images/svgs/pinterest-p.svg);
-}
-%footer-social-links-tumblr{
-  background-image: url(../images/svgs/tumblr.svg);
-}
-%footer-social-links-youtube{
-  background-image: url(../images/svgs/youtube-play.svg);
-}
 
 %footer-copyright{
   @include vars(color, color-primary-c);
