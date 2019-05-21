@@ -17,8 +17,8 @@
 }
 
 .page-node-type-page .paragraph--type--rich-text{
-  p { @extend %rich-text-p; }
-  a { @extend %rich-text-a; }
+  p { @extend %rich-text-p !optional; }
+  a { @extend %rich-text-a !optional; }
   ul { @extend %rich-text-ul !optional; }
   ol { @extend %rich-text-ol !optional; }
   blockquote { @extend %rich-text-blockquote !optional; }
