@@ -27,7 +27,8 @@ html {
   --social-media-icon-height: 2.25rem;
   --button-padding: 2rem;
   --input-height: 100px;
-  --container-max-width: 822px; }
+  --container-max-width: 822px;
+  --container-wide-max-width: 1260px; }
 
 /* ==============================
             BASE STYLING
@@ -362,26 +363,14 @@ tbody td {
   .site-header #joinButton {
     display: none; } }
 /* ==============================
-          Sub Navigation
+          Page Banner 
    ============================== */
 .block-page-title-block.no-bgimage {
-  background-image: linear-gradient(#248BCB, #1E5375);
   padding: 100px 0;
   height: 6.25rem; }
 
 .block-page-title-block.bgimage {
   height: 24vw; }
-  .block-page-title-block.bgimage:after {
-    background-color:  #50CFE3;
-    background-color: var(--color-primary-a );
-    content: '';
-    height: 100%;
-    left: 0;
-    top: 0;
-    opacity: .6;
-    position: absolute;
-    width: 100%;
-    z-index: 0; }
 
 .block-page-title-block.no-bgimage {
   display: block; }
@@ -408,6 +397,9 @@ tbody td {
 @media (min-width: 769px) {
   .block-page-title-block.block-hero h1, .block-page-title-block.block-hero h2 {
     font-size: 3.75rem; } }
+/* ==============================
+          Sub Navigation
+   ============================== */
 .block-bene-sub-navigation-block {
   background-image: linear-gradient(#248BCB, #1E5375);
   padding: 3rem 2%;
@@ -1602,6 +1594,13 @@ input {
   max-width:  822px;
   max-width: var(--container-max-width );
   margin: 0 auto; }
+
+.container-wide {
+  max-width:  1260px;
+  max-width: var(--container-wide-max-width );
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem; }
 
 .block-bene-footer-block .social-links .facebook {
   background-image: url(../images/svgs/facebook-f.svg); }

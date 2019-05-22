@@ -34,6 +34,7 @@ $vars: (
 
   //Layout
         container-max-width: 822px,
+        container-wide-max-width: 1260px,
 );
 
 
@@ -399,28 +400,16 @@ $vars: (
 }
 
 /* ==============================
-          Sub Navigation
+          Page Banner 
    ============================== */
 
 %title-block{
-  background-image: linear-gradient(#248BCB, #1E5375);
   padding: 100px 0;
   height: 6.25rem;
 }
 
 %title-block-bgimage{
   height: 24vw;
-  &:after{
-    @include vars(background-color, color-primary-a);
-    content: '';
-    height: 100%;
-    left: 0;
-    top: 0;
-    opacity: .6;
-    position: absolute;
-    width: 100%;
-    z-index: 0;
-  }
 }
 
 %title-block-no-bgimage{
@@ -452,6 +441,10 @@ $vars: (
     font-size: 3.75rem;
   }
 }
+
+/* ==============================
+          Sub Navigation
+   ============================== */
 
 %sub-nav-block{
   background-image: linear-gradient(#248BCB, #1E5375);
