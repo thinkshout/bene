@@ -677,13 +677,10 @@ $vars: (
 
 %rch-txt-intro{
   @include vars(color, color-primary-d);
-  padding: 25px 0;
 }
 
 %rch-txt-intro-heading{
-  margin: 30px 0;
   text-transform: uppercase;
-  padding: 0 2%;
 }
 
 %rch-txt-intro-heading-color{
@@ -706,7 +703,6 @@ $vars: (
 
 %rch-txt-intro-text{
   @include vars(color, color-primary-a);
-  margin-bottom: 35px;
   font-size: 15px;
   font-weight: normal;
   line-height: 24px;
@@ -1268,7 +1264,6 @@ $vars: (
   %updates-pg-intro-p{
     font-size: rem(22);
     line-height: rem(38);
-    padding: 0 2%;
   }
 }
 

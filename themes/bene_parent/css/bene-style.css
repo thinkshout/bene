@@ -591,13 +591,10 @@ tbody td {
    ============================== */
 .page-node-type-page .field--name-bene-intro {
   color:  #000000;
-  color: var(--color-primary-d );
-  padding: 25px 0; }
+  color: var(--color-primary-d ); }
 
 .page-node-type-page .field--name-bene-intro h1, .page-node-type-page .field--name-bene-intro h2, .page-node-type-page .field--name-bene-intro h3, .page-node-type-page .field--name-bene-intro h4, .page-node-type-page .field--name-bene-intro h5, .page-node-type-page .field--name-bene-intro h6 {
-  margin: 30px 0;
-  text-transform: uppercase;
-  padding: 0 2%; }
+  text-transform: uppercase; }
 
 .page-node-type-page .field--name-bene-intro h1, .page-node-type-page .field--name-bene-intro h2, .page-node-type-page .field--name-bene-intro h3, .page-node-type-page .field--name-bene-intro h4, .page-node-type-page .field--name-bene-intro h5, .page-node-type-page .field--name-bene-intro h6 {
   color:  #000000;
@@ -615,7 +612,6 @@ tbody td {
 .page-node-type-page .field--name-bene-intro p {
   color:  #50CFE3;
   color: var(--color-primary-a );
-  margin-bottom: 35px;
   font-size: 15px;
   font-weight: normal;
   line-height: 24px; }
@@ -1092,8 +1088,7 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
 @media (min-width: 769px) {
   .block-system-main-block article.node--type-event .node__content .field--name-bene-intro, .field--name-bene-intro p {
     font-size: 1.375rem;
-    line-height: 2.375rem;
-    padding: 0 2%; } }
+    line-height: 2.375rem; } }
 .block-system-main-block article.node--type-news .node__content .field--name-bene-intro p {
   margin-top: 0.75rem; }
 
