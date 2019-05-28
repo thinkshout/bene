@@ -106,13 +106,12 @@ h5 {
   font-family: var(--font-family-secondary );
   border-radius: 100px;
   font-size: 16px;
-  letter-spacing: 0;
   line-height: 2rem;
   margin: 0;
+  padding: 12px 35px;
   text-align: center;
   text-decoration: none;
-  padding: 12px 35px;
-  text-transform: uppercase; }
+  text-transform: none; }
 
 .block-bene-home-page-feature-block .field--name-bene-link a:hover, .block-bene-home-page-feature-block .field--name-bene-link a:focus, .block-bene-home-page-feature-block .field--name-bene-link a:active, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:hover, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:focus, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:active, .button:hover, .button:active, .button:focus, .page-node-type-page .field--name-bene-intro a.button:focus, .page-node-type-page .field--name-bene-intro a.button:hover, .page-node-type-page .field--name-bene-intro a.button:active, .page-node-type-page .paragraph--type--rich-text a.button:focus, .page-node-type-page .paragraph--type--rich-text a.button:hover, .page-node-type-page .paragraph--type--rich-text a.button:active {
   background-color:  ;
@@ -650,6 +649,8 @@ tbody td {
   max-width: 100%;
   overflow: hidden; }
   .feature-full-width-paragraph .paragraph--type--feature-full-width:before {
+    background-color:  #50CFE3;
+    background-color: var(--color-primary-a );
     content: "";
     height: 100%;
     left: 0;
@@ -657,7 +658,6 @@ tbody td {
     position: absolute;
     top: 0;
     width: 100%;
-    background: linear-gradient(#5FBA47, #1E5375);
     bottom: 0;
     right: 0;
     z-index: 2; }

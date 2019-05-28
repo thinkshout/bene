@@ -74,11 +74,13 @@
 }
 
 // Content container
+%container,
 .container {
   @include vars(max-width, container-max-width);
   margin: 0 auto;
 }
 
+%container-wide,
 .container-wide {
   @include vars(max-width, container-wide-max-width);
   margin: 0 auto;

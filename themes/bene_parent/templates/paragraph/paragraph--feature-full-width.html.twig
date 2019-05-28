@@ -40,6 +40,7 @@
 #}
 {%
   set classes = [
+  'container-wide',
   'paragraph',
   'paragraph--type--' ~ paragraph.bundle|clean_class,
   view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
@@ -50,9 +51,11 @@
 {% block paragraph %}
 <div class="feature-full-width-paragraph">
   <div{{ attributes.addClass(classes) }}>
-        {% block content %}
-          {{ content }}
-        {% endblock %}
+    {% block content %}
+      <h2>{{ content.field_title.0 }}</h2>
+      {{ content.field_text }}
+      {{ content.field_link }}
+    {% endblock %}
   </div>
 </div>
 {% endblock paragraph %}

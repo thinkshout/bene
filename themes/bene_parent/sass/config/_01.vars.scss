@@ -124,13 +124,12 @@ $vars: (
   @include vars(font-family, font-family-secondary);
   border-radius: 100px;
   font-size: 16px;
-  letter-spacing: 0;
   line-height: rem(32);
   margin: 0;
+  padding: 12px 35px;
   text-align: center;
   text-decoration: none;
-  padding: 12px 35px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 %button-hover{
@@ -760,6 +759,7 @@ $vars: (
   overflow: hidden;
 
   &:before{
+    @include vars(background-color, color-primary-a);
     content: "";
     height: 100%;
     left: 0;
@@ -767,7 +767,6 @@ $vars: (
     position: absolute;
     top: 0;
     width: 100%;
-    background: linear-gradient(#5FBA47, #1E5375);
     bottom: 0;
     right: 0;
     z-index: 2;
