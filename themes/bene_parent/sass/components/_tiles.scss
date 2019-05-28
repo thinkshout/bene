@@ -11,7 +11,7 @@
     @extend %tiles-wrapper;
   }
 
-  .field__item{
+  & > .field__item{
     @extend %individual-tiles;
 
     .field--name-field-title{
@@ -19,7 +19,6 @@
     }
 
     .paragraph{
-      @extend %over-flow-hidden;
       @extend %text;
     }
 

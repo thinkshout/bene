@@ -612,7 +612,6 @@ $vars: (
   font-size: rem(42);
   padding: 20px 0;
   text-align: center;
-  text-transform: uppercase;
 }
 
 %tiles-container{
@@ -628,13 +627,17 @@ $vars: (
 %individual-tiles{
   @include vars(background-color, color-primary-c);
   @include vars(color, color-primary-d);
-  border-bottom-right-radius: 100px;
   text-align: left;
+
+  .field_item {
+    width: 100%;
+  }
 }
 
 %tile-text{
   padding: 0 20px;
   margin-bottom: auto;
+  width: 100%;
 }
 
 %tile-inner-title{
@@ -661,6 +664,7 @@ $vars: (
 
 %tiles-img{
   max-width: 100%;
+  width: 100%;
 }
 
 /* ==============================
@@ -698,14 +702,6 @@ $vars: (
   font-size: 15px;
   font-weight: normal;
   line-height: 24px;
-}
-
-@include mq(desktop){
-  %rch-txt-intro-text{
-    font-size: 22px;
-    font-weight: normal;
-    line-height: 34px;
-  }
 }
 
 %rch-txt-wysiwyg-text{

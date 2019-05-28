@@ -142,7 +142,7 @@ h5 {
   color:  #ffffff;
   color: var(--color-primary-c ); }
 
-p, p.standard, blockquote, .block-system-main-block article.node--type-event .node__content .field--name-bene-intro, .field--name-field-tiles .field__item .paragraph {
+p, p.standard, blockquote, .block-system-main-block article.node--type-event .node__content .field--name-bene-intro, .field--name-field-tiles > .field__item .paragraph {
   font-size: 1rem;
   line-height: 2rem;
   font-family:  'Work Sans', sans-serif;
@@ -531,8 +531,7 @@ tbody td {
   font-weight: bold;
   font-size: 2.625rem;
   padding: 20px 0;
-  text-align: center;
-  text-transform: uppercase; }
+  text-align: center; }
 
 .field--name-field-tiles {
   max-width: 81.25rem;
@@ -543,19 +542,21 @@ tbody td {
   justify-content: center;
   padding: 40px 0; }
 
-.field--name-field-tiles .field__item {
+.field--name-field-tiles > .field__item {
   background-color:  #ffffff;
   background-color: var(--color-primary-c );
   color:  #000000;
   color: var(--color-primary-d );
-  border-bottom-right-radius: 100px;
   text-align: left; }
+  .field--name-field-tiles > .field__item .field_item {
+    width: 100%; }
 
 .field--name-field-tiles .tile-text {
   padding: 0 20px;
-  margin-bottom: auto; }
+  margin-bottom: auto;
+  width: 100%; }
 
-.field--name-field-tiles .field__item .field--name-field-title, .field--name-field-tiles .text-wrapper a .field--name-field-title {
+.field--name-field-tiles > .field__item .field--name-field-title, .field--name-field-tiles .text-wrapper a .field--name-field-title {
   color:  #000000;
   color: var(--color-primary-d );
   margin: 0;
@@ -569,13 +570,14 @@ tbody td {
 .field--name-field-tiles .text-wrapper p {
   font-size: 16px; }
 
-.field--name-field-tiles .field__item .field--name-field-image {
+.field--name-field-tiles > .field__item .field--name-field-image {
   position: relative;
   z-index: 100;
   height: auto; }
 
-.field--name-field-tiles .field__item img {
-  max-width: 100%; }
+.field--name-field-tiles > .field__item img {
+  max-width: 100%;
+  width: 100%; }
 
 /* ==============================
          Rich Text - Intro
@@ -607,11 +609,6 @@ tbody td {
   font-weight: normal;
   line-height: 24px; }
 
-@media (min-width: 769px) {
-  .page-node-type-page .field--name-bene-intro p {
-    font-size: 22px;
-    font-weight: normal;
-    line-height: 34px; } }
 .page-node-type-page .paragraph--type--rich-text figure, .page-node-type-page .paragraph--type--rich-text .embedded-entity {
   color:  #000000;
   color: var(--color-primary-d ); }
@@ -1549,9 +1546,6 @@ article.embedded-entity, .embedded-entity.caption-article, .embedded-entity.alig
 
 .embedded-entity.align-center .image-caption, .region-footer .block-menu.navigation h2, .region-footer .block-menu.navigation .menu, .site-header .mobile-nav .menu {
   text-align: center; }
-
-.field--name-field-tiles .field__item .paragraph {
-  overflow: hidden; }
 
 .contextual-region {
   position: static; }
