@@ -69,11 +69,11 @@
                     {% endif %}
                     {{ content.field_text }}
                 </div>
-            </div>
-            <div class="tile-button">
-                {% if content.field_link.0['#title']|render != content.field_link.0['#url']|render %}
-                    {{ content.field_link }}
-                {% endif %}
+                <div class="button-wrapper">
+                    {% if content.field_link.0['#title']|render != content.field_link.0['#url']|render %}
+                        {{ content.field_link }}
+                    {% endif %}
+                </div>
             </div>
         {% endblock %}
     </div>
