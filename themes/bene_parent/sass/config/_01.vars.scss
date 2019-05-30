@@ -258,13 +258,6 @@ $vars: (
 
 %join-menu{
   display: none;
-  &:last-child{
-    display: inline-block;
-    @include vars(background-color, color-secondary-c);
-    border-radius: 100px;
-    width: 100px;
-    text-align: center;
-  }
 }
 
 %menu-toggle{
@@ -377,20 +370,6 @@ $vars: (
 
   %menu-item{
     margin-left: rem(22);
-  }
-
-  %main-menu-button{
-    &:last-child a{
-      @include vars(background-color, color-secondary-c);
-      @include vars(color, color-primary-c);
-      border-radius: 100px;
-      width: 100px;
-      text-align: center;
-      padding: 0.5rem 1.5rem;
-      &:focus, &:active, &:hover{
-        @include vars(background-color, color-secondary-d);
-      }
-    }
   }
 
   %join-button{

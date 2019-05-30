@@ -36,10 +36,6 @@
     &:hover{@extend %menu-item-hover;}
   }
 
-  .menu--main .menu-item{
-    @extend %main-menu-button;
-  }
-
   #joinButton{@extend %join-button;
     .menu-item{@extend %join-menu;}
   }

@@ -241,13 +241,6 @@ tbody td {
 
 .site-header #joinButton .menu-item {
   display: none; }
-  .site-header #joinButton .menu-item:last-child {
-    display: inline-block;
-    background-color:  ;
-    background-color: var(--color-secondary-c );
-    border-radius: 100px;
-    width: 100px;
-    text-align: center; }
 
 .site-header .mobile-menu-toggle, .site-header .mobile-menu-toggle.active {
   display: inline-block;
@@ -345,19 +338,6 @@ tbody td {
 
   .site-header .menu-item {
     margin-left: 1.375rem; }
-
-  .site-header .menu--main .menu-item:last-child a {
-    background-color:  ;
-    background-color: var(--color-secondary-c );
-    color:  #ffffff;
-    color: var(--color-primary-c );
-    border-radius: 100px;
-    width: 100px;
-    text-align: center;
-    padding: 0.5rem 1.5rem; }
-    .site-header .menu--main .menu-item:last-child a:focus, .site-header .menu--main .menu-item:last-child a:active, .site-header .menu--main .menu-item:last-child a:hover {
-      background-color:  ;
-      background-color: var(--color-secondary-d ); }
 
   .site-header #joinButton {
     display: none; } }
@@ -1213,19 +1193,6 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
 
   .site-header .menu-item {
     margin-left: 1.375rem; }
-
-  .site-header .menu--main .menu-item:last-child a {
-    background-color:  ;
-    background-color: var(--color-secondary-c );
-    color:  #ffffff;
-    color: var(--color-primary-c );
-    border-radius: 100px;
-    width: 100px;
-    text-align: center;
-    padding: 0.5rem 1.5rem; }
-    .site-header .menu--main .menu-item:last-child a:focus, .site-header .menu--main .menu-item:last-child a:active, .site-header .menu--main .menu-item:last-child a:hover {
-      background-color:  ;
-      background-color: var(--color-secondary-d ); }
 
   .site-header #joinButton {
     display: none; } }
