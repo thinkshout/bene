@@ -37,7 +37,6 @@ jobs:
           command: |
             cd /var/www/html/build
             composer config repositories.bene path /var/www/html/bene
-            composer require "drupal/bene:*"
             composer install -n --prefer-dist
       - run:
           name: Run CS tests
