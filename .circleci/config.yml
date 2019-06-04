@@ -34,11 +34,13 @@ jobs:
           keys:
             - composer-v3-{{ checksum "composer.lock" }}
       - run:
-          name: Install dependencies
+          name: Configure and install
           command: |
+            export PATH="./vendor/bin:../vendor/bin:/root/.composer/vendor/bin:$PATH"
             cd /var/www/html/build
             composer config repositories.bene path /var/www/html/bene
-            composer install
+            robo configure --db-name=drupal --db-user=drupal --db-pass=drupal --db-host=127.0.0.1
+            robo install
       - run:
           name: Run CS tests
           command: |
@@ -51,10 +53,3 @@ jobs:
           paths:
             - ../build/vendor
             - ../build/web/modules/contrib
-      - run:
-          name: Configure, install and test
-          command: |
-            export PATH="./vendor/bin:../vendor/bin:/root/.composer/vendor/bin:$PATH"
-            cd /var/www/html/build
-            robo configure --db-name=drupal --db-user=drupal --db-pass=drupal --db-host=127.0.0.1
-            robo install
