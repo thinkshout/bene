@@ -23,3 +23,14 @@ function bene_page_install() {
 
   user_role_change_permissions('staff', $staff_permissions);
 }
+
+/**
+ * Makes the Page node type revisionable.
+ */
+function bene_update_8200() {
+  $config = \Drupal::configFactory()->getEditable('node.type.page');
+  if (!empty($config)) {
+    $config->set('new_revision', TRUE);
+    $config->save(TRUE);
+  }
+}
