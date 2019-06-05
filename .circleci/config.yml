@@ -42,11 +42,6 @@ jobs:
              cd /var/www/html/build
              phpcs --config-set installed_paths ../../drupal/coder/coder_sniffer/
              phpcs --standard=Drupal --ignore=*/css/*,*/node_modules/* /var/www/html/build/web/profiles/bene
-      - save_cache:
-          key: composer-v3-{{ checksum "composer.lock" }}
-          paths:
-            - ../build/vendor
-            - ../build/web/modules/contrib
       - run:
           name: Configure, install and test
           command: |
