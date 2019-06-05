@@ -22,7 +22,7 @@ jobs:
       - run:
           name: Project configuration
           command: |
-            echo "memory_limit = 512M" >> ${php_vars}
+            echo "memory_limit = 2G" >> ${php_vars}
             export PATH="./vendor/bin:../vendor/bin:/root/.composer/vendor/bin:$PATH"
             composer global require -n "hirak/prestissimo:^0.3"
             composer global require -n "consolidation/cgr"
@@ -30,9 +30,6 @@ jobs:
             cd /var/www/html
             which patch
             composer create-project thinkshout/bene-project:dev-use-packagist /var/www/html/build --stability dev --no-interaction --no-install
-      - restore_cache:
-          keys:
-            - composer-v3-{{ checksum "composer.lock" }}
       - run:
           name: Install dependencies
           command: |
