@@ -28,7 +28,7 @@ jobs:
             cgr "pantheon-systems/terminus:~1"
             cd /var/www/html
             which patch
-            composer create-project thinkshout/bene-project:dev-use-packagist /var/www/html/build --stability dev --no-interaction --no-install
+            composer create-project thinkshout/bene-project /var/www/html/build --stability dev --no-interaction --no-install
       - run:
           name: Install dependencies
           command: |
@@ -49,3 +49,6 @@ jobs:
             cd /var/www/html/build
             robo configure --db-name=drupal --db-user=drupal --db-pass=drupal --db-host=127.0.0.1
             robo install
+            rm -rf ./behat
+            cp -r /var/www/html/bene/tests/behat/ ./behat/
+            robo test --profile=ci
