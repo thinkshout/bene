@@ -49,5 +49,5 @@ jobs:
             cd /var/www/html/build
             robo configure --db-name=drupal --db-user=drupal --db-pass=drupal --db-host=127.0.0.1
             robo install
-            cp -r /var/www/html/bene/tests/behat/features/* ./tests/behat/features/
+            cp -r /var/www/html/bene/tests/behat/features/* ./behat/features/
             robo test
