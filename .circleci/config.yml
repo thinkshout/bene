@@ -7,7 +7,7 @@ jobs:
            WEBROOT: /var/www/html/build/web
            GIT_EMAIL: "ci@thinkshout.com"
            GIT_NAME: "ThinkShout CI Bot"
-         cmd: ["/start.sh"]
+         command: ["/start.sh"]
        - image: mariadb:10.0
          environment:
            MYSQL_RANDOM_ROOT_PASSWORD: 1
@@ -17,8 +17,7 @@ jobs:
     working_directory: /var/www/html/bene
     steps:
       - checkout
-      - type: add-ssh-keys
-
+      - add_ssh_keys
       - run:
           name: Project configuration
           command: |
