@@ -8,7 +8,7 @@ Feature: User authentication
     When I visit "user"
     Then I should see the text "Log in"
     And I should see the text "Reset your password"
-    And I should see the text "Username"
+    And I should see the text "Email"
     And I should see the text "Password"
     And I click "Reset your password"
     Then I should see "Password reset instructions will be sent"
