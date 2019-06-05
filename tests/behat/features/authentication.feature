@@ -27,17 +27,17 @@ Feature: User authentication
       | admin/structure |
       | node/add        |
 
-#  Scenario Outline: Anonymous user is redirected to login page when they hit 403.
-#    Given I am not logged in
-#    When I go to "<path>"
-#    Then I should see the text "User login"
-#    And I should see the text "Reset your password"
-#    And I should see the text "Username"
-#    And I should see the text "Password"
-#
-#    Examples:
-#      | path      |
-#      | students  |
+  Scenario Outline: Anonymous user is redirected to login page when they hit 403.
+    Given I am not logged in
+    When I go to "<path>"
+    Then I should see the text "Log in"
+    And I should see the text "Reset your password"
+    And I should see the text "Email"
+    And I should see the text "Password"
+
+    Examples:
+      | path      |
+      | admin     |
 
   Scenario Outline: Anonymous user sees Page not found when they hit a 404.
     Given I am not logged in
@@ -47,6 +47,3 @@ Feature: User authentication
     Examples:
       | path |
       | foo  |
-  Contact GitHub API Training Shop Blog About
-  © 2016 GitHub, Inc. Terms Privacy Security Status Help
-    
