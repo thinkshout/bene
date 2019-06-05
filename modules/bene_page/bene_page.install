@@ -27,7 +27,7 @@ function bene_page_install() {
 /**
  * Makes the Page node type revisionable.
  */
-function bene_update_8200() {
+function bene_page_update_8200() {
   $config = \Drupal::configFactory()->getEditable('node.type.page');
   if (!empty($config)) {
     $config->set('new_revision', TRUE);
