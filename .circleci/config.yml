@@ -41,7 +41,7 @@ jobs:
              export PATH="./vendor/bin:../vendor/bin:/root/.composer/vendor/bin:$PATH"
              cd /var/www/html/build
              phpcs --config-set installed_paths ../../drupal/coder/coder_sniffer/
-             phpcs --standard=Drupal --ignore=*/css/*,*/node_modules/* /var/www/html/build/profiles/bene
+             phpcs --standard=Drupal --ignore=*/css/*,*/node_modules/* /var/www/html/bene
       - run:
           name: Configure, install and test
           command: |
