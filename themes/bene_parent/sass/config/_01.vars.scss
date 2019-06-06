@@ -429,6 +429,7 @@ $vars: (
   display: flex;
   justify-content: center;
   width: 100vw;
+  max-width: 100%;
   position: relative;
   z-index: 20;
 }
