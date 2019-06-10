@@ -611,7 +611,6 @@ tbody td {
     Full Width Feature Paragraph
    ============================== */
 .feature-full-width-paragraph .paragraph--type--feature-full-width {
-  align-items: center;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -621,9 +620,7 @@ tbody td {
   min-height: 38.2vw;
   padding: 70px 1.5rem 70px 1.5rem;
   position: relative;
-  text-align: center;
   width: 100vw;
-  max-width: 100%;
   overflow: hidden; }
   .feature-full-width-paragraph .paragraph--type--feature-full-width:before {
     background-color:  #50CFE3;
@@ -642,10 +639,10 @@ tbody td {
 .feature-full-width-paragraph .paragraph--type--feature-full-width.no-image:before {
   opacity: 1; }
 
-.feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-title, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-text, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-text p, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link {
+.feature-full-width-paragraph .paragraph--type--feature-full-width h2, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-text, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-text p, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link {
   z-index: 10; }
 
-.feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-title {
+.feature-full-width-paragraph .paragraph--type--feature-full-width h2 {
   color:  #ffffff;
   color: var(--color-primary-c );
   font-size: 30px;
@@ -656,7 +653,7 @@ tbody td {
   font-family: var(--font-family-secondary ); }
 
 @media (min-width: 769px) {
-  .feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-title {
+  .feature-full-width-paragraph .paragraph--type--feature-full-width h2 {
     font-size: 40px; } }
 .feature-full-width-paragraph .paragraph--type--feature-full-width .field--name-field-text p {
   color:  #ffffff;
@@ -1562,6 +1559,9 @@ input {
   margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem; }
+
+.feature-full-width-paragraph .paragraph--type--feature-full-width .container-wide {
+  z-index: 10; }
 
 .block-bene-footer-block .social-links .facebook {
   background-image: url(../images/svgs/facebook-f.svg); }

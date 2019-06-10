@@ -718,7 +718,6 @@ $vars: (
    ============================== */
 
 %full-width-pargph{
-  align-items: center;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -728,9 +727,7 @@ $vars: (
   min-height: 38.2vw;
   padding: 70px 1.5rem 70px 1.5rem;
   position: relative;
-  text-align: center;
   width: 100vw;
-  max-width: 100%;
   overflow: hidden;
 
   &:before{
