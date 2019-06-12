@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-       - image: thinkshout/nginx-php-fpm:php71
+       - image: thinkshout/nginx-php-fpm:php72-screener
          environment:
            WEBROOT: /var/www/html/build/web
            GIT_EMAIL: "ci@thinkshout.com"
@@ -52,3 +52,6 @@ jobs:
             rm -rf ./behat
             cp -r /var/www/html/bene/tests/behat/ ./behat/
             robo test --profile=ci
+
+            # Run visual regression tests using screener.io.
+            ./.circleci/do-exclusively ./.circleci/screener.sh
