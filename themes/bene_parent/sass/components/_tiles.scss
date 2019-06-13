@@ -19,7 +19,7 @@
     }
 
     .paragraph{
-      @extend %text;
+      @extend %p !optional;
     }
 
     .field--name-field-image{@extend %tiles-img-container;}
@@ -34,7 +34,6 @@
     margin-bottom: 30px;
     a {
       @extend %button-secondary;
-      &:hover, &:active, &:focus {@extend %button-secondary-hover;}
     }
   }
 
@@ -44,7 +43,6 @@
     a{
       .field--name-field-title{
         @extend %tile-inner-title;
-        &:hover{@extend %link-hover;}
       }
     }
     p{@extend %text-wrapper-text}

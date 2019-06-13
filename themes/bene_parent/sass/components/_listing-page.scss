@@ -138,7 +138,7 @@
   }
 
   .field--name-bene-intro{
-    @extend %text;
+    @extend %p !optional;
     @extend %listing-pg-intro-padding;
     @extend %updates-pg-intro-p;
   }

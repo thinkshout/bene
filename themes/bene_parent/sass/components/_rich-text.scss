@@ -12,7 +12,6 @@
 
   a.button{
     @extend %button;
-    &:focus, &:hover, &:active{@extend %button-hover;}
   }
 }
 
@@ -33,7 +32,6 @@
 
   a.button{
     @extend %button;
-    &:focus, &:hover, &:active{@extend %button-hover;}
   }
 }
 
