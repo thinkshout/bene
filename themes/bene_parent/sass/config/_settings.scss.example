@@ -1,0 +1,81 @@
+$vars: (
+  //Colors
+        color-primary-a: #50CFE3, //light blue
+        color-primary-b: #1E5375, //dark blue
+        color-primary-c: #ffffff, //white
+        color-primary-d: #000000, //black
+        color-primary-e: #129FB5, //teal
+        color-secondary-a: '',
+        color-secondary-b: '',
+        color-secondary-c: '',
+        color-secondary-d: '',
+        color-secondary-e: '',
+        color-neutral-a: #ffffff, //white
+        color-neutral-b: #000000, //black
+        color-neutral-c: #D1D1D1,
+
+  //Fonts
+  font-family-primary: "'Work Sans', sans-serif",
+  font-family-secondary: "'Oswald', sans-serif",
+  font-weight-regular: 400,
+  font-weight-medium: 600,
+  font-weight-bold: 700,
+  font-weight-black: 800,
+  font-style-italic: italic,
+  font-style-normal: normal,
+
+  //Layout
+  container-max-width: 822px,
+  container-wide-max-width: 1260px,
+);
+
+
+:root{
+  @each $key, $value in $vars {
+    #{--$key}: #{$value};
+  }
+}
+
+/* ==============================
+            BASE STYLING
+   ============================== */
+
+// HEADINGS
+%h1 { }
+
+%h2 { }
+
+%h3 { }
+
+%h4 { }
+
+%h5 { }
+
+%p { }
+
+// Anchor tags
+%a {
+  
+  &:hover, &:visited, &:focus { }
+}
+
+// Blockquotes
+%blockquote { }
+
+// List items
+%ul { }
+%ol { }
+
+// Tables
+%table {
+
+  th {}
+  tbody {}
+  tr  {}
+  td {}
+}
+
+%form {
+
+  // Include form elements inside this block
+}
