@@ -21,9 +21,6 @@
 
   .menu-item{
     @extend %footer-menu-item;
-    &:first-child a{
-      @extend %footer-email-link;
-    }
   }
 
   .menu-item a{

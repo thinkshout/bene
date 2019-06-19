@@ -1,18 +1,14 @@
 $vars: (
   //Colors
-        color-primary-a: #50CFE3, //light blue
-        color-primary-b: #1E5375, //dark blue
-        color-primary-c: #ffffff, //white
-        color-primary-d: #000000, //black
-        color-primary-e: #129FB5, //teal
-        color-secondary-a: '',
-        color-secondary-b: '',
-        color-secondary-c: '',
-        color-secondary-d: '',
-        color-secondary-e: '',
-        color-neutral-a: #ffffff, //white
-        color-neutral-b: #000000, //black
-        color-neutral-c: #D1D1D1,
+  color-primary-a: '', //light blue color-primary-b: #1E5375, //dark blue color-primary-c: #ffffff, //white
+  coror-primary-b: '', //black
+  color-primary-c: '', //teal
+  color-secondary-a: '',
+  color-secondary-b: '',
+  color-secondary-c: '',
+  color-neutral-a: #ffffff, //white
+  color-neutral-b: #000000, //black
+  color-neutral-c: #D1D1D1,
 
   //Fonts
   font-family-primary: "'Work Sans', sans-serif",
@@ -79,3 +75,17 @@ $vars: (
 
   // Include form elements inside this block
 }
+
+/* ==============================
+            Site Header
+   ============================== */
+
+// Wrapper around logo and nav
+%site-header { }
+
+// Container for site logo
+%site-logo{ }
+
+// Mobile menu
+%mobile-nav { }
+

@@ -49,194 +49,151 @@ $vars: (
    ============================== */
 
 %body {
-  box-sizing: border-box;
   @include vars(font-style, font-style-normal);
   @include vars(font-family, font-family-primary);
 }
 
 %h1-h6{
   @include vars(color, color-primary-d);
-  margin: rem(16) 0;
   @include vars(font-family, font-family-secondary);
 }
 
 %h1{
   font-size: 75px;
   line-height: 65px;
+
+  @include mq(mobile) {
+    font-size: 55px;
+    line-height: 45px; 
+  }
 }
 
 %h2 {
   font-size: 65px;
   line-height: 75px;
+
+  @include mq(mobile) {
+    font-size: 45px;
+    line-height: 55px;
+  }
 }
 
 %h3 {
   font-size: 58px;
   line-height: 68px;
+
+  @include mq(mobile) {
+    font-size: 38px;
+    line-height: 48px;
+  }
 }
 
 %h4 {
   font-size: 45px;
   line-height: 55px;
+  @include mq(mobile){
+    font-size: 30px;
+    line-height: 40px
+  }
 }
 
 %h5{
   font-size: 35px;
   line-height: 45px;
-}
 
-@include mq(mobile){
-  %h1{
-    font-size: 55px;
-    line-height: 45px;
-  }
-  %h2 {
-    font-size: 45px;
-    line-height: 55px;
-  }
-  %h3 {
-    font-size: 38px;
-    line-height: 48px;
-  }
-  %h4 {
-    font-size: 30px;
-    line-height: 40px;
-  }
-  %h5 {
+  @include mq(mobile) {
     font-size: 28px;
-    line-height: 38px;
+    line-height: 38px; 
   }
 }
 
-%link{
+%p {}
+
+%a {
   @include vars(color, color-neutral-b);
-  cursor: pointer;
-  text-decoration: none;
+
+  &:hover {
+    @include vars(color, color-neutral-a);
+  }
 }
 
-%link-hover{
-  @include vars(color, color-neutral-a);
-}
-
-%button{
+%button {
   @include vars(color, color-primary-c);
   @include vars(background-color, color-secondary-c);
   @include vars(font-family, font-family-secondary);
-  border-radius: 100px;
-  font-size: 16px;
-  line-height: rem(32);
-  margin: 0;
-  padding: 12px 35px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: none;
+
+  &:hover {
+    @include vars(background-color, color-secondary-d);
+    @include vars(color, color-primary-c);
+  }
 }
 
-%button-hover{
-  @include vars(background-color, color-secondary-d);
-  @include vars(color, color-primary-c);
-}
-
-%button-secondary{
+%button-secondary {
   @include vars(color, color-primary-c);
   @include vars(background-color, color-secondary-c);
   @include vars(font-family, font-family-secondary);
-  border-radius: 100px;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: rem(32);
-  margin: 0;
-  text-align: center;
-  text-decoration: none;
-  padding: 12px 35px;
-  text-transform: uppercase;
+
+  &:hover {
+    @include vars(background-color, color-secondary-d);
+    @include vars(color, color-primary-c);
+  }
 }
 
-%button-secondary-hover{
-  @include vars(background-color, color-secondary-d);
-  @include vars(color, color-primary-c);
+
+%blockquote {
+  @include vars(color, color-primary-d);
+  
+  p {
+    @include vars(color, color-primary-d);
+  }
 }
 
-%text {
-  font-size: rem(16);
-  line-height: rem(32);
-  @include vars(font-family, font-family-primary);
-  @include vars(color, color-primary-d);
+
+%ul {
+  li {
+    @include vars(font-family, font-family-primary);
+    @include vars(color, color-primary-d);
+  }
 }
 
-%blockquote{
-  @include vars(color, color-primary-d);
-}
-%blockquote-p{
-  @include vars(color, color-primary-d);
-}
-
-%lists{
-  font-size: rem(16);
-  line-height: rem(32);
-  @include vars(font-family, font-family-primary);
-  @include vars(color, color-primary-d);
+%ol {
+  li {
+    @include vars(font-family, font-family-primary);
+    @include vars(color, color-primary-d);
+  }
 }
 
 %table{
-  border: solid 1px;
   @include vars(border-color, color-secondary-c);
-  border-collapse: collapse;
-  border-spacing: 0;
-  padding: 1em;
+
+  th {
+    @include vars(background-color, color-secondary-c);
+    @include vars(color, color-primary-c);
+  }
+
+  td {
+    @include vars(border-color, color-secondary-c);
+  }
 }
 
-%table-header {
-  @include vars(background-color, color-secondary-c);
-  @include vars(color, color-primary-c);
-  padding: 10px;
-}
+%form { }
 
-%table-body{
-  @include vars(border-color, color-secondary-c);
-  border: solid 1px;
-  padding: 10px;
-}
 
 /* ==============================
             Site Header
    ============================== */
 
-%site-header{
-  padding: 20px 10px;
-  display: flex;
-  min-height: 100px;
-  position: relative;
-}
+%site-header { }
 
-%header-inner-div{
-  display: flex;
-  flex: 1;
-  margin: 0 auto;
-}
+%site-logo { }
 
-%site-logo{
-  align-items: center;
-  display: flex;
-  width: 100%;
-}
-
-%mobile-menu{
-  display: none;
-}
-
-%mobile-nav{
-  display: flex;
-  align-items: center;
-  flex: 1 1 auto;
-  justify-content: flex-end;
-}
+%mobile-nav { }
 
 %menu-link{
   list-style: none;
   text-decoration: none;
   font-size: 18px;
-  @include vars(color, color-primary-c);
+  @include vars(color, color-neutral-b);
   @include vars(font-family, font-family-secondary);
   text-transform: uppercase;
 }
@@ -260,47 +217,18 @@ $vars: (
   display: none;
 }
 
-%menu-toggle{
-  display: inline-block;
-  float: right;
-  height: 50px;
-  width: 80px;
-}
-
-%menu-toggle-div{
-  height: 100%;
-  position: relative;
-  top: -12px;
-  width: 100%;
-  z-index: 9999;
-}
-
-%menu-toggle-span{
-  @include vars(background-color, color-primary-c);
-  display: block;
-  height: 6px;
-  left: 25%;
-  position: absolute;
-  top: 50%;
-  transition: background-color 0.3s;
-  width: 43.76%;
-  z-index: 9999;
-  cursor: pointer;
-
+%menu-toggle-hamburger {
+  @include vars(background-color, color-primary-a);
+  
   &:before, &:after{
-    @include vars(background, color-primary-c);
-    content: '';
-    height: 100%;
-    left: 0;
-    position: absolute;
-    transform: translateY(-150%);
-    transition: transform 0.3s, background-color 0.3s;
-    width: 100%;
-    z-index: 9999;
+    @include vars(background, color-primary-a);
   }
 
-  &:after{
-    transform: translateY(150%);
+  &.active::before ,
+  &.active::after {
+    @include vars(background, color-primary-c);
+    transform: rotate(45deg) translateY(0);
+    transition: transform 0.3s;
   }
 }
 
@@ -453,9 +381,6 @@ $vars: (
   font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
-  &:focus, &:active, &:hover{
-    @extend %link-hover;
-  }
 }
 
 %sub-nav-menu-links{
@@ -469,8 +394,8 @@ $vars: (
 %sub-nav-link-title{
   margin-bottom: 10px;
   opacity: 0.7;
+
   &:focus, &:active, &:hover{
-    @extend %link-hover;
     @include vars(color, color-primary-c);
   }
 }
@@ -565,9 +490,6 @@ $vars: (
   font-weight: bold;
   text-transform: uppercase;
   padding: 1rem 2rem;
-  &:hover, &:focus, &:active{
-    @extend %button-hover;
-  }
 }
 
 /* ==============================
@@ -783,7 +705,6 @@ $vars: (
     font-size: 22px;
     line-height: 34px;
     max-width: 65%;
-    margin: 10px auto;
   }
 }
 
@@ -793,10 +714,13 @@ $vars: (
 
 %full-width-pargph-link{
   @extend %button;
+  @include vars(background-color, color-primary-b);
+  padding: 0.5rem 1rem;
   margin-top: 10px;
   font-weight: bold;
-  &:hover, &:focus, &:active{
-    @extend %button-hover;
+
+  &:hover {
+    @include vars(background-color, color-neutral-c);
   }
 }
 
@@ -1286,54 +1210,8 @@ $vars: (
   padding: 2%;
 }
 
-%menu-toggle-div{
-  height: 100%;
-  position: relative;
-  top: -12px;
-  width: 100%;
-  z-index: 9999;
-}
 
-%menu-toggle-span{
-  @include vars(background-color, color-primary-c);
-  display: block;
-  height: 6px;
-  left: 25%;
-  position: absolute;
-  top: 50%;
-  transition: background-color 0.3s;
-  width: 43.76%;
-  z-index: 9999;
-  cursor: pointer;
 
-  &:before, &:after{
-    @include vars(background, color-primary-c);
-    content: '';
-    height: 100%;
-    left: 0;
-    position: absolute;
-    transform: translateY(-150%);
-    transition: transform 0.3s, background-color 0.3s;
-    width: 100%;
-    z-index: 9999;
-  }
-
-  &:after{
-    transform: translateY(150%);
-  }
-}
-
-%menu-toggle-active{
-  background-color: transparent;
-  &:before, &:after{
-    @include vars(background, color-primary-c);
-    transform: rotate(45deg) translateY(0);
-    transition: transform 0.3s;
-  }
-  &:after{
-    transform: rotate(-45deg) translateY(0);
-  }
-}
 
 %primary-nav-region{
   @include vars(background-color, color-primary-e);
@@ -1348,10 +1226,6 @@ $vars: (
 }
 
 @include mq(desktop) {
-  %site-header{
-    min-height: rem(133);
-  }
-
   %mobile-nav{
     display: none;
   }
@@ -1360,34 +1234,7 @@ $vars: (
     width: auto;
   }
 
-  %desktop-nav{
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-  }
-
-  %primary-nav-region{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: static;
-  }
-
-  %primary-nav{
-    flex: none;
-    margin-right: 0.5em;
-  }
-
-  %nav-menu{
-    align-items: flex-end;
-    display: flex;
-    height: 100%;
-    justify-content: flex-end;
-    margin: 5px 0;
-  }
-
-  %menu-item{
+  %menu-item {
     margin-left: rem(22);
   }
 
@@ -1617,10 +1464,7 @@ $vars: (
 }
 
 %footer-email-link{
-  @extend %link;
-  &:hover, &:focus, &:active{
-    @extend %link-hover;
-  }
+  @extend %a;
 }
 
 %footer-contact-links{
@@ -1645,10 +1489,6 @@ $vars: (
     display: block;
     font-size: 12px;
     text-decoration: none;
-
-    &:hover, &:focus, &:active{
-      @extend %link-hover;
-    }
   }
 }
 

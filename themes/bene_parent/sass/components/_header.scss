@@ -1,32 +1,94 @@
 .site-header{
+  padding: 20px 10px;
+  display: flex;
+  min-height: 100px;
+  position: relative;
   @extend %site-header;
 
-  .inner{@extend %header-inner-div;}
+  @include mq(desktop) {
+    align-items: flex-end;
+    min-height: rem(133);
+  }
 
-  .logo-wrapper{@extend %site-logo;}
+  .inner{
+    display: flex;
+    flex: 1;
+    margin: 0 auto;
+  }
 
-  .desktop-nav, .mobile-nav .menu{@extend %mobile-menu;}
+  .logo-wrapper{
+    align-items: center;
+    display: flex;
+    width: 100%;
 
-  .desktop-nav .menu--utility .menu-item a{
+    @extend %site-logo;
+  }
+
+  .desktop-nav, 
+  .mobile-nav .menu{
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+
+    display: none;
+  }
+
+  // Utility menu links
+  .desktop-nav .menu--utility .menu-item a {
     @extend %menu-utility;
   }
 
-  .mobile-nav{@extend  %mobile-nav;
-    .menu{@extend %text-align-center; @extend %margin-0}
+  // Small screen navigation
+  .mobile-nav {
+    @extend  %mobile-nav;
+
+    .menu {
+      text-align: center;
+      margin: 0;
+    }
   }
 
-  .desktop-nav{@extend %desktop-nav;}
+  .desktop-nav{
+    align-self: stretch;
+    display: none;
+    flex-direction: column;
+    flex: 1 1 auto;
+    align-items: flex-end;
+
+    @include mq(desktop) {
+      display: flex;
+    }
+
+  }
 
   .region-primary-nav{
-    @extend %primary-nav-region;
-    nav{@extend %primary-nav;}
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: static;
+
+    nav{
+      flex: none;
+      margin-right: 0.5em;
+      @extend %primary-nav;
+    }
   }
 
-  .menu{@extend %nav-menu;}
+  .menu {
+    align-items: flex-end;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    margin: 5px 0;
+  }
 
   .menu-item{@extend  %menu-item;}
 
-  .menu li, .menu a{@extend %menu-link;}
+  .menu li, 
+  .menu a{
+    @extend %menu-link;
+  }
 
   .menu li, .menu a{
     &:hover{@extend %menu-link-hover;}
@@ -41,16 +103,61 @@
   }
 
   .mobile-menu-toggle{
-    @extend %menu-toggle;
-    div{@extend %menu-toggle-div;}
-    span{@extend %menu-toggle-span;}
+    display: inline-block;
+    float: right;
+    height: 50px;
+    width: 80px;
+
+    div{
+      height: 100%;
+      position: relative;
+      top: -12px;
+      width: 100%;
+      z-index: 9999;
+    }
+
+    span{
+      display: block;
+      height: 6px;
+      left: 25%;
+      position: absolute;
+      top: 50%;
+      transition: background-color 0.3s;
+      width: 43.76%;
+      z-index: 9999;
+      cursor: pointer;
+
+      &:before, &:after{
+        content: '';
+        height: 100%;
+        left: 0;
+        position: absolute;
+        transform: translateY(-150%);
+        transition: transform 0.3s, background-color 0.3s;
+        width: 100%;
+        z-index: 9999;
+      }
+
+      &:after{
+        transform: translateY(150%);
+      }
+
+      @extend %menu-toggle-hamburger;
+    }
   }
 
   .mobile-menu-toggle.active{
-    @extend %menu-toggle;
-    div{@extend %menu-toggle-div;}
-    span{@extend %menu-toggle-span;}
-    span{@extend %menu-toggle-active;}
+    background-color: transparent;
+
+    &:before, &:after{
+      @include vars(background, color-primary-c);
+      transform: rotate(45deg) translateY(0);
+      transition: transform 0.3s;
+    }
+
+    &:after {
+      transform: rotate(-45deg) translateY(0);
+    }
   }
 }
 
