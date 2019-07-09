@@ -674,7 +674,10 @@ $vars: (
 
 %rch-txt-intro{
   @include vars(color, color-primary-d);
-  padding: 25px 0;
+  box-sizing: content-box;
+  max-width: 843px;
+  margin: 0 auto;
+  padding: 25px;
 }
 
 %rch-txt-intro-heading{
