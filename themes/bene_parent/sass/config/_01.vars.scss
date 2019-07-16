@@ -669,14 +669,21 @@ $vars: (
 }
 
 /* ==============================
+             Shared text styles
+   ============================== */
+
+%center-max-width {
+  max-width: 843px;
+  margin: 0 auto;
+}
+
+/* ==============================
          Rich Text - Intro
    ============================== */
 
 %rch-txt-intro{
   @include vars(color, color-primary-d);
   box-sizing: content-box;
-  max-width: 843px;
-  margin: 0 auto;
   padding: 25px;
 }
 

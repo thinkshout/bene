@@ -5,3 +5,7 @@
   p{@extend %newsletter-p;}
   a{@extend %newsletter-a;}
 }
+
+.field--name-bene-date {
+  @extend %center-max-width;
+}

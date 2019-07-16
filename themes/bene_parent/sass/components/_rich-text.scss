@@ -16,6 +16,11 @@
   }
 }
 
+.paragraph--type--rich-text,
+.field--name-bene-intro {
+  @extend %center-max-width;
+}
+
 .page-node-type-page .paragraph--type--rich-text{
   @extend %rch-txt-intro;
   h1, h2, h3, h4, h5, h6{
