@@ -589,8 +589,8 @@ tbody td {
 /* ==============================
              Shared text styles
    ============================== */
-.field--name-bene-date, .paragraph--type--rich-text,
-.field--name-bene-intro {
+.field--name-bene-date, .node--view-mode-full > .node__content > .field--name-bene-intro,
+.paragraph--type--rich-text {
   max-width: 843px;
   margin: 0 auto; }
 

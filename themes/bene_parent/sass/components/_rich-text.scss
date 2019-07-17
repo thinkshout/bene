@@ -16,8 +16,8 @@
   }
 }
 
-.paragraph--type--rich-text,
-.field--name-bene-intro {
+.node--view-mode-full > .node__content > .field--name-bene-intro,
+.paragraph--type--rich-text {
   @extend %center-max-width;
 }
 
