@@ -960,21 +960,10 @@ $vars: (
 
 %listing-pg-event-details{
   padding-left: 0;
-  margin-left: 0;
 }
 
 %listing-pg-intro-and-event-details{
   clear: both;
-  padding: 0 2%;
-}
-
-@include mq(desktop){
-  %listing-pg-intro-and-event-details{
-    @include span-columns(12);
-    @include shift(0.2);
-    margin-left: 0;
-    margin-right: 0;
-  }
 }
 
 %listing-pg-font-settings{

@@ -835,33 +835,14 @@ tbody td {
 
 .page-node-type-listing-page .field--name-bene-intro,
 .page-node-type-listing-page .field--name-bene-event-date-range {
-  padding-left: 0;
-  margin-left: 0; }
+  padding-left: 0; }
 
 .node--type-listing-page .field--name-bene-intro,
 .node--type-listing-page .paragraph--type--rich-text,
 .block-system-main-block .field--name-bene-event-date-range,
 .block-system-main-block .field--name-bene-event-location {
-  clear: both;
-  padding: 0 2%; }
+  clear: both; }
 
-@media (min-width: 769px) {
-  .node--type-listing-page .field--name-bene-intro,
-  .node--type-listing-page .paragraph--type--rich-text,
-  .block-system-main-block .field--name-bene-event-date-range,
-  .block-system-main-block .field--name-bene-event-location {
-    float: left;
-    display: block;
-    margin-right: 2.3576515979%;
-    width: 100%;
-    margin-left: 1.70596086%;
-    margin-left: 0;
-    margin-right: 0; }
-    .node--type-listing-page .field--name-bene-intro:last-child,
-    .node--type-listing-page .paragraph--type--rich-text:last-child,
-    .block-system-main-block .field--name-bene-event-date-range:last-child,
-    .block-system-main-block .field--name-bene-event-location:last-child {
-      margin-right: 0; } }
 .block-system-main-block article.node--type-event .node__content .field--name-bene-event-date-range,
 .block-system-main-block article.node--type-event .node__content .field--name-bene-event-location,
 .block-system-main-block article.node--type-event .node__content .field--name-bene-intro,
