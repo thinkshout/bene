@@ -1374,12 +1374,6 @@ form input {
 .simple-styleguide--site-styles {
   max-width: 100%; }
 
-.js-form-item-select-list, .js-form-item-select-list-multi {
-  display: none; }
-
-.simple-styleguide--site-styles {
-  max-width: 100%; }
-
 #page,
 .site-content,
 .site-footer,
