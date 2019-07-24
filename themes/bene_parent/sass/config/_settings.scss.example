@@ -1,18 +1,23 @@
 $vars: (
   //Colors
-  color-primary-a: '', //light blue color-primary-b: #1E5375, //dark blue color-primary-c: #ffffff, //white
-  coror-primary-b: '', //black
-  color-primary-c: '', //teal
+  //-- Main palette
+  color-primary-a: '', 
+  coror-primary-b: '',
+  color-primary-c: '',
+
+  //-- Accent colors
   color-secondary-a: '',
   color-secondary-b: '',
   color-secondary-c: '',
-  color-neutral-a: #ffffff, //white
-  color-neutral-b: #000000, //black
+
+  //-- Neutral colors
+  color-neutral-a: #ffffff, 
+  color-neutral-b: #000000,
   color-neutral-c: #D1D1D1,
 
   //Fonts
-  font-family-primary: "'Work Sans', sans-serif",
-  font-family-secondary: "'Oswald', sans-serif",
+  font-family-primary: "", // Body font
+  font-family-secondary: "", // Heading font
   font-weight-regular: 400,
   font-weight-medium: 600,
   font-weight-bold: 700,
@@ -20,7 +25,7 @@ $vars: (
   font-style-italic: italic,
   font-style-normal: normal,
 
-  //Layout
+  // Containers
   container-max-width: 822px,
   container-wide-max-width: 1260px,
 );
@@ -35,7 +40,6 @@ $vars: (
 /* ==============================
             BASE STYLING
    ============================== */
-
 // HEADINGS
 %h1 { }
 
@@ -56,7 +60,9 @@ $vars: (
 }
 
 // Blockquotes
-%blockquote { }
+%blockquote { 
+  p {}
+}
 
 // List items
 %ul { }
@@ -76,8 +82,18 @@ $vars: (
   // Include form elements inside this block
 }
 
+%button {
+
+  &:hover { }
+}
+
+%button-secondary {
+
+  &:hover { }
+}
+
 /* ==============================
-            Site Header
+            Site Header and Nav
    ============================== */
 
 // Wrapper around logo and nav
@@ -91,6 +107,27 @@ $vars: (
 // Mobile menu
 %mobile-nav { }
 
+/* ==============================
+          Sub Navigation
+   ============================== */
+%sub-nav-block { }
+%sub-nav-menu {
+  // Set menu alignment here
+}
+%sub-nav-links { }
+%sub-nav-menu-links-active { }
+
+/* ==============================
+            Site Footer
+   ============================== */
+%footer-menu { }
+%footer-menu-item { }
+%footer-email-link { }
+%footer-contact-links { }
+%footer-social-links { }
+%footer-copyright { }
+
+
 
 /* ==============================
             Home Banner 
@@ -103,6 +140,87 @@ $vars: (
 
 
 /* ==============================
-            Site Footer
+           Listing Page
    ============================== */
-%footer { }
+%listing-pg-container { }
+
+// Search settings
+%listing-pg-form-container { }
+%listing-pg-form { }
+%listing-pg-label { }
+%listing-pg-input { }
+%listing-pg-form-submit { }
+
+// Content
+%listing-pg-article { 
+
+  img { }
+  h2 { }
+  a { }
+}
+
+
+/* ==============================
+         Rich Text - WYSIWYG
+   ============================== */
+// Intro text
+%rch-txt-intro { 
+  h2 { }
+  h3 { }
+  p { }
+  a { }
+}
+
+%rich-text-p { @extend %p; }
+  
+%rich-text-a { @extend %a; }
+  
+%rich-text-ul { @extend %ul; }
+  
+%rich-text-ol { @extend %ol; }
+  
+%rich-text-blockquote { @extend %blockquote; }
+
+
+/* ==============================
+    Full Width Feature Paragraph
+   ============================== */
+%full-width-pargph { 
+  // Set alignment here
+
+  &:before { }
+}
+
+// When no image
+%full-width-pargph-no-img { }
+
+%full-width-pargph-title { }
+%full-width-pargph-text { }
+%full-width-pargph-link { }
+
+
+/* ==============================
+               Tiles
+   ============================== */
+%tiles-background { }
+%tiles-wrapper { 
+  // Adjust alignment here
+}
+
+// Section title
+%tiles-main-title { }
+
+// Single tiles
+%individual-tiles { }
+%tiles-img-container { }
+%tiles-img { }
+%tile-text { }
+%tile-inner-title { }
+%tile-link { }
+
+/* ==============================
+           Inline Embeds
+   ============================== */
+// Images
+%embed-img { }
+%embed-video { }
