@@ -25,12 +25,13 @@ content:
     settings:
       entity_browser: media_browser_modal
       field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: form_preview
       field_widget_edit: true
       field_widget_remove: true
       open: true
       selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: thumbnail
+      field_widget_replace: false
     region: content
     third_party_settings: {  }
   bene_intro:
@@ -89,6 +90,11 @@ content:
       size: 60
       placeholder: ''
     region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   promote: true
