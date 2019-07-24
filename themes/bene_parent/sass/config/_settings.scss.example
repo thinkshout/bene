@@ -81,11 +81,28 @@ $vars: (
    ============================== */
 
 // Wrapper around logo and nav
+// Use to adjust container for site header if necessary
 %site-header { }
 
 // Container for site logo
+// Use to adjust logo size 
 %site-logo{ }
 
 // Mobile menu
 %mobile-nav { }
 
+
+/* ==============================
+            Home Banner 
+   ============================== */
+%home-banner-container { }
+%home-banner-lead-text { }
+%home-banner-title { }
+%home-button-wrapper { }
+%home-banner-link { }
+
+
+/* ==============================
+            Site Footer
+   ============================== */
+%footer { }

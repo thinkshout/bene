@@ -92,14 +92,14 @@ a {
     color:  #ffffff;
     color: var(--color-neutral-a ); }
 
-.block-bene-home-page-feature-block .field--name-bene-link a, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a, .button, .page-node-type-page .field--name-bene-intro a.button, .page-node-type-page .paragraph--type--rich-text a.button {
+.feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a, .button, .block-bene-home-page-feature-block .field--name-bene-link a, .page-node-type-page .field--name-bene-intro a.button, .page-node-type-page .paragraph--type--rich-text a.button {
   color:  #ffffff;
   color: var(--color-primary-c );
   background-color:  ;
   background-color: var(--color-secondary-c );
   font-family:  'Oswald', sans-serif;
   font-family: var(--font-family-secondary ); }
-  .block-bene-home-page-feature-block .field--name-bene-link a:hover, .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:hover, .button:hover, .page-node-type-page .field--name-bene-intro a.button:hover, .page-node-type-page .paragraph--type--rich-text a.button:hover {
+  .feature-full-width-paragraph .paragraph--type--feature-full-width .field--type-link a:hover, .button:hover, .block-bene-home-page-feature-block .field--name-bene-link a:hover, .page-node-type-page .field--name-bene-intro a.button:hover, .page-node-type-page .paragraph--type--rich-text a.button:hover {
     background-color:  ;
     background-color: var(--color-secondary-d );
     color:  #ffffff;
@@ -292,76 +292,6 @@ table {
 /* ==============================
         Home Page Feature
    ============================== */
-.block-bene-home-page-feature-block {
-  background-color:  #129FB5;
-  background-color: var(--color-primary-e );
-  color:  #ffffff;
-  color: var(--color-primary-c );
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  text-align: center;
-  padding: 8rem 1rem;
-  position: relative; }
-  .block-bene-home-page-feature-block:after {
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 79%);
-    content: "";
-    height: 100%;
-    left: 0;
-    opacity: .45;
-    position: absolute;
-    top: 0;
-    width: 100%; }
-
-@media (max-width: 414px) {
-  .block-bene-home-page-feature-block {
-    background-size: cover;
-    background-position: center top;
-    max-height: 33.6875rem; } }
-@media (min-width: 960px) {
-  .block-bene-home-page-feature-block {
-    min-height: 31.25rem; } }
-.block-bene-home-page-feature-block .field--name-bene-lead {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  position: relative;
-  z-index: 1; }
-
-@media (max-width: 414px) {
-  .block-bene-home-page-feature-block .field--name-bene-lead {
-    font-size: 1rem;
-    line-height: 1.25rem;
-    padding-top: 7rem; } }
-.block-bene-home-page-feature-block .field--name-bene-title {
-  font-size: 50px;
-  font-weight: bold;
-  line-height: 70px;
-  padding-top: 50px;
-  z-index: 2;
-  margin: 0 auto 50px auto;
-  max-width: 56.25rem;
-  position: relative;
-  font-family:  'Oswald', sans-serif;
-  font-family: var(--font-family-secondary ); }
-
-@media (max-width: 414px) {
-  .block-bene-home-page-feature-block .field--name-bene-title {
-    font-size: 40px;
-    line-height: 45px; } }
-@media (min-width: 415px) and (max-width: 768px) {
-  .block-bene-home-page-feature-block .field--name-bene-title {
-    font-size: 40px;
-    line-height: 45px; } }
-.block-bene-home-page-feature-block .field--name-bene-link {
-  position: relative;
-  z-index: 1; }
-
-.block-bene-home-page-feature-block .field--name-bene-link a {
-  font-size: 0.875rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 1rem 2rem; }
-
 /* ==============================
                Tiles
    ============================== */
@@ -1512,6 +1442,69 @@ form input {
       transition: transform 0.3s; }
     .site-header .mobile-menu-toggle.active:after {
       transform: rotate(-45deg) translateY(0); }
+
+.block-bene-home-page-feature-block {
+  background-color:  #129FB5;
+  background-color: var(--color-primary-e );
+  color:  #ffffff;
+  color: var(--color-primary-c );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  padding: 8rem 1rem;
+  position: relative; }
+  .block-bene-home-page-feature-block:after {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 79%);
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: .45;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+  @media (max-width: 414px) {
+    .block-bene-home-page-feature-block {
+      background-size: cover;
+      background-position: center top;
+      max-height: 33.6875rem; } }
+  @media (min-width: 1024px) {
+    .block-bene-home-page-feature-block {
+      min-height: 31.25rem; } }
+  .block-bene-home-page-feature-block .field--name-bene-lead {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1; }
+    @media (max-width: 414px) {
+      .block-bene-home-page-feature-block .field--name-bene-lead {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        padding-top: 7rem; } }
+  .block-bene-home-page-feature-block .field--name-bene-title {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 70px;
+    padding-top: 50px;
+    z-index: 2;
+    margin: 0 auto 50px auto;
+    max-width: 56.25rem;
+    position: relative;
+    font-family:  'Oswald', sans-serif;
+    font-family: var(--font-family-secondary ); }
+    @media (max-width: 414px) {
+      .block-bene-home-page-feature-block .field--name-bene-title {
+        font-size: 40px;
+        line-height: 45px; } }
+    @media (min-width: 415px) and (max-width: 767px) {
+      .block-bene-home-page-feature-block .field--name-bene-title {
+        font-size: 40px;
+        line-height: 45px; } }
+  .block-bene-home-page-feature-block .field--name-bene-link a {
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem 2rem; }
 
 .page-node-type-listing-page .views-element-container {
   width: 90%; }
