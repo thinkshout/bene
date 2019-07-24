@@ -7,7 +7,7 @@ dependencies:
   - responsive_tables_filter
 name: 'Full HTML'
 format: full_html
-weight: -10
+weight: 1
 filters:
   filter_align:
     id: filter_align
