@@ -5,7 +5,12 @@
 .feature-full-width-paragraph .paragraph--type--feature-full-width{
   @extend %full-width-pargph;
 
-  .field--name-field-title{
+  .container-wide {
+    z-index: 10;
+    width: 100%;
+  }
+
+  h2 {
     @extend %full-width-pargph-z-index;
     @extend %full-width-pargph-title;
   }

@@ -50,9 +50,13 @@
 {% block paragraph %}
 <div class="feature-full-width-paragraph">
   <div{{ attributes.addClass(classes) }}>
-        {% block content %}
-          {{ content }}
-        {% endblock %}
+    <div class="container-wide">
+    {% block content %}
+      <h2>{{ content.field_title.0['#context'].value }}</h2>
+      {{ content.field_text }}
+      {{ content.field_link }}
+    {% endblock %}
+    </div>
   </div>
 </div>
 {% endblock paragraph %}

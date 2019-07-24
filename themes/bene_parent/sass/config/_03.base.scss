@@ -1,9 +1,10 @@
 /* BASE ELEMENT STYLES */
 body {
+  box-sizing: border-box;
   @extend %body;
 }
 
-h1, h2, h3, h4, h5, h6 {@extend %h1-h6;}
+h1, h2, h3, h4, h5, h6 { @extend %h1-h6 !optional; }
 
 h1 {@extend %h1;}
 h2 {@extend %h2;}
@@ -11,67 +12,89 @@ h3 {@extend %h3;}
 h4 {@extend %h4;}
 h5 {@extend %h5;}
 
-p, p.standard {@extend %text}
+p, p.standard { @extend %p !optional; }
 
 a {
-  @extend %link;
-  &:hover, &:active, &:focus { @extend %link-hover;}
+  @extend %a;
+  text-decoration: none;
 }
-
 
 .button {
   @extend %button;
-  &:hover, &:active, &:focus{
-    @extend %button-hover;
-  }
+  font-size: 16px;
+  line-height: rem(32);
+  margin: 0;
+  padding: 12px 35px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
 }
 
+.button-secondary {
+  border-radius: 100px;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: rem(32);
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 35px;
+  text-transform: uppercase;
+}
 
 ul {
   li {
-    @extend %lists;
+    font-size: rem(16);
+    line-height: rem(32);
   }
+
+  @extend %ul;
 }
 
 ol {
   li {
-   @extend %lists;
+    font-size: rem(16);
+    line-height: rem(32);
   }
+
+  @extend %ol;
 }
 
-blockquote{
-  @extend %text;
+blockquote {
   @extend %blockquote;
 }
 
-blockquote p{
-  @extend %blockquote-p;
-}
-
-label{
-  font-weight: 400;
-  font-size: 0.875rem;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-input{
-  background-color: #f3f3f3;
-  border-radius: 0;
-  border: none;
-  padding: 1rem;
-}
-
-table{
+table {
+  border: solid 1px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  padding: 1em;
   @extend %table;
+
+  th {
+    padding: 10px;
+  }
+
+  td {
+    border: solid 1px;
+    padding: 10px;
+  }
 }
 
-thead th{
-  @extend %table-header;
+form {
+  label {
+    font-weight: 400;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  input {
+    background-color: #f3f3f3;
+    border-radius: 0;
+    border: none;
+    padding: 1rem;
+  }
+
+  @extend %form !optional;
 }
-
-tbody td {
-  @extend %table-body;
-}
-
-

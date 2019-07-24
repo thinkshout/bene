@@ -38,43 +38,21 @@
  * @ingroup themeable
  */
 #}
-{% set classes = [
+{%
+  set classes = [
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    'paragraph-' ~ paragraph.id(),
-] %}
-{% if content.field_link %}
-    {% set href = content.field_link.0['#url'] %}
-{% endif %}
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'rich-text',
+  ]
+%}
 {% block paragraph %}
-    <div{{ attributes.addClass(classes) }}>
-        {% block content %}
-            {% if href %}
-                <a href="{{ href }}">
-            {% endif %}
-            {{ content.field_image }}
-            {% if href %}
-                </a>
-            {% endif %}
-            <div class="tile-text">
-                <div class="text-wrapper">
-                    {{ content.field_lead }}
-                    {% if href %}
-                    <a href="{{ href }}">
-                        {% endif %}
-                        {{ content.field_title }}
-                        {% if href %}
-                    </a>
-                    {% endif %}
-                    {{ content.field_text }}
-                </div>
-                <div class="button-wrapper">
-                    {% if content.field_link.0['#title']|render != content.field_link.0['#url']|render %}
-                        {{ content.field_link }}
-                    {% endif %}
-                </div>
-            </div>
-        {% endblock %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+    <div class="container">
+      {{ content }}
     </div>
+    {% endblock %}
+  </div>
 {% endblock paragraph %}

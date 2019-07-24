@@ -10,6 +10,9 @@ $vars: (
         color-secondary-c: '', //light yellow
         color-secondary-d: '', //dark yellow
         color-secondary-e: '', //green
+        color-neutral-a: #ffffff, //white
+        color-neutral-b: #000000, //black
+        color-neutral-c: #D1D1D1,
 
   //Fonts
         font-family-primary: "'Work Sans', sans-serif",
@@ -27,7 +30,11 @@ $vars: (
 
   //Buttons & Inputs
         button-padding: 2rem,
-        input-height: 100px
+        input-height: 100px,
+
+  //Layout
+        container-max-width: 822px,
+        container-wide-max-width: 1260px,
 );
 
 
@@ -42,196 +49,151 @@ $vars: (
    ============================== */
 
 %body {
-  box-sizing: border-box;
   @include vars(font-style, font-style-normal);
   @include vars(font-family, font-family-primary);
 }
 
 %h1-h6{
   @include vars(color, color-primary-d);
-  margin: rem(16) 0;
   @include vars(font-family, font-family-secondary);
 }
 
 %h1{
   font-size: 75px;
   line-height: 65px;
+
+  @include mq(mobile) {
+    font-size: 55px;
+    line-height: 45px; 
+  }
 }
 
 %h2 {
   font-size: 65px;
   line-height: 75px;
+
+  @include mq(mobile) {
+    font-size: 45px;
+    line-height: 55px;
+  }
 }
 
 %h3 {
   font-size: 58px;
   line-height: 68px;
+
+  @include mq(mobile) {
+    font-size: 38px;
+    line-height: 48px;
+  }
 }
 
 %h4 {
   font-size: 45px;
   line-height: 55px;
+  @include mq(mobile){
+    font-size: 30px;
+    line-height: 40px
+  }
 }
 
 %h5{
   font-size: 35px;
   line-height: 45px;
-}
 
-@include mq(mobile){
-  %h1{
-    font-size: 55px;
-    line-height: 45px;
-  }
-  %h2 {
-    font-size: 45px;
-    line-height: 55px;
-  }
-  %h3 {
-    font-size: 38px;
-    line-height: 48px;
-  }
-  %h4 {
-    font-size: 30px;
-    line-height: 40px;
-  }
-  %h5 {
+  @include mq(mobile) {
     font-size: 28px;
-    line-height: 38px;
+    line-height: 38px; 
   }
 }
 
-%link{
-  @include vars(color, color-secondary-c);
-  cursor: pointer;
-  text-decoration: none;
+%p {}
+
+%a {
+  @include vars(color, color-neutral-b);
+
+  &:hover {
+    @include vars(color, color-neutral-a);
+  }
 }
 
-%link-hover{
-  @include vars(color, color-secondary-d);
-}
-
-%button{
+%button {
   @include vars(color, color-primary-c);
   @include vars(background-color, color-secondary-c);
   @include vars(font-family, font-family-secondary);
-  border-radius: 100px;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: rem(32);
-  margin: 0;
-  text-align: center;
-  text-decoration: none;
-  padding: 12px 35px;
-  text-transform: uppercase;
+
+  &:hover {
+    @include vars(background-color, color-secondary-d);
+    @include vars(color, color-primary-c);
+  }
 }
 
-%button-hover{
-  @include vars(background-color, color-secondary-d);
-  @include vars(color, color-primary-c);
-}
-
-%button-secondary{
+%button-secondary {
   @include vars(color, color-primary-c);
   @include vars(background-color, color-secondary-c);
   @include vars(font-family, font-family-secondary);
-  border-radius: 100px;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: rem(32);
-  margin: 0;
-  text-align: center;
-  text-decoration: none;
-  padding: 12px 35px;
-  text-transform: uppercase;
+
+  &:hover {
+    @include vars(background-color, color-secondary-d);
+    @include vars(color, color-primary-c);
+  }
 }
 
-%button-secondary-hover{
-  @include vars(background-color, color-secondary-d);
-  @include vars(color, color-primary-c);
+
+%blockquote {
+  @include vars(color, color-primary-d);
+  
+  p {
+    @include vars(color, color-primary-d);
+  }
 }
 
-%text {
-  font-size: rem(16);
-  line-height: rem(32);
-  @include vars(font-family, font-family-primary);
-  @include vars(color, color-primary-d);
+
+%ul {
+  li {
+    @include vars(font-family, font-family-primary);
+    @include vars(color, color-primary-d);
+  }
 }
 
-%blockquote{
-  @include vars(color, color-primary-d);
-}
-%blockquote-p{
-  @include vars(color, color-primary-d);
-}
-
-%lists{
-  font-size: rem(16);
-  line-height: rem(32);
-  @include vars(font-family, font-family-primary);
-  @include vars(color, color-primary-d);
+%ol {
+  li {
+    @include vars(font-family, font-family-primary);
+    @include vars(color, color-primary-d);
+  }
 }
 
 %table{
-  border: solid 1px;
   @include vars(border-color, color-secondary-c);
-  border-collapse: collapse;
-  border-spacing: 0;
-  padding: 1em;
+
+  th {
+    @include vars(background-color, color-secondary-c);
+    @include vars(color, color-primary-c);
+  }
+
+  td {
+    @include vars(border-color, color-secondary-c);
+  }
 }
 
-%table-header {
-  @include vars(background-color, color-secondary-c);
-  @include vars(color, color-primary-c);
-  padding: 10px;
-}
+%form { }
 
-%table-body{
-  @include vars(border-color, color-secondary-c);
-  border: solid 1px;
-  padding: 10px;
-}
 
 /* ==============================
             Site Header
    ============================== */
 
-%site-header{
-  @include vars(background-color, color-primary-e);
-  padding: 20px 10px;
-  display: flex;
-  min-height: 100px;
-  position: relative;
-}
+%site-header { }
 
-%header-inner-div{
-  display: flex;
-  flex: 1;
-  margin: 0 auto;
-}
+%site-logo { }
 
-%site-logo{
-  align-items: center;
-  display: flex;
-  width: 100%;
-}
-
-%mobile-menu{
-  display: none;
-}
-
-%mobile-nav{
-  display: flex;
-  align-items: center;
-  flex: 1 1 auto;
-  justify-content: flex-end;
-}
+%mobile-nav { }
 
 %menu-link{
   list-style: none;
   text-decoration: none;
   font-size: 18px;
-  @include vars(color, color-primary-c);
+  @include vars(color, color-neutral-b);
   @include vars(font-family, font-family-secondary);
   text-transform: uppercase;
 }
@@ -253,56 +215,20 @@ $vars: (
 
 %join-menu{
   display: none;
-  &:last-child{
-    display: inline-block;
-    @include vars(background-color, color-secondary-c);
-    border-radius: 100px;
-    width: 100px;
-    text-align: center;
-  }
 }
 
-%menu-toggle{
-  display: inline-block;
-  float: right;
-  height: 50px;
-  width: 80px;
-}
-
-%menu-toggle-div{
-  height: 100%;
-  position: relative;
-  top: -12px;
-  width: 100%;
-  z-index: 9999;
-}
-
-%menu-toggle-span{
-  @include vars(background-color, color-primary-c);
-  display: block;
-  height: 6px;
-  left: 25%;
-  position: absolute;
-  top: 50%;
-  transition: background-color 0.3s;
-  width: 43.76%;
-  z-index: 9999;
-  cursor: pointer;
-
+%menu-toggle-hamburger {
+  @include vars(background-color, color-primary-a);
+  
   &:before, &:after{
-    @include vars(background, color-primary-c);
-    content: '';
-    height: 100%;
-    left: 0;
-    position: absolute;
-    transform: translateY(-150%);
-    transition: transform 0.3s, background-color 0.3s;
-    width: 100%;
-    z-index: 9999;
+    @include vars(background, color-primary-a);
   }
 
-  &:after{
-    transform: translateY(150%);
+  &.active::before ,
+  &.active::after {
+    @include vars(background, color-primary-c);
+    transform: rotate(45deg) translateY(0);
+    transition: transform 0.3s;
   }
 }
 
@@ -374,48 +300,22 @@ $vars: (
     margin-left: rem(22);
   }
 
-  %main-menu-button{
-    &:last-child a{
-      @include vars(background-color, color-secondary-c);
-      @include vars(color, color-primary-c);
-      border-radius: 100px;
-      width: 100px;
-      text-align: center;
-      padding: 0.5rem 1.5rem;
-      &:focus, &:active, &:hover{
-        @include vars(background-color, color-secondary-d);
-      }
-    }
-  }
-
   %join-button{
     display: none;
   }
 }
 
 /* ==============================
-          Sub Navigation
+          Page Banner 
    ============================== */
 
 %title-block{
-  background-image: linear-gradient(#248BCB, #1E5375);
   padding: 100px 0;
   height: 6.25rem;
 }
 
 %title-block-bgimage{
   height: 24vw;
-  &:after{
-    @include vars(background-color, color-primary-a);
-    content: '';
-    height: 100%;
-    left: 0;
-    top: 0;
-    opacity: .6;
-    position: absolute;
-    width: 100%;
-    z-index: 0;
-  }
 }
 
 %title-block-no-bgimage{
@@ -439,7 +339,6 @@ $vars: (
   font-size: 2rem;
   margin-top: 0;
   text-align: center;
-  text-transform: uppercase;
   z-index: 20;
 }
 
@@ -448,6 +347,10 @@ $vars: (
     font-size: 3.75rem;
   }
 }
+
+/* ==============================
+          Sub Navigation
+   ============================== */
 
 %sub-nav-block{
   background-image: linear-gradient(#248BCB, #1E5375);
@@ -478,9 +381,6 @@ $vars: (
   font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
-  &:focus, &:active, &:hover{
-    @extend %link-hover;
-  }
 }
 
 %sub-nav-menu-links{
@@ -494,8 +394,8 @@ $vars: (
 %sub-nav-link-title{
   margin-bottom: 10px;
   opacity: 0.7;
+
   &:focus, &:active, &:hover{
-    @extend %link-hover;
     @include vars(color, color-primary-c);
   }
 }
@@ -590,9 +490,6 @@ $vars: (
   font-weight: bold;
   text-transform: uppercase;
   padding: 1rem 2rem;
-  &:hover, &:focus, &:active{
-    @extend %button-hover;
-  }
 }
 
 /* ==============================
@@ -616,7 +513,6 @@ $vars: (
   font-size: rem(42);
   padding: 20px 0;
   text-align: center;
-  text-transform: uppercase;
 }
 
 %tiles-container{
@@ -632,13 +528,17 @@ $vars: (
 %individual-tiles{
   @include vars(background-color, color-primary-c);
   @include vars(color, color-primary-d);
-  border-bottom-right-radius: 100px;
   text-align: left;
+
+  .field_item {
+    width: 100%;
+  }
 }
 
 %tile-text{
   padding: 0 20px;
   margin-bottom: auto;
+  width: 100%;
 }
 
 %tile-inner-title{
@@ -665,6 +565,7 @@ $vars: (
 
 %tiles-img{
   max-width: 100%;
+  width: 100%;
 }
 
 /* ==============================
@@ -673,13 +574,10 @@ $vars: (
 
 %rch-txt-intro{
   @include vars(color, color-primary-d);
-  padding: 25px 0;
 }
 
 %rch-txt-intro-heading{
-  margin: 30px 0;
   text-transform: uppercase;
-  padding: 0 2%;
 }
 
 %rch-txt-intro-heading-color{
@@ -702,18 +600,9 @@ $vars: (
 
 %rch-txt-intro-text{
   @include vars(color, color-primary-a);
-  margin-bottom: 35px;
   font-size: 15px;
   font-weight: normal;
   line-height: 24px;
-}
-
-@include mq(desktop){
-  %rch-txt-intro-text{
-    font-size: 22px;
-    font-weight: normal;
-    line-height: 34px;
-  }
 }
 
 %rch-txt-wysiwyg-text{
@@ -725,11 +614,32 @@ $vars: (
 }
 
 /* ==============================
+         Rich Text - WYSIWYG
+   ============================== */
+  %rich-text-p {
+    font-size: rem(16);
+  }
+  
+  %rich-text-a {
+    @include vars(color, link);
+  }
+  
+  %rich-text-ul {
+  }
+  
+  %rich-text-ol {
+  }
+  
+  %rich-text-blockquote {
+  }
+  
+
+
+/* ==============================
     Full Width Feature Paragraph
    ============================== */
 
 %full-width-pargph{
-  align-items: center;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -739,12 +649,11 @@ $vars: (
   min-height: 38.2vw;
   padding: 70px 1.5rem 70px 1.5rem;
   position: relative;
-  text-align: center;
   width: 100vw;
-  max-width: 100%;
   overflow: hidden;
 
   &:before{
+    @include vars(background-color, color-primary-a);
     content: "";
     height: 100%;
     left: 0;
@@ -752,7 +661,6 @@ $vars: (
     position: absolute;
     top: 0;
     width: 100%;
-    background: linear-gradient(#5FBA47, #1E5375);
     bottom: 0;
     right: 0;
     z-index: 2;
@@ -797,7 +705,6 @@ $vars: (
     font-size: 22px;
     line-height: 34px;
     max-width: 65%;
-    margin: 10px auto;
   }
 }
 
@@ -807,10 +714,13 @@ $vars: (
 
 %full-width-pargph-link{
   @extend %button;
+  @include vars(background-color, color-primary-b);
+  padding: 0.5rem 1rem;
   margin-top: 10px;
   font-weight: bold;
-  &:hover, &:focus, &:active{
-    @extend %button-hover;
+
+  &:hover {
+    @include vars(background-color, color-neutral-c);
   }
 }
 
@@ -1242,7 +1152,6 @@ $vars: (
   %updates-pg-intro-p{
     font-size: rem(22);
     line-height: rem(38);
-    padding: 0 2%;
   }
 }
 
@@ -1301,54 +1210,8 @@ $vars: (
   padding: 2%;
 }
 
-%menu-toggle-div{
-  height: 100%;
-  position: relative;
-  top: -12px;
-  width: 100%;
-  z-index: 9999;
-}
 
-%menu-toggle-span{
-  @include vars(background-color, color-primary-c);
-  display: block;
-  height: 6px;
-  left: 25%;
-  position: absolute;
-  top: 50%;
-  transition: background-color 0.3s;
-  width: 43.76%;
-  z-index: 9999;
-  cursor: pointer;
 
-  &:before, &:after{
-    @include vars(background, color-primary-c);
-    content: '';
-    height: 100%;
-    left: 0;
-    position: absolute;
-    transform: translateY(-150%);
-    transition: transform 0.3s, background-color 0.3s;
-    width: 100%;
-    z-index: 9999;
-  }
-
-  &:after{
-    transform: translateY(150%);
-  }
-}
-
-%menu-toggle-active{
-  background-color: transparent;
-  &:before, &:after{
-    @include vars(background, color-primary-c);
-    transform: rotate(45deg) translateY(0);
-    transition: transform 0.3s;
-  }
-  &:after{
-    transform: rotate(-45deg) translateY(0);
-  }
-}
 
 %primary-nav-region{
   @include vars(background-color, color-primary-e);
@@ -1363,10 +1226,6 @@ $vars: (
 }
 
 @include mq(desktop) {
-  %site-header{
-    min-height: rem(133);
-  }
-
   %mobile-nav{
     display: none;
   }
@@ -1375,34 +1234,7 @@ $vars: (
     width: auto;
   }
 
-  %desktop-nav{
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-  }
-
-  %primary-nav-region{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: static;
-  }
-
-  %primary-nav{
-    flex: none;
-    margin-right: 0.5em;
-  }
-
-  %nav-menu{
-    align-items: flex-end;
-    display: flex;
-    height: 100%;
-    justify-content: flex-end;
-    margin: 5px 0;
-  }
-
-  %menu-item{
+  %menu-item {
     margin-left: rem(22);
   }
 
@@ -1501,6 +1333,7 @@ $vars: (
 
 
 %newsletter{
+  @include vars(background-color, color-neutral-c);
   display: flex;
   flex-direction: row;
   &.stacked-elements {
@@ -1509,7 +1342,6 @@ $vars: (
   }
   padding: 2rem 1rem;
   align-items: center;
-  background-image: linear-gradient(#F2AF3F, #E26436);
   justify-content: center;
   clear: both;
 }
@@ -1519,7 +1351,7 @@ $vars: (
 }
 
 %newsletter-p{
-  @include vars(color, color-primary-c);
+  @include vars(color, color-neutral-b);
   margin: 30px 0;
   font-size: 22px;
   font-weight: 800;
@@ -1562,22 +1394,29 @@ $vars: (
             Site Footer
    ============================== */
 
-%region-footer{
+%region-footer {
   margin: 0 auto;
   max-width: 100%;
   float: none;
   clear: both;
-}
 
-%footer-region-background{
-   @include vars(background-color, color-primary-e)
- }
-
-%footer-region-grid{
+  // grid for footer
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+%footer {
+  @include vars(background-color, color-primary-e);
+  padding: 2rem 5%;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-between
 }
 
 %footer-newsletter-row{
@@ -1605,21 +1444,6 @@ $vars: (
   }
 }
 
-%footer-background{
-  @include vars(background-color, color-primary-e);
-}
-
-%footer-container{
-  padding: 2rem 5%;
-  margin-top: 0;
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  position: relative;
-  justify-content: space-between;
-}
-
 %footer-menu{
   margin: 0;
 }
@@ -1640,43 +1464,36 @@ $vars: (
 }
 
 %footer-email-link{
-  @extend %link;
-  &:hover, &:focus, &:active{
-    @extend %link-hover;
-  }
-}
-
-%footer-menu-link{
-  @include vars(color, color-primary-c);
-  font-size: 12px;
-  text-decoration: none;
-  &:hover, &:focus, &:active{
-    @extend %link-hover;
-  }
+  @extend %a;
 }
 
 %footer-contact-links{
-  @include vars(color, color-primary-c);
   line-height: 1.8rem;
   font-size: 12px;
   padding-left: 10%;
-  flex: 0 1 65%;
-}
 
-@include mq(desktop){
-  %footer-contact-links{
+  @include mq(desktop){
     flex: 0 1 20%;
+  }
+
+  .address {
+    white-space: pre-line;
+  }
+
+  span {
+    @include vars(color, color-neutral-b);
+  }
+  
+  a {
+    @include vars(color, color-neutral-b);
+    display: block;
+    font-size: 12px;
+    text-decoration: none;
   }
 }
 
-%footer-address{
-  white-space: pre-line;
-}
 
-%footer-spans-display-block{
-  display: block;
-}
-
+// Footer social media links
 %footer-social-links{
   align-items: center;
   display: flex;
@@ -1684,96 +1501,52 @@ $vars: (
   flex: 1 1 auto;
   justify-content: center;
   margin-top: 1.5rem;
-}
 
-@include mq(desktop){
-  %footer-social-links{
+  @include mq(desktop) {
     flex: 0 1 30%;
     align-items: baseline;
     margin-top: 0;
   }
-}
 
-@include mq(mobile){
-  %footer-social-links{
+  @include mq(mobile){
     margin: 50px 15%;
   }
-}
 
-%footer-social-links-spans{
-  min-width: 25%;
-  text-align: center;
-  display: inline-block;
-}
+  span {
+    min-width: 25%;
+    text-align: center;
+    display: inline-block;
 
-@include mq(desktop){
-  %footer-social-links-spans{
-    min-width: 0;
+    @include mq(desktop) {
+      min-width: 0;
+    }
+
+    @include mq(phablet){
+      min-width: 10%;
+    }
+  }
+
+  a {
+    margin-left: 0;
+    @include vars(height, social-media-icon-height);
+    @include vars(width, social-media-icon-height);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 62% 62%;
+    padding: 1rem;
+    position: relative;
+    font-size: 0;
+
+    @include mq(desktop){
+      margin-left: 0.625rem;
+    }
+
+    @include mq(phablet){
+      margin-left: 10px;
+    }
   }
 }
 
-@include mq(phablet){
-  %footer-social-links-spans{
-    min-width: 10%;
-  }
-}
-
-%footer-social-links-a{
-  margin-left: 0;
-  border-radius: 0%;
-  @include vars(background-color, color-primary-c);
-  @include vars(height, social-media-icon-height);
-  @include vars(width, social-media-icon-height);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 62% 62%;
-  border: 0.0625rem solid;
-  @include vars(border-color, color-primary-c);
-  padding: 1rem;
-  position: relative;
-  font-size: 0;
-  &:hover, &:focus, &:active{
-    @include vars(background-color, color-secondary-d);
-    @include vars(border-color, color-secondary-d);
-  }
-}
-
-@include mq(desktop){
-  %footer-social-links-a{
-    margin-left: 0.625rem;
-  }
-}
-
-@include mq(phablet){
-  %footer-social-links-a{
-    margin-left: 10px;
-  }
-}
-
-%footer-social-links-fb{
-  background-image: url(../images/svgs/facebook-f.svg);
-}
-%footer-social-links-instagram{
-  background-image: url(../images/svgs/instagram.svg);
-}
-%footer-social-links-linkedin{
-  background-image: url(../images/svgs/linkedin.svg);
-}
-%footer-social-links-twitter{
-  background-image: url(../images/svgs/twitter.svg);
-}
-%footer-social-links-google{
-  background-image: url(../images/svgs/google-plus.svg);
-}
-%footer-social-links-pinterest{
-  background-image: url(../images/svgs/pinterest-p.svg);
-}
-%footer-social-links-tumblr{
-  background-image: url(../images/svgs/tumblr.svg);
-}
-%footer-social-links-youtube{
-  background-image: url(../images/svgs/youtube-play.svg);
-}
 
 %footer-copyright{
   @include vars(color, color-primary-c);

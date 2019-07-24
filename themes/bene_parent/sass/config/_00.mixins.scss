@@ -34,12 +34,12 @@ $baseFontSizeInPixels : 16;
 
   // Large
   @if $screen == tablet {
-    @media (min-width: 769px) and (max-width: 1239px) { @content; }
+    @media (min-width: 769px) and (max-width: 959px) { @content; }
   }
 
   // Desktops
   @if $screen == desktop {
-    @media (min-width: 769px) { @content; }
+    @media (min-width: 960px) { @content; }
   }
 
   // Extra Large
