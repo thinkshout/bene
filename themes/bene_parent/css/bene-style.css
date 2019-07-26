@@ -1656,6 +1656,12 @@ input {
   .page-node-type-listing-page .field--name-bene-date {
     display: none; } }
 
+@media (max-width: 39.9375em) {
+  .tablesaw-stack tbody tr {
+    padding-top: 20px; }
+
+  .tablesaw-stack tbody td:not(:last-child) {
+    border-bottom: 0; } }
 .field--name-field-tiles .button-wrapper {
   padding: 0 20px;
   margin-bottom: 30px; }
