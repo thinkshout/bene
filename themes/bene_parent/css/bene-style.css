@@ -1508,7 +1508,7 @@ form input {
 
 .page-node-type-listing-page .views-element-container {
   width: 90%; }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .page-node-type-listing-page .field--name-bene-event-location,
   .page-node-type-listing-page .field--name-bene-date {
     display: none; } }

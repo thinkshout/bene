@@ -1,4 +1,9 @@
 $vars: (
+
+  // USAGE:
+  // -- @include vars(property-name, key)
+  // -- example @include vars(color, color-primary-a)
+
   //Colors
   //-- Main palette
   color-primary-a: '', 
@@ -40,6 +45,10 @@ $vars: (
 /* ==============================
             BASE STYLING
    ============================== */
+%body {
+  @include vars(font-family, font-family-primary);
+}
+
 // HEADINGS
 %h1 { }
 
