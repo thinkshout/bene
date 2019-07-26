@@ -7,7 +7,7 @@ jobs:
            WEBROOT: /var/www/html/build/web
            GIT_EMAIL: "ci@thinkshout.com"
            GIT_NAME: "ThinkShout CI Bot"
-         cmd: ["/start.sh"]
+         command: ["/start.sh"]
        - image: mariadb:10.0
          environment:
            MYSQL_RANDOM_ROOT_PASSWORD: 1
@@ -17,40 +17,31 @@ jobs:
     working_directory: /var/www/html/bene
     steps:
       - checkout
-      - type: add-ssh-keys
-
+      - add_ssh_keys
       - run:
           name: Project configuration
           command: |
+            echo "memory_limit = 2G" >> ${php_vars}
             export PATH="./vendor/bin:../vendor/bin:/root/.composer/vendor/bin:$PATH"
             composer global require -n "hirak/prestissimo:^0.3"
             composer global require -n "consolidation/cgr"
             cgr "pantheon-systems/terminus:~1"
             cd /var/www/html
             which patch
-            composer create-project thinkshout/bene-project:dev-pantheon /var/www/html/build --stability dev --no-interaction --no-install
-      - restore_cache:
-          keys:
-            - composer-v3-{{ checksum "composer.lock" }}
+            composer create-project thinkshout/bene-project /var/www/html/build --stability dev --no-interaction --no-install
       - run:
           name: Install dependencies
           command: |
             cd /var/www/html/build
             composer config repositories.bene path /var/www/html/bene
-            composer require "drupal/bene:*"
-            composer install -n --prefer-dist
+            composer install
       - run:
           name: Run CS tests
           command: |
              export PATH="./vendor/bin:../vendor/bin:/root/.composer/vendor/bin:$PATH"
              cd /var/www/html/build
              phpcs --config-set installed_paths ../../drupal/coder/coder_sniffer/
-             phpcs --standard=Drupal --ignore=*/css/*,*/node_modules/* /var/www/html/build/web/profiles/bene
-      - save_cache:
-          key: composer-v3-{{ checksum "composer.lock" }}
-          paths:
-            - ../build/vendor
-            - ../build/web/modules/contrib
+             phpcs --standard=Drupal --ignore=*/css/*,*/node_modules/* /var/www/html/bene
       - run:
           name: Configure, install and test
           command: |
@@ -58,3 +49,6 @@ jobs:
             cd /var/www/html/build
             robo configure --db-name=drupal --db-user=drupal --db-pass=drupal --db-host=127.0.0.1
             robo install
+            rm -rf ./behat
+            cp -r /var/www/html/bene/tests/behat/ ./behat/
+            robo test --profile=ci
