@@ -1378,8 +1378,8 @@ form input {
   .site-header .mobile-nav .region-primary-nav {
     background-color:  #ffffff;
     background-color: var(--color-neutral-a );
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     position: absolute;
     top: 6.25rem;
     left: 0;

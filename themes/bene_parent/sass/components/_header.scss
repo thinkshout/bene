@@ -50,8 +50,8 @@
 
     .region-primary-nav {
       @include vars(background-color, color-neutral-a);
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
       position: absolute;
       top: rem(100);
       left: 0;
