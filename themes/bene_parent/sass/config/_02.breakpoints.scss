@@ -7,17 +7,17 @@
 
   // Medium
   @if $screen == phablet {
-    @media (min-width: 415px) and (max-width: 768px) { @content; }
+    @media (min-width: 415px) and (max-width: 767px) { @content; }
   }
 
   // Large
   @if $screen == tablet {
-    @media (min-width: 769px) and (max-width: 1239px) { @content; }
+    @media (min-width: 768px) and (max-width: 1023px) { @content; }
   }
 
   // Desktops
   @if $screen == desktop {
-    @media (min-width: 769px) { @content; }
+    @media (min-width: 1024px) { @content; }
   }
 
   // Extra Large

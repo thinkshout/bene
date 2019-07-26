@@ -11,7 +11,7 @@
     @extend %tiles-wrapper;
   }
 
-  .field__item{
+  & > .field__item{
     @extend %individual-tiles;
 
     .field--name-field-title{
@@ -19,8 +19,7 @@
     }
 
     .paragraph{
-      @extend %over-flow-hidden;
-      @extend %text;
+      @extend %p !optional;
     }
 
     .field--name-field-image{@extend %tiles-img-container;}
@@ -35,7 +34,7 @@
     margin-bottom: 30px;
     a {
       @extend %button-secondary;
-      &:hover, &:active, &:focus {@extend %button-secondary-hover;}
+      @extend %tile-link !optional;
     }
   }
 
@@ -45,7 +44,6 @@
     a{
       .field--name-field-title{
         @extend %tile-inner-title;
-        &:hover{@extend %link-hover;}
       }
     }
     p{@extend %text-wrapper-text}

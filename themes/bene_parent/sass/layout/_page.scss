@@ -72,3 +72,20 @@
 .contextual-region.block-bene-home-page-feature-block{
   @extend %position-relative;
 }
+
+// Content container
+%container,
+.container {
+  @include vars(max-width, container-max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+%container-wide,
+.container-wide {
+  @include vars(max-width, container-wide-max-width);
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}

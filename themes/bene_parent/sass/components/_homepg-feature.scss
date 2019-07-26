@@ -1,12 +1,85 @@
 .block-bene-home-page-feature-block{
-  @extend %hmpg-feature;
-  .field--name-bene-lead{@extend %hmpg-feature-lead;}
+  @include vars(background-color, color-primary-e);
+  @include vars(color, color-primary-c);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  padding: 8rem 1rem;
+  position: relative;
+  &:after {
+    background-image: linear-gradient(180deg,rgba(0,0,0,0) 0%,#000000 79%);
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: .45;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 
-  .field--name-bene-title{@extend %hmpg-feature-title;}
+  @include mq(mobile) {
+    background-size: cover;
+    background-position: center top;
+    max-height: rem(539);
+  }
+  
+  @include mq(desktop) {
+    min-height: rem(500);
+  }
+
+  @extend %home-banner-container !optional;
+
+  .field--name-bene-lead{
+    font-size: rem(20);
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+
+    @include mq(mobile) {
+      font-size: rem(16);
+      line-height: rem(20);
+      padding-top: 7rem;
+    }
+
+    @extend %home-banner-lead-text !optional;
+  }
+
+  .field--name-bene-title{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 70px;
+    padding-top: 50px;
+    z-index: 2;
+    margin: 0 auto 50px auto;
+    max-width: rem(900);
+    position: relative;
+    @include vars(font-family, font-family-secondary);
+
+    @include mq(mobile) {
+      font-size: 40px;
+      line-height: 45px;
+    }
+
+    @include mq(phablet) {
+      font-size: 40px;
+      line-height: 45px;
+    }
+
+    @extend %home-banner-title !optional
+  }
 
   .field--name-bene-link{
-    @extend %hmpg-feature-btn-wrapper;
+    @extend %hmome-button-wrapper !optional;
 
-    a{@extend %hmpg-feature-btn;}
+    a {
+      @extend %button;
+      font-size: rem(14);
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+
+      @extend %home-banner-link !optional;
+    }
   }
 }

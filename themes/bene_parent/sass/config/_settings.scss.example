@@ -1,0 +1,235 @@
+$vars: (
+
+  // USAGE:
+  // -- @include vars(property-name, key)
+  // -- example @include vars(color, color-primary-a)
+
+  //Colors
+  //-- Main palette
+  color-primary-a: '', 
+  coror-primary-b: '',
+  color-primary-c: '',
+
+  //-- Accent colors
+  color-secondary-a: '',
+  color-secondary-b: '',
+  color-secondary-c: '',
+
+  //-- Neutral colors
+  color-neutral-a: #ffffff, 
+  color-neutral-b: #000000,
+  color-neutral-c: #D1D1D1,
+
+  //Fonts
+  font-family-primary: "", // Body font
+  font-family-secondary: "", // Heading font
+  font-weight-regular: 400,
+  font-weight-medium: 600,
+  font-weight-bold: 700,
+  font-weight-black: 800,
+  font-style-italic: italic,
+  font-style-normal: normal,
+
+  // Containers
+  container-max-width: 822px,
+  container-wide-max-width: 1260px,
+);
+
+
+:root{
+  @each $key, $value in $vars {
+    #{--$key}: #{$value};
+  }
+}
+
+/* ==============================
+            BASE STYLING
+   ============================== */
+%body {
+  @include vars(font-family, font-family-primary);
+}
+
+// HEADINGS
+%h1 { }
+
+%h2 { }
+
+%h3 { }
+
+%h4 { }
+
+%h5 { }
+
+%p { }
+
+// Anchor tags
+%a {
+  
+  &:hover, &:visited, &:focus { }
+}
+
+// Blockquotes
+%blockquote { 
+  p {}
+}
+
+// List items
+%ul { }
+%ol { }
+
+// Tables
+%table {
+
+  th {}
+  tbody {}
+  tr  {}
+  td {}
+}
+
+%form {
+
+  // Include form elements inside this block
+}
+
+%button {
+
+  &:hover { }
+}
+
+%button-secondary {
+
+  &:hover { }
+}
+
+/* ==============================
+            Site Header and Nav
+   ============================== */
+
+// Wrapper around logo and nav
+// Use to adjust container for site header if necessary
+%site-header { }
+
+// Container for site logo
+// Use to adjust logo size 
+%site-logo{ }
+
+// Mobile menu
+%mobile-nav { }
+
+/* ==============================
+          Sub Navigation
+   ============================== */
+%sub-nav-block { }
+%sub-nav-menu {
+  // Set menu alignment here
+}
+%sub-nav-links { }
+%sub-nav-menu-links-active { }
+
+/* ==============================
+            Site Footer
+   ============================== */
+%footer-menu { }
+%footer-menu-item { }
+%footer-email-link { }
+%footer-contact-links { }
+%footer-social-links { }
+%footer-copyright { }
+
+
+
+/* ==============================
+            Home Banner 
+   ============================== */
+%home-banner-container { }
+%home-banner-lead-text { }
+%home-banner-title { }
+%home-button-wrapper { }
+%home-banner-link { }
+
+
+/* ==============================
+           Listing Page
+   ============================== */
+%listing-pg-container { }
+
+// Search settings
+%listing-pg-form-container { }
+%listing-pg-form { }
+%listing-pg-label { }
+%listing-pg-input { }
+%listing-pg-form-submit { }
+
+// Content
+%listing-pg-article { 
+
+  img { }
+  h2 { }
+  a { }
+}
+
+
+/* ==============================
+         Rich Text - WYSIWYG
+   ============================== */
+// Intro text
+%rch-txt-intro { 
+  h2 { }
+  h3 { }
+  p { }
+  a { }
+}
+
+%rich-text-p { @extend %p; }
+  
+%rich-text-a { @extend %a; }
+  
+%rich-text-ul { @extend %ul; }
+  
+%rich-text-ol { @extend %ol; }
+  
+%rich-text-blockquote { @extend %blockquote; }
+
+
+/* ==============================
+    Full Width Feature Paragraph
+   ============================== */
+%full-width-pargph { 
+  // Set alignment here
+
+  &:before { }
+}
+
+// When no image
+%full-width-pargph-no-img { }
+
+%full-width-pargph-title { }
+%full-width-pargph-text { }
+%full-width-pargph-link { }
+
+
+/* ==============================
+               Tiles
+   ============================== */
+%tiles-background { }
+%tiles-wrapper { 
+  // Adjust alignment here
+}
+
+// Section title
+%tiles-main-title { }
+
+// Single tiles
+%individual-tiles { }
+%tiles-img-container { }
+%tiles-img { }
+%tile-text { }
+%tile-inner-title { }
+%tile-link { }
+
+/* ==============================
+           Inline Embeds
+   ============================== */
+// Images
+%embed-img { }
+%embed-video { }
