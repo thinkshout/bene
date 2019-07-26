@@ -228,6 +228,7 @@ table {
   display: flex;
   justify-content: center;
   width: 100vw;
+  max-width: 100%;
   position: relative;
   z-index: 20; }
 
@@ -274,7 +275,7 @@ table {
   text-transform: uppercase; }
 
 .block-bene-sub-navigation-block .menu-item .menu-item {
-  margin: 0 1rem; }
+  margin: 0 22px; }
 
 .block-bene-sub-navigation-block .menu-item .menu-item.menu-item--active-trail, .menu--main .menu .menu-item--active-trail {
   margin: 0 1rem; }
@@ -1539,6 +1540,12 @@ form input {
   .page-node-type-listing-page .field--name-bene-date {
     display: none; } }
 
+@media (max-width: 39.9375em) {
+  .tablesaw-stack tbody tr {
+    padding-top: 20px; }
+
+  .tablesaw-stack tbody td:not(:last-child) {
+    border-bottom: 0; } }
 .field--name-field-tiles .button-wrapper {
   padding: 0 20px;
   margin-bottom: 30px; }

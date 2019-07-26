@@ -59,6 +59,7 @@ dependencies:
   - picture_background_formatter
   - quickedit
   - r4032login
+  - responsive_tables_filter
   - rdf
   - redirect
   - responsive_image

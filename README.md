@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/thinkshout/bene.svg?style=svg)](https://circleci.com/gh/thinkshout/bene)
+
 ## Installing Bene
 The preferred way to install Bene is via the 
 [Bene-project](https://github.com/thinkshout/bene-project) template.

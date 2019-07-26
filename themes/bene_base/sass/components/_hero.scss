@@ -8,6 +8,7 @@
   height: 49vw; /* This sets the aspect ratio */
   justify-content: center;
   width: 100vw;
+  max-width: 100%;
   @include mq(tablet) {
     height: 24vw;
   }

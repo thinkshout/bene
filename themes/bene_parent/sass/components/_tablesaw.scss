@@ -1,0 +1,8 @@
+@media (max-width: 39.9375em) {
+  .tablesaw-stack tbody tr {
+    padding-top: 20px;
+  }
+  .tablesaw-stack tbody td:not(:last-child) {
+    border-bottom: 0;
+  }
+}
