@@ -261,10 +261,6 @@ $vars: (
     min-height: rem(133);
   }
 
-  %mobile-nav{
-    display: none;
-  }
-
   %site-logo{
     width: auto;
   }
@@ -277,10 +273,10 @@ $vars: (
   }
 
   %primary-nav-region{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: static;
+    // display: flex;
+    // flex-direction: column;
+    // height: 100%;
+    // position: static;
   }
 
   %primary-nav{

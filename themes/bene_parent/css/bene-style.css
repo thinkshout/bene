@@ -196,9 +196,6 @@ table {
   .site-header {
     min-height: 8.3125rem; }
 
-  .site-header .mobile-nav {
-    display: none; }
-
   .site-header .logo-wrapper {
     width: auto; }
 
@@ -1368,13 +1365,36 @@ form input {
     align-items: center;
     display: flex;
     width: 100%; }
-  .site-header .desktop-nav,
+  @media (max-width: 414px) {
+    .site-header .site-logo img {
+      max-height: 3.125rem; } }
+  .site-header .desktop-nav {
+    display: none; }
   .site-header .mobile-nav .menu {
     display: flex;
     align-items: center;
     flex: 1 1 auto;
-    justify-content: flex-end;
+    justify-content: flex-end; }
+  .site-header .mobile-nav .region-primary-nav {
+    background-color:  #ffffff;
+    background-color: var(--color-neutral-a );
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: absolute;
+    top: 6.25rem;
+    left: 0;
+    width: 100%;
+    z-index: 10;
     display: none; }
+  .site-header .mobile-nav .region-primary-nav nav {
+    background-color:  #ffffff;
+    background-color: var(--color-neutral-a );
+    margin-right: 0; }
+    .site-header .mobile-nav .region-primary-nav nav:nth-of-type(1) {
+      order: 2;
+      padding-bottom: 2rem; }
+    .site-header .mobile-nav .region-primary-nav nav .menu {
+      display: block; }
   .site-header .mobile-nav .menu {
     text-align: center;
     margin: 0; }
@@ -1401,6 +1421,9 @@ form input {
     height: 100%;
     justify-content: flex-end;
     margin: 5px 0; }
+  .site-header .menu li,
+  .site-header .menu a {
+    flex-shrink: 0; }
   .site-header .mobile-menu-toggle {
     display: inline-block;
     float: right;
@@ -1409,7 +1432,6 @@ form input {
     .site-header .mobile-menu-toggle div {
       height: 100%;
       position: relative;
-      top: -12px;
       width: 100%;
       z-index: 9999; }
     .site-header .mobile-menu-toggle span {

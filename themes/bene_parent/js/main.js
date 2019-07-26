@@ -16,7 +16,7 @@
           if (this.isMobile()) {
             $('.mobile-menu-toggle').once().click(function() {
               $(this).toggleClass('active');
-              $('.mobile-nav .menu').fadeToggle(500);
+              $('.mobile-nav .region-primary-nav').fadeToggle(500).css({ display: 'flex' });
             });
           };
         },

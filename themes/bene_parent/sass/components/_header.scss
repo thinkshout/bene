@@ -24,14 +24,20 @@
     @extend %site-logo;
   }
 
-  .desktop-nav, 
+  .site-logo img { 
+    @include mq(mobile) {
+      max-height: rem(50);
+    }
+  }
+
+  .desktop-nav {
+    display: none;
+  } 
   .mobile-nav .menu{
     display: flex;
     align-items: center;
     flex: 1 1 auto;
     justify-content: flex-end;
-
-    display: none;
   }
 
   // Utility menu links
@@ -41,12 +47,40 @@
 
   // Small screen navigation
   .mobile-nav {
-    @extend  %mobile-nav;
+
+    .region-primary-nav {
+      @include vars(background-color, color-neutral-a);
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      position: absolute;
+      top: rem(100);
+      left: 0;
+      width: 100%;
+      z-index: 10;
+
+      display: none;
+    } 
+
+    .region-primary-nav nav { 
+      @include vars(background-color, color-neutral-a);
+      margin-right: 0;
+
+      &:nth-of-type(1) { 
+        order: 2; // makes the utility nav at the bottom
+        padding-bottom: 2rem; 
+      }
+
+      .menu { 
+        display: block;
+      }
+    }
 
     .menu {
       text-align: center;
       margin: 0;
     }
+
+    @extend  %mobile-nav;
   }
 
   .desktop-nav{
@@ -88,6 +122,7 @@
   .menu li, 
   .menu a{
     @extend %menu-link;
+    flex-shrink: 0; 
   }
 
   .menu li, .menu a{
@@ -111,7 +146,6 @@
     div{
       height: 100%;
       position: relative;
-      top: -12px;
       width: 100%;
       z-index: 9999;
     }
