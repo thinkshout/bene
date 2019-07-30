@@ -23,3 +23,14 @@ function bene_news_install() {
 
   user_role_change_permissions('staff', $staff_permissions);
 }
+
+/**
+ * Changes the form display view mode for embedded media images.
+ */
+function bene_news_update_8200() {
+  $config = \Drupal::configFactory()->getEditable('core.entity_form_display.node.news.default');
+  if (!empty($config->get('content.bene_header_media.settings.field_widget_display_settings.view_mode'))) {
+    $config->set('content.bene_header_media.settings.field_widget_display_settings.view_mode', 'form_preview');
+    $config->save(TRUE);
+  }
+}

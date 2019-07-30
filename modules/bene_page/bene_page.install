@@ -34,3 +34,14 @@ function bene_page_update_8200() {
     $config->save(TRUE);
   }
 }
+
+/**
+ * Changes the form display view mode for embedded media images.
+ */
+function bene_page_update_8201() {
+  $config = \Drupal::configFactory()->getEditable('core.entity_form_display.node.page.default');
+  if (!empty($config->get('content.bene_header_media.settings.field_widget_display_settings.view_mode'))) {
+    $config->set('content.bene_header_media.settings.field_widget_display_settings.view_mode', 'form_preview');
+    $config->save(TRUE);
+  }
+}
