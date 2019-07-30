@@ -7,6 +7,7 @@
 
 use Drupal\Core\Config\FileStorage;
 use Drupal\user\Entity\Role;
+use Drupal\Core\Extension\MissingDependencyException;
 
 /**
  * Implements hook_install().
@@ -63,5 +64,37 @@ function bene_core_update_8502() {
     $staff_admin->grantPermission('configure bene features');
     $staff_admin->grantPermission('administer modules');
     $staff_admin->trustData()->save();
+  }
+}
+
+/**
+ * Makes embedded tables responsive.
+ */
+function bene_core_update_8503() {
+  if (!\Drupal::moduleHandler()->moduleExists('responsive_tables_filter')) {
+    /** @var \Drupal\Core\Extension\ModuleInstallerInterface $module_installer */
+    $module_installer = \Drupal::service('module_installer');
+    try {
+      $module_installer->install(['responsive_tables_filter']);
+    }
+    catch (MissingDependencyException $e) {
+
+    }
+  }
+  $config = \Drupal::configFactory()->getEditable('filter.format.full_html');
+  if (\Drupal::moduleHandler()->moduleExists('responsive_tables_filter') && !empty($config->getRawData())) {
+    $dependencies = $config->get('dependencies.module');
+    $dependencies[] = 'responsive_tables_filter';
+    $config->set('dependencies.module', $dependencies);
+    $config->set('filters.filter_responsive_tables_filter', [
+      'id' => 'filter_responsive_tables_filter',
+      'provider' => 'responsive_tables_filter',
+      'status' => TRUE,
+      'weight' => 0,
+      'settings' => [
+        'tablesaw_type' => 'stack',
+      ],
+    ]);
+    $config->save(TRUE);
   }
 }
