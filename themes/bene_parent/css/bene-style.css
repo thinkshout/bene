@@ -415,11 +415,12 @@ table {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 100%;
   min-height: 38.2vw;
+  overflow: hidden;
   padding: 70px 1.5rem 70px 1.5rem;
   position: relative;
-  width: 100vw;
-  overflow: hidden; }
+  width: 100vw; }
   .feature-full-width-paragraph .paragraph--type--feature-full-width:before {
     background-color:  #50CFE3;
     background-color: var(--color-primary-a );

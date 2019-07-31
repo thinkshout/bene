@@ -561,11 +561,12 @@ $vars: (
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 100%;
   min-height: 38.2vw;
+  overflow: hidden;
   padding: 70px 1.5rem 70px 1.5rem;
   position: relative;
   width: 100vw;
-  overflow: hidden;
 
   &:before{
     @include vars(background-color, color-primary-a);
