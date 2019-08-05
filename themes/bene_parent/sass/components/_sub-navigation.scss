@@ -43,6 +43,7 @@
   @extend %sub-nav-link-title;
 }
 
-.menu--main .menu .menu-item--active-trail{
+.menu--main .menu .menu-item--active-trail,
+.menu--utility .menu .menu-item--active-trail{
   @extend %sub-nav-menu-links-active;
 }

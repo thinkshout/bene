@@ -34,6 +34,9 @@ article.node--type-listing-page .view-bene-events{
 
     .field--name-bene-intro{
       @extend  %events-pg-intro;
+      p {
+        @extend %listing-pg-paragraph;
+      }
     }
 
   }
