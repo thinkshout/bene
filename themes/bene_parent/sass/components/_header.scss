@@ -183,14 +183,14 @@
   .mobile-menu-toggle.active{
     background-color: transparent;
 
-    &:before, &:after{
-      @include vars(background, color-primary-c);
-      transform: rotate(45deg) translateY(0);
-      transition: transform 0.3s;
+    span::before {
+      transform: rotate(-45deg);
     }
-
-    &:after {
-      transform: rotate(-45deg) translateY(0);
+    span::after {
+      transform: rotate(45deg);
+    }
+    span {
+      @include vars(background-color, color-neutral-a);
     }
   }
 }

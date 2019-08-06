@@ -1461,13 +1461,13 @@ form input {
         transform: translateY(150%); }
   .site-header .mobile-menu-toggle.active {
     background-color: transparent; }
-    .site-header .mobile-menu-toggle.active:before, .site-header .mobile-menu-toggle.active:after {
-      background:  #ffffff;
-      background: var(--color-primary-c );
-      transform: rotate(45deg) translateY(0);
-      transition: transform 0.3s; }
-    .site-header .mobile-menu-toggle.active:after {
-      transform: rotate(-45deg) translateY(0); }
+    .site-header .mobile-menu-toggle.active span::before {
+      transform: rotate(-45deg); }
+    .site-header .mobile-menu-toggle.active span::after {
+      transform: rotate(45deg); }
+    .site-header .mobile-menu-toggle.active span {
+      background-color:  #ffffff;
+      background-color: var(--color-neutral-a ); }
 
 .block-bene-home-page-feature-block {
   background-color:  #129FB5;
