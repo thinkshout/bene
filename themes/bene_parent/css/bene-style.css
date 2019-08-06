@@ -951,7 +951,7 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
     margin-bottom: 10px; } }
 .node--type-news .node__content {
   clear: both;
-  padding: 2%; }
+  padding: 2% 0; }
 
 .inner {
   display: flex;
