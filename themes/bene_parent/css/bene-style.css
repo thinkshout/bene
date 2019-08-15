@@ -646,94 +646,6 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
   padding: 0 5%; }
 
 /* ==============================
-           Inline Embeds
-   ============================== */
-@media (max-width: 414px) {
-  .embedded-entity img {
-    margin: 5px; }
-
-  .embedded-entity.align-left, .embedded-entity.align-right {
-    float: none; } }
-@media (min-width: 769px) and (max-width: 959px) {
-  article.embedded-entity .media--type-video.media--view-mode-embedded-half {
-    width: 50%;
-    margin: 0 auto; }
-
-  .embedded-entity.align-left article.media--type-image {
-    float: left; }
-
-  .embedded-entity .image-caption, .embedded-entity.align-left .image-caption {
-    float: left;
-    clear: both; }
-
-  .embedded-entity.align-right article.media--type-image {
-    float: right; }
-
-  .embedded-entity .media--type-image.media--view-mode-embedded-half {
-    width: 50vw; }
-    .embedded-entity .media--type-image.media--view-mode-embedded-half picture img {
-      width: 100%; } }
-.embedded-entity.align-center .image-caption {
-  text-align: center; }
-
-@media (min-width: 960px) {
-  article.embedded-entity .media--type-video.media--view-mode-embedded-half {
-    width: 50%;
-    margin: 0 auto; }
-
-  .embedded-entity.align-left article.media--type-image {
-    float: left; }
-
-  .embedded-entity .image-caption, .embedded-entity.align-left .image-caption {
-    float: left;
-    clear: both; }
-
-  .embedded-entity.align-right article.media--type-image {
-    float: right; }
-
-  .embedded-entity .media--type-image.media--view-mode-embedded-half {
-    width: 50vw; }
-    .embedded-entity .media--type-image.media--view-mode-embedded-half picture img {
-      width: 100%; } }
-.embedded-entity {
-  display: inline-block;
-  clear: both; }
-
-.embedded-entity .image-caption, .embedded-entity.align-left .image-caption {
-  font-size: 1rem;
-  font-style: italic; }
-
-.embedded-entity img {
-  margin: 5px; }
-
-.embedded-entity.align-center article.media--type-image {
-  margin: 0 auto;
-  text-align: center; }
-
-.embedded-entity.align-right .image-caption {
-  text-align: left; }
-
-.embedded-entity.instagram {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  float: none;
-  clear: both; }
-
-.embedded-entity.instagram iframe {
-  display: inline-block !important; }
-
-.embedded-entity.tweet {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  float: none;
-  clear: both; }
-
-.embedded-entity.tweet .twitter-tweet {
-  display: inline-block !important; }
-
-/* ==============================
             Media Paragraph
    ============================== */
 .paragraph--type--media {
@@ -1207,13 +1119,11 @@ article.node--type-listing-page .view-bene-events .node--type-event .field--name
   padding-left: 0;
   padding-right: 0; }
 
-.page-node-type-listing-page .views-element-container .view-bene-events .view-content .field--name-bene-event-location, article.embedded-entity .media--type-video .field--name-name,
-article.embedded-entity .media--type-video .field--name-created,
-article.embedded-entity .media--type-video .field--name-uid, .page-node-type-listing-page .field--name-bene-event-location,
+.page-node-type-listing-page .views-element-container .view-bene-events .view-content .field--name-bene-event-location, .page-node-type-listing-page .field--name-bene-event-location,
 .page-node-type-listing-page .field--name-bene-date {
   display: none; }
 
-article.embedded-entity, .embedded-entity.caption-article, .embedded-entity.align-center, .embedded-entity.align-left, .embedded-entity.align-right, .block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item .organization, .block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item .address-line1, .page-node-type-listing-page .view-content, .page-node-type-listing-page .field--name-bene-event-location .field__item .organization, .page-node-type-listing-page .field--name-bene-event-location .field__item .address-line1 {
+.block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item .organization, .block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item .address-line1, .page-node-type-listing-page .view-content, .page-node-type-listing-page .field--name-bene-event-location .field__item .organization, .page-node-type-listing-page .field--name-bene-event-location .field__item .address-line1 {
   display: block; }
 
 .block-system-main-block article.node--view-mode-full .field--name-bene-event-location .field__item div, .page-node-type-listing-page .field--name-bene-event-location .field__item div {
@@ -1232,7 +1142,7 @@ article.embedded-entity, .embedded-entity.caption-article, .embedded-entity.alig
   float: none;
   clear: both; }
 
-.embedded-entity.align-center .image-caption, .region-footer .block-menu.navigation h2, .region-footer .block-menu.navigation .menu {
+.region-footer .block-menu.navigation h2, .region-footer .block-menu.navigation .menu {
   text-align: center; }
 
 .contextual-region {
@@ -1330,6 +1240,25 @@ form input {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 100%; }
+
+figure {
+  margin: 0; }
+
+.embedded-entity {
+  max-width: 100%; }
+
+.embedded-entity.align-center {
+  width: auto;
+  margin: 0 auto;
+  max-width: 100%; }
+
+.embedded-entity.align-left {
+  margin: 0 20px 20px 0;
+  max-width: 50%; }
+
+.embedded-entity.align-right {
+  margin: 20px 0 0 20px;
+  max-width: 50%; }
 
 .feature-full-width-paragraph .paragraph--type--feature-full-width .container-wide {
   z-index: 10;
