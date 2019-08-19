@@ -1248,17 +1248,37 @@ figure {
   max-width: 100%; }
 
 .embedded-entity.align-center {
-  width: auto;
-  margin: 0 auto;
+  width: 100%;
   max-width: 100%; }
+  @media (max-width: 414px) {
+    .embedded-entity.align-center {
+      width: auto;
+      margin: 0 auto;
+      max-width: 100%; } }
+  .embedded-entity.align-center img {
+    width: 100%; }
 
 .embedded-entity.align-left {
-  margin: 0 20px 20px 0;
-  max-width: 50%; }
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 20px; }
+  @media (min-width: 1024px) {
+    .embedded-entity.align-left {
+      margin: 0 20px 20px 0;
+      max-width: 50%; } }
+  .embedded-entity.align-left img {
+    width: 100%; }
 
 .embedded-entity.align-right {
-  margin: 20px 0 0 20px;
-  max-width: 50%; }
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 20px; }
+  @media (min-width: 1024px) {
+    .embedded-entity.align-right {
+      margin: 20px 0 0 20px;
+      max-width: 50%; } }
+  .embedded-entity.align-right img {
+    width: 100%; }
 
 .feature-full-width-paragraph .paragraph--type--feature-full-width .container-wide {
   z-index: 10;
