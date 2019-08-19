@@ -4,7 +4,11 @@ figure {
 }
 
 .embedded-entity {
+  float: none;
+  width: 100%;
   max-width: 100%;
+
+  img { max-width: 100%; }
 }
 
 //Images align-center
@@ -21,8 +25,10 @@ figure {
   img { width: 100%;}
 }
 
+
 //Images align-left
-.embedded-entity.align-left{
+.embedded-entity.align-left.half {
+  float: left;
   max-width: 100%;
   width: 100%;
   margin-bottom: 20px;
@@ -35,8 +41,29 @@ figure {
   img { width: 100%;}
 }
 
+.embedded-entity.align-center.half {
+  text-align: center;
+  max-width: 100%;
+
+  @include mq(mobile) {
+    width: auto;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  img { 
+    width: 100%;
+    @include mq(desktop) {
+      width: auto;
+    }
+  }
+}
+
+
 //Images align-right
-.embedded-entity.align-right{
+.embedded-entity.align-right.half {
+  float: right;
   max-width: 100%;
   width: 100%;
   margin-bottom: 20px;
@@ -45,6 +72,15 @@ figure {
     margin: 20px 0 0 20px;
     max-width: 50%;
   }
+
+  img { width: 100%;}
+}
+
+
+.embedded-entity.align-left,
+.embedded-entity.align-center,
+.embedded-entity.align-right {
+  width: 100%;
 
   img { width: 100%;}
 }

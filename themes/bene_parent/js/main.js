@@ -3,7 +3,7 @@
     attach: function(context, settings) {
 
       /**
-       * UCHI Object
+       * Bene Object
        */
       var _bene = {
 
@@ -237,6 +237,10 @@
           $('.region-content select:not([multiple])').niceSelect();
         },
 
+        embeddedEntity: function() {
+          $('.media--view-mode-embedded-half').parents('.embedded-entity').addClass('half');
+        },
+
         init: function() {
           this.beneMobile();
           this.formCleanup();
@@ -244,6 +248,7 @@
           this.showHideTabs();
           this.beneHero();
           this.beneNiceSelect();
+          this.embeddedEntity();
         }
       } // end _bene{}
 
@@ -258,5 +263,5 @@
       });
 
     } // attach
-  }; // tsUCHI
+  }; // tsBene
 })(jQuery, Drupal, window);

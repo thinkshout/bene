@@ -1245,7 +1245,11 @@ figure {
   margin: 0; }
 
 .embedded-entity {
+  float: none;
+  width: 100%;
   max-width: 100%; }
+  .embedded-entity img {
+    max-width: 100%; }
 
 .embedded-entity.align-center {
   width: 100%;
@@ -1258,25 +1262,51 @@ figure {
   .embedded-entity.align-center img {
     width: 100%; }
 
-.embedded-entity.align-left {
+.embedded-entity.align-left.half {
+  float: left;
   max-width: 100%;
   width: 100%;
   margin-bottom: 20px; }
   @media (min-width: 1024px) {
-    .embedded-entity.align-left {
+    .embedded-entity.align-left.half {
       margin: 0 20px 20px 0;
       max-width: 50%; } }
-  .embedded-entity.align-left img {
+  .embedded-entity.align-left.half img {
     width: 100%; }
 
-.embedded-entity.align-right {
+.embedded-entity.align-center.half {
+  text-align: center;
+  max-width: 100%; }
+  @media (max-width: 414px) {
+    .embedded-entity.align-center.half {
+      width: auto;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 100%; } }
+  .embedded-entity.align-center.half img {
+    width: 100%; }
+    @media (min-width: 1024px) {
+      .embedded-entity.align-center.half img {
+        width: auto; } }
+
+.embedded-entity.align-right.half {
+  float: right;
   max-width: 100%;
   width: 100%;
   margin-bottom: 20px; }
   @media (min-width: 1024px) {
-    .embedded-entity.align-right {
+    .embedded-entity.align-right.half {
       margin: 20px 0 0 20px;
       max-width: 50%; } }
+  .embedded-entity.align-right.half img {
+    width: 100%; }
+
+.embedded-entity.align-left,
+.embedded-entity.align-center,
+.embedded-entity.align-right {
+  width: 100%; }
+  .embedded-entity.align-left img,
+  .embedded-entity.align-center img,
   .embedded-entity.align-right img {
     width: 100%; }
 
